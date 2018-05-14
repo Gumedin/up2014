@@ -1,0 +1,273 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа1" id="24">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период действия, гг.</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Horizontal</Group>
+			<Representation>StrongSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1ExtendedTooltip" id="45"/>
+			<ChildItems>
+				<InputField name="Начало" id="5">
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НачалоКонтекстноеМеню" id="6"/>
+					<ExtendedTooltip name="НачалоExtendedTooltip" id="46"/>
+				</InputField>
+				<InputField name="Окончание" id="7">
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ОкончаниеКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="ОкончаниеExtendedTooltip" id="47"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Наименование" id="3">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="4"/>
+			<ExtendedTooltip name="НаименованиеExtendedTooltip" id="48"/>
+		</InputField>
+		<Pages name="Группа2" id="68">
+			<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="69"/>
+			<ChildItems>
+				<Page name="Группа3" id="70">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Структура</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="71"/>
+					<ChildItems>
+						<Table name="Структура" id="25">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.Структура</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Структура</v8:content>
+								</v8:item>
+							</Title>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="СтруктураКонтекстноеМеню" id="26"/>
+							<AutoCommandBar name="СтруктураКоманднаяПанель" id="27">
+								<ChildItems>
+									<Button name="СтруктураРасчитатьКодыСтатьей" id="44">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.РасчитатьКодыСтатьей</CommandName>
+										<ExtendedTooltip name="СтруктураРасчитатьКодыСтатьейExtendedTooltip" id="49"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="СтруктураExtendedTooltip" id="50"/>
+							<SearchStringAddition name="СтруктураСтрокаПоиска" id="59">
+								<AdditionSource>
+									<Item>Структура</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СтруктураСтрокаПоискаКонтекстноеМеню" id="60"/>
+								<ExtendedTooltip name="СтруктураСтрокаПоискаРасширеннаяПодсказка" id="61"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СтруктураСостояниеПросмотра" id="62">
+								<AdditionSource>
+									<Item>Структура</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СтруктураСостояниеПросмотраКонтекстноеМеню" id="63"/>
+								<ExtendedTooltip name="СтруктураСостояниеПросмотраРасширеннаяПодсказка" id="64"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СтруктураУправлениеПоиском" id="65">
+								<AdditionSource>
+									<Item>Структура</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СтруктураУправлениеПоискомКонтекстноеМеню" id="66"/>
+								<ExtendedTooltip name="СтруктураУправлениеПоискомРасширеннаяПодсказка" id="67"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="СтруктураНомерСтроки" id="28">
+									<DataPath>Объект.Структура.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СтруктураНомерСтрокиКонтекстноеМеню" id="29"/>
+									<ExtendedTooltip name="СтруктураНомерСтрокиExtendedTooltip" id="51"/>
+								</LabelField>
+								<InputField name="СтруктураКод" id="30">
+									<DataPath>Объект.Структура.КодСтатьи</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СтруктураКодКонтекстноеМеню" id="31"/>
+									<ExtendedTooltip name="СтруктураКодExtendedTooltip" id="52"/>
+								</InputField>
+								<InputField name="СтруктураРодитель" id="40">
+									<DataPath>Объект.Структура.Родитель</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СтруктураРодительКонтекстноеМеню" id="41"/>
+									<ExtendedTooltip name="СтруктураРодительExtendedTooltip" id="53"/>
+								</InputField>
+								<InputField name="СтруктураСтатья" id="32">
+									<DataPath>Объект.Структура.Статья</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СтруктураСтатьяКонтекстноеМеню" id="33"/>
+									<ExtendedTooltip name="СтруктураСтатьяExtendedTooltip" id="54"/>
+								</InputField>
+								<LabelField name="СтруктураСтатьяИмяПредопределенныхДанных" id="102">
+									<DataPath>Объект.Структура.Статья.PredefinedDataName</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СтруктураСтатьяИмяПредопределенныхДанныхКонтекстноеМеню" id="103"/>
+									<ExtendedTooltip name="СтруктураСтатьяИмяПредопределенныхДанныхРасширеннаяПодсказка" id="104"/>
+								</LabelField>
+								<InputField name="СтруктураНомерПересчета" id="38">
+									<DataPath>Объект.Структура.НомерПересчета</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СтруктураНомерПересчетаКонтекстноеМеню" id="39"/>
+									<ExtendedTooltip name="СтруктураНомерПересчетаExtendedTooltip" id="56"/>
+								</InputField>
+								<InputField name="СтруктураФормулаРасчета" id="36">
+									<DataPath>Объект.Структура.ФормулаРасчета</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СтруктураФормулаРасчетаКонтекстноеМеню" id="37"/>
+									<ExtendedTooltip name="СтруктураФормулаРасчетаExtendedTooltip" id="57"/>
+								</InputField>
+								<CheckBoxField name="СтруктураИтоговая" id="34">
+									<DataPath>Объект.Структура.Итоговая</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="СтруктураИтоговаяКонтекстноеМеню" id="35"/>
+									<ExtendedTooltip name="СтруктураИтоговаяExtendedTooltip" id="58"/>
+								</CheckBoxField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаРаспределениеРКО" id="72">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Распределение РКО</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа распределение РКО</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаРаспределениеРКОРасширеннаяПодсказка" id="73"/>
+					<ChildItems>
+						<Table name="РаспределениеРКО" id="74">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.РаспределениеРКО</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="РаспределениеРКОКонтекстноеМеню" id="75"/>
+							<AutoCommandBar name="РаспределениеРКОКоманднаяПанель" id="76"/>
+							<ExtendedTooltip name="РаспределениеРКОРасширеннаяПодсказка" id="77"/>
+							<SearchStringAddition name="РаспределениеРКОСтрокаПоиска" id="78">
+								<AdditionSource>
+									<Item>РаспределениеРКО</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="РаспределениеРКОСтрокаПоискаКонтекстноеМеню" id="79"/>
+								<ExtendedTooltip name="РаспределениеРКОСтрокаПоискаРасширеннаяПодсказка" id="80"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="РаспределениеРКОСостояниеПросмотра" id="81">
+								<AdditionSource>
+									<Item>РаспределениеРКО</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="РаспределениеРКОСостояниеПросмотраКонтекстноеМеню" id="82"/>
+								<ExtendedTooltip name="РаспределениеРКОСостояниеПросмотраРасширеннаяПодсказка" id="83"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="РаспределениеРКОУправлениеПоиском" id="84">
+								<AdditionSource>
+									<Item>РаспределениеРКО</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="РаспределениеРКОУправлениеПоискомКонтекстноеМеню" id="85"/>
+								<ExtendedTooltip name="РаспределениеРКОУправлениеПоискомРасширеннаяПодсказка" id="86"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="РаспределениеРКОНомерСтроки" id="87">
+									<DataPath>Объект.РаспределениеРКО.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РаспределениеРКОНомерСтрокиКонтекстноеМеню" id="88"/>
+									<ExtendedTooltip name="РаспределениеРКОНомерСтрокиРасширеннаяПодсказка" id="89"/>
+								</LabelField>
+								<InputField name="РаспределениеРКОСтатьяРКО" id="90">
+									<DataPath>Объект.РаспределениеРКО.СтатьяРКО</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РаспределениеРКОСтатьяРКОКонтекстноеМеню" id="91"/>
+									<ExtendedTooltip name="РаспределениеРКОСтатьяРКОРасширеннаяПодсказка" id="92"/>
+								</InputField>
+								<InputField name="РаспределениеРКОСтатьяБазыРаспределения" id="93">
+									<DataPath>Объект.РаспределениеРКО.СтатьяБазыРаспределения</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РаспределениеРКОСтатьяБазыРаспределенияКонтекстноеМеню" id="94"/>
+									<ExtendedTooltip name="РаспределениеРКОСтатьяБазыРаспределенияРасширеннаяПодсказка" id="95"/>
+								</InputField>
+								<InputField name="РаспределениеРКОСдвиг" id="96">
+									<DataPath>Объект.РаспределениеРКО.Сдвиг</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РаспределениеРКОСдвигКонтекстноеМеню" id="97"/>
+									<ExtendedTooltip name="РаспределениеРКОСдвигРасширеннаяПодсказка" id="98"/>
+								</InputField>
+								<CheckBoxField name="РаспределениеРКОПоОплате" id="99">
+									<DataPath>Объект.РаспределениеРКО.ПоОплате</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="РаспределениеРКОПоОплатеКонтекстноеМеню" id="100"/>
+									<ExtendedTooltip name="РаспределениеРКОПоОплатеРасширеннаяПодсказка" id="101"/>
+								</CheckBoxField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.СтруктураСметы</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<Columns>
+				<AdditionalColumns table="Объект.Структура"/>
+			</Columns>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="РасчитатьКодыСтатьей" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расчитать коды статьей</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расчитать коды статьей</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>РасчитатьКодыСтатьей</Action>
+		</Command>
+	</Commands>
+</Form>

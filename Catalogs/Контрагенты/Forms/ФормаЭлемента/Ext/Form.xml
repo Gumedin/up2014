@@ -1,0 +1,427 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWriteAtServer">ПослеЗаписиНаСервере</Event>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+		<Event name="FillCheckProcessingAtServer">ОбработкаПроверкиЗаполненияНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа2" id="86">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="87"/>
+			<ChildItems>
+				<InputField name="Код" id="1">
+					<DataPath>Объект.Code</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+				</InputField>
+				<InputField name="ИНН" id="88">
+					<DataPath>Объект.ИНН</DataPath>
+					<ContextMenu name="ИННКонтекстноеМеню" id="89"/>
+					<ExtendedTooltip name="ИННРасширеннаяПодсказка" id="90"/>
+				</InputField>
+				<InputField name="КПП" id="13">
+					<DataPath>Объект.КПП</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КППКонтекстноеМеню" id="14"/>
+					<ExtendedTooltip name="КППРасширеннаяПодсказка" id="15"/>
+				</InputField>
+				<InputField name="КодПоОКПО" id="22">
+					<DataPath>Объект.КодПоОКПО</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КодПоОКПОКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="КодПоОКПОРасширеннаяПодсказка" id="24"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа3" id="135">
+			<UserVisible>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="Role.КоммерческийДиректор">true</xr:Value>
+				<xr:Value name="Role.ФинансовыйДиректор">true</xr:Value>
+			</UserVisible>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="136"/>
+			<ChildItems>
+				<InputField name="Наименование" id="4">
+					<DataPath>Объект.Description</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+				</InputField>
+				<InputField name="Мнемокод" id="132">
+					<DataPath>Объект.Мнемокод</DataPath>
+					<ContextMenu name="МнемокодКонтекстноеМеню" id="133"/>
+					<ExtendedTooltip name="МнемокодРасширеннаяПодсказка" id="134"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Родитель" id="7">
+			<DataPath>Объект.Parent</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="РодительКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="РодительРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="НаименованиеПолное" id="16">
+			<DataPath>Объект.НаименованиеПолное</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеПолноеКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="НаименованиеПолноеРасширеннаяПодсказка" id="18"/>
+		</InputField>
+		<Pages name="Группа1" id="80">
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="81"/>
+			<Events>
+				<Event name="OnCurrentPageChange">Группа1ПриСменеСтраницы</Event>
+			</Events>
+			<ChildItems>
+				<Page name="ГруппаКонтактнаяИнформация" id="84">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Контактная информация</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа контактная информация</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаКонтактнаяИнформацияРасширеннаяПодсказка" id="85"/>
+				</Page>
+				<Page name="ГрКомментарий" id="82">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Комментарий</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Гр комментарий</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<ExtendedTooltip name="ГрКомментарийРасширеннаяПодсказка" id="83"/>
+					<ChildItems>
+						<TextDocumentField name="Комментарий" id="19">
+							<DataPath>Объект.Комментарий</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="КомментарийКонтекстноеМеню" id="20"/>
+							<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="21"/>
+						</TextDocumentField>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаКонтактныеЛица" id="91">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Контактные лица</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа контактные лица</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаКонтактныеЛицаРасширеннаяПодсказка" id="92"/>
+					<ChildItems>
+						<Table name="КонтактныеЛица" id="93">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.КонтактныеЛица</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="КонтактныеЛицаКонтекстноеМеню" id="94"/>
+							<AutoCommandBar name="КонтактныеЛицаКоманднаяПанель" id="95"/>
+							<ExtendedTooltip name="КонтактныеЛицаРасширеннаяПодсказка" id="96"/>
+							<SearchStringAddition name="КонтактныеЛицаСтрокаПоиска" id="97">
+								<AdditionSource>
+									<Item>КонтактныеЛица</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="КонтактныеЛицаСтрокаПоискаКонтекстноеМеню" id="100"/>
+								<ExtendedTooltip name="КонтактныеЛицаСтрокаПоискаРасширеннаяПодсказка" id="101"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="КонтактныеЛицаСостояниеПросмотра" id="102">
+								<AdditionSource>
+									<Item>КонтактныеЛица</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="КонтактныеЛицаСостояниеПросмотраКонтекстноеМеню" id="105"/>
+								<ExtendedTooltip name="КонтактныеЛицаСостояниеПросмотраРасширеннаяПодсказка" id="106"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="КонтактныеЛицаУправлениеПоиском" id="107">
+								<AdditionSource>
+									<Item>КонтактныеЛица</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="КонтактныеЛицаУправлениеПоискомКонтекстноеМеню" id="110"/>
+								<ExtendedTooltip name="КонтактныеЛицаУправлениеПоискомРасширеннаяПодсказка" id="111"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="КонтактныеЛицаНомерСтроки" id="112">
+									<DataPath>Объект.КонтактныеЛица.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КонтактныеЛицаНомерСтрокиКонтекстноеМеню" id="113"/>
+									<ExtendedTooltip name="КонтактныеЛицаНомерСтрокиРасширеннаяПодсказка" id="114"/>
+								</LabelField>
+								<InputField name="КонтактныеЛицаФизическоеЛицо" id="115">
+									<DataPath>Объект.КонтактныеЛица.ФизическоеЛицо</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КонтактныеЛицаФизическоеЛицоКонтекстноеМеню" id="116"/>
+									<ExtendedTooltip name="КонтактныеЛицаФизическоеЛицоРасширеннаяПодсказка" id="117"/>
+								</InputField>
+								<InputField name="КонтактныеЛицаДолжностьПоВизитке" id="118">
+									<DataPath>Объект.КонтактныеЛица.ДолжностьПоВизитке</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КонтактныеЛицаДолжностьПоВизиткеКонтекстноеМеню" id="119"/>
+									<ExtendedTooltip name="КонтактныеЛицаДолжностьПоВизиткеРасширеннаяПодсказка" id="120"/>
+								</InputField>
+								<CheckBoxField name="КонтактныеЛицаАктивный" id="121">
+									<DataPath>Объект.КонтактныеЛица.Активный</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="КонтактныеЛицаАктивныйКонтекстноеМеню" id="122"/>
+									<ExtendedTooltip name="КонтактныеЛицаАктивныйРасширеннаяПодсказка" id="123"/>
+								</CheckBoxField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаКарта" id="124">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>На карте</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа карта</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаКартаРасширеннаяПодсказка" id="125"/>
+					<ChildItems>
+						<RadioButtonField name="ВидАдреса" id="129">
+							<DataPath>ВидАдреса</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<RadioButtonType>Tumbler</RadioButtonType>
+							<ContextMenu name="ВидАдресаКонтекстноеМеню" id="130"/>
+							<ExtendedTooltip name="ВидАдресаРасширеннаяПодсказка" id="131"/>
+							<Events>
+								<Event name="OnChange">ВидАдресаПриИзменении</Event>
+							</Events>
+						</RadioButtonField>
+						<HTMLDocumentField name="Карта" id="126">
+							<DataPath>Карта</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<ContextMenu name="КартаКонтекстноеМеню" id="127"/>
+							<ExtendedTooltip name="КартаРасширеннаяПодсказка" id="128"/>
+						</HTMLDocumentField>
+						<UsualGroup name="Группа4" id="140">
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="141"/>
+							<ChildItems>
+								<CheckBoxField name="ПроездНаОплачивается" id="151">
+									<DataPath>Объект.ПроездНеОплачивается</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ПроездНаОплачиваетсяКонтекстноеМеню" id="152"/>
+									<ExtendedTooltip name="ПроездНаОплачиваетсяРасширеннаяПодсказка" id="153"/>
+									<Events>
+										<Event name="OnChange">ПроездНаОплачиваетсяПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<InputField name="Расходы" id="137">
+									<DataPath>Объект.Расходы</DataPath>
+									<ContextMenu name="РасходыКонтекстноеМеню" id="138"/>
+									<ExtendedTooltip name="РасходыРасширеннаяПодсказка" id="139"/>
+								</InputField>
+								<Button name="УстановитьРасходыДляКонтрагентовПосещений" id="142">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.УстановитьРасходыДляКонтрагентовПосещений</CommandName>
+									<ExtendedTooltip name="УстановитьРасходыДляКонтрагентовПосещенийРасширеннаяПодсказка" id="143"/>
+								</Button>
+								<Button name="УстановитьРасходыДляПосещенийКонтрагентов" id="144">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.УстановитьРасходыДляПосещенийКонтрагентов</CommandName>
+									<ExtendedTooltip name="УстановитьРасходыДляПосещенийКонтрагентовРасширеннаяПодсказка" id="145"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаТехническаяХарактеристка" id="146">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Техническая характеристка</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа техническая характеристка</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаТехническаяХарактеристкаРасширеннаяПодсказка" id="147"/>
+					<ChildItems>
+						<TextDocumentField name="ТехническаяХарактеристка" id="148">
+							<DataPath>Объект.ТехническаяХарактеристка</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<ContextMenu name="ТехническаяХарактеристкаКонтекстноеМеню" id="149"/>
+							<ExtendedTooltip name="ТехническаяХарактеристкаРасширеннаяПодсказка" id="150"/>
+						</TextDocumentField>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.Контрагенты</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="Карта" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Карта</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ВидАдреса" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид адреса</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ВидыКонтактнойИнформации</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="УстановитьРасходыДляКонтрагентовПосещений" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить для контрагентов </v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить расходы для контрагентов посещений</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Use>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="Role.ПолныеПрава">true</xr:Value>
+				<xr:Value name="Role.НачальникПодразделения">true</xr:Value>
+			</Use>
+			<Picture>
+				<xr:Ref>CommonPicture.Монеты</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>УстановитьРасходыДляКонтрагентовПосещений</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="УстановитьРасходыДляПосещенийКонтрагентов" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить для посещений</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить расходы для посещений контрагентов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Use>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="Role.ПолныеПрава">true</xr:Value>
+				<xr:Value name="Role.НачальникПодразделения">true</xr:Value>
+			</Use>
+			<Picture>
+				<xr:Ref>CommonPicture.Монеты</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>УстановитьРасходыДляПосещенийКонтрагентов</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+	</Commands>
+	<CommandInterface>
+		<NavigationPanel>
+			<Item>
+				<Command>InformationRegister.ПодпискаНаИТС.Command.ПодпискиКонтрагента</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelGoTo</CommandGroup>
+				<Index>2</Index>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>InformationRegister.КонтрагентыПосещений.StandardCommand.OpenByValue.Контрагент</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelGoTo</CommandGroup>
+				<Index>1</Index>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>Catalog.КонтрагентыПП.StandardCommand.OpenByValue</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelGoTo</CommandGroup>
+				<Index>3</Index>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+		</NavigationPanel>
+		<CommandBar>
+			<Item>
+				<Command>CommonCommand.ИзменитьМнемоКодКонтрагента</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+		</CommandBar>
+	</CommandInterface>
+</Form>

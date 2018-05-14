@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="ФизическоеЛицо" id="1">
+			<DataPath>Запись.ФизическоеЛицо</DataPath>
+			<ContextMenu name="ФизическоеЛицоКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ФизическоеЛицоРасширеннаяПодсказка" id="3"/>
+			<Events>
+				<Event name="OnChange">ФизическоеЛицоПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="Контрагент" id="4">
+			<DataPath>Запись.Контрагент</DataPath>
+			<ContextMenu name="КонтрагентКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="КонтрагентРасширеннаяПодсказка" id="6"/>
+			<Events>
+				<Event name="OnChange">КонтрагентПриИзменении</Event>
+			</Events>
+		</InputField>
+		<UsualGroup name="Группа1" id="16">
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="17"/>
+			<ChildItems>
+				<InputField name="ПредметПосещения" id="7">
+					<DataPath>Запись.ПредметПосещения</DataPath>
+					<ClearButton>true</ClearButton>
+					<ContextMenu name="ПредметПосещенияКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="ПредметПосещенияРасширеннаяПодсказка" id="9"/>
+					<Events>
+						<Event name="OnChange">ПредметПосещенияПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="Уточнение" id="32">
+					<DataPath>Запись.Уточнение</DataPath>
+					<ContextMenu name="УточнениеКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="УточнениеРасширеннаяПодсказка" id="34"/>
+					<Events>
+						<Event name="StartChoice">УточнениеНачалоВыбора</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа2" id="18">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="19"/>
+			<ChildItems>
+				<InputField name="Часов" id="10">
+					<DataPath>Запись.Часов</DataPath>
+					<SpinButton>true</SpinButton>
+					<ContextMenu name="ЧасовКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="ЧасовРасширеннаяПодсказка" id="12"/>
+				</InputField>
+				<InputField name="Количество" id="13">
+					<DataPath>Запись.Количество</DataPath>
+					<SpinButton>true</SpinButton>
+					<ContextMenu name="КоличествоКонтекстноеМеню" id="14"/>
+					<ExtendedTooltip name="КоличествоРасширеннаяПодсказка" id="15"/>
+				</InputField>
+				<InputField name="РасходыНаПроезд" id="29">
+					<DataPath>Запись.Расходы</DataPath>
+					<ClearButton>true</ClearButton>
+					<ContextMenu name="РасходыНаПроездКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="РасходыНаПроездРасширеннаяПодсказка" id="31"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа3" id="35">
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="36"/>
+			<ChildItems>
+				<PictureField name="ЦветИндекс" id="23">
+					<DataPath>ЦветИндекс</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Цвет</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>Left</TitleLocation>
+					<GroupVerticalAlign>Center</GroupVerticalAlign>
+					<Width>2</Width>
+					<Height>1</Height>
+					<HorizontalStretch>false</HorizontalStretch>
+					<VerticalStretch>false</VerticalStretch>
+					<ValuesPicture>
+						<xr:Ref>CommonPicture.КоллекцияЦвет</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</ValuesPicture>
+					<Border width="1">
+						<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+					</Border>
+					<ContextMenu name="ЦветИндексКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="ЦветИндексРасширеннаяПодсказка" id="25"/>
+				</PictureField>
+				<InputField name="Цвет" id="26">
+					<DataPath>Цвет</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<Width>10</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ContextMenu name="ЦветКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="ЦветРасширеннаяПодсказка" id="28"/>
+					<Events>
+						<Event name="OnChange">ЦветПриИзменении</Event>
+						<Event name="StartChoice">ЦветНачалоВыбора</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.КонтрагентыПосещений</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ЦветИндекс" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Цвет индекс</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Цвет" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Цвет</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ЦветаРабочегоКалендаря</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+</Form>

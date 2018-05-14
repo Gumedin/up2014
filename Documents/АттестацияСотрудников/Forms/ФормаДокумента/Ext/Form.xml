@@ -1,0 +1,323 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<UsualGroup name="Группа1" id="90">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="91"/>
+			<ChildItems>
+				<InputField name="Дата" id="4">
+					<DataPath>Объект.Date</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+				</InputField>
+				<InputField name="ДатаНачала" id="7">
+					<DataPath>Объект.ДатаНачала</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДатаНачалаКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="ДатаНачалаРасширеннаяПодсказка" id="9"/>
+				</InputField>
+				<InputField name="ДатаОкончания" id="10">
+					<DataPath>Объект.ДатаОкончания</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДатаОкончанияКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="ДатаОкончанияРасширеннаяПодсказка" id="12"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="Страницы" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="17"/>
+			<ChildItems>
+				<Page name="ГруппаОписание" id="92">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Описание</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа описание</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаОписаниеРасширеннаяПодсказка" id="93"/>
+					<ChildItems>
+						<TextDocumentField name="Описание" id="13">
+							<DataPath>Объект.Описание</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ОписаниеКонтекстноеМеню" id="14"/>
+							<ExtendedTooltip name="ОписаниеРасширеннаяПодсказка" id="15"/>
+						</TextDocumentField>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаКомиссия" id="18">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Комиссия</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаКомиссияРасширеннаяПодсказка" id="19"/>
+					<ChildItems>
+						<Table name="Комиссия" id="20">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.Комиссия</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="КомиссияКонтекстноеМеню" id="21"/>
+							<AutoCommandBar name="КомиссияКоманднаяПанель" id="22"/>
+							<ExtendedTooltip name="КомиссияРасширеннаяПодсказка" id="23"/>
+							<SearchStringAddition name="КомиссияСтрокаПоиска" id="24">
+								<AdditionSource>
+									<Item>Комиссия</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="КомиссияСтрокаПоискаКонтекстноеМеню" id="25"/>
+								<ExtendedTooltip name="КомиссияСтрокаПоискаРасширеннаяПодсказка" id="26"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="КомиссияСостояниеПросмотра" id="27">
+								<AdditionSource>
+									<Item>Комиссия</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="КомиссияСостояниеПросмотраКонтекстноеМеню" id="28"/>
+								<ExtendedTooltip name="КомиссияСостояниеПросмотраРасширеннаяПодсказка" id="29"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="КомиссияУправлениеПоиском" id="30">
+								<AdditionSource>
+									<Item>Комиссия</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="КомиссияУправлениеПоискомКонтекстноеМеню" id="31"/>
+								<ExtendedTooltip name="КомиссияУправлениеПоискомРасширеннаяПодсказка" id="32"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="КомиссияНомерСтроки" id="33">
+									<DataPath>Объект.Комиссия.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КомиссияНомерСтрокиКонтекстноеМеню" id="34"/>
+									<ExtendedTooltip name="КомиссияНомерСтрокиРасширеннаяПодсказка" id="35"/>
+								</LabelField>
+								<InputField name="КомиссияФизическоеЛицо" id="36">
+									<DataPath>Объект.Комиссия.ФизическоеЛицо</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КомиссияФизическоеЛицоКонтекстноеМеню" id="37"/>
+									<ExtendedTooltip name="КомиссияФизическоеЛицоРасширеннаяПодсказка" id="38"/>
+								</InputField>
+								<InputField name="КомиссияСтатус" id="39">
+									<DataPath>Объект.Комиссия.Статус</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КомиссияСтатусКонтекстноеМеню" id="40"/>
+									<ExtendedTooltip name="КомиссияСтатусРасширеннаяПодсказка" id="41"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаАттестуемые" id="42">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Аттестуемые</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаАттестуемыеРасширеннаяПодсказка" id="43"/>
+					<ChildItems>
+						<Table name="Аттестуемые" id="44">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.Аттестуемые</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="АттестуемыеКонтекстноеМеню" id="45"/>
+							<AutoCommandBar name="АттестуемыеКоманднаяПанель" id="46"/>
+							<ExtendedTooltip name="АттестуемыеРасширеннаяПодсказка" id="47"/>
+							<SearchStringAddition name="АттестуемыеСтрокаПоиска" id="48">
+								<AdditionSource>
+									<Item>Аттестуемые</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="АттестуемыеСтрокаПоискаКонтекстноеМеню" id="49"/>
+								<ExtendedTooltip name="АттестуемыеСтрокаПоискаРасширеннаяПодсказка" id="50"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="АттестуемыеСостояниеПросмотра" id="51">
+								<AdditionSource>
+									<Item>Аттестуемые</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="АттестуемыеСостояниеПросмотраКонтекстноеМеню" id="52"/>
+								<ExtendedTooltip name="АттестуемыеСостояниеПросмотраРасширеннаяПодсказка" id="53"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="АттестуемыеУправлениеПоиском" id="54">
+								<AdditionSource>
+									<Item>Аттестуемые</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="АттестуемыеУправлениеПоискомКонтекстноеМеню" id="55"/>
+								<ExtendedTooltip name="АттестуемыеУправлениеПоискомРасширеннаяПодсказка" id="56"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="АттестуемыеНомерСтроки" id="57">
+									<DataPath>Объект.Аттестуемые.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="АттестуемыеНомерСтрокиКонтекстноеМеню" id="58"/>
+									<ExtendedTooltip name="АттестуемыеНомерСтрокиРасширеннаяПодсказка" id="59"/>
+								</LabelField>
+								<InputField name="АттестуемыеФизическоеЛицо" id="63">
+									<DataPath>Объект.Аттестуемые.ФизическоеЛицо</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="АттестуемыеФизическоеЛицоКонтекстноеМеню" id="64"/>
+									<ExtendedTooltip name="АттестуемыеФизическоеЛицоРасширеннаяПодсказка" id="65"/>
+									<Events>
+										<Event name="OnChange">АттестуемыеФизическоеЛицоПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="АттестуемыеПодразделение" id="60">
+									<DataPath>Объект.Аттестуемые.Подразделение</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="АттестуемыеПодразделениеКонтекстноеМеню" id="61"/>
+									<ExtendedTooltip name="АттестуемыеПодразделениеРасширеннаяПодсказка" id="62"/>
+								</InputField>
+								<InputField name="АттестуемыеДолжность" id="66">
+									<DataPath>Объект.Аттестуемые.Должность</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="АттестуемыеДолжностьКонтекстноеМеню" id="67"/>
+									<ExtendedTooltip name="АттестуемыеДолжностьРасширеннаяПодсказка" id="68"/>
+								</InputField>
+								<InputField name="АттестуемыеРешение" id="72">
+									<DataPath>Объект.Аттестуемые.Решение</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="АттестуемыеРешениеКонтекстноеМеню" id="73"/>
+									<ExtendedTooltip name="АттестуемыеРешениеРасширеннаяПодсказка" id="74"/>
+								</InputField>
+								<InputField name="АттестуемыеРезультатТестирования" id="75">
+									<DataPath>Объект.Аттестуемые.РезультатТестирования</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Тестирование</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="АттестуемыеРезультатТестированияКонтекстноеМеню" id="76"/>
+									<ExtendedTooltip name="АттестуемыеРезультатТестированияРасширеннаяПодсказка" id="77"/>
+								</InputField>
+								<InputField name="АттестуемыеРезультатПрактическогоЗадания" id="78">
+									<DataPath>Объект.Аттестуемые.РезультатПрактическогоЗадания</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Практ.задание,%</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="АттестуемыеРезультатПрактическогоЗаданияКонтекстноеМеню" id="79"/>
+									<ExtendedTooltip name="АттестуемыеРезультатПрактическогоЗаданияРасширеннаяПодсказка" id="80"/>
+								</InputField>
+								<InputField name="АттестуемыеРезультатГолосования" id="81">
+									<DataPath>Объект.Аттестуемые.РезультатГолосования</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Голоса</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="АттестуемыеРезультатГолосованияКонтекстноеМеню" id="82"/>
+									<ExtendedTooltip name="АттестуемыеРезультатГолосованияРасширеннаяПодсказка" id="83"/>
+								</InputField>
+								<InputField name="АттестуемыеДолжностьПослеАттестации" id="69">
+									<DataPath>Объект.Аттестуемые.ДолжностьПослеАттестации</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Присвоена</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ClearButton>true</ClearButton>
+									<ChoiceParameterLinks>
+										<xr:Link>
+											<xr:Name>Подразделение</xr:Name>
+											<xr:DataPath xsi:type="xs:string">Items.Аттестуемые.CurrentData.Подразделение</xr:DataPath>
+											<xr:ValueChange>Clear</xr:ValueChange>
+										</xr:Link>
+									</ChoiceParameterLinks>
+									<ChoiceParameters>
+										<app:item name="Производственная">
+											<app:value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation/>
+												<Value xsi:type="xs:boolean">true</Value>
+											</app:value>
+										</app:item>
+										<app:item name="Подразделение">
+											<app:value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation/>
+												<Value xsi:type="xr:DesignTimeRef">Catalog.Подразделения.EmptyRef</Value>
+											</app:value>
+										</app:item>
+									</ChoiceParameters>
+									<ContextMenu name="АттестуемыеДолжностьПослеАттестацииКонтекстноеМеню" id="70"/>
+									<ExtendedTooltip name="АттестуемыеДолжностьПослеАттестацииРасширеннаяПодсказка" id="71"/>
+									<Events>
+										<Event name="StartChoice">АттестуемыеДолжностьПослеАттестацииНачалоВыбора</Event>
+									</Events>
+								</InputField>
+								<CheckBoxField name="АттестуемыеОбязательнаяПереаттестация" id="87">
+									<DataPath>Объект.Аттестуемые.ОбязательнаяПереаттестация</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Об.</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="АттестуемыеОбязательнаяПереаттестацияКонтекстноеМеню" id="88"/>
+									<ExtendedTooltip name="АттестуемыеОбязательнаяПереаттестацияРасширеннаяПодсказка" id="89"/>
+								</CheckBoxField>
+								<InputField name="АттестуемыеДатаПереаттестации" id="84">
+									<DataPath>Объект.Аттестуемые.ДатаПереаттестации</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="АттестуемыеДатаПереаттестацииКонтекстноеМеню" id="85"/>
+									<ExtendedTooltip name="АттестуемыеДатаПереаттестацииРасширеннаяПодсказка" id="86"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.АттестацияСотрудников</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+	</Attributes>
+</Form>

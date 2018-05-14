@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5">
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+		<Event name="FillCheckProcessingAtServer">ОбработкаПроверкиЗаполненияНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ДатаНомер" id="26">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата номер</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата номер</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ДатаНомерExtendedTooltip" id="33"/>
+			<ChildItems>
+				<InputField name="Дата" id="3">
+					<DataPath>Объект.Date</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="4"/>
+					<ExtendedTooltip name="ДатаExtendedTooltip" id="34"/>
+				</InputField>
+				<InputField name="МесяцОценки" id="5">
+					<DataPath>Объект.МесяцОценки</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Месяц</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<SpinButton>true</SpinButton>
+					<ContextMenu name="МесяцОценкиКонтекстноеМеню" id="6"/>
+					<ExtendedTooltip name="МесяцОценкиExtendedTooltip" id="35"/>
+					<Events>
+						<Event name="OnChange">МесяцОценкиПриИзменении</Event>
+						<Event name="Tuning">МесяцОценкиРегулирование</Event>
+					</Events>
+				</InputField>
+				<InputField name="Номер" id="1">
+					<DataPath>Объект.Number</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="НомерExtendedTooltip" id="36"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Оценщик" id="7">
+			<DataPath>Объект.Оценщик</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ОценщикКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ОценщикExtendedTooltip" id="37"/>
+		</InputField>
+		<InputField name="Проект" id="31">
+			<DataPath>Объект.Проект</DataPath>
+			<ClearButton>true</ClearButton>
+			<ContextMenu name="ПроектКонтекстноеМеню" id="32"/>
+			<ExtendedTooltip name="ПроектExtendedTooltip" id="38"/>
+		</InputField>
+		<Table name="Оценки" id="13">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.Оценки</DataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ОценкиКонтекстноеМеню" id="14"/>
+			<AutoCommandBar name="ОценкиКоманднаяПанель" id="15"/>
+			<ExtendedTooltip name="ОценкиExtendedTooltip" id="39"/>
+			<SearchStringAddition name="ОценкиСтрокаПоиска" id="47">
+				<AdditionSource>
+					<Item>Оценки</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ОценкиСтрокаПоискаКонтекстноеМеню" id="48"/>
+				<ExtendedTooltip name="ОценкиСтрокаПоискаРасширеннаяПодсказка" id="49"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ОценкиСостояниеПросмотра" id="50">
+				<AdditionSource>
+					<Item>Оценки</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ОценкиСостояниеПросмотраКонтекстноеМеню" id="51"/>
+				<ExtendedTooltip name="ОценкиСостояниеПросмотраРасширеннаяПодсказка" id="52"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ОценкиУправлениеПоиском" id="53">
+				<AdditionSource>
+					<Item>Оценки</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ОценкиУправлениеПоискомКонтекстноеМеню" id="54"/>
+				<ExtendedTooltip name="ОценкиУправлениеПоискомРасширеннаяПодсказка" id="55"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="ОценкиНомерСтроки" id="16">
+					<DataPath>Объект.Оценки.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ОценкиНомерСтрокиКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="ОценкиНомерСтрокиExtendedTooltip" id="40"/>
+				</LabelField>
+				<InputField name="ОценкиКритерийОценки" id="18">
+					<DataPath>Объект.Оценки.КритерийОценки</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ОценкиКритерийОценкиКонтекстноеМеню" id="19"/>
+					<ExtendedTooltip name="ОценкиКритерийОценкиExtendedTooltip" id="41"/>
+				</InputField>
+				<InputField name="ОценкиСотрудник" id="20">
+					<DataPath>Объект.Оценки.ФизическоеЛицо</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ОценкиСотрудникКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="ОценкиСотрудникExtendedTooltip" id="44"/>
+					<Events>
+						<Event name="StartChoice">ОценкиСотрудникНачалоВыбора</Event>
+					</Events>
+				</InputField>
+				<InputField name="ОценкиОценка" id="22">
+					<DataPath>Объект.Оценки.Оценка</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ОценкиОценкаКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="ОценкиОценкаExtendedTooltip" id="45"/>
+				</InputField>
+				<LabelField name="ОценкиКритерийОценкиМинКоэффициент" id="27">
+					<DataPath>Объект.Оценки.КритерийОценки.МинКоэффициент</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Мин.</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<Width>6</Width>
+					<ContextMenu name="ОценкиКритерийОценкиМинКоэффициентКонтекстноеМеню" id="28"/>
+					<ExtendedTooltip name="ОценкиКритерийОценкиМинКоэффициентExtendedTooltip" id="42"/>
+				</LabelField>
+				<LabelField name="ОценкиКритерийОценкиМаксКоэффициент" id="29">
+					<DataPath>Объект.Оценки.КритерийОценки.МаксКоэффициент</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Макс.</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<Width>6</Width>
+					<ContextMenu name="ОценкиКритерийОценкиМаксКоэффициентКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="ОценкиКритерийОценкиМаксКоэффициентExtendedTooltip" id="43"/>
+				</LabelField>
+				<InputField name="ОценкиКомментарий" id="24">
+					<DataPath>Объект.Оценки.Комментарий</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ОценкиКомментарийКонтекстноеМеню" id="25"/>
+					<ExtendedTooltip name="ОценкиКомментарийExtendedTooltip" id="46"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.ОценкаСотрудника</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+	</Attributes>
+</Form>

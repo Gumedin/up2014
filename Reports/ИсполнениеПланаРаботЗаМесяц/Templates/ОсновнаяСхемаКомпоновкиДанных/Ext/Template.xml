@@ -1,0 +1,448 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Должность</dataPath>
+			<field>Должность</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТарифнаяСтавка</dataPath>
+			<field>ТарифнаяСтавка</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Месяц</dataPath>
+			<field>Месяц</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПланРабот</dataPath>
+			<field>ПланРабот</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТипСуммы</dataPath>
+			<field>ТипСуммы</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Подразделение</dataPath>
+			<field>Подразделение</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ФизическоеЛицо</dataPath>
+			<field>ФизическоеЛицо</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПосещенияПлан</dataPath>
+			<field>ПосещенияПлан</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Посещения план</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПосещенияФакт</dataPath>
+			<field>ПосещенияФакт</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Посещения факт</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПланРаботПлан</dataPath>
+			<field>ПланРаботПлан</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>План работ план</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПланРаботФакт</dataPath>
+			<field>ПланРаботФакт</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>План работ факт</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	ФронтРаботОбороты.ПланРабот,
+	ФронтРаботОбороты.ТарифнаяСтавка,
+	ФронтРаботОбороты.Должность,
+	ФронтРаботОбороты.ПланРабот.Подразделение КАК Подразделение,
+	ВЫБОР
+		КОГДА ФронтРаботОбороты.ТипСуммы = 0
+			ТОГДА ФронтРаботОбороты.КоличествоОборот
+		ИНАЧЕ 0
+	КОНЕЦ КАК ПланРаботПлан,
+	ВЫБОР
+		КОГДА ФронтРаботОбороты.ТипСуммы = 1
+			ТОГДА ФронтРаботОбороты.КоличествоОборот
+		ИНАЧЕ 0
+	КОНЕЦ КАК ПланРаботФакт
+ПОМЕСТИТЬ ВТ_ФронтРаботНаМесяц
+ИЗ
+	РегистрНакопления.ФронтРабот.Обороты КАК ФронтРаботОбороты
+ГДЕ
+	ФронтРаботОбороты.ПланРабот = &amp;ПланРабот
+	И ФронтРаботОбороты.Месяц = НАЧАЛОПЕРИОДА(&amp;МесяцОтчета, МЕСЯЦ)
+
+СГРУППИРОВАТЬ ПО
+	ФронтРаботОбороты.ПланРабот,
+	ФронтРаботОбороты.ТарифнаяСтавка,
+	ФронтРаботОбороты.Должность,
+	ФронтРаботОбороты.ПланРабот.Подразделение,
+	ВЫБОР
+		КОГДА ФронтРаботОбороты.ТипСуммы = 0
+			ТОГДА ФронтРаботОбороты.КоличествоОборот
+		ИНАЧЕ 0
+	КОНЕЦ,
+	ВЫБОР
+		КОГДА ФронтРаботОбороты.ТипСуммы = 1
+			ТОГДА ФронтРаботОбороты.КоличествоОборот
+		ИНАЧЕ 0
+	КОНЕЦ
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ПосещенияКонтрагентов.ПредметПосещения КАК ПланРабот,
+	ПосещенияКонтрагентов.Подразделение,
+	ПосещенияКонтрагентов.ФизическоеЛицо,
+	СУММА(ВЫБОР
+			КОГДА ПосещенияКонтрагентов.Отработано
+				ТОГДА ПосещенияКонтрагентов.Часов
+			ИНАЧЕ 0
+		КОНЕЦ) КАК ПосещенияФакт,
+	СУММА(ВЫБОР
+			КОГДА ПосещенияКонтрагентов.Отработано
+				ТОГДА 0
+			ИНАЧЕ ПосещенияКонтрагентов.Часов
+		КОНЕЦ) КАК ПосещенияПлан
+ПОМЕСТИТЬ ВТ_ПосещенияЗаМесяцПоПлануРабот
+ИЗ
+	Справочник.ПосещенияКонтрагентов КАК ПосещенияКонтрагентов
+ГДЕ
+	(ВЫРАЗИТЬ(ПосещенияКонтрагентов.ПредметПосещения КАК Документ.ПланРабот)) = &amp;ПланРабот
+	И ПосещенияКонтрагентов.Дата МЕЖДУ НАЧАЛОПЕРИОДА(&amp;МесяцОтчета, МЕСЯЦ) И КОНЕЦПЕРИОДА(&amp;МесяцОтчета, МЕСЯЦ)
+	И НЕ ПосещенияКонтрагентов.ПометкаУдаления
+
+СГРУППИРОВАТЬ ПО
+	ПосещенияКонтрагентов.ФизическоеЛицо,
+	ПосещенияКонтрагентов.ПредметПосещения,
+	ПосещенияКонтрагентов.Подразделение
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_ПосещенияЗаМесяцПоПлануРабот.ПланРабот,
+	МАКСИМУМ(СотрудникиСрезПоследних.Подразделение) КАК Подразделение,
+	МАКСИМУМ(СотрудникиСрезПоследних.Должность) КАК Должность,
+	МАКСИМУМ(СотрудникиСрезПоследних.ТарифнаяСтавка) КАК ТарифнаяСтавка,
+	ВТ_ПосещенияЗаМесяцПоПлануРабот.ФизическоеЛицо,
+	СУММА(ВТ_ПосещенияЗаМесяцПоПлануРабот.ПосещенияФакт) КАК ПосещенияФакт,
+	СУММА(ВТ_ПосещенияЗаМесяцПоПлануРабот.ПосещенияПлан) КАК ПосещенияПлан
+ПОМЕСТИТЬ ВТ_ИсполненияПосещавщих
+ИЗ
+	ВТ_ПосещенияЗаМесяцПоПлануРабот КАК ВТ_ПосещенияЗаМесяцПоПлануРабот
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.Сотрудники.СрезПоследних(НАЧАЛОПЕРИОДА(&amp;МесяцОтчета, МЕСЯЦ), ) КАК СотрудникиСрезПоследних
+		ПО ВТ_ПосещенияЗаМесяцПоПлануРабот.ФизическоеЛицо = СотрудникиСрезПоследних.ФизическоеЛицо
+ГДЕ
+	СотрудникиСрезПоследних.СтатусСотрудника.Активный
+
+СГРУППИРОВАТЬ ПО
+	ВТ_ПосещенияЗаМесяцПоПлануРабот.ФизическоеЛицо,
+	ВТ_ПосещенияЗаМесяцПоПлануРабот.ПланРабот
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_ИсполненияПосещавщих.ПланРабот,
+	ВТ_ИсполненияПосещавщих.Подразделение,
+	ВТ_ИсполненияПосещавщих.Должность,
+	ВТ_ИсполненияПосещавщих.ТарифнаяСтавка,
+	ВТ_ИсполненияПосещавщих.ФизическоеЛицо,
+	СУММА(ВТ_ИсполненияПосещавщих.ПосещенияФакт) КАК ПосещенияФакт,
+	СУММА(ВТ_ИсполненияПосещавщих.ПосещенияПлан) КАК ПосещенияПлан,
+	0 КАК ПланРаботПлан,
+	0 КАК ПланРаботФакт
+ИЗ
+	ВТ_ИсполненияПосещавщих КАК ВТ_ИсполненияПосещавщих
+
+СГРУППИРОВАТЬ ПО
+	ВТ_ИсполненияПосещавщих.ФизическоеЛицо,
+	ВТ_ИсполненияПосещавщих.ТарифнаяСтавка,
+	ВТ_ИсполненияПосещавщих.Должность,
+	ВТ_ИсполненияПосещавщих.Подразделение,
+	ВТ_ИсполненияПосещавщих.ПланРабот
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ВТ_ФронтРаботНаМесяц.ПланРабот,
+	ВТ_ФронтРаботНаМесяц.Подразделение,
+	ВТ_ФронтРаботНаМесяц.Должность,
+	ВТ_ФронтРаботНаМесяц.ТарифнаяСтавка,
+	NULL,
+	0,
+	0,
+	ВТ_ФронтРаботНаМесяц.ПланРаботПлан,
+	ВТ_ФронтРаботНаМесяц.ПланРаботФакт
+ИЗ
+	ВТ_ФронтРаботНаМесяц КАК ВТ_ФронтРаботНаМесяц</query>
+	</dataSet>
+	<calculatedField>
+		<dataPath>ОстатокПлана</dataPath>
+		<expression>ПланРаботПлан- ПосещенияПлан-
+ПосещенияФакт</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Остаток плана</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
+	<totalField>
+		<dataPath>ОстатокПлана</dataPath>
+		<expression>Сумма(ОстатокПлана)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ПланРаботПлан</dataPath>
+		<expression>Сумма(ПланРаботПлан)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ПланРаботФакт</dataPath>
+		<expression>Сумма(ПланРаботФакт)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ПосещенияПлан</dataPath>
+		<expression>Сумма(ПосещенияПлан)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ПосещенияФакт</dataPath>
+		<expression>Сумма(ПосещенияФакт)</expression>
+	</totalField>
+	<parameter>
+		<name>НачалоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>КонецПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>МесяцОтчета</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Месяц отчета</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>ПланРабот</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>План работ</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:DocumentRef.ПланРаботТиражный</v8:Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:DocumentRef.ПланРабот</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>ПоПлануРабот</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>По плану работ</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПланРабот</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Должность</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ТарифнаяСтавка</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ФизическоеЛицо</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПланРаботПлан</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Посещения</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ПосещенияПлан</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ПосещенияФакт</dcsset:field>
+					</dcsset:item>
+					<dcsset:placement>Auto</dcsset:placement>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ОстатокПлана</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МесяцОтчета</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardBeginningDate">
+						<v8:variant xsi:type="v8:StandardBeginningDateVariant">BeginningOfThisMonth</v8:variant>
+					</dcscor:value>
+					<dcsset:userSettingID>e99f07cd-97ae-430b-9a5e-21b48009a28a</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ПланРабот</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:userSettingID>55c8efb8-29fb-423e-9065-f066fc01e318</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Период</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>ПланРабот</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Должность</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>ТарифнаяСтавка</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:item xsi:type="dcsset:StructureItemGroup">
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+							<dcsset:item xsi:type="dcsset:OrderItemField">
+								<dcsset:field>ФизическоеЛицо</dcsset:field>
+								<dcsset:orderType>Asc</dcsset:orderType>
+							</dcsset:item>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+					</dcsset:item>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

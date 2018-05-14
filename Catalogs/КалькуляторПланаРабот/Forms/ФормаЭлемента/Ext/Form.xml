@@ -1,0 +1,684 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа1" id="5">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1ExtendedTooltip" id="85"/>
+			<ChildItems>
+				<InputField name="Наименование" id="3">
+					<DataPath>Объект.Description</DataPath>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="4"/>
+					<ExtendedTooltip name="НаименованиеExtendedTooltip" id="86"/>
+				</InputField>
+				<InputField name="ГодПроекта" id="6">
+					<DataPath>Объект.ГодПроекта</DataPath>
+					<SpinButton>true</SpinButton>
+					<ContextMenu name="ГодПроектаКонтекстноеМеню" id="7"/>
+					<ExtendedTooltip name="ГодПроектаExtendedTooltip" id="87"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Родитель" id="8">
+			<DataPath>Объект.Parent</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="РодительКонтекстноеМеню" id="9"/>
+			<ExtendedTooltip name="РодительExtendedTooltip" id="88"/>
+		</InputField>
+		<InputField name="ЗадачаПроекта" id="150">
+			<DataPath>Объект.ЗадачаПроекта</DataPath>
+			<ContextMenu name="ЗадачаПроектаКонтекстноеМеню" id="151"/>
+			<ExtendedTooltip name="ЗадачаПроектаРасширеннаяПодсказка" id="152"/>
+		</InputField>
+		<InputField name="Подразделение" id="10">
+			<DataPath>Объект.Подразделение</DataPath>
+			<ContextMenu name="ПодразделениеКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="ПодразделениеExtendedTooltip" id="89"/>
+			<Events>
+				<Event name="OnChange">ПодразделениеПриИзменении</Event>
+			</Events>
+		</InputField>
+		<UsualGroup name="ГруппаИзменить" id="49">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Horizontal</Group>
+			<Representation>StrongSeparation</Representation>
+			<ExtendedTooltip name="ГруппаИзменитьExtendedTooltip" id="91"/>
+			<ChildItems>
+				<InputField name="Период" id="51">
+					<DataPath>Период</DataPath>
+					<ContextMenu name="ПериодКонтекстноеМеню" id="52"/>
+					<ExtendedTooltip name="ПериодExtendedTooltip" id="92"/>
+				</InputField>
+				<InputField name="Должность" id="129">
+					<DataPath>Должность</DataPath>
+					<ContextMenu name="ДолжностьКонтекстноеМеню" id="130"/>
+					<ExtendedTooltip name="ДолжностьРасширеннаяПодсказка" id="131"/>
+					<Events>
+						<Event name="StartChoice">ДолжностьНачалоВыбора</Event>
+					</Events>
+				</InputField>
+				<InputField name="Количество" id="55">
+					<DataPath>Количество</DataPath>
+					<ContextMenu name="КоличествоКонтекстноеМеню" id="56"/>
+					<ExtendedTooltip name="КоличествоExtendedTooltip" id="94"/>
+				</InputField>
+				<CommandBar name="Группа2" id="57">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Заполнить</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="Группа2ExtendedTooltip" id="95"/>
+					<ChildItems>
+						<Popup name="Группа3" id="58">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Заполнить</v8:content>
+								</v8:item>
+							</Title>
+							<Picture>
+								<xr:Ref>StdPicture.WriteChanges</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<Representation>Picture</Representation>
+							<ExtendedTooltip name="Группа3ExtendedTooltip" id="96"/>
+							<ChildItems>
+								<Button name="ДобавитьВПланРабот" id="60">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.ДобавитьВПланРабот</CommandName>
+									<ExtendedTooltip name="ДобавитьВПланРаботExtendedTooltip" id="97"/>
+								</Button>
+								<Button name="ВычестьИзПланаРабот" id="59">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.ВычестьИзПланаРабот</CommandName>
+									<ExtendedTooltip name="ВычестьИзПланаРаботExtendedTooltip" id="98"/>
+								</Button>
+								<Button name="УстановитьВПланеРабот" id="64">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.УстановитьВПланеРабот</CommandName>
+									<ExtendedTooltip name="УстановитьВПланеРаботExtendedTooltip" id="99"/>
+								</Button>
+								<Button name="ОчиститьВПланеРабот" id="63">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.ОчиститьВПланеРабот</CommandName>
+									<ExtendedTooltip name="ОчиститьВПланеРаботExtendedTooltip" id="102"/>
+								</Button>
+								<Button name="ЗаполнитьПоКалендарюВдень" id="61">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.ЗаполнитьПоКалендарюВдень</CommandName>
+									<ExtendedTooltip name="ЗаполнитьПоКалендарюВденьExtendedTooltip" id="100"/>
+								</Button>
+								<Button name="ЗаполнитьПоКалендарюВнеделю" id="62">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.ЗаполнитьПоКалендарюВнеделю</CommandName>
+									<ExtendedTooltip name="ЗаполнитьПоКалендарюВнеделюExtendedTooltip" id="101"/>
+								</Button>
+							</ChildItems>
+						</Popup>
+					</ChildItems>
+				</CommandBar>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="ГруппаСтраницы" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="ГруппаСтраницыExtendedTooltip" id="103"/>
+			<Events>
+				<Event name="OnCurrentPageChange">ГруппаСтраницыПриСменеСтраницы</Event>
+			</Events>
+			<ChildItems>
+				<Page name="ГруппаРасчет" id="13">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Расчет работ</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа расчет</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаРасчетExtendedTooltip" id="104"/>
+					<ChildItems>
+						<UsualGroup name="Группа4" id="67">
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа4ExtendedTooltip" id="105"/>
+							<ChildItems>
+								<InputField name="ИсполненВключая" id="65">
+									<DataPath>Объект.ИсполненВключая</DataPath>
+									<ContextMenu name="ИсполненВключаяКонтекстноеМеню" id="66"/>
+									<ExtendedTooltip name="ИсполненВключаяExtendedTooltip" id="106"/>
+									<Events>
+										<Event name="OnChange">ИсполненВключаяПриИзменении</Event>
+									</Events>
+								</InputField>
+								<LabelField name="СуммаВсего" id="68">
+									<DataPath>СуммаВсего</DataPath>
+									<ContextMenu name="СуммаВсегоКонтекстноеМеню" id="69"/>
+									<ExtendedTooltip name="СуммаВсегоExtendedTooltip" id="107"/>
+								</LabelField>
+								<InputField name="ОстатокПоСмете" id="70">
+									<DataPath>Объект.ОстатокПоСмете</DataPath>
+									<ContextMenu name="ОстатокПоСметеКонтекстноеМеню" id="71"/>
+									<ExtendedTooltip name="ОстатокПоСметеExtendedTooltip" id="108"/>
+									<Events>
+										<Event name="OnChange">ОстатокПоСметеПриИзменении</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<Table name="ФронтРабот" id="14">
+							<Footer>true</Footer>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.ФронтРабот</DataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ФронтРаботКонтекстноеМеню" id="15"/>
+							<AutoCommandBar name="ФронтРаботКоманднаяПанель" id="16"/>
+							<ExtendedTooltip name="ФронтРаботExtendedTooltip" id="109"/>
+							<SearchStringAddition name="ФронтРаботСтрокаПоиска" id="132">
+								<AdditionSource>
+									<Item>ФронтРабот</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ФронтРаботСтрокаПоискаКонтекстноеМеню" id="133"/>
+								<ExtendedTooltip name="ФронтРаботСтрокаПоискаРасширеннаяПодсказка" id="134"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ФронтРаботСостояниеПросмотра" id="135">
+								<AdditionSource>
+									<Item>ФронтРабот</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ФронтРаботСостояниеПросмотраКонтекстноеМеню" id="136"/>
+								<ExtendedTooltip name="ФронтРаботСостояниеПросмотраРасширеннаяПодсказка" id="137"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ФронтРаботУправлениеПоиском" id="138">
+								<AdditionSource>
+									<Item>ФронтРабот</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ФронтРаботУправлениеПоискомКонтекстноеМеню" id="139"/>
+								<ExtendedTooltip name="ФронтРаботУправлениеПоискомРасширеннаяПодсказка" id="140"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="BeforeRowChange">ФронтРаботПередНачаломИзменения</Event>
+								<Event name="OnChange">ФронтРаботПриИзменении</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="ФронтРаботНомерСтроки" id="17">
+									<DataPath>Объект.ФронтРабот.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ФронтРаботНомерСтрокиКонтекстноеМеню" id="18"/>
+									<ExtendedTooltip name="ФронтРаботНомерСтрокиExtendedTooltip" id="110"/>
+								</LabelField>
+								<InputField name="ФронтРаботМесяц" id="19">
+									<DataPath>Объект.ФронтРабот.Месяц</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ФронтРаботМесяцКонтекстноеМеню" id="20"/>
+									<ExtendedTooltip name="ФронтРаботМесяцExtendedTooltip" id="111"/>
+								</InputField>
+								<InputField name="ФронтРаботДолжность" id="123">
+									<DataPath>Объект.ФронтРабот.Должность</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ФронтРаботДолжностьКонтекстноеМеню" id="124"/>
+									<ExtendedTooltip name="ФронтРаботДолжностьРасширеннаяПодсказка" id="125"/>
+								</InputField>
+								<InputField name="ФронтРаботТарифнаяСтавка" id="126">
+									<DataPath>Объект.ФронтРабот.ТарифнаяСтавка</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ФронтРаботТарифнаяСтавкаКонтекстноеМеню" id="127"/>
+									<ExtendedTooltip name="ФронтРаботТарифнаяСтавкаРасширеннаяПодсказка" id="128"/>
+								</InputField>
+								<InputField name="ФронтРаботКоличество" id="23">
+									<DataPath>Объект.ФронтРабот.Количество</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<FooterDataPath>Объект.ФронтРабот.TotalКоличество</FooterDataPath>
+									<ContextMenu name="ФронтРаботКоличествоКонтекстноеМеню" id="24"/>
+									<ExtendedTooltip name="ФронтРаботКоличествоExtendedTooltip" id="113"/>
+								</InputField>
+								<InputField name="ФронтРаботСтавкаФОТ" id="25">
+									<DataPath>Объект.ФронтРабот.СтавкаФОТ</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ФронтРаботСтавкаФОТКонтекстноеМеню" id="26"/>
+									<ExtendedTooltip name="ФронтРаботСтавкаФОТExtendedTooltip" id="114"/>
+								</InputField>
+								<InputField name="ФронтРаботСумма" id="29">
+									<DataPath>Объект.ФронтРабот.Сумма</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<FooterDataPath>Объект.ФронтРабот.TotalСумма</FooterDataPath>
+									<ContextMenu name="ФронтРаботСуммаКонтекстноеМеню" id="30"/>
+									<ExtendedTooltip name="ФронтРаботСуммаExtendedTooltip" id="115"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаФронтРабот" id="31">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Фронт работ</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа фронт работ</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаФронтРаботExtendedTooltip" id="116"/>
+					<ChildItems>
+						<Table name="ДеревоФР" id="72">
+							<Representation>Tree</Representation>
+							<ReadOnly>true</ReadOnly>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>ДеревоФР</DataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<ContextMenu name="ДеревоФРКонтекстноеМеню" id="73"/>
+							<AutoCommandBar name="ДеревоФРКоманднаяПанель" id="74">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ДеревоФРExtendedTooltip" id="117"/>
+							<SearchStringAddition name="ДеревоФРСтрокаПоиска" id="141">
+								<AdditionSource>
+									<Item>ДеревоФР</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ДеревоФРСтрокаПоискаКонтекстноеМеню" id="142"/>
+								<ExtendedTooltip name="ДеревоФРСтрокаПоискаРасширеннаяПодсказка" id="143"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ДеревоФРСостояниеПросмотра" id="144">
+								<AdditionSource>
+									<Item>ДеревоФР</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ДеревоФРСостояниеПросмотраКонтекстноеМеню" id="145"/>
+								<ExtendedTooltip name="ДеревоФРСостояниеПросмотраРасширеннаяПодсказка" id="146"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ДеревоФРУправлениеПоиском" id="147">
+								<AdditionSource>
+									<Item>ДеревоФР</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ДеревоФРУправлениеПоискомКонтекстноеМеню" id="148"/>
+								<ExtendedTooltip name="ДеревоФРУправлениеПоискомРасширеннаяПодсказка" id="149"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="ДеревоФРМесяц" id="75">
+									<DataPath>ДеревоФР.Месяц</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДеревоФРМесяцКонтекстноеМеню" id="76"/>
+									<ExtendedTooltip name="ДеревоФРМесяцExtendedTooltip" id="118"/>
+								</InputField>
+								<InputField name="ДеревоФРНормаСтоимости" id="77">
+									<DataPath>ДеревоФР.ТарифнаяСтавка</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДеревоФРНормаСтоимостиКонтекстноеМеню" id="78"/>
+									<ExtendedTooltip name="ДеревоФРНормаСтоимостиExtendedTooltip" id="119"/>
+								</InputField>
+								<InputField name="ДеревоФРКоличество" id="79">
+									<DataPath>ДеревоФР.Количество</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДеревоФРКоличествоКонтекстноеМеню" id="80"/>
+									<ExtendedTooltip name="ДеревоФРКоличествоExtendedTooltip" id="120"/>
+								</InputField>
+								<InputField name="ДеревоФРСтавкаФОТ" id="81">
+									<DataPath>ДеревоФР.СтавкаФОТ</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДеревоФРСтавкаФОТКонтекстноеМеню" id="82"/>
+									<ExtendedTooltip name="ДеревоФРСтавкаФОТExtendedTooltip" id="121"/>
+								</InputField>
+								<InputField name="ДеревоФРСумма" id="83">
+									<DataPath>ДеревоФР.Сумма</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДеревоФРСуммаКонтекстноеМеню" id="84"/>
+									<ExtendedTooltip name="ДеревоФРСуммаExtendedTooltip" id="122"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.КалькуляторПланаРабот</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ДеревоФР" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дерево ФР</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTree</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Месяц" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Месяц</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="ТарифнаяСтавка" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тарифная ставка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ТарифныеСтавки</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Количество" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Количество</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>7</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="СтавкаФОТ" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ставка ФОТ, ч</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>12</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Сумма" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="СуммаВсего" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Всего</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Количество" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>4</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Период" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:StandardPeriod</v8:Type>
+			</Type>
+			<Save>
+				<Field>Период.Variant</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="Должность" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Должность</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Должности</v8:Type>
+			</Type>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ФронтРабот</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.ФронтРабот.Месяц</dcsset:left>
+						<dcsset:comparisonType>LessOrEqual</dcsset:comparisonType>
+						<dcsset:right xsi:type="dcscor:Field">Объект.ИсполненВключая</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:ПользовательВыбранный</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ДеревоФР</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ДеревоФР.Месяц</dcsset:left>
+						<dcsset:comparisonType>LessOrEqual</dcsset:comparisonType>
+						<dcsset:right xsi:type="dcscor:Field">Объект.ИсполненВключая</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:ПользовательВыбранный</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="ДобавитьВПланРабот" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить в план работ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДобавитьВПланРабот</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="УстановитьВПланеРабот" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить в плане работ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УстановитьВПланеРабот</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ОчиститьВПланеРабот" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить в плане работ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОчиститьВПланеРабот</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ЗаполнитьПоКалендарюВнеделю" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>По календарю (часов в неделю)</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить по календарю вдень</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Calendar</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ЗаполнитьПоКалендарюВнеделю</Action>
+		</Command>
+		<Command name="ЗаполнитьПоКалендарюВдень" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>По календарю (часов в день)</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить по календарю вдень</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Calendar</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ЗаполнитьПоКалендарюВдень</Action>
+		</Command>
+		<Command name="ВычестьИзПланаРабот" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вычесть</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вычесть из плана работ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВычестьИзПланаРабот</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+	</Commands>
+</Form>

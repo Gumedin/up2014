@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5">
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа1" id="18">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1ExtendedTooltip" id="41"/>
+			<ChildItems>
+				<InputField name="Номер" id="1">
+					<DataPath>Объект.Number</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="НомерExtendedTooltip" id="42"/>
+				</InputField>
+				<InputField name="Дата" id="3">
+					<DataPath>Объект.Date</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="4"/>
+					<ExtendedTooltip name="ДатаExtendedTooltip" id="43"/>
+				</InputField>
+				<LabelField name="ОстатокАкта" id="19">
+					<DataPath>ОстатокАкта</DataPath>
+					<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+					<ContextMenu name="ОстатокАктаКонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="ОстатокАктаExtendedTooltip" id="44"/>
+				</LabelField>
+			</ChildItems>
+		</UsualGroup>
+		<LabelField name="ПланРабот" id="21">
+			<DataPath>Объект.АктТиражногоПодразделения.ПланРабот</DataPath>
+			<ContextMenu name="ПланРаботКонтекстноеМеню" id="22"/>
+			<ExtendedTooltip name="ПланРаботExtendedTooltip" id="45"/>
+			<Events>
+				<Event name="OnChange">ПланРаботПриИзменении</Event>
+			</Events>
+		</LabelField>
+		<LabelField name="ПланРаботЗадачаПроекта" id="62">
+			<DataPath>Объект.АктТиражногоПодразделения.ПланРабот.ЗадачаПроекта</DataPath>
+			<ContextMenu name="ПланРаботЗадачаПроектаКонтекстноеМеню" id="63"/>
+			<ExtendedTooltip name="ПланРаботЗадачаПроектаРасширеннаяПодсказка" id="64"/>
+		</LabelField>
+		<LabelField name="ПланРаботЗадачаПроектаВладелец" id="65">
+			<DataPath>Объект.АктТиражногоПодразделения.ПланРабот.ЗадачаПроекта.Owner</DataPath>
+			<ContextMenu name="ПланРаботЗадачаПроектаВладелецКонтекстноеМеню" id="66"/>
+			<ExtendedTooltip name="ПланРаботЗадачаПроектаВладелецРасширеннаяПодсказка" id="67"/>
+		</LabelField>
+		<InputField name="АктТиражногоПодразделения" id="5">
+			<DataPath>Объект.АктТиражногоПодразделения</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="АктТиражногоПодразделенияКонтекстноеМеню" id="6"/>
+			<ExtendedTooltip name="АктТиражногоПодразделенияExtendedTooltip" id="48"/>
+			<Events>
+				<Event name="OnChange">АктТиражногоПодразделенияПриИзменении</Event>
+			</Events>
+		</InputField>
+		<Table name="ФизическиеЛица" id="68">
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.ФизическиеЛица</DataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ФизическиеЛицаКонтекстноеМеню" id="69"/>
+			<AutoCommandBar name="ФизическиеЛицаКоманднаяПанель" id="70"/>
+			<ExtendedTooltip name="ФизическиеЛицаРасширеннаяПодсказка" id="71"/>
+			<SearchStringAddition name="ФизическиеЛицаSearchString" id="102">
+				<AdditionSource>
+					<Item>ФизическиеЛица</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ФизическиеЛицаSearchStringContextMenu" id="103"/>
+				<ExtendedTooltip name="ФизическиеЛицаSearchStringExtendedTooltip" id="104"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ФизическиеЛицаViewStatus" id="105">
+				<AdditionSource>
+					<Item>ФизическиеЛица</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ФизическиеЛицаViewStatusContextMenu" id="106"/>
+				<ExtendedTooltip name="ФизическиеЛицаViewStatusExtendedTooltip" id="107"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ФизическиеЛицаSearchControl" id="108">
+				<AdditionSource>
+					<Item>ФизическиеЛица</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ФизическиеЛицаSearchControlContextMenu" id="109"/>
+				<ExtendedTooltip name="ФизическиеЛицаSearchControlExtendedTooltip" id="110"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="OnChange">ФизическиеЛицаПриИзменении</Event>
+			</Events>
+			<ChildItems>
+				<LabelField name="ФизическиеЛицаНомерСтроки" id="72">
+					<DataPath>Объект.ФизическиеЛица.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ФизическиеЛицаНомерСтрокиКонтекстноеМеню" id="73"/>
+					<ExtendedTooltip name="ФизическиеЛицаНомерСтрокиРасширеннаяПодсказка" id="74"/>
+				</LabelField>
+				<InputField name="ФизическиеЛицаФизическоеЛицо" id="75">
+					<DataPath>Объект.ФизическиеЛица.ФизическоеЛицо</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ФизическиеЛицаФизическоеЛицоКонтекстноеМеню" id="76"/>
+					<ExtendedTooltip name="ФизическиеЛицаФизическоеЛицоРасширеннаяПодсказка" id="77"/>
+				</InputField>
+				<InputField name="ФизическиеЛицаНоменклатура" id="78">
+					<DataPath>Объект.ФизическиеЛица.Номенклатура</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ФизическиеЛицаНоменклатураКонтекстноеМеню" id="79"/>
+					<ExtendedTooltip name="ФизическиеЛицаНоменклатураРасширеннаяПодсказка" id="80"/>
+					<Events>
+						<Event name="OnChange">ФизическиеЛицаНоменклатураПриИзменении</Event>
+						<Event name="StartChoice">ФизическиеЛицаНоменклатураНачалоВыбора</Event>
+					</Events>
+				</InputField>
+				<InputField name="ФизическиеЛицаКоличество" id="84">
+					<DataPath>Объект.ФизическиеЛица.Количество</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ФизическиеЛицаКоличествоКонтекстноеМеню" id="85"/>
+					<ExtendedTooltip name="ФизическиеЛицаКоличествоРасширеннаяПодсказка" id="86"/>
+					<Events>
+						<Event name="OnChange">ФизическиеЛицаКоличествоПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="ФизическиеЛицаСкидка" id="93">
+					<DataPath>Объект.ФизическиеЛица.Скидка</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ФизическиеЛицаСкидкаКонтекстноеМеню" id="94"/>
+					<ExtendedTooltip name="ФизическиеЛицаСкидкаРасширеннаяПодсказка" id="95"/>
+				</InputField>
+				<ColumnGroup name="ФизическиеДляКлиента" id="111">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Физические для клиента</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Для клиента</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ФизическиеДляКлиентаРасширеннаяПодсказка" id="112"/>
+					<ChildItems>
+						<InputField name="ФизическиеЛицаЦена" id="87">
+							<DataPath>Объект.ФизическиеЛица.Цена</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ФизическиеЛицаЦенаКонтекстноеМеню" id="88"/>
+							<ExtendedTooltip name="ФизическиеЛицаЦенаРасширеннаяПодсказка" id="89"/>
+							<Events>
+								<Event name="OnChange">ФизическиеЛицаЦенаПриИзменении</Event>
+								<Event name="StartChoice">ФизическиеЛицаЦенаНачалоВыбора</Event>
+							</Events>
+						</InputField>
+						<InputField name="ФизическиеЛицаСумма" id="81">
+							<DataPath>Объект.ФизическиеЛица.Сумма</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ФизическиеЛицаСуммаКонтекстноеМеню" id="82"/>
+							<ExtendedTooltip name="ФизическиеЛицаСуммаРасширеннаяПодсказка" id="83"/>
+						</InputField>
+					</ChildItems>
+				</ColumnGroup>
+				<ColumnGroup name="ФизическиеФОТ" id="113">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ФОТ</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Физические ФОТ</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ФизическиеФОТРасширеннаяПодсказка" id="114"/>
+					<ChildItems>
+						<InputField name="ФизическиеЛицаЦенаФОТ" id="90">
+							<DataPath>Объект.ФизическиеЛица.ЦенаФОТ</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ФизическиеЛицаЦенаФОТКонтекстноеМеню" id="91"/>
+							<ExtendedTooltip name="ФизическиеЛицаЦенаФОТРасширеннаяПодсказка" id="92"/>
+							<Events>
+								<Event name="OnChange">ФизическиеЛицаЦенаФОТПриИзменении</Event>
+								<Event name="StartChoice">ФизическиеЛицаЦенаФОТНачалоВыбора</Event>
+							</Events>
+						</InputField>
+						<InputField name="ФизическиеЛицаСуммаФОТ" id="96">
+							<DataPath>Объект.ФизическиеЛица.СуммаФОТ</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ФизическиеЛицаСуммаФОТКонтекстноеМеню" id="97"/>
+							<ExtendedTooltip name="ФизическиеЛицаСуммаФОТРасширеннаяПодсказка" id="98"/>
+						</InputField>
+					</ChildItems>
+				</ColumnGroup>
+				<InputField name="ФизическиеЛицаКомментарий" id="99">
+					<DataPath>Объект.ФизическиеЛица.Комментарий</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ФизическиеЛицаКомментарийКонтекстноеМеню" id="100"/>
+					<ExtendedTooltip name="ФизическиеЛицаКомментарийРасширеннаяПодсказка" id="101"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.ЗакрытиеАктаТП</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+		<Attribute name="ОстатокАкта" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Остаток акта</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+</Form>

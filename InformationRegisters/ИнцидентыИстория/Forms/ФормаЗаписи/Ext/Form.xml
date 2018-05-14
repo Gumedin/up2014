@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWriteAtServer">ПослеЗаписиНаСервере</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Инцидент" id="18">
+			<DataPath>Запись.Инцидент</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<ContextMenu name="ИнцидентКонтекстноеМеню" id="19"/>
+			<ExtendedTooltip name="ИнцидентРасширеннаяПодсказка" id="20"/>
+		</InputField>
+		<UsualGroup name="Группа1" id="16">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="17"/>
+			<ChildItems>
+				<LabelField name="Период" id="1">
+					<DataPath>Запись.Period</DataPath>
+					<ContextMenu name="ПериодКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="ПериодРасширеннаяПодсказка" id="3"/>
+				</LabelField>
+				<InputField name="СтатусИнцидента" id="7">
+					<DataPath>Запись.СтатусИнцидента</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статус</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="СтатусИнцидентаКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="СтатусИнцидентаРасширеннаяПодсказка" id="9"/>
+				</InputField>
+				<InputField name="Количество" id="10">
+					<DataPath>Запись.Количество</DataPath>
+					<SkipOnInput>true</SkipOnInput>
+					<ContextMenu name="КоличествоКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="КоличествоРасширеннаяПодсказка" id="12"/>
+				</InputField>
+				<InputField name="СрокИсполнения" id="27">
+					<DataPath>Запись.СрокИсполнения</DataPath>
+					<ContextMenu name="СрокИсполненияКонтекстноеМеню" id="28"/>
+					<ExtendedTooltip name="СрокИсполненияРасширеннаяПодсказка" id="29"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="ОтКого" id="21">
+			<DataPath>Запись.ОтКого</DataPath>
+			<ContextMenu name="ОтКогоКонтекстноеМеню" id="22"/>
+			<ExtendedTooltip name="ОтКогоРасширеннаяПодсказка" id="23"/>
+		</InputField>
+		<InputField name="Кому" id="24">
+			<DataPath>Запись.Кому</DataPath>
+			<ContextMenu name="КомуКонтекстноеМеню" id="25"/>
+			<ExtendedTooltip name="КомуРасширеннаяПодсказка" id="26"/>
+			<Events>
+				<Event name="StartChoice">КомуНачалоВыбора</Event>
+			</Events>
+		</InputField>
+		<InputField name="Результат" id="13">
+			<DataPath>Запись.Результат</DataPath>
+			<MultiLine>true</MultiLine>
+			<ContextMenu name="РезультатКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="РезультатРасширеннаяПодсказка" id="15"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.ИнцидентыИстория</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="Поручить" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поручить</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+</Form>

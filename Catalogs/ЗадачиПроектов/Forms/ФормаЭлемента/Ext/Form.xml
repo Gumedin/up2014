@@ -1,0 +1,835 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаПересчетСтруктуры" id="87">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ПересчетСтруктуры</CommandName>
+				<ExtendedTooltip name="ФормаПересчетСтруктурыРасширеннаяПодсказка" id="88"/>
+			</Button>
+			<Button name="ФормаЗагрузитьЗадачиИзMSProject" id="85">
+				<Type>CommandBarButton</Type>
+				<UserVisible>
+					<xr:Common>false</xr:Common>
+					<xr:Value name="Role.АдминистраторСистемы">true</xr:Value>
+					<xr:Value name="Role.Администрирование">true</xr:Value>
+					<xr:Value name="Role.ПроектМенеджер">true</xr:Value>
+				</UserVisible>
+				<OnlyInAllActions>true</OnlyInAllActions>
+				<CommandName>Form.Command.ЗагрузитьЗадачиИзMSProject</CommandName>
+				<ExtendedTooltip name="ФормаЗагрузитьЗадачиИзMSProjectРасширеннаяПодсказка" id="86"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа2" id="57">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="58"/>
+			<ChildItems>
+				<InputField name="Владелец" id="7">
+					<DataPath>Объект.Owner</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ВладелецКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="ВладелецРасширеннаяПодсказка" id="9"/>
+					<Events>
+						<Event name="OnChange">ВладелецПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="ТиповаяЗадача" id="25">
+					<DataPath>Объект.ТиповаяЗадача</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТиповаяЗадачаКонтекстноеМеню" id="26"/>
+					<ExtendedTooltip name="ТиповаяЗадачаРасширеннаяПодсказка" id="27"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа4" id="81">
+			<Group>Horizontal</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="82"/>
+			<ChildItems>
+				<InputField name="Наименование" id="4">
+					<DataPath>Объект.Description</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+				</InputField>
+				<Button name="СформироватьНаименованиеЗадачи" id="83">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.СформироватьНаименованиеЗадачи</CommandName>
+					<ExtendedTooltip name="СформироватьНаименованиеЗадачиРасширеннаяПодсказка" id="84"/>
+				</Button>
+				<InputField name="ИсточникФинансирования" id="167">
+					<DataPath>Объект.ИсточникФинансирования</DataPath>
+					<ContextMenu name="ИсточникФинансированияКонтекстноеМеню" id="168"/>
+					<ExtendedTooltip name="ИсточникФинансированияРасширеннаяПодсказка" id="169"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Подразделение" id="16">
+			<DataPath>Объект.Подразделение</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ПодразделениеКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="ПодразделениеРасширеннаяПодсказка" id="18"/>
+			<Events>
+				<Event name="OnChange">ПодразделениеПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="ПроектМенеджер" id="13">
+			<DataPath>Объект.ПроектМенеджер</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ПроектМенеджерКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ПроектМенеджерРасширеннаяПодсказка" id="15"/>
+		</InputField>
+		<InputField name="Контрагент" id="95">
+			<DataPath>Объект.Контрагент</DataPath>
+			<ClearButton>true</ClearButton>
+			<ContextMenu name="КонтрагентКонтекстноеМеню" id="96"/>
+			<ExtendedTooltip name="КонтрагентРасширеннаяПодсказка" id="97"/>
+		</InputField>
+		<UsualGroup name="Группа3" id="68">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="69"/>
+			<ChildItems>
+				<InputField name="Сумма" id="10">
+					<DataPath>Объект.Сумма</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СуммаКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="СуммаРасширеннаяПодсказка" id="12"/>
+					<Events>
+						<Event name="OnChange">СуммаПриИзменении</Event>
+					</Events>
+				</InputField>
+				<Button name="СуммаЗадачиПоСмете" id="144">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.СуммаЗадачиПоСмете</CommandName>
+					<ExtendedTooltip name="СуммаЗадачиПоСметеРасширеннаяПодсказка" id="145"/>
+				</Button>
+				<InputField name="ГодЗадачи" id="161">
+					<DataPath>Объект.ГодЗадачи</DataPath>
+					<ContextMenu name="ГодЗадачиКонтекстноеМеню" id="162"/>
+					<ExtendedTooltip name="ГодЗадачиРасширеннаяПодсказка" id="163"/>
+				</InputField>
+				<InputField name="НачалоРабот" id="70">
+					<DataPath>Объект.НачалоРабот</DataPath>
+					<ContextMenu name="НачалоРаботКонтекстноеМеню" id="71"/>
+					<ExtendedTooltip name="НачалоРаботРасширеннаяПодсказка" id="72"/>
+					<Events>
+						<Event name="OnChange">НачалоРаботПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="ОкончаниеРабот" id="73">
+					<DataPath>Объект.ОкончаниеРабот</DataPath>
+					<ContextMenu name="ОкончаниеРаботКонтекстноеМеню" id="74"/>
+					<ExtendedTooltip name="ОкончаниеРаботРасширеннаяПодсказка" id="75"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="Группа1" id="38">
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="39"/>
+			<Events>
+				<Event name="OnCurrentPageChange">Группа1ПриСменеСтраницы</Event>
+			</Events>
+			<ChildItems>
+				<Page name="ГруппаИсполнители" id="40">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Исполнители</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа исполнители</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаИсполнителиРасширеннаяПодсказка" id="41"/>
+					<ChildItems>
+						<Table name="Исполнители" id="28">
+							<Representation>List</Representation>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.Исполнители</DataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ИсполнителиКонтекстноеМеню" id="29"/>
+							<AutoCommandBar name="ИсполнителиКоманднаяПанель" id="30"/>
+							<ExtendedTooltip name="ИсполнителиРасширеннаяПодсказка" id="31"/>
+							<SearchStringAddition name="ИсполнителиСтрокаПоиска" id="59">
+								<AdditionSource>
+									<Item>Исполнители</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ИсполнителиСтрокаПоискаКонтекстноеМеню" id="60"/>
+								<ExtendedTooltip name="ИсполнителиСтрокаПоискаРасширеннаяПодсказка" id="61"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ИсполнителиСостояниеПросмотра" id="62">
+								<AdditionSource>
+									<Item>Исполнители</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ИсполнителиСостояниеПросмотраКонтекстноеМеню" id="63"/>
+								<ExtendedTooltip name="ИсполнителиСостояниеПросмотраРасширеннаяПодсказка" id="64"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ИсполнителиУправлениеПоиском" id="65">
+								<AdditionSource>
+									<Item>Исполнители</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ИсполнителиУправлениеПоискомКонтекстноеМеню" id="66"/>
+								<ExtendedTooltip name="ИсполнителиУправлениеПоискомРасширеннаяПодсказка" id="67"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ИсполнителиНомерСтроки" id="32">
+									<DataPath>Объект.Исполнители.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИсполнителиНомерСтрокиКонтекстноеМеню" id="33"/>
+									<ExtendedTooltip name="ИсполнителиНомерСтрокиРасширеннаяПодсказка" id="34"/>
+								</LabelField>
+								<InputField name="ИсполнителиФизическоеЛицо" id="35">
+									<DataPath>Объект.Исполнители.ФизическоеЛицо</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИсполнителиФизическоеЛицоКонтекстноеМеню" id="36"/>
+									<ExtendedTooltip name="ИсполнителиФизическоеЛицоРасширеннаяПодсказка" id="37"/>
+									<Events>
+										<Event name="OnChange">ИсполнителиФизическоеЛицоПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ИсполнителиДолжность" id="89">
+									<DataPath>Объект.Исполнители.Должность</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИсполнителиДолжностьКонтекстноеМеню" id="90"/>
+									<ExtendedTooltip name="ИсполнителиДолжностьРасширеннаяПодсказка" id="91"/>
+									<Events>
+										<Event name="OnChange">ИсполнителиДолжностьПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ИсполнителиТарифнаяСтавка" id="92">
+									<DataPath>Объект.Исполнители.ТарифнаяСтавка</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИсполнителиТарифнаяСтавкаКонтекстноеМеню" id="93"/>
+									<ExtendedTooltip name="ИсполнителиТарифнаяСтавкаРасширеннаяПодсказка" id="94"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+						<CheckBoxField name="ТолькоИсполнители" id="22">
+							<DataPath>Объект.ТолькоИсполнители</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ТолькоИсполнителиКонтекстноеМеню" id="23"/>
+							<ExtendedTooltip name="ТолькоИсполнителиРасширеннаяПодсказка" id="24"/>
+						</CheckBoxField>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаПостановка" id="55">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Постановка задачи</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа постановка</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаПостановкаРасширеннаяПодсказка" id="56"/>
+					<ChildItems>
+						<TextDocumentField name="ПостановкаЗадачи" id="19">
+							<DataPath>Объект.ПостановкаЗадачи</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ПостановкаЗадачиКонтекстноеМеню" id="20"/>
+							<ExtendedTooltip name="ПостановкаЗадачиРасширеннаяПодсказка" id="21"/>
+						</TextDocumentField>
+						<InputField name="Комментарий" id="133">
+							<DataPath>Объект.Комментарий</DataPath>
+							<ContextMenu name="КомментарийКонтекстноеМеню" id="134"/>
+							<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="135"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+				<Page name="ДиаграммаГанта" id="76">
+					<Visible>false</Visible>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Диаграмма Ганта</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Диаграмма ганта</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ДиаграммаГантаРасширеннаяПодсказка" id="77"/>
+					<ChildItems>
+						<GanttChartField name="СхемаРабот" id="78">
+							<DataPath>СхемаРабот</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<ContextMenu name="СхемаРаботКонтекстноеМеню" id="79"/>
+							<ExtendedTooltip name="СхемаРаботРасширеннаяПодсказка" id="80"/>
+						</GanttChartField>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаГрафикПлатежей" id="98">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>График платежей</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа график платежей</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаГрафикПлатежейРасширеннаяПодсказка" id="99"/>
+					<ChildItems>
+						<Table name="ЭтапыГрафикаОплаты" id="100">
+							<Footer>true</Footer>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.ЭтапыГрафикаОплаты</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ЭтапыГрафикаОплатыКонтекстноеМеню" id="101"/>
+							<AutoCommandBar name="ЭтапыГрафикаОплатыКоманднаяПанель" id="102">
+								<ChildItems>
+									<Button name="ЭтапыГрафикаОплатыПересчитатьГрафикПлатежа" id="128">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ПересчитатьГрафикПлатежа</CommandName>
+										<ExtendedTooltip name="ЭтапыГрафикаОплатыПересчитатьГрафикПлатежаРасширеннаяПодсказка" id="129"/>
+									</Button>
+									<Button name="ЭтапыГрафикаОплатыСкорректироватьПоДоговорам" id="142">
+										<Type>CommandBarButton</Type>
+										<Representation>PictureAndText</Representation>
+										<OnlyInAllActions>true</OnlyInAllActions>
+										<CommandName>Form.Command.СкорректироватьПоДоговорам</CommandName>
+										<ExtendedTooltip name="ЭтапыГрафикаОплатыСкорректироватьПоДоговорамРасширеннаяПодсказка" id="143"/>
+									</Button>
+									<ButtonGroup name="ЭтапыГрафикаОплатыГруппа1" id="148">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Фиксировано</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="ЭтапыГрафикаОплатыГруппа1РасширеннаяПодсказка" id="149"/>
+										<ChildItems>
+											<Button name="ЭтапыГрафикаОплатыУстановитьФлажкиФиксировано" id="146">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.УстановитьФлажкиФиксировано</CommandName>
+												<ExtendedTooltip name="ЭтапыГрафикаОплатыУстановитьФлажкиФиксированоРасширеннаяПодсказка" id="147"/>
+											</Button>
+											<Button name="ЭтапыГрафикаОплатыСнятьФлажкиФиксировано" id="150">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.СнятьФлажкиФиксировано</CommandName>
+												<ExtendedTooltip name="ЭтапыГрафикаОплатыСнятьФлажкиФиксированоРасширеннаяПодсказка" id="151"/>
+											</Button>
+										</ChildItems>
+									</ButtonGroup>
+									<ButtonGroup name="ЭтапыГрафикаОплатыГруппа2" id="152">
+										<ExtendedTooltip name="ЭтапыГрафикаОплатыГруппа2РасширеннаяПодсказка" id="153"/>
+										<ChildItems>
+											<Button name="ЭтапыГрафикаОплатыУстановитьФлажкиГарантировано" id="154">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.УстановитьФлажкиГарантировано</CommandName>
+												<ExtendedTooltip name="ЭтапыГрафикаОплатыУстановитьФлажкиГарантированоРасширеннаяПодсказка" id="155"/>
+											</Button>
+											<Button name="ЭтапыГрафикаОплатыСнятьФлажкиГарантировано" id="156">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.СнятьФлажкиГарантировано</CommandName>
+												<ExtendedTooltip name="ЭтапыГрафикаОплатыСнятьФлажкиГарантированоРасширеннаяПодсказка" id="157"/>
+											</Button>
+										</ChildItems>
+									</ButtonGroup>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ЭтапыГрафикаОплатыРасширеннаяПодсказка" id="103"/>
+							<SearchStringAddition name="ЭтапыГрафикаОплатыСтрокаПоиска" id="104">
+								<AdditionSource>
+									<Item>ЭтапыГрафикаОплаты</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ЭтапыГрафикаОплатыСтрокаПоискаКонтекстноеМеню" id="105"/>
+								<ExtendedTooltip name="ЭтапыГрафикаОплатыСтрокаПоискаРасширеннаяПодсказка" id="106"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ЭтапыГрафикаОплатыСостояниеПросмотра" id="107">
+								<AdditionSource>
+									<Item>ЭтапыГрафикаОплаты</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ЭтапыГрафикаОплатыСостояниеПросмотраКонтекстноеМеню" id="108"/>
+								<ExtendedTooltip name="ЭтапыГрафикаОплатыСостояниеПросмотраРасширеннаяПодсказка" id="109"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ЭтапыГрафикаОплатыУправлениеПоиском" id="110">
+								<AdditionSource>
+									<Item>ЭтапыГрафикаОплаты</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ЭтапыГрафикаОплатыУправлениеПоискомКонтекстноеМеню" id="111"/>
+								<ExtendedTooltip name="ЭтапыГрафикаОплатыУправлениеПоискомРасширеннаяПодсказка" id="112"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="OnChange">ЭтапыГрафикаОплатыПриИзменении</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="ЭтапыГрафикаОплатыНомерСтроки" id="113">
+									<DataPath>Объект.ЭтапыГрафикаОплаты.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ЭтапыГрафикаОплатыНомерСтрокиКонтекстноеМеню" id="114"/>
+									<ExtendedTooltip name="ЭтапыГрафикаОплатыНомерСтрокиРасширеннаяПодсказка" id="115"/>
+								</LabelField>
+								<InputField name="ЭтапыГрафикаОплатыДатаПлатежа" id="116">
+									<DataPath>Объект.ЭтапыГрафикаОплаты.ДатаПлатежа</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ЭтапыГрафикаОплатыДатаПлатежаКонтекстноеМеню" id="117"/>
+									<ExtendedTooltip name="ЭтапыГрафикаОплатыДатаПлатежаРасширеннаяПодсказка" id="118"/>
+									<Events>
+										<Event name="OnChange">ЭтапыГрафикаОплатыДатаПлатежаПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ЭтапыГрафикаОплатыПроцентПлатежа" id="122">
+									<DataPath>Объект.ЭтапыГрафикаОплаты.ПроцентПлатежа</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<FooterDataPath>Объект.ЭтапыГрафикаОплаты.TotalПроцентПлатежа</FooterDataPath>
+									<ContextMenu name="ЭтапыГрафикаОплатыПроцентПлатежаКонтекстноеМеню" id="123"/>
+									<ExtendedTooltip name="ЭтапыГрафикаОплатыПроцентПлатежаРасширеннаяПодсказка" id="124"/>
+									<Events>
+										<Event name="OnChange">ЭтапыГрафикаОплатыПроцентПлатежаПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ЭтапыГрафикаОплатыСуммаПлатежа" id="119">
+									<DataPath>Объект.ЭтапыГрафикаОплаты.СуммаПлатежа</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<FooterDataPath>Объект.ЭтапыГрафикаОплаты.TotalСуммаПлатежа</FooterDataPath>
+									<ContextMenu name="ЭтапыГрафикаОплатыСуммаПлатежаКонтекстноеМеню" id="120"/>
+									<ExtendedTooltip name="ЭтапыГрафикаОплатыСуммаПлатежаРасширеннаяПодсказка" id="121"/>
+									<Events>
+										<Event name="OnChange">ЭтапыГрафикаОплатыСуммаПлатежаПриИзменении</Event>
+									</Events>
+								</InputField>
+								<CheckBoxField name="ЭтапыГрафикаОплатыФиксировано" id="136">
+									<DataPath>Объект.ЭтапыГрафикаОплаты.Фиксировано</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ЭтапыГрафикаОплатыФиксированоКонтекстноеМеню" id="137"/>
+									<ExtendedTooltip name="ЭтапыГрафикаОплатыФиксированоРасширеннаяПодсказка" id="138"/>
+								</CheckBoxField>
+								<CheckBoxField name="ЭтапыГрафикаОплатыГарантировано" id="139">
+									<DataPath>Объект.ЭтапыГрафикаОплаты.Гарантировано</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ЭтапыГрафикаОплатыГарантированоКонтекстноеМеню" id="140"/>
+									<ExtendedTooltip name="ЭтапыГрафикаОплатыГарантированоРасширеннаяПодсказка" id="141"/>
+								</CheckBoxField>
+								<InputField name="ЭтапыГрафикаОплатыКомментарий" id="125">
+									<DataPath>Объект.ЭтапыГрафикаОплаты.Комментарий</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ЭтапыГрафикаОплатыКомментарийКонтекстноеМеню" id="126"/>
+									<ExtendedTooltip name="ЭтапыГрафикаОплатыКомментарийРасширеннаяПодсказка" id="127"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+						<CheckBoxField name="ОбеспеченоПрошлымиПериодами" id="158">
+							<DataPath>Объект.ОбеспеченоПрошлымиПериодами</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ОбеспеченоПрошлымиПериодамиКонтекстноеМеню" id="159"/>
+							<ExtendedTooltip name="ОбеспеченоПрошлымиПериодамиРасширеннаяПодсказка" id="160"/>
+						</CheckBoxField>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ЗадачиПроектов</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="СхемаРабот" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Схема работ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.2/data/chart">d5p1:GanttChart</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="СформироватьНаименованиеЗадачи" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Наименование</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать наименование задачи</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Change</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СформироватьНаименованиеЗадачи</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ЗагрузитьЗадачиИзMSProject" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить из MSProject...</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить из MSProject</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.MSProject</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ЗагрузитьИзMSProject</Action>
+		</Command>
+		<Command name="ПересчетСтруктуры" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пересчет структуры работ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пересчет структуры</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПересчетСтруктуры</Action>
+		</Command>
+		<Command name="ПересчитатьГрафикПлатежа" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пересчитать график платежа</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пересчитать график платежа</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.Рассчитать</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПересчитатьГрафикПлатежа</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="СкорректироватьПоДоговорам" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Скорректировать по договорам</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Скорректировать по договорам</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.WriteChanges</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СкорректироватьПоДоговорам</Action>
+		</Command>
+		<Command name="СуммаЗадачиПоСмете" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма задачи по смете</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма задачи по смете</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.Сумма</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СуммаЗадачиПоСмете</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="УстановитьФлажкиФиксировано" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить флажки фиксировано</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить флажки фиксировано</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>УстановитьФлажкиФиксировано</Action>
+		</Command>
+		<Command name="СнятьФлажкиФиксировано" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять флажки фиксировано</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять флажки фиксировано</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СнятьФлажкиФиксировано</Action>
+		</Command>
+		<Command name="СнятьФлажкиГарантировано" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять флажки фиксировано</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять флажки фиксировано</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СнятьФлажкиГарантировано</Action>
+		</Command>
+		<Command name="УстановитьФлажкиГарантировано" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить флажки фиксировано</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить флажки фиксировано</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>УстановитьФлажкиГарантировано</Action>
+		</Command>
+	</Commands>
+	<CommandInterface>
+		<NavigationPanel>
+			<Item>
+				<Command>Catalog.ЗадачиПроектовВехи.StandardCommand.OpenByValue</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelSeeAlso</CommandGroup>
+				<Index>7</Index>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>Catalog.ЗадачиПроектовСтруктура.StandardCommand.OpenByValue</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelImportant</CommandGroup>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>Catalog.ЗадачиПроектов.Command.СписокПлановВознагражденияПосредника</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelSeeAlso</CommandGroup>
+				<Index>2</Index>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>Catalog.ЗадачиПроектов.Command.СписокПлановРабот</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelSeeAlso</CommandGroup>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>Catalog.ЗадачиПроектов.Command.СписокПлановРаботТиражных</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelSeeAlso</CommandGroup>
+				<Index>1</Index>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>InformationRegister.КонтрагентыПосещений.StandardCommand.OpenByValue.ПредметПосещения</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelSeeAlso</CommandGroup>
+				<Index>6</Index>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>Catalog.ЗадачиПроектов.Command.СписокРасходПоЗадачеПроекта</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelSeeAlso</CommandGroup>
+				<Index>5</Index>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>Catalog.ЗадачиПроектов.Command.СписокРасходПоЗадачеПроизводство</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelSeeAlso</CommandGroup>
+				<Index>4</Index>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>Catalog.ЗадачиПроектов.Command.СписокЗакупкаППЛО</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelSeeAlso</CommandGroup>
+				<Index>3</Index>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>Catalog.Требования.StandardCommand.OpenByValue</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelSeeAlso</CommandGroup>
+				<Index>8</Index>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>InformationRegister.БюджетДоходовИРасходов.StandardCommand.OpenByValue.ТипСуммы</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelGoTo</CommandGroup>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>Catalog.ЗадачиПроектов.Command.СписокДоговоров</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+			</Item>
+		</NavigationPanel>
+		<CommandBar>
+			<Item>
+				<Command>Catalog.ЗадачиПроектов.Command.СписокПлановРабот</Command>
+				<Type>Auto</Type>
+				<CommandGroup>CommandGroup.ПерейтиКДокументам</CommandGroup>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>Catalog.ЗадачиПроектов.Command.СписокПлановРаботТиражных</Command>
+				<Type>Auto</Type>
+				<CommandGroup>CommandGroup.ПерейтиКДокументам</CommandGroup>
+				<Index>1</Index>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>Catalog.ЗадачиПроектов.Command.СписокРасходПоЗадачеПроекта</Command>
+				<Type>Auto</Type>
+				<CommandGroup>CommandGroup.ПерейтиКДокументам</CommandGroup>
+				<Index>2</Index>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>Catalog.ЗадачиПроектов.Command.СписокРасходПоЗадачеПроизводство</Command>
+				<Type>Auto</Type>
+				<CommandGroup>CommandGroup.ПерейтиКДокументам</CommandGroup>
+				<Index>3</Index>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>Catalog.ЗадачиПроектов.Command.СписокЗакупкаППЛО</Command>
+				<Type>Auto</Type>
+				<CommandGroup>CommandGroup.ПерейтиКДокументам</CommandGroup>
+				<Index>4</Index>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>Catalog.ЗадачиПроектов.Command.СписокСметаЗадачиПроекта</Command>
+				<Type>Auto</Type>
+				<CommandGroup>CommandGroup.ПерейтиКДокументам</CommandGroup>
+				<Index>5</Index>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+		</CommandBar>
+	</CommandInterface>
+</Form>

@@ -1,0 +1,491 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="СписокРасчитатьСДР" id="168">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.РасчитатьСДР</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Коды СДР</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="СписокРасчитатьСДРРасширеннаяПодсказка" id="169"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="СписокКомпоновщикНастроекПользовательскиеНастройки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа пользовательских настроек</v8:content>
+				</v8:item>
+			</Title>
+			<VerticalStretch>false</VerticalStretch>
+			<Group>Vertical</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="СписокКомпоновщикНастроекПользовательскиеНастройкиРасширеннаяПодсказка" id="2"/>
+		</UsualGroup>
+		<Table name="Список" id="3">
+			<CommandBarLocation>None</CommandBarLocation>
+			<DefaultItem>true</DefaultItem>
+			<Height>8</Height>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<InitialTreeView>ExpandTopLevel</InitialTreeView>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Список</DataPath>
+			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<UserSettingsGroup>СписокКомпоновщикНастроекПользовательскиеНастройки</UserSettingsGroup>
+			<ContextMenu name="СписокКонтекстноеМеню" id="4"/>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="5">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="6"/>
+			<SearchStringAddition name="СписокСтрокаПоиска" id="80">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="81"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="82"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="83">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="84"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="85"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокУправлениеПоиском" id="86">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="87"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="88"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="OnActivateRow">СписокПриАктивизацииСтроки</Event>
+			</Events>
+			<ChildItems>
+				<LabelField name="Ссылка" id="165">
+					<DataPath>Список.Ref</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<ContextMenu name="СсылкаКонтекстноеМеню" id="166"/>
+					<ExtendedTooltip name="СсылкаРасширеннаяПодсказка" id="167"/>
+				</LabelField>
+				<LabelField name="Код" id="10">
+					<DataPath>Список.Code</DataPath>
+					<ContextMenu name="КодКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="КодРасширеннаяПодсказка" id="12"/>
+				</LabelField>
+				<LabelField name="Наименование" id="7">
+					<DataPath>Список.Description</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="9"/>
+				</LabelField>
+				<LabelField name="Продолжительность" id="98">
+					<DataPath>Список.Продолжительность</DataPath>
+					<ContextMenu name="ПродолжительностьКонтекстноеМеню" id="99"/>
+					<ExtendedTooltip name="ПродолжительностьРасширеннаяПодсказка" id="100"/>
+				</LabelField>
+				<LabelField name="ПроцентВыполнения" id="144">
+					<DataPath>Список.ПроцентВыполнения</DataPath>
+					<ContextMenu name="ПроцентВыполненияКонтекстноеМеню" id="145"/>
+					<ExtendedTooltip name="ПроцентВыполненияРасширеннаяПодсказка" id="146"/>
+				</LabelField>
+				<CheckBoxField name="Закрыта" id="19">
+					<DataPath>Список.Закрыта</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ЗакрытаКонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="ЗакрытаРасширеннаяПодсказка" id="21"/>
+				</CheckBoxField>
+			</ChildItems>
+		</Table>
+		<Table name="Ресурсы" id="107">
+			<Representation>List</Representation>
+			<ReadOnly>true</ReadOnly>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Items.Список.CurrentData.Ресурсы</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="РесурсыКонтекстноеМеню" id="108"/>
+			<AutoCommandBar name="РесурсыКоманднаяПанель" id="109">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="РесурсыРасширеннаяПодсказка" id="110"/>
+			<SearchStringAddition name="РесурсыСтрокаПоиска" id="111">
+				<AdditionSource>
+					<Item>Ресурсы</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="РесурсыСтрокаПоискаКонтекстноеМеню" id="114"/>
+				<ExtendedTooltip name="РесурсыСтрокаПоискаРасширеннаяПодсказка" id="115"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="РесурсыСостояниеПросмотра" id="116">
+				<AdditionSource>
+					<Item>Ресурсы</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="РесурсыСостояниеПросмотраКонтекстноеМеню" id="119"/>
+				<ExtendedTooltip name="РесурсыСостояниеПросмотраРасширеннаяПодсказка" id="120"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="РесурсыУправлениеПоиском" id="121">
+				<AdditionSource>
+					<Item>Ресурсы</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="РесурсыУправлениеПоискомКонтекстноеМеню" id="124"/>
+				<ExtendedTooltip name="РесурсыУправлениеПоискомРасширеннаяПодсказка" id="125"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<InputField name="РесурсыНомерСтроки" id="147">
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РесурсыНомерСтрокиКонтекстноеМеню" id="148"/>
+					<ExtendedTooltip name="РесурсыНомерСтрокиРасширеннаяПодсказка" id="149"/>
+				</InputField>
+				<InputField name="РесурсыИсполнитель" id="153">
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РесурсыИсполнительКонтекстноеМеню" id="154"/>
+					<ExtendedTooltip name="РесурсыИсполнительРасширеннаяПодсказка" id="155"/>
+				</InputField>
+				<InputField name="РесурсыТарифнаяСтавка" id="162">
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РесурсыТарифнаяСтавкаКонтекстноеМеню" id="163"/>
+					<ExtendedTooltip name="РесурсыТарифнаяСтавкаРасширеннаяПодсказка" id="164"/>
+				</InputField>
+				<InputField name="РесурсыКоличество" id="156">
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РесурсыКоличествоКонтекстноеМеню" id="157"/>
+					<ExtendedTooltip name="РесурсыКоличествоРасширеннаяПодсказка" id="158"/>
+				</InputField>
+				<InputField name="РесурсыМощность" id="159">
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РесурсыМощностьКонтекстноеМеню" id="160"/>
+					<ExtendedTooltip name="РесурсыМощностьРасширеннаяПодсказка" id="161"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<Table name="Инциденты" id="22">
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<EnableStartDrag>true</EnableStartDrag>
+			<DataPath>Инциденты</DataPath>
+			<RowPictureDataPath>Инциденты.DefaultPicture</RowPictureDataPath>
+			<CommandSet>
+				<ExcludedCommand>Create</ExcludedCommand>
+			</CommandSet>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<ContextMenu name="ИнцидентыКонтекстноеМеню" id="23"/>
+			<AutoCommandBar name="ИнцидентыКоманднаяПанель" id="24">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ИнцидентыРасширеннаяПодсказка" id="25"/>
+			<SearchStringAddition name="ИнцидентыСтрокаПоиска" id="89">
+				<AdditionSource>
+					<Item>Инциденты</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ИнцидентыСтрокаПоискаКонтекстноеМеню" id="90"/>
+				<ExtendedTooltip name="ИнцидентыСтрокаПоискаРасширеннаяПодсказка" id="91"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ИнцидентыСостояниеПросмотра" id="92">
+				<AdditionSource>
+					<Item>Инциденты</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ИнцидентыСостояниеПросмотраКонтекстноеМеню" id="93"/>
+				<ExtendedTooltip name="ИнцидентыСостояниеПросмотраРасширеннаяПодсказка" id="94"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ИнцидентыУправлениеПоиском" id="95">
+				<AdditionSource>
+					<Item>Инциденты</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ИнцидентыУправлениеПоискомКонтекстноеМеню" id="96"/>
+				<ExtendedTooltip name="ИнцидентыУправлениеПоискомРасширеннаяПодсказка" id="97"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="ИнцидентыКод" id="26">
+					<DataPath>Инциденты.Code</DataPath>
+					<ContextMenu name="ИнцидентыКодКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="ИнцидентыКодРасширеннаяПодсказка" id="28"/>
+				</LabelField>
+				<PictureField name="ИнцидентыНомерСостояния" id="71">
+					<DataPath>Инциденты.НомерСостояния</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>С</v8:content>
+						</v8:item>
+					</Title>
+					<ValuesPicture>
+						<xr:Ref>CommonPicture.КоллекцияСостоянияИнцидентов</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</ValuesPicture>
+					<ContextMenu name="ИнцидентыНомерСостоянияКонтекстноеМеню" id="72"/>
+					<ExtendedTooltip name="ИнцидентыНомерСостоянияРасширеннаяПодсказка" id="73"/>
+				</PictureField>
+				<PictureField name="ИнцидентыЗакрыт" id="50">
+					<DataPath>Инциденты.Закрыт</DataPath>
+					<ValuesPicture>
+						<xr:Ref>CommonPicture.КоллекцияИнциденты</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</ValuesPicture>
+					<ContextMenu name="ИнцидентыЗакрытКонтекстноеМеню" id="51"/>
+					<ExtendedTooltip name="ИнцидентыЗакрытРасширеннаяПодсказка" id="52"/>
+				</PictureField>
+				<LabelField name="ИнцидентыДатаНачала" id="65">
+					<DataPath>Инциденты.ДатаНачала</DataPath>
+					<ContextMenu name="ИнцидентыДатаНачалаКонтекстноеМеню" id="66"/>
+					<ExtendedTooltip name="ИнцидентыДатаНачалаРасширеннаяПодсказка" id="67"/>
+				</LabelField>
+				<LabelField name="ИнцидентыДатаОкончания" id="68">
+					<DataPath>Инциденты.ДатаОкончания</DataPath>
+					<ContextMenu name="ИнцидентыДатаОкончанияКонтекстноеМеню" id="69"/>
+					<ExtendedTooltip name="ИнцидентыДатаОкончанияРасширеннаяПодсказка" id="70"/>
+				</LabelField>
+				<LabelField name="ИнцидентыПлан" id="74">
+					<DataPath>Инциденты.План</DataPath>
+					<ContextMenu name="ИнцидентыПланКонтекстноеМеню" id="75"/>
+					<ExtendedTooltip name="ИнцидентыПланРасширеннаяПодсказка" id="76"/>
+				</LabelField>
+				<LabelField name="ИнцидентыФакт" id="77">
+					<DataPath>Инциденты.Факт</DataPath>
+					<ContextMenu name="ИнцидентыФактКонтекстноеМеню" id="78"/>
+					<ExtendedTooltip name="ИнцидентыФактРасширеннаяПодсказка" id="79"/>
+				</LabelField>
+				<LabelField name="ИнцидентыПриоритет" id="59">
+					<DataPath>Инциденты.Приоритет</DataPath>
+					<ContextMenu name="ИнцидентыПриоритетКонтекстноеМеню" id="60"/>
+					<ExtendedTooltip name="ИнцидентыПриоритетРасширеннаяПодсказка" id="61"/>
+				</LabelField>
+				<LabelField name="ИнцидентыНаименование" id="32">
+					<DataPath>Инциденты.Description</DataPath>
+					<ContextMenu name="ИнцидентыНаименованиеКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="ИнцидентыНаименованиеРасширеннаяПодсказка" id="34"/>
+				</LabelField>
+				<LabelField name="ИнцидентыФизическоеЛицо" id="62">
+					<DataPath>Инциденты.ФизическоеЛицо</DataPath>
+					<ContextMenu name="ИнцидентыФизическоеЛицоКонтекстноеМеню" id="63"/>
+					<ExtendedTooltip name="ИнцидентыФизическоеЛицоРасширеннаяПодсказка" id="64"/>
+				</LabelField>
+				<LabelField name="ИнцидентыОснование" id="56">
+					<DataPath>Инциденты.Основание</DataPath>
+					<ContextMenu name="ИнцидентыОснованиеКонтекстноеМеню" id="57"/>
+					<ExtendedTooltip name="ИнцидентыОснованиеРасширеннаяПодсказка" id="58"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>Список.Ref</Field>
+				<Field>Список.Суммарная</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>Catalog.ЗадачиПроектовСтруктура</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>КодСДР</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="Инциденты" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Инциденты</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<UseAlways>
+				<Field>Инциденты.Owner</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	СправочникИнциденты.Ссылка,
+	СправочникИнциденты.ПометкаУдаления,
+	СправочникИнциденты.Владелец,
+	СправочникИнциденты.Код,
+	СправочникИнциденты.Наименование,
+	СправочникИнциденты.ДатаНачала,
+	СправочникИнциденты.ДатаОкончания,
+	СправочникИнциденты.Описание,
+	СправочникИнциденты.ФизическоеЛицо,
+	СправочникИнциденты.Приоритет,
+	СправочникИнциденты.Закрыт,
+	СправочникИнциденты.Основание,
+	СправочникИнциденты.Предопределенный,
+	СправочникИнциденты.ИмяПредопределенныхДанных,
+	ИнцидентыСостояние.Состояние,
+	ВЫБОР
+		КОГДА ИнцидентыСостояние.Состояние ЕСТЬ NULL 
+			ТОГДА 0
+		ИНАЧЕ ИнцидентыСостояние.Состояние.Порядок + 1
+	КОНЕЦ КАК НомерСостояния,
+	ЕСТЬNULL(ИнцидентыСостояние.Количество, 0) КАК Факт,
+	ВЫБОР
+		КОГДА СправочникИнциденты.КоличествоПланТекущий &lt;&gt; 0
+			ТОГДА СправочникИнциденты.КоличествоПланТекущий
+		ИНАЧЕ СправочникИнциденты.КоличествоПлан
+	КОНЕЦ КАК План
+ИЗ
+	Справочник.Инциденты КАК СправочникИнциденты
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ИнцидентыСостояние КАК ИнцидентыСостояние
+		ПО (ИнцидентыСостояние.Инцидент = СправочникИнциденты.Ссылка)
+ГДЕ
+	СправочникИнциденты.Владелец = &amp;Владелец</QueryText>
+				<MainTable>Catalog.Инциденты</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>Список</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Список.Суммарная</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Шрифт</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="РасчитатьСДР" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>СДР</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить СДР</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.GanttChart</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>РасчитатьСДР</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+		</Command>
+	</Commands>
+	<CommandInterface>
+		<CommandBar>
+			<Item>
+				<Command>0:9ba2fa1e-20d7-4c90-8391-52847ed806a7</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>0:138add59-0ed6-4322-99fb-70c7886dadbb</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+		</CommandBar>
+	</CommandInterface>
+</Form>

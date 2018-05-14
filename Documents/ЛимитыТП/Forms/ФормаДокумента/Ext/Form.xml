@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5">
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<UsualGroup name="Группа1" id="20">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1ExtendedTooltip" id="25"/>
+			<ChildItems>
+				<InputField name="Дата" id="3">
+					<DataPath>Объект.Date</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="4"/>
+					<ExtendedTooltip name="ДатаExtendedTooltip" id="26"/>
+				</InputField>
+				<InputField name="Номер" id="1">
+					<DataPath>Объект.Number</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="НомерExtendedTooltip" id="27"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="ТиражныйПроект" id="5">
+			<DataPath>Объект.Проект</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ТиражныйПроектКонтекстноеМеню" id="6"/>
+			<ExtendedTooltip name="ТиражныйПроектExtendedTooltip" id="28"/>
+			<Events>
+				<Event name="OnChange">ТиражныйПроектПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="ПланРабот" id="37">
+			<DataPath>Объект.ПланРабот</DataPath>
+			<ContextMenu name="ПланРаботКонтекстноеМеню" id="38"/>
+			<ExtendedTooltip name="ПланРаботРасширеннаяПодсказка" id="39"/>
+		</InputField>
+		<LabelField name="ТиражныйПроектКонтрагент" id="21">
+			<DataPath>Объект.Проект.Контрагент</DataPath>
+			<ContextMenu name="ТиражныйПроектКонтрагентКонтекстноеМеню" id="22"/>
+			<ExtendedTooltip name="ТиражныйПроектКонтрагентExtendedTooltip" id="29"/>
+		</LabelField>
+		<LabelField name="ТиражныйПроектПодразделение" id="23">
+			<DataPath>Объект.Проект.Подразделение</DataPath>
+			<ContextMenu name="ТиражныйПроектПодразделениеКонтекстноеМеню" id="24"/>
+			<ExtendedTooltip name="ТиражныйПроектПодразделениеExtendedTooltip" id="30"/>
+		</LabelField>
+		<Table name="Лимиты" id="7">
+			<Representation>List</Representation>
+			<Footer>true</Footer>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.Лимиты</DataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ЛимитыКонтекстноеМеню" id="8"/>
+			<AutoCommandBar name="ЛимитыКоманднаяПанель" id="9"/>
+			<ExtendedTooltip name="ЛимитыExtendedTooltip" id="31"/>
+			<SearchStringAddition name="ЛимитыСтрокаПоиска" id="40">
+				<AdditionSource>
+					<Item>Лимиты</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ЛимитыСтрокаПоискаКонтекстноеМеню" id="41"/>
+				<ExtendedTooltip name="ЛимитыСтрокаПоискаРасширеннаяПодсказка" id="42"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ЛимитыСостояниеПросмотра" id="43">
+				<AdditionSource>
+					<Item>Лимиты</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ЛимитыСостояниеПросмотраКонтекстноеМеню" id="44"/>
+				<ExtendedTooltip name="ЛимитыСостояниеПросмотраРасширеннаяПодсказка" id="45"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ЛимитыУправлениеПоиском" id="46">
+				<AdditionSource>
+					<Item>Лимиты</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ЛимитыУправлениеПоискомКонтекстноеМеню" id="47"/>
+				<ExtendedTooltip name="ЛимитыУправлениеПоискомРасширеннаяПодсказка" id="48"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="ЛимитыНомерСтроки" id="10">
+					<DataPath>Объект.Лимиты.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЛимитыНомерСтрокиКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="ЛимитыНомерСтрокиExtendedTooltip" id="32"/>
+				</LabelField>
+				<InputField name="ЛимитыДоговорКонтрагента" id="12">
+					<DataPath>Объект.Лимиты.Договор</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ClearButton>true</ClearButton>
+					<ChoiceParameterLinks>
+						<xr:Link>
+							<xr:Name>ТиражныйПроект</xr:Name>
+							<xr:DataPath xsi:type="xs:string">Объект.Проект</xr:DataPath>
+							<xr:ValueChange>Clear</xr:ValueChange>
+						</xr:Link>
+					</ChoiceParameterLinks>
+					<ContextMenu name="ЛимитыДоговорКонтрагентаКонтекстноеМеню" id="13"/>
+					<ExtendedTooltip name="ЛимитыДоговорКонтрагентаExtendedTooltip" id="33"/>
+					<Events>
+						<Event name="StartChoice">ЛимитыДоговорКонтрагентаНачалоВыбора</Event>
+					</Events>
+				</InputField>
+				<LabelField name="ЛимитыДоговорКонтрагентаСуммаДоговора" id="18">
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЛимитыДоговорКонтрагентаСуммаДоговораКонтекстноеМеню" id="19"/>
+					<ExtendedTooltip name="ЛимитыДоговорКонтрагентаСуммаДоговораExtendedTooltip" id="34"/>
+				</LabelField>
+				<InputField name="ЛимитыСумма" id="14">
+					<DataPath>Объект.Лимиты.Сумма</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Лимит</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<FooterDataPath>Объект.Лимиты.TotalСумма</FooterDataPath>
+					<ContextMenu name="ЛимитыСуммаКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="ЛимитыСуммаExtendedTooltip" id="35"/>
+				</InputField>
+				<InputField name="ЛимитыКомментарий" id="16">
+					<DataPath>Объект.Лимиты.Комментарий</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЛимитыКомментарийКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="ЛимитыКомментарийExtendedTooltip" id="36"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.ЛимитыТП</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+	</Attributes>
+</Form>

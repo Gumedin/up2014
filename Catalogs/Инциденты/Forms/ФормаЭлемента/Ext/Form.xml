@@ -1,0 +1,451 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаПоручить" id="45">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.Поручить</CommandName>
+				<ExtendedTooltip name="ФормаПоручитьРасширеннаяПодсказка" id="46"/>
+			</Button>
+			<Button name="ФормаОтветить" id="69">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.Ответить</CommandName>
+				<ExtendedTooltip name="ФормаОтветитьРасширеннаяПодсказка" id="70"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="AfterWriteAtServer">ПослеЗаписиНаСервере</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа4" id="83">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="84"/>
+			<ChildItems>
+				<LabelField name="Код" id="1">
+					<DataPath>Объект.Code</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+					<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+				</LabelField>
+				<LabelField name="ФизическоеЛицо" id="19">
+					<DataPath>Объект.ФизическоеЛицо</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ФизическоеЛицоКонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="ФизическоеЛицоРасширеннаяПодсказка" id="21"/>
+				</LabelField>
+				<LabelField name="СостояниеИнцидента" id="103">
+					<DataPath>СостояниеИнцидента</DataPath>
+					<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+					<ContextMenu name="СостояниеИнцидентаКонтекстноеМеню" id="104"/>
+					<ExtendedTooltip name="СостояниеИнцидентаРасширеннаяПодсказка" id="105"/>
+				</LabelField>
+				<CheckBoxField name="Закрыт" id="25">
+					<DataPath>Объект.Закрыт</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ЗакрытКонтекстноеМеню" id="26"/>
+					<ExtendedTooltip name="ЗакрытРасширеннаяПодсказка" id="27"/>
+					<Events>
+						<Event name="OnChange">ЗакрытПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Наименование" id="4">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<UsualGroup name="Группа2" id="39">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="40"/>
+			<ChildItems>
+				<InputField name="ДатаНачала" id="77">
+					<DataPath>Объект.ДатаНачала</DataPath>
+					<ContextMenu name="ДатаНачалаКонтекстноеМеню" id="78"/>
+					<ExtendedTooltip name="ДатаНачалаРасширеннаяПодсказка" id="79"/>
+					<Events>
+						<Event name="OnChange">ДатаНачалаПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="ДатаОкончания" id="80">
+					<DataPath>Объект.ДатаОкончания</DataPath>
+					<ContextMenu name="ДатаОкончанияКонтекстноеМеню" id="81"/>
+					<ExtendedTooltip name="ДатаОкончанияРасширеннаяПодсказка" id="82"/>
+					<Events>
+						<Event name="OnChange">ДатаОкончанияПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="Приоритет" id="22">
+					<DataPath>Объект.Приоритет</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПриоритетКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="ПриоритетРасширеннаяПодсказка" id="24"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Описание" id="16">
+			<DataPath>Объект.Описание</DataPath>
+			<TitleLocation>None</TitleLocation>
+			<EditMode>EnterOnInput</EditMode>
+			<MultiLine>true</MultiLine>
+			<ContextMenu name="ОписаниеКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="ОписаниеРасширеннаяПодсказка" id="18"/>
+		</InputField>
+		<UsualGroup name="ГруппаЧасы" id="41">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа часы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа часы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаЧасыРасширеннаяПодсказка" id="42"/>
+			<ChildItems>
+				<InputField name="КоличествоПлан" id="85">
+					<DataPath>Объект.КоличествоПлан</DataPath>
+					<ContextMenu name="КоличествоПланКонтекстноеМеню" id="86"/>
+					<ExtendedTooltip name="КоличествоПланРасширеннаяПодсказка" id="87"/>
+					<Events>
+						<Event name="OnChange">КоличествоПланПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="КоличествоПланТекущий" id="88">
+					<DataPath>Объект.КоличествоПланТекущий</DataPath>
+					<ContextMenu name="КоличествоПланТекущийКонтекстноеМеню" id="89"/>
+					<ExtendedTooltip name="КоличествоПланТекущийРасширеннаяПодсказка" id="90"/>
+					<Events>
+						<Event name="OnChange">КоличествоПланТекущийПриИзменении</Event>
+					</Events>
+				</InputField>
+				<LabelField name="КоличествоФакт" id="94">
+					<DataPath>КоличествоФакт</DataPath>
+					<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+					<ContextMenu name="КоличествоФактКонтекстноеМеню" id="95"/>
+					<ExtendedTooltip name="КоличествоФактРасширеннаяПодсказка" id="96"/>
+				</LabelField>
+				<LabelField name="КоличествоОстаток" id="91">
+					<DataPath>КоличествоОстаток</DataPath>
+					<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+					<ContextMenu name="КоличествоОстатокКонтекстноеМеню" id="92"/>
+					<ExtendedTooltip name="КоличествоОстатокРасширеннаяПодсказка" id="93"/>
+				</LabelField>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="Группа5" id="97">
+			<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="98"/>
+			<ChildItems>
+				<Page name="ГруппаИстория" id="101">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>История</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа история</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаИсторияРасширеннаяПодсказка" id="102"/>
+					<ChildItems>
+						<Table name="ИсторияИнцидента" id="47">
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<DataPath>ИсторияИнцидента</DataPath>
+							<RowPictureDataPath>ИсторияИнцидента.DefaultPicture</RowPictureDataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<ContextMenu name="ИсторияИнцидентаКонтекстноеМеню" id="48"/>
+							<AutoCommandBar name="ИсторияИнцидентаКоманднаяПанель" id="49">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ИсторияИнцидентаРасширеннаяПодсказка" id="50"/>
+							<SearchStringAddition name="ИсторияИнцидентаСтрокаПоиска" id="106">
+								<AdditionSource>
+									<Item>ИсторияИнцидента</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ИсторияИнцидентаСтрокаПоискаКонтекстноеМеню" id="107"/>
+								<ExtendedTooltip name="ИсторияИнцидентаСтрокаПоискаРасширеннаяПодсказка" id="108"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ИсторияИнцидентаСостояниеПросмотра" id="109">
+								<AdditionSource>
+									<Item>ИсторияИнцидента</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ИсторияИнцидентаСостояниеПросмотраКонтекстноеМеню" id="110"/>
+								<ExtendedTooltip name="ИсторияИнцидентаСостояниеПросмотраРасширеннаяПодсказка" id="111"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ИсторияИнцидентаУправлениеПоиском" id="112">
+								<AdditionSource>
+									<Item>ИсторияИнцидента</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ИсторияИнцидентаУправлениеПоискомКонтекстноеМеню" id="113"/>
+								<ExtendedTooltip name="ИсторияИнцидентаУправлениеПоискомРасширеннаяПодсказка" id="114"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="OnChange">ИсторияИнцидентаПриИзменении</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="ИсторияИнцидентаПериод" id="51">
+									<DataPath>ИсторияИнцидента.Период</DataPath>
+									<ContextMenu name="ИсторияИнцидентаПериодКонтекстноеМеню" id="52"/>
+									<ExtendedTooltip name="ИсторияИнцидентаПериодРасширеннаяПодсказка" id="53"/>
+								</LabelField>
+								<LabelField name="ИсторияИнцидентаОтКого" id="71">
+									<DataPath>ИсторияИнцидента.ОтКого</DataPath>
+									<ContextMenu name="ИсторияИнцидентаОтКогоКонтекстноеМеню" id="72"/>
+									<ExtendedTooltip name="ИсторияИнцидентаОтКогоРасширеннаяПодсказка" id="73"/>
+								</LabelField>
+								<LabelField name="ИсторияИнцидентаКому" id="74">
+									<DataPath>ИсторияИнцидента.Кому</DataPath>
+									<ContextMenu name="ИсторияИнцидентаКомуКонтекстноеМеню" id="75"/>
+									<ExtendedTooltip name="ИсторияИнцидентаКомуРасширеннаяПодсказка" id="76"/>
+								</LabelField>
+								<LabelField name="ИсторияИнцидентаСтатусИнцидента" id="60">
+									<DataPath>ИсторияИнцидента.СтатусИнцидента</DataPath>
+									<ContextMenu name="ИсторияИнцидентаСтатусИнцидентаКонтекстноеМеню" id="61"/>
+									<ExtendedTooltip name="ИсторияИнцидентаСтатусИнцидентаРасширеннаяПодсказка" id="62"/>
+								</LabelField>
+								<LabelField name="ИсторияИнцидентаКоличество" id="63">
+									<DataPath>ИсторияИнцидента.Количество</DataPath>
+									<ContextMenu name="ИсторияИнцидентаКоличествоКонтекстноеМеню" id="64"/>
+									<ExtendedTooltip name="ИсторияИнцидентаКоличествоРасширеннаяПодсказка" id="65"/>
+								</LabelField>
+								<LabelField name="ИсторияИнцидентаРезультат" id="66">
+									<DataPath>ИсторияИнцидента.Результат</DataPath>
+									<ContextMenu name="ИсторияИнцидентаРезультатКонтекстноеМеню" id="67"/>
+									<ExtendedTooltip name="ИсторияИнцидентаРезультатРасширеннаяПодсказка" id="68"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаОснование" id="99">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Основание</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа основание</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаОснованиеРасширеннаяПодсказка" id="100"/>
+					<ChildItems>
+						<LabelField name="ВладелецВладелецВладелец" id="33">
+							<DataPath>Объект.Owner.Owner.Owner</DataPath>
+							<ContextMenu name="ВладелецВладелецВладелецКонтекстноеМеню" id="34"/>
+							<ExtendedTooltip name="ВладелецВладелецВладелецРасширеннаяПодсказка" id="35"/>
+						</LabelField>
+						<LabelField name="ВладелецВладелец" id="30">
+							<DataPath>Объект.Owner.Owner</DataPath>
+							<ContextMenu name="ВладелецВладелецКонтекстноеМеню" id="31"/>
+							<ExtendedTooltip name="ВладелецВладелецРасширеннаяПодсказка" id="32"/>
+						</LabelField>
+						<LabelField name="Владелец" id="7">
+							<DataPath>Объект.Owner</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВладелецКонтекстноеМеню" id="8"/>
+							<ExtendedTooltip name="ВладелецРасширеннаяПодсказка" id="9"/>
+						</LabelField>
+						<LabelField name="Основание" id="36">
+							<DataPath>Объект.Основание</DataPath>
+							<ContextMenu name="ОснованиеКонтекстноеМеню" id="37"/>
+							<ExtendedTooltip name="ОснованиеРасширеннаяПодсказка" id="38"/>
+						</LabelField>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.Инциденты</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ИсторияИнцидента" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>История инцидента</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<UseAlways>
+				<Field>ИсторияИнцидента.Инцидент</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	РегистрСведенийИнцидентыИстория.Период КАК Период,
+	РегистрСведенийИнцидентыИстория.Инцидент,
+	РегистрСведенийИнцидентыИстория.ОтКого,
+	РегистрСведенийИнцидентыИстория.Кому,
+	РегистрСведенийИнцидентыИстория.СтатусИнцидента,
+	РегистрСведенийИнцидентыИстория.Количество,
+	РегистрСведенийИнцидентыИстория.Результат
+ИЗ
+	РегистрСведений.ИнцидентыИстория КАК РегистрСведенийИнцидентыИстория
+ГДЕ
+	РегистрСведенийИнцидентыИстория.Инцидент = &amp;Инцидент
+
+</QueryText>
+				<MainTable>InformationRegister.ИнцидентыИстория</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>Период</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="КоличествоФакт" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Факт, ч</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>7</v8:Digits>
+					<v8:FractionDigits>1</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КоличествоОстаток" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Остаток, ч</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>7</v8:Digits>
+					<v8:FractionDigits>1</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СостояниеИнцидента" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Состояние инцидента</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.СостоянияИнцидентов</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Поручить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поручить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поручить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Поручить</Action>
+		</Command>
+		<Command name="Ответить" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ответить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ответить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Ответить</Action>
+		</Command>
+	</Commands>
+	<CommandInterface>
+		<NavigationPanel>
+			<Item>
+				<Command>InformationRegister.ИнцидентыИстория.StandardCommand.OpenByValue.Инцидент</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelGoTo</CommandGroup>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+		</NavigationPanel>
+	</CommandInterface>
+</Form>

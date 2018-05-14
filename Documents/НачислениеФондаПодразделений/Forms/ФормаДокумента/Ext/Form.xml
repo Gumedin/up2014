@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаНачислить" id="37">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.Начислить</CommandName>
+				<ExtendedTooltip name="ФормаНачислитьРасширеннаяПодсказка" id="38"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа1" id="35">
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="36"/>
+			<ChildItems>
+				<InputField name="Номер" id="1">
+					<DataPath>Объект.Number</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
+				</InputField>
+				<InputField name="Дата" id="4">
+					<DataPath>Объект.Date</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+				</InputField>
+				<InputField name="ПериодРегистрации" id="7">
+					<DataPath>Объект.ПериодРегистрации</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПериодРегистрацииКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="ПериодРегистрацииРасширеннаяПодсказка" id="9"/>
+					<Events>
+						<Event name="OnChange">ПериодРегистрацииПриИзменении</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Подразделение" id="10">
+			<DataPath>Объект.Подразделение</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ПодразделениеКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="ПодразделениеРасширеннаяПодсказка" id="12"/>
+			<Events>
+				<Event name="OnChange">ПодразделениеПриИзменении</Event>
+			</Events>
+		</InputField>
+		<Table name="Начисления" id="13">
+			<Representation>List</Representation>
+			<ChangeRowSet>false</ChangeRowSet>
+			<Footer>true</Footer>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.Начисления</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="НачисленияКонтекстноеМеню" id="14"/>
+			<AutoCommandBar name="НачисленияКоманднаяПанель" id="15"/>
+			<ExtendedTooltip name="НачисленияРасширеннаяПодсказка" id="16"/>
+			<SearchStringAddition name="НачисленияСтрокаПоиска" id="17">
+				<AdditionSource>
+					<Item>Начисления</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="НачисленияСтрокаПоискаКонтекстноеМеню" id="18"/>
+				<ExtendedTooltip name="НачисленияСтрокаПоискаРасширеннаяПодсказка" id="19"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="НачисленияСостояниеПросмотра" id="20">
+				<AdditionSource>
+					<Item>Начисления</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="НачисленияСостояниеПросмотраКонтекстноеМеню" id="21"/>
+				<ExtendedTooltip name="НачисленияСостояниеПросмотраРасширеннаяПодсказка" id="22"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="НачисленияУправлениеПоиском" id="23">
+				<AdditionSource>
+					<Item>Начисления</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="НачисленияУправлениеПоискомКонтекстноеМеню" id="24"/>
+				<ExtendedTooltip name="НачисленияУправлениеПоискомРасширеннаяПодсказка" id="25"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="НачисленияНомерСтроки" id="26">
+					<DataPath>Объект.Начисления.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НачисленияНомерСтрокиКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="НачисленияНомерСтрокиРасширеннаяПодсказка" id="28"/>
+				</LabelField>
+				<LabelField name="НачисленияЗадачаПроектаВладелец" id="48">
+					<DataPath>Объект.Начисления.ЗадачаПроекта.Owner</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НачисленияЗадачаПроектаВладелецКонтекстноеМеню" id="49"/>
+					<ExtendedTooltip name="НачисленияЗадачаПроектаВладелецРасширеннаяПодсказка" id="50"/>
+				</LabelField>
+				<LabelField name="НачисленияЗадачаПроектаПодразделение" id="51">
+					<DataPath>Объект.Начисления.ЗадачаПроекта.Подразделение</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НачисленияЗадачаПроектаПодразделениеКонтекстноеМеню" id="52"/>
+					<ExtendedTooltip name="НачисленияЗадачаПроектаПодразделениеРасширеннаяПодсказка" id="53"/>
+				</LabelField>
+				<InputField name="НачисленияЗадачаПроекта" id="29">
+					<DataPath>Объект.Начисления.ЗадачаПроекта</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НачисленияЗадачаПроектаКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="НачисленияЗадачаПроектаРасширеннаяПодсказка" id="31"/>
+				</InputField>
+				<InputField name="НачисленияПроцент" id="42">
+					<DataPath>Объект.Начисления.Процент</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НачисленияПроцентКонтекстноеМеню" id="43"/>
+					<ExtendedTooltip name="НачисленияПроцентРасширеннаяПодсказка" id="44"/>
+				</InputField>
+				<InputField name="НачисленияБазаРаспределения" id="39">
+					<DataPath>Объект.Начисления.БазаРаспределения</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<FooterDataPath>Объект.Начисления.TotalБазаРаспределения</FooterDataPath>
+					<ContextMenu name="НачисленияБазаРаспределенияКонтекстноеМеню" id="40"/>
+					<ExtendedTooltip name="НачисленияБазаРаспределенияРасширеннаяПодсказка" id="41"/>
+				</InputField>
+				<InputField name="НачисленияСумма" id="45">
+					<DataPath>Объект.Начисления.Сумма</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<FooterDataPath>Объект.Начисления.TotalСумма</FooterDataPath>
+					<ContextMenu name="НачисленияСуммаКонтекстноеМеню" id="46"/>
+					<ExtendedTooltip name="НачисленияСуммаРасширеннаяПодсказка" id="47"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<LabelField name="ИсполнительДокумента" id="54">
+			<DataPath>Объект.ИсполнительДокумента</DataPath>
+			<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+			<ContextMenu name="ИсполнительДокументаКонтекстноеМеню" id="55"/>
+			<ExtendedTooltip name="ИсполнительДокументаРасширеннаяПодсказка" id="56"/>
+		</LabelField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.НачислениеФондаПодразделений</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Начислить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Начислить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Начислить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.Рассчитать</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Начислить</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+	</Commands>
+</Form>

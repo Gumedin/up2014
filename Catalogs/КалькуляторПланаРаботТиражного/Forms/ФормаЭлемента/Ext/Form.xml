@@ -1,0 +1,549 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<UsualGroup name="Группа1" id="68">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="69"/>
+			<ChildItems>
+				<InputField name="Наименование" id="1">
+					<DataPath>Объект.Description</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="3"/>
+				</InputField>
+				<InputField name="ГодПроекта" id="13">
+					<DataPath>Объект.ГодПроекта</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<SpinButton>true</SpinButton>
+					<ContextMenu name="ГодПроектаКонтекстноеМеню" id="14"/>
+					<ExtendedTooltip name="ГодПроектаРасширеннаяПодсказка" id="15"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Родитель" id="4">
+			<DataPath>Объект.Parent</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="РодительКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="РодительРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="ЗадачаПроекта" id="22">
+			<DataPath>Объект.ЗадачаПроекта</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ЗадачаПроектаКонтекстноеМеню" id="23"/>
+			<ExtendedTooltip name="ЗадачаПроектаРасширеннаяПодсказка" id="24"/>
+		</InputField>
+		<InputField name="Подразделение" id="7">
+			<DataPath>Объект.Подразделение</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ПодразделениеКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ПодразделениеРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<UsualGroup name="ГруппаИзменить" id="79">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Horizontal</Group>
+			<Representation>StrongSeparation</Representation>
+			<ExtendedTooltip name="ГруппаИзменитьРасширеннаяПодсказка" id="80"/>
+			<ChildItems>
+				<InputField name="Период" id="81">
+					<DataPath>Период</DataPath>
+					<ContextMenu name="ПериодКонтекстноеМеню" id="82"/>
+					<ExtendedTooltip name="ПериодРасширеннаяПодсказка" id="83"/>
+				</InputField>
+				<InputField name="Номенклатура" id="84">
+					<DataPath>Номенклатура</DataPath>
+					<ContextMenu name="НоменклатураКонтекстноеМеню" id="85"/>
+					<ExtendedTooltip name="НоменклатураРасширеннаяПодсказка" id="86"/>
+				</InputField>
+				<InputField name="Количество" id="87">
+					<DataPath>Количество</DataPath>
+					<SpinButton>true</SpinButton>
+					<ContextMenu name="КоличествоКонтекстноеМеню" id="88"/>
+					<ExtendedTooltip name="КоличествоРасширеннаяПодсказка" id="89"/>
+				</InputField>
+				<CommandBar name="Группа3" id="93">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Заполнить</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="94"/>
+					<ChildItems>
+						<Popup name="Группа4" id="95">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Заполнить</v8:content>
+								</v8:item>
+							</Title>
+							<Picture>
+								<xr:Ref>StdPicture.WriteChanges</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<Representation>Picture</Representation>
+							<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="96"/>
+							<ChildItems>
+								<Button name="ДобавитьВПланРабот" id="99">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.ДобавитьВПланРабот</CommandName>
+									<ExtendedTooltip name="ДобавитьВПланРаботРасширеннаяПодсказка" id="100"/>
+								</Button>
+								<Button name="ВычестьИзПланаРабот" id="101">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.ВычестьИзПланаРабот</CommandName>
+									<ExtendedTooltip name="ВычестьИзПланаРаботРасширеннаяПодсказка" id="102"/>
+								</Button>
+								<Button name="УстановитьВПланеРабот" id="103">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.УстановитьВПланеРабот</CommandName>
+									<ExtendedTooltip name="УстановитьВПланеРаботРасширеннаяПодсказка" id="104"/>
+								</Button>
+								<Button name="ОчиститьВПланеРабот" id="105">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.ОчиститьВПланеРабот</CommandName>
+									<ExtendedTooltip name="ОчиститьВПланеРаботРасширеннаяПодсказка" id="106"/>
+								</Button>
+								<Button name="ЗаполнитьПоКалендарюВдень" id="97">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.ЗаполнитьПоКалендарюВдень</CommandName>
+									<ExtendedTooltip name="ЗаполнитьПоКалендарюВденьРасширеннаяПодсказка" id="98"/>
+								</Button>
+								<Button name="ЗаполнитьПоКалендарюВнеделю" id="107">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.ЗаполнитьПоКалендарюВнеделю</CommandName>
+									<ExtendedTooltip name="ЗаполнитьПоКалендарюВнеделюРасширеннаяПодсказка" id="108"/>
+								</Button>
+							</ChildItems>
+						</Popup>
+					</ChildItems>
+				</CommandBar>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="ГруппаСтраницы" id="70">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="ГруппаСтраницыРасширеннаяПодсказка" id="71"/>
+			<ChildItems>
+				<Page name="ГруппаРасчет" id="72">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Расчет работ</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа расчет</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаРасчетРасширеннаяПодсказка" id="73"/>
+					<ChildItems>
+						<UsualGroup name="Группа2" id="77">
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="78"/>
+							<ChildItems>
+								<InputField name="ИсполненВключая" id="19">
+									<DataPath>Объект.ИсполненВключая</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИсполненВключаяКонтекстноеМеню" id="20"/>
+									<ExtendedTooltip name="ИсполненВключаяРасширеннаяПодсказка" id="21"/>
+									<Events>
+										<Event name="OnChange">ИсполненВключаяПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ОстатокПоСмете" id="16">
+									<DataPath>Объект.ОстатокПоСмете</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Остаток</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОстатокПоСметеКонтекстноеМеню" id="17"/>
+									<ExtendedTooltip name="ОстатокПоСметеРасширеннаяПодсказка" id="18"/>
+									<Events>
+										<Event name="OnChange">ОстатокПоСметеПриИзменении</Event>
+									</Events>
+								</InputField>
+								<LabelField name="СуммаВсегоФОТ" id="90">
+									<DataPath>СуммаВсегоФОТ</DataPath>
+									<ContextMenu name="СуммаВсегоФОТКонтекстноеМеню" id="91"/>
+									<ExtendedTooltip name="СуммаВсегоФОТРасширеннаяПодсказка" id="92"/>
+								</LabelField>
+								<InputField name="СкидкаКлиенту" id="25">
+									<DataPath>Объект.СкидкаКлиенту</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Скидка</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СкидкаКлиентуКонтекстноеМеню" id="26"/>
+									<ExtendedTooltip name="СкидкаКлиентуРасширеннаяПодсказка" id="27"/>
+									<Events>
+										<Event name="OnChange">СкидкаКлиентуПриИзменении</Event>
+									</Events>
+								</InputField>
+								<LabelField name="СуммаВсего" id="74">
+									<DataPath>СуммаВсего</DataPath>
+									<ContextMenu name="СуммаВсегоКонтекстноеМеню" id="75"/>
+									<ExtendedTooltip name="СуммаВсегоРасширеннаяПодсказка" id="76"/>
+								</LabelField>
+							</ChildItems>
+						</UsualGroup>
+						<Table name="Расчет" id="28">
+							<Representation>List</Representation>
+							<Footer>true</Footer>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.Расчет</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="РасчетКонтекстноеМеню" id="29"/>
+							<AutoCommandBar name="РасчетКоманднаяПанель" id="30"/>
+							<ExtendedTooltip name="РасчетРасширеннаяПодсказка" id="31"/>
+							<SearchStringAddition name="РасчетСтрокаПоиска" id="32">
+								<AdditionSource>
+									<Item>Расчет</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="РасчетСтрокаПоискаКонтекстноеМеню" id="33"/>
+								<ExtendedTooltip name="РасчетСтрокаПоискаРасширеннаяПодсказка" id="34"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="РасчетСостояниеПросмотра" id="35">
+								<AdditionSource>
+									<Item>Расчет</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="РасчетСостояниеПросмотраКонтекстноеМеню" id="36"/>
+								<ExtendedTooltip name="РасчетСостояниеПросмотраРасширеннаяПодсказка" id="37"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="РасчетУправлениеПоиском" id="38">
+								<AdditionSource>
+									<Item>Расчет</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="РасчетУправлениеПоискомКонтекстноеМеню" id="39"/>
+								<ExtendedTooltip name="РасчетУправлениеПоискомРасширеннаяПодсказка" id="40"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="BeforeRowChange">РасчетПередНачаломИзменения</Event>
+								<Event name="OnChange">РасчетПриИзменении</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="РасчетНомерСтроки" id="41">
+									<DataPath>Объект.Расчет.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РасчетНомерСтрокиКонтекстноеМеню" id="42"/>
+									<ExtendedTooltip name="РасчетНомерСтрокиРасширеннаяПодсказка" id="43"/>
+								</LabelField>
+								<InputField name="РасчетНоменклатура" id="44">
+									<DataPath>Объект.Расчет.Номенклатура</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РасчетНоменклатураКонтекстноеМеню" id="45"/>
+									<ExtendedTooltip name="РасчетНоменклатураРасширеннаяПодсказка" id="46"/>
+									<Events>
+										<Event name="OnChange">РасчетНоменклатураПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="РасчетМесяц" id="47">
+									<DataPath>Объект.Расчет.Месяц</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<DropListButton>false</DropListButton>
+									<ChoiceButton>true</ChoiceButton>
+									<ClearButton>false</ClearButton>
+									<SpinButton>false</SpinButton>
+									<OpenButton>false</OpenButton>
+									<TextEdit>false</TextEdit>
+									<ContextMenu name="РасчетМесяцКонтекстноеМеню" id="48"/>
+									<ExtendedTooltip name="РасчетМесяцРасширеннаяПодсказка" id="49"/>
+									<Events>
+										<Event name="OnChange">РасчетМесяцПриИзменении</Event>
+										<Event name="ChoiceProcessing">РасчетМесяцОбработкаВыбора</Event>
+									</Events>
+								</InputField>
+								<InputField name="РасчетКоличество" id="50">
+									<DataPath>Объект.Расчет.Количество</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<FooterDataPath>Объект.Расчет.TotalКоличество</FooterDataPath>
+									<ContextMenu name="РасчетКоличествоКонтекстноеМеню" id="51"/>
+									<ExtendedTooltip name="РасчетКоличествоРасширеннаяПодсказка" id="52"/>
+								</InputField>
+								<InputField name="РасчетЦена" id="53">
+									<DataPath>Объект.Расчет.Цена</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РасчетЦенаКонтекстноеМеню" id="54"/>
+									<ExtendedTooltip name="РасчетЦенаРасширеннаяПодсказка" id="55"/>
+								</InputField>
+								<InputField name="РасчетСумма" id="56">
+									<DataPath>Объект.Расчет.Сумма</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<FooterDataPath>Объект.Расчет.TotalСумма</FooterDataPath>
+									<ContextMenu name="РасчетСуммаКонтекстноеМеню" id="57"/>
+									<ExtendedTooltip name="РасчетСуммаРасширеннаяПодсказка" id="58"/>
+								</InputField>
+								<InputField name="РасчетЦенаФОТ" id="62">
+									<DataPath>Объект.Расчет.ЦенаФОТ</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РасчетЦенаФОТКонтекстноеМеню" id="63"/>
+									<ExtendedTooltip name="РасчетЦенаФОТРасширеннаяПодсказка" id="64"/>
+								</InputField>
+								<InputField name="РасчетСуммаФОТ" id="65">
+									<DataPath>Объект.Расчет.СуммаФОТ</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<FooterDataPath>Объект.Расчет.TotalСуммаФОТ</FooterDataPath>
+									<ContextMenu name="РасчетСуммаФОТКонтекстноеМеню" id="66"/>
+									<ExtendedTooltip name="РасчетСуммаФОТРасширеннаяПодсказка" id="67"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<LabelField name="Исполнитель" id="10">
+			<DataPath>Объект.Исполнитель</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+			<ContextMenu name="ИсполнительКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="ИсполнительРасширеннаяПодсказка" id="12"/>
+		</LabelField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.КалькуляторПланаРаботТиражного</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="СуммаВсего" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Всего</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Номенклатура" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номенклатура</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Номенклатура</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Количество" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>4</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Период" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:StandardPeriod</v8:Type>
+			</Type>
+			<Save>
+				<Field>Период.Variant</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="СуммаВсегоФОТ" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Всего,ФОТ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>Расчет</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.Расчет.Месяц</dcsset:left>
+						<dcsset:comparisonType>LessOrEqual</dcsset:comparisonType>
+						<dcsset:right xsi:type="dcscor:Field">Объект.ИсполненВключая</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:ПользовательВыбранный</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="ЗаполнитьПоКалендарюВдень" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>По календарю (в день)</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить по календарю вдень</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Calendar</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ЗаполнитьПоКалендарюВдень</Action>
+		</Command>
+		<Command name="ДобавитьВПланРабот" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить в план работ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДобавитьВПланРабот</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ВычестьИзПланаРабот" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вычесть</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вычесть из плана работ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВычестьИзПланаРабот</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="УстановитьВПланеРабот" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить в плане работ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УстановитьВПланеРабот</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ОчиститьВПланеРабот" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить в плане работ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОчиститьВПланеРабот</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ЗаполнитьПоКалендарюВнеделю" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>По календарю (в неделю)</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить по календарю вдень</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Calendar</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ЗаполнитьПоКалендарюВнеделю</Action>
+		</Command>
+	</Commands>
+</Form>

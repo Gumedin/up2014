@@ -1,0 +1,462 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаПровестиНеОперативно" id="83">
+				<Type>CommandBarButton</Type>
+				<Visible>false</Visible>
+				<CommandName>Form.Command.ПровестиНеОперативно</CommandName>
+				<ExtendedTooltip name="ФормаПровестиНеОперативноРасширеннаяПодсказка" id="84"/>
+			</Button>
+			<Popup name="Заполнить" id="52">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Заполнить</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Заполнить</v8:content>
+					</v8:item>
+				</ToolTip>
+				<ExtendedTooltip name="ЗаполнитьРасширеннаяПодсказка" id="53"/>
+				<ChildItems>
+					<Button name="РасставитьВремя" id="70">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.РасставитьВремя</CommandName>
+						<ExtendedTooltip name="РасставитьВремяРасширеннаяПодсказка" id="71"/>
+					</Button>
+					<Button name="ФормаЗаполнитьЛичномуПлану" id="68">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ЗаполнитьПоЛичномуПлану</CommandName>
+						<ExtendedTooltip name="ФормаЗаполнитьЛичномуПлануРасширеннаяПодсказка" id="69"/>
+					</Button>
+					<Button name="ФормаЗаполнитьПоКалендарю" id="66">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ЗаполнитьПоКалендарю</CommandName>
+						<ExtendedTooltip name="ФормаЗаполнитьПоКалендарюРасширеннаяПодсказка" id="67"/>
+					</Button>
+					<Button name="ФормаДополнитьРабочееВремяПоКалендарю" id="88">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ДополнитьРабочееВремяПоКалендарю</CommandName>
+						<ExtendedTooltip name="ФормаДополнитьРабочееВремяПоКалендарюРасширеннаяПодсказка" id="89"/>
+					</Button>
+					<Button name="ФормаЗаполнитьПоКадровымДокументам" id="72">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ЗаполнитьОтпуск</CommandName>
+						<ExtendedTooltip name="ФормаЗаполнитьПоКадровымДокументамРасширеннаяПодсказка" id="73"/>
+					</Button>
+					<Button name="ФормаЗагрузитьИзФайла" id="64">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ЗагрузитьИзФайла</CommandName>
+						<ExtendedTooltip name="ФормаЗагрузитьИзФайлаРасширеннаяПодсказка" id="65"/>
+					</Button>
+				</ChildItems>
+			</Popup>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа1" id="50">
+			<Group>Horizontal</Group>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="51"/>
+			<ChildItems>
+				<UsualGroup name="Группа2" id="54">
+					<Group>Vertical</Group>
+					<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="55"/>
+					<ChildItems>
+						<InputField name="Дата" id="4">
+							<DataPath>Объект.Date</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+							<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+							<Events>
+								<Event name="OnChange">ДатаПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="ПериодРегистрации" id="85">
+							<DataPath>Объект.ПериодРегистрации</DataPath>
+							<ContextMenu name="ПериодРегистрацииКонтекстноеМеню" id="86"/>
+							<ExtendedTooltip name="ПериодРегистрацииРасширеннаяПодсказка" id="87"/>
+							<Events>
+								<Event name="OnChange">ПериодРегистрацииПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="ФизическоеЛицо" id="13">
+							<DataPath>Объект.ФизическоеЛицо</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ФизическоеЛицоКонтекстноеМеню" id="14"/>
+							<ExtendedTooltip name="ФизическоеЛицоРасширеннаяПодсказка" id="15"/>
+							<Events>
+								<Event name="OnChange">ФизическоеЛицоПриИзменении</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Группа3" id="56">
+					<Group>Vertical</Group>
+					<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="57"/>
+					<ChildItems>
+						<InputField name="Организация" id="7">
+							<DataPath>Объект.Организация</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ОрганизацияКонтекстноеМеню" id="8"/>
+							<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="9"/>
+						</InputField>
+						<InputField name="Подразделение" id="10">
+							<DataPath>Объект.Подразделение</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ПодразделениеКонтекстноеМеню" id="11"/>
+							<ExtendedTooltip name="ПодразделениеРасширеннаяПодсказка" id="12"/>
+							<Events>
+								<Event name="OnChange">ПодразделениеПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="Должность" id="61">
+							<DataPath>Объект.Должность</DataPath>
+							<ContextMenu name="ДолжностьКонтекстноеМеню" id="62"/>
+							<ExtendedTooltip name="ДолжностьРасширеннаяПодсказка" id="63"/>
+							<Events>
+								<Event name="OnChange">ДолжностьПриИзменении</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="РабочееВремя" id="19">
+			<Representation>List</Representation>
+			<Footer>true</Footer>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.РабочееВремя</DataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="РабочееВремяКонтекстноеМеню" id="20"/>
+			<AutoCommandBar name="РабочееВремяКоманднаяПанель" id="21"/>
+			<ExtendedTooltip name="РабочееВремяРасширеннаяПодсказка" id="22"/>
+			<SearchStringAddition name="РабочееВремяСтрокаПоиска" id="74">
+				<AdditionSource>
+					<Item>РабочееВремя</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="РабочееВремяСтрокаПоискаКонтекстноеМеню" id="75"/>
+				<ExtendedTooltip name="РабочееВремяСтрокаПоискаРасширеннаяПодсказка" id="76"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="РабочееВремяСостояниеПросмотра" id="77">
+				<AdditionSource>
+					<Item>РабочееВремя</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="РабочееВремяСостояниеПросмотраКонтекстноеМеню" id="78"/>
+				<ExtendedTooltip name="РабочееВремяСостояниеПросмотраРасширеннаяПодсказка" id="79"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="РабочееВремяУправлениеПоиском" id="80">
+				<AdditionSource>
+					<Item>РабочееВремя</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="РабочееВремяУправлениеПоискомКонтекстноеМеню" id="81"/>
+				<ExtendedTooltip name="РабочееВремяУправлениеПоискомРасширеннаяПодсказка" id="82"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="РабочееВремяНомерСтроки" id="23">
+					<DataPath>Объект.РабочееВремя.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РабочееВремяНомерСтрокиКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="РабочееВремяНомерСтрокиРасширеннаяПодсказка" id="25"/>
+				</LabelField>
+				<InputField name="РабочееВремяДатаТабеля" id="26">
+					<DataPath>Объект.РабочееВремя.ДатаТабеля</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РабочееВремяДатаТабеляКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="РабочееВремяДатаТабеляРасширеннаяПодсказка" id="28"/>
+				</InputField>
+				<InputField name="РабочееВремяНачало" id="29">
+					<DataPath>Объект.РабочееВремя.Начало</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РабочееВремяНачалоКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="РабочееВремяНачалоРасширеннаяПодсказка" id="31"/>
+				</InputField>
+				<InputField name="РабочееВремяОтметкаТабеля" id="32">
+					<DataPath>Объект.РабочееВремя.ОтметкаТабеля</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РабочееВремяОтметкаТабеляКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="РабочееВремяОтметкаТабеляРасширеннаяПодсказка" id="34"/>
+					<Events>
+						<Event name="OnChange">РабочееВремяОтметкаТабеляПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="РабочееВремяКоличествоЧасов" id="35">
+					<DataPath>Объект.РабочееВремя.КоличествоЧасов</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<FooterDataPath>Объект.РабочееВремя.TotalКоличествоЧасов</FooterDataPath>
+					<ContextMenu name="РабочееВремяКоличествоЧасовКонтекстноеМеню" id="36"/>
+					<ExtendedTooltip name="РабочееВремяКоличествоЧасовРасширеннаяПодсказка" id="37"/>
+				</InputField>
+				<InputField name="РабочееВремяСодержаниеРабот" id="38">
+					<DataPath>Объект.РабочееВремя.СодержаниеРабот</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РабочееВремяСодержаниеРаботКонтекстноеМеню" id="39"/>
+					<ExtendedTooltip name="РабочееВремяСодержаниеРаботРасширеннаяПодсказка" id="40"/>
+				</InputField>
+				<InputField name="РабочееВремяОснование" id="41">
+					<DataPath>Объект.РабочееВремя.Основание</DataPath>
+					<SkipOnInput>false</SkipOnInput>
+					<EditMode>EnterOnInput</EditMode>
+					<ChoiceButton>true</ChoiceButton>
+					<ChoiceButtonRepresentation>ShowInDropListAndInInputField</ChoiceButtonRepresentation>
+					<ClearButton>true</ClearButton>
+					<ContextMenu name="РабочееВремяОснованиеКонтекстноеМеню" id="42"/>
+					<ExtendedTooltip name="РабочееВремяОснованиеРасширеннаяПодсказка" id="43"/>
+					<Events>
+						<Event name="OnChange">РабочееВремяОснованиеПриИзменении</Event>
+						<Event name="StartChoice">РабочееВремяОснованиеНачалоВыбора</Event>
+						<Event name="ChoiceProcessing">РабочееВремяОснованиеОбработкаВыбора</Event>
+					</Events>
+				</InputField>
+				<InputField name="РабочееВремяТарифнаяСтавка" id="44">
+					<DataPath>Объект.РабочееВремя.ТарифнаяСтавка</DataPath>
+					<Enabled>false</Enabled>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РабочееВремяТарифнаяСтавкаКонтекстноеМеню" id="45"/>
+					<ExtendedTooltip name="РабочееВремяТарифнаяСтавкаРасширеннаяПодсказка" id="46"/>
+				</InputField>
+				<InputField name="РабочееВремяЗадача" id="47">
+					<DataPath>Объект.РабочееВремя.Задача</DataPath>
+					<Visible>false</Visible>
+					<EditMode>EnterOnInput</EditMode>
+					<ChoiceParameterLinks>
+						<xr:Link>
+							<xr:Name>Основание</xr:Name>
+							<xr:DataPath xsi:type="xs:string">Items.РабочееВремя.CurrentData.Основание</xr:DataPath>
+							<xr:ValueChange>Clear</xr:ValueChange>
+						</xr:Link>
+					</ChoiceParameterLinks>
+					<ContextMenu name="РабочееВремяЗадачаКонтекстноеМеню" id="48"/>
+					<ExtendedTooltip name="РабочееВремяЗадачаРасширеннаяПодсказка" id="49"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<LabelField name="ИсполнительДокумента" id="16">
+			<DataPath>Объект.ИсполнительДокумента</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+			<ContextMenu name="ИсполнительДокументаКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="ИсполнительДокументаРасширеннаяПодсказка" id="18"/>
+		</LabelField>
+		<InputField name="ФайлЗагрузкиExcel" id="58">
+			<DataPath>ФайлЗагрузкиExcel</DataPath>
+			<ChoiceButton>true</ChoiceButton>
+			<ClearButton>true</ClearButton>
+			<ContextMenu name="ФайлЗагрузкиExcelКонтекстноеМеню" id="59"/>
+			<ExtendedTooltip name="ФайлЗагрузкиExcelРасширеннаяПодсказка" id="60"/>
+			<Events>
+				<Event name="StartChoice">ФайлЗагрузкиExcelНачалоВыбора</Event>
+			</Events>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.ТабельУчетаРабочегоВремени</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+		<Attribute name="ФайлЗагрузкиExcel" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Табель (Excel)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<Save>
+				<Field>ФайлЗагрузкиExcel</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ПланыРаботПоИсполнению" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Планы работ по исполнению</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:Type>cfg:DocumentRef.ПланРабот</v8:Type>
+			</Settings>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЗагрузитьИзФайла" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить из файла Excel</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить из файла</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.ExternalDataSourceTable</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ЗагрузитьИзФайла</Action>
+		</Command>
+		<Command name="ЗаполнитьПоКалендарю" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить по календарю</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить по календарю</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Calendar</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ЗаполнитьПоКалендарю</Action>
+		</Command>
+		<Command name="ЗаполнитьПоЛичномуПлану" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить по личному плану</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить по личному плану</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.УстановитьОтветственногоЗаВзаимодействие</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ЗаполнитьЛичномуПлану</Action>
+		</Command>
+		<Command name="РасставитьВремя" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расставить время</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расставить время</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.ScheduledJob</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>РасставитьВремя</Action>
+		</Command>
+		<Command name="ЗаполнитьОтпуск" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить отпуск</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить отпуск</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ЗапланированноеВзаимодействие</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ЗаполнитьОтпуск</Action>
+		</Command>
+		<Command name="ПровестиНеОперативно" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Провести (не оперативно)</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Провести не оперативно</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Post</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПровестиНеОперативно</Action>
+		</Command>
+		<Command name="ДополнитьРабочееВремяПоКалендарю" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дополнить рабочее время по календарю</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дополнить рабочее время по календарю</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Calculator</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ДополнитьРабочееВремяПоКалендарю</Action>
+		</Command>
+	</Commands>
+	<CommandInterface>
+		<CommandBar>
+			<Item>
+				<Command>Document.ТабельУчетаРабочегоВремени.Command.ПечатьТабеляТ13</Command>
+				<Type>Added</Type>
+				<Attribute>Объект.ФизическоеЛицо</Attribute>
+				<CommandGroup>CommandGroup.Печать</CommandGroup>
+				<DefaultVisible>false</DefaultVisible>
+			</Item>
+		</CommandBar>
+	</CommandInterface>
+</Form>

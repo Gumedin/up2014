@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CommandInterface xmlns="http://v8.1c.ru/8.3/xcf/extrnprops" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5">
+	<CommandsVisibility>
+		<Command name="InformationRegister.ПлановыеПоказателиСметы.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+	</CommandsVisibility>
+	<CommandsPlacement>
+		<Command name="InformationRegister.ПлановыеПоказателиСметы.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
+			<Placement>Auto</Placement>
+		</Command>
+	</CommandsPlacement>
+	<CommandsOrder>
+		<Command name="InformationRegister.ПлановыеПоказателиСметы.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
+		</Command>
+	</CommandsOrder>
+	<SubsystemsOrder>
+		<Subsystem>Subsystem.Финансы.Subsystem.Проекты</Subsystem>
+		<Subsystem>Subsystem.Финансы.Subsystem.Сметы</Subsystem>
+		<Subsystem>Subsystem.Финансы.Subsystem.ПланыРабот</Subsystem>
+		<Subsystem>Subsystem.Финансы.Subsystem.ДоговорыИОплата</Subsystem>
+		<Subsystem>Subsystem.Финансы.Subsystem.РасходыПоПроекту</Subsystem>
+		<Subsystem>Subsystem.Финансы.Subsystem.ЗакрытиеМесяца</Subsystem>
+		<Subsystem>Subsystem.Финансы.Subsystem.РабочееВремя</Subsystem>
+	</SubsystemsOrder>
+	<GroupsOrder>
+		<Group>NavigationPanelSeeAlso</Group>
+	</GroupsOrder>
+</CommandInterface>

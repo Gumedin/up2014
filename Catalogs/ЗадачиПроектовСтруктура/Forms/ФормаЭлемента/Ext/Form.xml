@@ -1,0 +1,358 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа1" id="33">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="34"/>
+			<ChildItems>
+				<LabelField name="Владелец" id="7">
+					<DataPath>Объект.Owner</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ВладелецКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="ВладелецРасширеннаяПодсказка" id="9"/>
+				</LabelField>
+				<InputField name="КодСДР" id="72">
+					<DataPath>Объект.КодСДР</DataPath>
+					<ContextMenu name="КодСДРКонтекстноеМеню" id="73"/>
+					<ExtendedTooltip name="КодСДРРасширеннаяПодсказка" id="74"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Родитель" id="118">
+			<DataPath>Объект.Parent</DataPath>
+			<ClearButton>true</ClearButton>
+			<ContextMenu name="РодительКонтекстноеМеню" id="119"/>
+			<ExtendedTooltip name="РодительРасширеннаяПодсказка" id="120"/>
+		</InputField>
+		<InputField name="Наименование" id="4">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<UsualGroup name="Группа5" id="109">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="110"/>
+			<ChildItems>
+				<CheckBoxField name="Закрыта" id="16">
+					<DataPath>Объект.Закрыта</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ЗакрытаКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="ЗакрытаРасширеннаяПодсказка" id="18"/>
+				</CheckBoxField>
+				<CheckBoxField name="Суммарная" id="81">
+					<DataPath>Объект.Суммарная</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="СуммарнаяКонтекстноеМеню" id="82"/>
+					<ExtendedTooltip name="СуммарнаяРасширеннаяПодсказка" id="83"/>
+				</CheckBoxField>
+				<InputField name="ПроцентВыполнения" id="66">
+					<DataPath>Объект.ПроцентВыполнения</DataPath>
+					<ContextMenu name="ПроцентВыполненияКонтекстноеМеню" id="67"/>
+					<ExtendedTooltip name="ПроцентВыполненияРасширеннаяПодсказка" id="68"/>
+				</InputField>
+				<InputField name="ТипРасчетаСрокаРаботы" id="121">
+					<DataPath>Объект.ТипРасчетаСрокаРаботы</DataPath>
+					<ListChoiceMode>true</ListChoiceMode>
+					<ChooseType>false</ChooseType>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation/>
+								<Value xsi:type="xr:DesignTimeRef">Enum.ТипыРасчетаСрокаРабот.EnumValue.ПоЗадачеПроекта</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation/>
+								<Value xsi:type="xr:DesignTimeRef">Enum.ТипыРасчетаСрокаРабот.EnumValue.Вручную</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<ContextMenu name="ТипРасчетаСрокаРаботыКонтекстноеМеню" id="122"/>
+					<ExtendedTooltip name="ТипРасчетаСрокаРаботыРасширеннаяПодсказка" id="123"/>
+					<Events>
+						<Event name="OnChange">ТипРасчетаСрокаРаботыПриИзменении</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="Группа2" id="84">
+			<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="85"/>
+			<ChildItems>
+				<Page name="ГруппаИсполнители" id="86">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Исполнители</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа исполнители</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаИсполнителиРасширеннаяПодсказка" id="87"/>
+					<ChildItems>
+						<Table name="Ресурсы" id="35">
+							<Footer>true</Footer>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.Ресурсы</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="РесурсыКонтекстноеМеню" id="36"/>
+							<AutoCommandBar name="РесурсыКоманднаяПанель" id="37"/>
+							<ExtendedTooltip name="РесурсыРасширеннаяПодсказка" id="38"/>
+							<SearchStringAddition name="РесурсыСтрокаПоиска" id="39">
+								<AdditionSource>
+									<Item>Ресурсы</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="РесурсыСтрокаПоискаКонтекстноеМеню" id="42"/>
+								<ExtendedTooltip name="РесурсыСтрокаПоискаРасширеннаяПодсказка" id="43"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="РесурсыСостояниеПросмотра" id="44">
+								<AdditionSource>
+									<Item>Ресурсы</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="РесурсыСостояниеПросмотраКонтекстноеМеню" id="47"/>
+								<ExtendedTooltip name="РесурсыСостояниеПросмотраРасширеннаяПодсказка" id="48"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="РесурсыУправлениеПоиском" id="49">
+								<AdditionSource>
+									<Item>Ресурсы</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="РесурсыУправлениеПоискомКонтекстноеМеню" id="52"/>
+								<ExtendedTooltip name="РесурсыУправлениеПоискомРасширеннаяПодсказка" id="53"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="РесурсыНомерСтроки" id="54">
+									<DataPath>Объект.Ресурсы.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РесурсыНомерСтрокиКонтекстноеМеню" id="55"/>
+									<ExtendedTooltip name="РесурсыНомерСтрокиРасширеннаяПодсказка" id="56"/>
+								</LabelField>
+								<InputField name="РесурсыДолжность" id="57">
+									<DataPath>Объект.Ресурсы.Исполнитель</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РесурсыДолжностьКонтекстноеМеню" id="58"/>
+									<ExtendedTooltip name="РесурсыДолжностьРасширеннаяПодсказка" id="59"/>
+									<Events>
+										<Event name="OnChange">РесурсыДолжностьПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="РесурсыТарифнаяСтавка" id="69">
+									<DataPath>Объект.Ресурсы.ТарифнаяСтавка</DataPath>
+									<SkipOnInput>true</SkipOnInput>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РесурсыТарифнаяСтавкаКонтекстноеМеню" id="70"/>
+									<ExtendedTooltip name="РесурсыТарифнаяСтавкаРасширеннаяПодсказка" id="71"/>
+								</InputField>
+								<InputField name="РесурсыМощность" id="63">
+									<DataPath>Объект.Ресурсы.Мощность</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<FooterDataPath>Объект.Ресурсы.TotalМощность</FooterDataPath>
+									<ContextMenu name="РесурсыМощностьКонтекстноеМеню" id="64"/>
+									<ExtendedTooltip name="РесурсыМощностьРасширеннаяПодсказка" id="65"/>
+									<Events>
+										<Event name="OnChange">РесурсыМощностьПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="РесурсыКоличество" id="60">
+									<DataPath>Объект.Ресурсы.Количество</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<FooterDataPath>Объект.Ресурсы.TotalКоличество</FooterDataPath>
+									<ContextMenu name="РесурсыКоличествоКонтекстноеМеню" id="61"/>
+									<ExtendedTooltip name="РесурсыКоличествоРасширеннаяПодсказка" id="62"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаСроки" id="88">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сроки</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа сроки</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаСрокиРасширеннаяПодсказка" id="89"/>
+					<ChildItems>
+						<UsualGroup name="Группа7" id="113">
+							<Group>Horizontal</Group>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа7РасширеннаяПодсказка" id="114"/>
+						</UsualGroup>
+						<UsualGroup name="ГруппаСрокиЗадачи" id="126">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа сроки задачи</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа сроки задачи</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаСрокиЗадачиРасширеннаяПодсказка" id="127"/>
+							<ChildItems>
+								<InputField name="ВладелецНачалоРабот" id="128">
+									<DataPath>Объект.Owner.НачалоРабот</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<ContextMenu name="ВладелецНачалоРаботКонтекстноеМеню" id="129"/>
+									<ExtendedTooltip name="ВладелецНачалоРаботРасширеннаяПодсказка" id="130"/>
+								</InputField>
+								<InputField name="ВладелецОкончаниеРабот" id="131">
+									<DataPath>Объект.Owner.ОкончаниеРабот</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<ContextMenu name="ВладелецОкончаниеРаботКонтекстноеМеню" id="132"/>
+									<ExtendedTooltip name="ВладелецОкончаниеРаботРасширеннаяПодсказка" id="133"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаСрокиРаботы" id="124">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа сроки работы</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа сроки работы</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаСрокиРаботыРасширеннаяПодсказка" id="125"/>
+							<ChildItems>
+								<InputField name="РаннийСтарт" id="78">
+									<DataPath>Объект.РаннийСтарт</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Начало</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="РаннийСтартКонтекстноеМеню" id="79"/>
+									<ExtendedTooltip name="РаннийСтартРасширеннаяПодсказка" id="80"/>
+								</InputField>
+								<InputField name="ПозднийФиниш" id="75">
+									<DataPath>Объект.ПозднийФиниш</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Окончание</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ПозднийФинишКонтекстноеМеню" id="76"/>
+									<ExtendedTooltip name="ПозднийФинишРасширеннаяПодсказка" id="77"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаНастройкиРасчетаСроков" id="111">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа настройки расчета сроков</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа настройки расчета сроков</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаНастройкиРасчетаСроковРасширеннаяПодсказка" id="112"/>
+							<ChildItems>
+								<InputField name="ТипОграничения" id="115">
+									<DataPath>Объект.ТипОграничения</DataPath>
+									<ContextMenu name="ТипОграниченияКонтекстноеМеню" id="116"/>
+									<ExtendedTooltip name="ТипОграниченияРасширеннаяПодсказка" id="117"/>
+									<Events>
+										<Event name="OnChange">ТипОграниченияПриИзменении</Event>
+									</Events>
+								</InputField>
+								<UsualGroup name="Группа3" id="90">
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="91"/>
+									<ChildItems>
+										<InputField name="ПозднийСтарт" id="100">
+											<DataPath>Объект.ПозднийСтарт</DataPath>
+											<ContextMenu name="ПозднийСтартКонтекстноеМеню" id="101"/>
+											<ExtendedTooltip name="ПозднийСтартРасширеннаяПодсказка" id="102"/>
+										</InputField>
+										<InputField name="РаннийФиниш" id="95">
+											<DataPath>Объект.РаннийФиниш</DataPath>
+											<ContextMenu name="РаннийФинишКонтекстноеМеню" id="96"/>
+											<ExtendedTooltip name="РаннийФинишРасширеннаяПодсказка" id="97"/>
+										</InputField>
+										<InputField name="Продолжительность" id="30">
+											<DataPath>Объект.Продолжительность</DataPath>
+											<SpinButton>true</SpinButton>
+											<ContextMenu name="ПродолжительностьКонтекстноеМеню" id="31"/>
+											<ExtendedTooltip name="ПродолжительностьРасширеннаяПодсказка" id="32"/>
+										</InputField>
+										<InputField name="Резерв" id="106">
+											<DataPath>Объект.Резерв</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<ContextMenu name="РезервКонтекстноеМеню" id="107"/>
+											<ExtendedTooltip name="РезервРасширеннаяПодсказка" id="108"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ЗадачиПроектовСтруктура</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

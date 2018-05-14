@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5">
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<SaveDataInSettings>UseList</SaveDataInSettings>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<ChildItems>
+		<InputField name="ПериодОтбора" id="24">
+			<DataPath>ПериодОтбора</DataPath>
+			<ContextMenu name="ПериодОтбораКонтекстноеМеню" id="25"/>
+			<ExtendedTooltip name="ПериодОтбораExtendedTooltip" id="55"/>
+		</InputField>
+		<Table name="ТабАктовРеализаций" id="26">
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.ТабАктовРеализаций</DataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ТабАктовРеализацийКонтекстноеМеню" id="27"/>
+			<AutoCommandBar name="ТабАктовРеализацийКоманднаяПанель" id="28">
+				<Autofill>false</Autofill>
+				<ChildItems>
+					<Button name="ТабАктовРеализацийУстановитьФлажки" id="52">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.УстановитьФлажки</CommandName>
+						<ExtendedTooltip name="ТабАктовРеализацийУстановитьФлажкиExtendedTooltip" id="56"/>
+					</Button>
+					<Button name="ТабАктовРеализацийСнятьФлажки" id="51">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.СнятьФлажки</CommandName>
+						<ExtendedTooltip name="ТабАктовРеализацийСнятьФлажкиExtendedTooltip" id="57"/>
+					</Button>
+					<Button name="ТабАктовРеализацийЗаполнитьТаблицу" id="53">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ЗаполнитьТаблицу</CommandName>
+						<ExtendedTooltip name="ТабАктовРеализацийЗаполнитьТаблицуExtendedTooltip" id="58"/>
+					</Button>
+					<Button name="ТабАктовРеализацийЗагрузитьДокументы" id="54">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ЗагрузитьДокументы</CommandName>
+						<ExtendedTooltip name="ТабАктовРеализацийЗагрузитьДокументыExtendedTooltip" id="59"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ТабАктовРеализацийExtendedTooltip" id="60"/>
+			<SearchStringAddition name="ТабАктовРеализацийСтрокаПоиска" id="72">
+				<AdditionSource>
+					<Item>ТабАктовРеализаций</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТабАктовРеализацийСтрокаПоискаКонтекстноеМеню" id="73"/>
+				<ExtendedTooltip name="ТабАктовРеализацийСтрокаПоискаРасширеннаяПодсказка" id="74"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ТабАктовРеализацийСостояниеПросмотра" id="75">
+				<AdditionSource>
+					<Item>ТабАктовРеализаций</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТабАктовРеализацийСостояниеПросмотраКонтекстноеМеню" id="76"/>
+				<ExtendedTooltip name="ТабАктовРеализацийСостояниеПросмотраРасширеннаяПодсказка" id="77"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ТабАктовРеализацийУправлениеПоиском" id="78">
+				<AdditionSource>
+					<Item>ТабАктовРеализаций</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ТабАктовРеализацийУправлениеПоискомКонтекстноеМеню" id="79"/>
+				<ExtendedTooltip name="ТабАктовРеализацийУправлениеПоискомРасширеннаяПодсказка" id="80"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="ТабАктовРеализацийНомерСтроки" id="29">
+					<DataPath>Объект.ТабАктовРеализаций.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТабАктовРеализацийНомерСтрокиКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="ТабАктовРеализацийНомерСтрокиExtendedTooltip" id="61"/>
+				</LabelField>
+				<CheckBoxField name="ТабАктовРеализацийПереносить" id="31">
+					<DataPath>Объект.ТабАктовРеализаций.Переносить</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>П</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ТабАктовРеализацийПереноситьКонтекстноеМеню" id="32"/>
+					<ExtendedTooltip name="ТабАктовРеализацийПереноситьExtendedTooltip" id="62"/>
+				</CheckBoxField>
+				<CheckBoxField name="ТабАктовРеализацийЭтоАкт" id="33">
+					<DataPath>Объект.ТабАктовРеализаций.ЭтоАкт</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ТабАктовРеализацийЭтоАктКонтекстноеМеню" id="34"/>
+					<ExtendedTooltip name="ТабАктовРеализацийЭтоАктExtendedTooltip" id="63"/>
+				</CheckBoxField>
+				<InputField name="ТабАктовРеализацийДата" id="35">
+					<DataPath>Объект.ТабАктовРеализаций.Дата</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТабАктовРеализацийДатаКонтекстноеМеню" id="36"/>
+					<ExtendedTooltip name="ТабАктовРеализацийДатаExtendedTooltip" id="64"/>
+				</InputField>
+				<InputField name="ТабАктовРеализацийНомерАктаРеализации" id="37">
+					<DataPath>Объект.ТабАктовРеализаций.НомерАктаРеализации</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТабАктовРеализацийНомерАктаРеализацииКонтекстноеМеню" id="38"/>
+					<ExtendedTooltip name="ТабАктовРеализацийНомерАктаРеализацииExtendedTooltip" id="65"/>
+				</InputField>
+				<InputField name="ТабАктовРеализацийОрганизация" id="39">
+					<DataPath>Объект.ТабАктовРеализаций.Организация</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТабАктовРеализацийОрганизацияКонтекстноеМеню" id="40"/>
+					<ExtendedTooltip name="ТабАктовРеализацийОрганизацияExtendedTooltip" id="66"/>
+				</InputField>
+				<InputField name="ТабАктовРеализацийКонтрагент" id="41">
+					<DataPath>Объект.ТабАктовРеализаций.Контрагент</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТабАктовРеализацийКонтрагентКонтекстноеМеню" id="42"/>
+					<ExtendedTooltip name="ТабАктовРеализацийКонтрагентExtendedTooltip" id="67"/>
+				</InputField>
+				<InputField name="ТабАктовРеализацийДоговорКонтрагента" id="43">
+					<DataPath>Объект.ТабАктовРеализаций.Договор</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТабАктовРеализацийДоговорКонтрагентаКонтекстноеМеню" id="44"/>
+					<ExtendedTooltip name="ТабАктовРеализацийДоговорКонтрагентаExtendedTooltip" id="68"/>
+				</InputField>
+				<InputField name="ТабАктовРеализацийПодразделение" id="45">
+					<DataPath>Объект.ТабАктовРеализаций.Подразделение</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТабАктовРеализацийПодразделениеКонтекстноеМеню" id="46"/>
+					<ExtendedTooltip name="ТабАктовРеализацийПодразделениеExtendedTooltip" id="69"/>
+				</InputField>
+				<InputField name="ТабАктовРеализацийСотрудник" id="47">
+					<DataPath>Объект.ТабАктовРеализаций.ФизическоеЛицо</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТабАктовРеализацийСотрудникКонтекстноеМеню" id="48"/>
+					<ExtendedTooltip name="ТабАктовРеализацийСотрудникExtendedTooltip" id="70"/>
+				</InputField>
+				<InputField name="ТабАктовРеализацийСумма" id="49">
+					<DataPath>Объект.ТабАктовРеализаций.Сумма</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТабАктовРеализацийСуммаКонтекстноеМеню" id="50"/>
+					<ExtendedTooltip name="ТабАктовРеализацийСуммаExtendedTooltip" id="71"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ЗагрузкаАктовТиражныхПодразделений</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ПериодОтбора" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период отбора</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:StandardPeriod</v8:Type>
+			</Type>
+			<Save>
+				<Field>ПериодОтбора.EndDate</Field>
+				<Field>ПериодОтбора.StartDate</Field>
+				<Field>ПериодОтбора.Variant</Field>
+			</Save>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЗаполнитьТаблицу" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить таблицу</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьТаблицу</Action>
+		</Command>
+		<Command name="УстановитьФлажки" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить флажки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить флажки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>УстановитьФлажки</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="СнятьФлажки" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять флажки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять флажки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СнятьФлажки</Action>
+		</Command>
+		<Command name="ЗагрузитьДокументы" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить документы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗагрузитьДокументы</Action>
+		</Command>
+	</Commands>
+</Form>

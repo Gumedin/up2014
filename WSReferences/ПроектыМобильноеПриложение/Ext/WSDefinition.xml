@@ -1,0 +1,253 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/"
+		xmlns:soap12bind="http://schemas.xmlsoap.org/wsdl/soap12/"
+		xmlns:soapbind="http://schemas.xmlsoap.org/wsdl/soap/"
+		xmlns:tns="www.URL.com"
+		xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy"
+		xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+		xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+		xmlns:xsd1="www.URL.com"
+		name="ExchangeMobile"
+		targetNamespace="www.URL.com">
+	<types>
+		<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+				xmlns:xs1="www.URL.com"
+				targetNamespace="www.URL.com"
+				elementFormDefault="qualified">
+			<xs:element name="Registration">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="КодФизическогоЛица"
+								type="xs:string"/>
+						<xs:element name="Пароль"
+								type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="RegistrationResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="return"
+								type="xs:string"
+								nillable="true"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Sinhronization">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="ИмяФизическогоЛица"
+								type="xs:string"/>
+						<xs:element name="ЖурналJSON"
+								type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="SinhronizationResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="return"
+								type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="PutVisitLog">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="ИД_ФизическогоЛица"
+								type="xs:string"/>
+						<xs:element name="ЖурналJSON"
+								type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="PutVisitLogResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="return"
+								type="xs:integer"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="GetVisitLog">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="ИД_ФизическогоЛица"
+								type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="GetVisitLogResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="return"
+								type="xs:string"
+								nillable="true"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:schema>
+	</types>
+	<message name="RegistrationRequestMessage">
+		<part name="parameters"
+				element="tns:Registration"/>
+	</message>
+	<message name="RegistrationResponseMessage">
+		<part name="parameters"
+				element="tns:RegistrationResponse"/>
+	</message>
+	<message name="SinhronizationRequestMessage">
+		<part name="parameters"
+				element="tns:Sinhronization"/>
+	</message>
+	<message name="SinhronizationResponseMessage">
+		<part name="parameters"
+				element="tns:SinhronizationResponse"/>
+	</message>
+	<message name="PutVisitLogRequestMessage">
+		<part name="parameters"
+				element="tns:PutVisitLog"/>
+	</message>
+	<message name="PutVisitLogResponseMessage">
+		<part name="parameters"
+				element="tns:PutVisitLogResponse"/>
+	</message>
+	<message name="GetVisitLogRequestMessage">
+		<part name="parameters"
+				element="tns:GetVisitLog"/>
+	</message>
+	<message name="GetVisitLogResponseMessage">
+		<part name="parameters"
+				element="tns:GetVisitLogResponse"/>
+	</message>
+	<portType name="ExchangeMobilePortType">
+		<operation name="Registration">
+			<input name="RegistrationRequest"
+					message="tns:RegistrationRequestMessage"/>
+			<output name="RegistrationResponse"
+					message="tns:RegistrationResponseMessage"/>
+		</operation>
+		<operation name="Sinhronization">
+			<input name="SinhronizationRequest"
+					message="tns:SinhronizationRequestMessage"/>
+			<output name="SinhronizationResponse"
+					message="tns:SinhronizationResponseMessage"/>
+		</operation>
+		<operation name="PutVisitLog">
+			<input name="PutVisitLogRequest"
+					message="tns:PutVisitLogRequestMessage"/>
+			<output name="PutVisitLogResponse"
+					message="tns:PutVisitLogResponseMessage"/>
+		</operation>
+		<operation name="GetVisitLog">
+			<input name="GetVisitLogRequest"
+					message="tns:GetVisitLogRequestMessage"/>
+			<output name="GetVisitLogResponse"
+					message="tns:GetVisitLogResponseMessage"/>
+		</operation>
+	</portType>
+	<binding name="ExchangeMobileSoapBinding"
+			type="tns:ExchangeMobilePortType">
+		<soapbind:binding style="document"
+				transport="http://schemas.xmlsoap.org/soap/http"/>
+		<operation name="Registration">
+			<soapbind:operation style="document"
+					soapAction="www.URL.com#ExchangeMobile:Registration"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="Sinhronization">
+			<soapbind:operation style="document"
+					soapAction="www.URL.com#ExchangeMobile:Sinhronization"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="PutVisitLog">
+			<soapbind:operation style="document"
+					soapAction="www.URL.com#ExchangeMobile:PutVisitLog"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="GetVisitLog">
+			<soapbind:operation style="document"
+					soapAction="www.URL.com#ExchangeMobile:GetVisitLog"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+	</binding>
+	<binding name="ExchangeMobileSoap12Binding"
+			type="tns:ExchangeMobilePortType">
+		<soap12bind:binding style="document"
+				transport="http://schemas.xmlsoap.org/soap/http"/>
+		<operation name="Registration">
+			<soap12bind:operation style="document"
+					soapAction="www.URL.com#ExchangeMobile:Registration"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="Sinhronization">
+			<soap12bind:operation style="document"
+					soapAction="www.URL.com#ExchangeMobile:Sinhronization"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="PutVisitLog">
+			<soap12bind:operation style="document"
+					soapAction="www.URL.com#ExchangeMobile:PutVisitLog"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="GetVisitLog">
+			<soap12bind:operation style="document"
+					soapAction="www.URL.com#ExchangeMobile:GetVisitLog"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+	</binding>
+	<service name="ExchangeMobile">
+		<port name="ExchangeMobileSoap"
+				binding="tns:ExchangeMobileSoapBinding">
+			<documentation> 
+				<wsi:Claim xmlns:wsi="http://ws-i.org/schemas/conformanceClaim/"
+						conformsTo="http://ws-i.org/profiles/basic/1.1"/>
+			</documentation>
+			<soapbind:address location="http://srv1c.sov.loc/UP2014/ws/Mobile.1cws"/>
+		</port>
+		<port name="ExchangeMobileSoap12"
+				binding="tns:ExchangeMobileSoap12Binding">
+			<soap12bind:address location="http://srv1c.sov.loc/UP2014/ws/Mobile.1cws"/>
+		</port>
+	</service>
+</definitions>

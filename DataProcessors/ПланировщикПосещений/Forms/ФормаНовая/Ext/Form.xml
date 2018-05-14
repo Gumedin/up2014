@@ -1,0 +1,1078 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5">
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа4" id="53">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="54"/>
+			<ChildItems>
+				<UsualGroup name="Группа3" id="48">
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="49"/>
+					<ChildItems>
+						<Button name="Обновить" id="10">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.Обновить</CommandName>
+							<ExtendedTooltip name="ОбновитьРасширеннаяПодсказка" id="11"/>
+						</Button>
+						<Button name="ФормаОбщаяКомандаПечатьПосещенийСотрудника" id="40">
+							<Type>UsualButton</Type>
+							<Representation>Picture</Representation>
+							<CommandName>CommonCommand.ПечатьПосещенийСотрудника</CommandName>
+							<DataPath>ФизическоеЛицо</DataPath>
+							<Picture>
+								<xr:Ref>StdPicture.Print</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ExtendedTooltip name="ФормаОбщаяКомандаПечатьПосещенийСотрудникаРасширеннаяПодсказка" id="41"/>
+						</Button>
+						<Button name="ФормаСформироватьТабельРВ" id="46">
+							<Type>UsualButton</Type>
+							<Representation>Picture</Representation>
+							<CommandName>Form.Command.СформироватьТабельРВ</CommandName>
+							<ExtendedTooltip name="ФормаСформироватьТабельРВРасширеннаяПодсказка" id="47"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Группа5" id="55">
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="56"/>
+					<ChildItems>
+						<Button name="ОтобразитьПредыдущийПериод" id="57">
+							<Type>UsualButton</Type>
+							<Representation>Picture</Representation>
+							<CommandName>Form.Command.ОтобразитьПредыдущийПериод</CommandName>
+							<ExtendedTooltip name="ОтобразитьПредыдущийПериодРасширеннаяПодсказка" id="58"/>
+						</Button>
+						<Button name="ОтобразитьСегодня" id="64">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ОтобразитьСегодня</CommandName>
+							<ExtendedTooltip name="ОтобразитьСегодняРасширеннаяПодсказка" id="65"/>
+						</Button>
+						<Button name="ОтобразитьСледующийПериод" id="59">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ОтобразитьСледующийПериод</CommandName>
+							<ExtendedTooltip name="ОтобразитьСледующийПериодРасширеннаяПодсказка" id="60"/>
+						</Button>
+						<PictureDecoration name="Декорация1" id="61">
+							<Width>1</Width>
+							<Height>1</Height>
+							<ContextMenu name="Декорация1КонтекстноеМеню" id="62"/>
+							<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="63"/>
+						</PictureDecoration>
+						<RadioButtonField name="ПериодОтображения" id="50">
+							<DataPath>ПериодОтображения</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<RadioButtonType>Tumbler</RadioButtonType>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>День</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xr:DesignTimeRef">Enum.ПериодОтображенияРабочегоКалендаря.EnumValue.День</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Неделя</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xr:DesignTimeRef">Enum.ПериодОтображенияРабочегоКалендаря.EnumValue.Неделя</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Неделя с текущей даты</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xr:DesignTimeRef">Enum.ПериодОтображенияРабочегоКалендаря.EnumValue.НеделяСТекущейДаты</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Две недели</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xr:DesignTimeRef">Enum.ПериодОтображенияРабочегоКалендаря.EnumValue.ДвеНедели</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Месяц</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xr:DesignTimeRef">Enum.ПериодОтображенияРабочегоКалендаря.EnumValue.Месяц</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="ПериодОтображенияКонтекстноеМеню" id="51"/>
+							<ExtendedTooltip name="ПериодОтображенияРасширеннаяПодсказка" id="52"/>
+							<Events>
+								<Event name="OnChange">ПериодОтображенияПриИзменении</Event>
+							</Events>
+						</RadioButtonField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа1" id="12">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ChildItemsWidth>LeftWidest</ChildItemsWidth>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="13"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаПланировщик" id="14">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа планировщик</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа планировщик</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalStretch>true</HorizontalStretch>
+					<VerticalStretch>true</VerticalStretch>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПланировщикРасширеннаяПодсказка" id="15"/>
+					<ChildItems>
+						<PlannerField name="Планировщик" id="1">
+							<DataPath>Планировщик</DataPath>
+							<DefaultItem>true</DefaultItem>
+							<TitleLocation>None</TitleLocation>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<ContextMenu name="ПланировщикКонтекстноеМеню" id="2">
+								<ChildItems>
+									<Button name="ПланировщикКонтекстноеМенюПосещениеОтработано" id="44">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ПосещениеОтработано</CommandName>
+										<ExtendedTooltip name="ПланировщикКонтекстноеМенюПосещениеОтработаноРасширеннаяПодсказка" id="45"/>
+									</Button>
+								</ChildItems>
+							</ContextMenu>
+							<ExtendedTooltip name="ПланировщикРасширеннаяПодсказка" id="3"/>
+							<Events>
+								<Event name="DragCheck">ПланировщикПроверкаПеретаскивания</Event>
+								<Event name="OnEditEnd">ПланировщикПриОкончанииРедактирования</Event>
+								<Event name="BeforeDelete">ПланировщикПередУдалением</Event>
+								<Event name="BeforeStartEdit">ПланировщикПередНачаломРедактирования</Event>
+								<Event name="Drag">ПланировщикПеретаскивание</Event>
+							</Events>
+						</PlannerField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Группа2" id="16">
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="17"/>
+					<ChildItems>
+						<UsualGroup name="Группа10" id="83">
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа10РасширеннаяПодсказка" id="84"/>
+							<ChildItems>
+								<InputField name="ФизическоеЛицо" id="4">
+									<DataPath>ФизическоеЛицо</DataPath>
+									<OpenButton>true</OpenButton>
+									<QuickChoice>true</QuickChoice>
+									<ContextMenu name="ФизическоеЛицоКонтекстноеМеню" id="5"/>
+									<ExtendedTooltip name="ФизическоеЛицоРасширеннаяПодсказка" id="6"/>
+									<Events>
+										<Event name="OnChange">ФизическоеЛицоПриИзменении</Event>
+										<Event name="StartChoice">ФизическоеЛицоНачалоВыбора</Event>
+										<Event name="ChoiceProcessing">ФизическоеЛицоОбработкаВыбора</Event>
+									</Events>
+								</InputField>
+								<CommandBar name="Группа9" id="77">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Заполнить</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="Группа9РасширеннаяПодсказка" id="78"/>
+									<ChildItems>
+										<Popup name="Группа8" id="81">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Заполнить</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="Группа8РасширеннаяПодсказка" id="82"/>
+											<ChildItems>
+												<Button name="ЗаполнитьОтпуск" id="73">
+													<Type>CommandBarButton</Type>
+													<Representation>PictureAndText</Representation>
+													<OnlyInAllActions>true</OnlyInAllActions>
+													<CommandName>Form.Command.ЗаполнитьОтпуск</CommandName>
+													<ExtendedTooltip name="ЗаполнитьОтпускРасширеннаяПодсказка" id="74"/>
+												</Button>
+												<Button name="ЗаполнитьЗаПериодПоЛичномуПлану" id="106">
+													<Type>CommandBarButton</Type>
+													<CommandName>Form.Command.ЗаполнитьЗаПериодПоЛичномуПлану</CommandName>
+													<ExtendedTooltip name="ЗаполнитьЗаПериодПоЛичномуПлануРасширеннаяПодсказка" id="107"/>
+												</Button>
+												<Button name="УстановитьОтработаноЗаПериодПланирования" id="93">
+													<Type>CommandBarButton</Type>
+													<CommandName>Form.Command.УстановитьОтработаноЗаПериодПланирования</CommandName>
+													<ExtendedTooltip name="УстановитьОтработаноЗаПериодПланированияРасширеннаяПодсказка" id="94"/>
+												</Button>
+												<Button name="УстановитьНеОтработаноЗаПериодПланирования" id="95">
+													<Type>CommandBarButton</Type>
+													<CommandName>Form.Command.УстановитьНеОтработаноЗаПериодПланирования</CommandName>
+													<ExtendedTooltip name="УстановитьНеОтработаноЗаПериодПланированияРасширеннаяПодсказка" id="96"/>
+												</Button>
+												<Button name="ОчиститьПланыПосещения" id="85">
+													<Type>CommandBarButton</Type>
+													<CommandName>Form.Command.ОчиститьПланПосещений</CommandName>
+													<ExtendedTooltip name="ОчиститьПланыПосещенияРасширеннаяПодсказка" id="86"/>
+												</Button>
+												<Button name="ЗаполнитьЗаявкуНаРасходы" id="108">
+													<Type>CommandBarButton</Type>
+													<UserVisible>
+														<xr:Common>false</xr:Common>
+														<xr:Value name="Role.ПолныеПрава">true</xr:Value>
+														<xr:Value name="Role.НачальникПодразделения">true</xr:Value>
+													</UserVisible>
+													<CommandName>Form.Command.ЗаполнитьЗаявкуНаРасходы</CommandName>
+													<ExtendedTooltip name="ЗаполнитьЗаявкуНаРасходыРасширеннаяПодсказка" id="109"/>
+												</Button>
+											</ChildItems>
+										</Popup>
+									</ChildItems>
+								</CommandBar>
+								<LabelField name="ОстатокНормы" id="100">
+									<DataPath>ОстатокНормы</DataPath>
+									<ContextMenu name="ОстатокНормыКонтекстноеМеню" id="101"/>
+									<ExtendedTooltip name="ОстатокНормыРасширеннаяПодсказка" id="102"/>
+								</LabelField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="Группа7" id="68">
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа7РасширеннаяПодсказка" id="69"/>
+							<ChildItems>
+								<CalendarField name="ОтображаемаяДата" id="70">
+									<DataPath>ОтображаемаяДата</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="ОтображаемаяДатаКонтекстноеМеню" id="71"/>
+									<ExtendedTooltip name="ОтображаемаяДатаРасширеннаяПодсказка" id="72"/>
+									<Events>
+										<Event name="OnChange">ПериодОтображенияПриИзменении</Event>
+									</Events>
+								</CalendarField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="Группа6" id="66">
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа6РасширеннаяПодсказка" id="67"/>
+							<ChildItems>
+								<Table name="КонтрагентыПосещений" id="18">
+									<Representation>List</Representation>
+									<ChangeRowSet>false</ChangeRowSet>
+									<RowSelectionMode>Row</RowSelectionMode>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<DataPath>КонтрагентыПосещений</DataPath>
+									<RowPictureDataPath>КонтрагентыПосещений.ИндексЦвета</RowPictureDataPath>
+									<RowsPicture>
+										<xr:Ref>CommonPicture.КоллекцияЦвет</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</RowsPicture>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="КонтрагентыПосещенийКонтекстноеМеню" id="19">
+										<ChildItems>
+											<Button name="КонтрагентыПосещенийКонтекстноеМенюКнопка1" id="87">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ЗаполнитьЗаПериод</CommandName>
+												<ExtendedTooltip name="КонтрагентыПосещенийКонтекстноеМенюКнопка1РасширеннаяПодсказка" id="88"/>
+											</Button>
+										</ChildItems>
+									</ContextMenu>
+									<AutoCommandBar name="КонтрагентыПосещенийКоманднаяПанель" id="20">
+										<Autofill>false</Autofill>
+										<ChildItems>
+											<Button name="КонтрагентыПосещенийКнопка1" id="89">
+												<Type>CommandBarButton</Type>
+												<OnlyInAllActions>true</OnlyInAllActions>
+												<CommandName>Form.Item.КонтрагентыПосещений.StandardCommand.SortListAsc</CommandName>
+												<ExtendedTooltip name="КонтрагентыПосещенийКнопка1РасширеннаяПодсказка" id="90"/>
+											</Button>
+											<Button name="КонтрагентыПосещенийКнопка2" id="91">
+												<Type>CommandBarButton</Type>
+												<OnlyInAllActions>true</OnlyInAllActions>
+												<CommandName>Form.Item.КонтрагентыПосещений.StandardCommand.SortListDesc</CommandName>
+												<ExtendedTooltip name="КонтрагентыПосещенийКнопка2РасширеннаяПодсказка" id="92"/>
+											</Button>
+										</ChildItems>
+									</AutoCommandBar>
+									<ExtendedTooltip name="КонтрагентыПосещенийРасширеннаяПодсказка" id="21"/>
+									<SearchStringAddition name="КонтрагентыПосещенийСтрокаПоиска" id="22">
+										<AdditionSource>
+											<Item>КонтрагентыПосещений</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="КонтрагентыПосещенийСтрокаПоискаКонтекстноеМеню" id="23"/>
+										<ExtendedTooltip name="КонтрагентыПосещенийСтрокаПоискаРасширеннаяПодсказка" id="24"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="КонтрагентыПосещенийСостояниеПросмотра" id="25">
+										<AdditionSource>
+											<Item>КонтрагентыПосещений</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="КонтрагентыПосещенийСостояниеПросмотраКонтекстноеМеню" id="26"/>
+										<ExtendedTooltip name="КонтрагентыПосещенийСостояниеПросмотраРасширеннаяПодсказка" id="27"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="КонтрагентыПосещенийУправлениеПоиском" id="28">
+										<AdditionSource>
+											<Item>КонтрагентыПосещений</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="КонтрагентыПосещенийУправлениеПоискомКонтекстноеМеню" id="29"/>
+										<ExtendedTooltip name="КонтрагентыПосещенийУправлениеПоискомРасширеннаяПодсказка" id="30"/>
+									</SearchControlAddition>
+									<ChildItems>
+										<InputField name="КонтрагентыПосещенийКонтрагент" id="31">
+											<DataPath>КонтрагентыПосещений.Контрагент</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="КонтрагентыПосещенийКонтрагентКонтекстноеМеню" id="32"/>
+											<ExtendedTooltip name="КонтрагентыПосещенийКонтрагентРасширеннаяПодсказка" id="33"/>
+										</InputField>
+										<InputField name="КонтрагентыПосещенийПредметПосещения" id="34">
+											<DataPath>КонтрагентыПосещений.ПредметПосещения</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="КонтрагентыПосещенийПредметПосещенияКонтекстноеМеню" id="35"/>
+											<ExtendedTooltip name="КонтрагентыПосещенийПредметПосещенияРасширеннаяПодсказка" id="36"/>
+										</InputField>
+										<InputField name="КонтрагентыПосещенийУточнение" id="110">
+											<DataPath>КонтрагентыПосещений.Уточнение</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="КонтрагентыПосещенийУточнениеКонтекстноеМеню" id="111"/>
+											<ExtendedTooltip name="КонтрагентыПосещенийУточнениеРасширеннаяПодсказка" id="112"/>
+										</InputField>
+										<InputField name="КонтрагентыПосещенийЧасовПоПлану" id="97">
+											<DataPath>КонтрагентыПосещений.ЧасовПоПлану</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="КонтрагентыПосещенийЧасовПоПлануКонтекстноеМеню" id="98"/>
+											<ExtendedTooltip name="КонтрагентыПосещенийЧасовПоПлануРасширеннаяПодсказка" id="99"/>
+										</InputField>
+										<InputField name="КонтрагентыПосещенийКоличествоПоПлану" id="103">
+											<DataPath>КонтрагентыПосещений.КоличествоПоПлану</DataPath>
+											<Visible>false</Visible>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="КонтрагентыПосещенийКоличествоПоПлануКонтекстноеМеню" id="104"/>
+											<ExtendedTooltip name="КонтрагентыПосещенийКоличествоПоПлануРасширеннаяПодсказка" id="105"/>
+										</InputField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="Планировщик" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Планировщик</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:pl="http://v8.1c.ru/8.3/data/planner">pl:Planner</v8:Type>
+			</Type>
+			<Settings xmlns:pl="http://v8.1c.ru/8.3/data/planner" xsi:type="pl:Planner">
+				<pl:item>
+					<pl:value xsi:nil="true"/>
+					<pl:text>Встреча</pl:text>
+					<pl:tooltip/>
+					<pl:begin>2015-12-09T01:00:00</pl:begin>
+					<pl:end>2015-12-09T04:00:00</pl:end>
+					<pl:borderColor>auto</pl:borderColor>
+					<pl:backColor>auto</pl:backColor>
+					<pl:textColor>auto</pl:textColor>
+					<pl:font kind="AutoFont"/>
+					<pl:dimensionValues/>
+					<pl:replacementDate>0001-01-01T00:00:00</pl:replacementDate>
+					<pl:deleted>false</pl:deleted>
+					<pl:id>cb29388e-a8f8-4d4b-80fa-00eb8a2818cf</pl:id>
+				</pl:item>
+				<pl:borderColor>auto</pl:borderColor>
+				<pl:backColor>auto</pl:backColor>
+				<pl:textColor>auto</pl:textColor>
+				<pl:lineColor>auto</pl:lineColor>
+				<pl:font kind="AutoFont"/>
+				<pl:beginOfRepresentationPeriod>0001-01-01T00:00:00</pl:beginOfRepresentationPeriod>
+				<pl:endOfRepresentationPeriod>0001-01-01T00:00:00</pl:endOfRepresentationPeriod>
+				<pl:alignElementsOfTimeScale>true</pl:alignElementsOfTimeScale>
+				<pl:displayTimeScaleWrapHeaders>true</pl:displayTimeScaleWrapHeaders>
+				<pl:displayWrapHeaders>true</pl:displayWrapHeaders>
+				<pl:timeScaleWrapHeadersFormat>
+					<v8:item>
+						<v8:lang>#</v8:lang>
+						<v8:content>DLF="DD"</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>DLF="DD"</v8:content>
+					</v8:item>
+				</pl:timeScaleWrapHeadersFormat>
+				<pl:periodicVariantUnit>Day</pl:periodicVariantUnit>
+				<pl:periodicVariantRepetition>1</pl:periodicVariantRepetition>
+				<pl:timeScaleWrapBeginIndent>0</pl:timeScaleWrapBeginIndent>
+				<pl:timeScaleWrapEndIndent>0</pl:timeScaleWrapEndIndent>
+				<pl:timeScale>
+					<placement xmlns="http://v8.1c.ru/8.2/data/chart">Left</placement>
+					<level xmlns="http://v8.1c.ru/8.2/data/chart">
+						<measure>Hour</measure>
+						<interval>1</interval>
+						<show>true</show>
+						<line width="1" gap="false">
+							<v8ui:style xsi:type="v8ui:ChartLineType">Solid</v8ui:style>
+						</line>
+						<scaleColor>auto</scaleColor>
+						<dayFormatRule>MonthDayWeekDay</dayFormatRule>
+						<format>
+							<v8:item>
+								<v8:lang>#</v8:lang>
+								<v8:content>DF="HH:mm"</v8:content>
+							</v8:item>
+						</format>
+						<labels>
+							<ticks>0</ticks>
+						</labels>
+						<backColor>auto</backColor>
+						<textColor>auto</textColor>
+						<showPereodicalLabels>true</showPereodicalLabels>
+					</level>
+					<transparent xmlns="http://v8.1c.ru/8.2/data/chart">false</transparent>
+					<backColor xmlns="http://v8.1c.ru/8.2/data/chart">auto</backColor>
+					<textColor xmlns="http://v8.1c.ru/8.2/data/chart">auto</textColor>
+					<currentLevel xmlns="http://v8.1c.ru/8.2/data/chart">0</currentLevel>
+				</pl:timeScale>
+				<pl:period>
+					<pl:begin>2015-12-09T00:00:00</pl:begin>
+					<pl:end>2015-12-09T23:59:59</pl:end>
+				</pl:period>
+				<pl:displayCurrentDate>true</pl:displayCurrentDate>
+				<pl:itemsTimeRepresentation>BeginTime</pl:itemsTimeRepresentation>
+			</Settings>
+		</Attribute>
+		<Attribute name="ФизическоеЛицо" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Физическое лицо</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ФизическиеЛица</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НачальникПодразделения" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Начальник подразделения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="КонтрагентыПосещений" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контрагенты посещений</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Контрагент" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Контрагент</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ПредметПосещения" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Предмет посещения</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:TypeSet>cfg:DefinedType.ПредметПосещения</v8:TypeSet>
+					</Type>
+				</Column>
+				<Column name="Часов" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Часов</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>1</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Количество" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Количество</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>2</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Цвет" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Цвет</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:EnumRef.ЦветаРабочегоКалендаря</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ИндексЦвета" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Индекс цвета</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>1</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЧасовПоПлану" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>План, ч</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>3</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="КоличествоПоПлану" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>План, к.</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>2</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Расходы" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Расходы</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Уточнение" id="10">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Уточнение</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:TypeSet>cfg:DefinedType.УточнениеПредметаПосещения</v8:TypeSet>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ПериодОтображения" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период отображения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ПериодОтображенияРабочегоКалендаря</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НастройкиОтображения" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки отображения</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ВыделенныеДаты" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выделенные даты</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Settings>
+		</Attribute>
+		<Attribute name="РабочиеДни" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Рабочие дни</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Settings>
+		</Attribute>
+		<Attribute name="ОтображаемаяДата" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отображаемая дата</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ОстатокНормы" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Остаток</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>3</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Обновить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Reread</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Обновить</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="ПосещениеОтработано" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отработано</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Посещение отработано</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.СнятьПризнакРассмотреноУВзаимодействия</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПосещениеОтработано</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="СформироватьТабельРВ" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать табель РВ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать табель РВ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.EventLogByUser</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СформироватьТабельРВ</Action>
+		</Command>
+		<Command name="ОтобразитьСледующийПериод" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Следующий период</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отобразить следующий период</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.MoveRight</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОтобразитьСледующийПериод</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="ОтобразитьПредыдущийПериод" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Предыдущий период</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отобразить предыдущий период</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.MoveLeft</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОтобразитьПредыдущийПериод</Action>
+		</Command>
+		<Command name="ОтобразитьСегодня" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сегодня</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отобразить сегодня</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтобразитьСегодня</Action>
+		</Command>
+		<Command name="ЗаполнитьОтпуск" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить отсутствие</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить отпуск</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Document</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ЗаполнитьОтпуск</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ЗаполнитьПоЛичномуПлану" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить по личному плану</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить по личному плану</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.УстановитьОтветственногоЗаВзаимодействие</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ЗаполнитьПоЛичномуПлану</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ОчиститьПланПосещений" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить план посещений</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить план посещений</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Clear</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОчиститьПланПосещений</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ЗаполнитьЗаПериод" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить за период</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить за период</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Calendar</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ЗаполнитьЗаПериод</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="УстановитьОтработаноЗаПериодПланирования" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить отработано</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить отработано за период планирования</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.Успешно</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>УстановитьОтработаноЗаПериодПланирования</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="УстановитьНеОтработаноЗаПериодПланирования" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить не отработано</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить не отработано за период планирования</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ЗапланированноеВзаимодействие</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>УстановитьНеОтработаноЗаПериодПланирования</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ЗаполнитьЗаПериодПоЛичномуПлану" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить за период по личному плану</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить за период по личному плану</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.УстановитьОтветственногоЗаВзаимодействие</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ЗаполнитьЗаПериодПоЛичномуПлану</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ЗаполнитьЗаявкуНаРасходы" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить заявку на расходы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить заявку на расходы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.Монеты</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ЗаполнитьЗаявкуНаРасходы</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="ВариантРаботыФормы">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<KeyParameter>true</KeyParameter>
+		</Parameter>
+		<Parameter name="ФизическоеЛицо">
+			<Type>
+				<v8:Type>cfg:CatalogRef.ФизическиеЛица</v8:Type>
+			</Type>
+			<KeyParameter>true</KeyParameter>
+		</Parameter>
+	</Parameters>
+</Form>

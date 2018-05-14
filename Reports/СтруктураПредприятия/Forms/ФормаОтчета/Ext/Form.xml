@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Структура предприятия</v8:content>
+		</v8:item>
+	</Title>
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>None</CommandBarLocation>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<ReportFormType>Main</ReportFormType>
+	<AutoShowState>Auto</AutoShowState>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа3" id="49">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="50"/>
+			<ChildItems>
+				<InputField name="ДатаОтчета" id="43">
+					<DataPath>ДатаОтчета</DataPath>
+					<ContextMenu name="ДатаОтчетаКонтекстноеМеню" id="44"/>
+					<ExtendedTooltip name="ДатаОтчетаРасширеннаяПодсказка" id="45"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Подразделение" id="46">
+			<DataPath>ВыбранноеПодразделение</DataPath>
+			<ClearButton>true</ClearButton>
+			<ContextMenu name="ПодразделениеКонтекстноеМеню" id="47"/>
+			<ExtendedTooltip name="ПодразделениеРасширеннаяПодсказка" id="48"/>
+		</InputField>
+		<Pages name="Группа1" id="55">
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="56"/>
+			<ChildItems>
+				<Page name="Группа2" id="57">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Структура предприятия</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Horizontal</Group>
+					<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="58"/>
+					<ChildItems>
+						<Button name="СтруктураПредприятия" id="53">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.СтруктураПредприятия</CommandName>
+							<ExtendedTooltip name="СтруктураПредприятияРасширеннаяПодсказка" id="54"/>
+						</Button>
+						<CheckBoxField name="ТолькоРаботающие" id="1">
+							<DataPath>ТолькоРаботающие</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ТолькоРаботающиеКонтекстноеМеню" id="2"/>
+							<ExtendedTooltip name="ТолькоРаботающиеExtendedTooltip" id="21"/>
+						</CheckBoxField>
+					</ChildItems>
+				</Page>
+				<Page name="Группа5" id="59">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Штатная расстановка</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Horizontal</Group>
+					<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="60"/>
+					<ChildItems>
+						<Button name="ШтатноеРасписание" id="4">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ШтатнаяРасстановка</CommandName>
+							<ExtendedTooltip name="ШтатноеРасписаниеРасширеннаяПодсказка" id="27"/>
+						</Button>
+						<CheckBoxField name="СТарифнымиСтавками" id="31">
+							<DataPath>СТарифнымиСтавками</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="СТарифнымиСтавкамиКонтекстноеМеню" id="32"/>
+							<ExtendedTooltip name="СТарифнымиСтавкамиРасширеннаяПодсказка" id="33"/>
+						</CheckBoxField>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Отчет" id="1">
+			<Type>
+				<v8:Type>cfg:ReportObject.СтруктураПредприятия</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ТолькоРаботающие" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Только работающие</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>ТолькоРаботающие</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="СТарифнымиСтавками" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>С тарифными ставками</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>СТарифнымиСтавками</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ДатаОтчета" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата отчета</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ВыбранноеПодразделение" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подразделение</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Подразделения</v8:Type>
+			</Type>
+			<Save>
+				<Field>ВыбранноеПодразделение</Field>
+			</Save>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="СтруктураПредприятия" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Структура предприятия</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Структура предприятия</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Сформировать</Action>
+		</Command>
+		<Command name="ШтатнаяРасстановка" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Штатная расстановка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Штатная расстановка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ШтатноеРасписание</Action>
+		</Command>
+	</Commands>
+</Form>

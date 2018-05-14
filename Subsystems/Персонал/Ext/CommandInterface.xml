@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CommandInterface xmlns="http://v8.1c.ru/8.3/xcf/extrnprops" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5">
+	<CommandsVisibility>
+		<Command name="Report.ТабельТ13.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="Role.АдминистраторСистемы">true</xr:Value>
+				<xr:Value name="Role.Администрирование">true</xr:Value>
+				<xr:Value name="Role.КадровыйМенеджер">true</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Constant.ДатаЗакрытияТабеля.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="Role.АдминистраторСистемы">true</xr:Value>
+				<xr:Value name="Role.Администрирование">true</xr:Value>
+				<xr:Value name="Role.КадровыйМенеджер">true</xr:Value>
+			</Visibility>
+		</Command>
+	</CommandsVisibility>
+	<SubsystemsOrder>
+		<Subsystem>Subsystem.Персонал.Subsystem.КадровыеДокументы</Subsystem>
+		<Subsystem>Subsystem.Персонал.Subsystem.РабочееВремя</Subsystem>
+		<Subsystem>Subsystem.Персонал.Subsystem.Справочники</Subsystem>
+		<Subsystem>Subsystem.Персонал.Subsystem.ОбучениеСотрудников</Subsystem>
+	</SubsystemsOrder>
+</CommandInterface>

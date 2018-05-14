@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="Наименование" id="1">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НаименованиеExtendedTooltip" id="24"/>
+		</InputField>
+		<Pages name="Группа1" id="44">
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="45"/>
+			<ChildItems>
+				<Page name="Группа2" id="46">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Расчет статей</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="47"/>
+					<ChildItems>
+						<Table name="РасчетСметы" id="3">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.РасчетСметы</DataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="РасчетСметыКонтекстноеМеню" id="4"/>
+							<AutoCommandBar name="РасчетСметыКоманднаяПанель" id="5"/>
+							<ExtendedTooltip name="РасчетСметыExtendedTooltip" id="25"/>
+							<SearchStringAddition name="РасчетСметыСтрокаПоиска" id="35">
+								<AdditionSource>
+									<Item>РасчетСметы</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="РасчетСметыСтрокаПоискаКонтекстноеМеню" id="36"/>
+								<ExtendedTooltip name="РасчетСметыСтрокаПоискаРасширеннаяПодсказка" id="37"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="РасчетСметыСостояниеПросмотра" id="38">
+								<AdditionSource>
+									<Item>РасчетСметы</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="РасчетСметыСостояниеПросмотраКонтекстноеМеню" id="39"/>
+								<ExtendedTooltip name="РасчетСметыСостояниеПросмотраРасширеннаяПодсказка" id="40"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="РасчетСметыУправлениеПоиском" id="41">
+								<AdditionSource>
+									<Item>РасчетСметы</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="РасчетСметыУправлениеПоискомКонтекстноеМеню" id="42"/>
+								<ExtendedTooltip name="РасчетСметыУправлениеПоискомРасширеннаяПодсказка" id="43"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="OnChange">РасчетСметыПриИзменении</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="РасчетСметыНомерСтроки" id="6">
+									<DataPath>Объект.РасчетСметы.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РасчетСметыНомерСтрокиКонтекстноеМеню" id="7"/>
+									<ExtendedTooltip name="РасчетСметыНомерСтрокиExtendedTooltip" id="26"/>
+								</LabelField>
+								<InputField name="РасчетСметыКодСтатьи" id="8">
+									<DataPath>Объект.РасчетСметы.КодСтатьи</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РасчетСметыКодСтатьиКонтекстноеМеню" id="9"/>
+									<ExtendedTooltip name="РасчетСметыКодСтатьиExtendedTooltip" id="27"/>
+								</InputField>
+								<InputField name="РасчетСметыИмяСтатьи" id="10">
+									<DataPath>Объект.РасчетСметы.ИмяСтатьи</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РасчетСметыИмяСтатьиКонтекстноеМеню" id="11"/>
+									<ExtendedTooltip name="РасчетСметыИмяСтатьиExtendedTooltip" id="28"/>
+								</InputField>
+								<InputField name="РасчетСметыСтатья" id="12">
+									<DataPath>Объект.РасчетСметы.Статья</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РасчетСметыСтатьяКонтекстноеМеню" id="13"/>
+									<ExtendedTooltip name="РасчетСметыСтатьяExtendedTooltip" id="29"/>
+								</InputField>
+								<CheckBoxField name="РасчетСметыЗнПараметраРучнойВвод" id="14">
+									<DataPath>Объект.РасчетСметы.ЗнПараметраРучнойВвод</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="РасчетСметыЗнПараметраРучнойВводКонтекстноеМеню" id="15"/>
+									<ExtendedTooltip name="РасчетСметыЗнПараметраРучнойВводExtendedTooltip" id="30"/>
+								</CheckBoxField>
+								<InputField name="РасчетСметыЗнПараметраФормула" id="16">
+									<DataPath>Объект.РасчетСметы.ЗнПараметраФормула</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РасчетСметыЗнПараметраФормулаКонтекстноеМеню" id="17"/>
+									<ExtendedTooltip name="РасчетСметыЗнПараметраФормулаExtendedTooltip" id="31"/>
+								</InputField>
+								<CheckBoxField name="РасчетСметыСуммаРучнойВвод" id="18">
+									<DataPath>Объект.РасчетСметы.СуммаРучнойВвод</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="РасчетСметыСуммаРучнойВводКонтекстноеМеню" id="19"/>
+									<ExtendedTooltip name="РасчетСметыСуммаРучнойВводExtendedTooltip" id="32"/>
+								</CheckBoxField>
+								<InputField name="РасчетСметыСуммаФормула" id="20">
+									<DataPath>Объект.РасчетСметы.СуммаФормула</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РасчетСметыСуммаФормулаКонтекстноеМеню" id="21"/>
+									<ExtendedTooltip name="РасчетСметыСуммаФормулаExtendedTooltip" id="33"/>
+								</InputField>
+								<CheckBoxField name="РасчетСметыЗаполняетсяДокументами" id="22">
+									<DataPath>Объект.РасчетСметы.ЗаполняетсяДокументами</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="РасчетСметыЗаполняетсяДокументамиКонтекстноеМеню" id="23"/>
+									<ExtendedTooltip name="РасчетСметыЗаполняетсяДокументамиExtendedTooltip" id="34"/>
+								</CheckBoxField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="Группа3" id="48">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Проведение документов</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="49"/>
+					<ChildItems>
+						<Table name="ПроведениеДокументов" id="50">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.ПроведениеДокументов</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ПроведениеДокументовКонтекстноеМеню" id="51"/>
+							<AutoCommandBar name="ПроведениеДокументовКоманднаяПанель" id="52"/>
+							<ExtendedTooltip name="ПроведениеДокументовРасширеннаяПодсказка" id="53"/>
+							<SearchStringAddition name="ПроведениеДокументовСтрокаПоиска" id="54">
+								<AdditionSource>
+									<Item>ПроведениеДокументов</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПроведениеДокументовСтрокаПоискаКонтекстноеМеню" id="57"/>
+								<ExtendedTooltip name="ПроведениеДокументовСтрокаПоискаРасширеннаяПодсказка" id="58"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ПроведениеДокументовСостояниеПросмотра" id="59">
+								<AdditionSource>
+									<Item>ПроведениеДокументов</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПроведениеДокументовСостояниеПросмотраКонтекстноеМеню" id="62"/>
+								<ExtendedTooltip name="ПроведениеДокументовСостояниеПросмотраРасширеннаяПодсказка" id="63"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ПроведениеДокументовУправлениеПоиском" id="64">
+								<AdditionSource>
+									<Item>ПроведениеДокументов</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ПроведениеДокументовУправлениеПоискомКонтекстноеМеню" id="67"/>
+								<ExtendedTooltip name="ПроведениеДокументовУправлениеПоискомРасширеннаяПодсказка" id="68"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ПроведениеДокументовНомерСтроки" id="69">
+									<DataPath>Объект.ПроведениеДокументов.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПроведениеДокументовНомерСтрокиКонтекстноеМеню" id="70"/>
+									<ExtendedTooltip name="ПроведениеДокументовНомерСтрокиРасширеннаяПодсказка" id="71"/>
+								</LabelField>
+								<InputField name="ПроведениеДокументовДокумент" id="72">
+									<DataPath>Объект.ПроведениеДокументов.Документ</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПроведениеДокументовДокументКонтекстноеМеню" id="73"/>
+									<ExtendedTooltip name="ПроведениеДокументовДокументРасширеннаяПодсказка" id="74"/>
+								</InputField>
+								<InputField name="ПроведениеДокументовСтатьяСметы" id="78">
+									<DataPath>Объект.ПроведениеДокументов.СтатьяСметы</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПроведениеДокументовСтатьяСметыКонтекстноеМеню" id="79"/>
+									<ExtendedTooltip name="ПроведениеДокументовСтатьяСметыРасширеннаяПодсказка" id="80"/>
+								</InputField>
+								<InputField name="ПроведениеДокументовТипСуммы" id="81">
+									<DataPath>Объект.ПроведениеДокументов.ТипСуммы</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПроведениеДокументовТипСуммыКонтекстноеМеню" id="82"/>
+									<ExtendedTooltip name="ПроведениеДокументовТипСуммыРасширеннаяПодсказка" id="83"/>
+								</InputField>
+								<InputField name="ПроведениеДокументовОперация" id="75">
+									<DataPath>Объект.ПроведениеДокументов.Операция</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПроведениеДокументовОперацияКонтекстноеМеню" id="76"/>
+									<ExtendedTooltip name="ПроведениеДокументовОперацияРасширеннаяПодсказка" id="77"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.РасчетыСтатейСметы</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

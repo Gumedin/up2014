@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="Дата" id="4">
+			<DataPath>Объект.Date</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<UsualGroup name="Группа4" id="62">
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="63"/>
+			<ChildItems>
+				<InputField name="Курс" id="13">
+					<DataPath>Объект.Курс</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КурсКонтекстноеМеню" id="14"/>
+					<ExtendedTooltip name="КурсРасширеннаяПодсказка" id="15"/>
+					<Events>
+						<Event name="OnChange">КурсПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="ДатаНачала" id="7">
+					<DataPath>Объект.ДатаНачала</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>с</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДатаНачалаКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="ДатаНачалаРасширеннаяПодсказка" id="9"/>
+				</InputField>
+				<InputField name="ДатаОкончания" id="10">
+					<DataPath>Объект.ДатаОкончания</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>по</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДатаОкончанияКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="ДатаОкончанияРасширеннаяПодсказка" id="12"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа1" id="41">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="42"/>
+		</UsualGroup>
+		<UsualGroup name="Группа2" id="46">
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="47"/>
+			<ChildItems>
+				<LabelField name="КурсКонтрагент" id="43">
+					<DataPath>Объект.Курс.Контрагент</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Учебный центр</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="КурсКонтрагентКонтекстноеМеню" id="44"/>
+					<ExtendedTooltip name="КурсКонтрагентРасширеннаяПодсказка" id="45"/>
+				</LabelField>
+				<LabelField name="КурсСумма" id="48">
+					<DataPath>Объект.Курс.Сумма</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Стоимость</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="КурсСуммаКонтекстноеМеню" id="49"/>
+					<ExtendedTooltip name="КурсСуммаРасширеннаяПодсказка" id="50"/>
+				</LabelField>
+				<LabelField name="КурсПродолжительностьЧасов" id="51">
+					<DataPath>Объект.Курс.ПродолжительностьЧасов</DataPath>
+					<ContextMenu name="КурсПродолжительностьЧасовКонтекстноеМеню" id="52"/>
+					<ExtendedTooltip name="КурсПродолжительностьЧасовРасширеннаяПодсказка" id="53"/>
+				</LabelField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа3" id="57">
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="58"/>
+			<ChildItems>
+				<InputField name="Организация" id="59">
+					<DataPath>Объект.Организация</DataPath>
+					<ContextMenu name="ОрганизацияКонтекстноеМеню" id="60"/>
+					<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="61"/>
+				</InputField>
+				<InputField name="СуммаДокумента" id="54">
+					<DataPath>Объект.СуммаДокумента</DataPath>
+					<ContextMenu name="СуммаДокументаКонтекстноеМеню" id="55"/>
+					<ExtendedTooltip name="СуммаДокументаРасширеннаяПодсказка" id="56"/>
+					<Events>
+						<Event name="OnChange">СуммаДокументаПриИзменении</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="Учащиеся" id="19">
+			<Representation>List</Representation>
+			<Footer>true</Footer>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.Учащиеся</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="УчащиесяКонтекстноеМеню" id="20"/>
+			<AutoCommandBar name="УчащиесяКоманднаяПанель" id="21"/>
+			<ExtendedTooltip name="УчащиесяРасширеннаяПодсказка" id="22"/>
+			<SearchStringAddition name="УчащиесяСтрокаПоиска" id="23">
+				<AdditionSource>
+					<Item>Учащиеся</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="УчащиесяСтрокаПоискаКонтекстноеМеню" id="24"/>
+				<ExtendedTooltip name="УчащиесяСтрокаПоискаРасширеннаяПодсказка" id="25"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="УчащиесяСостояниеПросмотра" id="26">
+				<AdditionSource>
+					<Item>Учащиеся</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="УчащиесяСостояниеПросмотраКонтекстноеМеню" id="27"/>
+				<ExtendedTooltip name="УчащиесяСостояниеПросмотраРасширеннаяПодсказка" id="28"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="УчащиесяУправлениеПоиском" id="29">
+				<AdditionSource>
+					<Item>Учащиеся</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="УчащиесяУправлениеПоискомКонтекстноеМеню" id="30"/>
+				<ExtendedTooltip name="УчащиесяУправлениеПоискомРасширеннаяПодсказка" id="31"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="OnStartEdit">УчащиесяПриНачалеРедактирования</Event>
+				<Event name="OnChange">УчащиесяПриИзменении</Event>
+			</Events>
+			<ChildItems>
+				<LabelField name="УчащиесяНомерСтроки" id="32">
+					<DataPath>Объект.Учащиеся.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="УчащиесяНомерСтрокиКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="УчащиесяНомерСтрокиРасширеннаяПодсказка" id="34"/>
+				</LabelField>
+				<InputField name="УчащиесяФизическоеЛицо" id="35">
+					<DataPath>Объект.Учащиеся.ФизическоеЛицо</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="УчащиесяФизическоеЛицоКонтекстноеМеню" id="36"/>
+					<ExtendedTooltip name="УчащиесяФизическоеЛицоРасширеннаяПодсказка" id="37"/>
+				</InputField>
+				<InputField name="УчащиесяСумма" id="38">
+					<DataPath>Объект.Учащиеся.Сумма</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<FooterDataPath>Объект.Учащиеся.TotalСумма</FooterDataPath>
+					<ContextMenu name="УчащиесяСуммаКонтекстноеМеню" id="39"/>
+					<ExtendedTooltip name="УчащиесяСуммаРасширеннаяПодсказка" id="40"/>
+				</InputField>
+				<InputField name="УчащиесяКомментарий" id="64">
+					<DataPath>Объект.Учащиеся.Комментарий</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="УчащиесяКомментарийКонтекстноеМеню" id="65"/>
+					<ExtendedTooltip name="УчащиесяКомментарийРасширеннаяПодсказка" id="66"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.ОбучениеСотрудников</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+	</Attributes>
+</Form>

@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5">
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа1" id="22">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1ExtendedTooltip" id="27"/>
+			<ChildItems>
+				<InputField name="Номер" id="1">
+					<DataPath>Объект.Number</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="НомерExtendedTooltip" id="28"/>
+				</InputField>
+				<InputField name="МесяцНачисления" id="7">
+					<DataPath>Объект.МесяцНачисления</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="МесяцНачисленияКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="МесяцНачисленияExtendedTooltip" id="29"/>
+				</InputField>
+				<InputField name="Дата" id="3">
+					<DataPath>Объект.Date</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="4"/>
+					<ExtendedTooltip name="ДатаExtendedTooltip" id="30"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа2" id="26">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа2ExtendedTooltip" id="31"/>
+			<ChildItems>
+				<InputField name="РасходыНаВыплатуКР" id="9">
+					<DataPath>Объект.РасходыНаВыплатуКР</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РасходыНаВыплатуКРКонтекстноеМеню" id="10"/>
+					<ExtendedTooltip name="РасходыНаВыплатуКРExtendedTooltip" id="32"/>
+				</InputField>
+				<Button name="РаспределениеРаспределить" id="25">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.Распределить</CommandName>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Распределить расходы</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="РаспределениеРаспределитьExtendedTooltip" id="33"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="Распределение" id="11">
+			<Representation>List</Representation>
+			<Footer>true</Footer>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.Распределение</DataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="РаспределениеКонтекстноеМеню" id="12"/>
+			<AutoCommandBar name="РаспределениеКоманднаяПанель" id="13">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="РаспределениеExtendedTooltip" id="34"/>
+			<SearchStringAddition name="РаспределениеСтрокаПоиска" id="44">
+				<AdditionSource>
+					<Item>Распределение</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="РаспределениеСтрокаПоискаКонтекстноеМеню" id="45"/>
+				<ExtendedTooltip name="РаспределениеСтрокаПоискаРасширеннаяПодсказка" id="46"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="РаспределениеСостояниеПросмотра" id="47">
+				<AdditionSource>
+					<Item>Распределение</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="РаспределениеСостояниеПросмотраКонтекстноеМеню" id="48"/>
+				<ExtendedTooltip name="РаспределениеСостояниеПросмотраРасширеннаяПодсказка" id="49"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="РаспределениеУправлениеПоиском" id="50">
+				<AdditionSource>
+					<Item>Распределение</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="РаспределениеУправлениеПоискомКонтекстноеМеню" id="51"/>
+				<ExtendedTooltip name="РаспределениеУправлениеПоискомРасширеннаяПодсказка" id="52"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="РаспределениеНомерСтроки" id="14">
+					<DataPath>Объект.Распределение.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РаспределениеНомерСтрокиКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="РаспределениеНомерСтрокиExtendedTooltip" id="35"/>
+				</LabelField>
+				<LabelField name="РаспределениеЗадачаПроектаВладелец" id="23">
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РаспределениеЗадачаПроектаВладелецКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="РаспределениеЗадачаПроектаВладелецExtendedTooltip" id="36"/>
+				</LabelField>
+				<InputField name="РаспределениеЗадачаПроекта" id="16">
+					<DataPath>Объект.Распределение.ЗадачаПроекта</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РаспределениеЗадачаПроектаКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="РаспределениеЗадачаПроектаExtendedTooltip" id="37"/>
+				</InputField>
+				<InputField name="РаспределениеБазаРаспределения" id="18">
+					<DataPath>Объект.Распределение.БазаРаспределения</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<FooterDataPath>Объект.Распределение.TotalБазаРаспределения</FooterDataPath>
+					<ContextMenu name="РаспределениеБазаРаспределенияКонтекстноеМеню" id="19"/>
+					<ExtendedTooltip name="РаспределениеБазаРаспределенияExtendedTooltip" id="38"/>
+				</InputField>
+				<InputField name="РаспределениеСумма" id="20">
+					<DataPath>Объект.Распределение.Сумма</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<FooterDataPath>Объект.Распределение.TotalСумма</FooterDataPath>
+					<ContextMenu name="РаспределениеСуммаКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="РаспределениеСуммаExtendedTooltip" id="39"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<InputField name="Комментарий" id="41">
+			<DataPath>Объект.Комментарий</DataPath>
+			<ContextMenu name="КомментарийКонтекстноеМеню" id="42"/>
+			<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="43"/>
+		</InputField>
+		<LabelField name="ИсполнительДокумента" id="5">
+			<DataPath>Объект.ИсполнительДокумента</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ИсполнительДокументаКонтекстноеМеню" id="6"/>
+			<ExtendedTooltip name="ИсполнительДокументаExtendedTooltip" id="40"/>
+		</LabelField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.РаспределениеРасходовНаВыплатуКР</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Распределить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Распределить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Распределить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Распределить</Action>
+		</Command>
+	</Commands>
+</Form>

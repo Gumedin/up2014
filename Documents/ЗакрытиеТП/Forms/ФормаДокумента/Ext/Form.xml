@@ -1,0 +1,266 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5">
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа1" id="20">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ExtendedTooltip name="Группа1ExtendedTooltip" id="45"/>
+			<ChildItems>
+				<InputField name="Номер" id="1">
+					<DataPath>Объект.Number</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="НомерExtendedTooltip" id="46"/>
+				</InputField>
+				<InputField name="Дата" id="3">
+					<DataPath>Объект.Date</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="4"/>
+					<ExtendedTooltip name="ДатаExtendedTooltip" id="47"/>
+					<Events>
+						<Event name="OnChange">ДатаПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="МесяцНачисления" id="23">
+					<DataPath>Объект.МесяцНачисления</DataPath>
+					<ContextMenu name="МесяцНачисленияКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="МесяцНачисленияExtendedTooltip" id="48"/>
+					<Events>
+						<Event name="OnChange">МесяцНачисленияПриИзменении</Event>
+					</Events>
+				</InputField>
+				<LabelField name="ОстатокЛимитаТиражногоПроекта" id="21">
+					<DataPath>ОстатокЛимитаТиражногоПроекта</DataPath>
+					<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+					<ContextMenu name="ОстатокЛимитаТиражногоПроектаКонтекстноеМеню" id="22"/>
+					<ExtendedTooltip name="ОстатокЛимитаТиражногоПроектаExtendedTooltip" id="49"/>
+				</LabelField>
+			</ChildItems>
+		</UsualGroup>
+		<LabelField name="ПланРаботЗадачаПроектаВладелец" id="27">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проект</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ПланРаботЗадачаПроектаВладелецКонтекстноеМеню" id="28"/>
+			<ExtendedTooltip name="ПланРаботЗадачаПроектаВладелецExtendedTooltip" id="50"/>
+		</LabelField>
+		<InputField name="ПланРабот" id="41">
+			<DataPath>Объект.ПланРабот</DataPath>
+			<ClearButton>true</ClearButton>
+			<ContextMenu name="ПланРаботКонтекстноеМеню" id="42"/>
+			<ExtendedTooltip name="ПланРаботExtendedTooltip" id="51"/>
+			<Events>
+				<Event name="OnChange">ПланРаботПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="ТиражныйПроект" id="5">
+			<DataPath>Объект.Проект</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ТиражныйПроектКонтекстноеМеню" id="6"/>
+			<ExtendedTooltip name="ТиражныйПроектExtendedTooltip" id="52"/>
+			<Events>
+				<Event name="OnChange">ТиражныйПроектПриИзменении</Event>
+			</Events>
+		</InputField>
+		<Table name="Закрытие" id="7">
+			<Representation>List</Representation>
+			<Footer>true</Footer>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.Закрытие</DataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ЗакрытиеКонтекстноеМеню" id="8"/>
+			<AutoCommandBar name="ЗакрытиеКоманднаяПанель" id="9"/>
+			<ExtendedTooltip name="ЗакрытиеExtendedTooltip" id="53"/>
+			<SearchStringAddition name="ЗакрытиеСтрокаПоиска" id="67">
+				<AdditionSource>
+					<Item>Закрытие</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ЗакрытиеСтрокаПоискаКонтекстноеМеню" id="68"/>
+				<ExtendedTooltip name="ЗакрытиеСтрокаПоискаРасширеннаяПодсказка" id="69"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ЗакрытиеСостояниеПросмотра" id="70">
+				<AdditionSource>
+					<Item>Закрытие</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ЗакрытиеСостояниеПросмотраКонтекстноеМеню" id="71"/>
+				<ExtendedTooltip name="ЗакрытиеСостояниеПросмотраРасширеннаяПодсказка" id="72"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ЗакрытиеУправлениеПоиском" id="73">
+				<AdditionSource>
+					<Item>Закрытие</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ЗакрытиеУправлениеПоискомКонтекстноеМеню" id="74"/>
+				<ExtendedTooltip name="ЗакрытиеУправлениеПоискомРасширеннаяПодсказка" id="75"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="OnChange">ЗакрытиеПриИзменении</Event>
+			</Events>
+			<ChildItems>
+				<LabelField name="ЗакрытиеНомерСтроки" id="10">
+					<DataPath>Объект.Закрытие.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЗакрытиеНомерСтрокиКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="ЗакрытиеНомерСтрокиExtendedTooltip" id="54"/>
+				</LabelField>
+				<InputField name="ЗакрытиеДата" id="12">
+					<DataPath>Объект.Закрытие.Дата</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЗакрытиеДатаКонтекстноеМеню" id="13"/>
+					<ExtendedTooltip name="ЗакрытиеДатаExtendedTooltip" id="55"/>
+				</InputField>
+				<InputField name="ЗакрытиеСотрудник" id="14">
+					<DataPath>Объект.Закрытие.ФизическоеЛицо</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЗакрытиеСотрудникКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="ЗакрытиеСотрудникExtendedTooltip" id="56"/>
+				</InputField>
+				<InputField name="ЗакрытиеНоменклатура" id="29">
+					<DataPath>Объект.Закрытие.Номенклатура</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЗакрытиеНоменклатураКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="ЗакрытиеНоменклатураExtendedTooltip" id="57"/>
+					<Events>
+						<Event name="OnChange">ЗакрытиеНоменклатураПриИзменении</Event>
+						<Event name="StartChoice">ЗакрытиеНоменклатураНачалоВыбора</Event>
+					</Events>
+				</InputField>
+				<InputField name="ЗакрытиеКоличество" id="37">
+					<DataPath>Объект.Закрытие.Количество</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<FooterDataPath>Объект.Закрытие.TotalКоличество</FooterDataPath>
+					<ContextMenu name="ЗакрытиеКоличествоКонтекстноеМеню" id="38"/>
+					<ExtendedTooltip name="ЗакрытиеКоличествоExtendedTooltip" id="58"/>
+				</InputField>
+				<InputField name="ЗакрытиеСкидка" id="43">
+					<DataPath>Объект.Закрытие.Скидка</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<FooterDataPath>Объект.Закрытие.TotalСкидка</FooterDataPath>
+					<ContextMenu name="ЗакрытиеСкидкаКонтекстноеМеню" id="44"/>
+					<ExtendedTooltip name="ЗакрытиеСкидкаExtendedTooltip" id="59"/>
+				</InputField>
+				<ColumnGroup name="ГруппаДляКлиента" id="39">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа для клиента</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа для клиента</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаДляКлиентаExtendedTooltip" id="60"/>
+					<ChildItems>
+						<InputField name="ЗакрытиеЦена" id="31">
+							<DataPath>Объект.Закрытие.Цена</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ЗакрытиеЦенаКонтекстноеМеню" id="32"/>
+							<ExtendedTooltip name="ЗакрытиеЦенаExtendedTooltip" id="61"/>
+							<Events>
+								<Event name="StartChoice">ЗакрытиеЦенаНачалоВыбора</Event>
+							</Events>
+						</InputField>
+						<InputField name="ЗакрытиеСумма" id="16">
+							<DataPath>Объект.Закрытие.Сумма</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<EditMode>EnterOnInput</EditMode>
+							<FooterDataPath>Объект.Закрытие.TotalСумма</FooterDataPath>
+							<ContextMenu name="ЗакрытиеСуммаКонтекстноеМеню" id="17"/>
+							<ExtendedTooltip name="ЗакрытиеСуммаExtendedTooltip" id="62"/>
+						</InputField>
+					</ChildItems>
+				</ColumnGroup>
+				<ColumnGroup name="ГруппаФОТ" id="40">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа ФОТ</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа ФОТ</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаФОТExtendedTooltip" id="63"/>
+					<ChildItems>
+						<InputField name="ЗакрытиеЦенаФОТ" id="33">
+							<DataPath>Объект.Закрытие.ЦенаФОТ</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ЗакрытиеЦенаФОТКонтекстноеМеню" id="34"/>
+							<ExtendedTooltip name="ЗакрытиеЦенаФОТExtendedTooltip" id="64"/>
+							<Events>
+								<Event name="StartChoice">ЗакрытиеЦенаФОТНачалоВыбора</Event>
+							</Events>
+						</InputField>
+						<InputField name="ЗакрытиеСуммаФОТ" id="35">
+							<DataPath>Объект.Закрытие.СуммаФОТ</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<EditMode>EnterOnInput</EditMode>
+							<FooterDataPath>Объект.Закрытие.TotalСуммаФОТ</FooterDataPath>
+							<ContextMenu name="ЗакрытиеСуммаФОТКонтекстноеМеню" id="36"/>
+							<ExtendedTooltip name="ЗакрытиеСуммаФОТExtendedTooltip" id="65"/>
+						</InputField>
+					</ChildItems>
+				</ColumnGroup>
+				<InputField name="ЗакрытиеКомментарий" id="18">
+					<DataPath>Объект.Закрытие.Комментарий</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЗакрытиеКомментарийКонтекстноеМеню" id="19"/>
+					<ExtendedTooltip name="ЗакрытиеКомментарийExtendedTooltip" id="66"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.ЗакрытиеТП</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+		<Attribute name="ОстатокЛимитаТиражногоПроекта" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Остаток</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+</Form>

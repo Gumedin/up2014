@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5">
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<Table name="Список" id="1">
+			<Representation>List</Representation>
+			<CommandBarLocation>None</CommandBarLocation>
+			<DefaultItem>true</DefaultItem>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<InitialTreeView>ExpandTopLevel</InitialTreeView>
+			<EnableStartDrag>true</EnableStartDrag>
+			<DataPath>Список</DataPath>
+			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<ContextMenu name="СписокКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="3">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СписокExtendedTooltip" id="66"/>
+			<SearchStringAddition name="СписокСтрокаПоиска" id="84">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="85"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="86"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="87">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="88"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="89"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокУправлениеПоиском" id="90">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="91"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="92"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="Дата" id="4">
+					<DataPath>Список.Date</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="ДатаExtendedTooltip" id="67"/>
+				</LabelField>
+				<LabelField name="Номер" id="6">
+					<DataPath>Список.Number</DataPath>
+					<ContextMenu name="НомерКонтекстноеМеню" id="7"/>
+					<ExtendedTooltip name="НомерExtendedTooltip" id="68"/>
+				</LabelField>
+				<LabelField name="НомерОплаты" id="14">
+					<DataPath>Список.НомерОплаты</DataPath>
+					<ContextMenu name="НомерОплатыКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="НомерОплатыExtendedTooltip" id="69"/>
+				</LabelField>
+				<LabelField name="ПериодРегистрации" id="18">
+					<DataPath>Список.ПериодРегистрации</DataPath>
+					<ContextMenu name="ПериодРегистрацииКонтекстноеМеню" id="19"/>
+					<ExtendedTooltip name="ПериодРегистрацииExtendedTooltip" id="70"/>
+				</LabelField>
+				<LabelField name="КлиентМенеджер" id="16">
+					<DataPath>Список.КлиентМенеджер</DataPath>
+					<ContextMenu name="КлиентМенеджерКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="КлиентМенеджерExtendedTooltip" id="71"/>
+				</LabelField>
+				<LabelField name="СуммаДокумента" id="12">
+					<DataPath>Список.СуммаДокумента</DataPath>
+					<ContextMenu name="СуммаДокументаКонтекстноеМеню" id="13"/>
+					<ExtendedTooltip name="СуммаДокументаExtendedTooltip" id="72"/>
+				</LabelField>
+				<LabelField name="СуммаАванса" id="20">
+					<DataPath>~Список.СуммаАванса</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>в т.ч. аванс</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="СуммаАвансаКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="СуммаАвансаExtendedTooltip" id="73"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+		<Table name="РаспределениеПоДокументам" id="30">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Items.Список.CurrentData.РаспределениеПоДокументам</DataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="РаспределениеПоДокументамКонтекстноеМеню" id="31"/>
+			<AutoCommandBar name="РаспределениеПоДокументамКоманднаяПанель" id="32">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="РаспределениеПоДокументамExtendedTooltip" id="74"/>
+			<SearchStringAddition name="РаспределениеПоДокументамСтрокаПоиска" id="93">
+				<AdditionSource>
+					<Item>РаспределениеПоДокументам</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="РаспределениеПоДокументамСтрокаПоискаКонтекстноеМеню" id="94"/>
+				<ExtendedTooltip name="РаспределениеПоДокументамСтрокаПоискаРасширеннаяПодсказка" id="95"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="РаспределениеПоДокументамСостояниеПросмотра" id="96">
+				<AdditionSource>
+					<Item>РаспределениеПоДокументам</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="РаспределениеПоДокументамСостояниеПросмотраКонтекстноеМеню" id="97"/>
+				<ExtendedTooltip name="РаспределениеПоДокументамСостояниеПросмотраРасширеннаяПодсказка" id="98"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="РаспределениеПоДокументамУправлениеПоиском" id="99">
+				<AdditionSource>
+					<Item>РаспределениеПоДокументам</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="РаспределениеПоДокументамУправлениеПоискомКонтекстноеМеню" id="100"/>
+				<ExtendedTooltip name="РаспределениеПоДокументамУправлениеПоискомРасширеннаяПодсказка" id="101"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<InputField name="РаспределениеПоДокументамНомерСтроки" id="34">
+					<DataPath>Items.Список.CurrentData.РаспределениеПоДокументам.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РаспределениеПоДокументамНомерСтрокиКонтекстноеМеню" id="35"/>
+					<ExtendedTooltip name="РаспределениеПоДокументамНомерСтрокиExtendedTooltip" id="75"/>
+				</InputField>
+				<InputField name="РаспределениеПоДокументамАкт" id="40">
+					<DataPath>Items.Список.CurrentData.РаспределениеПоДокументам.Акт</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РаспределениеПоДокументамАктКонтекстноеМеню" id="41"/>
+					<ExtendedTooltip name="РаспределениеПоДокументамАктExtendedTooltip" id="76"/>
+				</InputField>
+				<InputField name="РаспределениеПоДокументамЗадачаПроекта" id="43">
+					<DataPath>Items.Список.CurrentData.РаспределениеПоДокументам.ЗадачаПроекта</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РаспределениеПоДокументамЗадачаПроектаКонтекстноеМеню" id="44"/>
+					<ExtendedTooltip name="РаспределениеПоДокументамЗадачаПроектаExtendedTooltip" id="77"/>
+				</InputField>
+				<InputField name="РаспределениеПоДокументамМенеджер" id="46">
+					<DataPath>Items.Список.CurrentData.РаспределениеПоДокументам.Менеджер</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РаспределениеПоДокументамМенеджерКонтекстноеМеню" id="47"/>
+					<ExtendedTooltip name="РаспределениеПоДокументамМенеджерExtendedTooltip" id="78"/>
+				</InputField>
+				<InputField name="РаспределениеПоДокументамОплата" id="49">
+					<DataPath>Items.Список.CurrentData.РаспределениеПоДокументам.Оплата</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РаспределениеПоДокументамОплатаКонтекстноеМеню" id="50"/>
+					<ExtendedTooltip name="РаспределениеПоДокументамОплатаExtendedTooltip" id="79"/>
+				</InputField>
+				<InputField name="РаспределениеПоДокументамСуммаВыплачено" id="55">
+					<DataPath>~Items.Список.CurrentData.РаспределениеПоДокументам.СуммаВыплачено</DataPath>
+					<Visible>false</Visible>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РаспределениеПоДокументамСуммаВыплаченоКонтекстноеМеню" id="56"/>
+					<ExtendedTooltip name="РаспределениеПоДокументамСуммаВыплаченоExtendedTooltip" id="80"/>
+				</InputField>
+				<InputField name="РаспределениеПоДокументамСуммаКРпоАкту" id="58">
+					<DataPath>Items.Список.CurrentData.РаспределениеПоДокументам.СуммаКРпоАкту</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РаспределениеПоДокументамСуммаКРпоАктуКонтекстноеМеню" id="59"/>
+					<ExtendedTooltip name="РаспределениеПоДокументамСуммаКРпоАктуExtendedTooltip" id="81"/>
+				</InputField>
+				<InputField name="РаспределениеПоДокументамСуммаКРпоОплате" id="61">
+					<DataPath>Items.Список.CurrentData.РаспределениеПоДокументам.СуммаКРпоОплате</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РаспределениеПоДокументамСуммаКРпоОплатеКонтекстноеМеню" id="62"/>
+					<ExtendedTooltip name="РаспределениеПоДокументамСуммаКРпоОплатеExtendedTooltip" id="82"/>
+				</InputField>
+				<InputField name="РаспределениеПоДокументамСуммаОстаток" id="64">
+					<DataPath>~Items.Список.CurrentData.РаспределениеПоДокументам.СуммаОстаток</DataPath>
+					<Visible>false</Visible>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РаспределениеПоДокументамСуммаОстатокКонтекстноеМеню" id="65"/>
+					<ExtendedTooltip name="РаспределениеПоДокументамСуммаОстатокExtendedTooltip" id="83"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>Список.Ref</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>Document.ЗаявкаНаВыплатуКоммРасходов</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+</Form>

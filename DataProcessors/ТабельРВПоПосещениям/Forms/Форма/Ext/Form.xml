@@ -1,0 +1,651 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5">
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<UsualGroup name="Группа1" id="4">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="5"/>
+			<ChildItems>
+				<Button name="ПересчитатьПланНаМесяц" id="16">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ПересчитатьТабельНаМесяц</CommandName>
+					<ExtendedTooltip name="ПересчитатьПланНаМесяцРасширеннаяПодсказка" id="17"/>
+				</Button>
+				<InputField name="Месяц" id="1">
+					<DataPath>Месяц</DataPath>
+					<ContextMenu name="МесяцКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="МесяцРасширеннаяПодсказка" id="3"/>
+				</InputField>
+				<InputField name="Подразделение" id="6">
+					<DataPath>Подразделение</DataPath>
+					<ContextMenu name="ПодразделениеКонтекстноеМеню" id="7"/>
+					<ExtendedTooltip name="ПодразделениеРасширеннаяПодсказка" id="8"/>
+				</InputField>
+				<CheckBoxField name="ТолькоОтработанные" id="107">
+					<DataPath>ТолькоОтработанные</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ТолькоОтработанныеКонтекстноеМеню" id="108"/>
+					<ExtendedTooltip name="ТолькоОтработанныеРасширеннаяПодсказка" id="109"/>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа3" id="11">
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="12"/>
+			<ChildItems>
+				<SpreadSheetDocumentField name="ПланНаМесяц" id="13">
+					<DataPath>ПланНаМесяц</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<VerticalScrollBar>true</VerticalScrollBar>
+					<HorizontalScrollBar>true</HorizontalScrollBar>
+					<ContextMenu name="ПланНаМесяцКонтекстноеМеню" id="14"/>
+					<ExtendedTooltip name="ПланНаМесяцРасширеннаяПодсказка" id="15"/>
+				</SpreadSheetDocumentField>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="Группа2" id="9">
+			<Visible>false</Visible>
+			<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="10"/>
+			<ChildItems>
+				<Page name="Группа4" id="18">
+					<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="19"/>
+					<ChildItems>
+						<Table name="ПосещенияКонтрагентов" id="20">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>ПосещенияКонтрагентов</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ПосещенияКонтрагентовКонтекстноеМеню" id="21"/>
+							<AutoCommandBar name="ПосещенияКонтрагентовКоманднаяПанель" id="22">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ПосещенияКонтрагентовРасширеннаяПодсказка" id="23"/>
+							<SearchStringAddition name="ПосещенияКонтрагентовСтрокаПоиска" id="24">
+								<AdditionSource>
+									<Item>ПосещенияКонтрагентов</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПосещенияКонтрагентовСтрокаПоискаКонтекстноеМеню" id="25"/>
+								<ExtendedTooltip name="ПосещенияКонтрагентовСтрокаПоискаРасширеннаяПодсказка" id="26"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ПосещенияКонтрагентовСостояниеПросмотра" id="27">
+								<AdditionSource>
+									<Item>ПосещенияКонтрагентов</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПосещенияКонтрагентовСостояниеПросмотраКонтекстноеМеню" id="28"/>
+								<ExtendedTooltip name="ПосещенияКонтрагентовСостояниеПросмотраРасширеннаяПодсказка" id="29"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ПосещенияКонтрагентовУправлениеПоиском" id="30">
+								<AdditionSource>
+									<Item>ПосещенияКонтрагентов</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ПосещенияКонтрагентовУправлениеПоискомКонтекстноеМеню" id="31"/>
+								<ExtendedTooltip name="ПосещенияКонтрагентовУправлениеПоискомРасширеннаяПодсказка" id="32"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="ПосещенияКонтрагентовФизическоеЛицо" id="33">
+									<DataPath>ПосещенияКонтрагентов.ФизическоеЛицо</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПосещенияКонтрагентовФизическоеЛицоКонтекстноеМеню" id="34"/>
+									<ExtendedTooltip name="ПосещенияКонтрагентовФизическоеЛицоРасширеннаяПодсказка" id="35"/>
+								</InputField>
+								<InputField name="ПосещенияКонтрагентовПредметПосещения" id="36">
+									<DataPath>ПосещенияКонтрагентов.ПредметПосещения</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПосещенияКонтрагентовПредметПосещенияКонтекстноеМеню" id="37"/>
+									<ExtendedTooltip name="ПосещенияКонтрагентовПредметПосещенияРасширеннаяПодсказка" id="38"/>
+								</InputField>
+								<InputField name="ПосещенияКонтрагентовУточнение" id="39">
+									<DataPath>ПосещенияКонтрагентов.Уточнение</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПосещенияКонтрагентовУточнениеКонтекстноеМеню" id="40"/>
+									<ExtendedTooltip name="ПосещенияКонтрагентовУточнениеРасширеннаяПодсказка" id="41"/>
+								</InputField>
+								<InputField name="ПосещенияКонтрагентовЧасовОтработано" id="42">
+									<DataPath>ПосещенияКонтрагентов.ЧасовОтработано</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПосещенияКонтрагентовЧасовОтработаноКонтекстноеМеню" id="43"/>
+									<ExtendedTooltip name="ПосещенияКонтрагентовЧасовОтработаноРасширеннаяПодсказка" id="44"/>
+								</InputField>
+								<InputField name="ПосещенияКонтрагентовЧасовНеОтработано" id="45">
+									<DataPath>ПосещенияКонтрагентов.ЧасовНеОтработано</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПосещенияКонтрагентовЧасовНеОтработаноКонтекстноеМеню" id="46"/>
+									<ExtendedTooltip name="ПосещенияКонтрагентовЧасовНеОтработаноРасширеннаяПодсказка" id="47"/>
+								</InputField>
+								<InputField name="ПосещенияКонтрагентовТипПредметаПосещения" id="48">
+									<DataPath>ПосещенияКонтрагентов.ТипПредмета</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПосещенияКонтрагентовТипПредметаПосещенияКонтекстноеМеню" id="49"/>
+									<ExtendedTooltip name="ПосещенияКонтрагентовТипПредметаПосещенияРасширеннаяПодсказка" id="50"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+						<Table name="ФронтРаботПоПланамРабот" id="51">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>ФронтРаботПоПланамРабот</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ФронтРаботПоПланамРаботКонтекстноеМеню" id="52"/>
+							<AutoCommandBar name="ФронтРаботПоПланамРаботКоманднаяПанель" id="53">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ФронтРаботПоПланамРаботРасширеннаяПодсказка" id="54"/>
+							<SearchStringAddition name="ФронтРаботПоПланамРаботСтрокаПоиска" id="55">
+								<AdditionSource>
+									<Item>ФронтРаботПоПланамРабот</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ФронтРаботПоПланамРаботСтрокаПоискаКонтекстноеМеню" id="56"/>
+								<ExtendedTooltip name="ФронтРаботПоПланамРаботСтрокаПоискаРасширеннаяПодсказка" id="57"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ФронтРаботПоПланамРаботСостояниеПросмотра" id="58">
+								<AdditionSource>
+									<Item>ФронтРаботПоПланамРабот</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ФронтРаботПоПланамРаботСостояниеПросмотраКонтекстноеМеню" id="59"/>
+								<ExtendedTooltip name="ФронтРаботПоПланамРаботСостояниеПросмотраРасширеннаяПодсказка" id="60"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ФронтРаботПоПланамРаботУправлениеПоиском" id="61">
+								<AdditionSource>
+									<Item>ФронтРаботПоПланамРабот</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ФронтРаботПоПланамРаботУправлениеПоискомКонтекстноеМеню" id="62"/>
+								<ExtendedTooltip name="ФронтРаботПоПланамРаботУправлениеПоискомРасширеннаяПодсказка" id="63"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="ФронтРаботПоПланамРаботПредметПосещения" id="64">
+									<DataPath>ФронтРаботПоПланамРабот.ПредметПосещения</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ФронтРаботПоПланамРаботПредметПосещенияКонтекстноеМеню" id="65"/>
+									<ExtendedTooltip name="ФронтРаботПоПланамРаботПредметПосещенияРасширеннаяПодсказка" id="66"/>
+								</InputField>
+								<InputField name="ФронтРаботПоПланамРаботУточнение" id="67">
+									<DataPath>ФронтРаботПоПланамРабот.Уточнение</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ФронтРаботПоПланамРаботУточнениеКонтекстноеМеню" id="68"/>
+									<ExtendedTooltip name="ФронтРаботПоПланамРаботУточнениеРасширеннаяПодсказка" id="69"/>
+								</InputField>
+								<InputField name="ФронтРаботПоПланамРаботНомерСтроки" id="70">
+									<DataPath>ФронтРаботПоПланамРабот.НомерСтроки</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ФронтРаботПоПланамРаботНомерСтрокиКонтекстноеМеню" id="71"/>
+									<ExtendedTooltip name="ФронтРаботПоПланамРаботНомерСтрокиРасширеннаяПодсказка" id="72"/>
+								</InputField>
+								<InputField name="ФронтРаботПоПланамРаботЧасовПлан" id="73">
+									<DataPath>ФронтРаботПоПланамРабот.ЧасовПлан</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ФронтРаботПоПланамРаботЧасовПланКонтекстноеМеню" id="74"/>
+									<ExtendedTooltip name="ФронтРаботПоПланамРаботЧасовПланРасширеннаяПодсказка" id="75"/>
+								</InputField>
+								<CheckBoxField name="ФронтРаботПоПланамРаботЗакрыт" id="76">
+									<DataPath>ФронтРаботПоПланамРабот.Закрыт</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ФронтРаботПоПланамРаботЗакрытКонтекстноеМеню" id="77"/>
+									<ExtendedTooltip name="ФронтРаботПоПланамРаботЗакрытРасширеннаяПодсказка" id="78"/>
+								</CheckBoxField>
+								<InputField name="ФронтРаботПоПланамРаботЗадачаПроекта" id="79">
+									<DataPath>ФронтРаботПоПланамРабот.ЗадачаПроекта</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ФронтРаботПоПланамРаботЗадачаПроектаКонтекстноеМеню" id="80"/>
+									<ExtendedTooltip name="ФронтРаботПоПланамРаботЗадачаПроектаРасширеннаяПодсказка" id="81"/>
+								</InputField>
+								<InputField name="ФронтРаботПоПланамРаботПроект" id="82">
+									<DataPath>ФронтРаботПоПланамРабот.Проект</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ФронтРаботПоПланамРаботПроектКонтекстноеМеню" id="83"/>
+									<ExtendedTooltip name="ФронтРаботПоПланамРаботПроектРасширеннаяПодсказка" id="84"/>
+								</InputField>
+								<InputField name="ФронтРаботПоПланамРаботТипПлана" id="85">
+									<DataPath>ФронтРаботПоПланамРабот.ТипПредмета</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ФронтРаботПоПланамРаботТипПланаКонтекстноеМеню" id="86"/>
+									<ExtendedTooltip name="ФронтРаботПоПланамРаботТипПланаРасширеннаяПодсказка" id="87"/>
+								</InputField>
+								<InputField name="ФронтРаботПоПланамРаботПланРаботНомер" id="88">
+									<DataPath>ФронтРаботПоПланамРабот.ПредметНомер</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ФронтРаботПоПланамРаботПланРаботНомерКонтекстноеМеню" id="89"/>
+									<ExtendedTooltip name="ФронтРаботПоПланамРаботПланРаботНомерРасширеннаяПодсказка" id="90"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+						<Table name="ИсполнителиПлановРабот" id="91">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>ИсполнителиПлановРабот</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ИсполнителиПлановРаботКонтекстноеМеню" id="92"/>
+							<AutoCommandBar name="ИсполнителиПлановРаботКоманднаяПанель" id="93">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ИсполнителиПлановРаботРасширеннаяПодсказка" id="94"/>
+							<SearchStringAddition name="ИсполнителиПлановРаботСтрокаПоиска" id="95">
+								<AdditionSource>
+									<Item>ИсполнителиПлановРабот</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ИсполнителиПлановРаботСтрокаПоискаКонтекстноеМеню" id="96"/>
+								<ExtendedTooltip name="ИсполнителиПлановРаботСтрокаПоискаРасширеннаяПодсказка" id="97"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ИсполнителиПлановРаботСостояниеПросмотра" id="98">
+								<AdditionSource>
+									<Item>ИсполнителиПлановРабот</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ИсполнителиПлановРаботСостояниеПросмотраКонтекстноеМеню" id="99"/>
+								<ExtendedTooltip name="ИсполнителиПлановРаботСостояниеПросмотраРасширеннаяПодсказка" id="100"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ИсполнителиПлановРаботУправлениеПоиском" id="101">
+								<AdditionSource>
+									<Item>ИсполнителиПлановРабот</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ИсполнителиПлановРаботУправлениеПоискомКонтекстноеМеню" id="102"/>
+								<ExtendedTooltip name="ИсполнителиПлановРаботУправлениеПоискомРасширеннаяПодсказка" id="103"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="ИсполнителиПлановРаботФизическоеЛицо" id="104">
+									<DataPath>ИсполнителиПлановРабот.ФизическоеЛицо</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИсполнителиПлановРаботФизическоеЛицоКонтекстноеМеню" id="105"/>
+									<ExtendedTooltip name="ИсполнителиПлановРаботФизическоеЛицоРасширеннаяПодсказка" id="106"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ТабельРВПоПосещениям</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="Месяц" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Месяц</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:StandardBeginningDate</v8:Type>
+			</Type>
+			<Save>
+				<Field>Месяц</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ПланНаМесяц" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>План на месяц</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:mxl="http://v8.1c.ru/8.2/data/spreadsheet">mxl:SpreadsheetDocument</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Подразделение" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подразделение</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Подразделения</v8:Type>
+			</Type>
+			<Save>
+				<Field>Подразделение</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ПосещенияКонтрагентов" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Посещения контрагентов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ФизическоеЛицо" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Физическое лицо</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ФизическиеЛица</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ПредметПосещения" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Предмет посещения</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Номенклатура</v8:Type>
+						<v8:Type>cfg:CatalogRef.ОтметкиТабеля</v8:Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:Type>cfg:CatalogRef.ЗадачиПроектов</v8:Type>
+						<v8:Type>cfg:DocumentRef.ПланРаботТиражный</v8:Type>
+						<v8:Type>cfg:DocumentRef.ПланРабот</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Уточнение" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Уточнение</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ЗадачиПроектовСтруктура</v8:Type>
+						<v8:Type>cfg:CatalogRef.Номенклатура</v8:Type>
+						<v8:Type>cfg:CatalogRef.Должности</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ЧасовОтработано" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Часов отработано</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>4</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЧасовНеОтработано" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Часов не отработано</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>4</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ТипПредмета" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип предмета</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>2</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Контрагент" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Контрагент</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ФронтРаботПоПланамРабот" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Фронт работ по планам работ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ПредметПосещения" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Предмет посещения</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:DocumentRef.ПланРаботТиражный</v8:Type>
+						<v8:Type>cfg:DocumentRef.ПланРабот</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Уточнение" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Уточнение</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Номенклатура</v8:Type>
+						<v8:Type>cfg:CatalogRef.Должности</v8:Type>
+					</Type>
+				</Column>
+				<Column name="НомерСтроки" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер строки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>3</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЧасовПлан" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>П</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>4</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Закрыт" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Закрыт</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ЗадачаПроекта" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Задача проекта</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ЗадачиПроектов</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Проект" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Проект</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Проекты</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ТипПредмета" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип предмета</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>1</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПредметНомер" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Предмет номер</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Контрагент" id="10">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Контрагент</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+					</Type>
+				</Column>
+				<Column name="КодПроекта" id="11">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Код проекта</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ИсполнителиПлановРабот" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Исполнители планов работ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ФизическоеЛицо" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Физическое лицо</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ФизическиеЛица</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ТолькоОтработанные" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Только отработанные</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПересчитатьТабельНаМесяц" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пересчитать табель на месяц</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пересчитать табель на месяц</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПересчитатьТабельНаМесяц</Action>
+		</Command>
+	</Commands>
+</Form>

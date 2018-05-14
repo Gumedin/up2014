@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5">
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<SaveDataInSettings>UseList</SaveDataInSettings>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="БыстрыеОтборы" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Быстрые отборы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Быстрые отборы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="БыстрыеОтборыExtendedTooltip" id="45"/>
+			<ChildItems>
+				<InputField name="ПодразделениеПроектов" id="15">
+					<DataPath>ПодразделениеПроектов</DataPath>
+					<SkipOnInput>true</SkipOnInput>
+					<ClearButton>true</ClearButton>
+					<ContextMenu name="ПодразделениеПроектовКонтекстноеМеню" id="16"/>
+					<ExtendedTooltip name="ПодразделениеПроектовExtendedTooltip" id="46"/>
+					<Events>
+						<Event name="OnChange">ПодразделениеПроектовПриИзменении</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="Список" id="59">
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<EnableStartDrag>true</EnableStartDrag>
+			<DataPath>Список</DataPath>
+			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<ContextMenu name="СписокКонтекстноеМеню" id="60"/>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="61"/>
+			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="62"/>
+			<SearchStringAddition name="СписокСтрокаПоиска" id="100">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="101"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="102"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="103">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="104"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="105"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокУправлениеПоиском" id="106">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="107"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="108"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="Ссылка" id="97">
+					<DataPath>Список.Ref</DataPath>
+					<ContextMenu name="СсылкаКонтекстноеМеню" id="98"/>
+					<ExtendedTooltip name="СсылкаРасширеннаяПодсказка" id="99"/>
+				</LabelField>
+				<LabelField name="Дата" id="63">
+					<DataPath>Список.Date</DataPath>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="64"/>
+					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="65"/>
+				</LabelField>
+				<LabelField name="Номер" id="66">
+					<DataPath>Список.Number</DataPath>
+					<ContextMenu name="НомерКонтекстноеМеню" id="67"/>
+					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="68"/>
+				</LabelField>
+				<LabelField name="Проект" id="69">
+					<DataPath>Список.Проект</DataPath>
+					<ContextMenu name="ПроектКонтекстноеМеню" id="70"/>
+					<ExtendedTooltip name="ПроектРасширеннаяПодсказка" id="71"/>
+				</LabelField>
+				<LabelField name="ПланРабот" id="72">
+					<DataPath>Список.ПланРабот</DataPath>
+					<ContextMenu name="ПланРаботКонтекстноеМеню" id="73"/>
+					<ExtendedTooltip name="ПланРаботРасширеннаяПодсказка" id="74"/>
+				</LabelField>
+				<LabelField name="СуммаДокумента" id="75">
+					<DataPath>Список.СуммаДокумента</DataPath>
+					<ContextMenu name="СуммаДокументаКонтекстноеМеню" id="76"/>
+					<ExtendedTooltip name="СуммаДокументаРасширеннаяПодсказка" id="77"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+		<Table name="Лимиты" id="78">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Items.Список.CurrentData.Лимиты</DataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ЛимитыКонтекстноеМеню" id="79"/>
+			<AutoCommandBar name="ЛимитыКоманднаяПанель" id="80">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ЛимитыРасширеннаяПодсказка" id="81"/>
+			<SearchStringAddition name="ЛимитыСтрокаПоиска" id="109">
+				<AdditionSource>
+					<Item>Лимиты</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ЛимитыСтрокаПоискаКонтекстноеМеню" id="110"/>
+				<ExtendedTooltip name="ЛимитыСтрокаПоискаРасширеннаяПодсказка" id="111"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ЛимитыСостояниеПросмотра" id="112">
+				<AdditionSource>
+					<Item>Лимиты</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ЛимитыСостояниеПросмотраКонтекстноеМеню" id="113"/>
+				<ExtendedTooltip name="ЛимитыСостояниеПросмотраРасширеннаяПодсказка" id="114"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ЛимитыУправлениеПоиском" id="115">
+				<AdditionSource>
+					<Item>Лимиты</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ЛимитыУправлениеПоискомКонтекстноеМеню" id="116"/>
+				<ExtendedTooltip name="ЛимитыУправлениеПоискомРасширеннаяПодсказка" id="117"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<InputField name="ЛимитыНомерСтроки" id="82">
+					<DataPath>Items.Список.CurrentData.Лимиты.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЛимитыНомерСтрокиКонтекстноеМеню" id="83"/>
+					<ExtendedTooltip name="ЛимитыНомерСтрокиРасширеннаяПодсказка" id="84"/>
+				</InputField>
+				<InputField name="ЛимитыДоговор" id="88">
+					<DataPath>Items.Список.CurrentData.Лимиты.Договор</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЛимитыДоговорКонтекстноеМеню" id="89"/>
+					<ExtendedTooltip name="ЛимитыДоговорРасширеннаяПодсказка" id="90"/>
+				</InputField>
+				<InputField name="ЛимитыСумма" id="94">
+					<DataPath>Items.Список.CurrentData.Лимиты.Сумма</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЛимитыСуммаКонтекстноеМеню" id="95"/>
+					<ExtendedTooltip name="ЛимитыСуммаРасширеннаяПодсказка" id="96"/>
+				</InputField>
+				<InputField name="ЛимитыКомментарий" id="91">
+					<DataPath>Items.Список.CurrentData.Лимиты.Комментарий</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЛимитыКомментарийКонтекстноеМеню" id="92"/>
+					<ExtendedTooltip name="ЛимитыКомментарийРасширеннаяПодсказка" id="93"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>Список.Ref</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>Document.ЛимитыТП</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>ТиражныйПроект.Наименование</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ПодразделениеПроектов" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подразделение проектов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Подразделения</v8:Type>
+			</Type>
+			<Save>
+				<Field>ПодразделениеПроектов</Field>
+			</Save>
+		</Attribute>
+	</Attributes>
+</Form>

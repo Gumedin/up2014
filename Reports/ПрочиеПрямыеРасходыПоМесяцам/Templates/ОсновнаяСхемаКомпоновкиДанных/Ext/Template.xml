@@ -1,0 +1,399 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗадачаПроекта</dataPath>
+			<field>ЗадачаПроекта</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КлиентМенджер</dataPath>
+			<field>КлиентМенджер</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Месяц</dataPath>
+			<field>Месяц</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Проект</dataPath>
+			<field>Проект</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РКО</dataPath>
+			<field>РКО</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Статья</dataPath>
+			<field>Статья</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаВыплачено</dataPath>
+			<field>СуммаВыплачено</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаПоСмете</dataPath>
+			<field>СуммаПоСмете</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	РЗ_пр.Ссылка.ЗадачаПроекта.Владелец КАК Проект,
+	РЗ_пр.Ссылка.ЗадачаПроекта,
+	РЗ_пр.СтатьяРасходов КАК Статья,
+	СУММА(РЗ_пр.Сумма) КАК СуммаПоСмете,
+	НАЧАЛОПЕРИОДА(РЗ_пр.Дата, МЕСЯЦ) КАК Месяц,
+	РЗ_пр.Ссылка.ЗадачаПроекта.Владелец.МенеджерПроекта КАК КлиентМенджер,
+	РЗ_пр.РКО,
+	СУММА(0) КАК СуммаВыплачено
+ИЗ
+	Документ.РасходПоЗадачеПроизводство.Описание КАК РЗ_пр
+ГДЕ
+	РЗ_пр.Ссылка.ЗадачаПроекта.Владелец.Статус В(&amp;Статус)
+	И РЗ_пр.Ссылка.Проведен
+	И (&amp;ВсеМенеджеры
+			ИЛИ РЗ_пр.Ссылка.ЗадачаПроекта.Владелец.МенеджерПроекта В (&amp;МенеджерыПроекта))
+
+СГРУППИРОВАТЬ ПО
+	РЗ_пр.СтатьяРасходов,
+	РЗ_пр.Ссылка.ЗадачаПроекта,
+	РЗ_пр.РКО,
+	РЗ_пр.Ссылка.ЗадачаПроекта.Владелец,
+	РЗ_пр.Ссылка.ЗадачаПроекта.Владелец.МенеджерПроекта,
+	НАЧАЛОПЕРИОДА(РЗ_пр.Дата, МЕСЯЦ)
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	РЗ.Ссылка.ЗадачаПроекта.Владелец,
+	РЗ.Ссылка.ЗадачаПроекта,
+	РЗ.СтатьяРасходов,
+	СУММА(РЗ.Сумма),
+	НАЧАЛОПЕРИОДА(РЗ.Дата, МЕСЯЦ),
+	РЗ.Ссылка.ЗадачаПроекта.Владелец.МенеджерПроекта,
+	РЗ.РКО,
+	СУММА(0)
+ИЗ
+	Документ.РасходПоЗадачеПроекта.Описание КАК РЗ
+ГДЕ
+	РЗ.Ссылка.ЗадачаПроекта.Владелец.Статус В(&amp;Статус)
+	И РЗ.Ссылка.Проведен
+	И (&amp;ВсеМенеджеры
+			ИЛИ РЗ.Ссылка.ЗадачаПроекта.Владелец.МенеджерПроекта В (&amp;МенеджерыПроекта))
+
+СГРУППИРОВАТЬ ПО
+	РЗ.СтатьяРасходов,
+	РЗ.Ссылка.ЗадачаПроекта,
+	РЗ.РКО,
+	РЗ.Ссылка.ЗадачаПроекта.Владелец,
+	РЗ.Ссылка.ЗадачаПроекта.Владелец.МенеджерПроекта,
+	НАЧАЛОПЕРИОДА(РЗ.Дата, МЕСЯЦ)
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	З_ВР.РасходПоЗадаче.ЗадачаПроекта.Владелец,
+	З_ВР.РасходПоЗадаче.ЗадачаПроекта,
+	З_ВР.СтатьяРасходов,
+	СУММА(0),
+	НАЧАЛОПЕРИОДА(З_ВР.Дата, МЕСЯЦ),
+	З_ВР.РасходПоЗадаче.ЗадачаПроекта.Владелец.МенеджерПроекта,
+	З_ВР.РКО,
+	СУММА(З_ВР.СуммаДокумента)
+ИЗ
+	Документ.ЗаявкаНаВыплатуРасхода КАК З_ВР
+ГДЕ
+	(&amp;ВсеМенеджеры
+			ИЛИ З_ВР.РасходПоЗадаче.ЗадачаПроекта.Владелец.МенеджерПроекта В (&amp;МенеджерыПроекта))
+	И З_ВР.Проведен
+	И З_ВР.РасходПоЗадаче.ЗадачаПроекта.Владелец.Статус В(&amp;Статус)
+
+СГРУППИРОВАТЬ ПО
+	З_ВР.РасходПоЗадаче.ЗадачаПроекта,
+	З_ВР.СтатьяРасходов,
+	З_ВР.РКО,
+	З_ВР.РасходПоЗадаче.ЗадачаПроекта.Владелец,
+	З_ВР.РасходПоЗадаче.ЗадачаПроекта.Владелец.МенеджерПроекта,
+	НАЧАЛОПЕРИОДА(З_ВР.Дата, МЕСЯЦ)
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	З_РпоС.ЗадачаПроекта.Владелец,
+	З_РпоС.ЗадачаПроекта,
+	З_РпоС.СтатьяРасходов,
+	0,
+	НАЧАЛОПЕРИОДА(З_РпоС.Дата, МЕСЯЦ),
+	З_РпоС.ЗадачаПроекта.Владелец.МенеджерПроекта,
+	З_РпоС.Ссылка.РКО,
+	З_РпоС.Сумма
+ИЗ
+	Документ.ЗаявкаНаРасходПоСотруднику.Расходы КАК З_РпоС
+ГДЕ
+	З_РпоС.ЗадачаПроекта.Владелец.Статус В(&amp;Статус)
+	И З_РпоС.Ссылка.Проведен
+	И (&amp;ВсеМенеджеры
+			ИЛИ З_РпоС.ЗадачаПроекта.Владелец.МенеджерПроекта В (&amp;МенеджерыПроекта))</query>
+	</dataSet>
+	<calculatedField>
+		<dataPath>СуммаОстаток</dataPath>
+		<expression>СуммаПоСмете - СуммаВыплачено</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Остаток</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
+	<totalField>
+		<dataPath>СуммаВыплачено</dataPath>
+		<expression>Сумма(СуммаВыплачено)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаОстаток</dataPath>
+		<expression>Сумма(СуммаОстаток)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаПоСмете</dataPath>
+		<expression>Сумма(СуммаПоСмете)</expression>
+	</totalField>
+	<parameter>
+		<name>Статус</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Статус</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:EnumRef.СтатусыПроектов</v8:Type>
+		</valueType>
+		<useRestriction>false</useRestriction>
+		<valueListAllowed>true</valueListAllowed>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>ВсеМенеджеры</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Все менеджеры</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:boolean</v8:Type>
+		</valueType>
+		<value xsi:type="xs:boolean">false</value>
+		<useRestriction>true</useRestriction>
+		<expression>СКД_ПолныеПрава()</expression>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>МенеджерыПроекта</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Менеджеры проекта</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ФизическиеЛица</v8:Type>
+		</valueType>
+		<useRestriction>true</useRestriction>
+		<expression>СписокФизЛицТекущегоПользователя()</expression>
+		<valueListAllowed>true</valueListAllowed>
+		<use>Always</use>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СуммаПоСмете</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СуммаВыплачено</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СуммаОстаток</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:userSettingID>041f6293-d12a-4b11-bffd-63b882fa6faf</dcsset:userSettingID>
+			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Статус</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DesignTimeValue">Перечисление.СтатусыПроектов.ВРаботе</dcscor:value>
+					<dcscor:value xsi:type="dcscor:DesignTimeValue">Перечисление.СтатусыПроектов.Закрыт</dcscor:value>
+					<dcsset:userSettingID>db61e763-a4be-415d-9284-188f87ad5b83</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:conditionalAppearance>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>Месяц</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Формат</dcscor:parameter>
+							<dcscor:value xsi:type="v8:LocalStringType">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ДФ = 'ММММ гггг'</v8:content>
+								</v8:item>
+							</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>СуммаОстаток</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>СуммаВыплачено</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>СуммаПоСмете</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Формат</dcscor:parameter>
+							<dcscor:value xsi:type="v8:LocalStringType">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+							</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>РКО</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Формат</dcscor:parameter>
+							<dcscor:value xsi:type="v8:LocalStringType">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>БЛ='Без РКО'; БИ='С РКО'</v8:content>
+								</v8:item>
+							</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+			</dcsset:conditionalAppearance>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ГоризонтальноеРасположениеОбщихИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">Begin</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemTable">
+				<dcsset:column>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Месяц</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+				</dcsset:column>
+				<dcsset:row>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Проект</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:item>
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>ЗадачаПроекта</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+						<dcsset:item>
+							<dcsset:groupItems>
+								<dcsset:item xsi:type="dcsset:GroupItemField">
+									<dcsset:field>Статья</dcsset:field>
+									<dcsset:groupType>Items</dcsset:groupType>
+									<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+									<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+									<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+								</dcsset:item>
+							</dcsset:groupItems>
+							<dcsset:order>
+								<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+							</dcsset:order>
+							<dcsset:selection>
+								<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+							</dcsset:selection>
+							<dcsset:item>
+								<dcsset:groupItems>
+									<dcsset:item xsi:type="dcsset:GroupItemField">
+										<dcsset:field>РКО</dcsset:field>
+										<dcsset:groupType>Items</dcsset:groupType>
+										<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+										<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+										<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+									</dcsset:item>
+								</dcsset:groupItems>
+								<dcsset:order>
+									<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+								</dcsset:order>
+								<dcsset:selection>
+									<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+								</dcsset:selection>
+							</dcsset:item>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:row>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>
