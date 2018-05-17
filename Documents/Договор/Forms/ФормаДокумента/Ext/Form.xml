@@ -102,467 +102,562 @@
 			<ContextMenu name="ОрганизацияКонтекстноеМеню" id="146"/>
 			<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="147"/>
 		</InputField>
-		<Pages name="Страницы" id="13">
+		<UsualGroup name="ГруппаЗадачИЭтапов" id="201">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Страницы</v8:content>
+					<v8:content>Группа задач и этапов</v8:content>
 				</v8:item>
 			</Title>
-			<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="87"/>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа задач и этапов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<ExtendedTooltip name="ГруппаЗадачИЭтаповРасширеннаяПодсказка" id="202"/>
 			<ChildItems>
-				<Page name="ГруппаЗадачиПроекта" id="14">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Задачи проекта</v8:content>
-						</v8:item>
-					</Title>
-					<ExtendedTooltip name="ГруппаЗадачиПроектаРасширеннаяПодсказка" id="88"/>
+				<Pages name="Группа5" id="199">
+					<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="200"/>
 					<ChildItems>
-						<Table name="ЗадачиПроекта" id="15">
-							<Representation>List</Representation>
-							<Footer>true</Footer>
-							<AutoInsertNewRow>true</AutoInsertNewRow>
-							<EnableStartDrag>true</EnableStartDrag>
-							<EnableDrag>true</EnableDrag>
-							<DataPath>Объект.ЗадачиПроекта</DataPath>
-							<SearchStringLocation>None</SearchStringLocation>
-							<ViewStatusLocation>None</ViewStatusLocation>
-							<SearchControlLocation>None</SearchControlLocation>
-							<RowFilter xsi:nil="true"/>
-							<ContextMenu name="ЗадачиПроектаКонтекстноеМеню" id="16"/>
-							<AutoCommandBar name="ЗадачиПроектаКоманднаяПанель" id="17">
-								<ChildItems>
-									<Button name="ЗадачиПроектаЗаполнитьЗадачамиПроекта" id="52">
-										<Type>CommandBarButton</Type>
-										<CommandName>Form.Command.ЗаполнитьЗадачами</CommandName>
-										<ExtendedTooltip name="ЗадачиПроектаЗаполнитьЗадачамиПроектаРасширеннаяПодсказка" id="89"/>
-									</Button>
-									<Button name="ЗадачиПроектаРаспределитьСуммуПоЗадачам" id="73">
-										<Type>CommandBarButton</Type>
-										<CommandName>Form.Command.РаспределитьСуммуПоЗадачам</CommandName>
-										<ExtendedTooltip name="ЗадачиПроектаРаспределитьСуммуПоЗадачамРасширеннаяПодсказка" id="90"/>
-									</Button>
-								</ChildItems>
-							</AutoCommandBar>
-							<ExtendedTooltip name="ЗадачиПроектаРасширеннаяПодсказка" id="91"/>
-							<SearchStringAddition name="ЗадачиПроектаСтрокаПоиска" id="92">
-								<AdditionSource>
-									<Item>ЗадачиПроекта</Item>
-									<Type>SearchStringRepresentation</Type>
-								</AdditionSource>
-								<ContextMenu name="ЗадачиПроектаСтрокаПоискаКонтекстноеМеню" id="93"/>
-								<ExtendedTooltip name="ЗадачиПроектаСтрокаПоискаРасширеннаяПодсказка" id="94"/>
-							</SearchStringAddition>
-							<ViewStatusAddition name="ЗадачиПроектаСостояниеПросмотра" id="95">
-								<AdditionSource>
-									<Item>ЗадачиПроекта</Item>
-									<Type>ViewStatusRepresentation</Type>
-								</AdditionSource>
-								<ContextMenu name="ЗадачиПроектаСостояниеПросмотраКонтекстноеМеню" id="96"/>
-								<ExtendedTooltip name="ЗадачиПроектаСостояниеПросмотраРасширеннаяПодсказка" id="97"/>
-							</ViewStatusAddition>
-							<SearchControlAddition name="ЗадачиПроектаУправлениеПоиском" id="98">
-								<AdditionSource>
-									<Item>ЗадачиПроекта</Item>
-									<Type>SearchControl</Type>
-								</AdditionSource>
-								<ContextMenu name="ЗадачиПроектаУправлениеПоискомКонтекстноеМеню" id="99"/>
-								<ExtendedTooltip name="ЗадачиПроектаУправлениеПоискомРасширеннаяПодсказка" id="100"/>
-							</SearchControlAddition>
-							<Events>
-								<Event name="OnChange">ЗадачиПроектаПриИзменении</Event>
-							</Events>
+						<Page name="ГруппаЗадачиПроекта" id="14">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Задачи проекта</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ГруппаЗадачиПроектаРасширеннаяПодсказка" id="88"/>
 							<ChildItems>
-								<LabelField name="ЗадачиПроектаНомерСтроки" id="18">
-									<DataPath>Объект.ЗадачиПроекта.LineNumber</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ЗадачиПроектаНомерСтрокиКонтекстноеМеню" id="19"/>
-									<ExtendedTooltip name="ЗадачиПроектаНомерСтрокиРасширеннаяПодсказка" id="101"/>
-								</LabelField>
-								<LabelField name="ЗадачиПроектаЗадачаПроектаТиповаяЗадачаВидЗадачи" id="71">
-									<ReadOnly>true</ReadOnly>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ЗадачиПроектаЗадачаПроектаТиповаяЗадачаВидЗадачиКонтекстноеМеню" id="72"/>
-									<ExtendedTooltip name="ЗадачиПроектаЗадачаПроектаТиповаяЗадачаВидЗадачиРасширеннаяПодсказка" id="102"/>
-								</LabelField>
-								<InputField name="ЗадачиПроектаЗадачаПроекта" id="20">
-									<DataPath>Объект.ЗадачиПроекта.ЗадачаПроекта</DataPath>
-									<ReadOnly>true</ReadOnly>
-									<EditMode>EnterOnInput</EditMode>
-									<ChoiceParameterLinks>
-										<xr:Link>
-											<xr:Name>Отбор.Владелец</xr:Name>
-											<xr:DataPath xsi:type="xs:string">Объект.Проект</xr:DataPath>
-											<xr:ValueChange>Clear</xr:ValueChange>
-										</xr:Link>
-									</ChoiceParameterLinks>
-									<ContextMenu name="ЗадачиПроектаЗадачаПроектаКонтекстноеМеню" id="21"/>
-									<ExtendedTooltip name="ЗадачиПроектаЗадачаПроектаРасширеннаяПодсказка" id="103"/>
-								</InputField>
-								<InputField name="ЗадачиПроектаСуммаПоСмете" id="69">
-									<DataPath>Объект.ЗадачиПроекта.СуммаПоСмете</DataPath>
-									<ReadOnly>true</ReadOnly>
-									<EditMode>EnterOnInput</EditMode>
-									<FooterDataPath>Объект.ЗадачиПроекта.TotalСуммаПоСмете</FooterDataPath>
-									<ContextMenu name="ЗадачиПроектаСуммаПоСметеКонтекстноеМеню" id="70"/>
-									<ExtendedTooltip name="ЗадачиПроектаСуммаПоСметеРасширеннаяПодсказка" id="104"/>
-								</InputField>
-								<InputField name="ЗадачиПроектаСуммаОбеспечено" id="63">
-									<DataPath>Объект.ЗадачиПроекта.СуммаОбеспечено</DataPath>
-									<ReadOnly>true</ReadOnly>
-									<EditMode>EnterOnInput</EditMode>
-									<FooterDataPath>ИтогОбеспечено</FooterDataPath>
-									<ContextMenu name="ЗадачиПроектаСуммаОбеспеченоКонтекстноеМеню" id="64"/>
-									<ExtendedTooltip name="ЗадачиПроектаСуммаОбеспеченоРасширеннаяПодсказка" id="105"/>
-								</InputField>
-								<InputField name="ЗадачиПроектаСумма" id="61">
-									<DataPath>Объект.ЗадачиПроекта.Сумма</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<FooterDataPath>Объект.ЗадачиПроекта.TotalСумма</FooterDataPath>
-									<ContextMenu name="ЗадачиПроектаСуммаКонтекстноеМеню" id="62"/>
-									<ExtendedTooltip name="ЗадачиПроектаСуммаРасширеннаяПодсказка" id="106"/>
+								<CommandBar name="КоманднаяПанель" id="208">
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Командная панель</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="КоманднаяПанельРасширеннаяПодсказка" id="209"/>
+									<ChildItems>
+										<Button name="Удалить" id="230">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Item.ЗадачиПроекта.StandardCommand.Delete</CommandName>
+											<ExtendedTooltip name="УдалитьРасширеннаяПодсказка" id="231"/>
+										</Button>
+										<Button name="Найти" id="210">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Item.ЗадачиПроекта.StandardCommand.Find</CommandName>
+											<ExtendedTooltip name="НайтиРасширеннаяПодсказка" id="211"/>
+										</Button>
+										<Button name="ОтменитьПоиск" id="212">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Item.ЗадачиПроекта.StandardCommand.CancelSearch</CommandName>
+											<ExtendedTooltip name="ОтменитьПоискРасширеннаяПодсказка" id="213"/>
+										</Button>
+										<Button name="ПереместитьВверх" id="214">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Item.ЗадачиПроекта.StandardCommand.MoveUp</CommandName>
+											<ExtendedTooltip name="ПереместитьВверхРасширеннаяПодсказка" id="215"/>
+										</Button>
+										<Button name="ПереместитьВниз" id="216">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Item.ЗадачиПроекта.StandardCommand.MoveDown</CommandName>
+											<ExtendedTooltip name="ПереместитьВнизРасширеннаяПодсказка" id="217"/>
+										</Button>
+										<Button name="СортироватьСписокПоВозрастанию" id="218">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Item.ЗадачиПроекта.StandardCommand.SortListAsc</CommandName>
+											<ExtendedTooltip name="СортироватьСписокПоВозрастаниюРасширеннаяПодсказка" id="219"/>
+										</Button>
+										<Button name="СортироватьСписокПоУбыванию" id="220">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Item.ЗадачиПроекта.StandardCommand.SortListDesc</CommandName>
+											<ExtendedTooltip name="СортироватьСписокПоУбываниюРасширеннаяПодсказка" id="221"/>
+										</Button>
+										<Button name="ВывестиСписок" id="222">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Item.ЗадачиПроекта.StandardCommand.OutputList</CommandName>
+											<ExtendedTooltip name="ВывестиСписокРасширеннаяПодсказка" id="223"/>
+										</Button>
+										<Button name="КопироватьВБуферОбмена" id="224">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Item.ЗадачиПроекта.StandardCommand.CopyToClipboard</CommandName>
+											<ExtendedTooltip name="КопироватьВБуферОбменаРасширеннаяПодсказка" id="225"/>
+										</Button>
+										<Button name="ВыделитьВсе" id="226">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Item.ЗадачиПроекта.StandardCommand.SelectAll</CommandName>
+											<ExtendedTooltip name="ВыделитьВсеРасширеннаяПодсказка" id="227"/>
+										</Button>
+										<Button name="ЗадачиПроектаЗаполнитьЗадачамиПроекта" id="52">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Command.ЗаполнитьЗадачами</CommandName>
+											<ExtendedTooltip name="ЗадачиПроектаЗаполнитьЗадачамиПроектаРасширеннаяПодсказка" id="89"/>
+										</Button>
+										<Button name="ЗадачиПроектаРаспределитьСуммуПоЗадачам" id="73">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Command.РаспределитьСуммуПоЗадачам</CommandName>
+											<ExtendedTooltip name="ЗадачиПроектаРаспределитьСуммуПоЗадачамРасширеннаяПодсказка" id="90"/>
+										</Button>
+										<Popup name="ЭтапыГрафикаОплатыГруппа1" id="48">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Сформировать график оплаты</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ЭтапыГрафикаОплатыГруппа1РасширеннаяПодсказка" id="112"/>
+											<ChildItems>
+												<Button name="ЭтапыГрафикаОплатыРаспределитьПоКварталам" id="50">
+													<Type>CommandBarButton</Type>
+													<CommandName>Form.Command.РаспределитьПоКварталам</CommandName>
+													<ExtendedTooltip name="ЭтапыГрафикаОплатыРаспределитьПоКварталамРасширеннаяПодсказка" id="113"/>
+												</Button>
+												<Button name="ЭтапыГрафикаОплатыРаспределитьПоМесяцам" id="51">
+													<Type>CommandBarButton</Type>
+													<CommandName>Form.Command.РаспределитьПоМесяцам</CommandName>
+													<ExtendedTooltip name="ЭтапыГрафикаОплатыРаспределитьПоМесяцамРасширеннаяПодсказка" id="114"/>
+												</Button>
+												<Button name="ЭтапыГрафикаОплатыАванс30Проц" id="49">
+													<Type>CommandBarButton</Type>
+													<CommandName>Form.Command.Аванс30Проц</CommandName>
+													<ExtendedTooltip name="ЭтапыГрафикаОплатыАванс30ПроцРасширеннаяПодсказка" id="115"/>
+												</Button>
+												<Button name="ПоГрафикуОтгрузки" id="228">
+													<Type>CommandBarButton</Type>
+													<CommandName>Form.Command.ПоГрафикуОтгрузки</CommandName>
+													<ExtendedTooltip name="ПоГрафикуОтгрузкиРасширеннаяПодсказка" id="229"/>
+												</Button>
+											</ChildItems>
+										</Popup>
+										<Popup name="Заполнить" id="191">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Сформировать график отгрузки</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Заполнить</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ExtendedTooltip name="ЗаполнитьРасширеннаяПодсказка" id="192"/>
+											<ChildItems>
+												<Button name="ЭтапыГрафикаОтгрузкиОтгрузКварталы" id="195">
+													<Type>CommandBarButton</Type>
+													<CommandName>Form.Command.ОтгрузКварталы</CommandName>
+													<ExtendedTooltip name="ЭтапыГрафикаОтгрузкиОтгрузКварталыРасширеннаяПодсказка" id="196"/>
+												</Button>
+												<Button name="ЭтапыГрафикаОтгрузкиОтгрузМесяцы" id="197">
+													<Type>CommandBarButton</Type>
+													<CommandName>Form.Command.ОтгрузМесяцы</CommandName>
+													<ExtendedTooltip name="ЭтапыГрафикаОтгрузкиОтгрузМесяцыРасширеннаяПодсказка" id="198"/>
+												</Button>
+											</ChildItems>
+										</Popup>
+									</ChildItems>
+								</CommandBar>
+								<CheckBoxField name="ПоказатьВсеЭтапы" id="238">
+									<DataPath>Объект.ПоказатьВсеГрафики</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ПоказатьВсеЭтапыКонтекстноеМеню" id="239"/>
+									<ExtendedTooltip name="ПоказатьВсеЭтапыРасширеннаяПодсказка" id="240"/>
 									<Events>
-										<Event name="OnChange">ЗадачиПроектаСуммаПриИзменении</Event>
+										<Event name="OnChange">ЗадачиПроектаПриАктивизацииСтроки</Event>
 									</Events>
-								</InputField>
-								<InputField name="ЗадачиПроектаСуммаОстатокНеОбеспечено" id="65">
-									<DataPath>Объект.ЗадачиПроекта.СуммаНеОбеспечено</DataPath>
-									<ReadOnly>true</ReadOnly>
-									<EditMode>EnterOnInput</EditMode>
-									<FooterDataPath>ИтогНеОбеспечено</FooterDataPath>
-									<ContextMenu name="ЗадачиПроектаСуммаОстатокНеОбеспеченоКонтекстноеМеню" id="66"/>
-									<ExtendedTooltip name="ЗадачиПроектаСуммаОстатокНеОбеспеченоРасширеннаяПодсказка" id="107"/>
-								</InputField>
+								</CheckBoxField>
+								<Table name="ЗадачиПроекта" id="15">
+									<Representation>List</Representation>
+									<Footer>true</Footer>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<DataPath>Объект.ЗадачиПроекта</DataPath>
+									<SearchStringLocation>None</SearchStringLocation>
+									<ViewStatusLocation>None</ViewStatusLocation>
+									<SearchControlLocation>None</SearchControlLocation>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="ЗадачиПроектаКонтекстноеМеню" id="16"/>
+									<AutoCommandBar name="ЗадачиПроектаКоманднаяПанель" id="17">
+										<Autofill>false</Autofill>
+									</AutoCommandBar>
+									<ExtendedTooltip name="ЗадачиПроектаРасширеннаяПодсказка" id="91"/>
+									<SearchStringAddition name="ЗадачиПроектаСтрокаПоиска" id="92">
+										<AdditionSource>
+											<Item>ЗадачиПроекта</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ЗадачиПроектаСтрокаПоискаКонтекстноеМеню" id="93"/>
+										<ExtendedTooltip name="ЗадачиПроектаСтрокаПоискаРасширеннаяПодсказка" id="94"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ЗадачиПроектаСостояниеПросмотра" id="95">
+										<AdditionSource>
+											<Item>ЗадачиПроекта</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ЗадачиПроектаСостояниеПросмотраКонтекстноеМеню" id="96"/>
+										<ExtendedTooltip name="ЗадачиПроектаСостояниеПросмотраРасширеннаяПодсказка" id="97"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ЗадачиПроектаУправлениеПоиском" id="98">
+										<AdditionSource>
+											<Item>ЗадачиПроекта</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ЗадачиПроектаУправлениеПоискомКонтекстноеМеню" id="99"/>
+										<ExtendedTooltip name="ЗадачиПроектаУправлениеПоискомРасширеннаяПодсказка" id="100"/>
+									</SearchControlAddition>
+									<Events>
+										<Event name="Selection">ЗадачиПроектаВыбор</Event>
+										<Event name="OnActivateRow">ЗадачиПроектаПриАктивизацииСтроки</Event>
+										<Event name="OnChange">ЗадачиПроектаПриИзменении</Event>
+									</Events>
+									<ChildItems>
+										<LabelField name="ЗадачиПроектаНомерСтроки" id="18">
+											<DataPath>Объект.ЗадачиПроекта.LineNumber</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ЗадачиПроектаНомерСтрокиКонтекстноеМеню" id="19"/>
+											<ExtendedTooltip name="ЗадачиПроектаНомерСтрокиРасширеннаяПодсказка" id="101"/>
+										</LabelField>
+										<LabelField name="ЗадачиПроектаЗадачаПроектаТиповаяЗадачаВидЗадачи" id="71">
+											<ReadOnly>true</ReadOnly>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ЗадачиПроектаЗадачаПроектаТиповаяЗадачаВидЗадачиКонтекстноеМеню" id="72"/>
+											<ExtendedTooltip name="ЗадачиПроектаЗадачаПроектаТиповаяЗадачаВидЗадачиРасширеннаяПодсказка" id="102"/>
+										</LabelField>
+										<InputField name="ЗадачиПроектаЗадачаПроекта" id="20">
+											<DataPath>Объект.ЗадачиПроекта.ЗадачаПроекта</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<EditMode>EnterOnInput</EditMode>
+											<ChoiceParameterLinks>
+												<xr:Link>
+													<xr:Name>Отбор.Владелец</xr:Name>
+													<xr:DataPath xsi:type="xs:string">Объект.Проект</xr:DataPath>
+													<xr:ValueChange>Clear</xr:ValueChange>
+												</xr:Link>
+											</ChoiceParameterLinks>
+											<ContextMenu name="ЗадачиПроектаЗадачаПроектаКонтекстноеМеню" id="21"/>
+											<ExtendedTooltip name="ЗадачиПроектаЗадачаПроектаРасширеннаяПодсказка" id="103"/>
+										</InputField>
+										<InputField name="ЗадачиПроектаСуммаПоСмете" id="69">
+											<DataPath>Объект.ЗадачиПроекта.СуммаПоСмете</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<EditMode>EnterOnInput</EditMode>
+											<FooterDataPath>Объект.ЗадачиПроекта.TotalСуммаПоСмете</FooterDataPath>
+											<ContextMenu name="ЗадачиПроектаСуммаПоСметеКонтекстноеМеню" id="70"/>
+											<ExtendedTooltip name="ЗадачиПроектаСуммаПоСметеРасширеннаяПодсказка" id="104"/>
+										</InputField>
+										<InputField name="ЗадачиПроектаСуммаОбеспечено" id="63">
+											<DataPath>Объект.ЗадачиПроекта.СуммаОбеспечено</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<EditMode>EnterOnInput</EditMode>
+											<FooterDataPath>ИтогОбеспечено</FooterDataPath>
+											<ContextMenu name="ЗадачиПроектаСуммаОбеспеченоКонтекстноеМеню" id="64"/>
+											<ExtendedTooltip name="ЗадачиПроектаСуммаОбеспеченоРасширеннаяПодсказка" id="105"/>
+										</InputField>
+										<InputField name="ЗадачиПроектаСумма" id="61">
+											<DataPath>Объект.ЗадачиПроекта.Сумма</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<FooterDataPath>Объект.ЗадачиПроекта.TotalСумма</FooterDataPath>
+											<ContextMenu name="ЗадачиПроектаСуммаКонтекстноеМеню" id="62"/>
+											<ExtendedTooltip name="ЗадачиПроектаСуммаРасширеннаяПодсказка" id="106"/>
+											<Events>
+												<Event name="OnChange">ЗадачиПроектаСуммаПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="ЗадачиПроектаСуммаОстатокНеОбеспечено" id="65">
+											<DataPath>Объект.ЗадачиПроекта.СуммаНеОбеспечено</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<EditMode>EnterOnInput</EditMode>
+											<FooterDataPath>ИтогНеОбеспечено</FooterDataPath>
+											<ContextMenu name="ЗадачиПроектаСуммаОстатокНеОбеспеченоКонтекстноеМеню" id="66"/>
+											<ExtendedTooltip name="ЗадачиПроектаСуммаОстатокНеОбеспеченоРасширеннаяПодсказка" id="107"/>
+										</InputField>
+									</ChildItems>
+								</Table>
 							</ChildItems>
-						</Table>
-					</ChildItems>
-				</Page>
-				<Page name="ГруппаЭтапыГрафикаОтгрузки" id="153">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Этапы графика отгрузки</v8:content>
-						</v8:item>
-					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Группа этапы графика отгрузки</v8:content>
-						</v8:item>
-					</ToolTip>
-					<ExtendedTooltip name="ГруппаЭтапыГрафикаОтгрузкиРасширеннаяПодсказка" id="154"/>
-					<ChildItems>
-						<UsualGroup name="Группа4" id="155">
-							<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="156"/>
+						</Page>
+						<Page name="ГруппаКомментарий" id="74">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Комментарий</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа комментарий</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="ГруппаКомментарийРасширеннаяПодсказка" id="131"/>
 							<ChildItems>
-								<InputField name="ПериодРаспределения1" id="157">
-									<DataPath>ПериодРаспределения</DataPath>
-									<ContextMenu name="ПериодРаспределения1КонтекстноеМеню" id="158"/>
-									<ExtendedTooltip name="ПериодРаспределения1РасширеннаяПодсказка" id="159"/>
-								</InputField>
+								<TextDocumentField name="Комментарий" id="75">
+									<DataPath>Объект.Комментарий</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="КомментарийКонтекстноеМеню" id="76"/>
+									<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="132"/>
+								</TextDocumentField>
+								<UsualGroup name="Группа3" id="140">
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="141"/>
+									<ChildItems>
+										<InputField name="Соглашение" id="137">
+											<DataPath>Объект.Соглашение</DataPath>
+											<ContextMenu name="СоглашениеКонтекстноеМеню" id="138"/>
+											<ExtendedTooltip name="СоглашениеРасширеннаяПодсказка" id="139"/>
+										</InputField>
+										<InputField name="ПорядокРасчетов" id="142">
+											<DataPath>Объект.ПорядокРасчетов</DataPath>
+											<ContextMenu name="ПорядокРасчетовКонтекстноеМеню" id="143"/>
+											<ExtendedTooltip name="ПорядокРасчетовРасширеннаяПодсказка" id="144"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</Page>
+					</ChildItems>
+				</Pages>
+				<Pages name="Группа7" id="203">
+					<ExtendedTooltip name="Группа7РасширеннаяПодсказка" id="204"/>
+					<ChildItems>
+						<Page name="ГруппаЭтапыГрафикаОтгрузки" id="153">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Этапы графика отгрузки</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа этапы графика отгрузки</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="ГруппаЭтапыГрафикаОтгрузкиРасширеннаяПодсказка" id="154"/>
+							<ChildItems>
+								<UsualGroup name="Группа4" id="155">
+									<Representation>None</Representation>
+									<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="156"/>
+								</UsualGroup>
 								<InputField name="Смещение1" id="160">
 									<DataPath>Смещение</DataPath>
 									<ContextMenu name="Смещение1КонтекстноеМеню" id="161"/>
 									<ExtendedTooltip name="Смещение1РасширеннаяПодсказка" id="162"/>
 								</InputField>
-							</ChildItems>
-						</UsualGroup>
-						<Table name="ЭтапыГрафикаОтгрузки" id="163">
-							<Representation>List</Representation>
-							<Footer>true</Footer>
-							<AutoInsertNewRow>true</AutoInsertNewRow>
-							<EnableStartDrag>true</EnableStartDrag>
-							<EnableDrag>true</EnableDrag>
-							<DataPath>Объект.ЭтапыГрафикаОтгрузки</DataPath>
-							<RowFilter xsi:nil="true"/>
-							<ContextMenu name="ЭтапыГрафикаОтгрузкиКонтекстноеМеню" id="164"/>
-							<AutoCommandBar name="ЭтапыГрафикаОтгрузкиКоманднаяПанель" id="165">
-								<ChildItems>
-									<Popup name="Заполнить" id="191">
-										<Title>
-											<v8:item>
-												<v8:lang>ru</v8:lang>
-												<v8:content>Заполнить</v8:content>
-											</v8:item>
-										</Title>
-										<ToolTip>
-											<v8:item>
-												<v8:lang>ru</v8:lang>
-												<v8:content>Заполнить</v8:content>
-											</v8:item>
-										</ToolTip>
-										<ExtendedTooltip name="ЗаполнитьРасширеннаяПодсказка" id="192"/>
-										<ChildItems>
-											<Button name="ЭтапыГрафикаОтгрузкиОтгрузКварталы" id="195">
-												<Type>CommandBarButton</Type>
-												<CommandName>Form.Command.ОтгрузКварталы</CommandName>
-												<ExtendedTooltip name="ЭтапыГрафикаОтгрузкиОтгрузКварталыРасширеннаяПодсказка" id="196"/>
-											</Button>
-											<Button name="ЭтапыГрафикаОтгрузкиОтгрузАванс30Проц" id="193">
-												<Type>CommandBarButton</Type>
-												<CommandName>Form.Command.ОтгрузАванс30Проц</CommandName>
-												<ExtendedTooltip name="ЭтапыГрафикаОтгрузкиОтгрузАванс30ПроцРасширеннаяПодсказка" id="194"/>
-											</Button>
-											<Button name="ЭтапыГрафикаОтгрузкиОтгрузМесяцы" id="197">
-												<Type>CommandBarButton</Type>
-												<CommandName>Form.Command.ОтгрузМесяцы</CommandName>
-												<ExtendedTooltip name="ЭтапыГрафикаОтгрузкиОтгрузМесяцыРасширеннаяПодсказка" id="198"/>
-											</Button>
-										</ChildItems>
-									</Popup>
-								</ChildItems>
-							</AutoCommandBar>
-							<ExtendedTooltip name="ЭтапыГрафикаОтгрузкиРасширеннаяПодсказка" id="166"/>
-							<SearchStringAddition name="ЭтапыГрафикаОтгрузкиСтрокаПоиска" id="167">
-								<AdditionSource>
-									<Item>ЭтапыГрафикаОтгрузки</Item>
-									<Type>SearchStringRepresentation</Type>
-								</AdditionSource>
-								<ContextMenu name="ЭтапыГрафикаОтгрузкиСтрокаПоискаКонтекстноеМеню" id="168"/>
-								<ExtendedTooltip name="ЭтапыГрафикаОтгрузкиСтрокаПоискаРасширеннаяПодсказка" id="169"/>
-							</SearchStringAddition>
-							<ViewStatusAddition name="ЭтапыГрафикаОтгрузкиСостояниеПросмотра" id="170">
-								<AdditionSource>
-									<Item>ЭтапыГрафикаОтгрузки</Item>
-									<Type>ViewStatusRepresentation</Type>
-								</AdditionSource>
-								<ContextMenu name="ЭтапыГрафикаОтгрузкиСостояниеПросмотраКонтекстноеМеню" id="171"/>
-								<ExtendedTooltip name="ЭтапыГрафикаОтгрузкиСостояниеПросмотраРасширеннаяПодсказка" id="172"/>
-							</ViewStatusAddition>
-							<SearchControlAddition name="ЭтапыГрафикаОтгрузкиУправлениеПоиском" id="173">
-								<AdditionSource>
-									<Item>ЭтапыГрафикаОтгрузки</Item>
-									<Type>SearchControl</Type>
-								</AdditionSource>
-								<ContextMenu name="ЭтапыГрафикаОтгрузкиУправлениеПоискомКонтекстноеМеню" id="174"/>
-								<ExtendedTooltip name="ЭтапыГрафикаОтгрузкиУправлениеПоискомРасширеннаяПодсказка" id="175"/>
-							</SearchControlAddition>
-							<Events>
-								<Event name="AfterDeleteRow">ЭтапыГрафикаОтгрузкиПослеУдаления</Event>
-							</Events>
-							<ChildItems>
-								<LabelField name="ЭтапыГрафикаОтгрузкиНомерСтроки" id="176">
-									<DataPath>Объект.ЭтапыГрафикаОтгрузки.LineNumber</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ЭтапыГрафикаОтгрузкиНомерСтрокиКонтекстноеМеню" id="177"/>
-									<ExtendedTooltip name="ЭтапыГрафикаОтгрузкиНомерСтрокиРасширеннаяПодсказка" id="178"/>
-								</LabelField>
-								<InputField name="ЭтапыГрафикаОтгрузкиДатаОтгрузки" id="179">
-									<DataPath>Объект.ЭтапыГрафикаОтгрузки.ДатаОтгрузки</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ЭтапыГрафикаОтгрузкиДатаОтгрузкиКонтекстноеМеню" id="180"/>
-									<ExtendedTooltip name="ЭтапыГрафикаОтгрузкиДатаОтгрузкиРасширеннаяПодсказка" id="181"/>
-								</InputField>
-								<InputField name="ЭтапыГрафикаОтгрузкиПроцентОтгрузки" id="185">
-									<DataPath>Объект.ЭтапыГрафикаОтгрузки.ПроцентОтгрузки</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<FooterDataPath>Объект.ЭтапыГрафикаОтгрузки.TotalПроцентОтгрузки</FooterDataPath>
-									<ContextMenu name="ЭтапыГрафикаОтгрузкиПроцентОтгрузкиКонтекстноеМеню" id="186"/>
-									<ExtendedTooltip name="ЭтапыГрафикаОтгрузкиПроцентОтгрузкиРасширеннаяПодсказка" id="187"/>
-								</InputField>
-								<InputField name="ЭтапыГрафикаОтгрузкиСуммаОтгрузки" id="182">
-									<DataPath>Объект.ЭтапыГрафикаОтгрузки.СуммаОтгрузки</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<FooterDataPath>Объект.ЭтапыГрафикаОтгрузки.TotalСуммаОтгрузки</FooterDataPath>
-									<ContextMenu name="ЭтапыГрафикаОтгрузкиСуммаОтгрузкиКонтекстноеМеню" id="183"/>
-									<ExtendedTooltip name="ЭтапыГрафикаОтгрузкиСуммаОтгрузкиРасширеннаяПодсказка" id="184"/>
-								</InputField>
-								<InputField name="ЭтапыГрафикаОтгрузкиКомментарий" id="188">
-									<DataPath>Объект.ЭтапыГрафикаОтгрузки.Комментарий</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ЭтапыГрафикаОтгрузкиКомментарийКонтекстноеМеню" id="189"/>
-									<ExtendedTooltip name="ЭтапыГрафикаОтгрузкиКомментарийРасширеннаяПодсказка" id="190"/>
-								</InputField>
-							</ChildItems>
-						</Table>
-					</ChildItems>
-				</Page>
-				<Page name="ГруппаЭтапыГрафикаОплаты" id="22">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Этапы графика оплаты</v8:content>
-						</v8:item>
-					</Title>
-					<ExtendedTooltip name="ГруппаЭтапыГрафикаОплатыРасширеннаяПодсказка" id="108"/>
-					<ChildItems>
-						<UsualGroup name="Группа1" id="41">
-							<Group>Horizontal</Group>
-							<Representation>None</Representation>
-							<ShowTitle>false</ShowTitle>
-							<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="109"/>
-							<ChildItems>
-								<InputField name="ПериодРаспределения" id="46">
-									<DataPath>ПериодРаспределения</DataPath>
-									<ContextMenu name="ПериодРаспределенияКонтекстноеМеню" id="47"/>
-									<ExtendedTooltip name="ПериодРаспределенияРасширеннаяПодсказка" id="110"/>
-								</InputField>
-								<InputField name="Смещение" id="44">
-									<DataPath>Смещение</DataPath>
-									<SpinButton>true</SpinButton>
-									<ContextMenu name="СмещениеКонтекстноеМеню" id="45"/>
-									<ExtendedTooltip name="СмещениеРасширеннаяПодсказка" id="111"/>
-								</InputField>
-							</ChildItems>
-						</UsualGroup>
-						<Table name="ЭтапыГрафикаОплаты" id="23">
-							<Representation>List</Representation>
-							<Footer>true</Footer>
-							<AutoInsertNewRow>true</AutoInsertNewRow>
-							<EnableStartDrag>true</EnableStartDrag>
-							<EnableDrag>true</EnableDrag>
-							<DataPath>Объект.ЭтапыГрафикаОплаты</DataPath>
-							<SearchStringLocation>None</SearchStringLocation>
-							<ViewStatusLocation>None</ViewStatusLocation>
-							<SearchControlLocation>None</SearchControlLocation>
-							<RowFilter xsi:nil="true"/>
-							<ContextMenu name="ЭтапыГрафикаОплатыКонтекстноеМеню" id="24"/>
-							<AutoCommandBar name="ЭтапыГрафикаОплатыКоманднаяПанель" id="25">
-								<ChildItems>
-									<Popup name="ЭтапыГрафикаОплатыГруппа1" id="48">
-										<Title>
-											<v8:item>
-												<v8:lang>ru</v8:lang>
-												<v8:content>Заполнить</v8:content>
-											</v8:item>
-										</Title>
-										<ExtendedTooltip name="ЭтапыГрафикаОплатыГруппа1РасширеннаяПодсказка" id="112"/>
-										<ChildItems>
-											<Button name="ЭтапыГрафикаОплатыРаспределитьПоКварталам" id="50">
-												<Type>CommandBarButton</Type>
-												<CommandName>Form.Command.РаспределитьПоКварталам</CommandName>
-												<ExtendedTooltip name="ЭтапыГрафикаОплатыРаспределитьПоКварталамРасширеннаяПодсказка" id="113"/>
-											</Button>
-											<Button name="ЭтапыГрафикаОплатыРаспределитьПоМесяцам" id="51">
-												<Type>CommandBarButton</Type>
-												<CommandName>Form.Command.РаспределитьПоМесяцам</CommandName>
-												<ExtendedTooltip name="ЭтапыГрафикаОплатыРаспределитьПоМесяцамРасширеннаяПодсказка" id="114"/>
-											</Button>
-											<Button name="ЭтапыГрафикаОплатыАванс30Проц" id="49">
-												<Type>CommandBarButton</Type>
-												<CommandName>Form.Command.Аванс30Проц</CommandName>
-												<ExtendedTooltip name="ЭтапыГрафикаОплатыАванс30ПроцРасширеннаяПодсказка" id="115"/>
-											</Button>
-										</ChildItems>
-									</Popup>
-								</ChildItems>
-							</AutoCommandBar>
-							<ExtendedTooltip name="ЭтапыГрафикаОплатыРасширеннаяПодсказка" id="116"/>
-							<SearchStringAddition name="ЭтапыГрафикаОплатыСтрокаПоиска" id="117">
-								<AdditionSource>
-									<Item>ЭтапыГрафикаОплаты</Item>
-									<Type>SearchStringRepresentation</Type>
-								</AdditionSource>
-								<ContextMenu name="ЭтапыГрафикаОплатыСтрокаПоискаКонтекстноеМеню" id="118"/>
-								<ExtendedTooltip name="ЭтапыГрафикаОплатыСтрокаПоискаРасширеннаяПодсказка" id="119"/>
-							</SearchStringAddition>
-							<ViewStatusAddition name="ЭтапыГрафикаОплатыСостояниеПросмотра" id="120">
-								<AdditionSource>
-									<Item>ЭтапыГрафикаОплаты</Item>
-									<Type>ViewStatusRepresentation</Type>
-								</AdditionSource>
-								<ContextMenu name="ЭтапыГрафикаОплатыСостояниеПросмотраКонтекстноеМеню" id="121"/>
-								<ExtendedTooltip name="ЭтапыГрафикаОплатыСостояниеПросмотраРасширеннаяПодсказка" id="122"/>
-							</ViewStatusAddition>
-							<SearchControlAddition name="ЭтапыГрафикаОплатыУправлениеПоиском" id="123">
-								<AdditionSource>
-									<Item>ЭтапыГрафикаОплаты</Item>
-									<Type>SearchControl</Type>
-								</AdditionSource>
-								<ContextMenu name="ЭтапыГрафикаОплатыУправлениеПоискомКонтекстноеМеню" id="124"/>
-								<ExtendedTooltip name="ЭтапыГрафикаОплатыУправлениеПоискомРасширеннаяПодсказка" id="125"/>
-							</SearchControlAddition>
-							<Events>
-								<Event name="AfterDeleteRow">ЭтапыГрафикаОплатыПослеУдаления</Event>
-							</Events>
-							<ChildItems>
-								<LabelField name="ЭтапыГрафикаОплатыНомерСтроки" id="26">
-									<DataPath>Объект.ЭтапыГрафикаОплаты.LineNumber</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ЭтапыГрафикаОплатыНомерСтрокиКонтекстноеМеню" id="27"/>
-									<ExtendedTooltip name="ЭтапыГрафикаОплатыНомерСтрокиРасширеннаяПодсказка" id="126"/>
-								</LabelField>
-								<InputField name="ЭтапыГрафикаОплатыДатаПлатежа" id="28">
-									<DataPath>Объект.ЭтапыГрафикаОплаты.ДатаПлатежа</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ЭтапыГрафикаОплатыДатаПлатежаКонтекстноеМеню" id="29"/>
-									<ExtendedTooltip name="ЭтапыГрафикаОплатыДатаПлатежаРасширеннаяПодсказка" id="127"/>
-								</InputField>
-								<InputField name="ЭтапыГрафикаОплатыПроцентПлатежа" id="32">
-									<DataPath>Объект.ЭтапыГрафикаОплаты.ПроцентПлатежа</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<FooterDataPath>Объект.ЭтапыГрафикаОплаты.TotalПроцентПлатежа</FooterDataPath>
-									<ContextMenu name="ЭтапыГрафикаОплатыПроцентПлатежаКонтекстноеМеню" id="33"/>
-									<ExtendedTooltip name="ЭтапыГрафикаОплатыПроцентПлатежаРасширеннаяПодсказка" id="128"/>
+								<Table name="ЭтапыГрафикаОтгрузки" id="163">
+									<Representation>List</Representation>
+									<Footer>true</Footer>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<DataPath>Объект.ЭтапыГрафикаОтгрузки</DataPath>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="ЭтапыГрафикаОтгрузкиКонтекстноеМеню" id="164"/>
+									<AutoCommandBar name="ЭтапыГрафикаОтгрузкиКоманднаяПанель" id="165"/>
+									<ExtendedTooltip name="ЭтапыГрафикаОтгрузкиРасширеннаяПодсказка" id="166"/>
+									<SearchStringAddition name="ЭтапыГрафикаОтгрузкиСтрокаПоиска" id="167">
+										<AdditionSource>
+											<Item>ЭтапыГрафикаОтгрузки</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ЭтапыГрафикаОтгрузкиСтрокаПоискаКонтекстноеМеню" id="168"/>
+										<ExtendedTooltip name="ЭтапыГрафикаОтгрузкиСтрокаПоискаРасширеннаяПодсказка" id="169"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ЭтапыГрафикаОтгрузкиСостояниеПросмотра" id="170">
+										<AdditionSource>
+											<Item>ЭтапыГрафикаОтгрузки</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ЭтапыГрафикаОтгрузкиСостояниеПросмотраКонтекстноеМеню" id="171"/>
+										<ExtendedTooltip name="ЭтапыГрафикаОтгрузкиСостояниеПросмотраРасширеннаяПодсказка" id="172"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ЭтапыГрафикаОтгрузкиУправлениеПоиском" id="173">
+										<AdditionSource>
+											<Item>ЭтапыГрафикаОтгрузки</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ЭтапыГрафикаОтгрузкиУправлениеПоискомКонтекстноеМеню" id="174"/>
+										<ExtendedTooltip name="ЭтапыГрафикаОтгрузкиУправлениеПоискомРасширеннаяПодсказка" id="175"/>
+									</SearchControlAddition>
 									<Events>
-										<Event name="OnChange">ЭтапыГрафикаОплатыПроцентПлатежаПриИзменении</Event>
+										<Event name="AfterDeleteRow">ЭтапыГрафикаОтгрузкиПослеУдаления</Event>
 									</Events>
-								</InputField>
-								<InputField name="ЭтапыГрафикаОплатыСуммаПлатежа" id="30">
-									<DataPath>Объект.ЭтапыГрафикаОплаты.СуммаПлатежа</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<FooterDataPath>Объект.ЭтапыГрафикаОплаты.TotalСуммаПлатежа</FooterDataPath>
-									<ContextMenu name="ЭтапыГрафикаОплатыСуммаПлатежаКонтекстноеМеню" id="31"/>
-									<ExtendedTooltip name="ЭтапыГрафикаОплатыСуммаПлатежаРасширеннаяПодсказка" id="129"/>
-									<Events>
-										<Event name="OnChange">ЭтапыГрафикаОплатыСуммаПлатежаПриИзменении</Event>
-									</Events>
-								</InputField>
-								<InputField name="ЭтапыГрафикаОплатыКомментарий" id="67">
-									<DataPath>Объект.ЭтапыГрафикаОплаты.Комментарий</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ЭтапыГрафикаОплатыКомментарийКонтекстноеМеню" id="68"/>
-									<ExtendedTooltip name="ЭтапыГрафикаОплатыКомментарийРасширеннаяПодсказка" id="130"/>
-								</InputField>
+									<ChildItems>
+										<InputField name="ЭтапыГрафикаОтгрузкиЗадачаПроекта" id="235">
+											<DataPath>Объект.ЭтапыГрафикаОтгрузки.ЗадачаПроекта</DataPath>
+											<UserVisible>
+												<xr:Common>false</xr:Common>
+											</UserVisible>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ЭтапыГрафикаОтгрузкиЗадачаПроектаКонтекстноеМеню" id="236"/>
+											<ExtendedTooltip name="ЭтапыГрафикаОтгрузкиЗадачаПроектаРасширеннаяПодсказка" id="237"/>
+										</InputField>
+										<LabelField name="ЭтапыГрафикаОтгрузкиНомерСтроки" id="176">
+											<DataPath>Объект.ЭтапыГрафикаОтгрузки.LineNumber</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ЭтапыГрафикаОтгрузкиНомерСтрокиКонтекстноеМеню" id="177"/>
+											<ExtendedTooltip name="ЭтапыГрафикаОтгрузкиНомерСтрокиРасширеннаяПодсказка" id="178"/>
+										</LabelField>
+										<InputField name="ЭтапыГрафикаОтгрузкиДатаОтгрузки" id="179">
+											<DataPath>Объект.ЭтапыГрафикаОтгрузки.ДатаОтгрузки</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ЭтапыГрафикаОтгрузкиДатаОтгрузкиКонтекстноеМеню" id="180"/>
+											<ExtendedTooltip name="ЭтапыГрафикаОтгрузкиДатаОтгрузкиРасширеннаяПодсказка" id="181"/>
+										</InputField>
+										<InputField name="ЭтапыГрафикаОтгрузкиПроцентОтгрузки" id="185">
+											<DataPath>Объект.ЭтапыГрафикаОтгрузки.ПроцентОтгрузки</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<FooterDataPath>Объект.ЭтапыГрафикаОтгрузки.TotalПроцентОтгрузки</FooterDataPath>
+											<ContextMenu name="ЭтапыГрафикаОтгрузкиПроцентОтгрузкиКонтекстноеМеню" id="186"/>
+											<ExtendedTooltip name="ЭтапыГрафикаОтгрузкиПроцентОтгрузкиРасширеннаяПодсказка" id="187"/>
+											<Events>
+												<Event name="OnChange">ЭтапыГрафикаОтгрузкиПроцентОтгрузкиПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="ЭтапыГрафикаОтгрузкиСуммаОтгрузки" id="182">
+											<DataPath>Объект.ЭтапыГрафикаОтгрузки.СуммаОтгрузки</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<FooterDataPath>Объект.ЭтапыГрафикаОтгрузки.TotalСуммаОтгрузки</FooterDataPath>
+											<ContextMenu name="ЭтапыГрафикаОтгрузкиСуммаОтгрузкиКонтекстноеМеню" id="183"/>
+											<ExtendedTooltip name="ЭтапыГрафикаОтгрузкиСуммаОтгрузкиРасширеннаяПодсказка" id="184"/>
+											<Events>
+												<Event name="OnChange">ЭтапыГрафикаОтгрузкиСуммаОтгрузкиПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="ЭтапыГрафикаОтгрузкиКомментарий" id="188">
+											<DataPath>Объект.ЭтапыГрафикаОтгрузки.Комментарий</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ЭтапыГрафикаОтгрузкиКомментарийКонтекстноеМеню" id="189"/>
+											<ExtendedTooltip name="ЭтапыГрафикаОтгрузкиКомментарийРасширеннаяПодсказка" id="190"/>
+										</InputField>
+									</ChildItems>
+								</Table>
 							</ChildItems>
-						</Table>
-					</ChildItems>
-				</Page>
-				<Page name="ГруппаКомментарий" id="74">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Комментарий</v8:content>
-						</v8:item>
-					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Группа комментарий</v8:content>
-						</v8:item>
-					</ToolTip>
-					<ExtendedTooltip name="ГруппаКомментарийРасширеннаяПодсказка" id="131"/>
-					<ChildItems>
-						<TextDocumentField name="Комментарий" id="75">
-							<DataPath>Объект.Комментарий</DataPath>
-							<TitleLocation>None</TitleLocation>
-							<ContextMenu name="КомментарийКонтекстноеМеню" id="76"/>
-							<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="132"/>
-						</TextDocumentField>
-						<UsualGroup name="Группа3" id="140">
-							<Group>Horizontal</Group>
-							<Representation>None</Representation>
-							<ShowTitle>false</ShowTitle>
-							<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="141"/>
+						</Page>
+						<Page name="ГруппаЭтапыГрафикаОплаты" id="22">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Этапы графика оплаты</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ГруппаЭтапыГрафикаОплатыРасширеннаяПодсказка" id="108"/>
 							<ChildItems>
-								<InputField name="Соглашение" id="137">
-									<DataPath>Объект.Соглашение</DataPath>
-									<ContextMenu name="СоглашениеКонтекстноеМеню" id="138"/>
-									<ExtendedTooltip name="СоглашениеРасширеннаяПодсказка" id="139"/>
-								</InputField>
-								<InputField name="ПорядокРасчетов" id="142">
-									<DataPath>Объект.ПорядокРасчетов</DataPath>
-									<ContextMenu name="ПорядокРасчетовКонтекстноеМеню" id="143"/>
-									<ExtendedTooltip name="ПорядокРасчетовРасширеннаяПодсказка" id="144"/>
-								</InputField>
+								<UsualGroup name="Группа1" id="41">
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="109"/>
+									<ChildItems>
+										<InputField name="Смещение" id="44">
+											<DataPath>Смещение</DataPath>
+											<SpinButton>true</SpinButton>
+											<ContextMenu name="СмещениеКонтекстноеМеню" id="45"/>
+											<ExtendedTooltip name="СмещениеРасширеннаяПодсказка" id="111"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+								<Table name="ЭтапыГрафикаОплаты" id="23">
+									<Representation>List</Representation>
+									<Footer>true</Footer>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<DataPath>Объект.ЭтапыГрафикаОплаты</DataPath>
+									<SearchStringLocation>None</SearchStringLocation>
+									<ViewStatusLocation>None</ViewStatusLocation>
+									<SearchControlLocation>None</SearchControlLocation>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="ЭтапыГрафикаОплатыКонтекстноеМеню" id="24"/>
+									<AutoCommandBar name="ЭтапыГрафикаОплатыКоманднаяПанель" id="25"/>
+									<ExtendedTooltip name="ЭтапыГрафикаОплатыРасширеннаяПодсказка" id="116"/>
+									<SearchStringAddition name="ЭтапыГрафикаОплатыСтрокаПоиска" id="117">
+										<AdditionSource>
+											<Item>ЭтапыГрафикаОплаты</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ЭтапыГрафикаОплатыСтрокаПоискаКонтекстноеМеню" id="118"/>
+										<ExtendedTooltip name="ЭтапыГрафикаОплатыСтрокаПоискаРасширеннаяПодсказка" id="119"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ЭтапыГрафикаОплатыСостояниеПросмотра" id="120">
+										<AdditionSource>
+											<Item>ЭтапыГрафикаОплаты</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ЭтапыГрафикаОплатыСостояниеПросмотраКонтекстноеМеню" id="121"/>
+										<ExtendedTooltip name="ЭтапыГрафикаОплатыСостояниеПросмотраРасширеннаяПодсказка" id="122"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ЭтапыГрафикаОплатыУправлениеПоиском" id="123">
+										<AdditionSource>
+											<Item>ЭтапыГрафикаОплаты</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ЭтапыГрафикаОплатыУправлениеПоискомКонтекстноеМеню" id="124"/>
+										<ExtendedTooltip name="ЭтапыГрафикаОплатыУправлениеПоискомРасширеннаяПодсказка" id="125"/>
+									</SearchControlAddition>
+									<Events>
+										<Event name="AfterDeleteRow">ЭтапыГрафикаОплатыПослеУдаления</Event>
+									</Events>
+									<ChildItems>
+										<InputField name="ЭтапыГрафикаОплатыЗадачаПроекта" id="232">
+											<DataPath>Объект.ЭтапыГрафикаОплаты.ЗадачаПроекта</DataPath>
+											<UserVisible>
+												<xr:Common>false</xr:Common>
+											</UserVisible>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ЭтапыГрафикаОплатыЗадачаПроектаКонтекстноеМеню" id="233"/>
+											<ExtendedTooltip name="ЭтапыГрафикаОплатыЗадачаПроектаРасширеннаяПодсказка" id="234"/>
+										</InputField>
+										<LabelField name="ЭтапыГрафикаОплатыНомерСтроки" id="26">
+											<DataPath>Объект.ЭтапыГрафикаОплаты.LineNumber</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ЭтапыГрафикаОплатыНомерСтрокиКонтекстноеМеню" id="27"/>
+											<ExtendedTooltip name="ЭтапыГрафикаОплатыНомерСтрокиРасширеннаяПодсказка" id="126"/>
+										</LabelField>
+										<InputField name="ЭтапыГрафикаОплатыДатаПлатежа" id="28">
+											<DataPath>Объект.ЭтапыГрафикаОплаты.ДатаПлатежа</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ЭтапыГрафикаОплатыДатаПлатежаКонтекстноеМеню" id="29"/>
+											<ExtendedTooltip name="ЭтапыГрафикаОплатыДатаПлатежаРасширеннаяПодсказка" id="127"/>
+										</InputField>
+										<InputField name="ЭтапыГрафикаОплатыПроцентПлатежа" id="32">
+											<DataPath>Объект.ЭтапыГрафикаОплаты.ПроцентПлатежа</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<FooterDataPath>Объект.ЭтапыГрафикаОплаты.TotalПроцентПлатежа</FooterDataPath>
+											<ContextMenu name="ЭтапыГрафикаОплатыПроцентПлатежаКонтекстноеМеню" id="33"/>
+											<ExtendedTooltip name="ЭтапыГрафикаОплатыПроцентПлатежаРасширеннаяПодсказка" id="128"/>
+											<Events>
+												<Event name="OnChange">ЭтапыГрафикаОплатыПроцентПлатежаПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="ЭтапыГрафикаОплатыСуммаПлатежа" id="30">
+											<DataPath>Объект.ЭтапыГрафикаОплаты.СуммаПлатежа</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<FooterDataPath>Объект.ЭтапыГрафикаОплаты.TotalСуммаПлатежа</FooterDataPath>
+											<ContextMenu name="ЭтапыГрафикаОплатыСуммаПлатежаКонтекстноеМеню" id="31"/>
+											<ExtendedTooltip name="ЭтапыГрафикаОплатыСуммаПлатежаРасширеннаяПодсказка" id="129"/>
+											<Events>
+												<Event name="OnChange">ЭтапыГрафикаОплатыСуммаПлатежаПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="ЭтапыГрафикаОплатыКомментарий" id="67">
+											<DataPath>Объект.ЭтапыГрафикаОплаты.Комментарий</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ЭтапыГрафикаОплатыКомментарийКонтекстноеМеню" id="68"/>
+											<ExtendedTooltip name="ЭтапыГрафикаОплатыКомментарийРасширеннаяПодсказка" id="130"/>
+										</InputField>
+									</ChildItems>
+								</Table>
 							</ChildItems>
-						</UsualGroup>
+						</Page>
 					</ChildItems>
-				</Page>
+				</Pages>
 			</ChildItems>
-		</Pages>
+		</UsualGroup>
 		<LabelField name="ИсполнительДокумента" id="5">
 			<DataPath>Объект.ИсполнительДокумента</DataPath>
 			<EditMode>EnterOnInput</EditMode>
@@ -842,6 +937,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ОтгрузАванс30Проц</Action>
+		</Command>
+		<Command name="ПоГрафикуОтгрузки" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>По графику отгрузки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>По графику отгрузки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПоГрафикуОтгрузки</Action>
 		</Command>
 	</Commands>
 </Form>
