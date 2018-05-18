@@ -457,6 +457,164 @@
 						</CheckBoxField>
 					</ChildItems>
 				</Page>
+				<Page name="ГруппаГрафикОтгрузки" id="170">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа график отгрузки</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа график отгрузки</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаГрафикОтгрузкиРасширеннаяПодсказка" id="171"/>
+					<ChildItems>
+						<Table name="ЭтапыГрафикаОтгрузки" id="172">
+							<Footer>true</Footer>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.ЭтапыГрафикаОтгрузки</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ЭтапыГрафикаОтгрузкиКонтекстноеМеню" id="173"/>
+							<AutoCommandBar name="ЭтапыГрафикаОтгрузкиКоманднаяПанель" id="174">
+								<ChildItems>
+									<Button name="ЭтапыГрафикаОтгрузкиПересчитатьГрафикОтгрузки" id="206">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ПересчитатьГрафикОтгрузки</CommandName>
+										<ExtendedTooltip name="ЭтапыГрафикаОтгрузкиПересчитатьГрафикОтгрузкиРасширеннаяПодсказка" id="207"/>
+									</Button>
+									<Button name="ЭтапыГрафикаОтгрузкиСкорректироватьПоДоговорамОтгр" id="208">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.СкорректироватьПоДоговорамОтгр</CommandName>
+										<ExtendedTooltip name="ЭтапыГрафикаОтгрузкиСкорректироватьПоДоговорамОтгрРасширеннаяПодсказка" id="209"/>
+									</Button>
+									<ButtonGroup name="ЭтапыГрафикаОтгрузкиГруппа1" id="218">
+										<ExtendedTooltip name="ЭтапыГрафикаОтгрузкиГруппа1РасширеннаяПодсказка" id="219"/>
+										<ChildItems>
+											<Button name="ЭтапыГрафикаОтгрузкиУстановитьФлажкиФиксированоОтгр" id="210">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.УстановитьФлажкиФиксированоОтгр</CommandName>
+												<ExtendedTooltip name="ЭтапыГрафикаОтгрузкиУстановитьФлажкиФиксированоОтгрРасширеннаяПодсказка" id="211"/>
+											</Button>
+											<Button name="ЭтапыГрафикаОтгрузкиСнятьФлажкиФиксированоОтгр" id="212">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.СнятьФлажкиФиксированоОтгр</CommandName>
+												<ExtendedTooltip name="ЭтапыГрафикаОтгрузкиСнятьФлажкиФиксированоОтгрРасширеннаяПодсказка" id="213"/>
+											</Button>
+										</ChildItems>
+									</ButtonGroup>
+									<ButtonGroup name="ЭтапыГрафикаОтгрузкиГруппа2" id="220">
+										<ExtendedTooltip name="ЭтапыГрафикаОтгрузкиГруппа2РасширеннаяПодсказка" id="221"/>
+										<ChildItems>
+											<Button name="ЭтапыГрафикаОтгрузкиУстановитьФлажкиГарантированоОтгр" id="214">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.УстановитьФлажкиГарантированоОтгр</CommandName>
+												<ExtendedTooltip name="ЭтапыГрафикаОтгрузкиУстановитьФлажкиГарантированоОтгрРасширеннаяПодсказка" id="215"/>
+											</Button>
+											<Button name="ЭтапыГрафикаОтгрузкиСнятьФлажкиГарантированоОтгр" id="216">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.СнятьФлажкиГарантированоОтгр</CommandName>
+												<ExtendedTooltip name="ЭтапыГрафикаОтгрузкиСнятьФлажкиГарантированоОтгрРасширеннаяПодсказка" id="217"/>
+											</Button>
+										</ChildItems>
+									</ButtonGroup>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ЭтапыГрафикаОтгрузкиРасширеннаяПодсказка" id="175"/>
+							<SearchStringAddition name="ЭтапыГрафикаОтгрузкиСтрокаПоиска" id="176">
+								<AdditionSource>
+									<Item>ЭтапыГрафикаОтгрузки</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ЭтапыГрафикаОтгрузкиСтрокаПоискаКонтекстноеМеню" id="177"/>
+								<ExtendedTooltip name="ЭтапыГрафикаОтгрузкиСтрокаПоискаРасширеннаяПодсказка" id="178"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ЭтапыГрафикаОтгрузкиСостояниеПросмотра" id="179">
+								<AdditionSource>
+									<Item>ЭтапыГрафикаОтгрузки</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ЭтапыГрафикаОтгрузкиСостояниеПросмотраКонтекстноеМеню" id="180"/>
+								<ExtendedTooltip name="ЭтапыГрафикаОтгрузкиСостояниеПросмотраРасширеннаяПодсказка" id="181"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ЭтапыГрафикаОтгрузкиУправлениеПоиском" id="182">
+								<AdditionSource>
+									<Item>ЭтапыГрафикаОтгрузки</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ЭтапыГрафикаОтгрузкиУправлениеПоискомКонтекстноеМеню" id="183"/>
+								<ExtendedTooltip name="ЭтапыГрафикаОтгрузкиУправлениеПоискомРасширеннаяПодсказка" id="184"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ЭтапыГрафикаОтгрузкиНомерСтроки" id="185">
+									<DataPath>Объект.ЭтапыГрафикаОтгрузки.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ЭтапыГрафикаОтгрузкиНомерСтрокиКонтекстноеМеню" id="186"/>
+									<ExtendedTooltip name="ЭтапыГрафикаОтгрузкиНомерСтрокиРасширеннаяПодсказка" id="187"/>
+								</LabelField>
+								<InputField name="ЭтапыГрафикаОтгрузкиДатаОтгрузки" id="188">
+									<DataPath>Объект.ЭтапыГрафикаОтгрузки.ДатаОтгрузки</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ЭтапыГрафикаОтгрузкиДатаОтгрузкиКонтекстноеМеню" id="189"/>
+									<ExtendedTooltip name="ЭтапыГрафикаОтгрузкиДатаОтгрузкиРасширеннаяПодсказка" id="190"/>
+									<Events>
+										<Event name="OnChange">ЭтапыГрафикаОтгрузкиДатаОтгрузкиПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ЭтапыГрафикаОтгрузкиПроцентОтгрузки" id="194">
+									<DataPath>Объект.ЭтапыГрафикаОтгрузки.ПроцентОтгрузки</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<FooterDataPath>Объект.ЭтапыГрафикаОтгрузки.TotalПроцентОтгрузки</FooterDataPath>
+									<ContextMenu name="ЭтапыГрафикаОтгрузкиПроцентОтгрузкиКонтекстноеМеню" id="195"/>
+									<ExtendedTooltip name="ЭтапыГрафикаОтгрузкиПроцентОтгрузкиРасширеннаяПодсказка" id="196"/>
+									<Events>
+										<Event name="OnChange">ЭтапыГрафикаОтгрузкиПроцентОтгрузкиПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ЭтапыГрафикаОтгрузкиСуммаОтгрузки" id="191">
+									<DataPath>Объект.ЭтапыГрафикаОтгрузки.СуммаОтгрузки</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<FooterDataPath>Объект.ЭтапыГрафикаОтгрузки.TotalСуммаОтгрузки</FooterDataPath>
+									<ContextMenu name="ЭтапыГрафикаОтгрузкиСуммаОтгрузкиКонтекстноеМеню" id="192"/>
+									<ExtendedTooltip name="ЭтапыГрафикаОтгрузкиСуммаОтгрузкиРасширеннаяПодсказка" id="193"/>
+									<Events>
+										<Event name="OnChange">ЭтапыГрафикаОтгрузкиСуммаОтгрузкиПриИзменении</Event>
+									</Events>
+								</InputField>
+								<CheckBoxField name="ЭтапыГрафикаОтгрузкиФиксировано" id="200">
+									<DataPath>Объект.ЭтапыГрафикаОтгрузки.Фиксировано</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ЭтапыГрафикаОтгрузкиФиксированоКонтекстноеМеню" id="201"/>
+									<ExtendedTooltip name="ЭтапыГрафикаОтгрузкиФиксированоРасширеннаяПодсказка" id="202"/>
+								</CheckBoxField>
+								<CheckBoxField name="ЭтапыГрафикаОтгрузкиГарантировано" id="203">
+									<DataPath>Объект.ЭтапыГрафикаОтгрузки.Гарантировано</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ЭтапыГрафикаОтгрузкиГарантированоКонтекстноеМеню" id="204"/>
+									<ExtendedTooltip name="ЭтапыГрафикаОтгрузкиГарантированоРасширеннаяПодсказка" id="205"/>
+								</CheckBoxField>
+								<InputField name="ЭтапыГрафикаОтгрузкиКомментарий" id="197">
+									<DataPath>Объект.ЭтапыГрафикаОтгрузки.Комментарий</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ЭтапыГрафикаОтгрузкиКомментарийКонтекстноеМеню" id="198"/>
+									<ExtendedTooltip name="ЭтапыГрафикаОтгрузкиКомментарийРасширеннаяПодсказка" id="199"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+						<CheckBoxField name="ОбеспеченоПрошлымиПериодами1" id="222">
+							<DataPath>Объект.ОбеспеченоПрошлымиПериодами</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ОбеспеченоПрошлымиПериодами1КонтекстноеМеню" id="223"/>
+							<ExtendedTooltip name="ОбеспеченоПрошлымиПериодами1РасширеннаяПодсказка" id="224"/>
+						</CheckBoxField>
+					</ChildItems>
+				</Page>
 			</ChildItems>
 		</Pages>
 	</ChildItems>
@@ -669,6 +827,122 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>УстановитьФлажкиГарантировано</Action>
+		</Command>
+		<Command name="ПересчитатьГрафикОтгрузки" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пересчитать график отгрузки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пересчитать график отгрузки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.Рассчитать</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПересчитатьГрафикОтгрузки</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="СкорректироватьПоДоговорамОтгр" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Скорректировать по договорам</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Скорректировать по договорам отгр</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.WriteChanges</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СкорректироватьПоДоговорамОтгр</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="УстановитьФлажкиГарантированоОтгр" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить флажки гарантировано отгр</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить флажки гарантировано отгр</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>УстановитьФлажкиГарантированоОтгр</Action>
+		</Command>
+		<Command name="УстановитьФлажкиФиксированоОтгр" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить флажки фиксировано отгр</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить флажки фиксировано отгр</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>УстановитьФлажкиФиксированоОтгр</Action>
+		</Command>
+		<Command name="СнятьФлажкиГарантированоОтгр" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять флажки гарантировано отгр</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять флажки гарантировано отгр</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СнятьФлажкиГарантированоОтгр</Action>
+		</Command>
+		<Command name="СнятьФлажкиФиксированоОтгр" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять флажки фиксировано отгр</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять флажки фиксировано отгр</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СнятьФлажкиФиксированоОтгр</Action>
 		</Command>
 	</Commands>
 	<CommandInterface>
