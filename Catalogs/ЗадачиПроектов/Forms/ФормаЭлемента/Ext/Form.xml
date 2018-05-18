@@ -615,6 +615,99 @@
 						</CheckBoxField>
 					</ChildItems>
 				</Page>
+				<Page name="ГруппаГрафикОтгрузкиПоДоговорам" id="225">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа график отгрузки по договорам</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа график отгрузки по договорам</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаГрафикОтгрузкиПоДоговорамРасширеннаяПодсказка" id="226"/>
+					<ChildItems>
+						<Button name="ЗаполнитьГрафикиОтгрузкиПоДоговорам" id="255">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ЗаполнитьГрафикиОтгрузкиПоДоговорам</CommandName>
+							<ExtendedTooltip name="ЗаполнитьГрафикиОтгрузкиПоДоговорамРасширеннаяПодсказка" id="256"/>
+						</Button>
+						<Table name="ЭтапыГрафикаОтгрузкиПоДоговорам" id="227">
+							<Footer>true</Footer>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.ЭтапыГрафикаОтгрузкиПоДоговорам</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ЭтапыГрафикаОтгрузкиПоДоговорамКонтекстноеМеню" id="228"/>
+							<AutoCommandBar name="ЭтапыГрафикаОтгрузкиПоДоговорамКоманднаяПанель" id="229">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ЭтапыГрафикаОтгрузкиПоДоговорамРасширеннаяПодсказка" id="230"/>
+							<SearchStringAddition name="ЭтапыГрафикаОтгрузкиПоДоговорамСтрокаПоиска" id="231">
+								<AdditionSource>
+									<Item>ЭтапыГрафикаОтгрузкиПоДоговорам</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ЭтапыГрафикаОтгрузкиПоДоговорамСтрокаПоискаКонтекстноеМеню" id="232"/>
+								<ExtendedTooltip name="ЭтапыГрафикаОтгрузкиПоДоговорамСтрокаПоискаРасширеннаяПодсказка" id="233"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ЭтапыГрафикаОтгрузкиПоДоговорамСостояниеПросмотра" id="234">
+								<AdditionSource>
+									<Item>ЭтапыГрафикаОтгрузкиПоДоговорам</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ЭтапыГрафикаОтгрузкиПоДоговорамСостояниеПросмотраКонтекстноеМеню" id="235"/>
+								<ExtendedTooltip name="ЭтапыГрафикаОтгрузкиПоДоговорамСостояниеПросмотраРасширеннаяПодсказка" id="236"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ЭтапыГрафикаОтгрузкиПоДоговорамУправлениеПоиском" id="237">
+								<AdditionSource>
+									<Item>ЭтапыГрафикаОтгрузкиПоДоговорам</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ЭтапыГрафикаОтгрузкиПоДоговорамУправлениеПоискомКонтекстноеМеню" id="238"/>
+								<ExtendedTooltip name="ЭтапыГрафикаОтгрузкиПоДоговорамУправлениеПоискомРасширеннаяПодсказка" id="239"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ЭтапыГрафикаОтгрузкиПоДоговорамНомерСтроки" id="240">
+									<DataPath>Объект.ЭтапыГрафикаОтгрузкиПоДоговорам.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ЭтапыГрафикаОтгрузкиПоДоговорамНомерСтрокиКонтекстноеМеню" id="241"/>
+									<ExtendedTooltip name="ЭтапыГрафикаОтгрузкиПоДоговорамНомерСтрокиРасширеннаяПодсказка" id="242"/>
+								</LabelField>
+								<InputField name="ЭтапыГрафикаОтгрузкиПоДоговорамДатаОтгрузки" id="243">
+									<DataPath>Объект.ЭтапыГрафикаОтгрузкиПоДоговорам.ДатаОтгрузки</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ЭтапыГрафикаОтгрузкиПоДоговорамДатаОтгрузкиКонтекстноеМеню" id="244"/>
+									<ExtendedTooltip name="ЭтапыГрафикаОтгрузкиПоДоговорамДатаОтгрузкиРасширеннаяПодсказка" id="245"/>
+								</InputField>
+								<InputField name="ЭтапыГрафикаОтгрузкиПоДоговорамСуммаОтгрузки" id="246">
+									<DataPath>Объект.ЭтапыГрафикаОтгрузкиПоДоговорам.СуммаОтгрузки</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<FooterDataPath>Объект.ЭтапыГрафикаОтгрузкиПоДоговорам.TotalСуммаОтгрузки</FooterDataPath>
+									<ContextMenu name="ЭтапыГрафикаОтгрузкиПоДоговорамСуммаОтгрузкиКонтекстноеМеню" id="247"/>
+									<ExtendedTooltip name="ЭтапыГрафикаОтгрузкиПоДоговорамСуммаОтгрузкиРасширеннаяПодсказка" id="248"/>
+								</InputField>
+								<InputField name="ЭтапыГрафикаОтгрузкиПоДоговорамПроцентОтгрузки" id="249">
+									<DataPath>Объект.ЭтапыГрафикаОтгрузкиПоДоговорам.ПроцентОтгрузки</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<FooterDataPath>Объект.ЭтапыГрафикаОтгрузкиПоДоговорам.TotalПроцентОтгрузки</FooterDataPath>
+									<ContextMenu name="ЭтапыГрафикаОтгрузкиПоДоговорамПроцентОтгрузкиКонтекстноеМеню" id="250"/>
+									<ExtendedTooltip name="ЭтапыГрафикаОтгрузкиПоДоговорамПроцентОтгрузкиРасширеннаяПодсказка" id="251"/>
+								</InputField>
+								<InputField name="ЭтапыГрафикаОтгрузкиПоДоговорамКомментарий" id="252">
+									<DataPath>Объект.ЭтапыГрафикаОтгрузкиПоДоговорам.Комментарий</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ЭтапыГрафикаОтгрузкиПоДоговорамКомментарийКонтекстноеМеню" id="253"/>
+									<ExtendedTooltip name="ЭтапыГрафикаОтгрузкиПоДоговорамКомментарийРасширеннаяПодсказка" id="254"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
 			</ChildItems>
 		</Pages>
 	</ChildItems>
@@ -943,6 +1036,21 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>СнятьФлажкиФиксированоОтгр</Action>
+		</Command>
+		<Command name="ЗаполнитьГрафикиОтгрузкиПоДоговорам" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить графики отгрузки по договорам</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить графики отгрузки по договорам</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьГрафикиОтгрузкиПоДоговорам</Action>
 		</Command>
 	</Commands>
 	<CommandInterface>
