@@ -57,6 +57,7 @@
 					<v8:content>1. Основное</v8:content>
 				</v8:item>
 			</Title>
+			<TitleTextColor>auto</TitleTextColor>
 			<TitleFont ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
 			<Group>Vertical</Group>
 			<Representation>None</Representation>
@@ -99,6 +100,7 @@
 					<v8:content>2. Действия при ошибках</v8:content>
 				</v8:item>
 			</Title>
+			<TitleTextColor>auto</TitleTextColor>
 			<TitleFont ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
 			<ToolTip>
 				<v8:item>
@@ -169,6 +171,7 @@
 					<v8:content>3. Дополнительно</v8:content>
 				</v8:item>
 			</Title>
+			<TitleTextColor>auto</TitleTextColor>
 			<TitleFont ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
 			<Group>Vertical</Group>
 			<Representation>None</Representation>
@@ -237,6 +240,7 @@
 					<v8:content>4. Метаданные</v8:content>
 				</v8:item>
 			</Title>
+			<TitleTextColor>auto</TitleTextColor>
 			<TitleFont ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
 			<Group>Vertical</Group>
 			<Representation>None</Representation>
@@ -282,9 +286,11 @@
 					<DataPath>СообщенияПользователюИОписаниеИнформацииОбОшибке</DataPath>
 					<ReadOnly>true</ReadOnly>
 					<SkipOnInput>true</SkipOnInput>
+					<TitleFont kind="AutoFont"/>
 					<TitleLocation>None</TitleLocation>
 					<Height>4</Height>
 					<MultiLine>true</MultiLine>
+					<TextColor>auto</TextColor>
 					<ContextMenu name="СообщенияИОписаниеИнформацииОбОшибкеКонтекстноеМеню" id="28"/>
 					<ExtendedTooltip name="СообщенияИОписаниеИнформацииОбОшибкеExtendedTooltip" id="70"/>
 				</InputField>

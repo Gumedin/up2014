@@ -30,6 +30,7 @@
 				</Button>
 				<CheckBoxField name="ЭтоПервыйГод" id="22">
 					<DataPath>Объект.ЭтоПервыйГод</DataPath>
+					<Visible>false</Visible>
 					<EditMode>EnterOnInput</EditMode>
 					<CheckBoxType>Auto</CheckBoxType>
 					<ContextMenu name="ЭтоПервыйГодКонтекстноеМеню" id="23"/>
@@ -57,6 +58,7 @@
 				<InputField name="Наименование" id="4">
 					<DataPath>Объект.Description</DataPath>
 					<EditMode>EnterOnInput</EditMode>
+					<AutoMaxWidth>false</AutoMaxWidth>
 					<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
 					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
 				</InputField>
@@ -70,10 +72,12 @@
 		<InputField name="Контрагент" id="10">
 			<DataPath>Объект.Контрагент</DataPath>
 			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
 			<ContextMenu name="КонтрагентКонтекстноеМеню" id="11"/>
 			<ExtendedTooltip name="КонтрагентРасширеннаяПодсказка" id="12"/>
 		</InputField>
 		<Pages name="Группа3" id="41">
+			<HorizontalStretch>true</HorizontalStretch>
 			<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="42"/>
 			<ChildItems>
 				<Page name="Группа4" id="43">
@@ -88,18 +92,21 @@
 						<InputField name="ДиректорПроекта" id="28">
 							<DataPath>Объект.ДиректорПроекта</DataPath>
 							<EditMode>EnterOnInput</EditMode>
+							<AutoMaxWidth>false</AutoMaxWidth>
 							<ContextMenu name="ДиректорПроектаКонтекстноеМеню" id="29"/>
 							<ExtendedTooltip name="ДиректорПроектаРасширеннаяПодсказка" id="30"/>
 						</InputField>
 						<InputField name="Куратор" id="13">
 							<DataPath>Объект.Куратор</DataPath>
 							<EditMode>EnterOnInput</EditMode>
+							<AutoMaxWidth>false</AutoMaxWidth>
 							<ContextMenu name="КураторКонтекстноеМеню" id="14"/>
 							<ExtendedTooltip name="КураторРасширеннаяПодсказка" id="15"/>
 						</InputField>
 						<InputField name="МенеджерПроекта" id="16">
 							<DataPath>Объект.МенеджерПроекта</DataPath>
 							<EditMode>EnterOnInput</EditMode>
+							<AutoMaxWidth>false</AutoMaxWidth>
 							<ContextMenu name="МенеджерПроектаКонтекстноеМеню" id="17"/>
 							<ExtendedTooltip name="МенеджерПроектаРасширеннаяПодсказка" id="18"/>
 						</InputField>
@@ -114,14 +121,13 @@
 					</Title>
 					<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="46"/>
 					<ChildItems>
-						<InputField name="Комментарий" id="19">
+						<TextDocumentField name="Комментарий" id="19">
 							<DataPath>Объект.Комментарий</DataPath>
 							<TitleLocation>None</TitleLocation>
 							<EditMode>EnterOnInput</EditMode>
-							<MultiLine>true</MultiLine>
 							<ContextMenu name="КомментарийКонтекстноеМеню" id="20"/>
 							<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="21"/>
-						</InputField>
+						</TextDocumentField>
 					</ChildItems>
 				</Page>
 			</ChildItems>
@@ -198,4 +204,44 @@
 			<Representation>TextPicture</Representation>
 		</Command>
 	</Commands>
+	<CommandInterface>
+		<NavigationPanel>
+			<Item>
+				<Command>InformationRegister.БюджетДоходовИРасходов.StandardCommand.OpenByValue.Проект</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelSeeAlso</CommandGroup>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>Catalog.ЗадачиПроектов.StandardCommand.OpenByValue</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelImportant</CommandGroup>
+				<Index>3</Index>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>CommonCommand.ПрисоединенныеФайлыКОбъекту</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelSeeAlso</CommandGroup>
+				<Index>1</Index>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>Catalog.Проекты.Command.СписокСметы</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelImportant</CommandGroup>
+				<Index>4</Index>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+		</NavigationPanel>
+	</CommandInterface>
 </Form>
