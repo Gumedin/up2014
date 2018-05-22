@@ -349,13 +349,22 @@
 												</InputField>
 												<InputField name="ЗадачиПроектаСуммаОстатокНеОбеспечено" id="65">
 													<DataPath>Объект.ЗадачиПроекта.СуммаНеОбеспечено</DataPath>
-													<ReadOnly>true</ReadOnly>
 													<EditMode>EnterOnInput</EditMode>
 													<FooterDataPath>ИтогНеОбеспечено</FooterDataPath>
 													<HorizontalStretch>false</HorizontalStretch>
 													<ContextMenu name="ЗадачиПроектаСуммаОстатокНеОбеспеченоКонтекстноеМеню" id="66"/>
 													<ExtendedTooltip name="ЗадачиПроектаСуммаОстатокНеОбеспеченоРасширеннаяПодсказка" id="107"/>
+													<Events>
+														<Event name="OnChange">ЗадачиПроектаСуммаПриИзменении</Event>
+													</Events>
 												</InputField>
+												<CheckBoxField name="ЗадачиПроектаИзменено" id="324">
+													<DataPath>Объект.ЗадачиПроекта.Изменено</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ЗадачиПроектаИзмененоКонтекстноеМеню" id="325"/>
+													<ExtendedTooltip name="ЗадачиПроектаИзмененоРасширеннаяПодсказка" id="326"/>
+												</CheckBoxField>
 											</ChildItems>
 										</Table>
 									</ChildItems>
@@ -387,24 +396,25 @@
 													</Title>
 													<Width>56</Width>
 													<Group>Horizontal</Group>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
 													<ExtendedTooltip name="Группа10РасширеннаяПодсказка" id="253"/>
 													<ChildItems>
+														<Button name="ЭтапыГрафикаОтгрузкиДоговор" id="327">
+															<Type>Hyperlink</Type>
+															<CommandName>Form.Command.ОтгрузкаДоговор</CommandName>
+															<ExtendedTooltip name="ЭтапыГрафикаОтгрузкиДоговорРасширеннаяПодсказка" id="328"/>
+														</Button>
 														<Button name="ЭтапыГрафикаОтгрузкиОтгрузКварталы" id="195">
 															<Type>Hyperlink</Type>
-															<CommandName>Form.Command.ОтгрузКварталы</CommandName>
+															<CommandName>Form.Command.ОтгрузкаКварталы</CommandName>
 															<ExtendedTooltip name="ЭтапыГрафикаОтгрузкиОтгрузКварталыРасширеннаяПодсказка" id="196"/>
 														</Button>
 														<Button name="ЭтапыГрафикаОтгрузкиОтгрузМесяцы" id="197">
 															<Type>Hyperlink</Type>
-															<CommandName>Form.Command.ОтгрузМесяцы</CommandName>
+															<CommandName>Form.Command.ОтгрузкаМесяцы</CommandName>
 															<ExtendedTooltip name="ЭтапыГрафикаОтгрузкиОтгрузМесяцыРасширеннаяПодсказка" id="198"/>
 														</Button>
-														<InputField name="Смещение1" id="160">
-															<DataPath>Смещение</DataPath>
-															<SpinButton>true</SpinButton>
-															<ContextMenu name="Смещение1КонтекстноеМеню" id="161"/>
-															<ExtendedTooltip name="Смещение1РасширеннаяПодсказка" id="162"/>
-														</InputField>
 													</ChildItems>
 												</UsualGroup>
 												<Table name="ЭтапыГрафикаРеализации" id="163">
@@ -416,7 +426,9 @@
 													<DataPath>Объект.ЭтапыГрафикаРеализации</DataPath>
 													<RowFilter xsi:nil="true"/>
 													<ContextMenu name="ЭтапыГрафикаРеализацииКонтекстноеМеню" id="164"/>
-													<AutoCommandBar name="ЭтапыГрафикаРеализацииКоманднаяПанель" id="165"/>
+													<AutoCommandBar name="ЭтапыГрафикаРеализацииКоманднаяПанель" id="165">
+														<Autofill>false</Autofill>
+													</AutoCommandBar>
 													<ExtendedTooltip name="ЭтапыГрафикаРеализацииРасширеннаяПодсказка" id="166"/>
 													<SearchStringAddition name="ЭтапыГрафикаРеализацииСтрокаПоиска" id="167">
 														<AdditionSource>
@@ -514,8 +526,15 @@
 													</Title>
 													<HorizontalStretch>false</HorizontalStretch>
 													<Group>Horizontal</Group>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
 													<ExtendedTooltip name="Группа11РасширеннаяПодсказка" id="255"/>
 													<ChildItems>
+														<Button name="ЭтапыГрафикаОплатыДоговор" id="329">
+															<Type>Hyperlink</Type>
+															<CommandName>Form.Command.ОплатаДоговор</CommandName>
+															<ExtendedTooltip name="ЭтапыГрафикаОплатыДоговорРасширеннаяПодсказка" id="330"/>
+														</Button>
 														<Button name="ЭтапыГрафикаОплатыРаспределитьПоКварталам" id="50">
 															<Type>UsualButton</Type>
 															<Visible>false</Visible>
@@ -538,6 +557,12 @@
 															<CommandName>Form.Command.Аванс30Проц</CommandName>
 															<ExtendedTooltip name="ЭтапыГрафикаОплатыАванс30ПроцРасширеннаяПодсказка" id="115"/>
 														</Button>
+														<InputField name="Смещение1" id="160">
+															<DataPath>Смещение</DataPath>
+															<SpinButton>true</SpinButton>
+															<ContextMenu name="Смещение1КонтекстноеМеню" id="161"/>
+															<ExtendedTooltip name="Смещение1РасширеннаяПодсказка" id="162"/>
+														</InputField>
 													</ChildItems>
 												</UsualGroup>
 												<Table name="ЭтапыГрафикаОплаты" id="23">
@@ -552,7 +577,9 @@
 													<SearchControlLocation>None</SearchControlLocation>
 													<RowFilter xsi:nil="true"/>
 													<ContextMenu name="ЭтапыГрафикаОплатыКонтекстноеМеню" id="24"/>
-													<AutoCommandBar name="ЭтапыГрафикаОплатыКоманднаяПанель" id="25"/>
+													<AutoCommandBar name="ЭтапыГрафикаОплатыКоманднаяПанель" id="25">
+														<Autofill>false</Autofill>
+													</AutoCommandBar>
 													<ExtendedTooltip name="ЭтапыГрафикаОплатыРасширеннаяПодсказка" id="116"/>
 													<SearchStringAddition name="ЭтапыГрафикаОплатыСтрокаПоиска" id="117">
 														<AdditionSource>
@@ -651,6 +678,184 @@
 									<ContextMenu name="КомментарийКонтекстноеМеню" id="76"/>
 									<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="132"/>
 								</TextDocumentField>
+							</ChildItems>
+						</Page>
+						<Page name="Группа1" id="262">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Договора УТ</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Horizontal</Group>
+							<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="263"/>
+							<ChildItems>
+								<UsualGroup name="Группа4" id="320">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>График реализации по договору</v8:content>
+										</v8:item>
+									</Title>
+									<TitleTextColor>style:FormTextColor</TitleTextColor>
+									<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="321"/>
+									<ChildItems>
+										<Table name="ЭтапыГрафикаОтгрузкиПоДоговорам" id="270">
+											<Footer>true</Footer>
+											<AutoInsertNewRow>true</AutoInsertNewRow>
+											<EnableStartDrag>true</EnableStartDrag>
+											<EnableDrag>true</EnableDrag>
+											<DataPath>Объект.ЭтапыГрафикаОтгрузкиПоДоговорам</DataPath>
+											<RowFilter xsi:nil="true"/>
+											<ContextMenu name="ЭтапыГрафикаОтгрузкиПоДоговорамКонтекстноеМеню" id="271"/>
+											<AutoCommandBar name="ЭтапыГрафикаОтгрузкиПоДоговорамКоманднаяПанель" id="272">
+												<Autofill>false</Autofill>
+											</AutoCommandBar>
+											<ExtendedTooltip name="ЭтапыГрафикаОтгрузкиПоДоговорамРасширеннаяПодсказка" id="273"/>
+											<SearchStringAddition name="ЭтапыГрафикаОтгрузкиПоДоговорамСтрокаПоиска" id="274">
+												<AdditionSource>
+													<Item>ЭтапыГрафикаОтгрузкиПоДоговорам</Item>
+													<Type>SearchStringRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="ЭтапыГрафикаОтгрузкиПоДоговорамСтрокаПоискаКонтекстноеМеню" id="275"/>
+												<ExtendedTooltip name="ЭтапыГрафикаОтгрузкиПоДоговорамСтрокаПоискаРасширеннаяПодсказка" id="276"/>
+											</SearchStringAddition>
+											<ViewStatusAddition name="ЭтапыГрафикаОтгрузкиПоДоговорамСостояниеПросмотра" id="277">
+												<AdditionSource>
+													<Item>ЭтапыГрафикаОтгрузкиПоДоговорам</Item>
+													<Type>ViewStatusRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="ЭтапыГрафикаОтгрузкиПоДоговорамСостояниеПросмотраКонтекстноеМеню" id="278"/>
+												<ExtendedTooltip name="ЭтапыГрафикаОтгрузкиПоДоговорамСостояниеПросмотраРасширеннаяПодсказка" id="279"/>
+											</ViewStatusAddition>
+											<SearchControlAddition name="ЭтапыГрафикаОтгрузкиПоДоговорамУправлениеПоиском" id="280">
+												<AdditionSource>
+													<Item>ЭтапыГрафикаОтгрузкиПоДоговорам</Item>
+													<Type>SearchControl</Type>
+												</AdditionSource>
+												<ContextMenu name="ЭтапыГрафикаОтгрузкиПоДоговорамУправлениеПоискомКонтекстноеМеню" id="281"/>
+												<ExtendedTooltip name="ЭтапыГрафикаОтгрузкиПоДоговорамУправлениеПоискомРасширеннаяПодсказка" id="282"/>
+											</SearchControlAddition>
+											<ChildItems>
+												<LabelField name="ЭтапыГрафикаОтгрузкиПоДоговорамНомерСтроки" id="283">
+													<DataPath>Объект.ЭтапыГрафикаОтгрузкиПоДоговорам.LineNumber</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ЭтапыГрафикаОтгрузкиПоДоговорамНомерСтрокиКонтекстноеМеню" id="284"/>
+													<ExtendedTooltip name="ЭтапыГрафикаОтгрузкиПоДоговорамНомерСтрокиРасширеннаяПодсказка" id="285"/>
+												</LabelField>
+												<InputField name="ЭтапыГрафикаОтгрузкиПоДоговорамДатаОтгрузки" id="286">
+													<DataPath>Объект.ЭтапыГрафикаОтгрузкиПоДоговорам.ДатаОтгрузки</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ЭтапыГрафикаОтгрузкиПоДоговорамДатаОтгрузкиКонтекстноеМеню" id="287"/>
+													<ExtendedTooltip name="ЭтапыГрафикаОтгрузкиПоДоговорамДатаОтгрузкиРасширеннаяПодсказка" id="288"/>
+												</InputField>
+												<InputField name="ЭтапыГрафикаОтгрузкиПоДоговорамТипНоменклатуры" id="334">
+													<DataPath>Объект.ЭтапыГрафикаОтгрузкиПоДоговорам.ТипНоменклатуры</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ЭтапыГрафикаОтгрузкиПоДоговорамТипНоменклатурыКонтекстноеМеню" id="335"/>
+													<ExtendedTooltip name="ЭтапыГрафикаОтгрузкиПоДоговорамТипНоменклатурыРасширеннаяПодсказка" id="336"/>
+												</InputField>
+												<InputField name="ЭтапыГрафикаОтгрузкиПоДоговорамСуммаОтгрузки" id="289">
+													<DataPath>Объект.ЭтапыГрафикаОтгрузкиПоДоговорам.СуммаОтгрузки</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<FooterDataPath>Объект.ЭтапыГрафикаОтгрузкиПоДоговорам.TotalСуммаОтгрузки</FooterDataPath>
+													<ContextMenu name="ЭтапыГрафикаОтгрузкиПоДоговорамСуммаОтгрузкиКонтекстноеМеню" id="290"/>
+													<ExtendedTooltip name="ЭтапыГрафикаОтгрузкиПоДоговорамСуммаОтгрузкиРасширеннаяПодсказка" id="291"/>
+												</InputField>
+												<InputField name="ЭтапыГрафикаОтгрузкиПоДоговорамПроцентОтгрузки" id="292">
+													<DataPath>Объект.ЭтапыГрафикаОтгрузкиПоДоговорам.ПроцентОтгрузки</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<FooterDataPath>Объект.ЭтапыГрафикаОтгрузкиПоДоговорам.TotalПроцентОтгрузки</FooterDataPath>
+													<ContextMenu name="ЭтапыГрафикаОтгрузкиПоДоговорамПроцентОтгрузкиКонтекстноеМеню" id="293"/>
+													<ExtendedTooltip name="ЭтапыГрафикаОтгрузкиПоДоговорамПроцентОтгрузкиРасширеннаяПодсказка" id="294"/>
+												</InputField>
+											</ChildItems>
+										</Table>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="Группа9" id="322">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>График оплаты по договору</v8:content>
+										</v8:item>
+									</Title>
+									<TitleTextColor>style:FormTextColor</TitleTextColor>
+									<ExtendedTooltip name="Группа9РасширеннаяПодсказка" id="323"/>
+									<ChildItems>
+										<Table name="ЭтапыГрафикаОплатыПоДоговорам" id="295">
+											<Footer>true</Footer>
+											<AutoInsertNewRow>true</AutoInsertNewRow>
+											<EnableStartDrag>true</EnableStartDrag>
+											<EnableDrag>true</EnableDrag>
+											<DataPath>Объект.ЭтапыГрафикаОплатыПоДоговорам</DataPath>
+											<RowFilter xsi:nil="true"/>
+											<ContextMenu name="ЭтапыГрафикаОплатыПоДоговорамКонтекстноеМеню" id="296"/>
+											<AutoCommandBar name="ЭтапыГрафикаОплатыПоДоговорамКоманднаяПанель" id="297">
+												<Autofill>false</Autofill>
+											</AutoCommandBar>
+											<ExtendedTooltip name="ЭтапыГрафикаОплатыПоДоговорамРасширеннаяПодсказка" id="298"/>
+											<SearchStringAddition name="ЭтапыГрафикаОплатыПоДоговорамСтрокаПоиска" id="299">
+												<AdditionSource>
+													<Item>ЭтапыГрафикаОплатыПоДоговорам</Item>
+													<Type>SearchStringRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="ЭтапыГрафикаОплатыПоДоговорамСтрокаПоискаКонтекстноеМеню" id="300"/>
+												<ExtendedTooltip name="ЭтапыГрафикаОплатыПоДоговорамСтрокаПоискаРасширеннаяПодсказка" id="301"/>
+											</SearchStringAddition>
+											<ViewStatusAddition name="ЭтапыГрафикаОплатыПоДоговорамСостояниеПросмотра" id="302">
+												<AdditionSource>
+													<Item>ЭтапыГрафикаОплатыПоДоговорам</Item>
+													<Type>ViewStatusRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="ЭтапыГрафикаОплатыПоДоговорамСостояниеПросмотраКонтекстноеМеню" id="303"/>
+												<ExtendedTooltip name="ЭтапыГрафикаОплатыПоДоговорамСостояниеПросмотраРасширеннаяПодсказка" id="304"/>
+											</ViewStatusAddition>
+											<SearchControlAddition name="ЭтапыГрафикаОплатыПоДоговорамУправлениеПоиском" id="305">
+												<AdditionSource>
+													<Item>ЭтапыГрафикаОплатыПоДоговорам</Item>
+													<Type>SearchControl</Type>
+												</AdditionSource>
+												<ContextMenu name="ЭтапыГрафикаОплатыПоДоговорамУправлениеПоискомКонтекстноеМеню" id="306"/>
+												<ExtendedTooltip name="ЭтапыГрафикаОплатыПоДоговорамУправлениеПоискомРасширеннаяПодсказка" id="307"/>
+											</SearchControlAddition>
+											<ChildItems>
+												<LabelField name="ЭтапыГрафикаОплатыПоДоговорамНомерСтроки" id="308">
+													<DataPath>Объект.ЭтапыГрафикаОплатыПоДоговорам.LineNumber</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ЭтапыГрафикаОплатыПоДоговорамНомерСтрокиКонтекстноеМеню" id="309"/>
+													<ExtendedTooltip name="ЭтапыГрафикаОплатыПоДоговорамНомерСтрокиРасширеннаяПодсказка" id="310"/>
+												</LabelField>
+												<InputField name="ЭтапыГрафикаОплатыПоДоговорамТипНоменклатуры" id="331">
+													<DataPath>Объект.ЭтапыГрафикаОплатыПоДоговорам.ТипНоменклатуры</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ЭтапыГрафикаОплатыПоДоговорамТипНоменклатурыКонтекстноеМеню" id="332"/>
+													<ExtendedTooltip name="ЭтапыГрафикаОплатыПоДоговорамТипНоменклатурыРасширеннаяПодсказка" id="333"/>
+												</InputField>
+												<InputField name="ЭтапыГрафикаОплатыПоДоговорамДатаПлатежа" id="311">
+													<DataPath>Объект.ЭтапыГрафикаОплатыПоДоговорам.ДатаПлатежа</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ЭтапыГрафикаОплатыПоДоговорамДатаПлатежаКонтекстноеМеню" id="312"/>
+													<ExtendedTooltip name="ЭтапыГрафикаОплатыПоДоговорамДатаПлатежаРасширеннаяПодсказка" id="313"/>
+												</InputField>
+												<InputField name="ЭтапыГрафикаОплатыПоДоговорамСуммаПлатежа" id="314">
+													<DataPath>Объект.ЭтапыГрафикаОплатыПоДоговорам.СуммаПлатежа</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<FooterDataPath>Объект.ЭтапыГрафикаОплатыПоДоговорам.TotalСуммаПлатежа</FooterDataPath>
+													<ContextMenu name="ЭтапыГрафикаОплатыПоДоговорамСуммаПлатежаКонтекстноеМеню" id="315"/>
+													<ExtendedTooltip name="ЭтапыГрафикаОплатыПоДоговорамСуммаПлатежаРасширеннаяПодсказка" id="316"/>
+												</InputField>
+												<InputField name="ЭтапыГрафикаОплатыПоДоговорамПроцентПлатежа" id="317">
+													<DataPath>Объект.ЭтапыГрафикаОплатыПоДоговорам.ПроцентПлатежа</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<FooterDataPath>Объект.ЭтапыГрафикаОплатыПоДоговорам.TotalПроцентПлатежа</FooterDataPath>
+													<ContextMenu name="ЭтапыГрафикаОплатыПоДоговорамПроцентПлатежаКонтекстноеМеню" id="318"/>
+													<ExtendedTooltip name="ЭтапыГрафикаОплатыПоДоговорамПроцентПлатежаРасширеннаяПодсказка" id="319"/>
+												</InputField>
+											</ChildItems>
+										</Table>
+									</ChildItems>
+								</UsualGroup>
 							</ChildItems>
 						</Page>
 					</ChildItems>
@@ -892,7 +1097,7 @@
 			</ToolTip>
 			<Action>РасчитатьСумму</Action>
 		</Command>
-		<Command name="ОтгрузМесяцы" id="8">
+		<Command name="ОтгрузкаМесяцы" id="8">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -902,12 +1107,12 @@
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Отгруз месяцы</v8:content>
+					<v8:content>Отгрузка месяцы</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ОтгрузМесяцы</Action>
 		</Command>
-		<Command name="ОтгрузКварталы" id="9">
+		<Command name="ОтгрузкаКварталы" id="9">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -917,7 +1122,7 @@
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Отгруз кварталы</v8:content>
+					<v8:content>Отгрузка кварталы</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ОтгрузКварталы</Action>
@@ -951,6 +1156,36 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ПоГрафикуРеализации</Action>
+		</Command>
+		<Command name="ОтгрузкаДоговор" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>По договору</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отгрузка договор</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтгрузкаДоговор</Action>
+		</Command>
+		<Command name="ОплатаДоговор" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>По договору</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Оплата договор</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОплатаДоговор</Action>
 		</Command>
 	</Commands>
 </Form>
