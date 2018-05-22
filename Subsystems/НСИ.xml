@@ -1,22 +1,28 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5">
-	<Subsystem uuid="29ce4404-2559-423d-8a91-8ff390497bd0">
+	<Subsystem uuid="e8cb040b-0e08-4ea4-b5a7-3f9b85dcaac5">
 		<Properties>
-			<Name>ПланыРабот</Name>
+			<Name>НСИ</Name>
 			<Synonym>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Планы работ</v8:content>
+					<v8:content>НСИ</v8:content>
 				</v8:item>
 			</Synonym>
-			<Comment/>
+			<Comment>Вести учет Проектов по направлениям [#129602]</Comment>
 			<IncludeHelpInContents>true</IncludeHelpInContents>
 			<IncludeInCommandInterface>true</IncludeInCommandInterface>
 			<Explanation/>
 			<Picture/>
 			<Content>
-				<xr:Item xsi:type="xr:MDObjectRef">Document.ПланРабот</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Catalog.КалькуляторПланаРабот</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ТиповыеЗадачиПроектов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.СтруктураСметы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ТарифныеСтавки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ИсточникФинансирования</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Организации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Контрагенты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.СпособРаспределенияСуммыПоМесяцам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.СтатьиСметы</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects/>

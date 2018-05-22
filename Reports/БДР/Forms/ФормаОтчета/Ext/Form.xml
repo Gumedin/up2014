@@ -10,16 +10,10 @@
 		<Autofill>false</Autofill>
 	</AutoCommandBar>
 	<Events>
-		<Event name="ChoiceProcessing">ОбработкаВыбора</Event>
-		<Event name="BeforeLoadVariantAtServer">ПередЗагрузкойВариантаНаСервере</Event>
 		<Event name="OnOpen">ПриОткрытии</Event>
-		<Event name="BeforeLoadUserSettingsAtServer">ПередЗагрузкойПользовательскихНастроекНаСервере</Event>
-		<Event name="OnLoadDataFromSettingsAtServer">ПриЗагрузкеДанныхИзНастроекНаСервере</Event>
-		<Event name="OnLoadUserSettingsAtServer">ПриЗагрузкеПользовательскихНастроекНаСервере</Event>
-		<Event name="OnLoadVariantAtServer">ПриЗагрузкеВариантаНаСервере</Event>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 		<Event name="OnUpdateUserSettingSetAtServer">ПриОбновленииСоставаПользовательскихНастроекНаСервере</Event>
-		<Event name="BeforeLoadDataFromSettingsAtServer">ПередЗагрузкойДанныхИзНастроекНаСервере</Event>
+		<Event name="FillCheckProcessingAtServer">ОбработкаПроверкиЗаполненияНаСервере</Event>
 	</Events>
 	<ChildItems>
 		<CommandBar name="ОсновнаяКоманднаяПанель" id="1">
@@ -44,16 +38,170 @@
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="КомпоновщикНастроекПользовательскиеНастройкиРасширеннаяПодсказка" id="4"/>
 		</UsualGroup>
-		<SpreadSheetDocumentField name="Результат" id="5">
-			<DataPath>Результат</DataPath>
-			<DefaultItem>true</DefaultItem>
-			<TitleLocation>None</TitleLocation>
-			<Width>100</Width>
-			<VerticalScrollBar>true</VerticalScrollBar>
-			<HorizontalScrollBar>true</HorizontalScrollBar>
-			<ContextMenu name="РезультатКонтекстноеМеню" id="6"/>
-			<ExtendedTooltip name="РезультатРасширеннаяПодсказка" id="7"/>
-		</SpreadSheetDocumentField>
+		<Pages name="Группа1" id="8">
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="9"/>
+			<ChildItems>
+				<Page name="Группа2" id="10">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Параметры</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="11"/>
+					<ChildItems>
+						<InputField name="ГодЗадач" id="50">
+							<DataPath>ГодЗадач</DataPath>
+							<ContextMenu name="ГодЗадачКонтекстноеМеню" id="51"/>
+							<ExtendedTooltip name="ГодЗадачРасширеннаяПодсказка" id="52"/>
+							<Events>
+								<Event name="OnChange">ПриИзмененииПараметров</Event>
+							</Events>
+						</InputField>
+						<UsualGroup name="Группа4" id="30">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Статусы</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="31"/>
+							<ChildItems>
+								<Table name="Статусы" id="14">
+									<Representation>List</Representation>
+									<Header>false</Header>
+									<HorizontalLines>false</HorizontalLines>
+									<VerticalLines>false</VerticalLines>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<DataPath>СтатусыПроектов</DataPath>
+									<RowPictureDataPath>СтатусыПроектов.Picture</RowPictureDataPath>
+									<ContextMenu name="СтатусыКонтекстноеМеню" id="15"/>
+									<AutoCommandBar name="СтатусыКоманднаяПанель" id="16"/>
+									<ExtendedTooltip name="СтатусыРасширеннаяПодсказка" id="17"/>
+									<SearchStringAddition name="СтатусыСтрокаПоиска" id="18">
+										<AdditionSource>
+											<Item>Статусы</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="СтатусыСтрокаПоискаКонтекстноеМеню" id="19"/>
+										<ExtendedTooltip name="СтатусыСтрокаПоискаРасширеннаяПодсказка" id="20"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="СтатусыСостояниеПросмотра" id="21">
+										<AdditionSource>
+											<Item>Статусы</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="СтатусыСостояниеПросмотраКонтекстноеМеню" id="22"/>
+										<ExtendedTooltip name="СтатусыСостояниеПросмотраРасширеннаяПодсказка" id="23"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="СтатусыУправлениеПоиском" id="24">
+										<AdditionSource>
+											<Item>Статусы</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="СтатусыУправлениеПоискомКонтекстноеМеню" id="25"/>
+										<ExtendedTooltip name="СтатусыУправлениеПоискомРасширеннаяПодсказка" id="26"/>
+									</SearchControlAddition>
+									<ChildItems>
+										<InputField name="СтатусыЗначение" id="27">
+											<DataPath>СтатусыПроектов.Value</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="СтатусыЗначениеКонтекстноеМеню" id="28"/>
+											<ExtendedTooltip name="СтатусыЗначениеРасширеннаяПодсказка" id="29"/>
+											<Events>
+												<Event name="OnChange">ПриИзмененииПараметров</Event>
+												<Event name="Creating">ПриСозданииПараметров</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="Группа5" id="32">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Типовые задачи</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="33"/>
+							<ChildItems>
+								<Table name="ТиповыеЗадачи" id="34">
+									<Representation>List</Representation>
+									<Header>false</Header>
+									<HorizontalLines>false</HorizontalLines>
+									<VerticalLines>false</VerticalLines>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<DataPath>ТиповыеЗадачи</DataPath>
+									<RowPictureDataPath>ТиповыеЗадачи.Picture</RowPictureDataPath>
+									<ContextMenu name="ТиповыеЗадачиКонтекстноеМеню" id="35"/>
+									<AutoCommandBar name="ТиповыеЗадачиКоманднаяПанель" id="36"/>
+									<ExtendedTooltip name="ТиповыеЗадачиРасширеннаяПодсказка" id="37"/>
+									<SearchStringAddition name="ТиповыеЗадачиСтрокаПоиска" id="38">
+										<AdditionSource>
+											<Item>ТиповыеЗадачи</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ТиповыеЗадачиСтрокаПоискаКонтекстноеМеню" id="39"/>
+										<ExtendedTooltip name="ТиповыеЗадачиСтрокаПоискаРасширеннаяПодсказка" id="40"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ТиповыеЗадачиСостояниеПросмотра" id="41">
+										<AdditionSource>
+											<Item>ТиповыеЗадачи</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ТиповыеЗадачиСостояниеПросмотраКонтекстноеМеню" id="42"/>
+										<ExtendedTooltip name="ТиповыеЗадачиСостояниеПросмотраРасширеннаяПодсказка" id="43"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ТиповыеЗадачиУправлениеПоиском" id="44">
+										<AdditionSource>
+											<Item>ТиповыеЗадачи</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ТиповыеЗадачиУправлениеПоискомКонтекстноеМеню" id="45"/>
+										<ExtendedTooltip name="ТиповыеЗадачиУправлениеПоискомРасширеннаяПодсказка" id="46"/>
+									</SearchControlAddition>
+									<ChildItems>
+										<InputField name="ТиповыеЗадачиЗначение" id="47">
+											<DataPath>ТиповыеЗадачи.Value</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТиповыеЗадачиЗначениеКонтекстноеМеню" id="48"/>
+											<ExtendedTooltip name="ТиповыеЗадачиЗначениеРасширеннаяПодсказка" id="49"/>
+											<Events>
+												<Event name="OnChange">ПриИзмененииПараметров</Event>
+												<Event name="Creating">ПриСозданииПараметров</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="Группа3" id="12">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отчет</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="13"/>
+					<ChildItems>
+						<SpreadSheetDocumentField name="Результат" id="5">
+							<DataPath>Результат</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<Width>100</Width>
+							<VerticalScrollBar>true</VerticalScrollBar>
+							<HorizontalScrollBar>true</HorizontalScrollBar>
+							<ContextMenu name="РезультатКонтекстноеМеню" id="6"/>
+							<ExtendedTooltip name="РезультатРасширеннаяПодсказка" id="7"/>
+						</SpreadSheetDocumentField>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="Отчет" id="1">
@@ -97,6 +245,36 @@
 					<v8:AllowedSign>Any</v8:AllowedSign>
 				</v8:NumberQualifiers>
 			</Type>
+		</Attribute>
+		<Attribute name="СтатусыПроектов" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Статусы проектов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:Type>cfg:EnumRef.СтатусыПроектов</v8:Type>
+			</Settings>
+		</Attribute>
+		<Attribute name="ТиповыеЗадачи" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Типовые задачи</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:Type>cfg:CatalogRef.ТиповыеЗадачиПроектов</v8:Type>
+			</Settings>
 		</Attribute>
 	</Attributes>
 </Form>
