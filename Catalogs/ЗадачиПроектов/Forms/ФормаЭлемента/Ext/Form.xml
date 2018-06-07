@@ -31,19 +31,42 @@
 		<Event name="BeforeWrite">ПередЗаписью</Event>
 	</Events>
 	<ChildItems>
-		<InputField name="Владелец" id="7">
-			<DataPath>Объект.Owner</DataPath>
-			<ReadOnly>true</ReadOnly>
-			<TitleLocation>Left</TitleLocation>
-			<EditMode>EnterOnInput</EditMode>
-			<AutoMaxWidth>false</AutoMaxWidth>
-			<AutoMaxHeight>false</AutoMaxHeight>
-			<ContextMenu name="ВладелецКонтекстноеМеню" id="8"/>
-			<ExtendedTooltip name="ВладелецРасширеннаяПодсказка" id="9"/>
-			<Events>
-				<Event name="OnChange">ВладелецПриИзменении</Event>
-			</Events>
-		</InputField>
+		<UsualGroup name="Группа7" id="285">
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа7РасширеннаяПодсказка" id="286"/>
+			<ChildItems>
+				<InputField name="Владелец" id="7">
+					<DataPath>Объект.Owner</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<TitleLocation>Left</TitleLocation>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<AutoMaxHeight>false</AutoMaxHeight>
+					<ContextMenu name="ВладелецКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="ВладелецРасширеннаяПодсказка" id="9"/>
+					<Events>
+						<Event name="OnChange">ВладелецПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="Статус" id="287">
+					<DataPath>Объект.Статус</DataPath>
+					<Enabled>false</Enabled>
+					<ReadOnly>true</ReadOnly>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ContextMenu name="СтатусКонтекстноеМеню" id="288"/>
+					<ExtendedTooltip name="СтатусРасширеннаяПодсказка" id="289"/>
+				</InputField>
+				<InputField name="СтатусДата" id="290">
+					<DataPath>Объект.СтатусДата</DataPath>
+					<Enabled>false</Enabled>
+					<ReadOnly>true</ReadOnly>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ContextMenu name="СтатусДатаКонтекстноеМеню" id="291"/>
+					<ExtendedTooltip name="СтатусДатаРасширеннаяПодсказка" id="292"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
 		<UsualGroup name="Группа6" id="274">
 			<Group>Horizontal</Group>
 			<Representation>None</Representation>
@@ -1107,6 +1130,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ЗаполнитьГрафикиОтгрузкиПоДоговорам</Action>
+		</Command>
+		<Command name="ПроверитьСтатус" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить статус</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить статус</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПроверитьСтатус</Action>
 		</Command>
 	</Commands>
 	<CommandInterface>
