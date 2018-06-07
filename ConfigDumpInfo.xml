@@ -566,12 +566,13 @@
 		<Metadata name="Catalog.ЕдиницыИзмерения.Predefined" id="b89ea658-f4a0-42dc-866e-70bdd0a1d651.1c" configVersion="d4dcb0867b01264fafbcd511ca83476000000000"/>
 		<Metadata name="Catalog.ЕдиницыИзмерения.Template.КлассификаторЕдиницИзмерения" id="a3a4d77c-fa69-40e2-9372-2bfd46f7b363" configVersion="9dd231177c21074ab1d3188710d15e9000000000"/>
 		<Metadata name="Catalog.ЕдиницыИзмерения.Template.КлассификаторЕдиницИзмерения.Template" id="a3a4d77c-fa69-40e2-9372-2bfd46f7b363.0" configVersion="98ef41eac5dd434091b9fa2fd06add1100000000"/>
-		<Metadata name="Catalog.ЗадачиПроектов" id="f6db6281-b079-47d0-9cfa-8b6ad43eb67f" configVersion="d590d10b5ad64b4ba4df2475692dade900000000">
+		<Metadata name="Catalog.ЗадачиПроектов" id="f6db6281-b079-47d0-9cfa-8b6ad43eb67f" configVersion="61b44c3a7557e544911ef279b371e84d00000000">
 			<Metadata name="Catalog.ЗадачиПроектов.Command.ПечатьСтруктурыРабот" id="0aaeb9d7-c322-4e30-b50e-6f0583d4b43c"/>
 			<Metadata name="Catalog.ЗадачиПроектов.TabularSection.ЭтапыГрафикаРеализации.Attribute.Комментарий" id="0b0ebf7d-c6d7-4ad0-b72a-e696fdfc44fb"/>
 			<Metadata name="Catalog.ЗадачиПроектов.Attribute.НачалоРабот" id="0d0ca320-80f5-47c9-8196-5101feeb65ec"/>
 			<Metadata name="Catalog.ЗадачиПроектов.TabularSection.ЭтапыГрафикаОплаты" id="0e058ff0-8124-476b-8be7-6284103e798e"/>
 			<Metadata name="Catalog.ЗадачиПроектов.Attribute.Контрагент" id="0e08bd1e-28e8-4764-afad-61ce1257ac15"/>
+			<Metadata name="Catalog.ЗадачиПроектов.Attribute.Статус" id="0ff4f0fc-c5b7-4733-ab38-604a9c7ced7c"/>
 			<Metadata name="Catalog.ЗадачиПроектов.Attribute.ОбеспеченоПрошлымиПериодами" id="109f652e-a2b3-4981-8677-b16c29eee3cc"/>
 			<Metadata name="Catalog.ЗадачиПроектов.TabularSection.ЭтапыГрафикаОплаты.Attribute.Фиксировано" id="126aca97-b41c-4429-befe-074852218008"/>
 			<Metadata name="Catalog.ЗадачиПроектов.Attribute.ТиповаяЗадача" id="153d0bde-4f3e-4d77-8925-6eae5fd1d3ce"/>
@@ -601,9 +602,11 @@
 			<Metadata name="Catalog.ЗадачиПроектов.Command.ПечатьЦепочекРабот" id="741d7503-1a35-4fa0-8606-c32cccba0c85"/>
 			<Metadata name="Catalog.ЗадачиПроектов.Command.СписокПлановРабот" id="74be8859-48f5-47e9-8ace-0903d91cc0a6"/>
 			<Metadata name="Catalog.ЗадачиПроектов.TabularSection.Исполнители" id="84cc8805-ec17-4a33-9619-10b4da308f07"/>
+			<Metadata name="Catalog.ЗадачиПроектов.Command.ПроверкаСтатусаЗадач" id="8561d356-1b72-4b40-bf1f-e950975b9126"/>
 			<Metadata name="Catalog.ЗадачиПроектов.TabularSection.Исполнители.Attribute.ФизическоеЛицо" id="87f542db-a4b0-4ddd-ac59-90f24d6a5d9d"/>
 			<Metadata name="Catalog.ЗадачиПроектов.Attribute.ПлановоеЮЛ" id="88afb6d0-c52b-4884-8253-9840e0c1a2bc"/>
 			<Metadata name="Catalog.ЗадачиПроектов.TabularSection.ЭтапыГрафикаРеализацииПоДоговорам.Attribute.СуммаРеализации" id="8bbad769-e255-4abd-9496-9075f2773b9f"/>
+			<Metadata name="Catalog.ЗадачиПроектов.Attribute.СтатусДата" id="9668f14d-2025-43c5-87e0-cd7efd9c8161"/>
 			<Metadata name="Catalog.ЗадачиПроектов.TabularSection.ЭтапыГрафикаРеализации.Attribute.ПроцентРеализации" id="96f992ad-ebcd-4ffd-bee3-09fe0431eb7e"/>
 			<Metadata name="Catalog.ЗадачиПроектов.Attribute.Подразделение" id="a30c2492-24b8-4911-86f2-a8d149c97e91"/>
 			<Metadata name="Catalog.ЗадачиПроектов.Command.СписокПлановРаботТиражных" id="aeb73000-db2a-40ef-a07f-8b22172124c5"/>
@@ -626,6 +629,7 @@
 		<Metadata name="Catalog.ЗадачиПроектов.Command.ПечатьПлановыхЗадач.CommandModule" id="d782d820-e0cf-4893-9fbf-ba1eb595afa8.2" configVersion="4ed9c8abccf7b34abda537fc21d461fc00000000"/>
 		<Metadata name="Catalog.ЗадачиПроектов.Command.ПечатьСтруктурыРабот.CommandModule" id="0aaeb9d7-c322-4e30-b50e-6f0583d4b43c.2" configVersion="5989863474dc824f95488a5491858e1a00000000"/>
 		<Metadata name="Catalog.ЗадачиПроектов.Command.ПечатьЦепочекРабот.CommandModule" id="741d7503-1a35-4fa0-8606-c32cccba0c85.2" configVersion="19bc740838d5aa43ac98fd1822bf5cbb00000000"/>
+		<Metadata name="Catalog.ЗадачиПроектов.Command.ПроверкаСтатусаЗадач.CommandModule" id="8561d356-1b72-4b40-bf1f-e950975b9126.2" configVersion="db9bd8621bd8fe489b8ff73c34f227d000000000"/>
 		<Metadata name="Catalog.ЗадачиПроектов.Command.СписокДоговоров.CommandModule" id="62da4f84-1654-42d6-b0f7-125c24dba3d7.2" configVersion="b73790f1d7b1794eaefa256bda87e7a600000000"/>
 		<Metadata name="Catalog.ЗадачиПроектов.Command.СписокЗакупкаППЛО.CommandModule" id="2ea6d941-2ac9-474a-99e9-a24efe527e01.2" configVersion="8618527c85b69e4c9b8c20fd0c17bb9e00000000"/>
 		<Metadata name="Catalog.ЗадачиПроектов.Command.СписокПлановВознагражденияПосредника.CommandModule" id="4501f03f-f2d2-4efa-92c2-6b53ae139016.2" configVersion="b740b7e46ed6124f90fa2565229382ad00000000"/>
@@ -638,13 +642,14 @@
 		<Metadata name="Catalog.ЗадачиПроектов.Form.ФормаВыбора.Form" id="0fedcf89-94da-4815-b290-3c05426baade.0" configVersion="eb9aa95562447447b65a01f3aa39fa0400000000"/>
 		<Metadata name="Catalog.ЗадачиПроектов.Form.ФормаВыбораПоПодразделению" id="65e99007-cd3d-40a1-ad7f-0e79f3cab6d7" configVersion="1b8ee2aa43016240b5af4e6bca1b1f5700000000"/>
 		<Metadata name="Catalog.ЗадачиПроектов.Form.ФормаВыбораПоПодразделению.Form" id="65e99007-cd3d-40a1-ad7f-0e79f3cab6d7.0" configVersion="ac8641f493fb0e4b8d53adb2739fc02f00000000"/>
-		<Metadata name="Catalog.ЗадачиПроектов.Form.ФормаСписка" id="6dd5dd96-5b8c-4f50-aa47-daaf45f14c17" configVersion="2c4b1d8d45571b4093d1fe1e0cb2162000000000"/>
-		<Metadata name="Catalog.ЗадачиПроектов.Form.ФормаСписка.Form" id="6dd5dd96-5b8c-4f50-aa47-daaf45f14c17.0" configVersion="e9fa513e10d89941885cb9bf97d1d47700000000"/>
-		<Metadata name="Catalog.ЗадачиПроектов.Form.ФормаСпискаПроектМенеджера" id="5b08e39d-f0cd-44bd-ae7b-a1b19e22097e" configVersion="74bab7fc6be4394088d850bbd2fd05a600000000"/>
-		<Metadata name="Catalog.ЗадачиПроектов.Form.ФормаСпискаПроектМенеджера.Form" id="5b08e39d-f0cd-44bd-ae7b-a1b19e22097e.0" configVersion="8937469fc3bb834dab7f744a9f4e799000000000"/>
-		<Metadata name="Catalog.ЗадачиПроектов.Form.ФормаЭлемента" id="4db4542c-4a2f-47af-b4cb-43b85886b183" configVersion="e7b53ba5cac00f4bae975f3c78bd84d700000000"/>
-		<Metadata name="Catalog.ЗадачиПроектов.Form.ФормаЭлемента.Form" id="4db4542c-4a2f-47af-b4cb-43b85886b183.0" configVersion="d3c04058f7a7c44ea6d5ff70b781b3b000000000"/>
-		<Metadata name="Catalog.ЗадачиПроектов.ManagerModule" id="f6db6281-b079-47d0-9cfa-8b6ad43eb67f.3" configVersion="8cb5db272766e44dab7d683761ab742500000000"/>
+		<Metadata name="Catalog.ЗадачиПроектов.Form.ФормаСписка" id="6dd5dd96-5b8c-4f50-aa47-daaf45f14c17" configVersion="13341008ed5cbf469f3d3272f78fff4100000000"/>
+		<Metadata name="Catalog.ЗадачиПроектов.Form.ФормаСписка.Form" id="6dd5dd96-5b8c-4f50-aa47-daaf45f14c17.0" configVersion="670a5293b2a6b84998d80373fa6bffbf00000000"/>
+		<Metadata name="Catalog.ЗадачиПроектов.Form.ФормаСпискаПроектМенеджера" id="5b08e39d-f0cd-44bd-ae7b-a1b19e22097e" configVersion="1900d723568209449a1c8a54662af19800000000"/>
+		<Metadata name="Catalog.ЗадачиПроектов.Form.ФормаСпискаПроектМенеджера.Form" id="5b08e39d-f0cd-44bd-ae7b-a1b19e22097e.0" configVersion="3a4a177b8280b848867924e31dd7061a00000000"/>
+		<Metadata name="Catalog.ЗадачиПроектов.Form.ФормаЭлемента" id="4db4542c-4a2f-47af-b4cb-43b85886b183" configVersion="c9746984d230c944be27ea6917ad806800000000"/>
+		<Metadata name="Catalog.ЗадачиПроектов.Form.ФормаЭлемента.Form" id="4db4542c-4a2f-47af-b4cb-43b85886b183.0" configVersion="22eaef4c5bf1e14b95cd26dd2b31ae0000000000"/>
+		<Metadata name="Catalog.ЗадачиПроектов.ManagerModule" id="f6db6281-b079-47d0-9cfa-8b6ad43eb67f.3" configVersion="b75aea2d15a5ac48ade8fbc26dc6151d00000000"/>
+		<Metadata name="Catalog.ЗадачиПроектов.ObjectModule" id="f6db6281-b079-47d0-9cfa-8b6ad43eb67f.0" configVersion="244c47e1d6a68a4c9faf9f8f1ee7aa3200000000"/>
 		<Metadata name="Catalog.ЗадачиПроектов.Template.ПФ_MXL_СтруктураРабот" id="bdcdc749-6378-4a31-ba6d-28f8887dad10" configVersion="554cb3b3a983e944968ce5aac5b0b86300000000"/>
 		<Metadata name="Catalog.ЗадачиПроектов.Template.ПФ_MXL_СтруктураРабот.Template" id="bdcdc749-6378-4a31-ba6d-28f8887dad10.0" configVersion="608d1316a47a714f84992b017f342de100000000"/>
 		<Metadata name="Catalog.ЗадачиПроектов.Template.ПФ_MXL_ЦепочкиРабот" id="5cc27ff1-3895-4cc1-b48c-05f64d0e170d" configVersion="d6d2169dab3c494db7dcb77fb6726cb800000000"/>
@@ -1479,7 +1484,7 @@
 		</Metadata>
 		<Metadata name="Catalog.ПредопределенныеВариантыОтчетов.ManagerModule" id="9ec6fc35-e84e-4f82-b616-5c02e945cc8f.3" configVersion="1ec148404424664da30babe6b9dfdc1100000000"/>
 		<Metadata name="Catalog.ПредопределенныеВариантыОтчетов.ObjectModule" id="9ec6fc35-e84e-4f82-b616-5c02e945cc8f.0" configVersion="74ec771140338a4590d537b42dae26bc00000000"/>
-		<Metadata name="Catalog.Проекты" id="6e1c69ad-c366-4bbd-94a9-b46847e9f3b5" configVersion="ef33473df3e8674ba069875cd3ec4b9b00000000">
+		<Metadata name="Catalog.Проекты" id="6e1c69ad-c366-4bbd-94a9-b46847e9f3b5" configVersion="0d702ca7cbf95b4cb4e93619c4f10c7200000000">
 			<Metadata name="Catalog.Проекты.Attribute.Контрагент" id="2af0d31b-8719-47fd-b7b3-5bea0855673b"/>
 			<Metadata name="Catalog.Проекты.Attribute.МенеджерПроекта" id="463ba7f6-0317-4b6e-9948-ca57654c1a88"/>
 			<Metadata name="Catalog.Проекты.Attribute.Комментарий" id="4cffd0b0-43c7-4ae2-8f98-db74d92899ad"/>
@@ -1488,28 +1493,31 @@
 			<Metadata name="Catalog.Проекты.Attribute.ДиректорПроекта" id="635a855c-8c06-4fdb-9c39-7a81b80adb09"/>
 			<Metadata name="Catalog.Проекты.Attribute.Куратор" id="796425d4-2542-4d54-99a1-2fbcb317d3de"/>
 			<Metadata name="Catalog.Проекты.Command.ЗакрытиеСДРпоПроекту" id="79d51537-b989-4606-83af-b41f16e5de3f"/>
+			<Metadata name="Catalog.Проекты.Command.ПроверкаСтатусаЗадач" id="87ac6b63-9bf8-4101-a54f-b7a713ea7cf5"/>
 			<Metadata name="Catalog.Проекты.TabularSection.КомандаПроекта" id="a69edd2f-1249-4130-998c-291a947bba34"/>
 			<Metadata name="Catalog.Проекты.Command.СписокДоговоры" id="a8785091-eb25-40e7-81ce-e6e76586059f"/>
 			<Metadata name="Catalog.Проекты.Attribute.ЭтоПервыйГод" id="aeda2536-5e8a-4329-a333-55a37cb38469"/>
 			<Metadata name="Catalog.Проекты.Command.СписокЗаявкаНаВыплату" id="b4ae24c9-dc47-46ec-84b4-44fd6f1d2b2a"/>
 			<Metadata name="Catalog.Проекты.TabularSection.КомандаПроекта.Attribute.ТипУчастника" id="bdb994a2-6420-4bcf-884f-b9ab3ee6854c"/>
+			<Metadata name="Catalog.Проекты.Attribute.СтатусЗадач" id="c5ab13da-f2ae-41e0-97a8-8a16798cd273"/>
 			<Metadata name="Catalog.Проекты.TabularSection.КомандаПроекта.Attribute.Участник" id="d5024de6-0227-437b-98ba-64763ad120f7"/>
 			<Metadata name="Catalog.Проекты.Command.СписокСметы" id="d54255cf-a5ec-4c5c-8176-67de1275cbfa"/>
 			<Metadata name="Catalog.Проекты.Command.ПечатьБДРПроекта" id="fbf5181b-07bc-459f-b0c1-aa3389cf1e75"/>
 		</Metadata>
 		<Metadata name="Catalog.Проекты.Command.ЗакрытиеСДРпоПроекту.CommandModule" id="79d51537-b989-4606-83af-b41f16e5de3f.2" configVersion="5f63ae3b05b76846b3d436f4e0ecc22800000000"/>
 		<Metadata name="Catalog.Проекты.Command.ПечатьБДРПроекта.CommandModule" id="fbf5181b-07bc-459f-b0c1-aa3389cf1e75.2" configVersion="bac50ac88f5f884caf749d9be2468f4600000000"/>
+		<Metadata name="Catalog.Проекты.Command.ПроверкаСтатусаЗадач.CommandModule" id="87ac6b63-9bf8-4101-a54f-b7a713ea7cf5.2" configVersion="f3ae208bbad12d4795401fec1e118b9200000000"/>
 		<Metadata name="Catalog.Проекты.Command.СписокДоговоры.CommandModule" id="a8785091-eb25-40e7-81ce-e6e76586059f.2" configVersion="da985ef27d03c04f9c48b7ead29e08ac00000000"/>
 		<Metadata name="Catalog.Проекты.Command.СписокЗаявкаНаВыплату.CommandModule" id="b4ae24c9-dc47-46ec-84b4-44fd6f1d2b2a.2" configVersion="d7ef20708023fb468930e35c9398d55900000000"/>
 		<Metadata name="Catalog.Проекты.Command.СписокСметы.CommandModule" id="d54255cf-a5ec-4c5c-8176-67de1275cbfa.2" configVersion="162c1fd81a479440835d70bf5a6dc9c800000000"/>
-		<Metadata name="Catalog.Проекты.Form.ФормаСписка" id="487aefe7-4edf-478d-a401-08bafdb6f01f" configVersion="09bb5f58c9bd4c4f9af403f98040447700000000"/>
-		<Metadata name="Catalog.Проекты.Form.ФормаСписка.Form" id="487aefe7-4edf-478d-a401-08bafdb6f01f.0" configVersion="8f521a894bf12547b18b6ad26eac428b00000000"/>
-		<Metadata name="Catalog.Проекты.Form.ФормаСпискаДиректораПроекта" id="b87db1ac-ef7e-4756-a506-1fd05dedc824" configVersion="857346ddf5bef7458bb2009930d36e8400000000"/>
-		<Metadata name="Catalog.Проекты.Form.ФормаСпискаДиректораПроекта.Form" id="b87db1ac-ef7e-4756-a506-1fd05dedc824.0" configVersion="628f908ae983f24b8833f23cc977d1aa00000000"/>
-		<Metadata name="Catalog.Проекты.Form.ФормаСпискаКлиентМенеджера" id="12a8223e-1a33-4c30-8817-a48d623d6417" configVersion="cbcc5116bb74f74f85698292a5a0430800000000"/>
-		<Metadata name="Catalog.Проекты.Form.ФормаСпискаКлиентМенеджера.Form" id="12a8223e-1a33-4c30-8817-a48d623d6417.0" configVersion="a5cecb8b3ef1fc4eb8ec931010ca058000000000"/>
-		<Metadata name="Catalog.Проекты.Form.ФормаЭлемента" id="bc4f6781-f85c-4d6c-b9b0-f9dcc31e22d9" configVersion="0875b687e92c51449536065ea47d164000000000"/>
-		<Metadata name="Catalog.Проекты.Form.ФормаЭлемента.Form" id="bc4f6781-f85c-4d6c-b9b0-f9dcc31e22d9.0" configVersion="8c15cacb03bed94ba4050fad5a5f669e00000000"/>
+		<Metadata name="Catalog.Проекты.Form.ФормаСписка" id="487aefe7-4edf-478d-a401-08bafdb6f01f" configVersion="1c01ca0a543d1e4a8927bc1170b527ce00000000"/>
+		<Metadata name="Catalog.Проекты.Form.ФормаСписка.Form" id="487aefe7-4edf-478d-a401-08bafdb6f01f.0" configVersion="5ab01f5dc2590843b389c6c136b671e300000000"/>
+		<Metadata name="Catalog.Проекты.Form.ФормаСпискаДиректораПроекта" id="b87db1ac-ef7e-4756-a506-1fd05dedc824" configVersion="b49306b25898214d87d7d9287c65f1c500000000"/>
+		<Metadata name="Catalog.Проекты.Form.ФормаСпискаДиректораПроекта.Form" id="b87db1ac-ef7e-4756-a506-1fd05dedc824.0" configVersion="607c64241858e049bc430ba23b3b4b8000000000"/>
+		<Metadata name="Catalog.Проекты.Form.ФормаСпискаКлиентМенеджера" id="12a8223e-1a33-4c30-8817-a48d623d6417" configVersion="c63b757b2b9fee4e8438d70c68b7c11c00000000"/>
+		<Metadata name="Catalog.Проекты.Form.ФормаСпискаКлиентМенеджера.Form" id="12a8223e-1a33-4c30-8817-a48d623d6417.0" configVersion="890639e8c4d9fa4eaa7ec1decc99ce3b00000000"/>
+		<Metadata name="Catalog.Проекты.Form.ФормаЭлемента" id="bc4f6781-f85c-4d6c-b9b0-f9dcc31e22d9" configVersion="aad5d51ad9093d488dcdda8dc57ead1800000000"/>
+		<Metadata name="Catalog.Проекты.Form.ФормаЭлемента.Form" id="bc4f6781-f85c-4d6c-b9b0-f9dcc31e22d9.0" configVersion="8b12bb90e0276749ae58fb63d089e02700000000"/>
 		<Metadata name="Catalog.Проекты.ObjectModule" id="6e1c69ad-c366-4bbd-94a9-b46847e9f3b5.0" configVersion="38002b8b9411d4469bc21136db4b830200000000"/>
 		<Metadata name="Catalog.ПроектыПрисоединенныеФайлы" id="9c24a535-ba05-4e3d-ab15-45dc78b9a5f7" configVersion="e0a7d098372e8144af5464cc4e05022c00000000">
 			<Metadata name="Catalog.ПроектыПрисоединенныеФайлы.TabularSection.СертификатыШифрования" id="0061f15f-203d-4769-8c10-17961fbd8cd3"/>
@@ -4183,7 +4191,7 @@
 		<Metadata name="CommonTemplate.СтруктураПодчиненности.Template" id="7a62d031-c340-4b1e-90af-fff697a2e979.0" configVersion="7bae13dff6b83a459828cf47cc89ec5600000000"/>
 		<Metadata name="CommonTemplate.ТелеграмПодсказкаПоСтруктуреНакопленныеДанные" id="f8fbb64f-f044-4396-b806-6b80a5f05f39" configVersion="c768eec62357864086a0184ebd2327eb00000000"/>
 		<Metadata name="CommonTemplate.ТелеграмПодсказкаПоСтруктуреНакопленныеДанные.Template" id="f8fbb64f-f044-4396-b806-6b80a5f05f39.0" configVersion="f8db4601cd034f4a8a2cf32b234ce42900000000"/>
-		<Metadata name="Configuration.УП8" id="de2ae354-9b13-453d-9024-712f183a8c13" configVersion="21900ef912a7dd44bd1e7aef2ea6225200000000"/>
+		<Metadata name="Configuration.УП8" id="de2ae354-9b13-453d-9024-712f183a8c13" configVersion="06c88b33fe87ec4593d86800671aa84000000000"/>
 		<Metadata name="Configuration.УП8.CommandInterface" id="c93ae8f6-6419-4da0-a894-67bf0ac90729.a" configVersion="474603af90bd4f4d958f5b04ca63e0a300000000"/>
 		<Metadata name="Configuration.УП8.Logo" id="c93ae8f6-6419-4da0-a894-67bf0ac90729.1" configVersion="2964573dcd3666479000ea94afa4ec4e00000000"/>
 		<Metadata name="Configuration.УП8.ManagedApplicationModule" id="c93ae8f6-6419-4da0-a894-67bf0ac90729.6" configVersion="a2e36697fbd2ad42921b96c8fc6edcd500000000"/>
@@ -7256,6 +7264,10 @@
 			<Metadata name="Enum.СпособыУстановкиВремениНапоминания.EnumValue.ОтносительноТекущегоВремени" id="5bf2da0d-f318-4036-9234-8a3a6eca88b2"/>
 			<Metadata name="Enum.СпособыУстановкиВремениНапоминания.EnumValue.ВУказанноеВремя" id="7743fe24-b941-4dad-bc76-05fb6b26b1d7"/>
 			<Metadata name="Enum.СпособыУстановкиВремениНапоминания.EnumValue.Периодически" id="c3634571-6fe5-45ab-9362-161305eef661"/>
+		</Metadata>
+		<Metadata name="Enum.СтатусыЗадачПроектов" id="811f4887-9f81-41cf-a177-900b7dab73d9" configVersion="7a37f874ec69144db1604aeec4ede84100000000">
+			<Metadata name="Enum.СтатусыЗадачПроектов.EnumValue.Ошибки" id="3f934656-d8d9-4be2-a245-53441fbdf78f"/>
+			<Metadata name="Enum.СтатусыЗадачПроектов.EnumValue.Корректный" id="fdd88603-976d-48ef-a542-0ffe40caa159"/>
 		</Metadata>
 		<Metadata name="Enum.СтатусыИзвлеченияТекстаФайлов" id="ecd8772d-e33f-426f-a87a-e28bd94d5fdf" configVersion="2e0870a139d7e142bbcd5417b71cd1ab00000000">
 			<Metadata name="Enum.СтатусыИзвлеченияТекстаФайлов.EnumValue.ИзвлечьНеУдалось" id="239fa55a-6572-4e5c-9918-c2e14063c76d"/>
