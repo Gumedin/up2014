@@ -6,13 +6,9 @@
 	<RepostOnWrite>true</RepostOnWrite>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<ChildItems>
-			<Button name="ФормаОбновитьПараметрыСметы" id="58">
-				<Type>CommandBarButton</Type>
-				<CommandName>Form.Command.ОбновитьПараметрыСметы</CommandName>
-				<ExtendedTooltip name="ФормаОбновитьПараметрыСметыExtendedTooltip" id="59"/>
-			</Button>
 			<Button name="ФормаКонвертацияСтруктурыСметы" id="100">
 				<Type>CommandBarButton</Type>
+				<Visible>false</Visible>
 				<CommandName>Form.Command.КонвертацияСтруктурыСметы</CommandName>
 				<ExtendedTooltip name="ФормаКонвертацияСтруктурыСметыРасширеннаяПодсказка" id="101"/>
 			</Button>
@@ -66,15 +62,36 @@
 			<ChildItems>
 				<InputField name="ЗадачаПроекта" id="5">
 					<DataPath>Объект.ЗадачаПроекта</DataPath>
+					<ReadOnly>true</ReadOnly>
 					<EditMode>EnterOnInput</EditMode>
 					<ContextMenu name="ЗадачаПроектаКонтекстноеМеню" id="6"/>
 					<ExtendedTooltip name="ЗадачаПроектаExtendedTooltip" id="64"/>
 				</InputField>
 				<InputField name="ЗадачаПроектаПодразделение" id="52">
 					<DataPath>Объект.ЗадачаПроекта.Подразделение</DataPath>
+					<Visible>false</Visible>
+					<Enabled>false</Enabled>
+					<ReadOnly>true</ReadOnly>
 					<ContextMenu name="ЗадачаПроектаПодразделениеКонтекстноеМеню" id="53"/>
 					<ExtendedTooltip name="ЗадачаПроектаПодразделениеExtendedTooltip" id="63"/>
 				</InputField>
+				<InputField name="РасчетыСтатейСметы" id="119">
+					<DataPath>Объект.РасчетыСтатейСметы</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Параметры</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="РасчетыСтатейСметыКонтекстноеМеню" id="120"/>
+					<ExtendedTooltip name="РасчетыСтатейСметыРасширеннаяПодсказка" id="121"/>
+				</InputField>
+				<Button name="ФормаОбновитьПараметрыСметы" id="58">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ОбновитьПараметрыСметы</CommandName>
+					<ExtendedTooltip name="ФормаОбновитьПараметрыСметыExtendedTooltip" id="59"/>
+				</Button>
 			</ChildItems>
 		</UsualGroup>
 		<Pages name="Страницы" id="21">
@@ -154,6 +171,7 @@
 								<InputField name="РасчетЗначениеПараметра" id="44">
 									<DataPath>Объект.Расчет.ЗначениеПараметра</DataPath>
 									<EditMode>EnterOnInput</EditMode>
+									<ChoiceButton>true</ChoiceButton>
 									<ContextMenu name="РасчетЗначениеПараметраКонтекстноеМеню" id="45"/>
 									<ExtendedTooltip name="РасчетЗначениеПараметраExtendedTooltip" id="71"/>
 								</InputField>
@@ -609,6 +627,21 @@
 			</Picture>
 			<Action>ЗаполнитьИзКалькулятора</Action>
 			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="УстановитьЗначениеПараметраПоУмолчанию" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметр по умолчанию</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить значение параметра по умолчанию</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УстановитьЗначениеПараметраПоУмолчанию</Action>
 		</Command>
 	</Commands>
 </Form>
