@@ -44,6 +44,13 @@
 				<dcscom:periodNumber>1</dcscom:periodNumber>
 				<dcscom:periodType>Main</dcscom:periodType>
 			</role>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:DocumentRef.ТабельРаботПоЗадачеПроекта</v8:Type>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Год</dataPath>
+			<field>Год</field>
 		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ
@@ -70,6 +77,13 @@
 	<totalField>
 		<dataPath>Сумма</dataPath>
 		<expression>Сумма(Сумма)</expression>
+		<group>ЗадачаПроекта</group>
+		<group>Месяц</group>
+		<group>ПланРабот</group>
+		<group>Подразделение</group>
+		<group>Подразделение Иерархия</group>
+		<group>Проект</group>
+		<group>Табель</group>
 	</totalField>
 	<parameter>
 		<name>НачалоПериода</name>
