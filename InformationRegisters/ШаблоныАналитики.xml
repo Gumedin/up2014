@@ -2,44 +2,44 @@
 <MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5">
 	<InformationRegister uuid="5bbdd40c-0759-4974-a4ea-be65a839857e">
 		<InternalInfo>
-			<xr:GeneratedType name="InformationRegisterRecord.Код_HTML_страниц" category="Record">
+			<xr:GeneratedType name="InformationRegisterRecord.ШаблоныАналитики" category="Record">
 				<xr:TypeId>e593b863-f753-4f8b-aabd-a7487e71eca1</xr:TypeId>
 				<xr:ValueId>1bfe585b-efc1-4b37-8647-6ea43c194b58</xr:ValueId>
 			</xr:GeneratedType>
-			<xr:GeneratedType name="InformationRegisterManager.Код_HTML_страниц" category="Manager">
+			<xr:GeneratedType name="InformationRegisterManager.ШаблоныАналитики" category="Manager">
 				<xr:TypeId>069dd947-48e6-498c-a904-71eed866051c</xr:TypeId>
 				<xr:ValueId>59930fab-38d1-442c-849a-2d6cc381c1bd</xr:ValueId>
 			</xr:GeneratedType>
-			<xr:GeneratedType name="InformationRegisterSelection.Код_HTML_страниц" category="Selection">
+			<xr:GeneratedType name="InformationRegisterSelection.ШаблоныАналитики" category="Selection">
 				<xr:TypeId>0e781df2-0f90-4d87-b887-837270fc8e08</xr:TypeId>
 				<xr:ValueId>bfaf3de9-4249-41e2-8baf-c82eba946b3f</xr:ValueId>
 			</xr:GeneratedType>
-			<xr:GeneratedType name="InformationRegisterList.Код_HTML_страниц" category="List">
+			<xr:GeneratedType name="InformationRegisterList.ШаблоныАналитики" category="List">
 				<xr:TypeId>e8ba3945-eb6f-4d04-bbf0-8721d3504008</xr:TypeId>
 				<xr:ValueId>86810b9b-b0d2-4729-9735-73fe1e3f13f4</xr:ValueId>
 			</xr:GeneratedType>
-			<xr:GeneratedType name="InformationRegisterRecordSet.Код_HTML_страниц" category="RecordSet">
+			<xr:GeneratedType name="InformationRegisterRecordSet.ШаблоныАналитики" category="RecordSet">
 				<xr:TypeId>7e81c49f-2151-4854-9eb5-be0e4083eb54</xr:TypeId>
 				<xr:ValueId>8c0ffaf9-ba5f-4362-beba-a2cf10c45ecc</xr:ValueId>
 			</xr:GeneratedType>
-			<xr:GeneratedType name="InformationRegisterRecordKey.Код_HTML_страниц" category="RecordKey">
+			<xr:GeneratedType name="InformationRegisterRecordKey.ШаблоныАналитики" category="RecordKey">
 				<xr:TypeId>5ae32407-428d-4ed0-9672-05e8daaaac48</xr:TypeId>
 				<xr:ValueId>09e93a32-f773-4eea-8bd0-98c5bb95ea03</xr:ValueId>
 			</xr:GeneratedType>
-			<xr:GeneratedType name="InformationRegisterRecordManager.Код_HTML_страниц" category="RecordManager">
+			<xr:GeneratedType name="InformationRegisterRecordManager.ШаблоныАналитики" category="RecordManager">
 				<xr:TypeId>533e3159-01f0-4214-ad65-77803276e80d</xr:TypeId>
 				<xr:ValueId>0440d953-42f1-4276-b54c-cfbcb6accf5a</xr:ValueId>
 			</xr:GeneratedType>
 		</InternalInfo>
 		<Properties>
-			<Name>Код_HTML_страниц</Name>
+			<Name>ШаблоныАналитики</Name>
 			<Synonym>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Код HTML страниц</v8:content>
+					<v8:content>Шаблоны аналитики</v8:content>
 				</v8:item>
 			</Synonym>
-			<Comment>Содержит исходный код html станиц</Comment>
+			<Comment>Содержит исходный код html станиц аналитики</Comment>
 			<UseStandardCommands>true</UseStandardCommands>
 			<EditType>InDialog</EditType>
 			<DefaultRecordForm/>
@@ -118,7 +118,7 @@
 					<Type>
 						<v8:Type>xs:string</v8:Type>
 						<v8:StringQualifiers>
-							<v8:Length>10</v8:Length>
+							<v8:Length>40</v8:Length>
 							<v8:AllowedLength>Variable</v8:AllowedLength>
 						</v8:StringQualifiers>
 					</Type>
