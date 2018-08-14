@@ -886,7 +886,7 @@
 			</ToolTip>
 			<Picture>
 				<xr:Ref>CommonPicture.Рассчитать</xr:Ref>
-				<xr:LoadTransparent>true</xr:LoadTransparent>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
 			</Picture>
 			<Action>ПересчитатьГрафикПлатежа</Action>
 			<Representation>TextPicture</Representation>
@@ -925,7 +925,7 @@
 			</ToolTip>
 			<Picture>
 				<xr:Ref>CommonPicture.Сумма</xr:Ref>
-				<xr:LoadTransparent>true</xr:LoadTransparent>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
 			</Picture>
 			<Action>СуммаЗадачиПоСмете</Action>
 			<Representation>Picture</Representation>
@@ -1021,7 +1021,7 @@
 			</ToolTip>
 			<Picture>
 				<xr:Ref>CommonPicture.Рассчитать</xr:Ref>
-				<xr:LoadTransparent>true</xr:LoadTransparent>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
 			</Picture>
 			<Action>ПересчитатьГрафикРеализации</Action>
 			<Representation>TextPicture</Representation>
@@ -1180,18 +1180,12 @@
 				<Type>Auto</Type>
 				<CommandGroup>FormNavigationPanelGoTo</CommandGroup>
 				<Index>1</Index>
-				<Visible>
-					<xr:Common>false</xr:Common>
-				</Visible>
 			</Item>
 			<Item>
 				<Command>Catalog.ЗадачиПроектов.Command.СписокПлановРабот</Command>
 				<Type>Auto</Type>
 				<CommandGroup>FormNavigationPanelImportant</CommandGroup>
 				<Index>1</Index>
-				<Visible>
-					<xr:Common>false</xr:Common>
-				</Visible>
 			</Item>
 			<Item>
 				<Command>Catalog.ЗадачиПроектов.Command.СписокПлановРаботТиражных</Command>
@@ -1208,36 +1202,24 @@
 				<Type>Auto</Type>
 				<CommandGroup>FormNavigationPanelSeeAlso</CommandGroup>
 				<Index>6</Index>
-				<Visible>
-					<xr:Common>false</xr:Common>
-				</Visible>
 			</Item>
 			<Item>
 				<Command>Catalog.ЗадачиПроектов.Command.СписокРасходПоЗадачеПроекта</Command>
 				<Type>Auto</Type>
 				<CommandGroup>FormNavigationPanelSeeAlso</CommandGroup>
 				<Index>5</Index>
-				<Visible>
-					<xr:Common>false</xr:Common>
-				</Visible>
 			</Item>
 			<Item>
 				<Command>Catalog.ЗадачиПроектов.Command.СписокРасходПоЗадачеПроизводство</Command>
 				<Type>Auto</Type>
 				<CommandGroup>FormNavigationPanelSeeAlso</CommandGroup>
 				<Index>4</Index>
-				<Visible>
-					<xr:Common>false</xr:Common>
-				</Visible>
 			</Item>
 			<Item>
 				<Command>Catalog.ЗадачиПроектов.Command.СписокЗакупкаППЛО</Command>
 				<Type>Auto</Type>
 				<CommandGroup>FormNavigationPanelSeeAlso</CommandGroup>
 				<Index>3</Index>
-				<Visible>
-					<xr:Common>false</xr:Common>
-				</Visible>
 			</Item>
 			<Item>
 				<Command>Catalog.Требования.StandardCommand.OpenByValue</Command>
@@ -1277,9 +1259,6 @@
 				<Command>Catalog.ЗадачиПроектов.Command.СписокСметаЗадачиПроекта</Command>
 				<Type>Auto</Type>
 				<CommandGroup>FormNavigationPanelImportant</CommandGroup>
-				<Visible>
-					<xr:Common>false</xr:Common>
-				</Visible>
 			</Item>
 			<Item>
 				<Command>InformationRegister.ТипыДоходовЗадачПроектов.StandardCommand.OpenByValue.ЗадачаПроекта</Command>
@@ -1296,9 +1275,6 @@
 				<Type>Auto</Type>
 				<CommandGroup>FormNavigationPanelSeeAlso</CommandGroup>
 				<Index>13</Index>
-				<Visible>
-					<xr:Common>false</xr:Common>
-				</Visible>
 			</Item>
 		</NavigationPanel>
 		<CommandBar>
@@ -1306,54 +1282,36 @@
 				<Command>Catalog.ЗадачиПроектов.Command.СписокПлановРабот</Command>
 				<Type>Auto</Type>
 				<CommandGroup>CommandGroup.ПерейтиКДокументам</CommandGroup>
-				<Visible>
-					<xr:Common>false</xr:Common>
-				</Visible>
 			</Item>
 			<Item>
 				<Command>Catalog.ЗадачиПроектов.Command.СписокПлановРаботТиражных</Command>
 				<Type>Auto</Type>
 				<CommandGroup>CommandGroup.ПерейтиКДокументам</CommandGroup>
 				<Index>1</Index>
-				<Visible>
-					<xr:Common>false</xr:Common>
-				</Visible>
 			</Item>
 			<Item>
 				<Command>Catalog.ЗадачиПроектов.Command.СписокРасходПоЗадачеПроекта</Command>
 				<Type>Auto</Type>
 				<CommandGroup>CommandGroup.ПерейтиКДокументам</CommandGroup>
 				<Index>2</Index>
-				<Visible>
-					<xr:Common>false</xr:Common>
-				</Visible>
 			</Item>
 			<Item>
 				<Command>Catalog.ЗадачиПроектов.Command.СписокРасходПоЗадачеПроизводство</Command>
 				<Type>Auto</Type>
 				<CommandGroup>CommandGroup.ПерейтиКДокументам</CommandGroup>
 				<Index>3</Index>
-				<Visible>
-					<xr:Common>false</xr:Common>
-				</Visible>
 			</Item>
 			<Item>
 				<Command>Catalog.ЗадачиПроектов.Command.СписокЗакупкаППЛО</Command>
 				<Type>Auto</Type>
 				<CommandGroup>CommandGroup.ПерейтиКДокументам</CommandGroup>
 				<Index>4</Index>
-				<Visible>
-					<xr:Common>false</xr:Common>
-				</Visible>
 			</Item>
 			<Item>
 				<Command>Catalog.ЗадачиПроектов.Command.СписокСметаЗадачиПроекта</Command>
 				<Type>Auto</Type>
 				<CommandGroup>CommandGroup.ПерейтиКДокументам</CommandGroup>
 				<Index>5</Index>
-				<Visible>
-					<xr:Common>false</xr:Common>
-				</Visible>
 			</Item>
 			<Item>
 				<Command>Catalog.ЗадачиПроектов.Command.ПечатьЦепочекРабот</Command>

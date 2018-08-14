@@ -707,7 +707,7 @@
 													</ToolTip>
 													<HeaderPicture>
 														<xr:Ref>CommonPicture.КоличествоРассмотрено</xr:Ref>
-														<xr:LoadTransparent>true</xr:LoadTransparent>
+														<xr:LoadTransparent>false</xr:LoadTransparent>
 													</HeaderPicture>
 													<ContextMenu name="НеРассмотреноКонтекстноеМеню" id="729"/>
 													<ExtendedTooltip name="НеРассмотреноРасширеннаяПодсказка" id="730"/>
@@ -771,7 +771,7 @@
 											<RowPictureDataPath>ПредметыПанельНавигации.НомерКартинки</RowPictureDataPath>
 											<RowsPicture>
 												<xr:Ref>CommonPicture.ВидыНавигацииПоВзаимодействиямОтПредметовВзаимодействий</xr:Ref>
-												<xr:LoadTransparent>true</xr:LoadTransparent>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
 											</RowsPicture>
 											<CommandSet>
 												<ExcludedCommand>Change</ExcludedCommand>
@@ -882,7 +882,7 @@
 													</ToolTip>
 													<HeaderPicture>
 														<xr:Ref>CommonPicture.КоличествоРассмотрено</xr:Ref>
-														<xr:LoadTransparent>true</xr:LoadTransparent>
+														<xr:LoadTransparent>false</xr:LoadTransparent>
 													</HeaderPicture>
 													<Width>4</Width>
 													<HorizontalStretch>false</HorizontalStretch>
@@ -1983,8 +1983,7 @@
 														<CommandName>Form.Command.СоздатьЭлектронноеПисьмо</CommandName>
 														<Picture>
 															<xr:Ref>CommonPicture.ОтправитьЭлектронноеПисьмо</xr:Ref>
-															<xr:LoadTransparent>true</xr:LoadTransparent>
-															<xr:TransparentPixel x="6" y="2"/>
+															<xr:LoadTransparent>false</xr:LoadTransparent>
 														</Picture>
 														<Title>
 															<v8:item>
@@ -2426,8 +2425,7 @@
 														<CommandName>Form.Command.СоздатьЭлектронноеПисьмо</CommandName>
 														<Picture>
 															<xr:Ref>CommonPicture.ОтправитьЭлектронноеПисьмо</xr:Ref>
-															<xr:LoadTransparent>true</xr:LoadTransparent>
-															<xr:TransparentPixel x="6" y="2"/>
+															<xr:LoadTransparent>false</xr:LoadTransparent>
 														</Picture>
 														<Title>
 															<v8:item>
@@ -2443,8 +2441,7 @@
 														<CommandName>Form.Command.Ответить</CommandName>
 														<Picture>
 															<xr:Ref>CommonPicture.ОтветитьНаЭлектронноеПисьмо</xr:Ref>
-															<xr:LoadTransparent>true</xr:LoadTransparent>
-															<xr:TransparentPixel x="14" y="9"/>
+															<xr:LoadTransparent>false</xr:LoadTransparent>
 														</Picture>
 														<ExtendedTooltip name="СписокВходящиеОтветитьExtendedTooltip" id="606"/>
 													</Button>
@@ -2930,8 +2927,7 @@
 														<CommandName>Form.Command.СоздатьЭлектронноеПисьмо</CommandName>
 														<Picture>
 															<xr:Ref>CommonPicture.ОтправитьЭлектронноеПисьмо</xr:Ref>
-															<xr:LoadTransparent>true</xr:LoadTransparent>
-															<xr:TransparentPixel x="6" y="2"/>
+															<xr:LoadTransparent>false</xr:LoadTransparent>
 														</Picture>
 														<Title>
 															<v8:item>
@@ -3787,6 +3783,7 @@
 			<Type>
 				<v8:Type>v8:ValueListType</v8:Type>
 			</Type>
+			<Settings xsi:type="v8:TypeDescription"/>
 		</Attribute>
 		<Attribute name="ИмяТекущейПанелиНавигации" id="15">
 			<Title>
@@ -4283,6 +4280,7 @@
 			<Type>
 				<v8:Type>v8:ValueListType</v8:Type>
 			</Type>
+			<Settings xsi:type="v8:TypeDescription"/>
 		</Attribute>
 		<Attribute name="ИспользоватьПризнакРассмотрено" id="33">
 			<Title>
@@ -5076,8 +5074,7 @@
 			</ToolTip>
 			<Picture>
 				<xr:Ref>CommonPicture.ОтветитьНаЭлектронноеПисьмо</xr:Ref>
-				<xr:LoadTransparent>true</xr:LoadTransparent>
-				<xr:TransparentPixel x="14" y="9"/>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
 			</Picture>
 			<Action>Ответить</Action>
 		</Command>
@@ -5096,8 +5093,7 @@
 			</ToolTip>
 			<Picture>
 				<xr:Ref>CommonPicture.ОтветитьНаЭлектронноеПисьмоВсем</xr:Ref>
-				<xr:LoadTransparent>true</xr:LoadTransparent>
-				<xr:TransparentPixel x="1" y="3"/>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
 			</Picture>
 			<Action>ОтветитьВсем</Action>
 		</Command>
@@ -5116,8 +5112,7 @@
 			</ToolTip>
 			<Picture>
 				<xr:Ref>CommonPicture.ПереслатьЭлектронноеПисьмо</xr:Ref>
-				<xr:LoadTransparent>true</xr:LoadTransparent>
-				<xr:TransparentPixel x="2" y="2"/>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
 			</Picture>
 			<Action>Переслать</Action>
 		</Command>

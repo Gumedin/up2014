@@ -524,6 +524,7 @@
 			<Type>
 				<v8:Type>v8:ValueListType</v8:Type>
 			</Type>
+			<Settings xsi:type="v8:TypeDescription"/>
 		</Attribute>
 		<Attribute name="Предмет" id="5">
 			<Title>
@@ -615,8 +616,7 @@
 			</ToolTip>
 			<Picture>
 				<xr:Ref>CommonPicture.ДополнительныеСведения</xr:Ref>
-				<xr:LoadTransparent>true</xr:LoadTransparent>
-				<xr:TransparentPixel x="1" y="8"/>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
 			</Picture>
 			<Action>СвязанныеВзаимодействияВыполнить</Action>
 			<Representation>Picture</Representation>
