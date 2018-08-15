@@ -1,0 +1,975 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5">
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа1" id="57">
+			<Group>Horizontal</Group>
+			<Collapsed>true</Collapsed>
+			<ControlRepresentation>Picture</ControlRepresentation>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="58"/>
+			<ChildItems>
+				<UsualGroup name="Группа2" id="59">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отбор</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Behavior>Collapsible</Behavior>
+					<Collapsed>true</Collapsed>
+					<ControlRepresentation>Picture</ControlRepresentation>
+					<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="60"/>
+					<ChildItems>
+						<InputField name="Год" id="61">
+							<DataPath>Год</DataPath>
+							<EditFormat>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧГ=</v8:content>
+								</v8:item>
+							</EditFormat>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>2019</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">2019</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>2018</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">2018</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>2017</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">2017</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="ГодКонтекстноеМеню" id="62"/>
+							<ExtendedTooltip name="ГодРасширеннаяПодсказка" id="63"/>
+							<Events>
+								<Event name="TextEditEnd">ГодОкончаниеВводаТекста</Event>
+								<Event name="ChoiceProcessing">ГодОбработкаВыбора</Event>
+							</Events>
+						</InputField>
+						<Table name="Статус" id="69">
+							<Representation>List</Representation>
+							<TitleLocation>Top</TitleLocation>
+							<CommandBarLocation>None</CommandBarLocation>
+							<ChangeRowSet>false</ChangeRowSet>
+							<ChangeRowOrder>false</ChangeRowOrder>
+							<HeightControlVariant>UseContentHeight</HeightControlVariant>
+							<Header>false</Header>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<HorizontalStretch>false</HorizontalStretch>
+							<VerticalStretch>false</VerticalStretch>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Статус</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Статус проекта</v8:content>
+								</v8:item>
+							</Title>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="СтатусКонтекстноеМеню" id="70"/>
+							<AutoCommandBar name="СтатусКоманднаяПанель" id="71"/>
+							<ExtendedTooltip name="СтатусРасширеннаяПодсказка" id="72"/>
+							<SearchStringAddition name="СтатусСтрокаПоиска" id="73">
+								<AdditionSource>
+									<Item>Статус</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СтатусСтрокаПоискаКонтекстноеМеню" id="74"/>
+								<ExtendedTooltip name="СтатусСтрокаПоискаРасширеннаяПодсказка" id="75"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СтатусСостояниеПросмотра" id="76">
+								<AdditionSource>
+									<Item>Статус</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СтатусСостояниеПросмотраКонтекстноеМеню" id="77"/>
+								<ExtendedTooltip name="СтатусСостояниеПросмотраРасширеннаяПодсказка" id="78"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СтатусУправлениеПоиском" id="79">
+								<AdditionSource>
+									<Item>Статус</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СтатусУправлениеПоискомКонтекстноеМеню" id="80"/>
+								<ExtendedTooltip name="СтатусУправлениеПоискомРасширеннаяПодсказка" id="81"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="OnChange">ОтборПриИзменении</Event>
+							</Events>
+							<ChildItems>
+								<CheckBoxField name="СтатусУстановлен" id="85">
+									<DataPath>Статус.Установлен</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="СтатусУстановленКонтекстноеМеню" id="86"/>
+									<ExtendedTooltip name="СтатусУстановленРасширеннаяПодсказка" id="87"/>
+								</CheckBoxField>
+								<InputField name="СтатусСтатус" id="82">
+									<DataPath>Статус.Статус</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<MaxWidth>10</MaxWidth>
+									<ContextMenu name="СтатусСтатусКонтекстноеМеню" id="83"/>
+									<ExtendedTooltip name="СтатусСтатусРасширеннаяПодсказка" id="84"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+						<Table name="СтатусЗадач" id="88">
+							<Representation>List</Representation>
+							<TitleLocation>Top</TitleLocation>
+							<CommandBarLocation>None</CommandBarLocation>
+							<HeightControlVariant>UseContentHeight</HeightControlVariant>
+							<Header>false</Header>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<HorizontalStretch>false</HorizontalStretch>
+							<VerticalStretch>false</VerticalStretch>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>СтатусЗадач</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Статус задач</v8:content>
+								</v8:item>
+							</Title>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="СтатусЗадачКонтекстноеМеню" id="89"/>
+							<AutoCommandBar name="СтатусЗадачКоманднаяПанель" id="90"/>
+							<ExtendedTooltip name="СтатусЗадачРасширеннаяПодсказка" id="91"/>
+							<SearchStringAddition name="СтатусЗадачСтрокаПоиска" id="92">
+								<AdditionSource>
+									<Item>СтатусЗадач</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СтатусЗадачСтрокаПоискаКонтекстноеМеню" id="93"/>
+								<ExtendedTooltip name="СтатусЗадачСтрокаПоискаРасширеннаяПодсказка" id="94"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СтатусЗадачСостояниеПросмотра" id="95">
+								<AdditionSource>
+									<Item>СтатусЗадач</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СтатусЗадачСостояниеПросмотраКонтекстноеМеню" id="96"/>
+								<ExtendedTooltip name="СтатусЗадачСостояниеПросмотраРасширеннаяПодсказка" id="97"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СтатусЗадачУправлениеПоиском" id="98">
+								<AdditionSource>
+									<Item>СтатусЗадач</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СтатусЗадачУправлениеПоискомКонтекстноеМеню" id="99"/>
+								<ExtendedTooltip name="СтатусЗадачУправлениеПоискомРасширеннаяПодсказка" id="100"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="OnChange">ОтборПриИзменении</Event>
+							</Events>
+							<ChildItems>
+								<CheckBoxField name="СтатусЗадачУстановлен" id="104">
+									<DataPath>СтатусЗадач.Установлен</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="СтатусЗадачУстановленКонтекстноеМеню" id="105"/>
+									<ExtendedTooltip name="СтатусЗадачУстановленРасширеннаяПодсказка" id="106"/>
+								</CheckBoxField>
+								<InputField name="СтатусЗадачСтатус" id="101">
+									<DataPath>СтатусЗадач.Статус</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СтатусЗадачСтатусКонтекстноеМеню" id="102"/>
+									<ExtendedTooltip name="СтатусЗадачСтатусРасширеннаяПодсказка" id="103"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+						<Table name="КМ" id="137">
+							<Representation>List</Representation>
+							<TitleLocation>Top</TitleLocation>
+							<CommandBarLocation>None</CommandBarLocation>
+							<HeightControlVariant>UseContentHeight</HeightControlVariant>
+							<Header>false</Header>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<HorizontalStretch>false</HorizontalStretch>
+							<VerticalStretch>false</VerticalStretch>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>КМ</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="КМКонтекстноеМеню" id="138">
+								<ChildItems>
+									<Button name="КМ_ВсеУстановить" id="156">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.КМ_ВсеУстановить</CommandName>
+										<ExtendedTooltip name="КМ_ВсеУстановитьРасширеннаяПодсказка" id="157"/>
+									</Button>
+									<Button name="КМ_ВсеСнять" id="158">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.КМ_ВсеСнять</CommandName>
+										<ExtendedTooltip name="КМ_ВсеСнятьРасширеннаяПодсказка" id="159"/>
+									</Button>
+									<Button name="КМ_ВсеПоменять" id="160">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.КМ_ВсеПоменять</CommandName>
+										<ExtendedTooltip name="КМ_ВсеПоменятьРасширеннаяПодсказка" id="161"/>
+									</Button>
+								</ChildItems>
+							</ContextMenu>
+							<AutoCommandBar name="КМКоманднаяПанель" id="139"/>
+							<ExtendedTooltip name="КМРасширеннаяПодсказка" id="140"/>
+							<SearchStringAddition name="КМСтрокаПоиска" id="141">
+								<AdditionSource>
+									<Item>КМ</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="КМСтрокаПоискаКонтекстноеМеню" id="142"/>
+								<ExtendedTooltip name="КМСтрокаПоискаРасширеннаяПодсказка" id="143"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="КМСостояниеПросмотра" id="144">
+								<AdditionSource>
+									<Item>КМ</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="КМСостояниеПросмотраКонтекстноеМеню" id="145"/>
+								<ExtendedTooltip name="КМСостояниеПросмотраРасширеннаяПодсказка" id="146"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="КМУправлениеПоиском" id="147">
+								<AdditionSource>
+									<Item>КМ</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="КМУправлениеПоискомКонтекстноеМеню" id="148"/>
+								<ExtendedTooltip name="КМУправлениеПоискомРасширеннаяПодсказка" id="149"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="OnChange">ОтборПриИзменении</Event>
+							</Events>
+							<ChildItems>
+								<CheckBoxField name="КМУстановлен" id="153">
+									<DataPath>КМ.Установлен</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="КМУстановленКонтекстноеМеню" id="154"/>
+									<ExtendedTooltip name="КМУстановленРасширеннаяПодсказка" id="155"/>
+								</CheckBoxField>
+								<InputField name="КМКМ" id="150">
+									<DataPath>КМ.КМ</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КМКМКонтекстноеМеню" id="151"/>
+									<ExtendedTooltip name="КМКМРасширеннаяПодсказка" id="152"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+				<Table name="МоиПроекты" id="32">
+					<Representation>List</Representation>
+					<TitleLocation>Top</TitleLocation>
+					<ReadOnly>true</ReadOnly>
+					<UseAlternationRowColor>true</UseAlternationRowColor>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<DataPath>МоиПроекты</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Мои проекты</v8:content>
+						</v8:item>
+					</Title>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="МоиПроектыКонтекстноеМеню" id="33"/>
+					<AutoCommandBar name="МоиПроектыКоманднаяПанель" id="34">
+						<ChildItems>
+							<Button name="Обновить" id="67">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.Обновить</CommandName>
+								<Picture>
+									<xr:Ref>CommonPicture.СинхронизацияДанныхДлительнаяОперация</xr:Ref>
+									<xr:LoadTransparent>false</xr:LoadTransparent>
+								</Picture>
+								<ExtendedTooltip name="ОбновитьРасширеннаяПодсказка" id="68"/>
+							</Button>
+						</ChildItems>
+					</AutoCommandBar>
+					<ExtendedTooltip name="МоиПроектыРасширеннаяПодсказка" id="35"/>
+					<SearchStringAddition name="МоиПроектыСтрокаПоиска" id="36">
+						<AdditionSource>
+							<Item>МоиПроекты</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="МоиПроектыСтрокаПоискаКонтекстноеМеню" id="37"/>
+						<ExtendedTooltip name="МоиПроектыСтрокаПоискаРасширеннаяПодсказка" id="38"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="МоиПроектыСостояниеПросмотра" id="39">
+						<AdditionSource>
+							<Item>МоиПроекты</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="МоиПроектыСостояниеПросмотраКонтекстноеМеню" id="40"/>
+						<ExtendedTooltip name="МоиПроектыСостояниеПросмотраРасширеннаяПодсказка" id="41"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="МоиПроектыУправлениеПоиском" id="42">
+						<AdditionSource>
+							<Item>МоиПроекты</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="МоиПроектыУправлениеПоискомКонтекстноеМеню" id="43"/>
+						<ExtendedTooltip name="МоиПроектыУправлениеПоискомРасширеннаяПодсказка" id="44"/>
+					</SearchControlAddition>
+					<Events>
+						<Event name="Selection">МоиПроектыВыбор</Event>
+						<Event name="OnActivateRow">МоиПроектыПриАктивизацииСтроки</Event>
+					</Events>
+					<ChildItems>
+						<InputField name="МоиПроектыПроект" id="45">
+							<DataPath>МоиПроекты.Проект</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="МоиПроектыПроектКонтекстноеМеню" id="46"/>
+							<ExtendedTooltip name="МоиПроектыПроектРасширеннаяПодсказка" id="47"/>
+							<Events>
+								<Event name="Opening">МоиПроектыПроектОткрытие</Event>
+							</Events>
+						</InputField>
+						<LabelField name="МоиПроектыСтатус" id="48">
+							<DataPath>МоиПроекты.Статус</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="МоиПроектыСтатусКонтекстноеМеню" id="49"/>
+							<ExtendedTooltip name="МоиПроектыСтатусРасширеннаяПодсказка" id="50"/>
+						</LabelField>
+						<LabelField name="МоиПроектыОшибки" id="51">
+							<DataPath>МоиПроекты.СтатусЗадач</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="МоиПроектыОшибкиКонтекстноеМеню" id="52"/>
+							<ExtendedTooltip name="МоиПроектыОшибкиРасширеннаяПодсказка" id="53"/>
+						</LabelField>
+						<InputField name="МоиПроектыКлиентМенеджер" id="64">
+							<DataPath>МоиПроекты.КлиентМенеджер</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="МоиПроектыКлиентМенеджерКонтекстноеМеню" id="65"/>
+							<ExtendedTooltip name="МоиПроектыКлиентМенеджерРасширеннаяПодсказка" id="66"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+				<UsualGroup name="Группа3" id="133">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статистика</v8:content>
+						</v8:item>
+					</Title>
+					<Behavior>Collapsible</Behavior>
+					<ControlRepresentation>Picture</ControlRepresentation>
+					<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="134"/>
+					<ChildItems>
+						<Pages name="Группа4" id="109">
+							<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="110"/>
+							<ChildItems>
+								<Page name="Группа5" id="111">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Отображение</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="112"/>
+									<ChildItems>
+										<HTMLDocumentField name="HTMLДокумента" id="127">
+											<DataPath>СтатистикаДляКМ</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ContextMenu name="HTMLДокументаКонтекстноеМеню" id="128"/>
+											<ExtendedTooltip name="HTMLДокументаРасширеннаяПодсказка" id="129"/>
+										</HTMLDocumentField>
+										<Button name="Редактор" id="135">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.ОткрытьРедакторHTML</CommandName>
+											<ExtendedTooltip name="РедакторРасширеннаяПодсказка" id="136"/>
+										</Button>
+									</ChildItems>
+								</Page>
+								<Page name="РедакторШаблона" id="118">
+									<Visible>false</Visible>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Исходный код</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Редактор шаблона</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="РедакторШаблонаРасширеннаяПодсказка" id="119"/>
+									<ChildItems>
+										<TextDocumentField name="Поле1" id="120">
+											<DataPath>РедакторHTMLДокумента</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ContextMenu name="Поле1КонтекстноеМеню" id="121"/>
+											<ExtendedTooltip name="Поле1РасширеннаяПодсказка" id="122"/>
+										</TextDocumentField>
+										<Button name="Записать" id="123">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.Записать</CommandName>
+											<ExtendedTooltip name="ЗаписатьРасширеннаяПодсказка" id="124"/>
+										</Button>
+									</ChildItems>
+								</Page>
+							</ChildItems>
+						</Pages>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="МоиПроекты" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Мои проекты</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Проект" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Проект</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Проекты</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Статус" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статус</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:EnumRef.СтатусыПроектов</v8:Type>
+					</Type>
+				</Column>
+				<Column name="СтатусЗадач" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статус задач</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:EnumRef.СтатусыЗадачПроектов</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Год" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Год</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>4</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="КлиентМенеджер" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Клиент менеджер</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ООбеспечено" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>О обеспечено</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ОГарантия" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>О гарантия</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ОПрогноз" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>О прогноз</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Обеспечено" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Обеспечено</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Реализация" id="10">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Реализация</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Оплата" id="11">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Оплата</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="Год" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Год</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>4</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<Save>
+				<Field>Год</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="Статус" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Статус</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Save>
+				<Field>Статус</Field>
+			</Save>
+			<Columns>
+				<Column name="Статус" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статус</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:EnumRef.СтатусыПроектов</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Установлен" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Установлен</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="СтатусЗадач" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Статус задач</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Save>
+				<Field>СтатусЗадач</Field>
+			</Save>
+			<Columns>
+				<Column name="Статус" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статус</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:EnumRef.СтатусыЗадачПроектов</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Установлен" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Установлен</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="СтатистикаДляКМ" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Статистика для КМ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="РедакторHTMLДокумента" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Редактор HTMLДокумента</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="РедакторКод" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Редактор код</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СтатистикаПоПроекту" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Статистика по проекту</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КМ" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>КМ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="КМ" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>КМ</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ФизическиеЛица</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Установлен" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Установлен</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>МоиПроектыОшибки</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">МоиПроекты.СтатусЗадач</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.СтатусыЗадачПроектов.Ошибки</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:ПоясняющийОшибкуТекст</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="Вперед" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вперед</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вперед</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Вперед</Action>
+		</Command>
+		<Command name="Назад" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Назад</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Назад</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Назад</Action>
+		</Command>
+		<Command name="Записать" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Записать</Action>
+		</Command>
+		<Command name="Обновить" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>F5</Shortcut>
+			<Action>Обновить</Action>
+		</Command>
+		<Command name="ОткрытьРедакторHTML" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть редактор HTML</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть редактор HTML</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьРедакторHTML</Action>
+		</Command>
+		<Command name="КМ_ВсеУстановить" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Все установить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>все установить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КМ_ВсеУстановить</Action>
+		</Command>
+		<Command name="КМ_ВсеСнять" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Все снять</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>все снять</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КМ_ВсеСнять</Action>
+		</Command>
+		<Command name="КМ_ВсеПоменять" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Все поменять</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>все поменять</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КМ_ВсеПоменять</Action>
+		</Command>
+	</Commands>
+</Form>
