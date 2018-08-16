@@ -1036,7 +1036,8 @@
 			</ToolTip>
 			<Picture>
 				<xr:Ref>CommonPicture.ДополнительныеСведения</xr:Ref>
-				<xr:LoadTransparent>false</xr:LoadTransparent>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+				<xr:TransparentPixel x="1" y="8"/>
 			</Picture>
 			<Action>СвязанныеВзаимодействияВыполнить</Action>
 			<Representation>Picture</Representation>
@@ -1193,30 +1194,45 @@
 				<Type>Auto</Type>
 				<CommandGroup>CommandGroup.Взаимодействия</CommandGroup>
 				<Index>2</Index>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
 			</Item>
 			<Item>
 				<Command>0:fe21aaf0-7c7a-4db2-87d9-050921cfe22e</Command>
 				<Type>Auto</Type>
 				<CommandGroup>CommandGroup.Взаимодействия</CommandGroup>
 				<Index>3</Index>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
 			</Item>
 			<Item>
 				<Command>0:77f82a5e-964a-4c33-b178-5d815e98c69d</Command>
 				<Type>Auto</Type>
 				<CommandGroup>CommandGroup.Взаимодействия</CommandGroup>
 				<Index>4</Index>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
 			</Item>
 			<Item>
 				<Command>0:2e9087c5-74ca-46da-9a85-da34f23cd088</Command>
 				<Type>Auto</Type>
 				<CommandGroup>CommandGroup.Взаимодействия</CommandGroup>
 				<Index>5</Index>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
 			</Item>
 			<Item>
 				<Command>0:bb4022f3-c430-4439-ae86-606c6e01711f</Command>
 				<Type>Auto</Type>
 				<CommandGroup>CommandGroup.Взаимодействия</CommandGroup>
 				<Index>6</Index>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
 			</Item>
 			<Item>
 				<Command>Document.ЭлектронноеПисьмоВходящее.Command.ОтветитьВсем</Command>

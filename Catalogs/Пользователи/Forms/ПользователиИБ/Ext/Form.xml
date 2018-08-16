@@ -533,7 +533,6 @@
 			<Type>
 				<v8:Type>v8:ValueListType</v8:Type>
 			</Type>
-			<Settings xsi:type="v8:TypeDescription"/>
 		</Attribute>
 		<Attribute name="ИдентификаторыНесуществующихПользователейИБ" id="6">
 			<Title>
@@ -545,7 +544,6 @@
 			<Type>
 				<v8:Type>v8:ValueListType</v8:Type>
 			</Type>
-			<Settings xsi:type="v8:TypeDescription"/>
 		</Attribute>
 		<Attribute name="ПоказатьТолькоОбработанныеВКонфигураторе" id="7">
 			<Title>
@@ -625,7 +623,7 @@
 			</ToolTip>
 			<Picture>
 				<xr:Ref>CommonPicture.СостояниеПользователя02</xr:Ref>
-				<xr:LoadTransparent>false</xr:LoadTransparent>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>ПерейтиКПользователю</Action>
 			<Representation>TextPicture</Representation>

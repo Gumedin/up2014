@@ -620,7 +620,7 @@
 									<EditMode>EnterOnInput</EditMode>
 									<HeaderPicture>
 										<xr:Ref>CommonPicture.Информация</xr:Ref>
-										<xr:LoadTransparent>false</xr:LoadTransparent>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
 									</HeaderPicture>
 									<ValuesPicture>
 										<xr:Ref>CommonPicture.СтатусыСопоставленияОбъектов</xr:Ref>
@@ -3219,7 +3219,8 @@
 			</ToolTip>
 			<Picture>
 				<xr:Ref>CommonPicture.СинхронизацияДанныхВыполнение</xr:Ref>
-				<xr:LoadTransparent>false</xr:LoadTransparent>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+				<xr:TransparentPixel x="7" y="5"/>
 			</Picture>
 			<Action>ВыполнитьЗагрузкуДанныхДляСтроки</Action>
 			<Representation>TextPicture</Representation>

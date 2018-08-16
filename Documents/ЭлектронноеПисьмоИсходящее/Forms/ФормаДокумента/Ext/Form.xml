@@ -1017,7 +1017,6 @@
 			<Type>
 				<v8:Type>v8:ValueListType</v8:Type>
 			</Type>
-			<Settings xsi:type="v8:TypeDescription"/>
 		</Attribute>
 		<Attribute name="Вложения" id="3">
 			<Title>
@@ -1499,7 +1498,8 @@
 			</ToolTip>
 			<Picture>
 				<xr:Ref>CommonPicture.ОтправитьЭлектронноеПисьмо</xr:Ref>
-				<xr:LoadTransparent>false</xr:LoadTransparent>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+				<xr:TransparentPixel x="6" y="2"/>
 			</Picture>
 			<Action>ОтправитьПереслатьВыполнить</Action>
 			<Representation>TextPicture</Representation>
@@ -1538,7 +1538,7 @@
 			</ToolTip>
 			<Picture>
 				<xr:Ref>CommonPicture.Скрепка</xr:Ref>
-				<xr:LoadTransparent>false</xr:LoadTransparent>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>ДобавитьВложениеВыполнить</Action>
 			<ModifiesSavedData>true</ModifiesSavedData>

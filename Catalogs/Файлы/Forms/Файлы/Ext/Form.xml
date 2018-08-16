@@ -825,11 +825,13 @@
 											</ToolTip>
 											<HeaderPicture>
 												<xr:Ref>CommonPicture.ПодписанЭП</xr:Ref>
-												<xr:LoadTransparent>false</xr:LoadTransparent>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+												<xr:TransparentPixel x="10" y="2"/>
 											</HeaderPicture>
 											<ValuesPicture>
 												<xr:Ref>CommonPicture.ПодписанЭП</xr:Ref>
-												<xr:LoadTransparent>false</xr:LoadTransparent>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+												<xr:TransparentPixel x="10" y="2"/>
 											</ValuesPicture>
 											<ContextMenu name="ПодписанЭПКонтекстноеМеню" id="118"/>
 											<ExtendedTooltip name="ПодписанЭПРасширеннаяПодсказка" id="209"/>
@@ -1668,7 +1670,8 @@
 			</ToolTip>
 			<Picture>
 				<xr:Ref>CommonPicture.ПодписанЭП</xr:Ref>
-				<xr:LoadTransparent>false</xr:LoadTransparent>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+				<xr:TransparentPixel x="10" y="2"/>
 			</Picture>
 			<Action>Подписать</Action>
 			<FunctionalOptions>
@@ -1808,6 +1811,9 @@
 				<Command>0:fc40e2dd-5d79-4fd4-8e33-17a0a1d385a3</Command>
 				<Type>Auto</Type>
 				<CommandGroup>FormCommandBarImportant</CommandGroup>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
 			</Item>
 		</CommandBar>
 	</CommandInterface>

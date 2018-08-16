@@ -228,7 +228,7 @@
 							<EditMode>EnterOnInput</EditMode>
 							<ValuesPicture>
 								<xr:Ref>CommonPicture.ВедущаяКонечнаяТочка</xr:Ref>
-								<xr:LoadTransparent>false</xr:LoadTransparent>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
 							</ValuesPicture>
 							<ContextMenu name="СписокСостоянияУзловВедущаяКонтекстноеМеню" id="46"/>
 							<ExtendedTooltip name="СписокСостоянияУзловВедущаяExtendedTooltip" id="79"/>
@@ -568,7 +568,8 @@
 			</ToolTip>
 			<Picture>
 				<xr:Ref>CommonPicture.СинхронизацияДанныхВыполнение</xr:Ref>
-				<xr:LoadTransparent>false</xr:LoadTransparent>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+				<xr:TransparentPixel x="7" y="5"/>
 			</Picture>
 			<Action>ОтправитьИПолучитьСообщения</Action>
 			<Representation>TextPicture</Representation>

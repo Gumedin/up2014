@@ -1675,7 +1675,6 @@
 			<Type>
 				<v8:Type>v8:ValueListType</v8:Type>
 			</Type>
-			<Settings xsi:type="v8:TypeDescription"/>
 		</Attribute>
 		<Attribute name="КоличествоСинхронизаций" id="5">
 			<Title>
@@ -1819,7 +1818,8 @@
 			</ToolTip>
 			<Picture>
 				<xr:Ref>CommonPicture.СинхронизацияДанныхВыполнение</xr:Ref>
-				<xr:LoadTransparent>false</xr:LoadTransparent>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+				<xr:TransparentPixel x="7" y="5"/>
 			</Picture>
 			<Action>ВыполнитьОбменДанными</Action>
 			<Representation>TextPicture</Representation>

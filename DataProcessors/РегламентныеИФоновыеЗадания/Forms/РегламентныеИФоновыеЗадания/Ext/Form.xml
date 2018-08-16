@@ -1343,7 +1343,6 @@
 			<Type>
 				<v8:Type>v8:ValueListType</v8:Type>
 			</Type>
-			<Settings xsi:type="v8:TypeDescription"/>
 		</Attribute>
 	</Attributes>
 	<Commands>
@@ -1437,6 +1436,7 @@
 			<Picture>
 				<xr:Ref>CommonPicture.ВыполнитьРегламентноеЗаданиеВручную</xr:Ref>
 				<xr:LoadTransparent>true</xr:LoadTransparent>
+				<xr:TransparentPixel x="14" y="2"/>
 			</Picture>
 			<Action>ВыполнитьРегламентноеЗаданиеВручную</Action>
 			<Representation>TextPicture</Representation>
@@ -1479,17 +1479,26 @@
 				<Type>Auto</Type>
 				<CommandGroup>FormNavigationPanelImportant</CommandGroup>
 				<Index>2</Index>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
 			</Item>
 			<Item>
 				<Command>0:49440928-bbd6-4c6a-bf40-af70a34d7372</Command>
 				<Type>Auto</Type>
 				<CommandGroup>FormNavigationPanelImportant</CommandGroup>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
 			</Item>
 			<Item>
 				<Command>0:721481be-40e4-45b6-9530-ad7fb0c60429</Command>
 				<Type>Auto</Type>
 				<CommandGroup>FormNavigationPanelImportant</CommandGroup>
 				<Index>1</Index>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
 			</Item>
 			<Item>
 				<Command>0:f7ccc574-d6c3-495a-86b4-7e24e75502d9</Command>
