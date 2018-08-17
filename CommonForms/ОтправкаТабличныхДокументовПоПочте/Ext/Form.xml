@@ -1,11 +1,16 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5">
-	<Width>38</Width>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Отправка по почте</v8:content>
+		</v8:item>
+	</Title>
 	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
 	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
 	<SaveDataInSettings>UseList</SaveDataInSettings>
+	<AutoTitle>false</AutoTitle>
 	<CommandBarLocation>Bottom</CommandBarLocation>
-	<VerticalScroll>useIfNecessary</VerticalScroll>
 	<CommandSet>
 		<ExcludedCommand>Abort</ExcludedCommand>
 		<ExcludedCommand>Close</ExcludedCommand>
@@ -53,6 +58,12 @@
 			<AutoInsertNewRow>true</AutoInsertNewRow>
 			<DataPath>ФорматыСохранения</DataPath>
 			<RowPictureDataPath>ФорматыСохранения.Picture</RowPictureDataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Форматы сохранения</v8:content>
+				</v8:item>
+			</Title>
 			<CommandSet>
 				<ExcludedCommand>Add</ExcludedCommand>
 				<ExcludedCommand>Change</ExcludedCommand>
@@ -66,37 +77,34 @@
 				<ExcludedCommand>SortListAsc</ExcludedCommand>
 				<ExcludedCommand>SortListDesc</ExcludedCommand>
 			</CommandSet>
-			<SearchStringLocation>None</SearchStringLocation>
-			<ViewStatusLocation>None</ViewStatusLocation>
-			<SearchControlLocation>None</SearchControlLocation>
 			<ContextMenu name="ФорматыСохраненияКонтекстноеМеню" id="33"/>
 			<AutoCommandBar name="ФорматыСохраненияКоманднаяПанель" id="34">
 				<Autofill>false</Autofill>
 			</AutoCommandBar>
 			<ExtendedTooltip name="ФорматыСохраненияExtendedTooltip" id="44"/>
-			<SearchStringAddition name="ФорматыСохраненияСтрокаПоиска" id="48">
+			<SearchStringAddition name="ФорматыСохраненияSearchString" id="48">
 				<AdditionSource>
 					<Item>ФорматыСохранения</Item>
 					<Type>SearchStringRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="ФорматыСохраненияСтрокаПоискаКонтекстноеМеню" id="49"/>
-				<ExtendedTooltip name="ФорматыСохраненияСтрокаПоискаРасширеннаяПодсказка" id="50"/>
+				<ContextMenu name="ФорматыСохраненияSearchStringContextMenu" id="49"/>
+				<ExtendedTooltip name="ФорматыСохраненияSearchStringExtendedTooltip" id="50"/>
 			</SearchStringAddition>
-			<ViewStatusAddition name="ФорматыСохраненияСостояниеПросмотра" id="51">
+			<ViewStatusAddition name="ФорматыСохраненияViewStatus" id="51">
 				<AdditionSource>
 					<Item>ФорматыСохранения</Item>
 					<Type>ViewStatusRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="ФорматыСохраненияСостояниеПросмотраКонтекстноеМеню" id="52"/>
-				<ExtendedTooltip name="ФорматыСохраненияСостояниеПросмотраРасширеннаяПодсказка" id="53"/>
+				<ContextMenu name="ФорматыСохраненияViewStatusContextMenu" id="52"/>
+				<ExtendedTooltip name="ФорматыСохраненияViewStatusExtendedTooltip" id="53"/>
 			</ViewStatusAddition>
-			<SearchControlAddition name="ФорматыСохраненияУправлениеПоиском" id="54">
+			<SearchControlAddition name="ФорматыСохраненияSearchControl" id="54">
 				<AdditionSource>
 					<Item>ФорматыСохранения</Item>
 					<Type>SearchControl</Type>
 				</AdditionSource>
-				<ContextMenu name="ФорматыСохраненияУправлениеПоискомКонтекстноеМеню" id="55"/>
-				<ExtendedTooltip name="ФорматыСохраненияУправлениеПоискомРасширеннаяПодсказка" id="56"/>
+				<ContextMenu name="ФорматыСохраненияSearchControlContextMenu" id="55"/>
+				<ExtendedTooltip name="ФорматыСохраненияSearchControlExtendedTooltip" id="56"/>
 			</SearchControlAddition>
 			<ChildItems>
 				<CheckBoxField name="ФорматыСохраненияПометка" id="37">
@@ -214,6 +222,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>Прикрепить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 	</Commands>
 	<Parameters>

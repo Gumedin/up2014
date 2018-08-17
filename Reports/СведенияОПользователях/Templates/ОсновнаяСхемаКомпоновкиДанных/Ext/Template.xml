@@ -356,6 +356,58 @@
 					<v8:content>Без пользователя информационной базы</v8:content>
 				</v8:item>
 			</title>
+			<valueType>
+				<v8:Type>xs:boolean</v8:Type>
+			</valueType>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+					<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">БЛ=; БИ=Да</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СрокДействия</dataPath>
+			<field>СрокДействия</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Срок действия</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПотребоватьСменуПароляПриВходе</dataPath>
+			<field>ПотребоватьСменуПароляПриВходе</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Потребовать смену пароля при входе</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:boolean</v8:Type>
+			</valueType>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+					<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">БЛ=; БИ=Да</dcscor:value>
+				</dcscor:item>
+			</appearance>
 		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ
@@ -371,9 +423,13 @@
 	Пользователи.ИдентификаторПользователяИБ,
 	Пользователи.Недействителен,
 	Пользователи.Комментарий,
-	Пользователи.Предопределенный
+	Пользователи.Предопределенный,
+	ЕСТЬNULL(СведенияОПользователях.ПотребоватьСменуПароляПриВходе, ЛОЖЬ) КАК ПотребоватьСменуПароляПриВходе,
+	ЕСТЬNULL(СведенияОПользователях.СрокДействия, ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)) КАК СрокДействия
 ИЗ
 	Справочник.Пользователи КАК Пользователи
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.СведенияОПользователях КАК СведенияОПользователях
+		ПО (СведенияОПользователях.Пользователь = Пользователи.Ссылка)
 ГДЕ
 	Пользователи.Служебный = ЛОЖЬ
 	И &amp;Пользователи
@@ -393,9 +449,13 @@
 	ВнешниеПользователи.ИдентификаторПользователяИБ,
 	ВнешниеПользователи.Недействителен,
 	ВнешниеПользователи.Комментарий,
-	ВнешниеПользователи.Предопределенный
+	ВнешниеПользователи.Предопределенный,
+	ЕСТЬNULL(СведенияОПользователях.ПотребоватьСменуПароляПриВходе, ЛОЖЬ),
+	ЕСТЬNULL(СведенияОПользователях.СрокДействия, ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0))
 ИЗ
 	Справочник.ВнешниеПользователи КАК ВнешниеПользователи
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.СведенияОПользователях КАК СведенияОПользователях
+		ПО (СведенияОПользователях.Пользователь = ВнешниеПользователи.Ссылка)
 ГДЕ
 	&amp;ВнешниеПользователи</query>
 	</dataSet>
@@ -585,6 +645,14 @@
 					<dcsset:use>false</dcsset:use>
 					<dcsset:field>ЭлектронныйАдрес</dcsset:field>
 				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>ПотребоватьСменуПароляПриВходе</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>СрокДействия</dcsset:field>
+				</dcsset:item>
 				<dcsset:viewMode>Normal</dcsset:viewMode>
 				<dcsset:userSettingID>7139addb-6cc1-4f4b-ada6-47ed96031db6</dcsset:userSettingID>
 			</dcsset:selection>
@@ -600,6 +668,7 @@
 							<v8:content>Недействительные</v8:content>
 						</v8:item>
 					</dcsset:presentation>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
 					<dcsset:userSettingID>2fc6f1d8-ce85-45c1-8fc8-29b3e299b5f7</dcsset:userSettingID>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:FilterItemComparison">
@@ -610,9 +679,10 @@
 					<dcsset:presentation xsi:type="v8:LocalStringType">
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Помеченые на удаление</v8:content>
+							<v8:content>Помеченные на удаление</v8:content>
 						</v8:item>
 					</dcsset:presentation>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
 					<dcsset:userSettingID>9800e27b-27de-4259-86c0-8d4595eb319a</dcsset:userSettingID>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:FilterItemComparison">
@@ -626,6 +696,7 @@
 							<v8:content>Без пользователя информационной базы</v8:content>
 						</v8:item>
 					</dcsset:presentation>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
 					<dcsset:userSettingID>cb47e2ce-6928-43e4-b904-cbe4b2952e49</dcsset:userSettingID>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:FilterItemComparison">
@@ -639,6 +710,7 @@
 							<v8:content>Вход в программу разрешен</v8:content>
 						</v8:item>
 					</dcsset:presentation>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
 					<dcsset:userSettingID>8809ba69-2ea3-40bf-8e8b-82ab129baec6</dcsset:userSettingID>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:FilterItemComparison">
@@ -652,6 +724,7 @@
 							<v8:content>Аутентификация стандартная</v8:content>
 						</v8:item>
 					</dcsset:presentation>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
 					<dcsset:userSettingID>6590234e-cc10-4899-9e2d-f86867903a54</dcsset:userSettingID>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:FilterItemComparison">
@@ -665,6 +738,7 @@
 							<v8:content>Аутентификация ОС</v8:content>
 						</v8:item>
 					</dcsset:presentation>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
 					<dcsset:userSettingID>19e3a1bb-4c84-420b-8a05-d3f78014fc1c</dcsset:userSettingID>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:FilterItemComparison">
@@ -678,6 +752,7 @@
 							<v8:content>Аутентификация OpenID</v8:content>
 						</v8:item>
 					</dcsset:presentation>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
 					<dcsset:userSettingID>2b314b78-4b9a-41e9-bba0-bafdc8042eba</dcsset:userSettingID>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:FilterItemComparison">
@@ -869,6 +944,14 @@
 					<dcsset:use>false</dcsset:use>
 					<dcsset:field>ЭлектронныйАдрес</dcsset:field>
 				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>ПотребоватьСменуПароляПриВходе</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>СрокДействия</dcsset:field>
+				</dcsset:item>
 				<dcsset:viewMode>Normal</dcsset:viewMode>
 				<dcsset:userSettingID>7139addb-6cc1-4f4b-ada6-47ed96031db6</dcsset:userSettingID>
 			</dcsset:selection>
@@ -884,6 +967,7 @@
 							<v8:content>Недействительные</v8:content>
 						</v8:item>
 					</dcsset:presentation>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
 					<dcsset:userSettingID>2fc6f1d8-ce85-45c1-8fc8-29b3e299b5f7</dcsset:userSettingID>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:FilterItemComparison">
@@ -897,6 +981,7 @@
 							<v8:content>Помеченые на удаление</v8:content>
 						</v8:item>
 					</dcsset:presentation>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
 					<dcsset:userSettingID>9800e27b-27de-4259-86c0-8d4595eb319a</dcsset:userSettingID>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:FilterItemComparison">
@@ -910,6 +995,7 @@
 							<v8:content>Без пользователя информационной базы</v8:content>
 						</v8:item>
 					</dcsset:presentation>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
 					<dcsset:userSettingID>cb47e2ce-6928-43e4-b904-cbe4b2952e49</dcsset:userSettingID>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:FilterItemComparison">
@@ -923,6 +1009,7 @@
 							<v8:content>Вход в программу разрешен</v8:content>
 						</v8:item>
 					</dcsset:presentation>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
 					<dcsset:userSettingID>8809ba69-2ea3-40bf-8e8b-82ab129baec6</dcsset:userSettingID>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:FilterItemComparison">
@@ -936,6 +1023,7 @@
 							<v8:content>Аутентификация стандартная</v8:content>
 						</v8:item>
 					</dcsset:presentation>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
 					<dcsset:userSettingID>6590234e-cc10-4899-9e2d-f86867903a54</dcsset:userSettingID>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:FilterItemComparison">
@@ -949,6 +1037,7 @@
 							<v8:content>Аутентификация ОС</v8:content>
 						</v8:item>
 					</dcsset:presentation>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
 					<dcsset:userSettingID>19e3a1bb-4c84-420b-8a05-d3f78014fc1c</dcsset:userSettingID>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:FilterItemComparison">
@@ -962,6 +1051,7 @@
 							<v8:content>Аутентификация OpenID</v8:content>
 						</v8:item>
 					</dcsset:presentation>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
 					<dcsset:userSettingID>2b314b78-4b9a-41e9-bba0-bafdc8042eba</dcsset:userSettingID>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:FilterItemComparison">
@@ -1132,6 +1222,14 @@
 					<dcsset:use>false</dcsset:use>
 					<dcsset:field>Комментарий</dcsset:field>
 				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>СрокДействия</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>ПотребоватьСменуПароляПриВходе</dcsset:field>
+				</dcsset:item>
 				<dcsset:viewMode>Normal</dcsset:viewMode>
 				<dcsset:userSettingID>7139addb-6cc1-4f4b-ada6-47ed96031db6</dcsset:userSettingID>
 			</dcsset:selection>
@@ -1147,6 +1245,7 @@
 							<v8:content>Недействительные</v8:content>
 						</v8:item>
 					</dcsset:presentation>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
 					<dcsset:userSettingID>2fc6f1d8-ce85-45c1-8fc8-29b3e299b5f7</dcsset:userSettingID>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:FilterItemComparison">
@@ -1160,6 +1259,7 @@
 							<v8:content>Помеченые на удаление</v8:content>
 						</v8:item>
 					</dcsset:presentation>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
 					<dcsset:userSettingID>9800e27b-27de-4259-86c0-8d4595eb319a</dcsset:userSettingID>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:FilterItemComparison">
@@ -1173,6 +1273,7 @@
 							<v8:content>Без пользователя информационной базы</v8:content>
 						</v8:item>
 					</dcsset:presentation>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
 					<dcsset:userSettingID>cb47e2ce-6928-43e4-b904-cbe4b2952e49</dcsset:userSettingID>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:FilterItemComparison">
@@ -1186,6 +1287,7 @@
 							<v8:content>Вход в программу разрешен</v8:content>
 						</v8:item>
 					</dcsset:presentation>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
 					<dcsset:userSettingID>8809ba69-2ea3-40bf-8e8b-82ab129baec6</dcsset:userSettingID>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:FilterItemComparison">
@@ -1199,6 +1301,7 @@
 							<v8:content>Аутентификация стандартная</v8:content>
 						</v8:item>
 					</dcsset:presentation>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
 					<dcsset:userSettingID>6590234e-cc10-4899-9e2d-f86867903a54</dcsset:userSettingID>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:FilterItemComparison">
@@ -1212,6 +1315,7 @@
 							<v8:content>Аутентификация OpenID</v8:content>
 						</v8:item>
 					</dcsset:presentation>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
 					<dcsset:userSettingID>2b314b78-4b9a-41e9-bba0-bafdc8042eba</dcsset:userSettingID>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:FilterItemComparison">

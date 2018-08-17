@@ -1,8 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
 	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
 	<Group>Horizontal</Group>
-	<VerticalScroll>useIfNecessary</VerticalScroll>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<Autofill>false</Autofill>
 		<ChildItems>
@@ -29,6 +28,12 @@
 				<CommandName>Form.Command.ОтчетПоПравамДоступа</CommandName>
 				<ExtendedTooltip name="ФормаОтчетПраваДоступаExtendedTooltip" id="112"/>
 			</Button>
+			<Button name="ФормаОбновить" id="57">
+				<Type>CommandBarButton</Type>
+				<OnlyInAllActions>false</OnlyInAllActions>
+				<CommandName>Form.Command.Обновить</CommandName>
+				<ExtendedTooltip name="ФормаОбновитьExtendedTooltip" id="115"/>
+			</Button>
 			<ButtonGroup name="ПанельФормы" id="28">
 				<Title>
 					<v8:item>
@@ -36,12 +41,6 @@
 						<v8:content>Панель формы</v8:content>
 					</v8:item>
 				</Title>
-				<ToolTip>
-					<v8:item>
-						<v8:lang>ru</v8:lang>
-						<v8:content>Панель формы</v8:content>
-					</v8:item>
-				</ToolTip>
 				<CommandSource>Form</CommandSource>
 				<ExtendedTooltip name="ПанельФормыExtendedTooltip" id="113"/>
 			</ButtonGroup>
@@ -49,12 +48,6 @@
 				<Type>CommandBarButton</Type>
 				<CommandName>Form.StandardCommand.Help</CommandName>
 				<ExtendedTooltip name="ФормаСправкаExtendedTooltip" id="114"/>
-			</Button>
-			<Button name="ФормаОбновить" id="57">
-				<Type>CommandBarButton</Type>
-				<OnlyInAllActions>false</OnlyInAllActions>
-				<CommandName>Form.Command.Обновить</CommandName>
-				<ExtendedTooltip name="ФормаОбновитьExtendedTooltip" id="115"/>
 			</Button>
 		</ChildItems>
 	</AutoCommandBar>
@@ -66,6 +59,7 @@
 	<ChildItems>
 		<LabelDecoration name="НедостаточноПравНаПросмотр" id="61">
 			<Visible>false</Visible>
+			<AutoMaxWidth>false</AutoMaxWidth>
 			<Title formatted="false">
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -82,12 +76,6 @@
 					<v8:content>Группы доступа и роли</v8:content>
 				</v8:item>
 			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Группы доступа и роли</v8:content>
-				</v8:item>
-			</ToolTip>
 			<ExtendedTooltip name="ГруппыДоступаИРолиExtendedTooltip" id="117"/>
 			<ChildItems>
 				<Page name="ГруппыДоступаПользователя" id="63">
@@ -103,19 +91,18 @@
 							<Representation>List</Representation>
 							<ReadOnly>true</ReadOnly>
 							<DefaultItem>true</DefaultItem>
-							<Width>60</Width>
-							<Height>9</Height>
 							<UseAlternationRowColor>true</UseAlternationRowColor>
 							<AutoInsertNewRow>true</AutoInsertNewRow>
 							<InitialTreeView>ExpandTopLevel</InitialTreeView>
 							<EnableStartDrag>true</EnableStartDrag>
 							<EnableDrag>true</EnableDrag>
 							<DataPath>ГруппыДоступа</DataPath>
-							<RowPictureDataPath>ГруппыДоступа.Описание</RowPictureDataPath>
-							<RowsPicture>
-								<xr:Ref>CommonPicture.СостоянияПользователей</xr:Ref>
-								<xr:LoadTransparent>false</xr:LoadTransparent>
-							</RowsPicture>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группы доступа</v8:content>
+								</v8:item>
+							</Title>
 							<CommandSet>
 								<ExcludedCommand>Add</ExcludedCommand>
 								<ExcludedCommand>Change</ExcludedCommand>
@@ -127,9 +114,6 @@
 								<ExcludedCommand>SortListAsc</ExcludedCommand>
 								<ExcludedCommand>SortListDesc</ExcludedCommand>
 							</CommandSet>
-							<SearchStringLocation>None</SearchStringLocation>
-							<ViewStatusLocation>None</ViewStatusLocation>
-							<SearchControlLocation>None</SearchControlLocation>
 							<RowFilter xsi:nil="true"/>
 							<ContextMenu name="ГруппыДоступаКонтекстноеМеню" id="2">
 								<Autofill>false</Autofill>
@@ -176,29 +160,29 @@
 								</ChildItems>
 							</AutoCommandBar>
 							<ExtendedTooltip name="ГруппыДоступаExtendedTooltip" id="124"/>
-							<SearchStringAddition name="ГруппыДоступаСтрокаПоиска" id="138">
+							<SearchStringAddition name="ГруппыДоступаSearchString" id="138">
 								<AdditionSource>
 									<Item>ГруппыДоступа</Item>
 									<Type>SearchStringRepresentation</Type>
 								</AdditionSource>
-								<ContextMenu name="ГруппыДоступаСтрокаПоискаКонтекстноеМеню" id="139"/>
-								<ExtendedTooltip name="ГруппыДоступаСтрокаПоискаРасширеннаяПодсказка" id="140"/>
+								<ContextMenu name="ГруппыДоступаSearchStringContextMenu" id="139"/>
+								<ExtendedTooltip name="ГруппыДоступаSearchStringExtendedTooltip" id="140"/>
 							</SearchStringAddition>
-							<ViewStatusAddition name="ГруппыДоступаСостояниеПросмотра" id="141">
+							<ViewStatusAddition name="ГруппыДоступаViewStatus" id="141">
 								<AdditionSource>
 									<Item>ГруппыДоступа</Item>
 									<Type>ViewStatusRepresentation</Type>
 								</AdditionSource>
-								<ContextMenu name="ГруппыДоступаСостояниеПросмотраКонтекстноеМеню" id="142"/>
-								<ExtendedTooltip name="ГруппыДоступаСостояниеПросмотраРасширеннаяПодсказка" id="143"/>
+								<ContextMenu name="ГруппыДоступаViewStatusContextMenu" id="142"/>
+								<ExtendedTooltip name="ГруппыДоступаViewStatusExtendedTooltip" id="143"/>
 							</ViewStatusAddition>
-							<SearchControlAddition name="ГруппыДоступаУправлениеПоиском" id="144">
+							<SearchControlAddition name="ГруппыДоступаSearchControl" id="144">
 								<AdditionSource>
 									<Item>ГруппыДоступа</Item>
 									<Type>SearchControl</Type>
 								</AdditionSource>
-								<ContextMenu name="ГруппыДоступаУправлениеПоискомКонтекстноеМеню" id="145"/>
-								<ExtendedTooltip name="ГруппыДоступаУправлениеПоискомРасширеннаяПодсказка" id="146"/>
+								<ContextMenu name="ГруппыДоступаSearchControlContextMenu" id="145"/>
+								<ExtendedTooltip name="ГруппыДоступаSearchControlExtendedTooltip" id="146"/>
 							</SearchControlAddition>
 							<Events>
 								<Event name="Selection">ГруппыДоступаВыбор</Event>
@@ -225,8 +209,8 @@
 								</InputField>
 							</ChildItems>
 						</Table>
-						<InputField name="ГруппыДоступаОписаниеПредставление" id="81">
-							<DataPath>Items.ГруппыДоступа.CurrentData.Описание</DataPath>
+						<InputField name="ГруппыДоступаКомментарийПредставление" id="81">
+							<DataPath>Items.ГруппыДоступа.CurrentData.Комментарий</DataPath>
 							<ReadOnly>true</ReadOnly>
 							<TitleLocation>Left</TitleLocation>
 							<ToolTip>
@@ -235,11 +219,11 @@
 									<v8:content>Описание выбранной группы доступа</v8:content>
 								</v8:item>
 							</ToolTip>
+							<AutoMaxWidth>false</AutoMaxWidth>
 							<Height>2</Height>
-							<VerticalStretch>false</VerticalStretch>
 							<MultiLine>true</MultiLine>
-							<ContextMenu name="ГруппыДоступаОписаниеПредставлениеКонтекстноеМеню" id="82"/>
-							<ExtendedTooltip name="ГруппыДоступаОписаниеПредставлениеExtendedTooltip" id="128"/>
+							<ContextMenu name="ГруппыДоступаКомментарийПредставлениеКонтекстноеМеню" id="82"/>
+							<ExtendedTooltip name="ГруппыДоступаКомментарийПредставлениеРасширеннаяПодсказка" id="128"/>
 						</InputField>
 						<UsualGroup name="ПредупреждениеЕстьСкрытыеГруппыДоступа" id="66">
 							<Title>
@@ -254,8 +238,6 @@
 							<ExtendedTooltip name="ПредупреждениеЕстьСкрытыеГруппыДоступаExtendedTooltip" id="129"/>
 							<ChildItems>
 								<PictureDecoration name="ЕстьЗапрещенныеГруппыКартинка" id="67">
-									<Width>4</Width>
-									<Height>3</Height>
 									<Title formatted="false">
 										<v8:item>
 											<v8:lang>ru</v8:lang>
@@ -270,6 +252,7 @@
 									<ExtendedTooltip name="ЕстьЗапрещенныеГруппыКартинкаExtendedTooltip" id="130"/>
 								</PictureDecoration>
 								<LabelDecoration name="ЕстьЗапрещенныеГруппыТекст" id="64">
+									<AutoMaxWidth>false</AutoMaxWidth>
 									<Title formatted="false">
 										<v8:item>
 											<v8:lang>ru</v8:lang>
@@ -293,7 +276,6 @@
 							<v8:content>Разрешенные действия (роли)</v8:content>
 						</v8:item>
 					</Title>
-					<Width>48</Width>
 					<ExtendedTooltip name="ОтображениеРолейExtendedTooltip" id="132"/>
 					<ChildItems>
 						<Table name="Роли" id="85">
@@ -313,6 +295,12 @@
 								<xr:Ref>CommonPicture.ПиктограммыЭлементов</xr:Ref>
 								<xr:LoadTransparent>false</xr:LoadTransparent>
 							</RowsPicture>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Роли</v8:content>
+								</v8:item>
+							</Title>
 							<CommandSet>
 								<ExcludedCommand>Add</ExcludedCommand>
 								<ExcludedCommand>Copy</ExcludedCommand>
@@ -328,9 +316,6 @@
 								<ExcludedCommand>SortListDesc</ExcludedCommand>
 								<ExcludedCommand>Tree</ExcludedCommand>
 							</CommandSet>
-							<SearchStringLocation>None</SearchStringLocation>
-							<ViewStatusLocation>None</ViewStatusLocation>
-							<SearchControlLocation>None</SearchControlLocation>
 							<ContextMenu name="РолиКонтекстноеМеню" id="86">
 								<Autofill>false</Autofill>
 							</ContextMenu>
@@ -345,29 +330,29 @@
 								</ChildItems>
 							</AutoCommandBar>
 							<ExtendedTooltip name="РолиExtendedTooltip" id="134"/>
-							<SearchStringAddition name="РолиСтрокаПоиска" id="147">
+							<SearchStringAddition name="РолиSearchString" id="147">
 								<AdditionSource>
 									<Item>Роли</Item>
 									<Type>SearchStringRepresentation</Type>
 								</AdditionSource>
-								<ContextMenu name="РолиСтрокаПоискаКонтекстноеМеню" id="148"/>
-								<ExtendedTooltip name="РолиСтрокаПоискаРасширеннаяПодсказка" id="149"/>
+								<ContextMenu name="РолиSearchStringContextMenu" id="148"/>
+								<ExtendedTooltip name="РолиSearchStringExtendedTooltip" id="149"/>
 							</SearchStringAddition>
-							<ViewStatusAddition name="РолиСостояниеПросмотра" id="150">
+							<ViewStatusAddition name="РолиViewStatus" id="150">
 								<AdditionSource>
 									<Item>Роли</Item>
 									<Type>ViewStatusRepresentation</Type>
 								</AdditionSource>
-								<ContextMenu name="РолиСостояниеПросмотраКонтекстноеМеню" id="151"/>
-								<ExtendedTooltip name="РолиСостояниеПросмотраРасширеннаяПодсказка" id="152"/>
+								<ContextMenu name="РолиViewStatusContextMenu" id="151"/>
+								<ExtendedTooltip name="РолиViewStatusExtendedTooltip" id="152"/>
 							</ViewStatusAddition>
-							<SearchControlAddition name="РолиУправлениеПоиском" id="153">
+							<SearchControlAddition name="РолиSearchControl" id="153">
 								<AdditionSource>
 									<Item>Роли</Item>
 									<Type>SearchControl</Type>
 								</AdditionSource>
-								<ContextMenu name="РолиУправлениеПоискомКонтекстноеМеню" id="154"/>
-								<ExtendedTooltip name="РолиУправлениеПоискомРасширеннаяПодсказка" id="155"/>
+								<ContextMenu name="РолиSearchControlContextMenu" id="154"/>
+								<ExtendedTooltip name="РолиSearchControlExtendedTooltip" id="155"/>
 							</SearchControlAddition>
 							<ChildItems>
 								<ColumnGroup name="РолиКолонок" id="88">
@@ -377,12 +362,6 @@
 											<v8:content>Роли колонок</v8:content>
 										</v8:item>
 									</Title>
-									<ToolTip>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Роли колонок</v8:content>
-										</v8:item>
-									</ToolTip>
 									<Group>InCell</Group>
 									<ExtendedTooltip name="РолиКолонокExtendedTooltip" id="135"/>
 									<ChildItems>
@@ -475,11 +454,11 @@
 						</v8:StringQualifiers>
 					</Type>
 				</Column>
-				<Column name="Описание" id="2">
+				<Column name="Комментарий" id="2">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Описание</v8:content>
+							<v8:content>Комментарий</v8:content>
 						</v8:item>
 					</Title>
 					<Type>
@@ -507,7 +486,7 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Пользователь ИБПолноправный</v8:content>
+					<v8:content>Полноправный</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -518,7 +497,7 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Пользователь ИБОтветственный</v8:content>
+					<v8:content>Ответственный</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -684,6 +663,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ВключитьВГруппу</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ИсключитьИзГруппы" id="2">
 			<Title>
@@ -699,6 +679,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ИсключитьИзГруппы</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ИзменитьГруппу" id="3">
 			<Title>
@@ -720,6 +701,7 @@
 			</Picture>
 			<Action>ИзменитьГруппу</Action>
 			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="Обновить" id="6">
 			<Title>
@@ -734,6 +716,7 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>Обновить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ОтчетПоПравамДоступа" id="8">
 			<Title>
@@ -748,6 +731,7 @@
 			</Picture>
 			<Action>ОтчетПоПравамДоступа</Action>
 			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ГруппировкаРолейПоПодсистемам" id="4">
 			<Title>
@@ -768,6 +752,7 @@
 			</Picture>
 			<Action>ГруппировкаРолейПоПодсистемам</Action>
 			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 	</Commands>
 	<Parameters>

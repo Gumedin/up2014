@@ -1,31 +1,38 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
 	<CommandBarLocation>Top</CommandBarLocation>
-	<VerticalScroll>useIfNecessary</VerticalScroll>
 	<CommandSet>
 		<ExcludedCommand>CreateFolder</ExcludedCommand>
 	</CommandSet>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
-		<ChildItems>
-			<Button name="ПереместитьВверх" id="17">
-				<Type>CommandBarButton</Type>
-				<SkipOnInput>false</SkipOnInput>
-				<CommandName>Form.Command.ПереместитьЭлементВверх</CommandName>
-				<TextColor>style:ButtonTextColor</TextColor>
-				<BackColor>style:ButtonBackColor</BackColor>
-				<ExtendedTooltip name="ПереместитьВверхExtendedTooltip" id="32"/>
-			</Button>
-			<Button name="ПереместитьВниз" id="18">
-				<Type>CommandBarButton</Type>
-				<SkipOnInput>false</SkipOnInput>
-				<CommandName>Form.Command.ПереместитьЭлементВниз</CommandName>
-				<TextColor>style:ButtonTextColor</TextColor>
-				<BackColor>style:ButtonBackColor</BackColor>
-				<ExtendedTooltip name="ПереместитьВнизExtendedTooltip" id="33"/>
-			</Button>
-		</ChildItems>
+		<Autofill>false</Autofill>
 	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
 	<ChildItems>
+		<UsualGroup name="ГруппаПользовательскихНастроек" id="42">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа пользовательских настроек</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПользовательскихНастроекРасширеннаяПодсказка" id="43"/>
+		</UsualGroup>
+		<CommandBar name="КоманднаяПанель" id="44">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Командная панель</v8:content>
+				</v8:item>
+			</Title>
+			<CommandSource>Form</CommandSource>
+			<ExtendedTooltip name="КоманднаяПанельРасширеннаяПодсказка" id="45"/>
+		</CommandBar>
 		<Table name="Список" id="1">
 			<Representation>Tree</Representation>
 			<CommandBarLocation>None</CommandBarLocation>
@@ -36,15 +43,17 @@
 			<UseAlternationRowColor>true</UseAlternationRowColor>
 			<InitialTreeView>ExpandAllLevels</InitialTreeView>
 			<DataPath>Список</DataPath>
-			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
 			<BorderColor>style:BorderColor</BorderColor>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список</v8:content>
+				</v8:item>
+			</Title>
 			<CommandSet>
 				<ExcludedCommand>CreateFolder</ExcludedCommand>
 				<ExcludedCommand>MoveItem</ExcludedCommand>
 			</CommandSet>
-			<SearchStringLocation>None</SearchStringLocation>
-			<ViewStatusLocation>None</ViewStatusLocation>
-			<SearchControlLocation>None</SearchControlLocation>
 			<AutoRefresh>false</AutoRefresh>
 			<AutoRefreshPeriod>60</AutoRefreshPeriod>
 			<Period>
@@ -58,64 +67,78 @@
 			<ShowRoot>false</ShowRoot>
 			<AllowRootChoice>false</AllowRootChoice>
 			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<UserSettingsGroup>ГруппаПользовательскихНастроек</UserSettingsGroup>
 			<ContextMenu name="СписокКонтекстноеМеню" id="2"/>
 			<AutoCommandBar name="СписокКоманднаяПанель" id="3"/>
 			<ExtendedTooltip name="СписокExtendedTooltip" id="34"/>
-			<SearchStringAddition name="СписокСтрокаПоиска" id="40">
+			<SearchStringAddition name="СписокСтрокаПоиска" id="46">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>SearchStringRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="41"/>
-				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="42"/>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="47"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="48"/>
 			</SearchStringAddition>
-			<ViewStatusAddition name="СписокСостояниеПросмотра" id="43">
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="49">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>ViewStatusRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="44"/>
-				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="45"/>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="50"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="51"/>
 			</ViewStatusAddition>
-			<SearchControlAddition name="СписокУправлениеПоиском" id="46">
+			<SearchControlAddition name="СписокУправлениеПоиском" id="52">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>SearchControl</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="47"/>
-				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="48"/>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="53"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="54"/>
 			</SearchControlAddition>
 			<Events>
 				<Event name="BeforeAddRow">СписокПередНачаломДобавления</Event>
 			</Events>
 			<ChildItems>
-				<PictureField name="НомерКартинки" id="28">
-					<DataPath>Список.НомерКартинки</DataPath>
-					<TitleLocation>None</TitleLocation>
-					<Width>2</Width>
-					<Height>1</Height>
-					<ValuesPicture>
-						<xr:Ref>CommonPicture.КонтактнаяИнформация</xr:Ref>
-						<xr:LoadTransparent>true</xr:LoadTransparent>
-						<xr:TransparentPixel x="5" y="14"/>
-					</ValuesPicture>
-					<Border width="1">
-						<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
-					</Border>
-					<ContextMenu name="НомерКартинкиКонтекстноеМеню" id="29"/>
-					<ExtendedTooltip name="НомерКартинкиExtendedTooltip" id="35"/>
-				</PictureField>
-				<LabelField name="Наименование" id="37">
-					<DataPath>Список.Description</DataPath>
+				<ColumnGroup name="Представление" id="40">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Вид контактной информации</v8:content>
+							<v8:content>Представление</v8:content>
 						</v8:item>
 					</Title>
-					<ContextMenu name="НаименованиеКонтекстноеМеню" id="38"/>
-					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="39"/>
-				</LabelField>
+					<Group>InCell</Group>
+					<ExtendedTooltip name="ПредставлениеРасширеннаяПодсказка" id="41"/>
+					<ChildItems>
+						<PictureField name="Пиктограмма" id="28">
+							<DataPath>Список.ИндексПиктограммы</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Пиктограмма</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>None</TitleLocation>
+							<Width>2</Width>
+							<ValuesPicture>
+								<xr:Ref>CommonPicture.ВидыКонтактнойИнформации</xr:Ref>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</ValuesPicture>
+							<ContextMenu name="ПиктограммаКонтекстноеМеню" id="29"/>
+							<ExtendedTooltip name="ПиктограммаРасширеннаяПодсказка" id="35"/>
+						</PictureField>
+						<LabelField name="Наименование" id="37">
+							<DataPath>Список.Description</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Вид контактной информации</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="НаименованиеКонтекстноеМеню" id="38"/>
+							<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="39"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
 				<InputField name="Ссылка" id="30">
 					<DataPath>Список.Ref</DataPath>
 					<UserVisible>
@@ -136,23 +159,60 @@
 			<MainAttribute>true</MainAttribute>
 			<UseAlways>
 				<Field>Список.Ref</Field>
+				<Field>Список.ИндексПиктограммы</Field>
 				<Field>Список.РеквизитДопУпорядочивания</Field>
 			</UseAlways>
 			<Settings xsi:type="DynamicList">
 				<ManualQuery>true</ManualQuery>
 				<DynamicDataRead>true</DynamicDataRead>
 				<QueryText>ВЫБРАТЬ
-	// Выбор индекса в общей картинке "КонтактнаяИнформация"
-	ВЫБОР СправочникВидыКонтактнойИнформации.Тип
-		КОГДА ЗНАЧЕНИЕ(Перечисление.ТипыКонтактнойИнформации.Адрес) ТОГДА 8
-		КОГДА ЗНАЧЕНИЕ(Перечисление.ТипыКонтактнойИнформации.Телефон) ТОГДА 3
-		КОГДА ЗНАЧЕНИЕ(Перечисление.ТипыКонтактнойИнформации.АдресЭлектроннойПочты) ТОГДА 4
-		КОГДА ЗНАЧЕНИЕ(Перечисление.ТипыКонтактнойИнформации.ВебСтраница) ТОГДА 5
-		КОГДА ЗНАЧЕНИЕ(Перечисление.ТипыКонтактнойИнформации.Факс) ТОГДА 6
-		КОГДА ЗНАЧЕНИЕ(Перечисление.ТипыКонтактнойИнформации.Другое) ТОГДА 7
-        ИНАЧЕ 0
-	КОНЕЦ КАК НомерКартинки,
-	
+	ВЫБОР
+		КОГДА СправочникВидыКонтактнойИнформации.ЭтоГруппа
+			ТОГДА ВЫБОР
+					КОГДА СправочникВидыКонтактнойИнформации.ПометкаУдаления
+						ТОГДА 1
+					КОГДА СправочникВидыКонтактнойИнформации.Предопределенный
+						ТОГДА 2
+					ИНАЧЕ 0
+				КОНЕЦ
+		КОГДА СправочникВидыКонтактнойИнформации.ПометкаУдаления
+			ТОГДА 4
+		КОГДА СправочникВидыКонтактнойИнформации.Предопределенный
+			ТОГДА ВЫБОР СправочникВидыКонтактнойИнформации.Тип
+					КОГДА ЗНАЧЕНИЕ(Перечисление.ТипыКонтактнойИнформации.Телефон)
+						ТОГДА 14
+					КОГДА ЗНАЧЕНИЕ(Перечисление.ТипыКонтактнойИнформации.АдресЭлектроннойПочты)
+						ТОГДА 15
+					КОГДА ЗНАЧЕНИЕ(Перечисление.ТипыКонтактнойИнформации.ВебСтраница)
+						ТОГДА 16
+					КОГДА ЗНАЧЕНИЕ(Перечисление.ТипыКонтактнойИнформации.Факс)
+						ТОГДА 17
+					КОГДА ЗНАЧЕНИЕ(Перечисление.ТипыКонтактнойИнформации.Другое)
+						ТОГДА 18
+					КОГДА ЗНАЧЕНИЕ(Перечисление.ТипыКонтактнойИнформации.Адрес)
+						ТОГДА 19
+					КОГДА ЗНАЧЕНИЕ(Перечисление.ТипыКонтактнойИнформации.Skype)
+						ТОГДА 21
+					ИНАЧЕ 3
+				КОНЕЦ
+		ИНАЧЕ ВЫБОР СправочникВидыКонтактнойИнформации.Тип
+				КОГДА ЗНАЧЕНИЕ(Перечисление.ТипыКонтактнойИнформации.Телефон)
+					ТОГДА 7
+				КОГДА ЗНАЧЕНИЕ(Перечисление.ТипыКонтактнойИнформации.АдресЭлектроннойПочты)
+					ТОГДА 8
+				КОГДА ЗНАЧЕНИЕ(Перечисление.ТипыКонтактнойИнформации.ВебСтраница)
+					ТОГДА 9
+				КОГДА ЗНАЧЕНИЕ(Перечисление.ТипыКонтактнойИнформации.Факс)
+					ТОГДА 10
+				КОГДА ЗНАЧЕНИЕ(Перечисление.ТипыКонтактнойИнформации.Другое)
+					ТОГДА 11
+				КОГДА ЗНАЧЕНИЕ(Перечисление.ТипыКонтактнойИнформации.Адрес)
+					ТОГДА 12
+				КОГДА ЗНАЧЕНИЕ(Перечисление.ТипыКонтактнойИнформации.Skype)
+					ТОГДА 20
+				ИНАЧЕ 3
+			КОНЕЦ
+	КОНЕЦ КАК ИндексПиктограммы,
 	СправочникВидыКонтактнойИнформации.Ссылка,
 	СправочникВидыКонтактнойИнформации.ПометкаУдаления,
 	СправочникВидыКонтактнойИнформации.Предопределенный,
@@ -163,9 +223,13 @@
 	СправочникВидыКонтактнойИнформации.РеквизитДопУпорядочивания,
 	СправочникВидыКонтактнойИнформации.РедактированиеТолькоВДиалоге,
 	СправочникВидыКонтактнойИнформации.МожноИзменятьСпособРедактирования,
-	СправочникВидыКонтактнойИнформации.АдресТолькоРоссийский
+	СправочникВидыКонтактнойИнформации.ТолькоНациональныйАдрес,
+	СправочникВидыКонтактнойИнформации.Используется
 ИЗ
-	Справочник.ВидыКонтактнойИнформации КАК СправочникВидыКонтактнойИнформации</QueryText>
+	Справочник.ВидыКонтактнойИнформации КАК СправочникВидыКонтактнойИнформации
+ГДЕ
+	СправочникВидыКонтактнойИнформации.Используется И ЕстьNULL(СправочникВидыКонтактнойИнформации.Родитель.Используется, Истина)
+</QueryText>
 				<MainTable>Catalog.ВидыКонтактнойИнформации</MainTable>
 				<ListSettings>
 					<dcsset:filter>
@@ -190,44 +254,4 @@
 			</Settings>
 		</Attribute>
 	</Attributes>
-	<Commands>
-		<Command name="ПереместитьЭлементВверх" id="2">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Переместить элемент вверх</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Переместить элемент вверх</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Picture>
-				<xr:Ref>StdPicture.MoveUp</xr:Ref>
-				<xr:LoadTransparent>true</xr:LoadTransparent>
-			</Picture>
-			<Action>ПереместитьЭлементВверх</Action>
-		</Command>
-		<Command name="ПереместитьЭлементВниз" id="3">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Переместить элемент вниз</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Переместить элемент вниз</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Picture>
-				<xr:Ref>StdPicture.MoveDown</xr:Ref>
-				<xr:LoadTransparent>true</xr:LoadTransparent>
-			</Picture>
-			<Action>ПереместитьЭлементВниз</Action>
-		</Command>
-	</Commands>
 </Form>

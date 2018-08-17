@@ -1,15 +1,13 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
 	<Title>
 		<v8:item>
 			<v8:lang>ru</v8:lang>
 			<v8:content>Фоновое задание</v8:content>
 		</v8:item>
 	</Title>
-	<Width>49</Width>
 	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
 	<AutoTitle>false</AutoTitle>
-	<VerticalScroll>useIfNecessary</VerticalScroll>
 	<CommandSet>
 		<ExcludedCommand>Abort</ExcludedCommand>
 		<ExcludedCommand>Cancel</ExcludedCommand>
@@ -43,12 +41,13 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>1. Основное</v8:content>
+					<v8:content>Основное</v8:content>
 				</v8:item>
 			</Title>
-			<TitleFont ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
 			<Group>Vertical</Group>
-			<Representation>None</Representation>
+			<Representation>NormalSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ThroughAlign>Use</ThroughAlign>
 			<ExtendedTooltip name="ОсновноеExtendedTooltip" id="31"/>
 			<ChildItems>
 				<InputField name="Наименование" id="5">
@@ -88,12 +87,13 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>2. Дополнительно</v8:content>
+					<v8:content>Дополнительно</v8:content>
 				</v8:item>
 			</Title>
-			<TitleFont ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
 			<Group>Vertical</Group>
-			<Representation>None</Representation>
+			<Representation>NormalSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ThroughAlign>Use</ThroughAlign>
 			<ExtendedTooltip name="ДополнительноExtendedTooltip" id="37"/>
 			<ChildItems>
 				<InputField name="Идентификатор" id="1">
@@ -121,12 +121,13 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>3. Регламентное задание</v8:content>
+					<v8:content>Регламентное задание</v8:content>
 				</v8:item>
 			</Title>
-			<TitleFont ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
 			<Group>Vertical</Group>
-			<Representation>None</Representation>
+			<Representation>NormalSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ThroughAlign>Use</ThroughAlign>
 			<ExtendedTooltip name="РегламентноеЗаданиеExtendedTooltip" id="41"/>
 			<ChildItems>
 				<InputField name="НаименованиеРегламентногоЗадания" id="15">
@@ -149,30 +150,28 @@
 				</InputField>
 			</ChildItems>
 		</UsualGroup>
-		<UsualGroup name="СообщенияПользователюИОписаниеИнформацииОбОшибке" id="29">
+		<InputField name="СообщенияИОписаниеИнформацииОбОшибке" id="26">
+			<DataPath>СообщенияПользователюИОписаниеИнформацииОбОшибке</DataPath>
+			<ReadOnly>true</ReadOnly>
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>4. Сообщения пользователю и описание информации об ошибке</v8:content>
+					<v8:content>Сообщение</v8:content>
 				</v8:item>
 			</Title>
-			<TitleFont ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
-			<Group>Vertical</Group>
-			<Representation>None</Representation>
-			<ExtendedTooltip name="СообщенияПользователюИОписаниеИнформацииОбОшибкеExtendedTooltip" id="44"/>
-			<ChildItems>
-				<InputField name="СообщенияИОписаниеИнформацииОбОшибке" id="26">
-					<DataPath>СообщенияПользователюИОписаниеИнформацииОбОшибке</DataPath>
-					<ReadOnly>true</ReadOnly>
-					<TitleLocation>None</TitleLocation>
-					<Height>4</Height>
-					<MultiLine>true</MultiLine>
-					<ExtendedEdit>true</ExtendedEdit>
-					<ContextMenu name="СообщенияИОписаниеИнформацииОбОшибкеКонтекстноеМеню" id="27"/>
-					<ExtendedTooltip name="СообщенияИОписаниеИнформацииОбОшибкеExtendedTooltip" id="45"/>
-				</InputField>
-			</ChildItems>
-		</UsualGroup>
+			<TitleLocation>Left</TitleLocation>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сообщения пользователю и описание информации об ошибке</v8:content>
+				</v8:item>
+			</ToolTip>
+			<MultiLine>true</MultiLine>
+			<ExtendedEdit>true</ExtendedEdit>
+			<OpenButton>true</OpenButton>
+			<ContextMenu name="СообщенияИОписаниеИнформацииОбОшибкеКонтекстноеМеню" id="27"/>
+			<ExtendedTooltip name="СообщенияИОписаниеИнформацииОбОшибкеExtendedTooltip" id="45"/>
+		</InputField>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="Объект" id="1">
@@ -258,7 +257,7 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Место выполнения </v8:content>
+					<v8:content>Место выполнения</v8:content>
 				</v8:item>
 			</Title>
 			<Type>

@@ -1,211 +1,71 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
 	<Title>
 		<v8:item>
 			<v8:lang>ru</v8:lang>
 			<v8:content>Поиск и удаление дублей</v8:content>
 		</v8:item>
 	</Title>
-	<Width>75</Width>
-	<Height>14</Height>
 	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
-	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
-	<SaveDataInSettings>UseList</SaveDataInSettings>
 	<AutoTitle>false</AutoTitle>
 	<CommandBarLocation>None</CommandBarLocation>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
 	<Events>
-		<Event name="ChoiceProcessing">ОбработкаВыбора</Event>
 		<Event name="OnOpen">ПриОткрытии</Event>
 		<Event name="BeforeClose">ПередЗакрытием</Event>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
-		<Event name="BeforeLoadDataFromSettingsAtServer">ПередЗагрузкойДанныхИзНастроекНаСервере</Event>
 	</Events>
 	<ChildItems>
-		<UsualGroup name="Заголовок" id="12">
+		<UsualGroup name="Шапка" id="406">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Заголовок</v8:content>
+					<v8:content>Шапка</v8:content>
 				</v8:item>
 			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Заголовок</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Group>Horizontal</Group>
+			<Group>Vertical</Group>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
-			<ExtendedTooltip name="ЗаголовокРасширеннаяПодсказка" id="13"/>
+			<ExtendedTooltip name="ШапкаРасширеннаяПодсказка" id="407"/>
 			<ChildItems>
-				<UsualGroup name="ЗаголовокЗаголовки" id="14">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Заголовок заголовки</v8:content>
-						</v8:item>
-					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Заголовок заголовки</v8:content>
-						</v8:item>
-					</ToolTip>
-					<Group>Vertical</Group>
-					<Representation>None</Representation>
-					<ShowTitle>false</ShowTitle>
-					<ExtendedTooltip name="ЗаголовокЗаголовкиРасширеннаяПодсказка" id="15"/>
-					<ChildItems>
-						<LabelDecoration name="НадписьИскать" id="18">
-							<Title formatted="false">
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Искать в:</v8:content>
-								</v8:item>
-							</Title>
-							<ContextMenu name="НадписьИскатьКонтекстноеМеню" id="19"/>
-							<ExtendedTooltip name="НадписьИскатьРасширеннаяПодсказка" id="20"/>
-						</LabelDecoration>
-						<LabelDecoration name="НадписьПравилаОтбора" id="21">
-							<Title formatted="false">
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Отбирать:</v8:content>
-								</v8:item>
-							</Title>
-							<ContextMenu name="НадписьПравилаОтбораКонтекстноеМеню" id="22"/>
-							<ExtendedTooltip name="НадписьПравилаОтбораРасширеннаяПодсказка" id="23"/>
-						</LabelDecoration>
-						<LabelDecoration name="НадписьПравилаПоиска" id="24">
-							<Title formatted="false">
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Сравнивать:</v8:content>
-								</v8:item>
-							</Title>
-							<ContextMenu name="НадписьПравилаПоискаКонтекстноеМеню" id="25"/>
-							<ExtendedTooltip name="НадписьПравилаПоискаРасширеннаяПодсказка" id="26"/>
-						</LabelDecoration>
-					</ChildItems>
-				</UsualGroup>
-				<UsualGroup name="ЗаголовокПоляВыбора" id="16">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Заголовок поля выбора</v8:content>
-						</v8:item>
-					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Заголовок поля выбора</v8:content>
-						</v8:item>
-					</ToolTip>
-					<Group>Vertical</Group>
-					<Representation>None</Representation>
-					<ShowTitle>false</ShowTitle>
-					<ExtendedTooltip name="ЗаголовокПоляВыбораРасширеннаяПодсказка" id="17"/>
-					<ChildItems>
-						<InputField name="ПредставлениеОбластиПоискаДублей" id="9">
-							<DataPath>ПредставлениеОбластиПоискаДублей</DataPath>
-							<TitleLocation>None</TitleLocation>
-							<Width>45</Width>
-							<HorizontalStretch>false</HorizontalStretch>
-							<DropListButton>false</DropListButton>
-							<ChoiceButton>true</ChoiceButton>
-							<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
-							<ClearButton>false</ClearButton>
-							<SpinButton>false</SpinButton>
-							<OpenButton>false</OpenButton>
-							<CreateButton>false</CreateButton>
-							<TextEdit>false</TextEdit>
-							<ContextMenu name="ПредставлениеОбластиПоискаДублейКонтекстноеМеню" id="10"/>
-							<ExtendedTooltip name="ПредставлениеОбластиПоискаДублейРасширеннаяПодсказка" id="11"/>
-							<Events>
-								<Event name="StartChoice">ПредставлениеОбластиПоискаНачалоВыбора</Event>
-								<Event name="Clearing">ПредставлениеОбластиПоискаДублейОчистка</Event>
-							</Events>
-						</InputField>
-						<UsualGroup name="ГруппаПравилаОтбора" id="27">
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Группа правила отбора</v8:content>
-								</v8:item>
-							</Title>
-							<ToolTip>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Группа правила отбора</v8:content>
-								</v8:item>
-							</ToolTip>
-							<Group>Horizontal</Group>
-							<Representation>None</Representation>
-							<ShowTitle>false</ShowTitle>
-							<ExtendedTooltip name="ГруппаПравилаОтбораРасширеннаяПодсказка" id="28"/>
-							<ChildItems>
-								<LabelDecoration name="ПравилаОтбора" id="358">
-									<Title formatted="false">
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Правила отбора</v8:content>
-										</v8:item>
-									</Title>
-									<Hyperlink>true</Hyperlink>
-									<ContextMenu name="ПравилаОтбораКонтекстноеМеню" id="359"/>
-									<ExtendedTooltip name="ПравилаОтбораРасширеннаяПодсказка" id="360"/>
-									<Events>
-										<Event name="Click">ПравилаОтбораНажатие</Event>
-									</Events>
-								</LabelDecoration>
-								<Button name="ОчиститьПравилаОтбора" id="29">
-									<Type>Hyperlink</Type>
-									<Representation>Picture</Representation>
-									<Width>2</Width>
-									<CommandName>Form.Command.ОчиститьПравилаОтбора</CommandName>
-									<ExtendedTooltip name="ОчиститьПравилаОтбораРасширеннаяПодсказка" id="30"/>
-								</Button>
-							</ChildItems>
-						</UsualGroup>
-						<UsualGroup name="ГруппаПравилаПоиска" id="337">
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Группа правила поиска</v8:content>
-								</v8:item>
-							</Title>
-							<ToolTip>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Группа правила поиска</v8:content>
-								</v8:item>
-							</ToolTip>
-							<Group>Vertical</Group>
-							<Representation>None</Representation>
-							<ShowTitle>false</ShowTitle>
-							<ExtendedTooltip name="ГруппаПравилаПоискаРасширеннаяПодсказка" id="338"/>
-							<ChildItems>
-								<LabelDecoration name="ПравилаПоиска" id="361">
-									<HorizontalStretch>true</HorizontalStretch>
-									<Title formatted="false">
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Правила поиска</v8:content>
-										</v8:item>
-									</Title>
-									<Hyperlink>true</Hyperlink>
-									<ContextMenu name="ПравилаПоискаКонтекстноеМеню" id="362"/>
-									<ExtendedTooltip name="ПравилаПоискаРасширеннаяПодсказка" id="363"/>
-									<Events>
-										<Event name="Click">ПравилаПоискаНажатие</Event>
-									</Events>
-								</LabelDecoration>
-							</ChildItems>
-						</UsualGroup>
-					</ChildItems>
-				</UsualGroup>
+				<InputField name="ОбластьПоискаДублей" id="9">
+					<DataPath>ОбластьПоискаДублей</DataPath>
+					<DropListButton>false</DropListButton>
+					<ChoiceButton>true</ChoiceButton>
+					<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
+					<ListChoiceMode>true</ListChoiceMode>
+					<QuickChoice>false</QuickChoice>
+					<ContextMenu name="ОбластьПоискаДублейКонтекстноеМеню" id="10"/>
+					<ExtendedTooltip name="ОбластьПоискаДублейРасширеннаяПодсказка" id="11"/>
+					<Events>
+						<Event name="OnChange">ОбластьПоискаДублейПриИзменении</Event>
+						<Event name="StartChoice">ОбластьПоискаДублейНачалоВыбора</Event>
+						<Event name="Clearing">ОбластьПоискаДублейОчистка</Event>
+					</Events>
+				</InputField>
+				<InputField name="ПредставлениеПравилОтбора" id="413">
+					<DataPath>ПредставлениеПравилОтбора</DataPath>
+					<ChoiceButton>true</ChoiceButton>
+					<ClearButton>true</ClearButton>
+					<TextEdit>false</TextEdit>
+					<ContextMenu name="ПредставлениеПравилОтбораКонтекстноеМеню" id="414"/>
+					<ExtendedTooltip name="ПредставлениеПравилОтбораРасширеннаяПодсказка" id="415"/>
+					<Events>
+						<Event name="StartChoice">ПредставлениеПравилОтбораНачалоВыбора</Event>
+						<Event name="Clearing">ПредставлениеПравилОтбораОчистка</Event>
+					</Events>
+				</InputField>
+				<LabelField name="ПредставлениеПравилПоиска" id="408">
+					<DataPath>ПредставлениеПравилПоиска</DataPath>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<Hiperlink>true</Hiperlink>
+					<ContextMenu name="ПредставлениеПравилПоискаКонтекстноеМеню" id="409"/>
+					<ExtendedTooltip name="ПредставлениеПравилПоискаРасширеннаяПодсказка" id="410"/>
+					<Events>
+						<Event name="Click">ПредставлениеПравилПоискаНажатие</Event>
+					</Events>
+				</LabelField>
 			</ChildItems>
 		</UsualGroup>
 		<Pages name="ШагиМастера" id="58">
@@ -216,12 +76,6 @@
 					<v8:content>Шаги мастера</v8:content>
 				</v8:item>
 			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Шаги мастера</v8:content>
-				</v8:item>
-			</ToolTip>
 			<PagesRepresentation>None</PagesRepresentation>
 			<ExtendedTooltip name="ШагиМастераРасширеннаяПодсказка" id="59"/>
 			<ChildItems>
@@ -232,13 +86,6 @@
 							<v8:content>Шаг поиск не выполнялся</v8:content>
 						</v8:item>
 					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Шаг поиск не выполнялся</v8:content>
-						</v8:item>
-					</ToolTip>
-					<VerticalStretch>true</VerticalStretch>
 					<ExtendedTooltip name="ШагПоискНеВыполнялсяРасширеннаяПодсказка" id="63"/>
 					<ChildItems>
 						<SpreadSheetDocumentField name="ПоискНеВыполнялся" id="64">
@@ -260,12 +107,6 @@
 							<v8:content>Шаг поиск не выполнялся</v8:content>
 						</v8:item>
 					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Шаг поиск не выполнялся</v8:content>
-						</v8:item>
-					</ToolTip>
 					<ExtendedTooltip name="ШагВыполнениеПоискаРасширеннаяПодсказка" id="187"/>
 					<ChildItems>
 						<SpreadSheetDocumentField name="ВыполнениеПоиска" id="188">
@@ -287,12 +128,6 @@
 							<v8:content>Шаг выбор основного элемента</v8:content>
 						</v8:item>
 					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Шаг выбор основного элемента</v8:content>
-						</v8:item>
-					</ToolTip>
 					<ExtendedTooltip name="ШагВыборОсновногоЭлементаРасширеннаяПодсказка" id="99"/>
 					<ChildItems>
 						<CommandBar name="КомандыРаботыСОсновнымЭлементов" id="96">
@@ -302,12 +137,6 @@
 									<v8:content>Команды работы с основным элементов</v8:content>
 								</v8:item>
 							</Title>
-							<ToolTip>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Команды работы с основным элементов</v8:content>
-								</v8:item>
-							</ToolTip>
 							<ExtendedTooltip name="КомандыРаботыСОсновнымЭлементовРасширеннаяПодсказка" id="97"/>
 							<ChildItems>
 								<Button name="ВыбратьОсновнойЭлемент" id="88">
@@ -341,16 +170,9 @@
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Группа вертикальная основного элемента</v8:content>
+									<v8:content>Вертикальная основного элемента</v8:content>
 								</v8:item>
 							</Title>
-							<ToolTip>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Группа вертикальная основного элемента</v8:content>
-								</v8:item>
-							</ToolTip>
-							<HorizontalStretch>true</HorizontalStretch>
 							<Group>Vertical</Group>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
@@ -360,16 +182,9 @@
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>Группа горизонтальная найденные дубли</v8:content>
+											<v8:content>Горизонтальная найденные дубли</v8:content>
 										</v8:item>
 									</Title>
-									<ToolTip>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Группа горизонтальная найденные дубли</v8:content>
-										</v8:item>
-									</ToolTip>
-									<Width>24</Width>
 									<Group>Horizontal</Group>
 									<Representation>None</Representation>
 									<ShowTitle>false</ShowTitle>
@@ -379,7 +194,6 @@
 											<Representation>Tree</Representation>
 											<ChangeRowSet>false</ChangeRowSet>
 											<ChangeRowOrder>false</ChangeRowOrder>
-											<Width>45</Width>
 											<Height>5</Height>
 											<SelectionMode>SingleRow</SelectionMode>
 											<RowSelectionMode>Row</RowSelectionMode>
@@ -389,17 +203,64 @@
 											<EnableStartDrag>true</EnableStartDrag>
 											<EnableDrag>true</EnableDrag>
 											<DataPath>НайденныеДубли</DataPath>
-											<SearchStringLocation>None</SearchStringLocation>
-											<ViewStatusLocation>None</ViewStatusLocation>
-											<SearchControlLocation>None</SearchControlLocation>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Найденные дубли</v8:content>
+												</v8:item>
+											</Title>
+											<CommandSet>
+												<ExcludedCommand>Change</ExcludedCommand>
+											</CommandSet>
 											<ContextMenu name="НайденныеДублиКонтекстноеМеню" id="68">
-												<Autofill>false</Autofill>
 												<ChildItems>
 													<Button name="НайденныеДублиКонтекстноеМенюВыбратьОсновнойЭлемент" id="117">
 														<Type>CommandBarButton</Type>
 														<CommandName>Form.Command.ВыбратьОсновнойЭлемент</CommandName>
 														<ExtendedTooltip name="НайденныеДублиКонтекстноеМенюВыбратьОсновнойЭлементРасширеннаяПодсказка" id="118"/>
 													</Button>
+													<ButtonGroup name="НайденныеДублиКонтекстноеМенюГруппаИзменить" id="422">
+														<Title>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Найденные дубли контекстное меню группа изменить</v8:content>
+															</v8:item>
+														</Title>
+														<ExtendedTooltip name="НайденныеДублиКонтекстноеМенюГруппаИзменитьРасширеннаяПодсказка" id="423"/>
+														<ChildItems>
+															<Button name="НайденныеДублиКонтекстноеМенюОткрытьКандидатаВДубли1" id="430">
+																<Type>CommandBarButton</Type>
+																<CommandName>Form.Command.ОткрытьКандидатаВДубли</CommandName>
+																<ExtendedTooltip name="НайденныеДублиКонтекстноеМенюОткрытьКандидатаВДубли1РасширеннаяПодсказка" id="431"/>
+															</Button>
+														</ChildItems>
+													</ButtonGroup>
+													<Button name="НайденныеДублиКонтекстноеМенюКопироватьВБуферОбмена" id="418">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Item.НайденныеДубли.StandardCommand.CopyToClipboard</CommandName>
+														<ExtendedTooltip name="НайденныеДублиКонтекстноеМенюКопироватьВБуферОбменаРасширеннаяПодсказка" id="419"/>
+													</Button>
+													<Button name="НайденныеДублиКонтекстноеМенюВывестиСписок" id="416">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Item.НайденныеДубли.StandardCommand.OutputList</CommandName>
+														<ExtendedTooltip name="НайденныеДублиКонтекстноеМенюВывестиСписокРасширеннаяПодсказка" id="417"/>
+													</Button>
+													<ButtonGroup name="НайденныеДублиКонтекстноеМенюГруппаИзменитьФорму" id="426">
+														<Title>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Найденные дубли контекстное меню группа изменить форму</v8:content>
+															</v8:item>
+														</Title>
+														<ExtendedTooltip name="НайденныеДублиКонтекстноеМенюГруппаИзменитьФормуРасширеннаяПодсказка" id="427"/>
+														<ChildItems>
+															<Button name="НайденныеДублиКонтекстноеМенюИзменитьФорму" id="424">
+																<Type>CommandBarButton</Type>
+																<CommandName>Form.StandardCommand.CustomizeForm</CommandName>
+																<ExtendedTooltip name="НайденныеДублиКонтекстноеМенюИзменитьФормуРасширеннаяПодсказка" id="425"/>
+															</Button>
+														</ChildItems>
+													</ButtonGroup>
 												</ChildItems>
 											</ContextMenu>
 											<AutoCommandBar name="НайденныеДублиКоманднаяПанель" id="69">
@@ -442,15 +303,17 @@
 															<v8:content>Использовать наименование</v8:content>
 														</v8:item>
 													</Title>
-													<ToolTip>
-														<v8:item>
-															<v8:lang>ru</v8:lang>
-															<v8:content>Использовать наименование</v8:content>
-														</v8:item>
-													</ToolTip>
 													<Group>InCell</Group>
 													<ExtendedTooltip name="ИспользоватьНаименованиеРасширеннаяПодсказка" id="110"/>
 													<ChildItems>
+														<InputField name="НайденныеДублиНаименование" id="100">
+															<DataPath>НайденныеДубли.Наименование</DataPath>
+															<ReadOnly>true</ReadOnly>
+															<EditMode>EnterOnInput</EditMode>
+															<Width>5</Width>
+															<ContextMenu name="НайденныеДублиНаименованиеКонтекстноеМеню" id="101"/>
+															<ExtendedTooltip name="НайденныеДублиНаименованиеРасширеннаяПодсказка" id="102"/>
+														</InputField>
 														<PictureField name="НайденныеДублиОсновной" id="114">
 															<DataPath>НайденныеДубли.Основной</DataPath>
 															<ReadOnly>true</ReadOnly>
@@ -474,18 +337,13 @@
 																<Event name="OnChange">НайденныеДублиПометкаПриИзменении</Event>
 															</Events>
 														</CheckBoxField>
-														<InputField name="НайденныеДублиНаименование" id="100">
-															<DataPath>НайденныеДубли.Наименование</DataPath>
-															<ReadOnly>true</ReadOnly>
-															<EditMode>EnterOnInput</EditMode>
-															<Width>5</Width>
-															<ContextMenu name="НайденныеДублиНаименованиеКонтекстноеМеню" id="101"/>
-															<ExtendedTooltip name="НайденныеДублиНаименованиеРасширеннаяПодсказка" id="102"/>
-														</InputField>
 													</ChildItems>
 												</ColumnGroup>
 												<InputField name="НайденныеДублиКод" id="111">
 													<DataPath>НайденныеДубли.Код</DataPath>
+													<UserVisible>
+														<xr:Common>false</xr:Common>
+													</UserVisible>
 													<ReadOnly>true</ReadOnly>
 													<EditMode>EnterOnInput</EditMode>
 													<Width>10</Width>
@@ -496,9 +354,20 @@
 												<InputField name="НайденныеДублиКоличество" id="119">
 													<DataPath>НайденныеДубли.Количество</DataPath>
 													<ReadOnly>true</ReadOnly>
+													<TitleLocation>None</TitleLocation>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Мест использования</v8:content>
+														</v8:item>
+													</ToolTip>
 													<HorizontalAlign>Left</HorizontalAlign>
 													<EditMode>EnterOnInput</EditMode>
-													<Width>15</Width>
+													<HeaderPicture>
+														<xr:Ref>CommonPicture.Информация</xr:Ref>
+														<xr:LoadTransparent>true</xr:LoadTransparent>
+													</HeaderPicture>
+													<Width>4</Width>
 													<HorizontalStretch>false</HorizontalStretch>
 													<ContextMenu name="НайденныеДублиКоличествоКонтекстноеМеню" id="120"/>
 													<ExtendedTooltip name="НайденныеДублиКоличествоРасширеннаяПодсказка" id="121"/>
@@ -512,12 +381,6 @@
 													<v8:content>Страницы места использования</v8:content>
 												</v8:item>
 											</Title>
-											<ToolTip>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Страницы места использования</v8:content>
-												</v8:item>
-											</ToolTip>
 											<PagesRepresentation>None</PagesRepresentation>
 											<ExtendedTooltip name="СтраницыМестаИспользованияРасширеннаяПодсказка" id="148"/>
 											<ChildItems>
@@ -528,12 +391,6 @@
 															<v8:content>Места использования</v8:content>
 														</v8:item>
 													</Title>
-													<ToolTip>
-														<v8:item>
-															<v8:lang>ru</v8:lang>
-															<v8:content>Места использования</v8:content>
-														</v8:item>
-													</ToolTip>
 													<ExtendedTooltip name="МестаИспользованияРасширеннаяПодсказка" id="150"/>
 													<ChildItems>
 														<Table name="МестаИспользованияКандидата" id="137">
@@ -551,11 +408,22 @@
 															<EnableStartDrag>true</EnableStartDrag>
 															<EnableDrag>true</EnableDrag>
 															<DataPath>МестаИспользованияКандидата</DataPath>
-															<SearchStringLocation>None</SearchStringLocation>
-															<ViewStatusLocation>None</ViewStatusLocation>
-															<SearchControlLocation>None</SearchControlLocation>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Места использования кандидата</v8:content>
+																</v8:item>
+															</Title>
 															<RowFilter xsi:nil="true"/>
-															<ContextMenu name="МестаИспользованияКандидатаКонтекстноеМеню" id="138"/>
+															<ContextMenu name="МестаИспользованияКандидатаКонтекстноеМеню" id="138">
+																<ChildItems>
+																	<Button name="МестаИспользованияКандидатаКонтекстноеМенюВывестиСписок" id="446">
+																		<Type>CommandBarButton</Type>
+																		<CommandName>Form.Item.МестаИспользованияКандидата.StandardCommand.OutputList</CommandName>
+																		<ExtendedTooltip name="МестаИспользованияКандидатаКонтекстноеМенюВывестиСписокРасширеннаяПодсказка" id="447"/>
+																	</Button>
+																</ChildItems>
+															</ContextMenu>
 															<AutoCommandBar name="МестаИспользованияКандидатаКоманднаяПанель" id="139"/>
 															<ExtendedTooltip name="МестаИспользованияКандидатаРасширеннаяПодсказка" id="140"/>
 															<SearchStringAddition name="МестаИспользованияКандидатаСтрокаПоиска" id="373">
@@ -597,22 +465,6 @@
 																</InputField>
 															</ChildItems>
 														</Table>
-														<LabelDecoration name="ВсеМестаИспользования" id="328">
-															<HorizontalStretch>true</HorizontalStretch>
-															<Title formatted="false">
-																<v8:item>
-																	<v8:lang>ru</v8:lang>
-																	<v8:content>Все места использования</v8:content>
-																</v8:item>
-															</Title>
-															<Hyperlink>true</Hyperlink>
-															<HorizontalAlign>Right</HorizontalAlign>
-															<ContextMenu name="ВсеМестаИспользованияКонтекстноеМеню" id="329"/>
-															<ExtendedTooltip name="ВсеМестаИспользованияРасширеннаяПодсказка" id="330"/>
-															<Events>
-																<Event name="Click">ВсеМестаИспользованияНажатие</Event>
-															</Events>
-														</LabelDecoration>
 													</ChildItems>
 												</Page>
 												<Page name="ОписаниеГруппы" id="151">
@@ -622,35 +474,26 @@
 															<v8:content>Описание группы</v8:content>
 														</v8:item>
 													</Title>
-													<ToolTip>
-														<v8:item>
-															<v8:lang>ru</v8:lang>
-															<v8:content>Описание группы</v8:content>
-														</v8:item>
-													</ToolTip>
 													<ExtendedTooltip name="ОписаниеГруппыРасширеннаяПодсказка" id="152"/>
 													<ChildItems>
-														<UsualGroup name="Группа1" id="222">
-															<Group>Vertical</Group>
-															<Representation>None</Representation>
-															<ShowTitle>false</ShowTitle>
-															<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="223"/>
-															<ChildItems>
-																<LabelDecoration name="ОписаниеТекущейГруппыДублей" id="134">
-																	<HorizontalStretch>true</HorizontalStretch>
-																	<VerticalStretch>true</VerticalStretch>
-																	<Title formatted="false">
-																		<v8:item>
-																			<v8:lang>ru</v8:lang>
-																			<v8:content>Описание текущей группы дублей</v8:content>
-																		</v8:item>
-																	</Title>
-																	<VerticalAlign>Top</VerticalAlign>
-																	<ContextMenu name="ОписаниеТекущейГруппыДублейКонтекстноеМеню" id="135"/>
-																	<ExtendedTooltip name="ОписаниеТекущейГруппыДублейРасширеннаяПодсказка" id="136"/>
-																</LabelDecoration>
-															</ChildItems>
-														</UsualGroup>
+														<LabelDecoration name="ОписаниеТекущейГруппыДублей" id="134">
+															<AutoMaxWidth>false</AutoMaxWidth>
+															<HorizontalStretch>true</HorizontalStretch>
+															<VerticalStretch>true</VerticalStretch>
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Описание текущей группы дублей</v8:content>
+																</v8:item>
+															</Title>
+															<HorizontalAlign>Center</HorizontalAlign>
+															<VerticalAlign>Center</VerticalAlign>
+															<Border width="1">
+																<v8ui:style xsi:type="v8ui:ControlBorderType">Single</v8ui:style>
+															</Border>
+															<ContextMenu name="ОписаниеТекущейГруппыДублейКонтекстноеМеню" id="135"/>
+															<ExtendedTooltip name="ОписаниеТекущейГруппыДублейРасширеннаяПодсказка" id="136"/>
+														</LabelDecoration>
 													</ChildItems>
 												</Page>
 											</ChildItems>
@@ -661,17 +504,10 @@
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>Группа горизонтальная состояние найденного</v8:content>
+											<v8:content>Горизонтальная состояние найденного</v8:content>
 										</v8:item>
 									</Title>
-									<ToolTip>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Группа горизонтальная состояние найденного</v8:content>
-										</v8:item>
-									</ToolTip>
 									<Height>2</Height>
-									<VerticalStretch>false</VerticalStretch>
 									<Group>Horizontal</Group>
 									<Representation>None</Representation>
 									<ShowTitle>false</ShowTitle>
@@ -680,11 +516,27 @@
 										<LabelField name="ОписаниеСостоянияНайденныхДублей" id="202">
 											<DataPath>ОписаниеСостоянияНайденныхДублей</DataPath>
 											<TitleLocation>None</TitleLocation>
-											<Height>2</Height>
+											<AutoMaxWidth>false</AutoMaxWidth>
 											<TextColor>style:ПоясняющийТекст</TextColor>
 											<ContextMenu name="ОписаниеСостоянияНайденныхДублейКонтекстноеМеню" id="203"/>
 											<ExtendedTooltip name="ОписаниеСостоянияНайденныхДублейРасширеннаяПодсказка" id="204"/>
 										</LabelField>
+										<LabelDecoration name="ВсеМестаИспользования" id="328">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Все места использования</v8:content>
+												</v8:item>
+											</Title>
+											<Hyperlink>true</Hyperlink>
+											<HorizontalAlign>Right</HorizontalAlign>
+											<ContextMenu name="ВсеМестаИспользованияКонтекстноеМеню" id="329"/>
+											<ExtendedTooltip name="ВсеМестаИспользованияРасширеннаяПодсказка" id="330"/>
+											<Events>
+												<Event name="Click">ВсеМестаИспользованияНажатие</Event>
+											</Events>
+										</LabelDecoration>
 									</ChildItems>
 								</UsualGroup>
 							</ChildItems>
@@ -698,12 +550,6 @@
 							<v8:content>Шаг выполнение удаления</v8:content>
 						</v8:item>
 					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Шаг выполнение удаления</v8:content>
-						</v8:item>
-					</ToolTip>
 					<ExtendedTooltip name="ШагВыполнениеУдаленияРасширеннаяПодсказка" id="206"/>
 					<ChildItems>
 						<SpreadSheetDocumentField name="ВыполнениеУдаления" id="207">
@@ -725,46 +571,29 @@
 							<v8:content>Шаг успешное удаление</v8:content>
 						</v8:item>
 					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Шаг успешное удаление</v8:content>
-						</v8:item>
-					</ToolTip>
+					<Group>Horizontal</Group>
 					<ExtendedTooltip name="ШагУспешноеУдалениеРасширеннаяПодсказка" id="213"/>
 					<ChildItems>
-						<LabelDecoration name="Декорация4" id="355">
-							<Height>1</Height>
-							<ContextMenu name="Декорация4КонтекстноеМеню" id="356"/>
-							<ExtendedTooltip name="Декорация4РасширеннаяПодсказка" id="357"/>
-						</LabelDecoration>
-						<UsualGroup name="Группа3" id="350">
-							<Group>Horizontal</Group>
-							<Representation>None</Representation>
-							<ShowTitle>false</ShowTitle>
-							<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="351"/>
-							<ChildItems>
-								<PictureDecoration name="Декорация5" id="352">
-									<Width>5</Width>
-									<Height>1</Height>
-									<Picture>
-										<xr:Ref>CommonPicture.Успешно32</xr:Ref>
-										<xr:LoadTransparent>true</xr:LoadTransparent>
-									</Picture>
-									<ContextMenu name="Декорация5КонтекстноеМеню" id="353"/>
-									<ExtendedTooltip name="Декорация5РасширеннаяПодсказка" id="354"/>
-								</PictureDecoration>
-								<LabelField name="ОписаниеСостоянияНайденныхДублей1" id="344">
-									<DataPath>ОписаниеСостоянияНайденныхДублей</DataPath>
-									<TitleLocation>None</TitleLocation>
-									<HorizontalAlign>Left</HorizontalAlign>
-									<VerticalAlign>Top</VerticalAlign>
-									<VerticalStretch>true</VerticalStretch>
-									<ContextMenu name="ОписаниеСостоянияНайденныхДублей1КонтекстноеМеню" id="345"/>
-									<ExtendedTooltip name="ОписаниеСостоянияНайденныхДублей1РасширеннаяПодсказка" id="346"/>
-								</LabelField>
-							</ChildItems>
-						</UsualGroup>
+						<PictureDecoration name="Декорация5" id="352">
+							<GroupVerticalAlign>Center</GroupVerticalAlign>
+							<Picture>
+								<xr:Ref>CommonPicture.Успешно32</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ContextMenu name="Декорация5КонтекстноеМеню" id="353"/>
+							<ExtendedTooltip name="Декорация5РасширеннаяПодсказка" id="354"/>
+						</PictureDecoration>
+						<LabelField name="ОписаниеСостоянияНайденныхДублей1" id="344">
+							<DataPath>ОписаниеСостоянияНайденныхДублей</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<HorizontalAlign>Left</HorizontalAlign>
+							<VerticalAlign>Center</VerticalAlign>
+							<GroupVerticalAlign>Center</GroupVerticalAlign>
+							<Height>5</Height>
+							<VerticalStretch>false</VerticalStretch>
+							<ContextMenu name="ОписаниеСостоянияНайденныхДублей1КонтекстноеМеню" id="345"/>
+							<ExtendedTooltip name="ОписаниеСостоянияНайденныхДублей1РасширеннаяПодсказка" id="346"/>
+						</LabelField>
 					</ChildItems>
 				</Page>
 				<Page name="ШагНеудачныеЗамены" id="210">
@@ -774,19 +603,13 @@
 							<v8:content>Шаг неудачные замены</v8:content>
 						</v8:item>
 					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Шаг неудачные замены</v8:content>
-						</v8:item>
-					</ToolTip>
 					<ExtendedTooltip name="ШагНеудачныеЗаменыРасширеннаяПодсказка" id="211"/>
 					<ChildItems>
 						<UsualGroup name="ГруппаВертикальнаяНеобработанныеДубли" id="238">
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Группа вертикальная необработанные дубли</v8:content>
+									<v8:content>Вертикальная необработанные дубли</v8:content>
 								</v8:item>
 							</Title>
 							<ToolTip>
@@ -800,51 +623,23 @@
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="ГруппаВертикальнаяНеобработанныеДублиРасширеннаяПодсказка" id="239"/>
 							<ChildItems>
-								<UsualGroup name="ГруппаНадписьОшибки" id="339">
-									<Title>
+								<LabelDecoration name="ЗаголовокСтраницыНеудачныеЗамены" id="331">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+									<Title formatted="false">
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>Группа надпись ошибки</v8:content>
+											<v8:content>Не удалось заменить дубли на оригиналы в некоторых местах использования:</v8:content>
 										</v8:item>
 									</Title>
-									<ToolTip>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Группа надпись ошибки</v8:content>
-										</v8:item>
-									</ToolTip>
-									<Group>Horizontal</Group>
-									<Representation>None</Representation>
-									<ShowTitle>false</ShowTitle>
-									<ExtendedTooltip name="ГруппаНадписьОшибкиРасширеннаяПодсказка" id="340"/>
-									<ChildItems>
-										<PictureDecoration name="Декорация1" id="341">
-											<Width>2</Width>
-											<Height>1</Height>
-											<Picture>
-												<xr:Ref>CommonPicture.Предупреждение</xr:Ref>
-												<xr:LoadTransparent>true</xr:LoadTransparent>
-											</Picture>
-											<ContextMenu name="Декорация1КонтекстноеМеню" id="342"/>
-											<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="343"/>
-										</PictureDecoration>
-										<LabelDecoration name="Декорация2" id="331">
-											<Title formatted="false">
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>При обработке некоторых элементов возникли ошибки замены в местах использования:</v8:content>
-												</v8:item>
-											</Title>
-											<ContextMenu name="Декорация2КонтекстноеМеню" id="332"/>
-											<ExtendedTooltip name="Декорация2РасширеннаяПодсказка" id="333"/>
-										</LabelDecoration>
-									</ChildItems>
-								</UsualGroup>
+									<ContextMenu name="ЗаголовокСтраницыНеудачныеЗаменыКонтекстноеМеню" id="332"/>
+									<ExtendedTooltip name="ЗаголовокСтраницыНеудачныеЗаменыРасширеннаяПодсказка" id="333"/>
+								</LabelDecoration>
 								<UsualGroup name="ГруппаГоризонтальнаяНеобработанныеДубли" id="240">
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>Группа горизонтальная необработанные дубли</v8:content>
+											<v8:content>Горизонтальная необработанные дубли</v8:content>
 										</v8:item>
 									</Title>
 									<ToolTip>
@@ -871,11 +666,60 @@
 											<EnableStartDrag>true</EnableStartDrag>
 											<EnableDrag>true</EnableDrag>
 											<DataPath>НеобработанныеДубли</DataPath>
-											<SearchStringLocation>None</SearchStringLocation>
-											<ViewStatusLocation>None</ViewStatusLocation>
-											<SearchControlLocation>None</SearchControlLocation>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Необработанные дубли</v8:content>
+												</v8:item>
+											</Title>
+											<CommandSet>
+												<ExcludedCommand>Change</ExcludedCommand>
+											</CommandSet>
 											<ContextMenu name="НеобработанныеДублиКонтекстноеМеню" id="243">
-												<Autofill>false</Autofill>
+												<ChildItems>
+													<ButtonGroup name="НеобработанныеДублиКонтекстноеМенюГруппаОткрыть" id="442">
+														<Title>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Необработанные дубли контекстное меню группа открыть</v8:content>
+															</v8:item>
+														</Title>
+														<ExtendedTooltip name="НеобработанныеДублиКонтекстноеМенюГруппаОткрытьРасширеннаяПодсказка" id="443"/>
+														<ChildItems>
+															<Button name="НеобработанныеДублиКонтекстноеМенюОткрытьНеобработанныйДубль" id="432">
+																<Type>CommandBarButton</Type>
+																<CommandName>Form.Command.ОткрытьНеобработанныйДубль</CommandName>
+																<ExtendedTooltip name="НеобработанныеДублиКонтекстноеМенюОткрытьНеобработанныйДубльРасширеннаяПодсказка" id="433"/>
+															</Button>
+														</ChildItems>
+													</ButtonGroup>
+													<Button name="НеобработанныеДублиКонтекстноеМенюКопироватьВБуферОбмена" id="434">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Item.НеобработанныеДубли.StandardCommand.CopyToClipboard</CommandName>
+														<ExtendedTooltip name="НеобработанныеДублиКонтекстноеМенюКопироватьВБуферОбменаРасширеннаяПодсказка" id="435"/>
+													</Button>
+													<Button name="НеобработанныеДублиКонтекстноеМенюВывестиСписок" id="436">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Item.НеобработанныеДубли.StandardCommand.OutputList</CommandName>
+														<ExtendedTooltip name="НеобработанныеДублиКонтекстноеМенюВывестиСписокРасширеннаяПодсказка" id="437"/>
+													</Button>
+													<ButtonGroup name="НеобработанныеДублиКонтекстноеМенюГруппаИзменитьФорму" id="440">
+														<Title>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Необработанные дубли контекстное меню группа изменить форму</v8:content>
+															</v8:item>
+														</Title>
+														<ExtendedTooltip name="НеобработанныеДублиКонтекстноеМенюГруппаИзменитьФормуРасширеннаяПодсказка" id="441"/>
+														<ChildItems>
+															<Button name="НеобработанныеДублиКонтекстноеМенюИзменитьФорму" id="438">
+																<Type>CommandBarButton</Type>
+																<CommandName>Form.StandardCommand.CustomizeForm</CommandName>
+																<ExtendedTooltip name="НеобработанныеДублиКонтекстноеМенюИзменитьФормуРасширеннаяПодсказка" id="439"/>
+															</Button>
+														</ChildItems>
+													</ButtonGroup>
+												</ChildItems>
 											</ContextMenu>
 											<AutoCommandBar name="НеобработанныеДублиКоманднаяПанель" id="244">
 												<Autofill>false</Autofill>
@@ -911,6 +755,12 @@
 											</Events>
 											<ChildItems>
 												<ColumnGroup name="ОсновнойНаименование" id="246">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Основной наименование</v8:content>
+														</v8:item>
+													</Title>
 													<ToolTip>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
@@ -944,6 +794,9 @@
 												</ColumnGroup>
 												<InputField name="НеобработанныеДублиКод" id="293">
 													<DataPath>НеобработанныеДубли.Код</DataPath>
+													<UserVisible>
+														<xr:Common>false</xr:Common>
+													</UserVisible>
 													<ReadOnly>true</ReadOnly>
 													<EditMode>EnterOnInput</EditMode>
 													<Width>10</Width>
@@ -954,14 +807,19 @@
 												<InputField name="НеобработанныеДублиКоличество" id="299">
 													<DataPath>НеобработанныеДубли.Количество</DataPath>
 													<ReadOnly>true</ReadOnly>
-													<Title>
+													<TitleLocation>None</TitleLocation>
+													<ToolTip>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
 															<v8:content>Неудачных замен</v8:content>
 														</v8:item>
-													</Title>
+													</ToolTip>
 													<EditMode>EnterOnInput</EditMode>
-													<Width>13</Width>
+													<HeaderPicture>
+														<xr:Ref>CommonPicture.Предупреждение</xr:Ref>
+														<xr:LoadTransparent>true</xr:LoadTransparent>
+													</HeaderPicture>
+													<Width>4</Width>
 													<HorizontalStretch>false</HorizontalStretch>
 													<ContextMenu name="НеобработанныеДублиКоличествоКонтекстноеМеню" id="300"/>
 													<ExtendedTooltip name="НеобработанныеДублиКоличествоРасширеннаяПодсказка" id="301"/>
@@ -975,12 +833,6 @@
 													<v8:content>Страницы места использования необработанных</v8:content>
 												</v8:item>
 											</Title>
-											<ToolTip>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Страницы места использования</v8:content>
-												</v8:item>
-											</ToolTip>
 											<Width>24</Width>
 											<PagesRepresentation>None</PagesRepresentation>
 											<ExtendedTooltip name="СтраницыМестаИспользованияНеобработанныхРасширеннаяПодсказка" id="266"/>
@@ -998,7 +850,6 @@
 															<v8:content>Места использования</v8:content>
 														</v8:item>
 													</ToolTip>
-													<Width>24</Width>
 													<ExtendedTooltip name="ОписаниеМестИспользованияНеобработанныхРасширеннаяПодсказка" id="268"/>
 													<ChildItems>
 														<Table name="МестаИспользованияНеобработанных" id="269">
@@ -1009,6 +860,7 @@
 															<ChangeRowSet>false</ChangeRowSet>
 															<ChangeRowOrder>false</ChangeRowOrder>
 															<Height>2</Height>
+															<RowSelectionMode>Row</RowSelectionMode>
 															<Header>false</Header>
 															<HorizontalLines>false</HorizontalLines>
 															<VerticalLines>false</VerticalLines>
@@ -1016,11 +868,22 @@
 															<EnableStartDrag>true</EnableStartDrag>
 															<EnableDrag>true</EnableDrag>
 															<DataPath>МестаИспользованияНеобработанных</DataPath>
-															<SearchStringLocation>None</SearchStringLocation>
-															<ViewStatusLocation>None</ViewStatusLocation>
-															<SearchControlLocation>None</SearchControlLocation>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Места использования необработанных</v8:content>
+																</v8:item>
+															</Title>
 															<RowFilter xsi:nil="true"/>
-															<ContextMenu name="МестаИспользованияНеобработанныхКонтекстноеМеню" id="270"/>
+															<ContextMenu name="МестаИспользованияНеобработанныхКонтекстноеМеню" id="270">
+																<ChildItems>
+																	<Button name="МестаИспользованияНеобработанныхКонтекстноеМенюВывестиСписок" id="444">
+																		<Type>CommandBarButton</Type>
+																		<CommandName>Form.Item.МестаИспользованияНеобработанных.StandardCommand.OutputList</CommandName>
+																		<ExtendedTooltip name="МестаИспользованияНеобработанныхКонтекстноеМенюВывестиСписокРасширеннаяПодсказка" id="445"/>
+																	</Button>
+																</ChildItems>
+															</ContextMenu>
 															<AutoCommandBar name="МестаИспользованияНеобработанныхКоманднаяПанель" id="271"/>
 															<ExtendedTooltip name="МестаИспользованияНеобработанныхРасширеннаяПодсказка" id="272"/>
 															<SearchStringAddition name="МестаИспользованияНеобработанныхСтрокаПоиска" id="391">
@@ -1082,44 +945,6 @@
 															<ContextMenu name="ОписаниеОшибкиНеобработанныхКонтекстноеМеню" id="286"/>
 															<ExtendedTooltip name="ОписаниеОшибкиНеобработанныхРасширеннаяПодсказка" id="287"/>
 														</InputField>
-														<UsualGroup name="ГруппаГоризонтальнаяСостояниеНеобработанных" id="283">
-															<Title>
-																<v8:item>
-																	<v8:lang>ru</v8:lang>
-																	<v8:content>Группа горизонтальная состояние необработанных</v8:content>
-																</v8:item>
-															</Title>
-															<ToolTip>
-																<v8:item>
-																	<v8:lang>ru</v8:lang>
-																	<v8:content>Группа горизонтальная состояние найденного</v8:content>
-																</v8:item>
-															</ToolTip>
-															<VerticalStretch>false</VerticalStretch>
-															<Group>Horizontal</Group>
-															<Representation>None</Representation>
-															<ShowTitle>false</ShowTitle>
-															<ExtendedTooltip name="ГруппаГоризонтальнаяСостояниеНеобработанныхРасширеннаяПодсказка" id="284"/>
-															<ChildItems>
-																<LabelDecoration name="ВсеМестаИспользованияНеобработанных" id="323">
-																	<HorizontalStretch>true</HorizontalStretch>
-																	<VerticalStretch>false</VerticalStretch>
-																	<Title formatted="false">
-																		<v8:item>
-																			<v8:lang>ru</v8:lang>
-																			<v8:content>Все места использования</v8:content>
-																		</v8:item>
-																	</Title>
-																	<Hyperlink>true</Hyperlink>
-																	<HorizontalAlign>Right</HorizontalAlign>
-																	<ContextMenu name="ВсеМестаИспользованияНеобработанныхКонтекстноеМеню" id="324"/>
-																	<ExtendedTooltip name="ВсеМестаИспользованияНеобработанныхРасширеннаяПодсказка" id="325"/>
-																	<Events>
-																		<Event name="Click">ВсеМестаИспользованияНеобработанныхНажатие</Event>
-																	</Events>
-																</LabelDecoration>
-															</ChildItems>
-														</UsualGroup>
 													</ChildItems>
 												</Page>
 												<Page name="ОписаниеГруппыНеобработанных" id="276">
@@ -1137,41 +962,74 @@
 													</ToolTip>
 													<ExtendedTooltip name="ОписаниеГруппыНеобработанныхРасширеннаяПодсказка" id="277"/>
 													<ChildItems>
-														<UsualGroup name="Группа2" id="278">
-															<Group>Vertical</Group>
-															<Representation>None</Representation>
-															<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="279"/>
-															<ChildItems>
-																<LabelDecoration name="ОписаниеТекущейГруппыДублей1" id="280">
-																	<HorizontalStretch>true</HorizontalStretch>
-																	<Title formatted="false">
-																		<v8:item>
-																			<v8:lang>ru</v8:lang>
-																			<v8:content>Описание текущей группы дублей</v8:content>
-																		</v8:item>
-																	</Title>
-																	<ContextMenu name="ОписаниеТекущейГруппыДублей1КонтекстноеМеню" id="281"/>
-																	<ExtendedTooltip name="ОписаниеТекущейГруппыДублей1РасширеннаяПодсказка" id="282"/>
-																</LabelDecoration>
-															</ChildItems>
-														</UsualGroup>
+														<LabelDecoration name="ОписаниеТекущейГруппыДублей1" id="280">
+															<AutoMaxWidth>false</AutoMaxWidth>
+															<HorizontalStretch>true</HorizontalStretch>
+															<VerticalStretch>true</VerticalStretch>
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Описание текущей группы дублей</v8:content>
+																</v8:item>
+															</Title>
+															<HorizontalAlign>Center</HorizontalAlign>
+															<VerticalAlign>Center</VerticalAlign>
+															<Border width="1">
+																<v8ui:style xsi:type="v8ui:ControlBorderType">Single</v8ui:style>
+															</Border>
+															<ContextMenu name="ОписаниеТекущейГруппыДублей1КонтекстноеМеню" id="281"/>
+															<ExtendedTooltip name="ОписаниеТекущейГруппыДублей1РасширеннаяПодсказка" id="282"/>
+														</LabelDecoration>
 													</ChildItems>
 												</Page>
 											</ChildItems>
 										</Pages>
 									</ChildItems>
 								</UsualGroup>
-								<LabelDecoration name="Декорация3" id="334">
-									<TextColor>style:ПоясняющийТекст</TextColor>
-									<Title formatted="false">
+								<UsualGroup name="ГруппаПояснениеКНеобработанным" id="283">
+									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>Обработка групп(ы) дублей была отменена. После исправления ошибок можно продолжить удаление.</v8:content>
+											<v8:content>Пояснение к необработанным</v8:content>
 										</v8:item>
 									</Title>
-									<ContextMenu name="Декорация3КонтекстноеМеню" id="335"/>
-									<ExtendedTooltip name="Декорация3РасширеннаяПодсказка" id="336"/>
-								</LabelDecoration>
+									<Shortcut>Ctrl+S</Shortcut>
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаПояснениеКНеобработаннымРасширеннаяПодсказка" id="284"/>
+									<ChildItems>
+										<LabelDecoration name="Декорация3" id="334">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<HorizontalStretch>true</HorizontalStretch>
+											<TextColor>style:ПоясняющийТекст</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Удаление групп(ы) дублей было отменено до выяснения и устранения причин.</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="Декорация3КонтекстноеМеню" id="335"/>
+											<ExtendedTooltip name="Декорация3РасширеннаяПодсказка" id="336"/>
+										</LabelDecoration>
+										<LabelDecoration name="ВсеМестаИспользованияНеобработанных" id="323">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Все места использования</v8:content>
+												</v8:item>
+											</Title>
+											<Hyperlink>true</Hyperlink>
+											<HorizontalAlign>Right</HorizontalAlign>
+											<ContextMenu name="ВсеМестаИспользованияНеобработанныхКонтекстноеМеню" id="324"/>
+											<ExtendedTooltip name="ВсеМестаИспользованияНеобработанныхРасширеннаяПодсказка" id="325"/>
+											<Events>
+												<Event name="Click">ВсеМестаИспользованияНеобработанныхНажатие</Event>
+											</Events>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
 							</ChildItems>
 						</UsualGroup>
 					</ChildItems>
@@ -1183,12 +1041,6 @@
 							<v8:content>Шаг дублей не найдено</v8:content>
 						</v8:item>
 					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Шаг дублей не найдено</v8:content>
-						</v8:item>
-					</ToolTip>
 					<ExtendedTooltip name="ШагДублейНеНайденоРасширеннаяПодсказка" id="228"/>
 					<ChildItems>
 						<SpreadSheetDocumentField name="ДублейНеНайдено" id="229">
@@ -1203,6 +1055,65 @@
 						</SpreadSheetDocumentField>
 					</ChildItems>
 				</Page>
+				<Page name="ШагВозниклаОшибка" id="448">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Возникла ошибка</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Horizontal</Group>
+					<ExtendedTooltip name="ШагВозниклаОшибкаРасширеннаяПодсказка" id="449"/>
+					<ChildItems>
+						<PictureDecoration name="КартинкаПредупреждение32" id="450">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Картинка предупреждение32</v8:content>
+								</v8:item>
+							</Title>
+							<GroupVerticalAlign>Center</GroupVerticalAlign>
+							<Picture>
+								<xr:Ref>CommonPicture.Предупреждение32</xr:Ref>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</Picture>
+							<ContextMenu name="КартинкаПредупреждение32КонтекстноеМеню" id="451"/>
+							<ExtendedTooltip name="КартинкаПредупреждение32РасширеннаяПодсказка" id="452"/>
+						</PictureDecoration>
+						<LabelDecoration name="НадписьТекстОшибки" id="453">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Height>5</Height>
+							<HorizontalStretch>true</HorizontalStretch>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Надпись текст ошибки</v8:content>
+								</v8:item>
+							</Title>
+							<GroupVerticalAlign>Center</GroupVerticalAlign>
+							<VerticalAlign>Center</VerticalAlign>
+							<ContextMenu name="НадписьТекстОшибкиКонтекстноеМеню" id="454"/>
+							<ExtendedTooltip name="НадписьТекстОшибкиРасширеннаяПодсказка" id="455"/>
+						</LabelDecoration>
+						<LabelDecoration name="СсылкаПодробнее" id="456">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Подробнее</v8:content>
+								</v8:item>
+							</Title>
+							<GroupVerticalAlign>Center</GroupVerticalAlign>
+							<Hyperlink>true</Hyperlink>
+							<VerticalAlign>Center</VerticalAlign>
+							<ContextMenu name="СсылкаПодробнееКонтекстноеМеню" id="457"/>
+							<ExtendedTooltip name="СсылкаПодробнееРасширеннаяПодсказка" id="458"/>
+							<Events>
+								<Event name="Click">СсылкаПодробнееНажатие</Event>
+							</Events>
+						</LabelDecoration>
+					</ChildItems>
+				</Page>
 			</ChildItems>
 		</Pages>
 		<UsualGroup name="ПанельДействийМастера" id="167">
@@ -1212,15 +1123,6 @@
 					<v8:content>Панель действий мастера</v8:content>
 				</v8:item>
 			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Панель действий мастера</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Height>2</Height>
-			<HorizontalStretch>true</HorizontalStretch>
-			<VerticalStretch>false</VerticalStretch>
 			<Group>Horizontal</Group>
 			<Representation>NormalSeparation</Representation>
 			<ShowTitle>false</ShowTitle>
@@ -1230,21 +1132,15 @@
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Группа назад</v8:content>
+							<v8:content>Назад</v8:content>
 						</v8:item>
 					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Группа назад</v8:content>
-						</v8:item>
-					</ToolTip>
 					<ExtendedTooltip name="ГруппаНазадРасширеннаяПодсказка" id="170"/>
 					<ChildItems>
-						<Button name="Назад" id="171">
+						<Button name="ШагМастераНазад" id="171">
 							<Type>CommandBarButton</Type>
 							<CommandName>Form.Command.ШагМастераНазад</CommandName>
-							<ExtendedTooltip name="НазадРасширеннаяПодсказка" id="172"/>
+							<ExtendedTooltip name="ШагМастераНазадРасширеннаяПодсказка" id="172"/>
 						</Button>
 					</ChildItems>
 				</CommandBar>
@@ -1252,20 +1148,13 @@
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Группа вперед</v8:content>
+							<v8:content>Вперед</v8:content>
 						</v8:item>
 					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Группа вперед</v8:content>
-						</v8:item>
-					</ToolTip>
-					<HorizontalStretch>true</HorizontalStretch>
 					<HorizontalLocation>Right</HorizontalLocation>
 					<ExtendedTooltip name="ГруппаВпередРасширеннаяПодсказка" id="174"/>
 					<ChildItems>
-						<Button name="Далее" id="175">
+						<Button name="ШагМастераДалее" id="175">
 							<Type>CommandBarButton</Type>
 							<DefaultButton>true</DefaultButton>
 							<CommandName>Form.Command.ШагМастераДалее</CommandName>
@@ -1275,26 +1164,20 @@
 									<v8:content>Удалить дубли</v8:content>
 								</v8:item>
 							</Title>
-							<ExtendedTooltip name="ДалееРасширеннаяПодсказка" id="176"/>
+							<ExtendedTooltip name="ШагМастераДалееРасширеннаяПодсказка" id="176"/>
 						</Button>
-						<Button name="Отмена" id="177">
+						<Button name="ШагМастераОтмена" id="177">
 							<Type>CommandBarButton</Type>
 							<CommandName>Form.Command.ШагМастераОтмена</CommandName>
-							<ExtendedTooltip name="ОтменаРасширеннаяПодсказка" id="178"/>
+							<ExtendedTooltip name="ШагМастераОтменаРасширеннаяПодсказка" id="178"/>
 						</Button>
 						<ButtonGroup name="ГруппаСправкаФормы" id="184">
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Группа справка формы</v8:content>
+									<v8:content>Справка формы</v8:content>
 								</v8:item>
 							</Title>
-							<ToolTip>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Группа справка формы</v8:content>
-								</v8:item>
-							</ToolTip>
 							<ExtendedTooltip name="ГруппаСправкаФормыРасширеннаяПодсказка" id="185"/>
 							<ChildItems>
 								<Button name="Справка" id="179">
@@ -1314,15 +1197,9 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Группа картинок</v8:content>
+					<v8:content>Картинок</v8:content>
 				</v8:item>
 			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Группа картинок</v8:content>
-				</v8:item>
-			</ToolTip>
 			<Group>Vertical</Group>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
@@ -1330,7 +1207,7 @@
 			<ChildItems>
 				<PictureDecoration name="Предупреждение32" id="83">
 					<Picture>
-						<xr:Abs>Picture.png</xr:Abs>
+						<xr:Ref>CommonPicture.Предупреждение32</xr:Ref>
 						<xr:LoadTransparent>false</xr:LoadTransparent>
 					</Picture>
 					<ContextMenu name="Предупреждение32КонтекстноеМеню" id="84"/>
@@ -1338,7 +1215,7 @@
 				</PictureDecoration>
 				<PictureDecoration name="ДлительнаяОперация48" id="77">
 					<Picture>
-						<xr:Abs>Picture.gif</xr:Abs>
+						<xr:Ref>CommonPicture.ДлительнаяОперация48</xr:Ref>
 						<xr:LoadTransparent>false</xr:LoadTransparent>
 					</Picture>
 					<ContextMenu name="ДлительнаяОперация48КонтекстноеМеню" id="78"/>
@@ -1352,17 +1229,13 @@
 						</v8:item>
 					</Title>
 					<Picture>
-						<xr:Abs>Picture.png</xr:Abs>
+						<xr:Ref>CommonPicture.Информация32</xr:Ref>
 						<xr:LoadTransparent>false</xr:LoadTransparent>
 					</Picture>
 					<ContextMenu name="Информация32КонтекстноеМеню" id="182"/>
 					<ExtendedTooltip name="Информация32РасширеннаяПодсказка" id="183"/>
 				</PictureDecoration>
 				<PictureDecoration name="Внимание16" id="196">
-					<Width>2</Width>
-					<Height>1</Height>
-					<HorizontalStretch>false</HorizontalStretch>
-					<VerticalStretch>false</VerticalStretch>
 					<Title formatted="false">
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -1370,7 +1243,7 @@
 						</v8:item>
 					</Title>
 					<Picture>
-						<xr:Abs>Picture.png</xr:Abs>
+						<xr:Ref>CommonPicture.Предупреждение</xr:Ref>
 						<xr:LoadTransparent>false</xr:LoadTransparent>
 					</Picture>
 					<ContextMenu name="Внимание16КонтекстноеМеню" id="197"/>
@@ -1384,7 +1257,7 @@
 						</v8:item>
 					</Title>
 					<Picture>
-						<xr:Abs>Picture.png</xr:Abs>
+						<xr:Ref>CommonPicture.Информация</xr:Ref>
 						<xr:LoadTransparent>false</xr:LoadTransparent>
 					</Picture>
 					<ContextMenu name="Информация16КонтекстноеМеню" id="215"/>
@@ -1415,37 +1288,11 @@
 				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
-		<Attribute name="БазовоеИмяФормы" id="3">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Базовое имя формы</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>xs:string</v8:Type>
-				<v8:StringQualifiers>
-					<v8:Length>0</v8:Length>
-					<v8:AllowedLength>Variable</v8:AllowedLength>
-				</v8:StringQualifiers>
-			</Type>
-		</Attribute>
-		<Attribute name="ОбластиПоискаДублей" id="4">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Области поиска дублей</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>v8:ValueListType</v8:Type>
-			</Type>
-		</Attribute>
 		<Attribute name="ОбластьПоискаДублей" id="5">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Область поиска дублей</v8:content>
+					<v8:content>Искать в</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -1455,9 +1302,6 @@
 					<v8:AllowedLength>Variable</v8:AllowedLength>
 				</v8:StringQualifiers>
 			</Type>
-			<Save>
-				<Field>ОбластьПоискаДублей</Field>
-			</Save>
 		</Attribute>
 		<Attribute name="КомпоновщикПредварительногоОтбора" id="6">
 			<Title>
@@ -1753,17 +1597,6 @@
 				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
-		<Attribute name="ДоступноВыполнениеПроцедурыМодуляОбъектаОбработки" id="18">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Доступно выполнение процедуры модуля объекта обработки</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>xs:boolean</v8:Type>
-			</Type>
-		</Attribute>
 		<Attribute name="АдресРезультатаЗамены" id="20">
 			<Title>
 				<v8:item>
@@ -1905,7 +1738,7 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Места использования необработанных</v8:content>
+					<v8:content>Места использования</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -1979,11 +1812,20 @@
 				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
-		<Attribute name="ПредставлениеОбластиПоискаДублей" id="26">
+		<Attribute name="НастройкиМастера" id="27">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Представление области поиска дублей</v8:content>
+					<v8:content>Настройки мастера</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ПредставлениеПравилПоиска" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сравнивать</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -1994,27 +1836,90 @@
 				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
-	</Attributes>
-	<Commands>
-		<Command name="ОчиститьПравилаОтбора" id="2">
+		<Attribute name="ПредставлениеПравилОтбора" id="28">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Очистить правила отбора</v8:content>
+					<v8:content>Отбирать</v8:content>
 				</v8:item>
 			</Title>
-			<ToolTip>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="НечеткийПоиск" id="29">
+			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Очистить правила отбора</v8:content>
+					<v8:content>Нечеткий поиск</v8:content>
 				</v8:item>
-			</ToolTip>
-			<Picture>
-				<xr:Ref>StdPicture.Delete</xr:Ref>
-				<xr:LoadTransparent>true</xr:LoadTransparent>
-			</Picture>
-			<Action>ОчиститьПравилаОтбора</Action>
-		</Command>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВсегоНайденоДублей" id="30">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Всего найдено дублей</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ВсегоЭлементов" id="31">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Всего элементов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="АдресНастроек" id="32">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес настроек</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИдентификаторТекущейСтроки" id="33">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Идентификатор текущей строки</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+	</Attributes>
+	<Commands>
 		<Command name="ВыбратьОсновнойЭлемент" id="5">
 			<Title>
 				<v8:item>
@@ -2034,6 +1939,7 @@
 			</Picture>
 			<Action>ВыбратьОсновнойЭлемент</Action>
 			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ОткрытьКандидатаВДубли" id="6">
 			<Title>
@@ -2049,6 +1955,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ОткрытьКандидатаВДубли</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="РазвернутьГруппыДублей" id="7">
 			<Title>
@@ -2068,6 +1975,7 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>РазвернутьГруппыДублей</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="СвернутьГруппыДублей" id="8">
 			<Title>
@@ -2087,6 +1995,7 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>СвернутьГруппыДублей</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ШагМастераДалее" id="10">
 			<Title>
@@ -2101,7 +2010,8 @@
 					<v8:content>Продолжить выполнение</v8:content>
 				</v8:item>
 			</ToolTip>
-			<Action>ШагМастераДалее</Action>
+			<Action>ОбработчикКнопкиМастера</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ШагМастераНазад" id="11">
 			<Title>
@@ -2116,7 +2026,8 @@
 					<v8:content>Вернутся на предыдущий шаг</v8:content>
 				</v8:item>
 			</ToolTip>
-			<Action>ШагМастераНазад</Action>
+			<Action>ОбработчикКнопкиМастера</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ШагМастераОтмена" id="12">
 			<Title>
@@ -2131,7 +2042,8 @@
 					<v8:content>Прекратить работу мастера</v8:content>
 				</v8:item>
 			</ToolTip>
-			<Action>ШагМастераОтмена</Action>
+			<Action>ОбработчикКнопкиМастера</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ПовторитьПоиск" id="13">
 			<Title>
@@ -2147,6 +2059,23 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ПовторитьПоиск</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьНеобработанныйДубль" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть элемент</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьНеобработанныйДубль</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 	</Commands>
 </Form>

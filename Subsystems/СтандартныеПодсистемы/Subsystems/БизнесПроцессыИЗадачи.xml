@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5">
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
 	<Subsystem uuid="1098786f-dd24-4cce-b212-be0cb5f01735">
 		<Properties>
 			<Name>БизнесПроцессыИЗадачи</Name>
@@ -10,7 +10,7 @@
 				</v8:item>
 			</Synonym>
 			<Comment/>
-			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<IncludeHelpInContents>false</IncludeHelpInContents>
 			<IncludeInCommandInterface>false</IncludeInCommandInterface>
 			<Explanation/>
 			<Picture/>
@@ -58,7 +58,6 @@
 				<xr:Item xsi:type="xr:MDObjectRef">StyleItem.РольБезИсполнителей</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Role.ЧтениеЗадач</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Enum.СостоянияБизнесПроцессов</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ЗнакСтоп</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ЗнакСтопЧБ</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Constant.ИспользоватьПодчиненныеБизнесПроцессы</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.ОбновитьСостояниеБизнесПроцесса</xr:Item>
@@ -73,6 +72,18 @@
 				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ИспользоватьДатуИВремяВСрокахЗадач</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ИспользоватьДатуНачалаЗадач</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ИспользоватьПодчиненныеБизнесПроцессы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.БизнесПроцессыИЗадачиКлиентСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.ПолучитьПоляПредставленияБизнесПроцесса</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.ПолучитьПредставлениеБизнесПроцесса</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DefinedType.БизнесПроцесс</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DefinedType.ОбъектАдресации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DefinedType.ПредметЗадачи</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DefinedType.ОтложенныйБизнесПроцесс</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ПроцессыДляЗапуска</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ПроцессОтложен</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ScheduledJob.СтартОтложенныхПроцессов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.СостоянияПроцессовДляЗапуска</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.СостоянияПроцессов</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects/>

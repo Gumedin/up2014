@@ -1,8 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
 	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
 	<CommandBarLocation>Bottom</CommandBarLocation>
-	<VerticalScroll>useIfNecessary</VerticalScroll>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<HorizontalAlign>Right</HorizontalAlign>
 		<Autofill>false</Autofill>
@@ -28,40 +27,43 @@
 		<Table name="РасписаниеРаботы" id="1">
 			<Representation>List</Representation>
 			<ChangeRowOrder>false</ChangeRowOrder>
-			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<Width>1</Width>
 			<EnableStartDrag>true</EnableStartDrag>
 			<EnableDrag>true</EnableDrag>
 			<DataPath>РасписаниеРаботы</DataPath>
-			<SearchStringLocation>None</SearchStringLocation>
-			<ViewStatusLocation>None</ViewStatusLocation>
-			<SearchControlLocation>None</SearchControlLocation>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расписание работы</v8:content>
+				</v8:item>
+			</Title>
 			<RowFilter xsi:nil="true"/>
 			<ContextMenu name="РасписаниеРаботыКонтекстноеМеню" id="2"/>
 			<AutoCommandBar name="РасписаниеРаботыКоманднаяПанель" id="3"/>
 			<ExtendedTooltip name="РасписаниеРаботыExtendedTooltip" id="14"/>
-			<SearchStringAddition name="РасписаниеРаботыСтрокаПоиска" id="17">
+			<SearchStringAddition name="РасписаниеРаботыSearchString" id="17">
 				<AdditionSource>
 					<Item>РасписаниеРаботы</Item>
 					<Type>SearchStringRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="РасписаниеРаботыСтрокаПоискаКонтекстноеМеню" id="18"/>
-				<ExtendedTooltip name="РасписаниеРаботыСтрокаПоискаРасширеннаяПодсказка" id="19"/>
+				<ContextMenu name="РасписаниеРаботыSearchStringContextMenu" id="18"/>
+				<ExtendedTooltip name="РасписаниеРаботыSearchStringExtendedTooltip" id="19"/>
 			</SearchStringAddition>
-			<ViewStatusAddition name="РасписаниеРаботыСостояниеПросмотра" id="20">
+			<ViewStatusAddition name="РасписаниеРаботыViewStatus" id="20">
 				<AdditionSource>
 					<Item>РасписаниеРаботы</Item>
 					<Type>ViewStatusRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="РасписаниеРаботыСостояниеПросмотраКонтекстноеМеню" id="21"/>
-				<ExtendedTooltip name="РасписаниеРаботыСостояниеПросмотраРасширеннаяПодсказка" id="22"/>
+				<ContextMenu name="РасписаниеРаботыViewStatusContextMenu" id="21"/>
+				<ExtendedTooltip name="РасписаниеРаботыViewStatusExtendedTooltip" id="22"/>
 			</ViewStatusAddition>
-			<SearchControlAddition name="РасписаниеРаботыУправлениеПоиском" id="23">
+			<SearchControlAddition name="РасписаниеРаботыSearchControl" id="23">
 				<AdditionSource>
 					<Item>РасписаниеРаботы</Item>
 					<Type>SearchControl</Type>
 				</AdditionSource>
-				<ContextMenu name="РасписаниеРаботыУправлениеПоискомКонтекстноеМеню" id="24"/>
-				<ExtendedTooltip name="РасписаниеРаботыУправлениеПоискомРасширеннаяПодсказка" id="25"/>
+				<ContextMenu name="РасписаниеРаботыSearchControlContextMenu" id="24"/>
+				<ExtendedTooltip name="РасписаниеРаботыSearchControlExtendedTooltip" id="25"/>
 			</SearchControlAddition>
 			<Events>
 				<Event name="OnEditEnd">РасписаниеРаботыПриОкончанииРедактирования</Event>
@@ -69,7 +71,14 @@
 			<ChildItems>
 				<InputField name="РасписаниеРаботыВремяНачала" id="6">
 					<DataPath>РасписаниеРаботы.ВремяНачала</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Начало</v8:content>
+						</v8:item>
+					</Title>
 					<EditMode>EnterOnInput</EditMode>
+					<Width>10</Width>
 					<Format>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -87,6 +96,12 @@
 				</InputField>
 				<InputField name="РасписаниеРаботыВремяОкончания" id="8">
 					<DataPath>РасписаниеРаботы.ВремяОкончания</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Окончание</v8:content>
+						</v8:item>
+					</Title>
 					<EditMode>EnterOnInput</EditMode>
 					<Format>
 						<v8:item>
@@ -176,6 +191,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ОК</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="Отмена" id="2">
 			<Title>
@@ -191,6 +207,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>Отмена</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 	</Commands>
 </Form>

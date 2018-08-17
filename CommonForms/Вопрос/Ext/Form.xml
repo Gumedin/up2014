@@ -1,11 +1,12 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
 	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
 	<EnterKeyBehavior>DefaultButton</EnterKeyBehavior>
 	<AutoTitle>false</AutoTitle>
+	<AutoURL>false</AutoURL>
+	<AutoFillCheck>false</AutoFillCheck>
 	<Customizable>false</Customizable>
 	<CommandBarLocation>Bottom</CommandBarLocation>
-	<VerticalScroll>useIfNecessary</VerticalScroll>
 	<CommandSet>
 		<ExcludedCommand>Abort</ExcludedCommand>
 		<ExcludedCommand>Cancel</ExcludedCommand>
@@ -34,20 +35,12 @@
 					<v8:content>Колонки</v8:content>
 				</v8:item>
 			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Колонки</v8:content>
-				</v8:item>
-			</ToolTip>
 			<Group>Horizontal</Group>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="КолонкиExtendedTooltip" id="17"/>
 			<ChildItems>
 				<PictureDecoration name="Предупреждение" id="5">
-					<Width>5</Width>
-					<Height>2</Height>
 					<Title formatted="false">
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -68,34 +61,20 @@
 							<v8:content>Строки</v8:content>
 						</v8:item>
 					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Строки</v8:content>
-						</v8:item>
-					</ToolTip>
+					<Width>35</Width>
 					<Group>Vertical</Group>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="СтрокиExtendedTooltip" id="19"/>
 					<ChildItems>
-						<LabelDecoration name="ТекстСообщения" id="12">
-							<Title formatted="false">
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Текст сообщения</v8:content>
-								</v8:item>
-							</Title>
-							<ContextMenu name="ТекстСообщенияКонтекстноеМеню" id="13"/>
-							<ExtendedTooltip name="ТекстСообщенияExtendedTooltip" id="20"/>
-						</LabelDecoration>
 						<InputField name="МногострочныйТекстСообщения" id="10">
 							<DataPath>ТекстСообщения</DataPath>
 							<ReadOnly>true</ReadOnly>
 							<SkipOnInput>true</SkipOnInput>
 							<TitleLocation>None</TitleLocation>
-							<Height>10</Height>
+							<VerticalStretch>true</VerticalStretch>
 							<MultiLine>true</MultiLine>
+							<BorderColor>style:FormBackColor</BorderColor>
 							<ContextMenu name="МногострочныйТекстСообщенияКонтекстноеМеню" id="11"/>
 							<ExtendedTooltip name="МногострочныйТекстСообщенияExtendedTooltip" id="21"/>
 						</InputField>
@@ -110,7 +89,7 @@
 				</UsualGroup>
 			</ChildItems>
 		</UsualGroup>
-		<CommandBar name="КоманднаяПанель" id="14">
+		<UsualGroup name="КоманднаяПанель" id="14">
 			<EnableContentChange>true</EnableContentChange>
 			<Title>
 				<v8:item>
@@ -118,15 +97,15 @@
 					<v8:content>Командная панель</v8:content>
 				</v8:item>
 			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Командная панель</v8:content>
-				</v8:item>
-			</ToolTip>
-			<HorizontalLocation>Right</HorizontalLocation>
+			<HorizontalStretch>true</HorizontalStretch>
+			<VerticalStretch>true</VerticalStretch>
+			<Group>Horizontal</Group>
+			<HorizontalAlign>Right</HorizontalAlign>
+			<VerticalAlign>Bottom</VerticalAlign>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="КоманднаяПанельExtendedTooltip" id="23"/>
-		</CommandBar>
+		</UsualGroup>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="СоответствиеКнопокИВозвращаемыхЗначений" id="1">

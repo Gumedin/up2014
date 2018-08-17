@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
 	<VerticalScroll>useIfNecessary</VerticalScroll>
 	<AutoTime>CurrentOrLast</AutoTime>
 	<UsePostingMode>Auto</UsePostingMode>
@@ -1006,6 +1006,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>Аванс30Проц</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="РаспределитьПоКварталам" id="2">
 			<Title>
@@ -1021,6 +1022,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>РаспределитьПоКварталам</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="РаспределитьПоМесяцам" id="3">
 			<Title>
@@ -1036,6 +1038,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>РаспределитьПоМесяцам</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ЗаполнитьЗадачами" id="4">
 			<Title>
@@ -1051,6 +1054,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ЗаполнитьЗадачами</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="УстановитьПроект" id="5">
 			<Title>
@@ -1066,6 +1070,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>УстановитьПроект</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="РаспределитьСуммуПоЗадачам" id="6">
 			<Title>
@@ -1081,6 +1086,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>РаспределитьСуммуПоЗадачам</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="РасчитатьСумму" id="7">
 			<Title>
@@ -1096,6 +1102,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>РасчитатьСумму</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ОтгрузкаМесяцы" id="8">
 			<Title>
@@ -1111,6 +1118,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ОтгрузМесяцы</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ОтгрузкаКварталы" id="9">
 			<Title>
@@ -1126,6 +1134,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ОтгрузКварталы</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="РеализацииАванс30Проц" id="10">
 			<Title>
@@ -1141,6 +1150,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ОтгрузАванс30Проц</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ПоГрафикуРеализации" id="11">
 			<Title>
@@ -1156,6 +1166,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ПоГрафикуРеализации</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ОтгрузкаДоговор" id="12">
 			<Title>
@@ -1171,6 +1182,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ОтгрузкаДоговор</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ОплатаДоговор" id="13">
 			<Title>
@@ -1186,6 +1198,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ОплатаДоговор</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 	</Commands>
 </Form>

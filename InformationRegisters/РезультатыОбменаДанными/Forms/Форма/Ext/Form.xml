@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
 	<Title>
 		<v8:item>
 			<v8:lang>ru</v8:lang>
@@ -8,7 +8,6 @@
 	</Title>
 	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
 	<AutoTitle>false</AutoTitle>
-	<VerticalScroll>useIfNecessary</VerticalScroll>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<Autofill>false</Autofill>
 	</AutoCommandBar>
@@ -23,16 +22,9 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Группа отборов</v8:content>
+					<v8:content>Отборов</v8:content>
 				</v8:item>
 			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Группа отборов</v8:content>
-				</v8:item>
-			</ToolTip>
-			<HorizontalStretch>true</HorizontalStretch>
 			<Group>Horizontal</Group>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
@@ -97,12 +89,6 @@
 					<v8:content>Результаты обмена данными</v8:content>
 				</v8:item>
 			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Результаты обмена данными</v8:content>
-				</v8:item>
-			</ToolTip>
 			<ExtendedTooltip name="РезультатыОбменаДаннымиExtendedTooltip" id="368"/>
 			<Events>
 				<Event name="OnCurrentPageChange">РезультатыОбменаДаннымиПриСменеСтраницы</Event>
@@ -115,12 +101,6 @@
 							<v8:content>Непроведенные документы</v8:content>
 						</v8:item>
 					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Страница непроведенные документы</v8:content>
-						</v8:item>
-					</ToolTip>
 					<Picture>
 						<xr:Ref>StdPicture.Document</xr:Ref>
 						<xr:LoadTransparent>true</xr:LoadTransparent>
@@ -128,7 +108,7 @@
 					<ExtendedTooltip name="СтраницаНепроведенныеДокументыExtendedTooltip" id="369"/>
 					<ChildItems>
 						<LabelDecoration name="ДекорацияДокументы" id="57">
-							<Height>2</Height>
+							<AutoMaxWidth>false</AutoMaxWidth>
 							<TextColor>style:ПоясняющийТекст</TextColor>
 							<Title formatted="false">
 								<v8:item>
@@ -145,9 +125,12 @@
 							<RowSelectionMode>Row</RowSelectionMode>
 							<UseAlternationRowColor>true</UseAlternationRowColor>
 							<DataPath>НепроведенныеДокументы</DataPath>
-							<SearchStringLocation>None</SearchStringLocation>
-							<ViewStatusLocation>None</ViewStatusLocation>
-							<SearchControlLocation>None</SearchControlLocation>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Непроведенные документы</v8:content>
+								</v8:item>
+							</Title>
 							<AutoRefresh>false</AutoRefresh>
 							<AutoRefreshPeriod>60</AutoRefreshPeriod>
 							<Period>
@@ -186,12 +169,6 @@
 												<v8:content>Непроведенные документы контекстное меню группа игнорирования</v8:content>
 											</v8:item>
 										</Title>
-										<ToolTip>
-											<v8:item>
-												<v8:lang>ru</v8:lang>
-												<v8:content>Непроведенные документы контекстное меню группа игнорирования</v8:content>
-											</v8:item>
-										</ToolTip>
 										<ExtendedTooltip name="НепроведенныеДокументыКонтекстноеМенюГруппаИгнорированияExtendedTooltip" id="374"/>
 										<ChildItems>
 											<Button name="НепроведенныеДокументыКонтекстноеМенюИгнорироватьДокумент" id="65">
@@ -236,15 +213,9 @@
 										<Title>
 											<v8:item>
 												<v8:lang>ru</v8:lang>
-												<v8:content>Группа игнорирования документов</v8:content>
+												<v8:content>Игнорирования документов</v8:content>
 											</v8:item>
 										</Title>
-										<ToolTip>
-											<v8:item>
-												<v8:lang>ru</v8:lang>
-												<v8:content>Группа игнорирования документов</v8:content>
-											</v8:item>
-										</ToolTip>
 										<ExtendedTooltip name="ГруппаИгнорированияДокументовExtendedTooltip" id="381"/>
 										<ChildItems>
 											<Button name="НепроведенныеДокументыИгнорироватьДокумент" id="21">
@@ -335,6 +306,20 @@
 								<Event name="BeforeRowChange">НепроведенныеДокументыПередНачаломИзменения</Event>
 							</Events>
 							<ChildItems>
+								<LabelField name="НепроведенныеДокументыСсылка" id="255">
+									<DataPath>НепроведенныеДокументы.Ссылка</DataPath>
+									<UserVisible>
+										<xr:Common>false</xr:Common>
+									</UserVisible>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Ссылка на документ</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ContextMenu name="НепроведенныеДокументыСсылкаКонтекстноеМеню" id="256"/>
+									<ExtendedTooltip name="НепроведенныеДокументыСсылкаExtendedTooltip" id="396"/>
+								</LabelField>
 								<ColumnGroup name="НепроведенныеДокументыГруппаКартинки" id="258">
 									<Title>
 										<v8:item>
@@ -342,18 +327,19 @@
 											<v8:content>Непроведенные документы группа картинки</v8:content>
 										</v8:item>
 									</Title>
-									<ToolTip>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Непроведенные документы группа картинки</v8:content>
-										</v8:item>
-									</ToolTip>
 									<Group>InCell</Group>
 									<ExtendedTooltip name="НепроведенныеДокументыГруппаКартинкиExtendedTooltip" id="393"/>
 									<ChildItems>
 										<PictureField name="НепроведенныеДокументыПометкаУдаления" id="259">
 											<DataPath>НепроведенныеДокументы.ПометкаУдаления</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Пометка удаления</v8:content>
+												</v8:item>
+											</Title>
 											<TitleLocation>None</TitleLocation>
+											<Width>9</Width>
 											<ValuesPicture>
 												<xr:Ref>CommonPicture.СтатусыДокумента</xr:Ref>
 												<xr:LoadTransparent>false</xr:LoadTransparent>
@@ -380,20 +366,6 @@
 										</LabelField>
 									</ChildItems>
 								</ColumnGroup>
-								<LabelField name="НепроведенныеДокументыСсылка" id="255">
-									<DataPath>НепроведенныеДокументы.Ссылка</DataPath>
-									<UserVisible>
-										<xr:Common>false</xr:Common>
-									</UserVisible>
-									<ToolTip>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Ссылка на документ</v8:content>
-										</v8:item>
-									</ToolTip>
-									<ContextMenu name="НепроведенныеДокументыСсылкаКонтекстноеМеню" id="256"/>
-									<ExtendedTooltip name="НепроведенныеДокументыСсылкаExtendedTooltip" id="396"/>
-								</LabelField>
 								<LabelField name="НепроведенныеДокументыНомерДокумента" id="251">
 									<DataPath>НепроведенныеДокументы.НомерДокумента</DataPath>
 									<Title>
@@ -408,17 +380,25 @@
 											<v8:content>Номер документа</v8:content>
 										</v8:item>
 									</ToolTip>
+									<Width>14</Width>
 									<ContextMenu name="НепроведенныеДокументыНомерДокументаКонтекстноеМеню" id="252"/>
 									<ExtendedTooltip name="НепроведенныеДокументыНомерДокументаExtendedTooltip" id="397"/>
 								</LabelField>
 								<LabelField name="НепроведенныеДокументыДатаДокумента" id="253">
 									<DataPath>НепроведенныеДокументы.ДатаДокумента</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дата</v8:content>
+										</v8:item>
+									</Title>
 									<ToolTip>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
 											<v8:content>Дата документа</v8:content>
 										</v8:item>
 									</ToolTip>
+									<Width>9</Width>
 									<ContextMenu name="НепроведенныеДокументыДатаДокументаКонтекстноеМеню" id="254"/>
 									<ExtendedTooltip name="НепроведенныеДокументыДатаДокументаExtendedTooltip" id="398"/>
 								</LabelField>
@@ -430,6 +410,7 @@
 											<v8:content>Причина, по которой не провелся документ</v8:content>
 										</v8:item>
 									</ToolTip>
+									<Width>10</Width>
 									<ContextMenu name="НепроведенныеДокументыПричинаКонтекстноеМеню" id="16"/>
 									<ExtendedTooltip name="НепроведенныеДокументыПричинаExtendedTooltip" id="399"/>
 								</LabelField>
@@ -438,7 +419,7 @@
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>Дата</v8:content>
+											<v8:content>Дата получения</v8:content>
 										</v8:item>
 									</Title>
 									<ToolTip>
@@ -447,6 +428,7 @@
 											<v8:content>Дата получения непроведенного документа</v8:content>
 										</v8:item>
 									</ToolTip>
+									<Width>15</Width>
 									<ContextMenu name="НепроведенныеДокументыДатаВозникновенияКонтекстноеМеню" id="14"/>
 									<ExtendedTooltip name="НепроведенныеДокументыДатаВозникновенияExtendedTooltip" id="400"/>
 								</LabelField>
@@ -464,6 +446,7 @@
 											<v8:content>Информационная база или приложение из которого получен документ</v8:content>
 										</v8:item>
 									</ToolTip>
+									<Width>15</Width>
 									<ContextMenu name="НепроведенныеДокументыУзелИнформационнойБазыКонтекстноеМеню" id="12"/>
 									<ExtendedTooltip name="НепроведенныеДокументыУзелИнформационнойБазыExtendedTooltip" id="401"/>
 								</LabelField>
@@ -478,6 +461,7 @@
 									<v8:content>Документ не удалось провести автоматически по причине</v8:content>
 								</v8:item>
 							</Title>
+							<AutoMaxWidth>false</AutoMaxWidth>
 							<Height>4</Height>
 							<MultiLine>true</MultiLine>
 							<ContextMenu name="НепроведенныеДокументыПричинаПодробноКонтекстноеМеню" id="171"/>
@@ -492,12 +476,6 @@
 							<v8:content>Незаполненные реквизиты</v8:content>
 						</v8:item>
 					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Страница незаполненные реквизиты</v8:content>
-						</v8:item>
-					</ToolTip>
 					<Picture>
 						<xr:Ref>StdPicture.Catalog</xr:Ref>
 						<xr:LoadTransparent>true</xr:LoadTransparent>
@@ -505,7 +483,7 @@
 					<ExtendedTooltip name="СтраницаНезаполненныеРеквизитыExtendedTooltip" id="403"/>
 					<ChildItems>
 						<LabelDecoration name="ДекорацияОбъекты" id="59">
-							<Height>2</Height>
+							<AutoMaxWidth>false</AutoMaxWidth>
 							<TextColor>style:ПоясняющийТекст</TextColor>
 							<Title formatted="false">
 								<v8:item>
@@ -523,9 +501,12 @@
 							<UseAlternationRowColor>true</UseAlternationRowColor>
 							<EnableStartDrag>true</EnableStartDrag>
 							<DataPath>НезаполненныеРеквизиты</DataPath>
-							<SearchStringLocation>None</SearchStringLocation>
-							<ViewStatusLocation>None</ViewStatusLocation>
-							<SearchControlLocation>None</SearchControlLocation>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Незаполненные реквизиты</v8:content>
+								</v8:item>
+							</Title>
 							<AutoRefresh>false</AutoRefresh>
 							<AutoRefreshPeriod>60</AutoRefreshPeriod>
 							<Period>
@@ -559,12 +540,6 @@
 												<v8:content>Незаполненные реквизиты контекстное меню группа игнорирования</v8:content>
 											</v8:item>
 										</Title>
-										<ToolTip>
-											<v8:item>
-												<v8:lang>ru</v8:lang>
-												<v8:content>Незаполненные реквизиты контекстное меню группа игнорирования</v8:content>
-											</v8:item>
-										</ToolTip>
 										<ExtendedTooltip name="НезаполненныеРеквизитыКонтекстноеМенюГруппаИгнорированияExtendedTooltip" id="407"/>
 										<ChildItems>
 											<Button name="НезаполненныеРеквизитыКонтекстноеМенюИгнорироватьОбъект" id="97">
@@ -604,15 +579,9 @@
 										<Title>
 											<v8:item>
 												<v8:lang>ru</v8:lang>
-												<v8:content>Группа игнорирования объектов</v8:content>
+												<v8:content>Игнорирования объектов</v8:content>
 											</v8:item>
 										</Title>
-										<ToolTip>
-											<v8:item>
-												<v8:lang>ru</v8:lang>
-												<v8:content>Группа игнорирования объектов</v8:content>
-											</v8:item>
-										</ToolTip>
 										<ExtendedTooltip name="ГруппаИгнорированияОбъектовExtendedTooltip" id="413"/>
 										<ChildItems>
 											<Button name="НезаполненныеРеквизитыИгнорироватьОбъект" id="89">
@@ -710,17 +679,17 @@
 											<v8:content>Незаполненные реквизиты группа картинки</v8:content>
 										</v8:item>
 									</Title>
-									<ToolTip>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Незаполненные реквизиты группа картинки</v8:content>
-										</v8:item>
-									</ToolTip>
 									<Group>InCell</Group>
 									<ExtendedTooltip name="НезаполненныеРеквизитыГруппаКартинкиExtendedTooltip" id="425"/>
 									<ChildItems>
 										<PictureField name="НезаполненныеРеквизитыПометкаУдаления" id="262">
 											<DataPath>НезаполненныеРеквизиты.ПометкаУдаления</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Пометка удаления</v8:content>
+												</v8:item>
+											</Title>
 											<TitleLocation>None</TitleLocation>
 											<ToolTip>
 												<v8:item>
@@ -821,6 +790,7 @@
 									<v8:content>Данные не удалось записать по причине</v8:content>
 								</v8:item>
 							</Title>
+							<AutoMaxWidth>false</AutoMaxWidth>
 							<Height>4</Height>
 							<MultiLine>true</MultiLine>
 							<ContextMenu name="НезаполненныеРеквизитыПричинаПодробноКонтекстноеМеню" id="175"/>
@@ -835,12 +805,6 @@
 							<v8:content>Конфликты</v8:content>
 						</v8:item>
 					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Страница коллизии</v8:content>
-						</v8:item>
-					</ToolTip>
 					<Picture>
 						<xr:Ref>CommonPicture.СинхронизацияДанныхКоллизия</xr:Ref>
 						<xr:LoadTransparent>false</xr:LoadTransparent>
@@ -848,7 +812,7 @@
 					<ExtendedTooltip name="СтраницаКоллизииExtendedTooltip" id="433"/>
 					<ChildItems>
 						<LabelDecoration name="ДекорацияКоллизии" id="176">
-							<Height>2</Height>
+							<AutoMaxWidth>false</AutoMaxWidth>
 							<TextColor>style:ПоясняющийТекст</TextColor>
 							<Title formatted="false">
 								<v8:item>
@@ -866,9 +830,12 @@
 							<UseAlternationRowColor>true</UseAlternationRowColor>
 							<EnableStartDrag>true</EnableStartDrag>
 							<DataPath>Коллизии</DataPath>
-							<SearchStringLocation>None</SearchStringLocation>
-							<ViewStatusLocation>None</ViewStatusLocation>
-							<SearchControlLocation>None</SearchControlLocation>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Коллизии</v8:content>
+								</v8:item>
+							</Title>
 							<AutoRefresh>false</AutoRefresh>
 							<AutoRefreshPeriod>60</AutoRefreshPeriod>
 							<Period>
@@ -905,14 +872,14 @@
 										<CommandName>Form.Command.Изменить</CommandName>
 										<ExtendedTooltip name="КоллизииКонтекстноеМенюИзменитьExtendedTooltip" id="438"/>
 									</Button>
-									<ButtonGroup name="КоллизииКонтекстноеМенюГруппаРазедлитель" id="349">
+									<ButtonGroup name="КоллизииКонтекстноеМенюГруппаРазделитель" id="349">
 										<Title>
 											<v8:item>
 												<v8:lang>ru</v8:lang>
-												<v8:content>Коллизии контекстное меню группа разедлитель</v8:content>
+												<v8:content>Коллизии контекстное меню группа разделитель</v8:content>
 											</v8:item>
 										</Title>
-										<ExtendedTooltip name="КоллизииКонтекстноеМенюГруппаРазедлительExtendedTooltip" id="439"/>
+										<ExtendedTooltip name="КоллизииКонтекстноеМенюГруппаРазделительРасширеннаяПодсказка" id="439"/>
 										<ChildItems>
 											<Button name="КоллизииКонтекстноеМенюНеИгнорироватьКонфликт" id="317">
 												<Type>CommandBarButton</Type>
@@ -967,12 +934,6 @@
 												<v8:content>Коллизии группа игнорирования</v8:content>
 											</v8:item>
 										</Title>
-										<ToolTip>
-											<v8:item>
-												<v8:lang>ru</v8:lang>
-												<v8:content>Коллизии группа игнорирования</v8:content>
-											</v8:item>
-										</ToolTip>
 										<ExtendedTooltip name="КоллизииГруппаИгнорированияExtendedTooltip" id="446"/>
 										<ChildItems>
 											<Button name="КоллизииИгнорироватьКонфликт" id="272">
@@ -1017,12 +978,6 @@
 												<v8:content>Коллизии группа служебные</v8:content>
 											</v8:item>
 										</Title>
-										<ToolTip>
-											<v8:item>
-												<v8:lang>ru</v8:lang>
-												<v8:content>Коллизии группа служебные</v8:content>
-											</v8:item>
-										</ToolTip>
 										<ExtendedTooltip name="КоллизииГруппаСлужебныеExtendedTooltip" id="451"/>
 										<ChildItems>
 											<Button name="ФормаОбновить" id="28">
@@ -1194,6 +1149,7 @@
 							<DataPath>ПричинаКонфликта</DataPath>
 							<ReadOnly>true</ReadOnly>
 							<TitleLocation>Top</TitleLocation>
+							<AutoMaxWidth>false</AutoMaxWidth>
 							<Height>4</Height>
 							<MultiLine>true</MultiLine>
 							<ContextMenu name="ПричинаКонфликтаКонтекстноеМеню" id="354"/>
@@ -1208,12 +1164,6 @@
 							<v8:content>Непринятые по дате запрета</v8:content>
 						</v8:item>
 					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Страница непринятые по дате запрета</v8:content>
-						</v8:item>
-					</ToolTip>
 					<Picture>
 						<xr:Ref>CommonPicture.СинхронизацияДанныхНепринятыеПоДате</xr:Ref>
 						<xr:LoadTransparent>false</xr:LoadTransparent>
@@ -1221,13 +1171,12 @@
 					<ExtendedTooltip name="СтраницаНепринятыеПоДатеЗапретаExtendedTooltip" id="466"/>
 					<ChildItems>
 						<LabelDecoration name="ДекорацияНепринятые" id="178">
-							<Height>2</Height>
+							<AutoMaxWidth>false</AutoMaxWidth>
 							<TextColor>style:ПоясняющийТекст</TextColor>
 							<Title formatted="false">
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>При синхронизации были получены данные, которые были отклонены из-за установленного запрета на загрузку данных, в результате чего появилась
-непринятая версия элемента справочника (документа). Для того чтобы принять версию несмотря на запрет используйте команду "Принять версию".</v8:content>
+									<v8:content>При синхронизации были получены данные, которые были отклонены из-за установленного запрета на загрузку данных, в результате чего появилась непринятая версия документа. Для того чтобы принять версию несмотря на запрет используйте команду "Принять версию".</v8:content>
 								</v8:item>
 							</Title>
 							<ContextMenu name="ДекорацияНепринятыеКонтекстноеМеню" id="179"/>
@@ -1239,9 +1188,13 @@
 							<UseAlternationRowColor>true</UseAlternationRowColor>
 							<EnableStartDrag>true</EnableStartDrag>
 							<DataPath>НепринятыеПоДате</DataPath>
-							<SearchStringLocation>None</SearchStringLocation>
-							<ViewStatusLocation>None</ViewStatusLocation>
-							<SearchControlLocation>None</SearchControlLocation>
+							<RowPictureDataPath>НепринятыеПоДате.DefaultPicture</RowPictureDataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Непринятые по дате</v8:content>
+								</v8:item>
+							</Title>
 							<AutoRefresh>false</AutoRefresh>
 							<AutoRefreshPeriod>60</AutoRefreshPeriod>
 							<Period>
@@ -1263,10 +1216,10 @@
 										<CommandName>Form.Command.ПоказатьОтличияНепринятые</CommandName>
 										<ExtendedTooltip name="НепринятыеПоДатеКонтекстноеМенюСравнитьСДаннымиВБазеExtendedTooltip" id="468"/>
 									</Button>
-									<Button name="НепринятыеПоДатеКонтекстноеМенюПринятьВресию" id="323">
+									<Button name="НепринятыеПоДатеКонтекстноеМенюПринятьВерсию" id="323">
 										<Type>CommandBarButton</Type>
 										<CommandName>Form.Command.ПринятьВерсиюНепринятые</CommandName>
-										<ExtendedTooltip name="НепринятыеПоДатеКонтекстноеМенюПринятьВресиюExtendedTooltip" id="469"/>
+										<ExtendedTooltip name="НепринятыеПоДатеКонтекстноеМенюПринятьВерсиюРасширеннаяПодсказка" id="469"/>
 									</Button>
 									<Button name="НепринятыеПоДатеКонтекстноеМенюИзменить" id="279">
 										<Type>CommandBarButton</Type>
@@ -1290,12 +1243,6 @@
 												<v8:content>Непринятые по дате контекстное меню группа игнорирования</v8:content>
 											</v8:item>
 										</Title>
-										<ToolTip>
-											<v8:item>
-												<v8:lang>ru</v8:lang>
-												<v8:content>Непринятые по дате контекстное меню группа игнорирования</v8:content>
-											</v8:item>
-										</ToolTip>
 										<ExtendedTooltip name="НепринятыеПоДатеКонтекстноеМенюГруппаИгнорированияExtendedTooltip" id="473"/>
 										<ChildItems>
 											<Button name="НепринятыеПоДатеКонтекстноеМенюИгнорироватьНепринятый" id="319">
@@ -1350,12 +1297,6 @@
 												<v8:content>Непринятые по дате группа игнорирования</v8:content>
 											</v8:item>
 										</Title>
-										<ToolTip>
-											<v8:item>
-												<v8:lang>ru</v8:lang>
-												<v8:content>Непринятые по дате группа игнорирования</v8:content>
-											</v8:item>
-										</ToolTip>
 										<ExtendedTooltip name="НепринятыеПоДатеГруппаИгнорированияExtendedTooltip" id="481"/>
 										<ChildItems>
 											<Button name="НепринятыеПоДатеИгнорироватьНепринятый" id="311">
@@ -1384,12 +1325,6 @@
 												<v8:content>Непринятые по дате группа служебные</v8:content>
 											</v8:item>
 										</Title>
-										<ToolTip>
-											<v8:item>
-												<v8:lang>ru</v8:lang>
-												<v8:content>Непринятые по дате группа служебные</v8:content>
-											</v8:item>
-										</ToolTip>
 										<ExtendedTooltip name="НепринятыеПоДатеГруппаСлужебныеExtendedTooltip" id="485"/>
 										<ChildItems>
 											<Button name="НепринятыеПоДатеОбновить" id="359">
@@ -1465,7 +1400,7 @@
 								<LabelField name="НепринятыеПоДатеДата" id="334">
 									<DataPath>НепринятыеПоДате.Дата</DataPath>
 									<ContextMenu name="НепринятыеПоДатеДатаКонтекстноеМеню" id="335"/>
-									<ExtendedTooltip name="НепринятыеПоДатеДатаExtendedTooltip" id="494"/>
+									<ExtendedTooltip name="НепринятыеПоДатеДатаРасширеннаяПодсказка" id="494"/>
 								</LabelField>
 								<LabelField name="НепринятыеПоДатеСсылка" id="220">
 									<DataPath>НепринятыеПоДате.Ссылка</DataPath>
@@ -1529,6 +1464,7 @@
 									<v8:content>Данные были отклонены из-за запрета</v8:content>
 								</v8:item>
 							</Title>
+							<AutoMaxWidth>false</AutoMaxWidth>
 							<Height>4</Height>
 							<MultiLine>true</MultiLine>
 							<ContextMenu name="НепринятыеПоДатеПричинаЗапретаПодробноКонтекстноеМеню" id="226"/>
@@ -1551,7 +1487,6 @@
 				<v8:Type>cfg:DynamicList</v8:Type>
 			</Type>
 			<UseAlways>
-				<Field>~НепроведенныеДокументы.ТипПроблемы</Field>
 				<Field>НепроведенныеДокументы.ДатаВозникновения</Field>
 				<Field>НепроведенныеДокументы.ДатаДокумента</Field>
 				<Field>НепроведенныеДокументы.НомерДокумента</Field>
@@ -1594,22 +1529,6 @@
 						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
 					</dcsset:order>
 					<dcsset:conditionalAppearance>
-						<dcsset:item>
-							<dcsset:selection/>
-							<dcsset:filter>
-								<dcsset:item xsi:type="dcsset:FilterItemComparison">
-									<dcsset:left xsi:type="dcscor:Field">Пропущена</dcsset:left>
-									<dcsset:comparisonType>Equal</dcsset:comparisonType>
-									<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
-								</dcsset:item>
-							</dcsset:filter>
-							<dcsset:appearance>
-								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-									<dcscor:parameter>ЦветТекста</dcscor:parameter>
-									<dcscor:value xsi:type="v8ui:Color">style:НедоступныеДанныеЦвет</dcscor:value>
-								</dcscor:item>
-							</dcsset:appearance>
-						</dcsset:item>
 						<dcsset:viewMode>Normal</dcsset:viewMode>
 						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
 					</dcsset:conditionalAppearance>
@@ -1675,7 +1594,6 @@
 				<v8:Type>cfg:DynamicList</v8:Type>
 			</Type>
 			<UseAlways>
-				<Field>~НезаполненныеРеквизиты.ТипПроблемы</Field>
 				<Field>НезаполненныеРеквизиты.ДатаВозникновения</Field>
 				<Field>НезаполненныеРеквизиты.ПометкаУдаления</Field>
 				<Field>НезаполненныеРеквизиты.Причина</Field>
@@ -1714,22 +1632,6 @@
 						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
 					</dcsset:order>
 					<dcsset:conditionalAppearance>
-						<dcsset:item>
-							<dcsset:selection/>
-							<dcsset:filter>
-								<dcsset:item xsi:type="dcsset:FilterItemComparison">
-									<dcsset:left xsi:type="dcscor:Field">Пропущена</dcsset:left>
-									<dcsset:comparisonType>Equal</dcsset:comparisonType>
-									<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
-								</dcsset:item>
-							</dcsset:filter>
-							<dcsset:appearance>
-								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-									<dcscor:parameter>ЦветТекста</dcscor:parameter>
-									<dcscor:value xsi:type="v8ui:Color">style:НедоступныеДанныеЦвет</dcscor:value>
-								</dcscor:item>
-							</dcsset:appearance>
-						</dcsset:item>
 						<dcsset:viewMode>Normal</dcsset:viewMode>
 						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
 					</dcsset:conditionalAppearance>
@@ -1749,19 +1651,6 @@
 				<v8:Type>cfg:DynamicList</v8:Type>
 			</Type>
 			<UseAlways>
-				<Field>~Коллизии.АвторВерсии</Field>
-				<Field>~Коллизии.АвторТекущейВерсии</Field>
-				<Field>~Коллизии.АвторЭтойВерсии</Field>
-				<Field>~Коллизии.БылЗагружен</Field>
-				<Field>~Коллизии.ВерсияПропущена</Field>
-				<Field>~Коллизии.ДатаВерсии</Field>
-				<Field>~Коллизии.ДатаДругойВерсии</Field>
-				<Field>~Коллизии.ДатаТекущейВерсии</Field>
-				<Field>~Коллизии.ДатаЭтойВерсии</Field>
-				<Field>~Коллизии.НомерВерсии</Field>
-				<Field>~Коллизии.НомерТекущейВерсии</Field>
-				<Field>~Коллизии.Объект</Field>
-				<Field>~Коллизии.ЭтаВерсияПринята</Field>
 				<Field>Коллизии.АвторДругойВерсии</Field>
 				<Field>Коллизии.ВерсияПроигнорирована</Field>
 				<Field>Коллизии.Дата</Field>
@@ -1773,29 +1662,16 @@
 			</UseAlways>
 			<Settings xsi:type="DynamicList">
 				<ManualQuery>true</ManualQuery>
-				<DynamicDataRead>true</DynamicDataRead>
-				<QueryText>ВЫБРАТЬ РАЗРЕШЕННЫЕ
-	ВерсииДругойПрограммы.ДатаВерсии КАК Дата,
-	ВерсииДругойПрограммы.Объект КАК Ссылка,
-	ТИПЗНАЧЕНИЯ(ВерсииДругойПрограммы.Объект) КАК ТипСтрокой,
-	ВерсииЭтойПрограммы.НомерВерсии КАК НомерЭтойВерсии,
-	ВерсииДругойПрограммы.НомерВерсии КАК НомерДругойВерсии,
-	ВерсииДругойПрограммы.АвторВерсии КАК АвторДругойВерсии,
-	ВЫБОР
-		КОГДА ВерсииДругойПрограммы.ТипВерсииОбъекта = ЗНАЧЕНИЕ(Перечисление.ТипыВерсийОбъекта.ПринятыеДанныеПоКоллизии)
-			ТОГДА ИСТИНА
-		ИНАЧЕ ЛОЖЬ
-	КОНЕЦ КАК ДругаяВерсияПринята,
-	ВерсииДругойПрограммы.ВерсияПроигнорирована КАК ВерсияПроигнорирована
-ИЗ
-	РегистрСведений.ВерсииОбъектов КАК ВерсииДругойПрограммы
-		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ВерсииОбъектов КАК ВерсииЭтойПрограммы
-		ПО ВерсииДругойПрограммы.Объект = ВерсииЭтойПрограммы.Объект
-			И (ВерсииДругойПрограммы.НомерВерсии = ВерсииЭтойПрограммы.НомерВерсии + 1)
-ГДЕ
-	НЕ(ВерсииДругойПрограммы.ТипВерсииОбъекта &lt;&gt; ЗНАЧЕНИЕ(Перечисление.ТипыВерсийОбъекта.ПринятыеДанныеПоКоллизии)
-				И ВерсииДругойПрограммы.ТипВерсииОбъекта &lt;&gt; ЗНАЧЕНИЕ(Перечисление.ТипыВерсийОбъекта.НеПринятыеДанныеПоКоллизии))</QueryText>
-				<MainTable>InformationRegister.ВерсииОбъектов</MainTable>
+				<DynamicDataRead>false</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	NULL КАК Дата,
+	NULL КАК Ссылка,
+	NULL КАК ТипСтрокой,
+	NULL КАК НомерЭтойВерсии,
+	NULL КАК НомерДругойВерсии,
+	NULL КАК АвторДругойВерсии,
+	NULL КАК ДругаяВерсияПринята,
+	NULL КАК ВерсияПроигнорирована</QueryText>
 				<ListSettings>
 					<dcsset:filter>
 						<dcsset:viewMode>Normal</dcsset:viewMode>
@@ -1810,69 +1686,6 @@
 						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
 					</dcsset:order>
 					<dcsset:conditionalAppearance>
-						<dcsset:item>
-							<dcsset:selection/>
-							<dcsset:filter>
-								<dcsset:item xsi:type="dcsset:FilterItemComparison">
-									<dcsset:left xsi:type="dcscor:Field">ВерсияПроигнорирована</dcsset:left>
-									<dcsset:comparisonType>Equal</dcsset:comparisonType>
-									<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
-								</dcsset:item>
-							</dcsset:filter>
-							<dcsset:appearance>
-								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-									<dcscor:parameter>ЦветТекста</dcscor:parameter>
-									<dcscor:value xsi:type="v8ui:Color">style:НедоступныеДанныеЦвет</dcscor:value>
-								</dcscor:item>
-							</dcsset:appearance>
-						</dcsset:item>
-						<dcsset:item>
-							<dcsset:selection>
-								<dcsset:item>
-									<dcsset:field>ДругаяВерсияПринята</dcsset:field>
-								</dcsset:item>
-							</dcsset:selection>
-							<dcsset:filter>
-								<dcsset:item xsi:type="dcsset:FilterItemGroup">
-									<dcsset:groupType>AndGroup</dcsset:groupType>
-									<dcsset:item xsi:type="dcsset:FilterItemComparison">
-										<dcsset:left xsi:type="dcscor:Field">ДругаяВерсияПринята</dcsset:left>
-										<dcsset:comparisonType>Equal</dcsset:comparisonType>
-										<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
-									</dcsset:item>
-									<dcsset:item xsi:type="dcsset:FilterItemComparison">
-										<dcsset:left xsi:type="dcscor:Field">ВерсияПроигнорирована</dcsset:left>
-										<dcsset:comparisonType>Equal</dcsset:comparisonType>
-										<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
-									</dcsset:item>
-								</dcsset:item>
-							</dcsset:filter>
-							<dcsset:appearance>
-								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-									<dcscor:parameter>ЦветТекста</dcscor:parameter>
-									<dcscor:value xsi:type="v8ui:Color">style:НепринятаяВерсия</dcscor:value>
-								</dcscor:item>
-							</dcsset:appearance>
-						</dcsset:item>
-						<dcsset:item>
-							<dcsset:selection>
-								<dcsset:item>
-									<dcsset:field>ДругаяВерсияПринята</dcsset:field>
-								</dcsset:item>
-							</dcsset:selection>
-							<dcsset:filter>
-								<dcsset:item xsi:type="dcsset:FilterItemComparison">
-									<dcsset:left xsi:type="dcscor:Field">НомерДругойВерсии</dcsset:left>
-									<dcsset:comparisonType>NotFilled</dcsset:comparisonType>
-								</dcsset:item>
-							</dcsset:filter>
-							<dcsset:appearance>
-								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-									<dcscor:parameter>Текст</dcscor:parameter>
-									<dcscor:value xsi:type="xs:string">Удалена</dcscor:value>
-								</dcscor:item>
-							</dcsset:appearance>
-						</dcsset:item>
 						<dcsset:viewMode>Normal</dcsset:viewMode>
 						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
 					</dcsset:conditionalAppearance>
@@ -1892,58 +1705,28 @@
 				<v8:Type>cfg:DynamicList</v8:Type>
 			</Type>
 			<UseAlways>
-				<Field>~НепринятыеПоДате.АвторВерсии</Field>
-				<Field>~НепринятыеПоДате.АвторНепринятойВерсии</Field>
-				<Field>~НепринятыеПоДате.АвторТекущейВерсии</Field>
-				<Field>~НепринятыеПоДате.АвторЭтойВерсии</Field>
-				<Field>~НепринятыеПоДате.ВерсияПропущена</Field>
-				<Field>~НепринятыеПоДате.ДатаВерсии</Field>
-				<Field>~НепринятыеПоДате.ДатаДругойВерсии</Field>
-				<Field>~НепринятыеПоДате.ДатаНепринятойВерсии</Field>
-				<Field>~НепринятыеПоДате.ДатаТекущейВерсии</Field>
-				<Field>~НепринятыеПоДате.ДатаТекущйВерсии</Field>
-				<Field>~НепринятыеПоДате.ДатаЭтойВерсии</Field>
-				<Field>~НепринятыеПоДате.ЕстьВБазе</Field>
-				<Field>~НепринятыеПоДате.Комментарий</Field>
-				<Field>~НепринятыеПоДате.НомерВерсии</Field>
-				<Field>~НепринятыеПоДате.НомерНепринятойВерсии</Field>
-				<Field>~НепринятыеПоДате.НомерТекущейВерсии</Field>
-				<Field>~НепринятыеПоДате.Объект</Field>
-				<Field>~НепринятыеПоДате.ТипВерсииОбъекта</Field>
+				<Field>~НепринятыеПоДате.ДругаяВерсияПринята</Field>
 				<Field>НепринятыеПоДате.АвторДругойВерсии</Field>
+				<Field>НепринятыеПоДате.ВерсияПроигнорирована</Field>
 				<Field>НепринятыеПоДате.НовыйОбъект</Field>
 				<Field>НепринятыеПоДате.НомерДругойВерсии</Field>
 				<Field>НепринятыеПоДате.НомерЭтойВерсии</Field>
-				<Field>НепринятыеПоДате.ПричинаЗапрета</Field>
 				<Field>НепринятыеПоДате.Ссылка</Field>
 				<Field>НепринятыеПоДате.ТипСтрокой</Field>
 			</UseAlways>
 			<Settings xsi:type="DynamicList">
 				<ManualQuery>true</ManualQuery>
-				<DynamicDataRead>true</DynamicDataRead>
-				<QueryText>ВЫБРАТЬ РАЗРЕШЕННЫЕ
-	НепринятаяВерсия.ДатаВерсии КАК Дата,
-	НепринятаяВерсия.Объект КАК Ссылка,
-	НепринятаяВерсия.Комментарий КАК ПричинаЗапрета,
-	ВЫБОР
-		КОГДА НепринятаяВерсия.ТипВерсииОбъекта = ЗНАЧЕНИЕ(Перечисление.ТипыВерсийОбъекта.НепринятыеДанныеПоДатеЗапретаОбъектСуществует)
-			ТОГДА ЛОЖЬ
-		ИНАЧЕ ИСТИНА
-	КОНЕЦ КАК НовыйОбъект,
-	ЕСТЬNULL(НепринятаяВерсия.НомерВерсии, 0) КАК НомерДругойВерсии,
-	НепринятаяВерсия.АвторВерсии КАК АвторДругойВерсии,
-	ЕСТЬNULL(ТекущаяВерсия.НомерВерсии, 0) КАК НомерЭтойВерсии,
-	ТИПЗНАЧЕНИЯ(НепринятаяВерсия.Объект) КАК ТипСтрокой,
-	НепринятаяВерсия.ВерсияПроигнорирована
-ИЗ
-	РегистрСведений.ВерсииОбъектов КАК НепринятаяВерсия
-		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ВерсииОбъектов КАК ТекущаяВерсия
-		ПО НепринятаяВерсия.Объект = ТекущаяВерсия.Объект
-			И (НепринятаяВерсия.НомерВерсии = ТекущаяВерсия.НомерВерсии + 1)
-ГДЕ
-	НЕ(НепринятаяВерсия.ТипВерсииОбъекта &lt;&gt; ЗНАЧЕНИЕ(Перечисление.ТипыВерсийОбъекта.НепринятыеДанныеПоДатеЗапретаОбъектСуществует)
-				И НепринятаяВерсия.ТипВерсииОбъекта &lt;&gt; ЗНАЧЕНИЕ(Перечисление.ТипыВерсийОбъекта.НепринятыеДанныеПоДатеЗапретаОбъектНеСуществует))</QueryText>
-				<MainTable>InformationRegister.ВерсииОбъектов</MainTable>
+				<DynamicDataRead>false</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	NULL КАК Дата,
+	NULL КАК Ссылка,
+	NULL КАК ПричинаЗапрета,
+	NULL КАК НовыйОбъект,
+	NULL КАК НомерДругойВерсии,
+	NULL КАК АвторДругойВерсии,
+	NULL КАК НомерЭтойВерсии,
+	NULL КАК ТипСтрокой,
+	NULL КАК ВерсияПроигнорирована</QueryText>
 				<ListSettings>
 					<dcsset:filter>
 						<dcsset:viewMode>Normal</dcsset:viewMode>
@@ -1958,68 +1741,6 @@
 						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
 					</dcsset:order>
 					<dcsset:conditionalAppearance>
-						<dcsset:item>
-							<dcsset:selection/>
-							<dcsset:filter>
-								<dcsset:item xsi:type="dcsset:FilterItemComparison">
-									<dcsset:left xsi:type="dcscor:Field">ВерсияПроигнорирована</dcsset:left>
-									<dcsset:comparisonType>Equal</dcsset:comparisonType>
-									<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
-								</dcsset:item>
-							</dcsset:filter>
-							<dcsset:appearance>
-								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-									<dcscor:parameter>ЦветТекста</dcscor:parameter>
-									<dcscor:value xsi:type="v8ui:Color">style:НедоступныеДанныеЦвет</dcscor:value>
-								</dcscor:item>
-							</dcsset:appearance>
-						</dcsset:item>
-						<dcsset:item>
-							<dcsset:selection>
-								<dcsset:item>
-									<dcsset:field>Ссылка</dcsset:field>
-								</dcsset:item>
-							</dcsset:selection>
-							<dcsset:filter>
-								<dcsset:item xsi:type="dcsset:FilterItemComparison">
-									<dcsset:left xsi:type="dcscor:Field">НовыйОбъект</dcsset:left>
-									<dcsset:comparisonType>Equal</dcsset:comparisonType>
-									<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
-								</dcsset:item>
-							</dcsset:filter>
-							<dcsset:appearance>
-								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-									<dcscor:parameter>Текст</dcscor:parameter>
-									<dcscor:value xsi:type="xs:string">Отсутствуют</dcscor:value>
-								</dcscor:item>
-							</dcsset:appearance>
-						</dcsset:item>
-						<dcsset:item>
-							<dcsset:selection>
-								<dcsset:item>
-									<dcsset:field>НомерДругойВерсии</dcsset:field>
-								</dcsset:item>
-								<dcsset:item>
-									<dcsset:field>АвторДругойВерсии</dcsset:field>
-								</dcsset:item>
-								<dcsset:item>
-									<dcsset:field>ДатаДругойВерсии</dcsset:field>
-								</dcsset:item>
-							</dcsset:selection>
-							<dcsset:filter>
-								<dcsset:item xsi:type="dcsset:FilterItemComparison">
-									<dcsset:left xsi:type="dcscor:Field">ВерсияПроигнорирована</dcsset:left>
-									<dcsset:comparisonType>Equal</dcsset:comparisonType>
-									<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
-								</dcsset:item>
-							</dcsset:filter>
-							<dcsset:appearance>
-								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-									<dcscor:parameter>ЦветТекста</dcscor:parameter>
-									<dcscor:value xsi:type="v8ui:Color">style:НепринятаяВерсия</dcscor:value>
-								</dcscor:item>
-							</dcsset:appearance>
-						</dcsset:item>
 						<dcsset:viewMode>Normal</dcsset:viewMode>
 						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
 					</dcsset:conditionalAppearance>
@@ -2049,9 +1770,6 @@
 			<Type>
 				<v8:Type>xs:boolean</v8:Type>
 			</Type>
-			<Save>
-				<Field>ПоказыватьПроигнорированныеКонфликты</Field>
-			</Save>
 		</Attribute>
 		<Attribute name="ПоказыватьПроигнорированныеНезаполненные" id="11">
 			<Title>
@@ -2063,9 +1781,6 @@
 			<Type>
 				<v8:Type>xs:boolean</v8:Type>
 			</Type>
-			<Save>
-				<Field>ПоказыватьПроигнорированныеНезаполненные</Field>
-			</Save>
 		</Attribute>
 		<Attribute name="ПоказыватьПроигнорированныеНепринятые" id="12">
 			<Title>
@@ -2077,9 +1792,6 @@
 			<Type>
 				<v8:Type>xs:boolean</v8:Type>
 			</Type>
-			<Save>
-				<Field>ПоказыватьПроигнорированныеНепринятые</Field>
-			</Save>
 		</Attribute>
 		<Attribute name="ПоказыватьПроигнорированныеНепроведенные" id="13">
 			<Title>
@@ -2091,9 +1803,6 @@
 			<Type>
 				<v8:Type>xs:boolean</v8:Type>
 			</Type>
-			<Save>
-				<Field>ПоказыватьПроигнорированныеНепроведенные</Field>
-			</Save>
 		</Attribute>
 		<Attribute name="ПричинаКонфликта" id="2">
 			<Title>
@@ -2144,6 +1853,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ИгнорироватьДокумент</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="НеИгнорироватьДокумент" id="2">
 			<Title>
@@ -2159,6 +1869,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>НеИгнорироватьДокумент</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ИзменитьВыделенныеДокументы" id="5">
 			<Title>
@@ -2175,6 +1886,7 @@
 			</ToolTip>
 			<Action>ИзменитьВыделенныеДокументы</Action>
 			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="Обновить" id="7">
 			<Title>
@@ -2195,6 +1907,7 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>Обновить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ПровестиДокумент" id="8">
 			<Title>
@@ -2215,6 +1928,7 @@
 			</Picture>
 			<Action>ПровестиДокумент</Action>
 			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ИгнорироватьОбъект" id="9">
 			<Title>
@@ -2230,6 +1944,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ИгнорироватьОбъект</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ИзменитьВыделенныеОбъекты" id="11">
 			<Title>
@@ -2246,6 +1961,7 @@
 			</ToolTip>
 			<Action>ИзменитьВыделенныеОбъекты</Action>
 			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="НеИгнорироватьОбъект" id="12">
 			<Title>
@@ -2261,6 +1977,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>НеИгнорироватьОбъект</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ОткрытьВерсиюНепринятые" id="15">
 			<Title>
@@ -2276,6 +1993,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ОткрытьВерсиюНепринятые</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ПоказатьОтличияНепринятые" id="16">
 			<Title>
@@ -2296,6 +2014,7 @@
 			</Picture>
 			<Action>ПоказатьОтличияНепринятые</Action>
 			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ОткрытьВерсиюДоКонфликта" id="19">
 			<Title>
@@ -2311,6 +2030,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ОткрытьВерсиюДоКонфликта</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ПоказатьОтличияКоллизии" id="20">
 			<Title>
@@ -2322,7 +2042,7 @@
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Показать отличия между версиями в этой и в дргой программе</v8:content>
+					<v8:content>Показать отличия между версиями в этой и в другой программе</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Picture>
@@ -2331,6 +2051,7 @@
 			</Picture>
 			<Action>ПоказатьОтличияКоллизии</Action>
 			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="Изменить" id="22">
 			<Title>
@@ -2352,6 +2073,7 @@
 			</Picture>
 			<Action>Изменить</Action>
 			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ИгнорироватьКонфликт" id="23">
 			<Title>
@@ -2372,6 +2094,7 @@
 			</Picture>
 			<Action>ИгнорироватьКонфликт</Action>
 			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ИгнорироватьНепринятый" id="3">
 			<Title>
@@ -2387,6 +2110,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ИгнорироватьНепринятый</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="НеИгнорироватьКонфликт" id="6">
 			<Title>
@@ -2398,10 +2122,11 @@
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Снять с конфликта признак его рассмотренния</v8:content>
+					<v8:content>Снять с конфликта признак его рассмотрения</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>НеИгнорироватьКонфликт</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="НеИгнорироватьНепринятый" id="13">
 			<Title>
@@ -2417,6 +2142,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>НеИгнорироватьНепринятый</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ПринятьВерсиюНепринятые" id="4">
 			<Title>
@@ -2432,6 +2158,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ПринятьВерсиюНепринятые</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ОткрытьВерсиюКонфликта" id="17">
 			<Title>
@@ -2447,6 +2174,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ОткрытьВерсиюКонфликта</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ОткрытьВерсиюНепринятыеВЭтойПрограмме" id="21">
 			<Title>
@@ -2462,6 +2190,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ОткрытьВерсиюНепринятыеВЭтойПрограмме</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ПоказыватьПроигнорированныеНепроведенные" id="24">
 			<Title>
@@ -2477,6 +2206,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ПоказыватьПроигнорированныеНепроведенные</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ПоказыватьПроигнорированныеНезаполненные" id="25">
 			<Title>
@@ -2492,6 +2222,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ПоказыватьПроигнорированныеНезаполненные</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ПоказыватьПроигнорированныеКонфликты" id="26">
 			<Title>
@@ -2507,6 +2238,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ПоказыватьПроигнорированныеКонфликты</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ПоказыватьПроигнорированныеНепринятые" id="27">
 			<Title>
@@ -2522,6 +2254,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ПоказыватьПроигнорированныеНепринятые</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ИзменитьРезультатКонфликта" id="18">
 			<Title>
@@ -2537,6 +2270,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ИзменитьРезультатКонфликта</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 	</Commands>
 	<Parameters>

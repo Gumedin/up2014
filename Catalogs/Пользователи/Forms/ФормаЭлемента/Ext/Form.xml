@@ -1,40 +1,98 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
 	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
-	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<CommandSet>
+		<ExcludedCommand>WriteAndClose</ExcludedCommand>
+	</CommandSet>
 	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаЗаписатьИЗакрыть" id="345">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.ЗаписатьИЗакрыть</CommandName>
+				<ExtendedTooltip name="ФормаЗаписатьИЗакрытьРасширеннаяПодсказка" id="346"/>
+			</Button>
+			<ButtonGroup name="КомандыФормы" id="347">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Команды формы</v8:content>
+					</v8:item>
+				</Title>
+				<CommandSource>Form</CommandSource>
+				<ExtendedTooltip name="КомандыФормыРасширеннаяПодсказка" id="348"/>
+			</ButtonGroup>
+			<Button name="ФормаСправка" id="349">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.Help</CommandName>
+				<ExtendedTooltip name="ФормаСправкаРасширеннаяПодсказка" id="350"/>
+			</Button>
+		</ChildItems>
 	</AutoCommandBar>
 	<Events>
 		<Event name="AfterWrite">ПослеЗаписи</Event>
 		<Event name="AfterWriteAtServer">ПослеЗаписиНаСервере</Event>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
 		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
 		<Event name="OnOpen">ПриОткрытии</Event>
 		<Event name="BeforeWrite">ПередЗаписью</Event>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+		<Event name="OnWriteAtServer">ПриЗаписиНаСервере</Event>
 		<Event name="FillCheckProcessingAtServer">ОбработкаПроверкиЗаполненияНаСервере</Event>
 		<Event name="BeforeLoadDataFromSettingsAtServer">ПриЗагрузкеДанныхИзНастроекНаСервере</Event>
 	</Events>
 	<ChildItems>
-		<CommandBar name="КоманднаяПанель" id="200">
+		<UsualGroup name="ГруппаСлужебныйПользователь" id="338">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Командная панель</v8:content>
+					<v8:content>Служебный пользователь</v8:content>
 				</v8:item>
 			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Командная панель</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Width>50</Width>
-			<CommandSource>Form</CommandSource>
-			<ExtendedTooltip name="КоманднаяПанельExtendedTooltip" id="207"/>
-		</CommandBar>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаСлужебныйПользовательРасширеннаяПодсказка" id="339"/>
+			<ChildItems>
+				<PictureDecoration name="СлужебныйПользовательКартинка" id="340">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Служебный пользователь картинка</v8:content>
+						</v8:item>
+					</Title>
+					<Picture>
+						<xr:Ref>CommonPicture.Предупреждение</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ContextMenu name="СлужебныйПользовательКартинкаКонтекстноеМеню" id="341"/>
+					<ExtendedTooltip name="СлужебныйПользовательКартинкаРасширеннаяПодсказка" id="342"/>
+				</PictureDecoration>
+				<LabelDecoration name="СлужебныйПользовательНадпись" id="335">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<TextColor>style:ПоясняющийТекст</TextColor>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Это служебный пользователь для автоматизации некоторых действий в программе.</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Служебный пользователь создается и изменяется автоматически,
+скрывается при выборе и подборе, а также в списке пользователей.</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ContextMenu name="СлужебныйПользовательНадписьКонтекстноеМеню" id="336"/>
+					<ExtendedTooltip name="СлужебныйПользовательНадписьРасширеннаяПодсказка" id="337"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
 		<UsualGroup name="СвойстваОбработкаНесоответствия" id="164">
 			<Title>
 				<v8:item>
@@ -42,22 +100,12 @@
 					<v8:content>Свойства обработка несоответствия</v8:content>
 				</v8:item>
 			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Свойства обработка несоответствия</v8:content>
-				</v8:item>
-			</ToolTip>
-			<HorizontalStretch>true</HorizontalStretch>
 			<Group>Horizontal</Group>
-			<Representation>StrongSeparation</Representation>
+			<Representation>NormalSeparation</Representation>
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="СвойстваОбработкаНесоответствияРасширеннаяПодсказка" id="208"/>
 			<ChildItems>
 				<PictureDecoration name="СвойстваКартинкаПредупреждения" id="165">
-					<Width>5</Width>
-					<Height>2</Height>
-					<HorizontalStretch>false</HorizontalStretch>
 					<SkipOnInput>false</SkipOnInput>
 					<Title formatted="false">
 						<v8:item>
@@ -85,6 +133,7 @@
 					<ExtendedTooltip name="СвойстваПояснениеИКомандыРасширеннаяПодсказка" id="210"/>
 					<ChildItems>
 						<LabelDecoration name="СвойстваПояснениеНесоответствия" id="168">
+							<AutoMaxWidth>false</AutoMaxWidth>
 							<SkipOnInput>false</SkipOnInput>
 							<Title formatted="false">
 								<v8:item>
@@ -146,22 +195,12 @@
 					<v8:content>Сопоставление обработка несоответствия</v8:content>
 				</v8:item>
 			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Сопоставление обработка несоответствия</v8:content>
-				</v8:item>
-			</ToolTip>
-			<HorizontalStretch>true</HorizontalStretch>
 			<Group>Horizontal</Group>
-			<Representation>StrongSeparation</Representation>
+			<Representation>NormalSeparation</Representation>
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="СопоставлениеОбработкаНесоответствияРасширеннаяПодсказка" id="213"/>
 			<ChildItems>
 				<PictureDecoration name="СопоставлениеКартинкаПредупреждения" id="172">
-					<Width>5</Width>
-					<Height>2</Height>
-					<HorizontalStretch>false</HorizontalStretch>
 					<SkipOnInput>false</SkipOnInput>
 					<Title formatted="false">
 						<v8:item>
@@ -177,9 +216,8 @@
 					<ExtendedTooltip name="СопоставлениеКартинкаПредупрежденияРасширеннаяПодсказка" id="214"/>
 				</PictureDecoration>
 				<LabelDecoration name="СопоставлениеПояснениеНесоответствия" id="175">
-					<Width>20</Width>
+					<AutoMaxWidth>false</AutoMaxWidth>
 					<Height>2</Height>
-					<HorizontalStretch>true</HorizontalStretch>
 					<SkipOnInput>false</SkipOnInput>
 					<Title formatted="false">
 						<v8:item>
@@ -188,50 +226,77 @@
 Нажмите "Записать", чтобы устранить проблему и не выводить это предупреждение.</v8:content>
 						</v8:item>
 					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Пользователь информационной базы сопоставлен с этим пользователем справочника,
-однако его не удается найти по сохраненному идентификатору.</v8:content>
-						</v8:item>
-					</ToolTip>
 					<VerticalAlign>Center</VerticalAlign>
 					<ContextMenu name="СопоставлениеПояснениеНесоответствияКонтекстноеМеню" id="176"/>
 					<ExtendedTooltip name="СопоставлениеПояснениеНесоответствияРасширеннаяПодсказка" id="215"/>
 				</LabelDecoration>
 			</ChildItems>
 		</UsualGroup>
-		<InputField name="Наименование" id="49">
-			<DataPath>Объект.Description</DataPath>
-			<Width>22</Width>
-			<Wrap>false</Wrap>
-			<BorderColor>style:BorderColor</BorderColor>
-			<ContextMenu name="НаименованиеКонтекстноеМеню" id="50"/>
-			<ExtendedTooltip name="НаименованиеExtendedTooltip" id="216"/>
-			<Events>
-				<Event name="OnChange">НаименованиеПриИзменении</Event>
-			</Events>
-		</InputField>
-		<InputField name="ФизическоеЛицо" id="270">
-			<DataPath>Объект.ФизическоеЛицо</DataPath>
-			<ContextMenu name="ФизическоеЛицоКонтекстноеМеню" id="271"/>
-			<ExtendedTooltip name="ФизическоеЛицоРасширеннаяПодсказка" id="272"/>
-		</InputField>
-		<CheckBoxField name="Недействителен" id="194">
-			<DataPath>Объект.Недействителен</DataPath>
-			<TitleLocation>Right</TitleLocation>
-			<CheckBoxType>Auto</CheckBoxType>
-			<ContextMenu name="НедействителенКонтекстноеМеню" id="195"/>
-			<ExtendedTooltip name="НедействителенExtendedTooltip" id="217"/>
-			<Events>
-				<Event name="OnChange">НедействителенПриИзменении</Event>
-			</Events>
-		</CheckBoxField>
+		<UsualGroup name="ГруппаШапка" id="277">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шапка</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="278"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаНаименование" id="329">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Наименование</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаНаименованиеРасширеннаяПодсказка" id="330"/>
+					<ChildItems>
+						<InputField name="Наименование" id="49">
+							<DataPath>Объект.Description</DataPath>
+							<Width>22</Width>
+							<Wrap>false</Wrap>
+							<BorderColor>style:BorderColor</BorderColor>
+							<ContextMenu name="НаименованиеКонтекстноеМеню" id="50"/>
+							<ExtendedTooltip name="НаименованиеExtendedTooltip" id="216"/>
+							<Events>
+								<Event name="OnChange">НаименованиеПриИзменении</Event>
+							</Events>
+						</InputField>
+						<CheckBoxField name="Недействителен" id="194">
+							<DataPath>Объект.Недействителен</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<ToolTipRepresentation>Button</ToolTipRepresentation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="НедействителенКонтекстноеМеню" id="195"/>
+							<ExtendedTooltip name="НедействителенExtendedTooltip" id="217"/>
+							<Events>
+								<Event name="OnChange">НедействителенПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
+				<InputField name="ФизическоеЛицо" id="296">
+					<DataPath>Объект.ФизическоеЛицо</DataPath>
+					<ContextMenu name="ФизическоеЛицоКонтекстноеМеню" id="297"/>
+					<ExtendedTooltip name="ФизическоеЛицоРасширеннаяПодсказка" id="298"/>
+				</InputField>
+				<InputField name="Подразделение" id="299">
+					<DataPath>Объект.Подразделение</DataPath>
+					<ContextMenu name="ПодразделениеКонтекстноеМеню" id="300"/>
+					<ExtendedTooltip name="ПодразделениеРасширеннаяПодсказка" id="301"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
 		<UsualGroup name="ГруппаВходВПрограммуРазрешен" id="265">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Группа вход в программу разрешен</v8:content>
+					<v8:content>Вход в программу разрешен</v8:content>
 				</v8:item>
 			</Title>
 			<Group>Horizontal</Group>
@@ -245,7 +310,8 @@
 					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Разрешить вход пользователя в программу указанными способами аутентификации.</v8:content>
+							<v8:content>Разрешить вход пользователя в программу
+указанными способами аутентификации.</v8:content>
 						</v8:item>
 					</ToolTip>
 					<CheckBoxType>Auto</CheckBoxType>
@@ -255,7 +321,27 @@
 						<Event name="OnChange">ВходВПрограммуРазрешенПриИзменении</Event>
 					</Events>
 				</CheckBoxField>
+				<UsualGroup name="ГруппаИзменитьОграничение" id="331">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Изменить ограничение</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаИзменитьОграничениеРасширеннаяПодсказка" id="332"/>
+					<ChildItems>
+						<Button name="ИзменитьОграничениеНаВходВПрограмму" id="333">
+							<Type>Hyperlink</Type>
+							<CommandName>Form.Command.ИзменитьОграничениеНаВходВПрограмму</CommandName>
+							<ExtendedTooltip name="ИзменитьОграничениеНаВходВПрограммуРасширеннаяПодсказка" id="334"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
 				<LabelDecoration name="РекомендуетсяПроверитьНастройкиДляВхода" id="267">
+					<AutoMaxWidth>false</AutoMaxWidth>
 					<TextColor>style:ПоясняющийТекст</TextColor>
 					<Title formatted="false">
 						<v8:item>
@@ -283,15 +369,16 @@
 					<v8:content>Страницы</v8:content>
 				</v8:item>
 			</Title>
-			<HorizontalStretch>true</HorizontalStretch>
-			<VerticalStretch>true</VerticalStretch>
 			<ExtendedTooltip name="СтраницыExtendedTooltip" id="219"/>
+			<Events>
+				<Event name="OnCurrentPageChange">СтраницыПриСменеСтраницы</Event>
+			</Events>
 			<ChildItems>
 				<Page name="СвойстваПользователяИБ" id="65">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Основные свойства</v8:content>
+							<v8:content>Главное</v8:content>
 						</v8:item>
 					</Title>
 					<Group>Horizontal</Group>
@@ -328,15 +415,13 @@
 											</Title>
 											<ExtendedTooltip name="ИмяСОтметкойНезаполненногоРасширеннаяПодсказка" id="252"/>
 											<ChildItems>
-												<InputField name="ПользовательИнфБазыИмя1" id="95">
-													<DataPath>ПользовательИнфБазыИмя</DataPath>
-													<Width>26</Width>
-													<HorizontalStretch>true</HorizontalStretch>
+												<InputField name="ПользовательИБИмя1" id="95">
+													<DataPath>ПользовательИБИмя</DataPath>
 													<AutoMarkIncomplete>true</AutoMarkIncomplete>
-													<ContextMenu name="ПользовательИнфБазыИмя1КонтекстноеМеню" id="96"/>
-													<ExtendedTooltip name="ПользовательИнфБазыИмя1РасширеннаяПодсказка" id="222"/>
+													<ContextMenu name="ПользовательИБИмя1КонтекстноеМеню" id="96"/>
+													<ExtendedTooltip name="ПользовательИБИмя1РасширеннаяПодсказка" id="222"/>
 													<Events>
-														<Event name="OnChange">ПользовательИнфБазыИмяПриИзменении</Event>
+														<Event name="OnChange">ПользовательИБИмяПриИзменении</Event>
 													</Events>
 												</InputField>
 											</ChildItems>
@@ -350,14 +435,12 @@
 											</Title>
 											<ExtendedTooltip name="ИмяБезОтметкиНезаполненногоРасширеннаяПодсказка" id="254"/>
 											<ChildItems>
-												<InputField name="ПользовательИнфБазыИмя2" id="255">
-													<DataPath>ПользовательИнфБазыИмя</DataPath>
-													<Width>26</Width>
-													<HorizontalStretch>true</HorizontalStretch>
-													<ContextMenu name="ПользовательИнфБазыИмя2КонтекстноеМеню" id="256"/>
-													<ExtendedTooltip name="ПользовательИнфБазыИмя2РасширеннаяПодсказка" id="257"/>
+												<InputField name="ПользовательИБИмя2" id="255">
+													<DataPath>ПользовательИБИмя</DataPath>
+													<ContextMenu name="ПользовательИБИмя2КонтекстноеМеню" id="256"/>
+													<ExtendedTooltip name="ПользовательИБИмя2РасширеннаяПодсказка" id="257"/>
 													<Events>
-														<Event name="OnChange">ПользовательИнфБазыИмяПриИзменении</Event>
+														<Event name="OnChange">ПользовательИБИмяПриИзменении</Event>
 													</Events>
 												</InputField>
 											</ChildItems>
@@ -365,13 +448,19 @@
 									</ChildItems>
 								</Pages>
 								<UsualGroup name="СвойстваАутентификации1СПредприятия" id="10">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Свойства аутентификации 1С предприятия</v8:content>
+										</v8:item>
+									</Title>
 									<Group>Vertical</Group>
-									<Representation>None</Representation>
+									<Representation>NormalSeparation</Representation>
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="СвойстваАутентификации1СПредприятияExtendedTooltip" id="223"/>
 									<ChildItems>
-										<CheckBoxField name="ПользовательИнфБазыАутентификацияСтандартная" id="19">
-											<DataPath>ПользовательИнфБазыАутентификацияСтандартная</DataPath>
+										<CheckBoxField name="ПользовательИБАутентификацияСтандартная" id="19">
+											<DataPath>ПользовательИБАутентификацияСтандартная</DataPath>
 											<TitleLocation>Right</TitleLocation>
 											<ToolTip>
 												<v8:item>
@@ -382,96 +471,154 @@
 											</ToolTip>
 											<FooterHorizontalAlign>Left</FooterHorizontalAlign>
 											<CheckBoxType>Auto</CheckBoxType>
-											<ContextMenu name="ПользовательИнфБазыАутентификацияСтандартнаяКонтекстноеМеню" id="20"/>
-											<ExtendedTooltip name="ПользовательИнфБазыАутентификацияСтандартнаяРасширеннаяПодсказка" id="224"/>
+											<ContextMenu name="ПользовательИБАутентификацияСтандартнаяКонтекстноеМеню" id="20"/>
+											<ExtendedTooltip name="ПользовательИБАутентификацияСтандартнаяРасширеннаяПодсказка" id="224"/>
 											<Events>
-												<Event name="OnChange">ПользовательИнфБазыАутентификацияСтандартнаяПриИзменении</Event>
+												<Event name="OnChange">ПользовательИБАутентификацияСтандартнаяПриИзменении</Event>
 											</Events>
 										</CheckBoxField>
-										<UsualGroup name="СвойстваПараметрыАутентификации1СПредприятия" id="201">
+										<UsualGroup name="ГруппаОтступ" id="270">
 											<Title>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
-													<v8:content>Аутентификация 1С:Предприятия</v8:content>
+													<v8:content>Отступ</v8:content>
 												</v8:item>
 											</Title>
-											<HorizontalStretch>true</HorizontalStretch>
-											<Group>Vertical</Group>
-											<Representation>StrongSeparation</Representation>
+											<Group>Horizontal</Group>
+											<Representation>None</Representation>
 											<ShowTitle>false</ShowTitle>
-											<ExtendedTooltip name="СвойстваПараметрыАутентификации1СПредприятияExtendedTooltip" id="225"/>
+											<ExtendedTooltip name="ГруппаОтступРасширеннаяПодсказка" id="271"/>
 											<ChildItems>
-												<InputField name="Пароль" id="21">
-													<DataPath>Пароль</DataPath>
-													<FooterHorizontalAlign>Left</FooterHorizontalAlign>
-													<Width>14</Width>
-													<HorizontalStretch>false</HorizontalStretch>
-													<Wrap>false</Wrap>
-													<PasswordMode>true</PasswordMode>
-													<BorderColor>style:BorderColor</BorderColor>
-													<ContextMenu name="ПарольКонтекстноеМеню" id="22"/>
-													<ExtendedTooltip name="ПарольExtendedTooltip" id="226"/>
-													<Events>
-														<Event name="OnChange">ПарольПриИзменении</Event>
-													</Events>
-												</InputField>
-												<InputField name="ПодтверждениеПароля" id="23">
-													<DataPath>ПодтверждениеПароля</DataPath>
-													<FooterHorizontalAlign>Left</FooterHorizontalAlign>
-													<Width>14</Width>
-													<HorizontalStretch>false</HorizontalStretch>
-													<Wrap>false</Wrap>
-													<PasswordMode>true</PasswordMode>
-													<BorderColor>style:BorderColor</BorderColor>
-													<ContextMenu name="ПодтверждениеПароляКонтекстноеМеню" id="24"/>
-													<ExtendedTooltip name="ПодтверждениеПароляExtendedTooltip" id="227"/>
-													<Events>
-														<Event name="OnChange">ПарольПриИзменении</Event>
-													</Events>
-												</InputField>
-												<CheckBoxField name="ПользовательИнфБазыПоказыватьВСпискеВыбора" id="25">
-													<DataPath>ПользовательИнфБазыПоказыватьВСпискеВыбора</DataPath>
-													<TitleLocation>Right</TitleLocation>
-													<FooterHorizontalAlign>Left</FooterHorizontalAlign>
-													<CheckBoxType>Auto</CheckBoxType>
-													<ContextMenu name="ПользовательИнфБазыПоказыватьВСпискеВыбораКонтекстноеМеню" id="26"/>
-													<ExtendedTooltip name="ПользовательИнфБазыПоказыватьВСпискеВыбораExtendedTooltip" id="228"/>
-													<Events>
-														<Event name="OnChange">ПользовательИнфБазыПоказыватьВСпискеВыбораПриИзменении</Event>
-													</Events>
-												</CheckBoxField>
-												<CheckBoxField name="ПользовательИнфБазыЗапрещеноИзменятьПароль" id="51">
-													<DataPath>ПользовательИнфБазыЗапрещеноИзменятьПароль</DataPath>
-													<TitleLocation>Right</TitleLocation>
-													<CheckBoxType>Auto</CheckBoxType>
-													<ContextMenu name="ПользовательИнфБазыЗапрещеноИзменятьПарольКонтекстноеМеню" id="52"/>
-													<ExtendedTooltip name="ПользовательИнфБазыЗапрещеноИзменятьПарольExtendedTooltip" id="229"/>
-													<Events>
-														<Event name="OnChange">ПользовательИнфБазыЗапрещеноИзменятьПарольПриИзменении</Event>
-													</Events>
-												</CheckBoxField>
+												<LabelDecoration name="Отступ" id="272">
+													<ContextMenu name="ОтступКонтекстноеМеню" id="273"/>
+													<ExtendedTooltip name="ОтступРасширеннаяПодсказка" id="274"/>
+												</LabelDecoration>
+												<UsualGroup name="ПараметрыАутентификации1СПредприятия" id="201">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Параметры аутентификации 1С:Предприятия</v8:content>
+														</v8:item>
+													</Title>
+													<Group>Vertical</Group>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ПараметрыАутентификации1СПредприятияРасширеннаяПодсказка" id="225"/>
+													<ChildItems>
+														<UsualGroup name="ГруппаПароль" id="319">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Пароль</v8:content>
+																</v8:item>
+															</Title>
+															<Group>Horizontal</Group>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаПарольРасширеннаяПодсказка" id="320"/>
+															<ChildItems>
+																<LabelDecoration name="НадписьНаличиеПароля" id="321">
+																	<AutoMaxWidth>false</AutoMaxWidth>
+																	<TextColor>style:ПоясняющийТекст</TextColor>
+																	<Title formatted="false">
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Пустой пароль</v8:content>
+																		</v8:item>
+																	</Title>
+																	<ContextMenu name="НадписьНаличиеПароляКонтекстноеМеню" id="322"/>
+																	<ExtendedTooltip name="НадписьНаличиеПароляРасширеннаяПодсказка" id="323"/>
+																</LabelDecoration>
+																<Button name="СменитьПароль" id="324">
+																	<Type>UsualButton</Type>
+																	<CommandName>Form.Command.СменитьПароль</CommandName>
+																	<ExtendedTooltip name="СменитьПарольРасширеннаяПодсказка" id="325"/>
+																</Button>
+															</ChildItems>
+														</UsualGroup>
+														<CheckBoxField name="ПотребоватьСменуПароляПриВходе" id="316">
+															<DataPath>ПотребоватьСменуПароляПриВходе</DataPath>
+															<TitleLocation>Right</TitleLocation>
+															<ToolTipRepresentation>Button</ToolTipRepresentation>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="ПотребоватьСменуПароляПриВходеКонтекстноеМеню" id="317"/>
+															<ExtendedTooltip name="ПотребоватьСменуПароляПриВходеРасширеннаяПодсказка" id="318">
+																<Title formatted="true"/>
+																<Events>
+																	<Event name="URLProcessing">ПотребоватьСменуПароляПриВходеРасширеннаяПодсказкаОбработкаНавигационнойСсылки</Event>
+																</Events>
+															</ExtendedTooltip>
+															<Events>
+																<Event name="OnChange">ПотребоватьСменуПароляПриВходеПриИзменении</Event>
+															</Events>
+														</CheckBoxField>
+														<CheckBoxField name="ПользовательИБЗапрещеноИзменятьПароль" id="51">
+															<DataPath>ПользовательИБЗапрещеноИзменятьПароль</DataPath>
+															<TitleLocation>Right</TitleLocation>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Запрещает изменение своего пароля
+неполноправному пользователю,
+а также при входе.</v8:content>
+																</v8:item>
+															</ToolTip>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="ПользовательИБЗапрещеноИзменятьПарольКонтекстноеМеню" id="52"/>
+															<ExtendedTooltip name="ПользовательИБЗапрещеноИзменятьПарольРасширеннаяПодсказка" id="229"/>
+															<Events>
+																<Event name="OnChange">ПользовательИБЗапрещеноИзменятьПарольПриИзменении</Event>
+															</Events>
+														</CheckBoxField>
+														<CheckBoxField name="ПользовательИБПоказыватьВСпискеВыбора" id="25">
+															<DataPath>ПользовательИБПоказыватьВСпискеВыбора</DataPath>
+															<TitleLocation>Right</TitleLocation>
+															<FooterHorizontalAlign>Left</FooterHorizontalAlign>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="ПользовательИБПоказыватьВСпискеВыбораКонтекстноеМеню" id="26"/>
+															<ExtendedTooltip name="ПользовательИБПоказыватьВСпискеВыбораРасширеннаяПодсказка" id="228"/>
+															<Events>
+																<Event name="OnChange">ПользовательИБПоказыватьВСпискеВыбораПриИзменении</Event>
+															</Events>
+														</CheckBoxField>
+													</ChildItems>
+												</UsualGroup>
 											</ChildItems>
 										</UsualGroup>
 									</ChildItems>
 								</UsualGroup>
-								<CheckBoxField name="ПользовательИнфБазыАутентификацияOpenID" id="205">
-									<DataPath>ПользовательИнфБазыАутентификацияOpenID</DataPath>
-									<TitleLocation>Right</TitleLocation>
-									<ToolTip>
+								<UsualGroup name="СвойстваАутентификацииOpenID" id="275">
+									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>Способ входа в программу с помощью имени, указанного для пользователя 1С:Предприятия,
+											<v8:content>Свойства аутентификации open ID</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="СвойстваАутентификацииOpenIDРасширеннаяПодсказка" id="276"/>
+									<ChildItems>
+										<CheckBoxField name="ПользовательИБАутентификацияOpenID" id="205">
+											<DataPath>ПользовательИБАутентификацияOpenID</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Способ входа в программу с помощью имени, указанного для пользователя 1С:Предприятия,
 которое передается службе аутентификации по протоколу OpenID.
 Используется только при подключении через веб-сервер (адрес службы должен быть настроен).</v8:content>
-										</v8:item>
-									</ToolTip>
-									<CheckBoxType>Auto</CheckBoxType>
-									<ContextMenu name="ПользовательИнфБазыАутентификацияOpenIDКонтекстноеМеню" id="206"/>
-									<ExtendedTooltip name="ПользовательИнфБазыАутентификацияOpenIDРасширеннаяПодсказка" id="230"/>
-									<Events>
-										<Event name="OnChange">ПользовательИнфБазыАутентификацияOpenIDПриИзменении</Event>
-									</Events>
-								</CheckBoxField>
+												</v8:item>
+											</ToolTip>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ПользовательИБАутентификацияOpenIDКонтекстноеМеню" id="206"/>
+											<ExtendedTooltip name="ПользовательИБАутентификацияOpenIDРасширеннаяПодсказка" id="230"/>
+											<Events>
+												<Event name="OnChange">ПользовательИБАутентификацияOpenIDПриИзменении</Event>
+											</Events>
+										</CheckBoxField>
+									</ChildItems>
+								</UsualGroup>
 								<UsualGroup name="СвойстваАутентификацииОС" id="11">
 									<Title>
 										<v8:item>
@@ -484,8 +631,8 @@
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="СвойстваАутентификацииОСExtendedTooltip" id="231"/>
 									<ChildItems>
-										<CheckBoxField name="ПользовательИнфБазыАутентификацияОС" id="27">
-											<DataPath>ПользовательИнфБазыАутентификацияОС</DataPath>
+										<CheckBoxField name="ПользовательИБАутентификацияОС" id="27">
+											<DataPath>ПользовательИБАутентификацияОС</DataPath>
 											<TitleLocation>Right</TitleLocation>
 											<ToolTip>
 												<v8:item>
@@ -497,10 +644,10 @@
 											</ToolTip>
 											<FooterHorizontalAlign>Left</FooterHorizontalAlign>
 											<CheckBoxType>Auto</CheckBoxType>
-											<ContextMenu name="ПользовательИнфБазыАутентификацияОСКонтекстноеМеню" id="28"/>
-											<ExtendedTooltip name="ПользовательИнфБазыАутентификацияОСРасширеннаяПодсказка" id="232"/>
+											<ContextMenu name="ПользовательИБАутентификацияОСКонтекстноеМеню" id="28"/>
+											<ExtendedTooltip name="ПользовательИБАутентификацияОСРасширеннаяПодсказка" id="232"/>
 											<Events>
-												<Event name="OnChange">ПользовательИнфБазыАутентификацияОСПриИзменении</Event>
+												<Event name="OnChange">ПользовательИБАутентификацияОСПриИзменении</Event>
 											</Events>
 										</CheckBoxField>
 										<UsualGroup name="СвойстваПараметрыАутентификацииОС" id="202">
@@ -516,28 +663,28 @@
 											<ExtendedTooltip name="СвойстваПараметрыАутентификацииОСExtendedTooltip" id="233"/>
 											<ChildItems>
 												<LabelDecoration name="ДекорацияОтступ" id="203">
-													<Width>1</Width>
-													<Title formatted="false">
-														<v8:item>
-															<v8:lang>ru</v8:lang>
-															<v8:content> </v8:content>
-														</v8:item>
-													</Title>
+													<AutoMaxWidth>false</AutoMaxWidth>
 													<ContextMenu name="ДекорацияОтступКонтекстноеМеню" id="204"/>
 													<ExtendedTooltip name="ДекорацияОтступExtendedTooltip" id="234"/>
 												</LabelDecoration>
-												<InputField name="ПользовательИнфБазыПользовательОС" id="29">
-													<DataPath>ПользовательИнфБазыПользовательОС</DataPath>
+												<InputField name="ПользовательИБПользовательОС" id="29">
+													<DataPath>ПользовательИБПользовательОС</DataPath>
 													<TitleLocation>Left</TitleLocation>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Пользователь операционной системы</v8:content>
+														</v8:item>
+													</ToolTip>
 													<FooterHorizontalAlign>Left</FooterHorizontalAlign>
 													<Wrap>false</Wrap>
 													<ChoiceButton>true</ChoiceButton>
 													<BorderColor>style:BorderColor</BorderColor>
-													<ContextMenu name="ПользовательИнфБазыПользовательОСКонтекстноеМеню" id="30"/>
-													<ExtendedTooltip name="ПользовательИнфБазыПользовательОСExtendedTooltip" id="235"/>
+													<ContextMenu name="ПользовательИБПользовательОСКонтекстноеМеню" id="30"/>
+													<ExtendedTooltip name="ПользовательИБПользовательОСРасширеннаяПодсказка" id="235"/>
 													<Events>
-														<Event name="OnChange">ПользовательИнфБазыПользовательОСПриИзменении</Event>
-														<Event name="StartChoice">ПользовательИнфБазыПользовательОСНачалоВыбора</Event>
+														<Event name="OnChange">ПользовательИБПользовательОСПриИзменении</Event>
+														<Event name="StartChoice">ПользовательИБПользовательОСНачалоВыбора</Event>
 													</Events>
 												</InputField>
 											</ChildItems>
@@ -558,29 +705,27 @@
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="СвойстваДополнительныеExtendedTooltip" id="236"/>
 									<ChildItems>
-										<InputField name="ПользовательИнфБазыЯзык" id="196">
-											<DataPath>ПользовательИнфБазыЯзык</DataPath>
+										<InputField name="ПользовательИБЯзык" id="196">
+											<DataPath>ПользовательИБЯзык</DataPath>
 											<FooterHorizontalAlign>Left</FooterHorizontalAlign>
-											<Width>20</Width>
 											<Wrap>false</Wrap>
 											<ClearButton>true</ClearButton>
 											<ListChoiceMode>true</ListChoiceMode>
 											<BorderColor>style:BorderColor</BorderColor>
-											<ContextMenu name="ПользовательИнфБазыЯзыкКонтекстноеМеню" id="197"/>
-											<ExtendedTooltip name="ПользовательИнфБазыЯзыкExtendedTooltip" id="237"/>
+											<ContextMenu name="ПользовательИБЯзыкКонтекстноеМеню" id="197"/>
+											<ExtendedTooltip name="ПользовательИБЯзыкРасширеннаяПодсказка" id="237"/>
 											<Events>
-												<Event name="OnChange">ПользовательИнфБазыЯзыкПриИзменении</Event>
+												<Event name="OnChange">ПользовательИБЯзыкПриИзменении</Event>
 											</Events>
 										</InputField>
-										<InputField name="ПользовательИнфБазыРежимЗапуска" id="198">
-											<DataPath>ПользовательИнфБазыРежимЗапуска</DataPath>
-											<Width>20</Width>
+										<InputField name="ПользовательИБРежимЗапуска" id="198">
+											<DataPath>ПользовательИБРежимЗапуска</DataPath>
 											<ListChoiceMode>true</ListChoiceMode>
-											<ContextMenu name="ПользовательИнфБазыРежимЗапускаКонтекстноеМеню" id="199"/>
-											<ExtendedTooltip name="ПользовательИнфБазыРежимЗапускаExtendedTooltip" id="238"/>
+											<ContextMenu name="ПользовательИБРежимЗапускаКонтекстноеМеню" id="199"/>
+											<ExtendedTooltip name="ПользовательИБРежимЗапускаРасширеннаяПодсказка" id="238"/>
 											<Events>
-												<Event name="OnChange">ПользовательИнфБазыРежимЗапускаПриИзменении</Event>
-												<Event name="Clearing">ПользовательИнфБазыРежимЗапускаОчистка</Event>
+												<Event name="OnChange">ПользовательИБРежимЗапускаПриИзменении</Event>
+												<Event name="Clearing">ПользовательИБРежимЗапускаОчистка</Event>
 											</Events>
 										</InputField>
 									</ChildItems>
@@ -626,22 +771,18 @@
 									</Title>
 									<CommandSet>
 										<ExcludedCommand>Add</ExcludedCommand>
+										<ExcludedCommand>Change</ExcludedCommand>
 										<ExcludedCommand>Copy</ExcludedCommand>
-										<ExcludedCommand>CopyToClipboard</ExcludedCommand>
 										<ExcludedCommand>Delete</ExcludedCommand>
 										<ExcludedCommand>EndEdit</ExcludedCommand>
 										<ExcludedCommand>HierarchicalList</ExcludedCommand>
 										<ExcludedCommand>List</ExcludedCommand>
 										<ExcludedCommand>MoveDown</ExcludedCommand>
 										<ExcludedCommand>MoveUp</ExcludedCommand>
-										<ExcludedCommand>OutputList</ExcludedCommand>
 										<ExcludedCommand>SortListAsc</ExcludedCommand>
 										<ExcludedCommand>SortListDesc</ExcludedCommand>
 										<ExcludedCommand>Tree</ExcludedCommand>
 									</CommandSet>
-									<SearchStringLocation>None</SearchStringLocation>
-									<ViewStatusLocation>None</ViewStatusLocation>
-									<SearchControlLocation>None</SearchControlLocation>
 									<ContextMenu name="РолиКонтекстноеМеню" id="178">
 										<Autofill>false</Autofill>
 									</ContextMenu>
@@ -668,35 +809,46 @@
 											</Button>
 											<Button name="РолиПоказатьПодсистемыРолей" id="193">
 												<Type>CommandBarButton</Type>
+												<OnlyInAllActions>false</OnlyInAllActions>
 												<CommandName>Form.Command.ГруппировкаРолейПоПодсистемам</CommandName>
 												<ExtendedTooltip name="РолиПоказатьПодсистемыРолейExtendedTooltip" id="243"/>
 											</Button>
+											<ButtonGroup name="РолиСтандартныеКоманды" id="281">
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Роли стандартные команды</v8:content>
+													</v8:item>
+												</Title>
+												<CommandSource>Item.Роли</CommandSource>
+												<ExtendedTooltip name="РолиСтандартныеКомандыРасширеннаяПодсказка" id="282"/>
+											</ButtonGroup>
 										</ChildItems>
 									</AutoCommandBar>
 									<ExtendedTooltip name="РолиExtendedTooltip" id="244"/>
-									<SearchStringAddition name="РолиСтрокаПоиска" id="273">
+									<SearchStringAddition name="РолиСтрокаПоиска" id="283">
 										<AdditionSource>
 											<Item>Роли</Item>
 											<Type>SearchStringRepresentation</Type>
 										</AdditionSource>
-										<ContextMenu name="РолиСтрокаПоискаКонтекстноеМеню" id="274"/>
-										<ExtendedTooltip name="РолиСтрокаПоискаРасширеннаяПодсказка" id="275"/>
+										<ContextMenu name="РолиСтрокаПоискаКонтекстноеМеню" id="284"/>
+										<ExtendedTooltip name="РолиСтрокаПоискаРасширеннаяПодсказка" id="285"/>
 									</SearchStringAddition>
-									<ViewStatusAddition name="РолиСостояниеПросмотра" id="276">
+									<ViewStatusAddition name="РолиСостояниеПросмотра" id="286">
 										<AdditionSource>
 											<Item>Роли</Item>
 											<Type>ViewStatusRepresentation</Type>
 										</AdditionSource>
-										<ContextMenu name="РолиСостояниеПросмотраКонтекстноеМеню" id="277"/>
-										<ExtendedTooltip name="РолиСостояниеПросмотраРасширеннаяПодсказка" id="278"/>
+										<ContextMenu name="РолиСостояниеПросмотраКонтекстноеМеню" id="287"/>
+										<ExtendedTooltip name="РолиСостояниеПросмотраРасширеннаяПодсказка" id="288"/>
 									</ViewStatusAddition>
-									<SearchControlAddition name="РолиУправлениеПоиском" id="279">
+									<SearchControlAddition name="РолиУправлениеПоиском" id="289">
 										<AdditionSource>
 											<Item>Роли</Item>
 											<Type>SearchControl</Type>
 										</AdditionSource>
-										<ContextMenu name="РолиУправлениеПоискомКонтекстноеМеню" id="280"/>
-										<ExtendedTooltip name="РолиУправлениеПоискомРасширеннаяПодсказка" id="281"/>
+										<ContextMenu name="РолиУправлениеПоискомКонтекстноеМеню" id="290"/>
+										<ExtendedTooltip name="РолиУправлениеПоискомРасширеннаяПодсказка" id="291"/>
 									</SearchControlAddition>
 									<ChildItems>
 										<ColumnGroup name="РолиКолонок" id="180">
@@ -706,12 +858,6 @@
 													<v8:content>Роли колонок</v8:content>
 												</v8:item>
 											</Title>
-											<ToolTip>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Роли колонок</v8:content>
-												</v8:item>
-											</ToolTip>
 											<Group>InCell</Group>
 											<ExtendedTooltip name="РолиКолонокExtendedTooltip" id="245"/>
 											<ChildItems>
@@ -750,21 +896,40 @@
 					</Title>
 					<ExtendedTooltip name="КонтактнаяИнформацияExtendedTooltip" id="248"/>
 				</Page>
+				<Page name="СтраницаДополнительныеРеквизиты" id="292">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дополнительные реквизиты</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СтраницаДополнительныеРеквизитыРасширеннаяПодсказка" id="293"/>
+				</Page>
+				<Page name="СтраницаКомментарий" id="279">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Комментарий</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СтраницаКомментарийРасширеннаяПодсказка" id="280"/>
+					<ChildItems>
+						<InputField name="Комментарий" id="258">
+							<DataPath>Объект.Комментарий</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Height>2</Height>
+							<MultiLine>true</MultiLine>
+							<ContextMenu name="КомментарийКонтекстноеМеню" id="259"/>
+							<ExtendedTooltip name="КомментарийExtendedTooltip" id="260"/>
+							<Events>
+								<Event name="StartChoice">КомментарийНачалоВыбора</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</Page>
 			</ChildItems>
 		</Pages>
-		<InputField name="Комментарий" id="258">
-			<DataPath>Объект.Комментарий</DataPath>
-			<TitleLocation>Left</TitleLocation>
-			<Height>2</Height>
-			<VerticalStretch>false</VerticalStretch>
-			<MultiLine>true</MultiLine>
-			<ChoiceButton>true</ChoiceButton>
-			<ContextMenu name="КомментарийКонтекстноеМеню" id="259"/>
-			<ExtendedTooltip name="КомментарийExtendedTooltip" id="260"/>
-			<Events>
-				<Event name="StartChoice">КомментарийНачалоВыбора</Event>
-			</Events>
-		</InputField>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="Объект" id="1">
@@ -774,7 +939,7 @@
 			<MainAttribute>true</MainAttribute>
 			<SavedData>true</SavedData>
 		</Attribute>
-		<Attribute name="ПользовательИнфБазыАутентификацияСтандартная" id="2">
+		<Attribute name="ПользовательИБАутентификацияСтандартная" id="2">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -786,49 +951,7 @@
 			</Type>
 			<SavedData>true</SavedData>
 		</Attribute>
-		<Attribute name="Пароль" id="3">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Пароль</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>xs:string</v8:Type>
-				<v8:StringQualifiers>
-					<v8:Length>0</v8:Length>
-					<v8:AllowedLength>Variable</v8:AllowedLength>
-				</v8:StringQualifiers>
-			</Type>
-			<SavedData>true</SavedData>
-		</Attribute>
-		<Attribute name="ПодтверждениеПароля" id="4">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Подтверждение пароля</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>xs:string</v8:Type>
-				<v8:StringQualifiers>
-					<v8:Length>0</v8:Length>
-					<v8:AllowedLength>Variable</v8:AllowedLength>
-				</v8:StringQualifiers>
-			</Type>
-			<SavedData>true</SavedData>
-		</Attribute>
-		<Attribute name="ПользовательИнфБазыПароль" id="5">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Пользователь инф базы пароль</v8:content>
-				</v8:item>
-			</Title>
-			<Type/>
-			<SavedData>true</SavedData>
-		</Attribute>
-		<Attribute name="ПользовательИнфБазыПоказыватьВСпискеВыбора" id="6">
+		<Attribute name="ПользовательИБПоказыватьВСпискеВыбора" id="6">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -840,7 +963,7 @@
 			</Type>
 			<SavedData>true</SavedData>
 		</Attribute>
-		<Attribute name="ПользовательИнфБазыАутентификацияОС" id="7">
+		<Attribute name="ПользовательИБАутентификацияОС" id="7">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -852,7 +975,7 @@
 			</Type>
 			<SavedData>true</SavedData>
 		</Attribute>
-		<Attribute name="ПользовательИнфБазыПользовательОС" id="8">
+		<Attribute name="ПользовательИБПользовательОС" id="8">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -868,7 +991,7 @@
 			</Type>
 			<SavedData>true</SavedData>
 		</Attribute>
-		<Attribute name="ПользовательИнфБазыЗапрещеноИзменятьПароль" id="13">
+		<Attribute name="ПользовательИБЗапрещеноИзменятьПароль" id="13">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -880,7 +1003,7 @@
 			</Type>
 			<SavedData>true</SavedData>
 		</Attribute>
-		<Attribute name="ПользовательИнфБазыИмя" id="16">
+		<Attribute name="ПользовательИБИмя" id="16">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -908,11 +1031,11 @@
 			</Type>
 			<SavedData>true</SavedData>
 		</Attribute>
-		<Attribute name="ПользовательИнфБазыПолноеИмя" id="14">
+		<Attribute name="ПользовательИБПолноеИмя" id="14">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Пользователь инф базы полное имя</v8:content>
+					<v8:content>Пользователь ИБ полное имя</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -928,7 +1051,7 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Пользователь ИБСуществует</v8:content>
+					<v8:content>Пользователь ИБ существует</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -1062,13 +1185,35 @@
 						<v8:Type>xs:boolean</v8:Type>
 					</Type>
 				</Column>
+				<Column name="ЭтоНедоступнаяРоль" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Это недоступная роль</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ЭтоНесуществующаяРоль" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Это несуществующая роль</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
 			</Columns>
 		</Attribute>
-		<Attribute name="ПользовательИнфБазыРоли" id="12">
+		<Attribute name="ПользовательИБРоли" id="12">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Пользователь инф базы роли</v8:content>
+					<v8:content>Пользователь ИБ роли</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -1106,7 +1251,7 @@
 				<Field>ПоказатьПодсистемыРолей</Field>
 			</Save>
 		</Attribute>
-		<Attribute name="ПользовательИнфБазыРежимЗапуска" id="10">
+		<Attribute name="ПользовательИБРежимЗапуска" id="10">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -1122,11 +1267,12 @@
 			</Type>
 			<SavedData>true</SavedData>
 		</Attribute>
-		<Attribute name="ПользовательИнфБазыЯзык" id="15">
+		<Attribute name="ПользовательИБЯзык" id="15">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Язык интерфейса программы</v8:content>
+					<v8:content>Язык интерфейса
+программы</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -1149,7 +1295,7 @@
 				<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
 			</Type>
 		</Attribute>
-		<Attribute name="ПользовательИнфБазыАутентификацияOpenID" id="25">
+		<Attribute name="ПользовательИБАутентификацияOpenID" id="25">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -1241,13 +1387,128 @@
 				<v8:Type>xs:boolean</v8:Type>
 			</Type>
 		</Attribute>
+		<Attribute name="ВходВПрограммуРазрешенЗначениеПрямогоИзменения" id="33">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вход в программу разрешен значение прямого изменения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПотребоватьСменуПароляПриВходе" id="35">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Потребовать смену пароля при входе</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="СрокДействия" id="36">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Срок действия</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="СрокДействияНеОграничен" id="37">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Срок действия не ограничен</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПросрочкаРаботыВПрограммеДоЗапрещенияВхода" id="38">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Просрочка работы в программе до запрещения входа</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>3</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПользовательИБИмяЗначениеПрямогоИзменения" id="39">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имя (для входа) - значение прямого изменения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПользовательИБПароль" id="40">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пользователь ИБ Пароль</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ПользовательИБСтарыйПароль" id="41">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пользователь ИБСтарый пароль</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ПользовательИБОсновнойИнтерфейс" id="42">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Основной интерфейс</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
 	</Attributes>
 	<Commands>
 		<Command name="ПоказатьТолькоВыбранныеРоли" id="1">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Только выбранные роли</v8:content>
+					<v8:content>Только выбранные</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
@@ -1262,6 +1523,7 @@
 			</Picture>
 			<Action>ПоказатьТолькоВыбранныеРоли</Action>
 			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ИсключитьРоли" id="2">
 			<Title>
@@ -1282,6 +1544,7 @@
 			</Picture>
 			<Action>ИсключитьРоли</Action>
 			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ВключитьРоли" id="3">
 			<Title>
@@ -1302,6 +1565,7 @@
 			</Picture>
 			<Action>ВключитьРоли</Action>
 			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ЗаполнитьИзПользователяИБ" id="4">
 			<Title>
@@ -1323,6 +1587,7 @@
 			<Action>ЗаполнитьИзПользователяИБ</Action>
 			<Representation>TextPicture</Representation>
 			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ГруппировкаРолейПоПодсистемам" id="5">
 			<Title>
@@ -1343,6 +1608,45 @@
 			</Picture>
 			<Action>ГруппировкаРолейПоПодсистемам</Action>
 			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СменитьПароль" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сменить пароль...</v8:content>
+				</v8:item>
+			</Title>
+			<Action>СменитьПароль</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ИзменитьОграничениеНаВходВПрограмму" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить ограничение</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ИзменитьОграничениеНаВходВПрограмму</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЗаписатьИЗакрыть" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать и закрыть</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать объект и закрыть форму</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаписатьИЗакрыть</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 	</Commands>
 	<Parameters>

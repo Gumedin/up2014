@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5">
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
 	<Subsystem uuid="cdbd26b1-9583-46e8-adf7-8cc705639892">
 		<Properties>
 			<Name>БазоваяФункциональность</Name>
@@ -10,7 +10,7 @@
 				</v8:item>
 			</Synonym>
 			<Comment/>
-			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<IncludeHelpInContents>false</IncludeHelpInContents>
 			<IncludeInCommandInterface>false</IncludeInCommandInterface>
 			<Explanation/>
 			<Picture/>
@@ -30,10 +30,8 @@
 				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.РазорватьСоединение</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Constant.ЗаголовокСистемы</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ЖурналРегистрации</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.УдалениеПомеченныхОбъектов</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ОбщегоНазначенияПереопределяемый</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Role.ВыводНаПринтерФайлБуферОбмена</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Role.ДобавлениеИзменениеБазовойНСИ</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Role.ЗапускAutomation</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Role.ЗапускВебКлиента</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Role.ЗапускВнешнегоСоединения</xr:Item>
@@ -42,7 +40,6 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Role.ИнтерактивноеОткрытиеВнешнихОтчетовИОбработок</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Role.ОбновлениеКонфигурацииБазыДанных</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Role.ПросмотрЖурналаРегистрации</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Role.ЧтениеБазовойНСИ</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Role.Администрирование</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Role.ПолныеПрава</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.УстановитьРасширениеРаботыСФайлами</xr:Item>
@@ -55,7 +52,6 @@
 				<xr:Item xsi:type="xr:MDObjectRef">StyleItem.ПоясняющийОшибкуТекст</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ВидыОпераций</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ПиктограммыЭлементов</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.РегламентированныеДанныеКлиентСервер</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.Подсистема</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.СтандартныеПодсистемыСервер</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.СтандартныеПодсистемыКлиент</xr:Item>
@@ -77,7 +73,6 @@
 				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ОбщегоНазначенияКлиентПереопределяемый</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ДлительныеОперации</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ДлительныеОперацииКлиент</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ДлительныеОперацииКлиентПовтИсп</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.ДлительнаяОперация</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.Вопрос32</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.РаботаВМоделиСервиса</xr:Item>
@@ -90,9 +85,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ВосклицательныйЗнакСерый</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ЗаполнитьФорму</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.Рассчитать</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Role.ДобавлениеИзменениеОбщейБазовойНСИ</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.Комментарий</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">StyleItem.НедоступныеДанныеЦвет</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.СтандартныеПодсистемыВМоделиСервиса</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.СтандартныеПодсистемыВЛокальномРежиме</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ЗаставкаВнешнейОперации</xr:Item>
@@ -125,19 +118,15 @@
 				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.РаботаВАвтономномРежиме</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.СтатусыДокумента</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ОбщегоНазначенияВызовСервера</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.Администрирование48</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Constant.ПараметрыБазовойФункциональности</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.РазделАдминистрирование48</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.СтандартныеПодсистемыПовтИсп</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.ПослеОтправкиДанных</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.ПослеПолученияДанных</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.ВыполнитьДействияПослеОтправкиДанныхУзлаВРаспределеннойИнформационнойБазе</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.ВыполнитьДействияПослеПолученияДанныхУзлаВРаспределеннойИнформационнойБазе</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.СтандартныеПодсистемыКлиентСервер</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">StyleItem.ЗаблокированныйРеквизитЦвет</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.НерекомендуемаяВерсияПлатформы</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Constant.ПараметрыСлужебныхСобытий</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ПодсистемыКонфигурацииПереопределяемый</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ОбновлениеИнформационнойБазыБСП</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommandGroup.Информация</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.СведенияОПользователе</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ИнформацияПоНедоступнымПолям</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ОтправитьЭлектронноеПисьмо</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">SessionParameter.ПараметрыКлиентаНаСервере</xr:Item>
@@ -172,48 +161,83 @@
 				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ОбщегоНазначенияГлобальный</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ЖурналРегистрацииВызовСервера</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Constant.ИдентификаторИнформационнойБазы</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Report.МестаИспользованияСсылок</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ЗаменаСсылок</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.Успешно32</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">ScheduledJob.УдалениеПомеченных</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.Успешно</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ФизическиеЛицаКлиентСервер</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">CommonTemplate.КомпонентаСклоненияФИО</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.АдминистрированиеКластераCOMКлиентСервер</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.АдминистрированиеКластераRASКлиентСервер</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.АдминистрированиеКластераКлиентСервер</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Constant.ПараметрыАдминистрированияИБ</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ПоискИУдалениеДублей</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.РаботаВБезопасномРежимеКлиент</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.РаботаВБезопасномРежимеПереопределяемый</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.РаботаВБезопасномРежимеСлужебный</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ИспользуютсяПрофилиБезопасности</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">DefinedType.БезопасныйРежим</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">XDTOPackage.V8AddinBundle</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">XDTOPackage.ApplicationPermissions_1_0_0_1</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Constant.ИспользуютсяПрофилиБезопасности</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Constant.ПрофильБезопасностиИнформационнойБазы</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Enum.ОперацииСНаборамиРазрешений</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.НастройкаРазрешенийНаИспользованиеВнешнихРесурсов</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.РежимыПодключенияВнешнихМодулей</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.РазрешенныеКаталогиФайловойСистемы</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.РазрешенныеCOMКлассы</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.РазрешенныеВнешниеКомпоненты</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.РазрешенныеПриложенияОперационнойСистемы</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.РазрешенныеИнтернетРесурсы</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ЗапросыРазрешенийНаИспользованиеВнешнихРесурсов</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.РазрешенияПереходаВПривилегированныйРежим</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ЗапросыАдминистрированияРазрешенийИспользованияВнешнихРесурсов</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.РаботаВБезопасномРежиме</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Constant.АвтоматическиНастраиватьРазрешенияВПрофиляхБезопасности</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.РаботаВБезопасномРежимеСлужебныйПовтИсп</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Enum.СостоянияЗапросовНаИспользованиеВнешнихРесурсов</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ПримечаниеЖурналаРегистрации</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Constant.ГлавныйУзел</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.ВосстановлениеСвязиСГлавнымУзлом</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.НастройкаРазрешенийНаИспользованиеВнешнихРесурсовГлобальный</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.НастройкаРазрешенийНаИспользованиеВнешнихРесурсовКлиент</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Report.ИспользуемыеВнешниеРесурсы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">StyleItem.РезультатУспехЦвет</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.СтрелкаВверх</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.СтрелкаВлево</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.СтрелкаВниз</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.СтрелкаВправо</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.ЗапретитьПометкуУдаленияПредопределенныхЭлементов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.ЗапретитьУдалениеПредопределенныхЭлементов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ИнтеграцияПодсистемБСП</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.Папка</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.БезопасноеХранилищеДанных</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.БезопасноеХранилищеДанныхОбластейДанных</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ИдентификаторыОбъектовРасширений</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ЗнакСтоп</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.РекомендацияПоПовышениюСкоростиРаботы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DefinedType.МестоХраненияФункциональныхОпций</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.ПоказателиВыделенныхЯчеек</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.Сумма</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ИдентификаторыОбъектовВерсийРасширений</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">SessionParameter.УстановленныеРасширения</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">SessionParameter.ВерсияРасширений</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">SessionParameter.ПодключенныеРасширения</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ВерсииРасширений</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.СеансыВерсийРасширений</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ScheduledJob.УдалениеУстаревшихПараметровРаботыВерсийРасширений</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ПараметрыРаботыВерсийРасширений</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.Расширения</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.БазовыеПраваВнешнегоПользователя</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ДлительныеОперацииВызовСервера</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ДлительныеОперацииГлобальный</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">SessionParameter.БуферОбмена</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.СкопироватьВБуферОбмена</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ВставитьИзБуфераОбмена</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.РегламентныеЗаданияСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ВосклицательныйЗнакКрасный</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">StyleItem.ИтогиФонГруппы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DefinedType.Организация</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.АдресПубликацииИнформационнойБазыВИнтернете</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.АдресПубликацииИнформационнойБазыВЛокальнойСети</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.ПустойРабочийСтол</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.СостоянияРасширенийКонфигурации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ПредупрежденияПриЗавершенииРаботы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.НезавершившаясяПроверка</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ВремяТекущегоСеанса</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">StyleItem.ГиперссылкаЦвет</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.СпособыРедактированияЭлектронныхПисем</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.СравнениеТабличныхДокументов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">StyleItem.ДобавленныйРеквизитФон</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">StyleItem.ИзмененноеЗначениеРеквизитаФон</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">StyleItem.ИзмененноеЗначениеРеквизитаЦвет</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">StyleItem.УдаленныйРеквизитФон</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ИнтеграцияСТехнологиейСервиса</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ПараметрыРаботыПрограммы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ИнтеграцияСТехнологиейСервисаКлиент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ИнтеграцияПодсистемБСПКлиент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.ВыборФорматаВложений</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ОбщегоНазначенияСлужебныйКлиент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.ВопросОбУстановкеВнешнейКомпоненты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ОбновитьФайлИзФайлаНаДиске</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.СохранитьФайлКак</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ЗавершитьРаботу</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.РегламентированныеДанныеКлиентСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">SessionParameter.ОтмененныеДлительныеОперации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">StyleItem.ЦветРазделаПанелиФункций</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ЗначокЩита</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">StyleItem.ЦветФонаПредупреждения</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.СтандартныеПодсистемыБезопасныйРежим</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ДлительнаяОперация16</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects/>

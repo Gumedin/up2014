@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Rights xmlns="http://v8.1c.ru/8.2/roles" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Rights" version="2.5">
+<Rights xmlns="http://v8.1c.ru/8.2/roles" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Rights" version="2.6">
 	<setForNewObjects>false</setForNewObjects>
 	<setForAttributesByDefault>true</setForAttributesByDefault>
 	<independentRightsOfChildObjects>false</independentRightsOfChildObjects>
@@ -46,28 +46,6 @@
 		</right>
 	</object>
 	<object>
-		<name>DataProcessor.УниверсальныйОбменДаннымиXML.Attribute.ЗагружатьДанныеВРежимеОбмена</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>DataProcessor.УниверсальныйОбменДаннымиXML.Attribute.ОбъектыПоСсылкеЗагружатьБезПометкиУдаления</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
 		<name>WebService.Exchange.Operation.PutFileIntoStorage</name>
 		<right>
 			<name>Use</name>
@@ -82,122 +60,23 @@
 		</right>
 	</object>
 	<object>
-		<name>DataProcessor.УниверсальныйОбменДаннымиXML.Attribute.ЗадаватьВопросПриЗагрузкеДанныхПриОткрытииОбработки</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>CommonForm.АвтономнаяРабота</name>
+		<name>CommonCommand.СценарииСинхронизации</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>DataProcessor.УниверсальныйОбменДаннымиXML.Attribute.Данные</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>DataProcessor.УниверсальныйОбменДаннымиXML.Attribute.ИмяВременногоФайлаПротоколаОбмена</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>DataProcessor.УниверсальныйОбменДаннымиXML.Attribute.ТипУдаленияРегистрацииИзмененийДляУзловОбменаПослеВыгрузки</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>DataProcessor.УниверсальныйОбменДаннымиXML.Attribute.ДатаОкончания</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>DataProcessor.УниверсальныйОбменДаннымиXML.Attribute.ПользовательИнформационнойБазыДляПодключения</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>DataProcessor.УниверсальныйОбменДаннымиXML.Attribute.ФлагОшибки</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>CommonCommand.ОткрытьСценарииОбменовДанными</name>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>DataProcessor.УниверсальныйОбменДаннымиXML.Attribute.ИмяФайлаПротоколаОбменаЗагрузка</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>DataProcessor.УниверсальныйОбменДаннымиXML.Attribute.КоличествоОбработанныхОбъектовДляОбновленияСтатуса</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
 		</right>
 	</object>
 	<object>
 		<name>WebService.Exchange_2_0_1_6.Operation.GetFilePart</name>
 		<right>
 			<name>Use</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>DataProcessor.ВыгрузкаЗагрузкаEnterpriseData.Command.ЗагрузкаДанныхEnterpriseData</name>
+		<right>
+			<name>View</name>
 			<value>true</value>
 		</right>
 	</object>
@@ -227,25 +106,25 @@
 		</right>
 	</object>
 	<object>
-		<name>DataProcessor.УниверсальныйОбменДаннымиXML.Attribute.ОткрыватьПротоколыОбменаПослеВыполненияОпераций</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>CommonCommand.ОткрытьОбменыДанными</name>
+		<name>CommonCommand.НастройкиСинхронизацииДанных</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
 		</right>
 	</object>
 	<object>
-		<name>CommonCommand.ВыполнитьОбменДаннымиИнтерактивно</name>
+		<name>CommonCommand.СинхронизироватьСДополнительнымиПараметрами</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>DataProcessor.ВыгрузкаЗагрузкаEnterpriseData</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -256,17 +135,6 @@
 		<right>
 			<name>Use</name>
 			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>DataProcessor.УниверсальныйОбменДаннымиXML.Attribute.ИмяСервераИнформационнойБазыДляПодключения</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
 		</right>
 	</object>
 	<object>
@@ -292,50 +160,6 @@
 		</right>
 	</object>
 	<object>
-		<name>DataProcessor.УниверсальныйОбменДаннымиXML.Attribute.КаталогИнформационнойБазыДляПодключения</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>DataProcessor.УниверсальныйОбменДаннымиXML.Attribute.РежимОбмена</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>DataProcessor.УниверсальныйОбменДаннымиXML.Attribute.ВыводВПротоколСообщенийОбОшибках</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>DataProcessor.УниверсальныйОбменДаннымиXML.Attribute.ОбработкиНастройкиВыгрузки</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
 		<name>DataProcessor.ИнтерактивноеИзменениеВыгрузки</name>
 		<right>
 			<name>Use</name>
@@ -347,7 +171,7 @@
 		</right>
 	</object>
 	<object>
-		<name>CommonCommand.ВыполнитьОбменДанными</name>
+		<name>CommonCommand.Синхронизировать</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -361,69 +185,17 @@
 		</right>
 	</object>
 	<object>
-		<name>DataProcessor.УниверсальныйОбменДаннымиXML.Attribute.ИмяФайлаОбработчиковСобытий</name>
+		<name>WebService.EnterpriseDataUpload_1_0_1_1.Operation.PutData</name>
 		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
+			<name>Use</name>
+			<value>true</value>
 		</right>
 	</object>
 	<object>
-		<name>DataProcessor.УниверсальныйОбменДаннымиXML.Attribute.КоличествоЭлементовВТранзакцииПриВыгрузкеДляПлановОбмена</name>
+		<name>WebService.EnterpriseDataExchange_1_0_1_1.Operation.GetDataPart</name>
 		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>DataProcessor.УниверсальныйОбменДаннымиXML.Attribute.АутентификацияWindowsИнформационнойБазыДляПодключения</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>DataProcessor.УниверсальныйОбменДаннымиXML.Attribute.ТаблицаПравилВыгрузки</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>DataProcessor.УниверсальныйОбменДаннымиXML.Attribute.ТипИнформационнойБазыДляПодключения</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>DataProcessor.УниверсальныйОбменДаннымиXML.Attribute.НеВыводитьНикакихИнформационныхСообщенийПользователю</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
+			<name>Use</name>
+			<value>true</value>
 		</right>
 	</object>
 	<object>
@@ -431,39 +203,6 @@
 		<right>
 			<name>Use</name>
 			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>DataProcessor.УниверсальныйОбменДаннымиXML.Attribute.КоличествоОбъектовНаТранзакцию</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>DataProcessor.УниверсальныйОбменДаннымиXML.Attribute.ВыводВОкноСообщенийИнформационныхСообщений</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>DataProcessor.УниверсальныйОбменДаннымиXML.Attribute.СохраненныеНастройки</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
 		</right>
 	</object>
 	<object>
@@ -478,40 +217,7 @@
 		</right>
 	</object>
 	<object>
-		<name>DataProcessor.УниверсальныйОбменДаннымиXML.Attribute.ИмяФайлаВнешнейОбработкиОбработчиковСобытий</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>DataProcessor.УниверсальныйОбменДаннымиXML.Attribute.НеЗадаватьВопросПриЗагрузкеДанныхПриОткрытииОбработки</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>DataProcessor.УниверсальныйОбменДаннымиXML.Attribute.ЗаписыватьРегистрыНаборамиЗаписей</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>CommonCommand.ПерейтиВЖурналРегистрацииСобытийВыгрузкиДанных</name>
+		<name>CommonCommand.СобытияОтправки</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -532,87 +238,17 @@
 		</right>
 	</object>
 	<object>
-		<name>DataProcessor.УниверсальныйОбменДаннымиXML.Attribute.ОбработкиНастройкиЗагрузки</name>
+		<name>WebService.EnterpriseDataUpload_1_0_1_1.Operation.TestConnection</name>
 		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>CommonCommand.АвтономнаяРабота</name>
-		<right>
-			<name>View</name>
+			<name>Use</name>
 			<value>true</value>
 		</right>
 	</object>
 	<object>
-		<name>DataProcessor.УниверсальныйОбменДаннымиXML.Attribute.ТаблицаНастройкиПараметров</name>
+		<name>WebService.EnterpriseDataExchange_1_0_1_1.Operation.ConfirmGettingFile</name>
 		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>DataProcessor.УниверсальныйОбменДаннымиXML.Attribute.КомментарийПриВыгрузкеДанных</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>DataProcessor.УниверсальныйОбменДаннымиXML.Attribute.ТаблицаПравилОчистки</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>DataProcessor.УниверсальныйОбменДаннымиXML.Attribute.ВерсияПлатформыИнформационнойБазыДляПодключения</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>DataProcessor.УниверсальныйОбменДаннымиXML.Attribute.АрхивироватьФайл</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>DataProcessor.УниверсальныйОбменДаннымиXML.Attribute.ВыгружатьТолькоРазрешенные</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
+			<name>Use</name>
+			<value>true</value>
 		</right>
 	</object>
 	<object>
@@ -637,28 +273,6 @@
 		</right>
 	</object>
 	<object>
-		<name>DataProcessor.УниверсальныйОбменДаннымиXML.Attribute.ВестиДополнительныйКонтрольЗаписиВXML</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>DataProcessor.УниверсальныйОбменДаннымиXML.Attribute.ВерсияПравилОбмена</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
 		<name>WebService.Exchange_2_0_1_6.Operation.GetContinuousOperationStatus</name>
 		<right>
 			<name>Use</name>
@@ -673,80 +287,10 @@
 		</right>
 	</object>
 	<object>
-		<name>DataProcessor.УниверсальныйОбменДаннымиXML.Attribute.Комментарий</name>
+		<name>WebService.EnterpriseDataUpload_1_0_1_1.Operation.PutDataActionResult</name>
 		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>DataProcessor.УниверсальныйОбменДаннымиXML.Attribute.ОбрезатьСтрокиСправа</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>DataProcessor.УниверсальныйОбменДаннымиXML.Attribute.ИспользоватьТранзакции</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>DataProcessor.УниверсальныйОбменДаннымиXML.Attribute.ИспользоватьОтборПоДатеДляВсехОбъектов</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>DataProcessor.УниверсальныйОбменДаннымиXML.Attribute.ЗаписыватьВИнформационнуюБазуТолькоИзмененныеОбъекты</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>DataProcessor.УниверсальныйОбменДаннымиXML.Attribute.ФлагРежимОтладкиОбработчиков</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>DataProcessor.УниверсальныйОбменДаннымиXML.Attribute.ИмяФайлаПравилОбмена</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
+			<name>Use</name>
+			<value>true</value>
 		</right>
 	</object>
 	<object>
@@ -768,36 +312,10 @@
 		</right>
 	</object>
 	<object>
-		<name>DataProcessor.УниверсальныйОбменДаннымиXML.Attribute.ДатаНачала</name>
+		<name>WebService.EnterpriseDataUpload_1_0_1_1.Operation.Ping</name>
 		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>DataProcessor.УниверсальныйОбменДаннымиXML.Attribute.ПарольИнформационнойБазыДляПодключения</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>DataProcessor.УниверсальныйОбменДаннымиXML.Attribute.ДатаВыгрузкиДанных</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
+			<name>Use</name>
+			<value>true</value>
 		</right>
 	</object>
 	<object>
@@ -805,17 +323,6 @@
 		<right>
 			<name>Use</name>
 			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>DataProcessor.УниверсальныйОбменДаннымиXML.Attribute.НепосредственноеЧтениеВИБПриемнике</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
 		</right>
 	</object>
 	<object>
@@ -830,17 +337,6 @@
 		</right>
 	</object>
 	<object>
-		<name>DataProcessor.УниверсальныйОбменДаннымиXML.Attribute.ЭтоИнтерактивныйРежим</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
 		<name>InformationRegister.ПравилаДляОбменаДанными</name>
 		<right>
 			<name>Read</name>
@@ -852,47 +348,10 @@
 		</right>
 	</object>
 	<object>
-		<name>DataProcessor.УниверсальныйОбменДаннымиXML.Attribute.ИмяИнформационнойБазыНаСервереДляПодключения</name>
+		<name>WebService.EnterpriseDataUpload_1_0_1_1.Operation.PutFilePart</name>
 		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>DataProcessor.УниверсальныйОбменДаннымиXML.Attribute.РежимОтладкиАлгоритмов</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>DataProcessor.УниверсальныйОбменДаннымиXML.Attribute.ПарольДляРаспаковкиФайлаОбмена</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>DataProcessor.УниверсальныйОбменДаннымиXML.Attribute.ИспользоватьТранзакцииПриВыгрузкеДляПлановОбмена</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
+			<name>Use</name>
+			<value>true</value>
 		</right>
 	</object>
 	<object>
@@ -915,21 +374,17 @@
 		</right>
 	</object>
 	<object>
-		<name>CommonForm.ОбменыДанными</name>
+		<name>WebService.EnterpriseDataExchange_1_0_1_1.Operation.TestConnection</name>
 		<right>
-			<name>View</name>
+			<name>Use</name>
 			<value>true</value>
 		</right>
 	</object>
 	<object>
-		<name>DataProcessor.УниверсальныйОбменДаннымиXML.Attribute.ДописыватьДанныеВПротоколОбмена</name>
+		<name>CommonForm.СинхронизацияДанных</name>
 		<right>
 			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
+			<value>true</value>
 		</right>
 	</object>
 	<object>
@@ -947,14 +402,10 @@
 		</right>
 	</object>
 	<object>
-		<name>DataProcessor.УниверсальныйОбменДаннымиXML.Attribute.ОбработчикиСобытийЧитаемИзФайлаПравилОбмена</name>
+		<name>WebService.EnterpriseDataExchange_1_0_1_1.Operation.PrepareDataForGetting</name>
 		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
+			<name>Use</name>
+			<value>true</value>
 		</right>
 	</object>
 	<object>
@@ -965,32 +416,10 @@
 		</right>
 	</object>
 	<object>
-		<name>DataProcessor.УниверсальныйОбменДаннымиXML.Attribute.ПостроительОтчета</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
 		<name>WebService.Exchange.Operation.Download</name>
 		<right>
 			<name>Use</name>
 			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>DataProcessor.УниверсальныйОбменДаннымиXML.Attribute.ИмяФайлаОбмена</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
 		</right>
 	</object>
 	<object>
@@ -1012,109 +441,45 @@
 		</right>
 	</object>
 	<object>
-		<name>DataProcessor.ПомощникИнтерактивногоОбменаДаннымиВМоделиСервиса</name>
+		<name>WebService.EnterpriseDataExchange_1_0_1_1.Operation.PutDataActionResult</name>
 		<right>
 			<name>Use</name>
 			<value>true</value>
 		</right>
+	</object>
+	<object>
+		<name>WebService.EnterpriseDataExchange_1_0_1_1.Operation.PrepareDataActionResult</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>CommonCommand.ПредупрежденияПриСинхронизацииДанных</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
 		</right>
 	</object>
 	<object>
-		<name>DataProcessor.УниверсальныйОбменДаннымиXML.Attribute.КомментарийПриЗагрузкеДанных</name>
+		<name>WebService.EnterpriseDataExchange_1_0_1_1.Operation.Ping</name>
 		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>DataProcessor.УниверсальныйОбменДаннымиXML.Attribute.ОптимизированнаяЗаписьОбъектов</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>DataProcessor.УниверсальныйОбменДаннымиXML.Attribute.ТаблицаПравилКонвертации</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>DataProcessor.УниверсальныйОбменДаннымиXML.Attribute.ПарольДляСжатияФайлаОбмена</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>CommonCommand.ОткрытьРезультатыОбменаДанными</name>
-		<right>
-			<name>View</name>
+			<name>Use</name>
 			<value>true</value>
 		</right>
 	</object>
 	<object>
-		<name>DataProcessor.УниверсальныйОбменДаннымиXML.Attribute.Параметры</name>
+		<name>WebService.EnterpriseDataExchange_1_0_1_1.Operation.PutData</name>
 		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
+			<name>Use</name>
+			<value>true</value>
 		</right>
 	</object>
 	<object>
-		<name>DataProcessor.УниверсальныйОбменДаннымиXML.Attribute.ИмяВременногоФайлаОбработчиковСобытий</name>
+		<name>WebService.EnterpriseDataExchange_1_0_1_1.Operation.PutFilePart</name>
 		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>DataProcessor.УниверсальныйОбменДаннымиXML.Attribute.НастройкаАвтоматическойЗагрузкиДанных</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>DataProcessor.УниверсальныйОбменДаннымиXML.Attribute.ВыполнитьОбменДаннымиВОптимизированномФормате</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
+			<name>Use</name>
+			<value>true</value>
 		</right>
 	</object>
 	<object>
@@ -1132,40 +497,7 @@
 		</right>
 	</object>
 	<object>
-		<name>DataProcessor.УниверсальныйОбменДаннымиXML.Attribute.ФлагРежимОтладки</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>DataProcessor.УниверсальныйОбменДаннымиXML.Attribute.ИмяФайлаПротоколаОбмена</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>DataProcessor.УниверсальныйОбменДаннымиXML.Attribute.ВыводВПротоколИнформационныхСообщений</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>CommonCommand.ПерейтиВЖурналРегистрацииСобытийЗагрузкиДанных</name>
+		<name>CommonCommand.СобытияПолучения</name>
 		<right>
 			<name>View</name>
 			<value>true</value>

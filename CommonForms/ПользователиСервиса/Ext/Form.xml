@@ -1,9 +1,25 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
 	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
-	<CommandBarLocation>None</CommandBarLocation>
-	<VerticalScroll>useIfNecessary</VerticalScroll>
-	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<CommandBarLocation>Bottom</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<HorizontalAlign>Right</HorizontalAlign>
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ДобавитьВыбранныхПользователей" id="21">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.ДобавитьВыбранныхПользователей</CommandName>
+				<ExtendedTooltip name="ДобавитьВыбранныхПользователейExtendedTooltip" id="32"/>
+			</Button>
+			<Button name="Отмена" id="22">
+				<Type>CommandBarButton</Type>
+				<Representation>Text</Representation>
+				<CommandName>Form.StandardCommand.Close</CommandName>
+				<ExtendedTooltip name="ОтменаExtendedTooltip" id="33"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
 	<Events>
 		<Event name="OnOpen">ПриОткрытии</Event>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
@@ -16,6 +32,12 @@
 			<EnableStartDrag>true</EnableStartDrag>
 			<EnableDrag>true</EnableDrag>
 			<DataPath>ПользователиСервиса</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пользователи сервиса</v8:content>
+				</v8:item>
+			</Title>
 			<CommandSet>
 				<ExcludedCommand>Add</ExcludedCommand>
 				<ExcludedCommand>Change</ExcludedCommand>
@@ -28,9 +50,6 @@
 				<ExcludedCommand>SortListAsc</ExcludedCommand>
 				<ExcludedCommand>SortListDesc</ExcludedCommand>
 			</CommandSet>
-			<SearchStringLocation>None</SearchStringLocation>
-			<ViewStatusLocation>None</ViewStatusLocation>
-			<SearchControlLocation>None</SearchControlLocation>
 			<RowFilter xsi:nil="true"/>
 			<ContextMenu name="ПользователиСервисаКонтекстноеМеню" id="2"/>
 			<AutoCommandBar name="ПользователиСервисаКоманднаяПанель" id="3">
@@ -48,29 +67,29 @@
 				</ChildItems>
 			</AutoCommandBar>
 			<ExtendedTooltip name="ПользователиСервисаExtendedTooltip" id="25"/>
-			<SearchStringAddition name="ПользователиСервисаСтрокаПоиска" id="34">
+			<SearchStringAddition name="ПользователиСервисаSearchString" id="34">
 				<AdditionSource>
 					<Item>ПользователиСервиса</Item>
 					<Type>SearchStringRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="ПользователиСервисаСтрокаПоискаКонтекстноеМеню" id="35"/>
-				<ExtendedTooltip name="ПользователиСервисаСтрокаПоискаРасширеннаяПодсказка" id="36"/>
+				<ContextMenu name="ПользователиСервисаSearchStringContextMenu" id="35"/>
+				<ExtendedTooltip name="ПользователиСервисаSearchStringExtendedTooltip" id="36"/>
 			</SearchStringAddition>
-			<ViewStatusAddition name="ПользователиСервисаСостояниеПросмотра" id="37">
+			<ViewStatusAddition name="ПользователиСервисаViewStatus" id="37">
 				<AdditionSource>
 					<Item>ПользователиСервиса</Item>
 					<Type>ViewStatusRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="ПользователиСервисаСостояниеПросмотраКонтекстноеМеню" id="38"/>
-				<ExtendedTooltip name="ПользователиСервисаСостояниеПросмотраРасширеннаяПодсказка" id="39"/>
+				<ContextMenu name="ПользователиСервисаViewStatusContextMenu" id="38"/>
+				<ExtendedTooltip name="ПользователиСервисаViewStatusExtendedTooltip" id="39"/>
 			</ViewStatusAddition>
-			<SearchControlAddition name="ПользователиСервисаУправлениеПоиском" id="40">
+			<SearchControlAddition name="ПользователиСервисаSearchControl" id="40">
 				<AdditionSource>
 					<Item>ПользователиСервиса</Item>
 					<Type>SearchControl</Type>
 				</AdditionSource>
-				<ContextMenu name="ПользователиСервисаУправлениеПоискомКонтекстноеМеню" id="41"/>
-				<ExtendedTooltip name="ПользователиСервисаУправлениеПоискомРасширеннаяПодсказка" id="42"/>
+				<ContextMenu name="ПользователиСервисаSearchControlContextMenu" id="41"/>
+				<ExtendedTooltip name="ПользователиСервисаSearchControlExtendedTooltip" id="42"/>
 			</SearchControlAddition>
 			<ChildItems>
 				<CheckBoxField name="ПользователиСервисаДобавить" id="16">
@@ -110,36 +129,6 @@
 				</CheckBoxField>
 			</ChildItems>
 		</Table>
-		<CommandBar name="ГруппаКнопкиДействий" id="20">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Группа кнопки действий</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Группа кнопки действий</v8:content>
-				</v8:item>
-			</ToolTip>
-			<HorizontalLocation>Right</HorizontalLocation>
-			<ExtendedTooltip name="ГруппаКнопкиДействийExtendedTooltip" id="31"/>
-			<ChildItems>
-				<Button name="ДобавитьВыбранныхПользователей" id="21">
-					<Type>CommandBarButton</Type>
-					<DefaultButton>true</DefaultButton>
-					<CommandName>Form.Command.ДобавитьВыбранныхПользователей</CommandName>
-					<ExtendedTooltip name="ДобавитьВыбранныхПользователейExtendedTooltip" id="32"/>
-				</Button>
-				<Button name="Отмена" id="22">
-					<Type>CommandBarButton</Type>
-					<Representation>Text</Representation>
-					<CommandName>Form.StandardCommand.Close</CommandName>
-					<ExtendedTooltip name="ОтменаExtendedTooltip" id="33"/>
-				</Button>
-			</ChildItems>
-		</CommandBar>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="ПользователиСервиса" id="1">
@@ -247,6 +236,7 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>УстановитьВсе</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="СнятьВсе" id="2">
 			<Title>
@@ -266,6 +256,7 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>СнятьВсе</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ДобавитьВыбранныхПользователей" id="3">
 			<Title>
@@ -281,6 +272,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ДобавитьВыбранныхПользователей</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 	</Commands>
 	<Parameters>

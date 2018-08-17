@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5">
-	<Width>56</Width>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
 	<WindowOpeningMode>LockWholeInterface</WindowOpeningMode>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<Autofill>false</Autofill>
@@ -10,53 +9,115 @@
 	</Events>
 	<ChildItems>
 		<Pages name="ПанельОсновная" id="26">
-			<ToolTip>
+			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Панель основная</v8:content>
 				</v8:item>
-			</ToolTip>
+			</Title>
 			<PagesRepresentation>None</PagesRepresentation>
 			<ExtendedTooltip name="ПанельОсновнаяРасширеннаяПодсказка" id="27"/>
 			<ChildItems>
 				<Page name="Начало" id="28">
-					<ToolTip>
+					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
 							<v8:content>Начало</v8:content>
 						</v8:item>
-					</ToolTip>
+					</Title>
 					<ExtendedTooltip name="НачалоРасширеннаяПодсказка" id="29"/>
 					<ChildItems>
 						<LabelDecoration name="ИнформационнаяНадписьИмяУзла" id="44">
+							<AutoMaxWidth>false</AutoMaxWidth>
 							<Title formatted="true">
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Не удалось установить обновление программы, полученное из "%1".</v8:content>
+									<v8:content>Не удалось установить обновление программы, полученное из
+Главного узла
+Техническую информацию см. в &lt;link ЖурналРегистрации&gt;Журнале регистрации&lt;/&gt;.</v8:content>
 								</v8:item>
 							</Title>
 							<ContextMenu name="ИнформационнаяНадписьИмяУзлаКонтекстноеМеню" id="45"/>
 							<ExtendedTooltip name="ИнформационнаяНадписьИмяУзлаРасширеннаяПодсказка" id="46"/>
+							<Events>
+								<Event name="URLProcessing">ИнформационнаяНадписьИмяУзлаОбработкаНавигационнойСсылки</Event>
+							</Events>
 						</LabelDecoration>
 						<LabelDecoration name="ИнформационнаяНадпись" id="32">
+							<AutoMaxWidth>false</AutoMaxWidth>
 							<Title formatted="true">
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Техническую информацию см. в &lt;link ЖурналРегистрации&gt;Журнале регистрации&lt;/&gt;.
-
-Нажмите &lt;b&gt;Синхронизировать и продолжить,&lt;/&gt; чтобы получить
+									<v8:content>Нажмите &lt;b&gt;Синхронизировать и продолжить,&lt;/&gt; чтобы получить
 обновление программы еще раз (рекомендуется).
-&lt;link ПараметрыПодключения&gt;Изменить п&lt;/&gt;&lt;link ПараметрыПодключения&gt;араметры подключения для синхронизации данных&lt;/&gt;
 </v8:content>
 								</v8:item>
 							</Title>
 							<ContextMenu name="ИнформационнаяНадписьКонтекстноеМеню" id="33"/>
 							<ExtendedTooltip name="ИнформационнаяНадписьРасширеннаяПодсказка" id="34"/>
-							<Events>
-								<Event name="URLProcessing">ИнформационнаяНадписьОбработкаНавигационнойСсылки</Event>
-							</Events>
 						</LabelDecoration>
+						<Pages name="СтраницыПараметрыПодключения" id="57">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Страницы параметры подключения</v8:content>
+								</v8:item>
+							</Title>
+							<PagesRepresentation>None</PagesRepresentation>
+							<ExtendedTooltip name="СтраницыПараметрыПодключенияРасширеннаяПодсказка" id="58"/>
+							<ChildItems>
+								<Page name="СтраницаРИБ" id="59">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Страница РИБ</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Horizontal</Group>
+									<ExtendedTooltip name="СтраницаРИБРасширеннаяПодсказка" id="60"/>
+									<ChildItems>
+										<LabelDecoration name="ЗаглушкаРИБ" id="76">
+											<ContextMenu name="ЗаглушкаРИБКонтекстноеМеню" id="77"/>
+											<ExtendedTooltip name="ЗаглушкаРИБРасширеннаяПодсказка" id="78"/>
+										</LabelDecoration>
+										<Button name="ПараметрыПодключения" id="63">
+											<Type>Hyperlink</Type>
+											<CommandName>Form.Command.ПараметрыПодключения</CommandName>
+											<ExtendedTooltip name="ПараметрыПодключенияРасширеннаяПодсказка" id="64"/>
+										</Button>
+									</ChildItems>
+								</Page>
+								<Page name="СтраницаАРМ" id="61">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Страница АРМ</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Horizontal</Group>
+									<ExtendedTooltip name="СтраницаАРМРасширеннаяПодсказка" id="62"/>
+									<ChildItems>
+										<LabelDecoration name="ЗаглушкаАРМ" id="70">
+											<ContextMenu name="ЗаглушкаАРМКонтекстноеМеню" id="71"/>
+											<ExtendedTooltip name="ЗаглушкаАРМРасширеннаяПодсказка" id="72"/>
+										</LabelDecoration>
+										<InputField name="Пароль" id="65">
+											<DataPath>Пароль</DataPath>
+											<PasswordMode>true</PasswordMode>
+											<ContextMenu name="ПарольКонтекстноеМеню" id="66"/>
+											<ExtendedTooltip name="ПарольРасширеннаяПодсказка" id="67"/>
+										</InputField>
+										<Button name="ЗабылиПароль" id="68">
+											<Type>Hyperlink</Type>
+											<CommandName>Form.Command.ЗабылиПароль</CommandName>
+											<ExtendedTooltip name="ЗабылиПарольРасширеннаяПодсказка" id="69"/>
+										</Button>
+									</ChildItems>
+								</Page>
+							</ChildItems>
+						</Pages>
 						<LabelDecoration name="ИнформационнаяНадписьНеСинхронизировать" id="41">
+							<AutoMaxWidth>false</AutoMaxWidth>
 							<Title formatted="true">
 								<v8:item>
 									<v8:lang>ru</v8:lang>
@@ -65,25 +126,20 @@
 							</Title>
 							<ContextMenu name="ИнформационнаяНадписьНеСинхронизироватьКонтекстноеМеню" id="42"/>
 							<ExtendedTooltip name="ИнформационнаяНадписьНеСинхронизироватьРасширеннаяПодсказка" id="43"/>
-							<Events>
-								<Event name="URLProcessing">ИнформационнаяНадписьОбработкаНавигационнойСсылки</Event>
-							</Events>
 						</LabelDecoration>
 					</ChildItems>
 				</Page>
 				<Page name="ДлительнаяОперация" id="30">
-					<ToolTip>
+					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
 							<v8:content>Длительная операция</v8:content>
 						</v8:item>
-					</ToolTip>
+					</Title>
 					<Group>Horizontal</Group>
 					<ExtendedTooltip name="ДлительнаяОперацияРасширеннаяПодсказка" id="31"/>
 					<ChildItems>
 						<PictureDecoration name="КартинкаДлительнаяОперация" id="35">
-							<Width>7</Width>
-							<Height>3</Height>
 							<Picture>
 								<xr:Ref>CommonPicture.СинхронизацияДанныхДлительнаяОперация48</xr:Ref>
 								<xr:LoadTransparent>false</xr:LoadTransparent>
@@ -92,6 +148,7 @@
 							<ExtendedTooltip name="КартинкаДлительнаяОперацияРасширеннаяПодсказка" id="37"/>
 						</PictureDecoration>
 						<LabelDecoration name="НадписьДлительнаяОперация" id="38">
+							<AutoMaxWidth>false</AutoMaxWidth>
 							<Height>3</Height>
 							<SkipOnInput>false</SkipOnInput>
 							<Font ref="sys:DefaultGUIFont" height="10" kind="WindowsFont"/>
@@ -130,22 +187,16 @@
 					<v8:content>Командная панель</v8:content>
 				</v8:item>
 			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Командная панель</v8:content>
-				</v8:item>
-			</ToolTip>
 			<HorizontalLocation>Right</HorizontalLocation>
 			<ExtendedTooltip name="КоманднаяПанельРасширеннаяПодсказка" id="25"/>
 			<ChildItems>
 				<ButtonGroup name="ГруппаКнопокОсновная" id="51">
-					<ToolTip>
+					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Группа кнопок основная</v8:content>
+							<v8:content>Кнопок основная</v8:content>
 						</v8:item>
-					</ToolTip>
+					</Title>
 					<ExtendedTooltip name="ГруппаКнопокОсновнаяРасширеннаяПодсказка" id="52"/>
 					<ChildItems>
 						<Button name="ФормаСинхронизироватьИПродолжить" id="1">
@@ -173,6 +224,12 @@
 					</ChildItems>
 				</ButtonGroup>
 				<ButtonGroup name="ГруппаКнопокДлительнаяОперация" id="53">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Кнопок длительная операция</v8:content>
+						</v8:item>
+					</Title>
 					<ExtendedTooltip name="ГруппаКнопокДлительнаяОперацияРасширеннаяПодсказка" id="54"/>
 					<ChildItems>
 						<Button name="ЗавершитьРаботу" id="55">
@@ -304,6 +361,47 @@
 				<v8:Type>xs:boolean</v8:Type>
 			</Type>
 		</Attribute>
+		<Attribute name="Пароль" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пароль</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="АдресДляВосстановленияПароляУчетнойЗаписи" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес для восстановления пароля учетной записи</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЭтоАвтономноеРабочееМесто" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Это автономное рабочее место</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
 	</Attributes>
 	<Commands>
 		<Command name="СинхронизироватьИПродолжить" id="1">
@@ -320,6 +418,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>СинхронизироватьИПродолжить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ЗавершитьРаботу" id="2">
 			<Title>
@@ -331,10 +430,11 @@
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Завершить работу и провторить запуск позднее</v8:content>
+					<v8:content>Завершить работу и повторить запуск позднее</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ЗавершитьРаботу</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="НеСинхронизироватьИПродолжить" id="3">
 			<Title>
@@ -350,6 +450,39 @@
 				</v8:item>
 			</ToolTip>
 			<Action>НеСинхронизироватьИПродолжить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПараметрыПодключения" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить параметры подключения для синхронизации данных</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметры подключения</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПараметрыПодключения</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЗабылиПароль" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Забыли пароль?</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Забыли пароль</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗабылиПароль</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 	</Commands>
 	<Parameters>

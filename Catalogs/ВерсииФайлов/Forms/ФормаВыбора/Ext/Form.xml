@@ -1,31 +1,57 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
 	<Title>
 		<v8:item>
 			<v8:lang>ru</v8:lang>
 			<v8:content>Выбор версии файла</v8:content>
 		</v8:item>
 	</Title>
-	<Width>80</Width>
 	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
 	<AutoTitle>false</AutoTitle>
 	<CommandBarLocation>Top</CommandBarLocation>
-	<VerticalScroll>useIfNecessary</VerticalScroll>
-	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
 	<Events>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
+		<UsualGroup name="ГруппаПользовательскихНастроек" id="35">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа пользовательских настроек</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПользовательскихНастроекРасширеннаяПодсказка" id="36"/>
+		</UsualGroup>
+		<CommandBar name="КоманднаяПанель" id="37">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Командная панель</v8:content>
+				</v8:item>
+			</Title>
+			<CommandSource>Form</CommandSource>
+			<ExtendedTooltip name="КоманднаяПанельРасширеннаяПодсказка" id="38"/>
+		</CommandBar>
 		<Table name="Список" id="2">
 			<CommandBarLocation>None</CommandBarLocation>
 			<SkipOnInput>false</SkipOnInput>
 			<DefaultItem>true</DefaultItem>
-			<Width>40</Width>
-			<HeightInTableRows>10</HeightInTableRows>
+			<HeightInTableRows>7</HeightInTableRows>
 			<ChoiceMode>true</ChoiceMode>
 			<SelectionMode>SingleRow</SelectionMode>
 			<DataPath>Список</DataPath>
 			<BorderColor>style:BorderColor</BorderColor>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список</v8:content>
+				</v8:item>
+			</Title>
 			<SearchStringLocation>None</SearchStringLocation>
 			<ViewStatusLocation>None</ViewStatusLocation>
 			<SearchControlLocation>None</SearchControlLocation>
@@ -42,67 +68,78 @@
 			<ShowRoot>false</ShowRoot>
 			<AllowRootChoice>false</AllowRootChoice>
 			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<UserSettingsGroup>ГруппаПользовательскихНастроек</UserSettingsGroup>
 			<ContextMenu name="СписокКонтекстноеМеню" id="3"/>
 			<AutoCommandBar name="СписокКоманднаяПанель" id="18"/>
 			<ExtendedTooltip name="СписокExtendedTooltip" id="27"/>
-			<SearchStringAddition name="СписокСтрокаПоиска" id="35">
+			<SearchStringAddition name="СписокСтрокаПоиска" id="42">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>SearchStringRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="36"/>
-				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="37"/>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="43"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="44"/>
 			</SearchStringAddition>
-			<ViewStatusAddition name="СписокСостояниеПросмотра" id="38">
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="45">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>ViewStatusRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="39"/>
-				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="40"/>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="46"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="47"/>
 			</ViewStatusAddition>
-			<SearchControlAddition name="СписокУправлениеПоиском" id="41">
+			<SearchControlAddition name="СписокУправлениеПоиском" id="48">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>SearchControl</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="42"/>
-				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="43"/>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="49"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="50"/>
 			</SearchControlAddition>
 			<ChildItems>
-				<InputField name="НомерВерсии" id="19">
+				<LabelField name="СписокВладелец" id="39">
+					<DataPath>Список.Владелец</DataPath>
+					<ContextMenu name="СписокВладелецКонтекстноеМеню" id="40"/>
+					<ExtendedTooltip name="СписокВладелецРасширеннаяПодсказка" id="41"/>
+				</LabelField>
+				<InputField name="СписокНомерВерсии" id="19">
 					<DataPath>Список.НомерВерсии</DataPath>
 					<FooterHorizontalAlign>Left</FooterHorizontalAlign>
+					<Width>11</Width>
 					<Wrap>false</Wrap>
 					<BorderColor>style:BorderColor</BorderColor>
-					<ContextMenu name="НомерВерсииКонтекстноеМеню" id="20"/>
-					<ExtendedTooltip name="НомерВерсииExtendedTooltip" id="28"/>
+					<ContextMenu name="СписокНомерВерсииКонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="СписокНомерВерсииРасширеннаяПодсказка" id="28"/>
 				</InputField>
-				<InputField name="Автор" id="21">
+				<InputField name="СписокАвтор" id="21">
 					<DataPath>Список.Автор</DataPath>
+					<Width>15</Width>
 					<Wrap>false</Wrap>
-					<ContextMenu name="АвторКонтекстноеМеню" id="22"/>
-					<ExtendedTooltip name="АвторExtendedTooltip" id="29"/>
+					<ContextMenu name="СписокАвторКонтекстноеМеню" id="22"/>
+					<ExtendedTooltip name="СписокАвторРасширеннаяПодсказка" id="29"/>
 				</InputField>
-				<InputField name="ДатаСоздания" id="23">
+				<InputField name="СписокДатаСоздания" id="23">
 					<DataPath>Список.ДатаСоздания</DataPath>
+					<Width>15</Width>
+					<HorizontalStretch>false</HorizontalStretch>
 					<Wrap>false</Wrap>
-					<ContextMenu name="ДатаСозданияКонтекстноеМеню" id="24"/>
-					<ExtendedTooltip name="ДатаСозданияExtendedTooltip" id="30"/>
+					<ContextMenu name="СписокДатаСозданияКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="СписокДатаСозданияРасширеннаяПодсказка" id="30"/>
 				</InputField>
-				<InputField name="Размер" id="25">
+				<InputField name="СписокРазмер" id="25">
 					<DataPath>Список.Размер</DataPath>
 					<Wrap>false</Wrap>
-					<ContextMenu name="РазмерКонтекстноеМеню" id="26"/>
-					<ExtendedTooltip name="РазмерExtendedTooltip" id="31"/>
+					<ContextMenu name="СписокРазмерКонтекстноеМеню" id="26"/>
+					<ExtendedTooltip name="СписокРазмерРасширеннаяПодсказка" id="31"/>
 				</InputField>
-				<LabelField name="Ссылка" id="32">
+				<LabelField name="СписокСсылка" id="32">
 					<DataPath>Список.Ссылка</DataPath>
 					<UserVisible>
 						<xr:Common>false</xr:Common>
 					</UserVisible>
-					<ContextMenu name="СсылкаКонтекстноеМеню" id="33"/>
-					<ExtendedTooltip name="СсылкаРасширеннаяПодсказка" id="34"/>
+					<Width>1</Width>
+					<ContextMenu name="СписокСсылкаКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="СписокСсылкаРасширеннаяПодсказка" id="34"/>
 				</LabelField>
 			</ChildItems>
 		</Table>

@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
 	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
-	<VerticalScroll>useIfNecessary</VerticalScroll>
 	<CommandSet>
 		<ExcludedCommand>Copy</ExcludedCommand>
 		<ExcludedCommand>Delete</ExcludedCommand>
@@ -38,7 +37,7 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Группа информационных сообщений</v8:content>
+					<v8:content>Информационных сообщений</v8:content>
 				</v8:item>
 			</Title>
 			<Group>Vertical</Group>
@@ -47,6 +46,7 @@
 			<ExtendedTooltip name="ГруппаИнформационныхСообщенийExtendedTooltip" id="14"/>
 			<ChildItems>
 				<LabelDecoration name="ИнформационноеСообщение" id="7">
+					<AutoMaxWidth>false</AutoMaxWidth>
 					<TextColor>style:ПоясняющийТекст</TextColor>
 					<Title formatted="false">
 						<v8:item>
@@ -63,6 +63,81 @@
 					<CommandName>Form.Command.СделатьЭтуКонечнуюТочкуВедомой</CommandName>
 					<ExtendedTooltip name="СделатьЭтуКонечнуюТочкуВедомойExtendedTooltip" id="16"/>
 				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаСлужебные" id="17">
+			<UserVisible>
+				<xr:Common>false</xr:Common>
+			</UserVisible>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Служебные параметры</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<ExtendedTooltip name="ГруппаСлужебныеРасширеннаяПодсказка" id="18"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаСлужебныеВерх" id="36">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Служебные верх</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаСлужебныеВерхРасширеннаяПодсказка" id="37"/>
+					<ChildItems>
+						<CheckBoxField name="Ведущая" id="28">
+							<DataPath>Объект.Ведущая</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ВедущаяКонтекстноеМеню" id="29"/>
+							<ExtendedTooltip name="ВедущаяРасширеннаяПодсказка" id="30"/>
+						</CheckBoxField>
+						<CheckBoxField name="Заблокирована" id="31">
+							<DataPath>Объект.Заблокирована</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ЗаблокированаКонтекстноеМеню" id="32"/>
+							<ExtendedTooltip name="ЗаблокированаРасширеннаяПодсказка" id="33"/>
+						</CheckBoxField>
+						<InputField name="Код" id="19">
+							<DataPath>Объект.Code</DataPath>
+							<Width>20</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ContextMenu name="КодКонтекстноеМеню" id="20"/>
+							<ExtendedTooltip name="КодРасширеннаяПодсказка" id="21"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаСлужебныеНиз" id="34">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Служебные низ</v8:content>
+						</v8:item>
+					</Title>
+					<Shortcut>Ctrl+S</Shortcut>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаСлужебныеНизРасширеннаяПодсказка" id="35"/>
+					<ChildItems>
+						<InputField name="НомерОтправленного" id="22">
+							<DataPath>Объект.SentNo</DataPath>
+							<ContextMenu name="НомерОтправленногоКонтекстноеМеню" id="23"/>
+							<ExtendedTooltip name="НомерОтправленногоРасширеннаяПодсказка" id="24"/>
+						</InputField>
+						<InputField name="НомерПринятого" id="25">
+							<DataPath>Объект.ReceivedNo</DataPath>
+							<ContextMenu name="НомерПринятогоКонтекстноеМеню" id="26"/>
+							<ExtendedTooltip name="НомерПринятогоРасширеннаяПодсказка" id="27"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
 			</ChildItems>
 		</UsualGroup>
 	</ChildItems>
@@ -90,6 +165,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>СделатьЭтуКонечнуюТочкуВедомой</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 	</Commands>
 </Form>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5">
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
 	<Task uuid="3ad08f4a-6202-4099-b6cc-bc116e6731a0">
 		<InternalInfo>
 			<xr:GeneratedType name="TaskObject.ЗадачаИсполнителя" category="Object">
@@ -42,7 +42,7 @@
 			<DescriptionLength>150</DescriptionLength>
 			<Addressing>InformationRegister.ИсполнителиЗадач</Addressing>
 			<MainAddressingAttribute>Task.ЗадачаИсполнителя.AddressingAttribute.Исполнитель</MainAddressingAttribute>
-			<CurrentPerformer>SessionParameter.ТекущийПользователь</CurrentPerformer>
+			<CurrentPerformer>SessionParameter.АвторизованныйПользователь</CurrentPerformer>
 			<BasedOn/>
 			<StandardAttributes>
 				<xr:StandardAttribute name="Executed">
@@ -231,7 +231,7 @@
 					<xr:ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Дата создания задачи</v8:content>
+							<v8:content>Дата регистрации задачи</v8:content>
 						</v8:item>
 					</xr:ToolTip>
 					<xr:ExtendedEdit>false</xr:ExtendedEdit>
@@ -247,10 +247,10 @@
 					<xr:Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Создана</v8:content>
+							<v8:content>Записана</v8:content>
 						</v8:item>
 					</xr:Synonym>
-					<xr:Comment>Дата создания задачи</xr:Comment>
+					<xr:Comment/>
 					<xr:FullTextSearch>Use</xr:FullTextSearch>
 					<xr:ChoiceParameterLinks/>
 					<xr:FillValue xsi:type="xs:dateTime">0001-01-01T00:00:00</xr:FillValue>
@@ -279,7 +279,7 @@
 					<xr:Comment/>
 					<xr:FullTextSearch>Use</xr:FullTextSearch>
 					<xr:ChoiceParameterLinks/>
-					<xr:FillValue xsi:type="xs:string">            </xr:FillValue>
+					<xr:FillValue xsi:type="xs:string">              </xr:FillValue>
 					<xr:Mask/>
 					<xr:ChoiceParameters/>
 				</xr:StandardAttribute>
@@ -332,6 +332,7 @@
 					</Synonym>
 					<Comment>Автор бизнес-процесса, который сформировал задачу</Comment>
 					<Type>
+						<v8:Type>cfg:CatalogRef.ВнешниеПользователи</v8:Type>
 						<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
 					</Type>
 					<PasswordMode>false</PasswordMode>
@@ -374,7 +375,7 @@
 							<v8:content>Важность</v8:content>
 						</v8:item>
 					</Synonym>
-					<Comment>Важность задачи - для приоритезации исполнителем своих задач</Comment>
+					<Comment>Для упорядочивания исполнителем своих задач по приоритету</Comment>
 					<Type>
 						<v8:Type>cfg:EnumRef.ВариантыВажностиЗадачи</v8:Type>
 					</Type>
@@ -459,7 +460,7 @@
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Дата выполнения</v8:content>
+							<v8:content>Выполнена</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment>Дата и время фактического выполнения задачи</Comment>
@@ -509,7 +510,7 @@
 							<v8:content>Дата начала</v8:content>
 						</v8:item>
 					</Synonym>
-					<Comment>Дата начала выполнения задачи - для приоритезации исполнителем своих задач</Comment>
+					<Comment>Для упорядочивания исполнителем своих задач</Comment>
 					<Type>
 						<v8:Type>xs:dateTime</v8:Type>
 						<v8:DateQualifiers>
@@ -1032,6 +1033,7 @@
 					</Synonym>
 					<Comment/>
 					<Type>
+						<v8:Type>cfg:CatalogRef.ВнешниеПользователи</v8:Type>
 						<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
 					</Type>
 					<PasswordMode>false</PasswordMode>
@@ -1242,7 +1244,7 @@
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Перенаправить</v8:content>
+							<v8:content>Перенаправить...</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>

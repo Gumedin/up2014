@@ -1,10 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
 	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
 	<AutoTitle>false</AutoTitle>
 	<Customizable>false</Customizable>
 	<CommandBarLocation>Bottom</CommandBarLocation>
-	<VerticalScroll>useIfNecessary</VerticalScroll>
 	<CommandSet>
 		<ExcludedCommand>Help</ExcludedCommand>
 	</CommandSet>
@@ -50,21 +49,12 @@
 					<v8:content>Сообщение для пользователя</v8:content>
 				</v8:item>
 			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Сообщение для пользователя</v8:content>
-				</v8:item>
-			</ToolTip>
 			<Group>Horizontal</Group>
-			<Representation>StrongSeparation</Representation>
+			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="СообщениеДляПользователяExtendedTooltip" id="42"/>
 			<ChildItems>
 				<PictureDecoration name="ЗначокСообщения" id="21">
-					<Width>4</Width>
-					<Height>4</Height>
-					<HorizontalStretch>false</HorizontalStretch>
 					<SkipOnInput>false</SkipOnInput>
 					<Title formatted="false">
 						<v8:item>
@@ -83,6 +73,7 @@
 					<DataPath>Сообщение</DataPath>
 					<TitleLocation>None</TitleLocation>
 					<VerticalAlign>Center</VerticalAlign>
+					<AutoMaxWidth>false</AutoMaxWidth>
 					<HorizontalStretch>true</HorizontalStretch>
 					<VerticalStretch>true</VerticalStretch>
 					<ContextMenu name="СообщениеКонтекстноеМеню" id="15"/>
@@ -97,18 +88,13 @@
 					<v8:content>Описание файла в рабочем каталоге</v8:content>
 				</v8:item>
 			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Описание файла в рабочем каталоге</v8:content>
-				</v8:item>
-			</ToolTip>
 			<Group>Vertical</Group>
 			<Representation>NormalSeparation</Representation>
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="ОписаниеФайлаВРабочемКаталогеExtendedTooltip" id="45"/>
 			<ChildItems>
 				<LabelDecoration name="НадписьФайлВРабочемКаталоге" id="17">
+					<AutoMaxWidth>false</AutoMaxWidth>
 					<SkipOnInput>false</SkipOnInput>
 					<Title formatted="false">
 						<v8:item>
@@ -126,12 +112,6 @@
 							<v8:content>Файл и кнопка</v8:content>
 						</v8:item>
 					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Файл и кнопка</v8:content>
-						</v8:item>
-					</ToolTip>
 					<Group>Horizontal</Group>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
@@ -141,6 +121,8 @@
 							<DataPath>ПолноеИмяФайлаВРабочемКаталоге</DataPath>
 							<ReadOnly>true</ReadOnly>
 							<TitleLocation>None</TitleLocation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>68</MaxWidth>
 							<ContextMenu name="ПолноеИмяФайлаВРабочемКаталогеКонтекстноеМеню" id="2"/>
 							<ExtendedTooltip name="ПолноеИмяФайлаВРабочемКаталогеРасширеннаяПодсказка" id="48"/>
 						</InputField>
@@ -161,12 +143,6 @@
 					<v8:content>Свойства файлов</v8:content>
 				</v8:item>
 			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Свойства файлов</v8:content>
-				</v8:item>
-			</ToolTip>
 			<Group>Horizontal</Group>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
@@ -179,15 +155,7 @@
 							<v8:content>Дата изменения (местное время)</v8:content>
 						</v8:item>
 					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Дата изменения</v8:content>
-						</v8:item>
-					</ToolTip>
-					<HorizontalStretch>true</HorizontalStretch>
 					<Group>Vertical</Group>
-					<Representation>StrongSeparation</Representation>
 					<ExtendedTooltip name="ДатаИзмененияExtendedTooltip" id="51"/>
 					<ChildItems>
 						<InputField name="ДатаИзмененияВРабочемКаталоге" id="28">
@@ -213,15 +181,7 @@
 							<v8:content>Размер (байт)</v8:content>
 						</v8:item>
 					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Размер</v8:content>
-						</v8:item>
-					</ToolTip>
-					<HorizontalStretch>true</HorizontalStretch>
 					<Group>Vertical</Group>
-					<Representation>StrongSeparation</Representation>
 					<ExtendedTooltip name="РазмерExtendedTooltip" id="54"/>
 					<ChildItems>
 						<InputField name="РазмерВРабочемКаталоге" id="32">
@@ -350,6 +310,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ОткрытьСуществующий</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ВзятьИзХранилища" id="2">
 			<Title>
@@ -365,6 +326,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ВзятьИзХранилища</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ОткрытьКаталог" id="3">
 			<Title>
@@ -385,6 +347,7 @@
 			</Picture>
 			<Action>ОткрытьКаталог</Action>
 			<Representation>Picture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="Поместить" id="4">
 			<Title>
@@ -400,6 +363,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>Поместить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="НеПомещать" id="5">
 			<Title>
@@ -415,6 +379,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>НеПомещать</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="Отменить" id="6">
 			<Title>
@@ -430,6 +395,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>Отменить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 	</Commands>
 </Form>

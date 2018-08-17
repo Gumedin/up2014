@@ -1,9 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5">
-	<Width>70</Width>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
 	<AutoTitle>false</AutoTitle>
 	<CommandBarLocation>None</CommandBarLocation>
-	<VerticalScroll>useIfNecessary</VerticalScroll>
 	<CommandSet>
 		<ExcludedCommand>CustomizeForm</ExcludedCommand>
 	</CommandSet>
@@ -14,7 +12,6 @@
 	<Events>
 		<Event name="ChoiceProcessing">ОбработкаВыбора</Event>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
-		<Event name="OnClose">ПриЗакрытии</Event>
 	</Events>
 	<ChildItems>
 		<Pages name="Страницы" id="37">
@@ -24,12 +21,6 @@
 					<v8:content>Страницы</v8:content>
 				</v8:item>
 			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Страницы</v8:content>
-				</v8:item>
-			</ToolTip>
 			<PagesRepresentation>None</PagesRepresentation>
 			<ExtendedTooltip name="СтраницыExtendedTooltip" id="54"/>
 			<ChildItems>
@@ -40,12 +31,6 @@
 							<v8:content>Страница открыть обработку</v8:content>
 						</v8:item>
 					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Страница открыть обработку</v8:content>
-						</v8:item>
-					</ToolTip>
 					<ExtendedTooltip name="СтраницаОткрытьОбработкуExtendedTooltip" id="55"/>
 					<ChildItems>
 						<Table name="ТаблицаКоманд" id="15">
@@ -60,6 +45,12 @@
 							<EnableStartDrag>true</EnableStartDrag>
 							<EnableDrag>true</EnableDrag>
 							<DataPath>ТаблицаКоманд</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Таблица команд</v8:content>
+								</v8:item>
+							</Title>
 							<CommandSet>
 								<ExcludedCommand>Add</ExcludedCommand>
 								<ExcludedCommand>Change</ExcludedCommand>
@@ -71,9 +62,6 @@
 								<ExcludedCommand>SortListAsc</ExcludedCommand>
 								<ExcludedCommand>SortListDesc</ExcludedCommand>
 							</CommandSet>
-							<SearchStringLocation>None</SearchStringLocation>
-							<ViewStatusLocation>None</ViewStatusLocation>
-							<SearchControlLocation>None</SearchControlLocation>
 							<RowFilter xsi:nil="true"/>
 							<ContextMenu name="ТаблицаКомандКонтекстноеМеню" id="16"/>
 							<AutoCommandBar name="ТаблицаКомандКоманднаяПанель" id="17"/>
@@ -123,20 +111,12 @@
 							<v8:content>Страница выполнения обработки</v8:content>
 						</v8:item>
 					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Страница выполнения обработки</v8:content>
-						</v8:item>
-					</ToolTip>
+					<VerticalStretch>true</VerticalStretch>
 					<Group>Horizontal</Group>
+					<VerticalAlign>Center</VerticalAlign>
 					<ExtendedTooltip name="СтраницаВыполненияОбработкиExtendedTooltip" id="58"/>
 					<ChildItems>
 						<PictureDecoration name="ДекорацияДлительнаяОперация" id="44">
-							<Width>7</Width>
-							<Height>3</Height>
-							<HorizontalStretch>false</HorizontalStretch>
-							<VerticalStretch>false</VerticalStretch>
 							<SkipOnInput>true</SkipOnInput>
 							<Title formatted="false">
 								<v8:item>
@@ -144,6 +124,7 @@
 									<v8:content>Длительная операция</v8:content>
 								</v8:item>
 							</Title>
+							<GroupVerticalAlign>Center</GroupVerticalAlign>
 							<Picture>
 								<xr:Ref>CommonPicture.ДлительнаяОперация48</xr:Ref>
 								<xr:LoadTransparent>false</xr:LoadTransparent>
@@ -152,10 +133,15 @@
 							<ExtendedTooltip name="ДекорацияДлительнаяОперацияExtendedTooltip" id="59"/>
 						</PictureDecoration>
 						<LabelDecoration name="ПоясняющаяДекорация" id="46">
-							<Height>3</Height>
-							<HorizontalStretch>true</HorizontalStretch>
-							<VerticalStretch>false</VerticalStretch>
+							<AutoMaxWidth>false</AutoMaxWidth>
 							<SkipOnInput>true</SkipOnInput>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Поясняющая декорация</v8:content>
+								</v8:item>
+							</Title>
+							<GroupVerticalAlign>Center</GroupVerticalAlign>
 							<VerticalAlign>Center</VerticalAlign>
 							<ContextMenu name="ПоясняющаяДекорацияКонтекстноеМеню" id="47"/>
 							<ExtendedTooltip name="ПоясняющаяДекорацияExtendedTooltip" id="60"/>
@@ -164,121 +150,52 @@
 				</Page>
 			</ChildItems>
 		</Pages>
-		<Pages name="СтраницыКомандныеПанели" id="48">
+		<UsualGroup name="Подвал" id="79">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Страницы командные панели</v8:content>
+					<v8:content>Подвал</v8:content>
 				</v8:item>
 			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Страницы командные панели</v8:content>
-				</v8:item>
-			</ToolTip>
-			<PagesRepresentation>None</PagesRepresentation>
-			<ExtendedTooltip name="СтраницыКомандныеПанелиExtendedTooltip" id="61"/>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ПодвалРасширеннаяПодсказка" id="80"/>
 			<ChildItems>
-				<Page name="СтраницаКоманднаяПанельСтраницыОткрытьОбработку" id="49">
+				<Button name="НастроитьСписок" id="35">
+					<Type>Hyperlink</Type>
+					<SkipOnInput>false</SkipOnInput>
+					<CommandName>Form.Command.НастроитьСписок</CommandName>
+					<ExtendedTooltip name="НастроитьСписокExtendedTooltip" id="63"/>
+				</Button>
+				<CommandBar name="КоманднаяПанельСтраницыОткрытьОбработку" id="36">
 					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Страница командная панель страницы открыть обработку</v8:content>
-						</v8:item>
-					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Страница командная панель страницы открыть обработку</v8:content>
-						</v8:item>
-					</ToolTip>
-					<Group>Horizontal</Group>
-					<ExtendedTooltip name="СтраницаКоманднаяПанельСтраницыОткрытьОбработкуExtendedTooltip" id="62"/>
-					<ChildItems>
-						<Button name="НастроитьСписок" id="35">
-							<Type>Hyperlink</Type>
-							<SkipOnInput>false</SkipOnInput>
-							<CommandName>Form.Command.НастроитьСписок</CommandName>
-							<ExtendedTooltip name="НастроитьСписокExtendedTooltip" id="63"/>
-						</Button>
-						<CommandBar name="КоманднаяПанельСтраницыОткрытьОбработку" id="36">
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Командная панель страницы открыть обработку</v8:content>
-								</v8:item>
-							</Title>
-							<ToolTip>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Командная панель страницы открыть обработку</v8:content>
-								</v8:item>
-							</ToolTip>
-							<HorizontalLocation>Right</HorizontalLocation>
-							<ExtendedTooltip name="КоманднаяПанельСтраницыОткрытьОбработкуExtendedTooltip" id="64"/>
-							<ChildItems>
-								<Button name="ВыполнитьОбработку" id="28">
-									<Type>CommandBarButton</Type>
-									<DefaultButton>true</DefaultButton>
-									<SkipOnInput>false</SkipOnInput>
-									<DefaultItem>true</DefaultItem>
-									<CommandName>Form.Command.ВыполнитьОбработку</CommandName>
-									<ExtendedTooltip name="ВыполнитьОбработкуExtendedTooltip" id="65"/>
-								</Button>
-								<Button name="Отмена" id="29">
-									<Type>CommandBarButton</Type>
-									<SkipOnInput>false</SkipOnInput>
-									<CommandName>Form.StandardCommand.Cancel</CommandName>
-									<ExtendedTooltip name="ОтменаExtendedTooltip" id="66"/>
-								</Button>
-							</ChildItems>
-						</CommandBar>
-					</ChildItems>
-				</Page>
-				<Page name="СтраницаКоманднаяПанельСтраницыВыполненияОбработки" id="50">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Страница командная панель страницы выполнения обработки</v8:content>
-						</v8:item>
-					</Title>
-					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
 							<v8:content>Командная панель страницы открыть обработку</v8:content>
 						</v8:item>
-					</ToolTip>
-					<ExtendedTooltip name="СтраницаКоманднаяПанельСтраницыВыполненияОбработкиExtendedTooltip" id="67"/>
+					</Title>
+					<HorizontalLocation>Right</HorizontalLocation>
+					<ExtendedTooltip name="КоманднаяПанельСтраницыОткрытьОбработкуExtendedTooltip" id="64"/>
 					<ChildItems>
-						<CommandBar name="КоманднаяПанельСтраницыВыполненияОбработки" id="51">
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Командная панель страницы выполнения обработки</v8:content>
-								</v8:item>
-							</Title>
-							<ToolTip>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Командная панель</v8:content>
-								</v8:item>
-							</ToolTip>
-							<HorizontalLocation>Right</HorizontalLocation>
-							<ExtendedTooltip name="КоманднаяПанельСтраницыВыполненияОбработкиExtendedTooltip" id="68"/>
-							<ChildItems>
-								<Button name="ОтменитьВыполнениеОбработки" id="53">
-									<Type>CommandBarButton</Type>
-									<SkipOnInput>false</SkipOnInput>
-									<CommandName>Form.Command.ОтменитьВыполнениеОбработки</CommandName>
-									<ExtendedTooltip name="ОтменитьВыполнениеОбработкиExtendedTooltip" id="69"/>
-								</Button>
-							</ChildItems>
-						</CommandBar>
+						<Button name="ВыполнитьОбработку" id="28">
+							<Type>CommandBarButton</Type>
+							<DefaultButton>true</DefaultButton>
+							<SkipOnInput>false</SkipOnInput>
+							<DefaultItem>true</DefaultItem>
+							<CommandName>Form.Command.ВыполнитьОбработку</CommandName>
+							<ExtendedTooltip name="ВыполнитьОбработкуExtendedTooltip" id="65"/>
+						</Button>
+						<Button name="ЗакрытьФорму" id="29">
+							<Type>CommandBarButton</Type>
+							<SkipOnInput>false</SkipOnInput>
+							<CommandName>Form.StandardCommand.Cancel</CommandName>
+							<ExtendedTooltip name="ЗакрытьФормуРасширеннаяПодсказка" id="66"/>
+						</Button>
 					</ChildItems>
-				</Page>
+				</CommandBar>
 			</ChildItems>
-		</Pages>
+		</UsualGroup>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="ТаблицаКоманд" id="1">
@@ -536,6 +453,7 @@
 			</Picture>
 			<Action>ВыполнитьОбработку</Action>
 			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="НастроитьСписок" id="1">
 			<Title>
@@ -555,6 +473,7 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>НастроитьСписок</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ОтменитьВыполнениеОбработки" id="2">
 			<Title>
@@ -570,6 +489,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ОтменитьВыполнениеОбработки</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 	</Commands>
 	<Parameters>

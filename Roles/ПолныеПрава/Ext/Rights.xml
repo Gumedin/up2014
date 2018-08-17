@@ -1,43 +1,14 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Rights xmlns="http://v8.1c.ru/8.2/roles" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Rights" version="2.5">
+<Rights xmlns="http://v8.1c.ru/8.2/roles" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Rights" version="2.6">
 	<setForNewObjects>true</setForNewObjects>
 	<setForAttributesByDefault>true</setForAttributesByDefault>
 	<independentRightsOfChildObjects>false</independentRightsOfChildObjects>
-	<object>
-		<name>DataProcessor.НастройкаРезервногоКопированияИБ.Attribute.ВариантРасписанияРезервногоКопирования</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.НастройкиОтправителя.Dimension.КаналСообщений</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
 	<object>
 		<name>Constant.МаксимальнаяДлительностьВыполненияИсполняющегоФоновогоЗадания</name>
 		<right>
 			<name>Update</name>
 			<value>false</value>
 		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.РазрешенныеКаталогиФайловойСистемы.Dimension.БезопасныйРежим</name>
 		<right>
 			<name>Edit</name>
 			<value>false</value>
@@ -80,35 +51,27 @@
 			<value>false</value>
 		</right>
 		<right>
-			<name>Edit</name>
+			<name>View</name>
 			<value>false</value>
 		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ПоставляемыеДанныеТребующиеОбработки.StandardAttribute.Active</name>
 		<right>
 			<name>Edit</name>
 			<value>false</value>
 		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ПоставляемыеДанныеТребующиеОбработки.StandardAttribute.LineNumber</name>
 		<right>
-			<name>Edit</name>
+			<name>TotalsControl</name>
 			<value>false</value>
 		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ПоставляемыеДанныеТребующиеОбработки.StandardAttribute.Recorder</name>
 		<right>
-			<name>Edit</name>
+			<name>ViewDataHistory</name>
 			<value>false</value>
 		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ПоставляемыеДанныеТребующиеОбработки.StandardAttribute.Period</name>
 		<right>
-			<name>Edit</name>
+			<name>EditDataHistoryVersionComment</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>SwitchToDataHistoryVersion</name>
 			<value>false</value>
 		</right>
 	</object>
@@ -132,28 +95,6 @@
 		</right>
 		<right>
 			<name>InteractiveDeleteMarkedPredefinedData</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.УдалитьОчередьЗаданий.Resource.СостояниеЗадания</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.УдалитьОчередьЗаданий.Resource.НомерПопытки</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
 			<value>false</value>
 		</right>
 	</object>
@@ -243,50 +184,6 @@
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.СообщенияОбменаДанными.StandardAttribute.Active</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.СообщенияОбменаДанными.StandardAttribute.LineNumber</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.СообщенияОбменаДанными.StandardAttribute.Recorder</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.СообщенияОбменаДанными.StandardAttribute.Period</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
 		<name>Catalog.НаборыДополнительныхРеквизитовИСведений</name>
 		<right>
 			<name>InteractiveDelete</name>
@@ -306,13 +203,6 @@
 		</right>
 		<right>
 			<name>InteractiveDeleteMarkedPredefinedData</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.РазрешенныеПриложенияОперационнойСистемы.Dimension.ШаблонСтрокиЗапуска</name>
-		<right>
-			<name>Edit</name>
 			<value>false</value>
 		</right>
 	</object>
@@ -363,14 +253,7 @@
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.НастройкиТранспортаОбмена.Resource.FILEСжиматьФайлИсходящегоСообщения</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.РазрешенныеПриложенияОперационнойСистемы</name>
+		<name>InformationRegister.СлужебныеАдресныеСведения</name>
 		<right>
 			<name>Update</name>
 			<value>false</value>
@@ -385,41 +268,57 @@
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.РазрешенныеПриложенияОперационнойСистемы.StandardAttribute.Active</name>
+		<name>InformationRegister.ЗамерыКомментарииСтатистики</name>
 		<right>
-			<name>Edit</name>
+			<name>Read</name>
 			<value>false</value>
 		</right>
-	</object>
-	<object>
-		<name>InformationRegister.РазрешенныеПриложенияОперационнойСистемы.StandardAttribute.LineNumber</name>
 		<right>
-			<name>Edit</name>
+			<name>Update</name>
 			<value>false</value>
 		</right>
-	</object>
-	<object>
-		<name>InformationRegister.РазрешенныеПриложенияОперационнойСистемы.StandardAttribute.Recorder</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.РазрешенныеПриложенияОперационнойСистемы.StandardAttribute.Period</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ПодпискиПолучателей.Dimension.КаналСообщений</name>
 		<right>
 			<name>View</name>
 			<value>false</value>
 		</right>
 		<right>
 			<name>Edit</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>TotalsControl</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>ReadDataHistory</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>ReadDataHistoryOfMissingData</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>UpdateDataHistory</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>UpdateDataHistoryOfMissingData</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>UpdateDataHistoryVersionComment</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>ViewDataHistory</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>EditDataHistoryVersionComment</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>SwitchToDataHistoryVersion</name>
 			<value>false</value>
 		</right>
 	</object>
@@ -475,68 +374,101 @@
 		</right>
 	</object>
 	<object>
-		<name>ExchangePlan.ОбменСообщениями.StandardAttribute.ReceivedNo</name>
+		<name>Catalog.ПрофилиКлючевыхОпераций</name>
+		<right>
+			<name>Read</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Insert</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Delete</name>
+			<value>false</value>
+		</right>
 		<right>
 			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>InteractiveInsert</name>
 			<value>false</value>
 		</right>
 		<right>
 			<name>Edit</name>
 			<value>false</value>
 		</right>
-	</object>
-	<object>
-		<name>ExchangePlan.ОбменСообщениями.StandardAttribute.SentNo</name>
 		<right>
-			<name>View</name>
+			<name>InteractiveDelete</name>
 			<value>false</value>
 		</right>
 		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>ExchangePlan.ОбменСообщениями.StandardAttribute.Ref</name>
-		<right>
-			<name>View</name>
+			<name>InteractiveSetDeletionMark</name>
 			<value>false</value>
 		</right>
 		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>ExchangePlan.ОбменСообщениями.StandardAttribute.DeletionMark</name>
-		<right>
-			<name>View</name>
+			<name>InteractiveClearDeletionMark</name>
 			<value>false</value>
 		</right>
 		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>ExchangePlan.ОбменСообщениями.StandardAttribute.Description</name>
-		<right>
-			<name>View</name>
+			<name>InteractiveDeleteMarked</name>
 			<value>false</value>
 		</right>
 		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>ExchangePlan.ОбменСообщениями.StandardAttribute.Code</name>
-		<right>
-			<name>View</name>
+			<name>InputByString</name>
 			<value>false</value>
 		</right>
 		<right>
-			<name>Edit</name>
+			<name>InteractiveDeletePredefinedData</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>InteractiveSetDeletionMarkPredefinedData</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>InteractiveClearDeletionMarkPredefinedData</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>InteractiveDeleteMarkedPredefinedData</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>ReadDataHistory</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>ReadDataHistoryOfMissingData</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>UpdateDataHistory</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>UpdateDataHistoryOfMissingData</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>UpdateDataHistoryVersionComment</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>ViewDataHistory</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>EditDataHistoryVersionComment</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>SwitchToDataHistoryVersion</name>
 			<value>false</value>
 		</right>
 	</object>
@@ -548,6 +480,61 @@
 		</right>
 		<right>
 			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.СтатистикаКонфигурации</name>
+		<right>
+			<name>Read</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>TotalsControl</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>ReadDataHistory</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>ReadDataHistoryOfMissingData</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>UpdateDataHistory</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>UpdateDataHistoryOfMissingData</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>UpdateDataHistoryVersionComment</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>ViewDataHistory</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>EditDataHistoryVersionComment</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>SwitchToDataHistoryVersion</name>
 			<value>false</value>
 		</right>
 	</object>
@@ -607,77 +594,15 @@
 		</right>
 	</object>
 	<object>
-		<name>ChartOfCharacteristicTypes.РазделыДатЗапретаИзменения.StandardAttribute.ValueType</name>
+		<name>Constant.ПериодХраненияЗамеров</name>
 		<right>
-			<name>Edit</name>
+			<name>Read</name>
 			<value>false</value>
 		</right>
-	</object>
-	<object>
-		<name>ChartOfCharacteristicTypes.РазделыДатЗапретаИзменения.StandardAttribute.Description</name>
 		<right>
-			<name>Edit</name>
+			<name>Update</name>
 			<value>false</value>
 		</right>
-	</object>
-	<object>
-		<name>ChartOfCharacteristicTypes.РазделыДатЗапретаИзменения.StandardAttribute.Code</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>ChartOfCharacteristicTypes.РазделыДатЗапретаИзменения.StandardAttribute.IsFolder</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>ChartOfCharacteristicTypes.РазделыДатЗапретаИзменения.StandardAttribute.Parent</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>ChartOfCharacteristicTypes.РазделыДатЗапретаИзменения.StandardAttribute.Predefined</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>ChartOfCharacteristicTypes.РазделыДатЗапретаИзменения.StandardAttribute.DeletionMark</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>ChartOfCharacteristicTypes.РазделыДатЗапретаИзменения.StandardAttribute.Ref</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Catalog.СценарииОбменовДанными.Attribute.РегламентноеЗаданиеGUID</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.НастройкиТранспортаОбмена.Resource.COMАутентификацияОперационнойСистемы</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ПравилаДляОбменаДанными.Resource.ПравилаXML</name>
 		<right>
 			<name>View</name>
 			<value>false</value>
@@ -714,13 +639,6 @@
 		</right>
 		<right>
 			<name>InteractiveDeleteMarkedPredefinedData</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ПраваРолей.Dimension.ОбъектМетаданных</name>
-		<right>
-			<name>Edit</name>
 			<value>false</value>
 		</right>
 	</object>
@@ -766,30 +684,25 @@
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.СостоянияУспешныхОбменовДанными.Resource.ДатаОкончания</name>
+		<name>Catalog.ВнешниеКомпоненты</name>
 		<right>
-			<name>Edit</name>
+			<name>InteractiveDelete</name>
 			<value>false</value>
 		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ВерсииОбъектовАдресногоКлассификатора.Dimension.АдресныйОбъект</name>
 		<right>
-			<name>Edit</name>
+			<name>InteractiveDeletePredefinedData</name>
 			<value>false</value>
 		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ПраваРолей.Dimension.Роль</name>
 		<right>
-			<name>Edit</name>
+			<name>InteractiveSetDeletionMarkPredefinedData</name>
 			<value>false</value>
 		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ЗапросыАдминистрированияРазрешенийИспользованияВнешнихРесурсов.Dimension.Владелец</name>
 		<right>
-			<name>Edit</name>
+			<name>InteractiveClearDeletionMarkPredefinedData</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>InteractiveDeleteMarkedPredefinedData</name>
 			<value>false</value>
 		</right>
 	</object>
@@ -828,16 +741,17 @@
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.НастройкиТранспортаОбмена.Resource.COMПарольПользователя</name>
+		<name>InformationRegister.ДомаЗданияСтроения</name>
+		<right>
+			<name>Update</name>
+			<value>false</value>
+		</right>
 		<right>
 			<name>Edit</name>
 			<value>false</value>
 		</right>
-	</object>
-	<object>
-		<name>InformationRegister.АдресныйКлассификатор.Resource.Наименование</name>
 		<right>
-			<name>Edit</name>
+			<name>TotalsControl</name>
 			<value>false</value>
 		</right>
 	</object>
@@ -857,6 +771,10 @@
 		</right>
 		<right>
 			<name>Edit</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>TotalsControl</name>
 			<value>false</value>
 		</right>
 		<right>
@@ -893,57 +811,25 @@
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.ПодпискиПолучателей.StandardAttribute.Active</name>
+		<name>Catalog.ШаблоныСообщенийПрисоединенныеФайлы</name>
 		<right>
-			<name>View</name>
+			<name>InteractiveDelete</name>
 			<value>false</value>
 		</right>
 		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ПодпискиПолучателей.StandardAttribute.LineNumber</name>
-		<right>
-			<name>View</name>
+			<name>InteractiveDeletePredefinedData</name>
 			<value>false</value>
 		</right>
 		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ПодпискиПолучателей.StandardAttribute.Recorder</name>
-		<right>
-			<name>View</name>
+			<name>InteractiveSetDeletionMarkPredefinedData</name>
 			<value>false</value>
 		</right>
 		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ПодпискиПолучателей.StandardAttribute.Period</name>
-		<right>
-			<name>View</name>
+			<name>InteractiveClearDeletionMarkPredefinedData</name>
 			<value>false</value>
 		</right>
 		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Catalog.СообщенияСистемы.Attribute.КоличествоПопытокОбработкиСообщения</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
+			<name>InteractiveDeleteMarkedPredefinedData</name>
 			<value>false</value>
 		</right>
 	</object>
@@ -971,25 +857,30 @@
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.ВерсииОбъектовАдресногоКлассификатора.Resource.ДатаВыпускаВерсии</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.УдалитьЗамерыВремени.Attribute.ИмяПользователя</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
 		<name>Catalog.Валюты</name>
+		<right>
+			<name>InteractiveDelete</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>InteractiveDeletePredefinedData</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>InteractiveSetDeletionMarkPredefinedData</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>InteractiveClearDeletionMarkPredefinedData</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>InteractiveDeleteMarkedPredefinedData</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ШаблоныСообщений</name>
 		<right>
 			<name>InteractiveDelete</name>
 			<value>false</value>
@@ -1028,54 +919,8 @@
 			<name>Edit</name>
 			<value>false</value>
 		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ЗависимостиПравДоступа.StandardAttribute.Active</name>
 		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ЗависимостиПравДоступа.StandardAttribute.LineNumber</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ЗависимостиПравДоступа.StandardAttribute.Recorder</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ЗависимостиПравДоступа.StandardAttribute.Period</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.НастройкиОтправителя.Dimension.Получатель</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Catalog.СообщенияСистемы.Attribute.Получатель</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
+			<name>TotalsControl</name>
 			<value>false</value>
 		</right>
 	</object>
@@ -1095,21 +940,7 @@
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.РазрешенныеВнешниеКомпоненты.Dimension.ИмяМакета</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ВерсииОбъектовАдресногоКлассификатора.Resource.Наименование</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Constant.ВерсияКлассификатораБанковРФ</name>
+		<name>Constant.ВерсияКлассификатораБанков</name>
 		<right>
 			<name>Update</name>
 			<value>false</value>
@@ -1125,10 +956,6 @@
 	</object>
 	<object>
 		<name>Constant.ВыполнятьЗамерыПроизводительности</name>
-		<right>
-			<name>Read</name>
-			<value>false</value>
-		</right>
 		<right>
 			<name>Update</name>
 			<value>false</value>
@@ -1154,7 +981,19 @@
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.НастройкиТранспортаОбмена.Resource.WSПароль</name>
+		<name>Constant.ИспользоватьАльтернативныйСерверДляЗагрузкиКлассификатораБанков</name>
+		<right>
+			<name>Read</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
 		<right>
 			<name>Edit</name>
 			<value>false</value>
@@ -1183,13 +1022,6 @@
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.РазрешенныеКаталогиФайловойСистемы.Dimension.Владелец</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
 		<name>Catalog.ЗапланированноеВзаимодействиеПрисоединенныеФайлы</name>
 		<right>
 			<name>InteractiveDelete</name>
@@ -1213,7 +1045,22 @@
 		</right>
 	</object>
 	<object>
-		<name>DataProcessor.РезервноеКопированиеИБ.Attribute.КаталогСРезервнымиКопиями</name>
+		<name>CommonForm.НастройкаДоступаКСервисуMorpher</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.УдалитьЗамерыВремениТехнологические</name>
+		<right>
+			<name>Read</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>false</value>
+		</right>
 		<right>
 			<name>View</name>
 			<value>false</value>
@@ -1222,29 +1069,40 @@
 			<name>Edit</name>
 			<value>false</value>
 		</right>
-	</object>
-	<object>
-		<name>InformationRegister.РазрешенныеИнтернетРесурсы.Attribute.Описание</name>
 		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.АдресныйКлассификатор.Dimension.ТипАдресногоЭлемента</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>DataProcessor.НастройкаРезервногоКопированияИБ.Attribute.ПроводитьРезервноеКопированиеПриВосстановленииДанных</name>
-		<right>
-			<name>View</name>
+			<name>TotalsControl</name>
 			<value>false</value>
 		</right>
 		<right>
-			<name>Edit</name>
+			<name>ReadDataHistory</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>ReadDataHistoryOfMissingData</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>UpdateDataHistory</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>UpdateDataHistoryOfMissingData</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>UpdateDataHistoryVersionComment</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>ViewDataHistory</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>EditDataHistoryVersionComment</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>SwitchToDataHistoryVersion</name>
 			<value>false</value>
 		</right>
 	</object>
@@ -1264,30 +1122,17 @@
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.РазрешенныеИнтернетРесурсы.Resource.Протокол</name>
+		<name>InformationRegister.РазрешенияНаИспользованиеВнешнихРесурсов</name>
 		<right>
-			<name>Edit</name>
+			<name>Read</name>
 			<value>false</value>
 		</right>
-	</object>
-	<object>
-		<name>InformationRegister.РазрешенныеИнтернетРесурсы.Dimension.Владелец</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ЗапросыРазрешенийНаИспользованиеВнешнихРесурсов.Attribute.РежимЗамещения</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.РежимыПодключенияВнешнихМодулей</name>
 		<right>
 			<name>Update</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>View</name>
 			<value>false</value>
 		</right>
 		<right>
@@ -1298,37 +1143,49 @@
 			<name>TotalsControl</name>
 			<value>false</value>
 		</right>
-	</object>
-	<object>
-		<name>InformationRegister.РежимыПодключенияВнешнихМодулей.StandardAttribute.Active</name>
 		<right>
-			<name>Edit</name>
+			<name>ReadDataHistory</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>ReadDataHistoryOfMissingData</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>UpdateDataHistory</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>UpdateDataHistoryOfMissingData</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>UpdateDataHistoryVersionComment</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>ViewDataHistory</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>EditDataHistoryVersionComment</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>SwitchToDataHistoryVersion</name>
 			<value>false</value>
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.РежимыПодключенияВнешнихМодулей.StandardAttribute.LineNumber</name>
+		<name>InformationRegister.РежимыПодключенияВнешнихМодулей</name>
 		<right>
-			<name>Edit</name>
+			<name>Read</name>
 			<value>false</value>
 		</right>
-	</object>
-	<object>
-		<name>InformationRegister.РежимыПодключенияВнешнихМодулей.StandardAttribute.Recorder</name>
 		<right>
-			<name>Edit</name>
+			<name>Update</name>
 			<value>false</value>
 		</right>
-	</object>
-	<object>
-		<name>InformationRegister.РежимыПодключенияВнешнихМодулей.StandardAttribute.Period</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.УдалитьБлокировкиСеансовОбластиДанных.Resource.СообщениеБлокировки</name>
 		<right>
 			<name>View</name>
 			<value>false</value>
@@ -1337,54 +1194,40 @@
 			<name>Edit</name>
 			<value>false</value>
 		</right>
-	</object>
-	<object>
-		<name>CommonCommand.СведенияОПользователе</name>
 		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>ExchangePlan.ОбменСообщениями.Attribute.Ведущая</name>
-		<right>
-			<name>View</name>
+			<name>TotalsControl</name>
 			<value>false</value>
 		</right>
 		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.УдалитьЗамерыВремени.Resource.ВремяНачалаПроверка</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Catalog.СценарииОбменовДанными.TabularSection.НастройкиОбмена</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.РазрешенныеПриложенияОперационнойСистемы.Dimension.БезопасныйРежим</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ПравилаДляОбменаДанными.Resource.ИмяФайлаОбработкиДляОтладкиЗагрузки</name>
-		<right>
-			<name>View</name>
+			<name>ReadDataHistory</name>
 			<value>false</value>
 		</right>
 		<right>
-			<name>Edit</name>
+			<name>ReadDataHistoryOfMissingData</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>UpdateDataHistory</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>UpdateDataHistoryOfMissingData</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>UpdateDataHistoryVersionComment</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>ViewDataHistory</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>EditDataHistoryVersionComment</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>SwitchToDataHistoryVersion</name>
 			<value>false</value>
 		</right>
 	</object>
@@ -1402,6 +1245,10 @@
 	<object>
 		<name>Catalog.КлючевыеОперации</name>
 		<right>
+			<name>Read</name>
+			<value>false</value>
+		</right>
+		<right>
 			<name>Insert</name>
 			<value>false</value>
 		</right>
@@ -1411,6 +1258,10 @@
 		</right>
 		<right>
 			<name>Delete</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>View</name>
 			<value>false</value>
 		</right>
 		<right>
@@ -1438,6 +1289,10 @@
 			<value>false</value>
 		</right>
 		<right>
+			<name>InputByString</name>
+			<value>false</value>
+		</right>
+		<right>
 			<name>InteractiveDeletePredefinedData</name>
 			<value>false</value>
 		</right>
@@ -1453,60 +1308,36 @@
 			<name>InteractiveDeleteMarkedPredefinedData</name>
 			<value>false</value>
 		</right>
-	</object>
-	<object>
-		<name>Catalog.КлючевыеОперации.StandardAttribute.Predefined</name>
 		<right>
-			<name>Edit</name>
+			<name>ReadDataHistory</name>
 			<value>false</value>
 		</right>
-	</object>
-	<object>
-		<name>Catalog.КлючевыеОперации.StandardAttribute.Ref</name>
 		<right>
-			<name>Edit</name>
+			<name>ReadDataHistoryOfMissingData</name>
 			<value>false</value>
 		</right>
-	</object>
-	<object>
-		<name>Catalog.КлючевыеОперации.StandardAttribute.DeletionMark</name>
 		<right>
-			<name>Edit</name>
+			<name>UpdateDataHistory</name>
 			<value>false</value>
 		</right>
-	</object>
-	<object>
-		<name>Catalog.КлючевыеОперации.StandardAttribute.IsFolder</name>
 		<right>
-			<name>Edit</name>
+			<name>UpdateDataHistoryOfMissingData</name>
 			<value>false</value>
 		</right>
-	</object>
-	<object>
-		<name>Catalog.КлючевыеОперации.StandardAttribute.Owner</name>
 		<right>
-			<name>Edit</name>
+			<name>UpdateDataHistoryVersionComment</name>
 			<value>false</value>
 		</right>
-	</object>
-	<object>
-		<name>Catalog.КлючевыеОперации.StandardAttribute.Parent</name>
 		<right>
-			<name>Edit</name>
+			<name>ViewDataHistory</name>
 			<value>false</value>
 		</right>
-	</object>
-	<object>
-		<name>Catalog.КлючевыеОперации.StandardAttribute.Description</name>
 		<right>
-			<name>Edit</name>
+			<name>EditDataHistoryVersionComment</name>
 			<value>false</value>
 		</right>
-	</object>
-	<object>
-		<name>Catalog.КлючевыеОперации.StandardAttribute.Code</name>
 		<right>
-			<name>Edit</name>
+			<name>SwitchToDataHistoryVersion</name>
 			<value>false</value>
 		</right>
 	</object>
@@ -1522,68 +1353,12 @@
 		</right>
 	</object>
 	<object>
-		<name>Catalog.СценарииОбменовДанными.TabularSection.НастройкиОбмена.Attribute.ВыполняемоеДействие</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.РазрешенияПереходаВПривилегированныйРежим.Attribute.Описание</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.РазрешенныеCOMКлассы.Resource.ИмяКомпьютера</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
 		<name>InformationRegister.ОбластиТребующиеОбработкиПоставляемыхДанных</name>
 		<right>
 			<name>Update</name>
 			<value>false</value>
 		</right>
 		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ОбластиТребующиеОбработкиПоставляемыхДанных.StandardAttribute.Active</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ОбластиТребующиеОбработкиПоставляемыхДанных.StandardAttribute.LineNumber</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ОбластиТребующиеОбработкиПоставляемыхДанных.StandardAttribute.Recorder</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ОбластиТребующиеОбработкиПоставляемыхДанных.StandardAttribute.Period</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>DataProcessor.РезервноеКопированиеИБ.Attribute.ВыполнитьРезервноеКопированиеСейчас</name>
-		<right>
 			<name>View</name>
 			<value>false</value>
 		</right>
@@ -1591,15 +1366,43 @@
 			<name>Edit</name>
 			<value>false</value>
 		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ПравилаДляОбменаДанными.Resource.ИмяМакетаПравил</name>
 		<right>
-			<name>View</name>
+			<name>TotalsControl</name>
 			<value>false</value>
 		</right>
 		<right>
-			<name>Edit</name>
+			<name>ViewDataHistory</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>EditDataHistoryVersionComment</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>SwitchToDataHistoryVersion</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ВидыПроверок</name>
+		<right>
+			<name>InteractiveDelete</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>InteractiveDeletePredefinedData</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>InteractiveSetDeletionMarkPredefinedData</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>InteractiveClearDeletionMarkPredefinedData</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>InteractiveDeleteMarkedPredefinedData</name>
 			<value>false</value>
 		</right>
 	</object>
@@ -1627,13 +1430,6 @@
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.НастройкиТранспортаОбмена.Resource.FTPСжиматьФайлИсходящегоСообщения</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
 		<name>Catalog.Заметки</name>
 		<right>
 			<name>InteractiveDelete</name>
@@ -1657,93 +1453,6 @@
 		</right>
 	</object>
 	<object>
-		<name>Constant.АдресДляВосстановленияПароляУчетнойЗаписи</name>
-		<right>
-			<name>Read</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Update</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.СообщенияОбменаДанными.Resource.ДатаЗакладкиСообщения</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.АдресныеСокращения</name>
-		<right>
-			<name>Update</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.АдресныеСокращения.StandardAttribute.Active</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.АдресныеСокращения.StandardAttribute.LineNumber</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.АдресныеСокращения.StandardAttribute.Recorder</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.АдресныеСокращения.StandardAttribute.Period</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ДанныеПроизводственногоКалендаря.Resource.ВидДня</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ПравилаДляОбменаДанными.Resource.ИмяПланаОбменаИзПравил</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
 		<name>Task.ЗадачаИсполнителя</name>
 		<right>
 			<name>InteractiveDelete</name>
@@ -1751,20 +1460,25 @@
 		</right>
 	</object>
 	<object>
-		<name>Catalog.СообщенияСистемы.Attribute.ТелоСообщения</name>
+		<name>Catalog.ПредопределенныеВариантыОтчетовРасширений</name>
 		<right>
-			<name>View</name>
+			<name>InteractiveDelete</name>
 			<value>false</value>
 		</right>
 		<right>
-			<name>Edit</name>
+			<name>InteractiveDeletePredefinedData</name>
 			<value>false</value>
 		</right>
-	</object>
-	<object>
-		<name>InformationRegister.СостоянияОбменовДанными.Dimension.ДействиеПриОбмене</name>
 		<right>
-			<name>Edit</name>
+			<name>InteractiveSetDeletionMarkPredefinedData</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>InteractiveClearDeletionMarkPredefinedData</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>InteractiveDeleteMarkedPredefinedData</name>
 			<value>false</value>
 		</right>
 	</object>
@@ -1772,17 +1486,6 @@
 		<name>Document.НазначениеОпросов</name>
 		<right>
 			<name>InteractiveDelete</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ПравилаДляОбменаДанными.Resource.ИсточникПравил</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
 			<value>false</value>
 		</right>
 	</object>
@@ -1842,69 +1545,6 @@
 		</right>
 	</object>
 	<object>
-		<name>Catalog.СценарииОбменовДанными.StandardAttribute.PredefinedDataName</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Catalog.СценарииОбменовДанными.StandardAttribute.Predefined</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Catalog.СценарииОбменовДанными.StandardAttribute.Ref</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Catalog.СценарииОбменовДанными.StandardAttribute.DeletionMark</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Catalog.СценарииОбменовДанными.StandardAttribute.IsFolder</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Catalog.СценарииОбменовДанными.StandardAttribute.Owner</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Catalog.СценарииОбменовДанными.StandardAttribute.Parent</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Catalog.СценарииОбменовДанными.StandardAttribute.Description</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Catalog.СценарииОбменовДанными.StandardAttribute.Code</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
 		<name>Constant.КлючОбластиДанных</name>
 		<right>
 			<name>Read</name>
@@ -1924,27 +1564,16 @@
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.ЗапросыРазрешенийНаИспользованиеВнешнихРесурсов.Attribute.МоментВремени</name>
+		<name>ExchangePlan.ОбновлениеИнформационнойБазы</name>
 		<right>
-			<name>Edit</name>
+			<name>InteractiveDelete</name>
 			<value>false</value>
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.ПравилаДляОбменаДанными.Resource.ИмяФайлаПравил</name>
+		<name>Constant.ДатаПоследнегоСтартаКлиентскогоСеанса</name>
 		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ПравилаДляОбменаДанными.Resource.РежимПротоколированияОбменаДанными</name>
-		<right>
-			<name>View</name>
+			<name>Update</name>
 			<value>false</value>
 		</right>
 		<right>
@@ -2008,74 +1637,7 @@
 		</right>
 	</object>
 	<object>
-		<name>Catalog.ИдентификаторыОбъектовМетаданных.StandardAttribute.Predefined</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Catalog.ИдентификаторыОбъектовМетаданных.StandardAttribute.Ref</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Catalog.ИдентификаторыОбъектовМетаданных.StandardAttribute.DeletionMark</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Catalog.ИдентификаторыОбъектовМетаданных.StandardAttribute.IsFolder</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Catalog.ИдентификаторыОбъектовМетаданных.StandardAttribute.Owner</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Catalog.ИдентификаторыОбъектовМетаданных.StandardAttribute.Parent</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Catalog.ИдентификаторыОбъектовМетаданных.StandardAttribute.Description</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Catalog.ИдентификаторыОбъектовМетаданных.StandardAttribute.Code</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.УдалитьБлокировкиСеансовОбластиДанных.Resource.КонецБлокировки</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.АдресныйКлассификатор</name>
+		<name>InformationRegister.УдалитьАдресныйКлассификатор</name>
 		<right>
 			<name>Update</name>
 			<value>false</value>
@@ -2084,32 +1646,8 @@
 			<name>Edit</name>
 			<value>false</value>
 		</right>
-	</object>
-	<object>
-		<name>InformationRegister.АдресныйКлассификатор.StandardAttribute.Active</name>
 		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.АдресныйКлассификатор.StandardAttribute.LineNumber</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.АдресныйКлассификатор.StandardAttribute.Recorder</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.АдресныйКлассификатор.StandardAttribute.Period</name>
-		<right>
-			<name>Edit</name>
+			<name>TotalsControl</name>
 			<value>false</value>
 		</right>
 	</object>
@@ -2140,23 +1678,9 @@
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.РазрешенияПереходаВПривилегированныйРежим.Dimension.БезопасныйРежим</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
 		<name>Document.ТелефонныйЗвонок</name>
 		<right>
 			<name>InteractiveDelete</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.РазрешенныеCOMКлассы.Dimension.Владелец</name>
-		<right>
-			<name>Edit</name>
 			<value>false</value>
 		</right>
 	</object>
@@ -2184,78 +1708,28 @@
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.СостоянияОбменовДанными.Resource.РезультатВыполненияОбмена</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.НастройкиТранспортаОбменаОбластейДанных</name>
-		<right>
-			<name>Read</name>
-			<value>false</value>
-		</right>
+		<name>Constant.УдалитьЛогинДоступаКСервисуMorpher</name>
 		<right>
 			<name>Update</name>
 			<value>false</value>
 		</right>
 		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>ReadDataHistory</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>ReadDataHistoryOfMissingData</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>UpdateDataHistory</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>UpdateDataHistoryOfMissingData</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>UpdateDataHistoryVersionComment</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>ViewDataHistory</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>EditDataHistoryVersionComment</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>SwitchToDataHistoryVersion</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>DataProcessor.ОценкаПроизводительности.TabularSection.Производительность.Attribute.КлючеваяОперация</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
 			<name>Edit</name>
 			<value>false</value>
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.РазрешенныеВнешниеКомпоненты.Dimension.Владелец</name>
+		<name>InformationRegister.ПричиныИзмененияАдресныхСведений</name>
+		<right>
+			<name>Update</name>
+			<value>false</value>
+		</right>
 		<right>
 			<name>Edit</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>TotalsControl</name>
 			<value>false</value>
 		</right>
 	</object>
@@ -2276,60 +1750,31 @@
 			<name>Edit</name>
 			<value>false</value>
 		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ДанныеПроизводственногоКалендаря.StandardAttribute.Active</name>
 		<right>
-			<name>Edit</name>
+			<name>TotalsControl</name>
 			<value>false</value>
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.ДанныеПроизводственногоКалендаря.StandardAttribute.LineNumber</name>
+		<name>Catalog.ВерсииРасширений</name>
 		<right>
-			<name>Edit</name>
+			<name>InteractiveDelete</name>
 			<value>false</value>
 		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ДанныеПроизводственногоКалендаря.StandardAttribute.Recorder</name>
 		<right>
-			<name>Edit</name>
+			<name>InteractiveDeletePredefinedData</name>
 			<value>false</value>
 		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ДанныеПроизводственногоКалендаря.StandardAttribute.Period</name>
 		<right>
-			<name>Edit</name>
+			<name>InteractiveSetDeletionMarkPredefinedData</name>
 			<value>false</value>
 		</right>
-	</object>
-	<object>
-		<name>InformationRegister.НастройкиТранспортаОбмена.Resource.ВидТранспортаСообщенийОбменаПоУмолчанию</name>
 		<right>
-			<name>Edit</name>
+			<name>InteractiveClearDeletionMarkPredefinedData</name>
 			<value>false</value>
 		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ПраваРолей.Resource.Редактирование</name>
 		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.НастройкиТранспортаОбмена.Resource.COMИмяСервера1СПредприятия</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.УдалитьЗамерыВремени.Resource.ВремяКонца</name>
-		<right>
-			<name>Edit</name>
+			<name>InteractiveDeleteMarkedPredefinedData</name>
 			<value>false</value>
 		</right>
 	</object>
@@ -2352,6 +1797,10 @@
 			<value>false</value>
 		</right>
 		<right>
+			<name>TotalsControl</name>
+			<value>false</value>
+		</right>
+		<right>
 			<name>ReadDataHistory</name>
 			<value>false</value>
 		</right>
@@ -2385,51 +1834,7 @@
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.УдалитьБлокировкиСеансовОбластиДанных.StandardAttribute.Active</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.УдалитьБлокировкиСеансовОбластиДанных.StandardAttribute.LineNumber</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.УдалитьБлокировкиСеансовОбластиДанных.StandardAttribute.Recorder</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.УдалитьБлокировкиСеансовОбластиДанных.StandardAttribute.Period</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Constant.ПарольСлужебногоПользователяМенеджераСервиса</name>
+		<name>Constant.УдалитьПарольСлужебногоПользователяМенеджераСервиса</name>
 		<right>
 			<name>Read</name>
 			<value>false</value>
@@ -2467,49 +1872,6 @@
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.УдалитьЗамерыВремени.Resource.ВремяНачала</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.УдалитьЗамерыВремени.Dimension.КлючеваяОперация</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ОбластиТребующиеОбработкиПоставляемыхДанных.Dimension.КодОбработчика</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ЗапросыРазрешенийНаИспользованиеВнешнихРесурсов.Dimension.Идентификатор</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.УдалитьОчередьЗаданий.Resource.ЗапланированныйМоментЗапуска</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
 		<name>InformationRegister.ПраваРолей</name>
 		<right>
 			<name>Update</name>
@@ -2519,32 +1881,8 @@
 			<name>Edit</name>
 			<value>false</value>
 		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ПраваРолей.StandardAttribute.Active</name>
 		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ПраваРолей.StandardAttribute.LineNumber</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ПраваРолей.StandardAttribute.Recorder</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ПраваРолей.StandardAttribute.Period</name>
-		<right>
-			<name>Edit</name>
+			<name>TotalsControl</name>
 			<value>false</value>
 		</right>
 	</object>
@@ -2678,24 +2016,6 @@
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.УдалитьОчередьЗаданий.Resource.Параметры</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.АдресныйКлассификатор.Resource.АльтернативныеНазвания</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
 		<name>Constant.СписокРасширенийФайловOpenDocument</name>
 		<right>
 			<name>Read</name>
@@ -2715,18 +2035,30 @@
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.НастройкиТранспортаОбмена.Resource.EMAILМаксимальныйДопустимыйРазмерСообщения</name>
+		<name>Catalog.ПравилаПроверкиУчета</name>
 		<right>
-			<name>Edit</name>
+			<name>InteractiveDelete</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>InteractiveDeletePredefinedData</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>InteractiveSetDeletionMarkPredefinedData</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>InteractiveClearDeletionMarkPredefinedData</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>InteractiveDeleteMarkedPredefinedData</name>
 			<value>false</value>
 		</right>
 	</object>
 	<object>
 		<name>Constant.ДатаПоследнейВыгрузкиЗамеровПроизводительностиUTC</name>
-		<right>
-			<name>Read</name>
-			<value>false</value>
-		</right>
 		<right>
 			<name>Update</name>
 			<value>false</value>
@@ -2735,20 +2067,6 @@
 			<name>View</name>
 			<value>false</value>
 		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.СостоянияОбменовДанными.Dimension.УзелИнформационнойБазы</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ДанныеПроизводственногоКалендаря.Dimension.Дата</name>
 		<right>
 			<name>Edit</name>
 			<value>false</value>
@@ -2804,27 +2122,6 @@
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.НастройкиТранспортаОбмена.Resource.WSИмяПользователя</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.РазрешенныеCOMКлассы.Resource.CLSID</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.РазрешенныеВнешниеКомпоненты.Dimension.ИмяФайла</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
 		<name>Constant.ПоддержкаРезервногоКопирования</name>
 		<right>
 			<name>Update</name>
@@ -2834,13 +2131,6 @@
 			<name>View</name>
 			<value>false</value>
 		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.НастройкиТранспортаОбмена.Resource.EMAILСжиматьФайлИсходящегоСообщения</name>
 		<right>
 			<name>Edit</name>
 			<value>false</value>
@@ -2865,6 +2155,10 @@
 			<value>false</value>
 		</right>
 		<right>
+			<name>TotalsControl</name>
+			<value>false</value>
+		</right>
+		<right>
 			<name>ReadDataHistory</name>
 			<value>false</value>
 		</right>
@@ -2898,73 +2192,7 @@
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.НастройкиОтправителя.StandardAttribute.Active</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.НастройкиОтправителя.StandardAttribute.LineNumber</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.НастройкиОтправителя.StandardAttribute.Recorder</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.НастройкиОтправителя.StandardAttribute.Period</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
 		<name>InformationRegister.ВерсииПодсистем</name>
-		<right>
-			<name>Update</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Catalog.ПользовательскиеНастройкиОтчетов</name>
-		<right>
-			<name>InteractiveDelete</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>InteractiveDeletePredefinedData</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.СостоянияОбменовДанными</name>
 		<right>
 			<name>Update</name>
 			<value>false</value>
@@ -2979,71 +2207,30 @@
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.СостоянияОбменовДанными.StandardAttribute.Active</name>
+		<name>Catalog.ПользовательскиеНастройкиОтчетов</name>
 		<right>
-			<name>Edit</name>
+			<name>InteractiveDelete</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>InteractiveDeletePredefinedData</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>InteractiveSetDeletionMarkPredefinedData</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>InteractiveClearDeletionMarkPredefinedData</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>InteractiveDeleteMarkedPredefinedData</name>
 			<value>false</value>
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.СостоянияОбменовДанными.StandardAttribute.LineNumber</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.СостоянияОбменовДанными.StandardAttribute.Recorder</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.СостоянияОбменовДанными.StandardAttribute.Period</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Constant.ИспользоватьАвтономнуюРаботуВМоделиСервиса</name>
-		<right>
-			<name>Update</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Catalog.СценарииОбменовДанными.Attribute.ИспользоватьРегламентноеЗадание</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Catalog.ИдентификаторыОбъектовМетаданных.Attribute.ЗначениеПустойСсылки</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Catalog.ИдентификаторыОбъектовМетаданных.Attribute.БезДанных</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.УдалитьВерсииПодсистем</name>
+		<name>InformationRegister.СостоянияОбменовДанными</name>
 		<right>
 			<name>Read</name>
 			<value>false</value>
@@ -3061,6 +2248,10 @@
 			<value>false</value>
 		</right>
 		<right>
+			<name>TotalsControl</name>
+			<value>false</value>
+		</right>
+		<right>
 			<name>ReadDataHistory</name>
 			<value>false</value>
 		</right>
@@ -3090,6 +2281,43 @@
 		</right>
 		<right>
 			<name>SwitchToDataHistoryVersion</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>DataProcessor.РезервноеКопированиеИБ.Command.ПоказатьРезультат</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ОбластиДанных</name>
+		<right>
+			<name>Update</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>TotalsControl</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.УдалитьВерсииПодсистем</name>
+		<right>
+			<name>Update</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>TotalsControl</name>
 			<value>false</value>
 		</right>
 	</object>
@@ -3113,115 +2341,11 @@
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.АдресныеСокращения.Resource.Наименование</name>
+		<name>Constant.КоличествоЗамеровВПакетеЭкспорта</name>
 		<right>
-			<name>Edit</name>
+			<name>Read</name>
 			<value>false</value>
 		</right>
-	</object>
-	<object>
-		<name>DataProcessor.НастройкаРезервногоКопированияИБ.Attribute.КоличествоКопий</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Catalog.СценарииОбменовДанными.TabularSection.НастройкиОбмена.Attribute.УзелИнформационнойБазы</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ПравилаДляОбменаДанными.Resource.ПравилаЗачитанные</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ЗапросыРазрешенийНаИспользованиеВнешнихРесурсов.Dimension.БезопасныйРежим</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>DataProcessor.ОценкаПроизводительности.Attribute.Шаг</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ЗапросыАдминистрированияРазрешенийИспользованияВнешнихРесурсов</name>
-		<right>
-			<name>Update</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>TotalsControl</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ЗапросыАдминистрированияРазрешенийИспользованияВнешнихРесурсов.StandardAttribute.Active</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ЗапросыАдминистрированияРазрешенийИспользованияВнешнихРесурсов.StandardAttribute.LineNumber</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ЗапросыАдминистрированияРазрешенийИспользованияВнешнихРесурсов.StandardAttribute.Recorder</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ЗапросыАдминистрированияРазрешенийИспользованияВнешнихРесурсов.StandardAttribute.Period</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>DataProcessor.РезервноеКопированиеИБ.Attribute.КодТипаРезервногоКопирования</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Constant.ПараметрыРаботыПользователей</name>
 		<right>
 			<name>Update</name>
 			<value>false</value>
@@ -3239,20 +2363,6 @@
 		<name>Document.СообщениеSMS</name>
 		<right>
 			<name>InteractiveDelete</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.НастройкиТранспортаОбмена.Resource.FTPСоединениеМаксимальныйДопустимыйРазмерСообщения</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ЗависимостиПравДоступа.Dimension.ТипВедущейТаблицы</name>
-		<right>
-			<name>Edit</name>
 			<value>false</value>
 		</right>
 	</object>
@@ -3276,13 +2386,13 @@
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.ПравилаДляОбменаДанными.Resource.НеОстанавливатьПоОшибке</name>
+		<name>InformationRegister.ОчередьИзвлеченияТекста</name>
 		<right>
-			<name>View</name>
+			<name>Edit</name>
 			<value>false</value>
 		</right>
 		<right>
-			<name>Edit</name>
+			<name>TotalsControl</name>
 			<value>false</value>
 		</right>
 	</object>
@@ -3310,24 +2420,6 @@
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.ПравилаДляОбменаДанными.Dimension.ИмяПланаОбмена</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.НастройкиТранспортаОбмена.Resource.FTPСоединениеПорт</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
 		<name>Constant.МаксимальныйРазмерФайла</name>
 		<right>
 			<name>Read</name>
@@ -3347,31 +2439,6 @@
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.ЗапросыРазрешенийНаИспользованиеВнешнихРесурсов.Attribute.УдаляемыеРазрешения</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>DataProcessor.РезервноеКопированиеИБ.Attribute.ПроводитьРезервноеКопированиеПриВосстановленииДанных</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.НастройкиТранспортаОбмена.Resource.COMКаталогИнформационнойБазы</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
 		<name>CommonAttribute.ОбластьДанныхОсновныеДанные</name>
 		<right>
 			<name>View</name>
@@ -3383,14 +2450,18 @@
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.ПоставляемыеДанныеТребующиеОбработки.Resource.КоличествоПопыток</name>
+		<name>DataProcessor.ОценкаПроизводительности.Command.ИмпортЗамеровПроизводительности</name>
 		<right>
-			<name>Edit</name>
+			<name>View</name>
 			<value>false</value>
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.УдалитьОчередьЗаданий.Resource.ИсполняющееФоновоеЗадание</name>
+		<name>InformationRegister.ПакетыИнформацииПриЗапуске</name>
+		<right>
+			<name>Update</name>
+			<value>false</value>
+		</right>
 		<right>
 			<name>View</name>
 			<value>false</value>
@@ -3399,26 +2470,20 @@
 			<name>Edit</name>
 			<value>false</value>
 		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ПравилаДляОбменаДанными.Resource.РежимОтладки</name>
 		<right>
-			<name>View</name>
+			<name>TotalsControl</name>
 			<value>false</value>
 		</right>
 		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ПравилаДляОбменаДанными.Resource.ИнформацияОПравилах</name>
-		<right>
-			<name>View</name>
+			<name>ViewDataHistory</name>
 			<value>false</value>
 		</right>
 		<right>
-			<name>Edit</name>
+			<name>EditDataHistoryVersionComment</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>SwitchToDataHistoryVersion</name>
 			<value>false</value>
 		</right>
 	</object>
@@ -3438,6 +2503,10 @@
 		</right>
 		<right>
 			<name>Edit</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>TotalsControl</name>
 			<value>false</value>
 		</right>
 		<right>
@@ -3470,24 +2539,6 @@
 		</right>
 		<right>
 			<name>SwitchToDataHistoryVersion</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ПраваРолей.Resource.ИнтерактивноеДобавление</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Constant.РазделыОписанияИзмененийСистемы</name>
-		<right>
-			<name>Update</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
 			<value>false</value>
 		</right>
 	</object>
@@ -3591,7 +2642,15 @@
 		</right>
 	</object>
 	<object>
-		<name>Catalog.СообщенияСистемы.Attribute.Заблокировано</name>
+		<name>InformationRegister.ЗамерыОбластиСтатистики</name>
+		<right>
+			<name>Read</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>false</value>
+		</right>
 		<right>
 			<name>View</name>
 			<value>false</value>
@@ -3600,18 +2659,70 @@
 			<name>Edit</name>
 			<value>false</value>
 		</right>
-	</object>
-	<object>
-		<name>InformationRegister.РазрешенныеCOMКлассы.Dimension.ProgId</name>
 		<right>
-			<name>Edit</name>
+			<name>TotalsControl</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>ReadDataHistory</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>ReadDataHistoryOfMissingData</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>UpdateDataHistory</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>UpdateDataHistoryOfMissingData</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>UpdateDataHistoryVersionComment</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>ViewDataHistory</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>EditDataHistoryVersionComment</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>SwitchToDataHistoryVersion</name>
 			<value>false</value>
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.РазрешенныеКаталогиФайловойСистемы.Attribute.Описание</name>
+		<name>InformationRegister.ДополнительныеАдресныеСведения</name>
+		<right>
+			<name>Update</name>
+			<value>false</value>
+		</right>
 		<right>
 			<name>Edit</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>TotalsControl</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ОриентирыАдресныхОбъектов</name>
+		<right>
+			<name>Update</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>TotalsControl</name>
 			<value>false</value>
 		</right>
 	</object>
@@ -3619,13 +2730,6 @@
 		<name>Document.Анкета</name>
 		<right>
 			<name>InteractiveDelete</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ОбластиТребующиеОбработкиПоставляемыхДанных.Dimension.ОбластьДанных</name>
-		<right>
-			<name>Edit</name>
 			<value>false</value>
 		</right>
 	</object>
@@ -3685,62 +2789,6 @@
 		</right>
 	</object>
 	<object>
-		<name>Catalog.ПроизводственныеКалендари.StandardAttribute.Predefined</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Catalog.ПроизводственныеКалендари.StandardAttribute.Ref</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Catalog.ПроизводственныеКалендари.StandardAttribute.DeletionMark</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Catalog.ПроизводственныеКалендари.StandardAttribute.IsFolder</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Catalog.ПроизводственныеКалендари.StandardAttribute.Owner</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Catalog.ПроизводственныеКалендари.StandardAttribute.Parent</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Catalog.ПроизводственныеКалендари.StandardAttribute.Description</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Catalog.ПроизводственныеКалендари.StandardAttribute.Code</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
 		<name>Catalog.СтроковыеКонтактыВзаимодействий</name>
 		<right>
 			<name>InteractiveDelete</name>
@@ -3748,6 +2796,18 @@
 		</right>
 		<right>
 			<name>InteractiveDeletePredefinedData</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>InteractiveSetDeletionMarkPredefinedData</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>InteractiveClearDeletionMarkPredefinedData</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>InteractiveDeleteMarkedPredefinedData</name>
 			<value>false</value>
 		</right>
 	</object>
@@ -3775,13 +2835,6 @@
 		</right>
 	</object>
 	<object>
-		<name>Catalog.ИдентификаторыОбъектовМетаданных.Attribute.ПорядокКоллекции</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
 		<name>Catalog.ВидыКонтактнойИнформации</name>
 		<right>
 			<name>InteractiveDelete</name>
@@ -3805,16 +2858,13 @@
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.НастройкиТранспортаОбмена.Resource.FILEКаталогОбменаИнформацией</name>
+		<name>DataProcessor.НастройкиЦентраМониторинга</name>
 		<right>
-			<name>Edit</name>
+			<name>Use</name>
 			<value>false</value>
 		</right>
-	</object>
-	<object>
-		<name>InformationRegister.СостоянияОбменовДанными.Resource.ДатаНачала</name>
 		<right>
-			<name>Edit</name>
+			<name>View</name>
 			<value>false</value>
 		</right>
 	</object>
@@ -3842,56 +2892,39 @@
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.РазрешенныеПриложенияОперационнойСистемы.Dimension.Владелец</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Catalog.СообщенияСистемы.Attribute.ПодробноеПредставлениеОшибки</name>
+		<name>DataProcessor.ОценкаПроизводительности.Command.ЭкспортЗамеровПроизводительности</name>
 		<right>
 			<name>View</name>
 			<value>false</value>
 		</right>
+	</object>
+	<object>
+		<name>Document.ОтзывСогласияНаОбработкуПерсональныхДанных</name>
 		<right>
-			<name>Edit</name>
+			<name>InteractiveDelete</name>
 			<value>false</value>
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.РежимыПодключенияВнешнихМодулей.Dimension.ВнешнийМодуль</name>
+		<name>Catalog.СертификатыКлючейЭлектроннойПодписиИШифрования</name>
 		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.УдалитьБлокировкиСеансовОбластиДанных.Dimension.ОбластьДанных</name>
-		<right>
-			<name>View</name>
+			<name>InteractiveDelete</name>
 			<value>false</value>
 		</right>
 		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ПраваРолей.Resource.Просмотр</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>DataProcessor.НастройкаРезервногоКопированияИБ.Attribute.КаталогСРезервнымиКопиями</name>
-		<right>
-			<name>View</name>
+			<name>InteractiveDeletePredefinedData</name>
 			<value>false</value>
 		</right>
 		<right>
-			<name>Edit</name>
+			<name>InteractiveSetDeletionMarkPredefinedData</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>InteractiveClearDeletionMarkPredefinedData</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>InteractiveDeleteMarkedPredefinedData</name>
 			<value>false</value>
 		</right>
 	</object>
@@ -3901,34 +2934,6 @@
 			<name>Update</name>
 			<value>false</value>
 		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ЗапросыРазрешенийНаИспользованиеВнешнихРесурсов.Dimension.Владелец</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.УдалитьЗамерыВремени.Resource.ВремяКонцаПроверка</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.РазрешенныеВнешниеКомпоненты.Dimension.БезопасныйРежим</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ЗависимостиПравДоступа.Dimension.ПодчиненнаяТаблица</name>
 		<right>
 			<name>Edit</name>
 			<value>false</value>
@@ -3950,6 +2955,10 @@
 		</right>
 		<right>
 			<name>Edit</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>TotalsControl</name>
 			<value>false</value>
 		</right>
 		<right>
@@ -3986,20 +2995,6 @@
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.РазрешенныеCOMКлассы.Dimension.БезопасныйРежим</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ПраваРолей.Resource.Добавление</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
 		<name>Catalog.ЗакладкиВзаимодействий</name>
 		<right>
 			<name>InteractiveDelete</name>
@@ -4023,14 +3018,11 @@
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.АдресныйКлассификатор.Resource.Индекс</name>
+		<name>Constant.ПрефиксОбластиДанных</name>
 		<right>
-			<name>Edit</name>
+			<name>Update</name>
 			<value>false</value>
 		</right>
-	</object>
-	<object>
-		<name>InformationRegister.СостоянияОбменовДанными.Resource.ДатаОкончания</name>
 		<right>
 			<name>Edit</name>
 			<value>false</value>
@@ -4060,35 +3052,6 @@
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.РазрешенныеВнешниеКомпоненты.Resource.ХэшСумма</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Catalog.СообщенияСистемы.Attribute.ЭтоБыстроеСообщение</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>DataProcessor.УправлениеПолнотекстовымПоиском</name>
-		<right>
-			<name>Use</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
 		<name>Document.ЭлектронноеПисьмоИсходящее</name>
 		<right>
 			<name>InteractiveDelete</name>
@@ -4096,7 +3059,15 @@
 		</right>
 	</object>
 	<object>
-		<name>Catalog.ТомаХраненияФайлов.Attribute.МаксимальныйРазмер</name>
+		<name>InformationRegister.УдалитьЗамерыВремени3</name>
+		<right>
+			<name>Read</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>false</value>
+		</right>
 		<right>
 			<name>View</name>
 			<value>false</value>
@@ -4105,22 +3076,40 @@
 			<name>Edit</name>
 			<value>false</value>
 		</right>
-	</object>
-	<object>
-		<name>InformationRegister.УдалитьОчередьЗаданий.Resource.УдалитьРегламентноеЗадание</name>
 		<right>
-			<name>View</name>
+			<name>TotalsControl</name>
 			<value>false</value>
 		</right>
 		<right>
-			<name>Edit</name>
+			<name>ReadDataHistory</name>
 			<value>false</value>
 		</right>
-	</object>
-	<object>
-		<name>InformationRegister.НастройкиТранспортаОбмена.Resource.КоличествоЭлементовВТранзакцииЗагрузкиДанных</name>
 		<right>
-			<name>Edit</name>
+			<name>ReadDataHistoryOfMissingData</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>UpdateDataHistory</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>UpdateDataHistoryOfMissingData</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>UpdateDataHistoryVersionComment</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>ViewDataHistory</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>EditDataHistoryVersionComment</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>SwitchToDataHistoryVersion</name>
 			<value>false</value>
 		</right>
 	</object>
@@ -4148,17 +3137,6 @@
 		</right>
 	</object>
 	<object>
-		<name>Catalog.ТомаХраненияФайлов.Attribute.ПолныйПутьLinux</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
 		<name>Catalog.ВнешниеПользователи</name>
 		<right>
 			<name>InteractiveDelete</name>
@@ -4178,6 +3156,17 @@
 		</right>
 		<right>
 			<name>InteractiveDeleteMarkedPredefinedData</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Constant.ЧасовойПоясОбластиДанных</name>
+		<right>
+			<name>Update</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
 			<value>false</value>
 		</right>
 	</object>
@@ -4205,79 +3194,15 @@
 		</right>
 	</object>
 	<object>
-		<name>Catalog.ИдентификаторыОбъектовМетаданных.Attribute.Имя</name>
+		<name>Constant.ИспользоватьАльтернативныйСерверДляЗагрузкиКурсовВалют</name>
 		<right>
-			<name>Edit</name>
+			<name>Read</name>
 			<value>false</value>
 		</right>
-	</object>
-	<object>
-		<name>Constant.ПараметрыСлужебныхСобытий</name>
 		<right>
 			<name>Update</name>
 			<value>false</value>
 		</right>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.УдалитьЗамерыВремени.Dimension.УникальныйИдентификатор</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.РазрешенныеКаталогиФайловойСистемы</name>
-		<right>
-			<name>Update</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>TotalsControl</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.РазрешенныеКаталогиФайловойСистемы.StandardAttribute.Active</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.РазрешенныеКаталогиФайловойСистемы.StandardAttribute.LineNumber</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.РазрешенныеКаталогиФайловойСистемы.StandardAttribute.Recorder</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.РазрешенныеКаталогиФайловойСистемы.StandardAttribute.Period</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>DataProcessor.РезервноеКопированиеИБ.Attribute.ВариантРасписанияРезервногоКопирования</name>
 		<right>
 			<name>View</name>
 			<value>false</value>
@@ -4310,24 +3235,6 @@
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.РазрешенныеИнтернетРесурсы.Resource.Адрес</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.УдалитьОчередьЗаданий.Resource.ЭксклюзивноеВыполнение</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
 		<name>Constant.КаталогСообщенийОбменаДаннымиДляWindows</name>
 		<right>
 			<name>Read</name>
@@ -4337,17 +3244,6 @@
 			<name>Update</name>
 			<value>false</value>
 		</right>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.УдалитьЗамерыВремени.Resource.ВремяВыполнения</name>
 		<right>
 			<name>View</name>
 			<value>false</value>
@@ -4377,20 +3273,6 @@
 		</right>
 	</object>
 	<object>
-		<name>Catalog.КлючевыеОперации.Attribute.МинимальноДопустимыйУровень</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Catalog.ИдентификаторыОбъектовМетаданных.Attribute.ПолноеИмя</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
 		<name>InformationRegister.КэшПрограммныхИнтерфейсов</name>
 		<right>
 			<name>Read</name>
@@ -4406,6 +3288,10 @@
 		</right>
 		<right>
 			<name>Edit</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>TotalsControl</name>
 			<value>false</value>
 		</right>
 		<right>
@@ -4438,24 +3324,6 @@
 		</right>
 		<right>
 			<name>SwitchToDataHistoryVersion</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ПраваРолей.Resource.ЧтениеБезОграничения</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ПравилаДляОбменаДанными.Resource.ИмяФайлаПротоколаОбмена</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
 			<value>false</value>
 		</right>
 	</object>
@@ -4490,36 +3358,11 @@
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.УдалитьОчередьЗаданий.Dimension.ОбластьДанных</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Constant.КонечнаяТочкаМенеджераСервиса</name>
+		<name>Constant.УдалитьКонечнаяТочкаМенеджераСервиса</name>
 		<right>
 			<name>Update</name>
 			<value>false</value>
 		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ЗапросыАдминистрированияРазрешенийИспользованияВнешнихРесурсов.Dimension.Идентификатор</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.СостоянияУспешныхОбменовДанными.Dimension.ДействиеПриОбмене</name>
 		<right>
 			<name>Edit</name>
 			<value>false</value>
@@ -4581,38 +3424,8 @@
 		</right>
 	</object>
 	<object>
-		<name>DataProcessor.АвтоматическоеИзвлечениеТекстовДляВсехОбластейДанных</name>
-		<right>
-			<name>Use</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Constant.ИспользоватьСинхронизациюДанныхВМоделиСервисаСПриложениемВИнтернете</name>
-		<right>
-			<name>Update</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
 		<name>Constant.ОценкаПроизводительностиПериодЗаписи</name>
 		<right>
-			<name>Read</name>
-			<value>false</value>
-		</right>
-		<right>
 			<name>Update</name>
 			<value>false</value>
 		</right>
@@ -4620,13 +3433,6 @@
 			<name>View</name>
 			<value>false</value>
 		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Catalog.ИдентификаторыОбъектовМетаданных.Attribute.КлючОбъектаМетаданных</name>
 		<right>
 			<name>Edit</name>
 			<value>false</value>
@@ -4636,39 +3442,6 @@
 		<name>Constant.ГлавныйУзел</name>
 		<right>
 			<name>Update</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.УдалитьОчередьЗаданий.Dimension.Идентификатор</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ПравилаДляОбменаДанными.Resource.РежимОтладкиЗагрузки</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ПравилаДляОбменаДанными.Attribute.ИспользоватьФильтрВыборочнойРегистрацииОбъектов</name>
-		<right>
-			<name>View</name>
 			<value>false</value>
 		</right>
 		<right>
@@ -4711,17 +3484,6 @@
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.ПравилаДляОбменаДанными.Dimension.ВидПравил</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
 		<name>Constant.БлокировкаОтправкиБыстрыхСообщений</name>
 		<right>
 			<name>Read</name>
@@ -4737,27 +3499,6 @@
 		</right>
 		<right>
 			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Catalog.КлючевыеОперации.Attribute.ЦелевоеВремя</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.НастройкиТранспортаОбмена.Resource.WSЗапомнитьПароль</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ОбщиеНастройкиУзловИнформационныхБаз</name>
-		<right>
-			<name>TotalsControl</name>
 			<value>false</value>
 		</right>
 	</object>
@@ -4785,60 +3526,15 @@
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.ВерсииОбъектовАдресногоКлассификатора</name>
+		<name>InformationRegister.УдалитьЗамерыВремени2</name>
+		<right>
+			<name>Read</name>
+			<value>false</value>
+		</right>
 		<right>
 			<name>Update</name>
 			<value>false</value>
 		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ВерсииОбъектовАдресногоКлассификатора.StandardAttribute.Active</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ВерсииОбъектовАдресногоКлассификатора.StandardAttribute.LineNumber</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ВерсииОбъектовАдресногоКлассификатора.StandardAttribute.Recorder</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ВерсииОбъектовАдресногоКлассификатора.StandardAttribute.Period</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Catalog.КлючевыеОперации.Attribute.Приоритет</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.АдресныйКлассификатор.Dimension.Код</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>DataProcessor.НастройкаРезервногоКопированияИБ.Attribute.ТипОграничения</name>
 		<right>
 			<name>View</name>
 			<value>false</value>
@@ -4847,9 +3543,129 @@
 			<name>Edit</name>
 			<value>false</value>
 		</right>
+		<right>
+			<name>TotalsControl</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>ReadDataHistory</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>ReadDataHistoryOfMissingData</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>UpdateDataHistory</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>UpdateDataHistoryOfMissingData</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>UpdateDataHistoryVersionComment</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>ViewDataHistory</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>EditDataHistoryVersionComment</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>SwitchToDataHistoryVersion</name>
+			<value>false</value>
+		</right>
 	</object>
 	<object>
-		<name>Constant.ИмяСлужебногоПользователяМенеджераСервиса</name>
+		<name>Catalog.УчетныеЗаписиСинхронизацииФайлов</name>
+		<right>
+			<name>InteractiveDelete</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>InteractiveDeletePredefinedData</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>InteractiveSetDeletionMarkPredefinedData</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>InteractiveClearDeletionMarkPredefinedData</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>InteractiveDeleteMarkedPredefinedData</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ПараметрыРаботыПрограммы</name>
+		<right>
+			<name>Update</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>TotalsControl</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ПрограммыЭлектроннойПодписиИШифрования</name>
+		<right>
+			<name>InteractiveDelete</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>InteractiveDeletePredefinedData</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>InteractiveSetDeletionMarkPredefinedData</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>InteractiveClearDeletionMarkPredefinedData</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>InteractiveDeleteMarkedPredefinedData</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ИдентификаторыОбъектовРасширений</name>
+		<right>
+			<name>InteractiveDelete</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>InteractiveDeletePredefinedData</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>InteractiveSetDeletionMarkPredefinedData</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>InteractiveClearDeletionMarkPredefinedData</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>InteractiveDeleteMarkedPredefinedData</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Constant.УдалитьИмяСлужебногоПользователяМенеджераСервиса</name>
 		<right>
 			<name>Read</name>
 			<value>false</value>
@@ -4870,7 +3686,15 @@
 	<object>
 		<name>InformationRegister.НастройкиТранспортаОбмена</name>
 		<right>
+			<name>Read</name>
+			<value>false</value>
+		</right>
+		<right>
 			<name>Update</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>View</name>
 			<value>false</value>
 		</right>
 		<right>
@@ -4881,57 +3705,36 @@
 			<name>TotalsControl</name>
 			<value>false</value>
 		</right>
-	</object>
-	<object>
-		<name>InformationRegister.НастройкиТранспортаОбмена.StandardAttribute.Active</name>
 		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.НастройкиТранспортаОбмена.StandardAttribute.LineNumber</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.НастройкиТранспортаОбмена.StandardAttribute.Recorder</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.НастройкиТранспортаОбмена.StandardAttribute.Period</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.НастройкиТранспортаОбмена.Resource.КоличествоЭлементовВТранзакцииВыгрузкиДанных</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>DataProcessor.РезервноеКопированиеИБ.Attribute.ПарольАдминистратора</name>
-		<right>
-			<name>View</name>
+			<name>ReadDataHistory</name>
 			<value>false</value>
 		</right>
 		<right>
-			<name>Edit</name>
+			<name>ReadDataHistoryOfMissingData</name>
 			<value>false</value>
 		</right>
-	</object>
-	<object>
-		<name>InformationRegister.РазрешенныеВнешниеКомпоненты.Attribute.Описание</name>
 		<right>
-			<name>Edit</name>
+			<name>UpdateDataHistory</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>UpdateDataHistoryOfMissingData</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>UpdateDataHistoryVersionComment</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>ViewDataHistory</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>EditDataHistoryVersionComment</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>SwitchToDataHistoryVersion</name>
 			<value>false</value>
 		</right>
 	</object>
@@ -4955,58 +3758,6 @@
 		</right>
 		<right>
 			<name>InteractiveDeleteMarkedPredefinedData</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.НастройкиТранспортаОбмена.Dimension.Узел</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Constant.ПараметрыОграниченияДоступа</name>
-		<right>
-			<name>Update</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Constant.СинхронизироватьДанныеСПриложениемВИнтернетеПриНачалеРаботыПрограммы</name>
-		<right>
-			<name>Read</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Update</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>DataProcessor.НастройкаРезервногоКопированияИБ.Attribute.ЕдиницаИзмеренияПериода</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
 			<value>false</value>
 		</right>
 	</object>
@@ -5077,51 +3828,7 @@
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.ПравилаДляОбменаДанными.StandardAttribute.Active</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ПравилаДляОбменаДанными.StandardAttribute.LineNumber</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ПравилаДляОбменаДанными.StandardAttribute.Recorder</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ПравилаДляОбменаДанными.StandardAttribute.Period</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Constant.НастройкаПодчиненногоУзлаРИБЗавершена</name>
+		<name>InformationRegister.ОбластиСтатистики</name>
 		<right>
 			<name>Read</name>
 			<value>false</value>
@@ -5132,6 +3839,53 @@
 		</right>
 		<right>
 			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>TotalsControl</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>ReadDataHistory</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>ReadDataHistoryOfMissingData</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>UpdateDataHistory</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>UpdateDataHistoryOfMissingData</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>UpdateDataHistoryVersionComment</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>ViewDataHistory</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>EditDataHistoryVersionComment</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>SwitchToDataHistoryVersion</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Constant.НастройкаПодчиненногоУзлаРИБЗавершена</name>
+		<right>
+			<name>Update</name>
 			<value>false</value>
 		</right>
 		<right>
@@ -5163,39 +3917,6 @@
 		</right>
 	</object>
 	<object>
-		<name>Catalog.ТомаХраненияФайлов.Attribute.Комментарий</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ПравилаДляОбменаДанными.Resource.ИмяФайлаОбработкиДляОтладкиВыгрузки</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>DataProcessor.НастройкаРезервногоКопированияИБ.Attribute.ЗначениеВЕдиницахИзмерения</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
 		<name>Catalog.ЗначенияСвойствОбъектов</name>
 		<right>
 			<name>InteractiveDelete</name>
@@ -5219,24 +3940,6 @@
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.ПодпискиПолучателей.Dimension.Получатель</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.НастройкиТранспортаОбмена.Resource.COMИмяПользователя</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
 		<name>CommonCommand.ОбменСообщениями</name>
 		<right>
 			<name>View</name>
@@ -5244,25 +3947,7 @@
 		</right>
 	</object>
 	<object>
-		<name>DataProcessor.РезервноеКопированиеИБ.Attribute.ФайлЗагрузкиРезервнойКопии</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.НастройкиТранспортаОбмена.Resource.ПарольАрхиваСообщенияОбмена</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Constant.ВнутреннийАдресМенеджераСервиса</name>
+		<name>Constant.УдалитьВнутреннийАдресМенеджераСервиса</name>
 		<right>
 			<name>Read</name>
 			<value>false</value>
@@ -5281,7 +3966,7 @@
 		</right>
 	</object>
 	<object>
-		<name>Catalog.КлассификаторБанковРФ</name>
+		<name>Catalog.КлассификаторБанков</name>
 		<right>
 			<name>Insert</name>
 			<value>false</value>
@@ -5355,14 +4040,7 @@
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.ОбластиТребующиеОбработкиПоставляемыхДанных.Dimension.ИдентификаторФайла</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.УдалитьЗамерыВремени</name>
+		<name>InformationRegister.ИсторияАдресныхОбъектов</name>
 		<right>
 			<name>Update</name>
 			<value>false</value>
@@ -5371,9 +4049,21 @@
 			<name>Edit</name>
 			<value>false</value>
 		</right>
+		<right>
+			<name>TotalsControl</name>
+			<value>false</value>
+		</right>
 	</object>
 	<object>
-		<name>InformationRegister.УдалитьЗамерыВремени.StandardAttribute.Active</name>
+		<name>InformationRegister.УдалитьЗамерыВремени</name>
+		<right>
+			<name>Read</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>false</value>
+		</right>
 		<right>
 			<name>View</name>
 			<value>false</value>
@@ -5382,55 +4072,40 @@
 			<name>Edit</name>
 			<value>false</value>
 		</right>
-	</object>
-	<object>
-		<name>InformationRegister.УдалитьЗамерыВремени.StandardAttribute.LineNumber</name>
 		<right>
-			<name>View</name>
+			<name>TotalsControl</name>
 			<value>false</value>
 		</right>
 		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.УдалитьЗамерыВремени.StandardAttribute.Recorder</name>
-		<right>
-			<name>View</name>
+			<name>ReadDataHistory</name>
 			<value>false</value>
 		</right>
 		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.УдалитьЗамерыВремени.StandardAttribute.Period</name>
-		<right>
-			<name>View</name>
+			<name>ReadDataHistoryOfMissingData</name>
 			<value>false</value>
 		</right>
 		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.УдалитьЗамерыВремени.Dimension.ДатаЗамера</name>
-		<right>
-			<name>View</name>
+			<name>UpdateDataHistory</name>
 			<value>false</value>
 		</right>
 		<right>
-			<name>Edit</name>
+			<name>UpdateDataHistoryOfMissingData</name>
 			<value>false</value>
 		</right>
-	</object>
-	<object>
-		<name>InformationRegister.АдресныйКлассификатор.Dimension.КодГородаВКоде</name>
 		<right>
-			<name>Edit</name>
+			<name>UpdateDataHistoryVersionComment</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>ViewDataHistory</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>EditDataHistoryVersionComment</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>SwitchToDataHistoryVersion</name>
 			<value>false</value>
 		</right>
 	</object>
@@ -5458,84 +4133,15 @@
 		</right>
 	</object>
 	<object>
-		<name>Catalog.Организации</name>
-		<right>
-			<name>InteractiveDelete</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>InteractiveDeletePredefinedData</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>InteractiveSetDeletionMarkPredefinedData</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>InteractiveClearDeletionMarkPredefinedData</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>InteractiveDeleteMarkedPredefinedData</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.УдалитьОчередьЗаданий.Resource.Ключ</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.АдресныйКлассификатор.Dimension.КодАдресногоОбъектаВКоде</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Constant.ПараметрыВариантовОтчетов</name>
-		<right>
-			<name>Update</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
 		<name>InformationRegister.ЗамерыВремени</name>
 		<right>
+			<name>Read</name>
+			<value>false</value>
+		</right>
+		<right>
 			<name>Update</name>
 			<value>false</value>
 		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.АдресныйКлассификатор.Dimension.КодНаселенногоПунктаВКоде</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.НастройкиТранспортаОбмена.Resource.EMAILУчетнаяЗапись</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>DataProcessor.ОценкаПроизводительности.Attribute.Диаграмма</name>
 		<right>
 			<name>View</name>
 			<value>false</value>
@@ -5544,11 +4150,62 @@
 			<name>Edit</name>
 			<value>false</value>
 		</right>
+		<right>
+			<name>TotalsControl</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>ReadDataHistory</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>ReadDataHistoryOfMissingData</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>UpdateDataHistory</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>UpdateDataHistoryOfMissingData</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>UpdateDataHistoryVersionComment</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>ViewDataHistory</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>EditDataHistoryVersionComment</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>SwitchToDataHistoryVersion</name>
+			<value>false</value>
+		</right>
 	</object>
 	<object>
-		<name>InformationRegister.ДанныеПроизводственногоКалендаря.Dimension.Год</name>
+		<name>InformationRegister.УровниСокращенийАдресныхСведений</name>
+		<right>
+			<name>Update</name>
+			<value>false</value>
+		</right>
 		<right>
 			<name>Edit</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>TotalsControl</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>DataProcessor.НастройкиЦентраМониторинга.Command.НастройкаОтправкиОтчетовОбОшибках</name>
+		<right>
+			<name>View</name>
 			<value>false</value>
 		</right>
 	</object>
@@ -5566,76 +4223,6 @@
 			<name>View</name>
 			<value>false</value>
 		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.РазрешенныеCOMКлассы.Attribute.Описание</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Catalog.НазначенияСертификатовЭП</name>
-		<right>
-			<name>InteractiveDelete</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>InteractiveDeletePredefinedData</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>InteractiveSetDeletionMarkPredefinedData</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>InteractiveClearDeletionMarkPredefinedData</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>InteractiveDeleteMarkedPredefinedData</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Catalog.ТомаХраненияФайлов.Attribute.ПорядокЗаполнения</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ПравилаДляОбменаДанными.Attribute.ПравилаЗагружены</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.СообщенияОбменаДанными.Dimension.ИдентификаторСообщения</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Catalog.ИдентификаторыОбъектовМетаданных.Attribute.Синоним</name>
 		<right>
 			<name>Edit</name>
 			<value>false</value>
@@ -5661,28 +4248,73 @@
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.РазрешенныеКаталогиФайловойСистемы.Resource.РазрешенаЗаписьДанных</name>
+		<name>Document.СогласиеНаОбработкуПерсональныхДанных</name>
 		<right>
-			<name>Edit</name>
+			<name>InteractiveDelete</name>
 			<value>false</value>
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.УдалитьСтраныМира.Dimension.ОбластьДанных</name>
+		<name>InformationRegister.БуферОперацийСтатистики</name>
 		<right>
-			<name>Edit</name>
+			<name>Read</name>
 			<value>false</value>
 		</right>
-	</object>
-	<object>
-		<name>DataProcessor.УправлениеПолнотекстовымПоиском.Command.УправлениеПолнотекстовымПоиском</name>
+		<right>
+			<name>Update</name>
+			<value>false</value>
+		</right>
 		<right>
 			<name>View</name>
 			<value>false</value>
 		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>TotalsControl</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>ReadDataHistory</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>ReadDataHistoryOfMissingData</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>UpdateDataHistory</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>UpdateDataHistoryOfMissingData</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>UpdateDataHistoryVersionComment</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>ViewDataHistory</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>EditDataHistoryVersionComment</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>SwitchToDataHistoryVersion</name>
+			<value>false</value>
+		</right>
 	</object>
 	<object>
-		<name>InformationRegister.ДанныеПроизводственногоКалендаря.Dimension.ПроизводственныйКалендарь</name>
+		<name>Constant.ПараметрыЦентраМониторинга</name>
+		<right>
+			<name>Update</name>
+			<value>false</value>
+		</right>
 		<right>
 			<name>Edit</name>
 			<value>false</value>
@@ -5708,6 +4340,116 @@
 		</right>
 		<right>
 			<name>InteractiveDeleteMarkedPredefinedData</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.УдалитьРейтингАктивностиОбластейДанных</name>
+		<right>
+			<name>Read</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>TotalsControl</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>ReadDataHistory</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>ReadDataHistoryOfMissingData</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>UpdateDataHistory</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>UpdateDataHistoryOfMissingData</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>UpdateDataHistoryVersionComment</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>ViewDataHistory</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>EditDataHistoryVersionComment</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>SwitchToDataHistoryVersion</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ЗамерыВремениТехнологические</name>
+		<right>
+			<name>Read</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>TotalsControl</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>ReadDataHistory</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>ReadDataHistoryOfMissingData</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>UpdateDataHistory</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>UpdateDataHistoryOfMissingData</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>UpdateDataHistoryVersionComment</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>ViewDataHistory</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>EditDataHistoryVersionComment</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>SwitchToDataHistoryVersion</name>
 			<value>false</value>
 		</right>
 	</object>
@@ -5742,29 +4484,11 @@
 		</right>
 	</object>
 	<object>
-		<name>Constant.ПараметрыБазовойФункциональности</name>
+		<name>Constant.ИспользоватьСервисСклоненияMorpher</name>
 		<right>
 			<name>Update</name>
 			<value>false</value>
 		</right>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.СостоянияУспешныхОбменовДанными.Dimension.УзелИнформационнойБазы</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.АдресныйКлассификатор.Dimension.КодУлицыВКоде</name>
 		<right>
 			<name>Edit</name>
 			<value>false</value>
@@ -5790,17 +4514,6 @@
 		</right>
 		<right>
 			<name>InteractiveDeleteMarkedPredefinedData</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Catalog.ТомаХраненияФайлов.Attribute.ПолныйПутьWindows</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
 			<value>false</value>
 		</right>
 	</object>
@@ -5860,99 +4573,11 @@
 		</right>
 	</object>
 	<object>
-		<name>ChartOfCharacteristicTypes.УдалитьВидыДоступа.StandardAttribute.ValueType</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>ChartOfCharacteristicTypes.УдалитьВидыДоступа.StandardAttribute.Description</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>ChartOfCharacteristicTypes.УдалитьВидыДоступа.StandardAttribute.Code</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>ChartOfCharacteristicTypes.УдалитьВидыДоступа.StandardAttribute.IsFolder</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>ChartOfCharacteristicTypes.УдалитьВидыДоступа.StandardAttribute.Parent</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>ChartOfCharacteristicTypes.УдалитьВидыДоступа.StandardAttribute.Predefined</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>ChartOfCharacteristicTypes.УдалитьВидыДоступа.StandardAttribute.DeletionMark</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>ChartOfCharacteristicTypes.УдалитьВидыДоступа.StandardAttribute.Ref</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.РазрешенныеВнешниеКомпоненты</name>
+		<name>Constant.КоличествоПотоковОбновленияИнформационнойБазы</name>
 		<right>
 			<name>Update</name>
 			<value>false</value>
 		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>TotalsControl</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.РазрешенныеВнешниеКомпоненты.StandardAttribute.Active</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.РазрешенныеВнешниеКомпоненты.StandardAttribute.LineNumber</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.РазрешенныеВнешниеКомпоненты.StandardAttribute.Recorder</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.РазрешенныеВнешниеКомпоненты.StandardAttribute.Period</name>
 		<right>
 			<name>Edit</name>
 			<value>false</value>
@@ -5974,6 +4599,10 @@
 		</right>
 		<right>
 			<name>Edit</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>TotalsControl</name>
 			<value>false</value>
 		</right>
 		<right>
@@ -6012,79 +4641,6 @@
 	<object>
 		<name>InformationRegister.СостоянияУспешныхОбменовДанными</name>
 		<right>
-			<name>Update</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>TotalsControl</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.СостоянияУспешныхОбменовДанными.StandardAttribute.Active</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.СостоянияУспешныхОбменовДанными.StandardAttribute.LineNumber</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.СостоянияУспешныхОбменовДанными.StandardAttribute.Recorder</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.СостоянияУспешныхОбменовДанными.StandardAttribute.Period</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.НастройкиТранспортаОбмена.Resource.FTPСоединениеПароль</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Catalog.ВстречаПрисоединенныеФайлы</name>
-		<right>
-			<name>InteractiveDelete</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>InteractiveDeletePredefinedData</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>InteractiveSetDeletionMarkPredefinedData</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>InteractiveClearDeletionMarkPredefinedData</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>InteractiveDeleteMarkedPredefinedData</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.РейтингАктивностиОбластейДанных</name>
-		<right>
 			<name>Read</name>
 			<value>false</value>
 		</right>
@@ -6098,6 +4654,10 @@
 		</right>
 		<right>
 			<name>Edit</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>TotalsControl</name>
 			<value>false</value>
 		</right>
 		<right>
@@ -6134,28 +4694,47 @@
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.ПравилаДляОбменаДанными.Resource.РежимОтладкиВыгрузки</name>
+		<name>Catalog.ВстречаПрисоединенныеФайлы</name>
 		<right>
-			<name>View</name>
+			<name>InteractiveDelete</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>InteractiveDeletePredefinedData</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>InteractiveSetDeletionMarkPredefinedData</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>InteractiveClearDeletionMarkPredefinedData</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>InteractiveDeleteMarkedPredefinedData</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.РейтингАктивностиОбластейДанных</name>
+		<right>
+			<name>Update</name>
 			<value>false</value>
 		</right>
 		<right>
 			<name>Edit</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>TotalsControl</name>
 			<value>false</value>
 		</right>
 	</object>
 	<object>
 		<name>Constant.ЭтоАвтономноеРабочееМесто</name>
 		<right>
-			<name>Read</name>
-			<value>false</value>
-		</right>
-		<right>
 			<name>Update</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>View</name>
 			<value>false</value>
 		</right>
 		<right>
@@ -6164,7 +4743,7 @@
 		</right>
 	</object>
 	<object>
-		<name>DataProcessor.РезервноеКопированиеИБ.Command.ВыполнитьВосстановлениеИБ</name>
+		<name>DataProcessor.РезервноеКопированиеИБ.Command.ВыполнитьВосстановлениеДанных</name>
 		<right>
 			<name>View</name>
 			<value>false</value>
@@ -6246,94 +4825,6 @@
 		</right>
 	</object>
 	<object>
-		<name>Catalog.ТомаХраненияФайлов.StandardAttribute.Predefined</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Catalog.ТомаХраненияФайлов.StandardAttribute.Ref</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Catalog.ТомаХраненияФайлов.StandardAttribute.DeletionMark</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Catalog.ТомаХраненияФайлов.StandardAttribute.IsFolder</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Catalog.ТомаХраненияФайлов.StandardAttribute.Owner</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Catalog.ТомаХраненияФайлов.StandardAttribute.Parent</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Catalog.ТомаХраненияФайлов.StandardAttribute.Description</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Catalog.ТомаХраненияФайлов.StandardAttribute.Code</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
 		<name>CommonForm.НастройкаОбменаСообщениями</name>
 		<right>
 			<name>View</name>
@@ -6394,31 +4885,6 @@
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.НастройкиТранспортаОбмена.Resource.FTPСоединениеПользователь</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.НастройкиТранспортаОбмена.Resource.FTPСоединениеПассивноеСоединение</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Catalog.СообщенияСистемы.Attribute.Отправитель</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
 		<name>Configuration.УП8</name>
 		<right>
 			<name>Administration</name>
@@ -6445,37 +4911,15 @@
 			<value>false</value>
 		</right>
 		<right>
+			<name>ConfigurationExtensionsAdministration</name>
+			<value>false</value>
+		</right>
+		<right>
 			<name>InteractiveOpenExtDataProcessors</name>
 			<value>false</value>
 		</right>
 		<right>
 			<name>InteractiveOpenExtReports</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.УдалитьСтраныМира.Resource.Значение</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Constant.СинхронизироватьДанныеСПриложениемВИнтернетеПриЗавершенииРаботыПрограммы</name>
-		<right>
-			<name>Read</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Update</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
 			<value>false</value>
 		</right>
 	</object>
@@ -6493,7 +4937,15 @@
 	<object>
 		<name>InformationRegister.ЗапросыРазрешенийНаИспользованиеВнешнихРесурсов</name>
 		<right>
+			<name>Read</name>
+			<value>false</value>
+		</right>
+		<right>
 			<name>Update</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>View</name>
 			<value>false</value>
 		</right>
 		<right>
@@ -6504,57 +4956,43 @@
 			<name>TotalsControl</name>
 			<value>false</value>
 		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ЗапросыРазрешенийНаИспользованиеВнешнихРесурсов.StandardAttribute.Active</name>
 		<right>
-			<name>Edit</name>
+			<name>ReadDataHistory</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>ReadDataHistoryOfMissingData</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>UpdateDataHistory</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>UpdateDataHistoryOfMissingData</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>UpdateDataHistoryVersionComment</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>ViewDataHistory</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>EditDataHistoryVersionComment</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>SwitchToDataHistoryVersion</name>
 			<value>false</value>
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.ЗапросыРазрешенийНаИспользованиеВнешнихРесурсов.StandardAttribute.LineNumber</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ЗапросыРазрешенийНаИспользованиеВнешнихРесурсов.StandardAttribute.Recorder</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ЗапросыРазрешенийНаИспользованиеВнешнихРесурсов.StandardAttribute.Period</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.АдресныеСокращения.Dimension.Код</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.УдалитьБлокировкиСеансовОбластиДанных.Resource.НачалоБлокировки</name>
+		<name>DataProcessor.ОценкаПроизводительности.Command.НастройкиОценкиПроизводительности</name>
 		<right>
 			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.РазрешенныеИнтернетРесурсы.Dimension.БезопасныйРежим</name>
-		<right>
-			<name>Edit</name>
 			<value>false</value>
 		</right>
 	</object>
@@ -6568,60 +5006,23 @@
 			<name>Edit</name>
 			<value>false</value>
 		</right>
-	</object>
-	<object>
-		<name>InformationRegister.УдалитьСтраныМира.StandardAttribute.Active</name>
 		<right>
-			<name>Edit</name>
+			<name>TotalsControl</name>
 			<value>false</value>
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.УдалитьСтраныМира.StandardAttribute.LineNumber</name>
+		<name>InformationRegister.ДампыПлатформы</name>
 		<right>
-			<name>Edit</name>
+			<name>Read</name>
 			<value>false</value>
 		</right>
-	</object>
-	<object>
-		<name>InformationRegister.УдалитьСтраныМира.StandardAttribute.Recorder</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.УдалитьСтраныМира.StandardAttribute.Period</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.РежимыПодключенияВнешнихМодулей.Resource.БезопасныйРежим</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.НастройкиТранспортаОбмена.Resource.COMИмяИнформационнойБазыНаСервере1СПредприятия</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>CommonForm.МониторСинхронизацииДанныхВМоделиСервиса</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.РазрешенныеИнтернетРесурсы</name>
 		<right>
 			<name>Update</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>View</name>
 			<value>false</value>
 		</right>
 		<right>
@@ -6632,50 +5033,91 @@
 			<name>TotalsControl</name>
 			<value>false</value>
 		</right>
-	</object>
-	<object>
-		<name>InformationRegister.РазрешенныеИнтернетРесурсы.StandardAttribute.Active</name>
 		<right>
-			<name>Edit</name>
+			<name>ReadDataHistory</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>ReadDataHistoryOfMissingData</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>UpdateDataHistory</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>UpdateDataHistoryOfMissingData</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>UpdateDataHistoryVersionComment</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>ViewDataHistory</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>EditDataHistoryVersionComment</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>SwitchToDataHistoryVersion</name>
 			<value>false</value>
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.РазрешенныеИнтернетРесурсы.StandardAttribute.LineNumber</name>
+		<name>InformationRegister.ЗамерыОперацииСтатистики</name>
 		<right>
-			<name>Edit</name>
+			<name>Read</name>
 			<value>false</value>
 		</right>
-	</object>
-	<object>
-		<name>InformationRegister.РазрешенныеИнтернетРесурсы.StandardAttribute.Recorder</name>
 		<right>
-			<name>Edit</name>
+			<name>Update</name>
 			<value>false</value>
 		</right>
-	</object>
-	<object>
-		<name>InformationRegister.РазрешенныеИнтернетРесурсы.StandardAttribute.Period</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ПоставляемыеДанныеТребующиеОбработки.Dimension.КодОбработчика</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.УдалитьОчередьЗаданий.Resource.ИмяМетода</name>
 		<right>
 			<name>View</name>
 			<value>false</value>
 		</right>
 		<right>
 			<name>Edit</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>TotalsControl</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>ReadDataHistory</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>ReadDataHistoryOfMissingData</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>UpdateDataHistory</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>UpdateDataHistoryOfMissingData</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>UpdateDataHistoryVersionComment</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>ViewDataHistory</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>EditDataHistoryVersionComment</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>SwitchToDataHistoryVersion</name>
 			<value>false</value>
 		</right>
 	</object>
@@ -6703,35 +5145,166 @@
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.ПраваРолей.Resource.ИзменениеБезОграничения</name>
+		<name>Constant.ИсточникДанныхАдресногоКлассификатора</name>
+		<right>
+			<name>Read</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
 		<right>
 			<name>Edit</name>
 			<value>false</value>
 		</right>
 	</object>
 	<object>
-		<name>Catalog.ИдентификаторыОбъектовМетаданных.Attribute.ПолныйСиноним</name>
+		<name>Constant.ПредставлениеОбластиДанных</name>
+		<right>
+			<name>Update</name>
+			<value>false</value>
+		</right>
 		<right>
 			<name>Edit</name>
 			<value>false</value>
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.АдресныеСокращения.Dimension.Уровень</name>
+		<name>InformationRegister.ЗамерыСтатистики</name>
+		<right>
+			<name>Read</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
 		<right>
 			<name>Edit</name>
 			<value>false</value>
 		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ПраваРолей.Resource.Изменение</name>
 		<right>
-			<name>Edit</name>
+			<name>TotalsControl</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>ReadDataHistory</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>ReadDataHistoryOfMissingData</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>UpdateDataHistory</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>UpdateDataHistoryOfMissingData</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>UpdateDataHistoryVersionComment</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>ViewDataHistory</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>EditDataHistoryVersionComment</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>SwitchToDataHistoryVersion</name>
 			<value>false</value>
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.ПраваРолей.Resource.ДобавлениеБезОграничения</name>
+		<name>InformationRegister.КомментарииСтатистики</name>
+		<right>
+			<name>Read</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>TotalsControl</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>ReadDataHistory</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>ReadDataHistoryOfMissingData</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>UpdateDataHistory</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>UpdateDataHistoryOfMissingData</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>UpdateDataHistoryVersionComment</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>ViewDataHistory</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>EditDataHistoryVersionComment</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>SwitchToDataHistoryVersion</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.АдресныеОбъекты</name>
+		<right>
+			<name>Update</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>TotalsControl</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Constant.ВыполнитьРезервноеКопированиеОбластиДанных</name>
+		<right>
+			<name>Update</name>
+			<value>false</value>
+		</right>
 		<right>
 			<name>Edit</name>
 			<value>false</value>
@@ -6761,9 +5334,57 @@
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.НастройкиТранспортаОбмена.Resource.WSURLВебСервиса</name>
+		<name>InformationRegister.ОперацииСтатистики</name>
+		<right>
+			<name>Read</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
 		<right>
 			<name>Edit</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>TotalsControl</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>ReadDataHistory</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>ReadDataHistoryOfMissingData</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>UpdateDataHistory</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>UpdateDataHistoryOfMissingData</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>UpdateDataHistoryVersionComment</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>ViewDataHistory</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>EditDataHistoryVersionComment</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>SwitchToDataHistoryVersion</name>
 			<value>false</value>
 		</right>
 	</object>
@@ -6810,30 +5431,112 @@
 		</right>
 	</object>
 	<object>
-		<name>Catalog.СценарииОбменовДанными.Attribute.Комментарий</name>
+		<name>InformationRegister.КомментарииОперацииСтатистики</name>
+		<right>
+			<name>Read</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
 		<right>
 			<name>Edit</name>
 			<value>false</value>
 		</right>
-	</object>
-	<object>
-		<name>InformationRegister.НастройкиТранспортаОбмена.Resource.WSИспользоватьПередачуБольшогоОбъемаДанных</name>
 		<right>
-			<name>Edit</name>
+			<name>TotalsControl</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>ReadDataHistory</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>ReadDataHistoryOfMissingData</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>UpdateDataHistory</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>UpdateDataHistoryOfMissingData</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>UpdateDataHistoryVersionComment</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>ViewDataHistory</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>EditDataHistoryVersionComment</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>SwitchToDataHistoryVersion</name>
 			<value>false</value>
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.АдресныеСокращения.Resource.Сокращение</name>
+		<name>InformationRegister.ПакетыДляОтправки</name>
+		<right>
+			<name>Read</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
 		<right>
 			<name>Edit</name>
 			<value>false</value>
 		</right>
-	</object>
-	<object>
-		<name>InformationRegister.РазрешенныеПриложенияОперационнойСистемы.Attribute.Описание</name>
 		<right>
-			<name>Edit</name>
+			<name>TotalsControl</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>ReadDataHistory</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>ReadDataHistoryOfMissingData</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>UpdateDataHistory</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>UpdateDataHistoryOfMissingData</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>UpdateDataHistoryVersionComment</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>ViewDataHistory</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>EditDataHistoryVersionComment</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>SwitchToDataHistoryVersion</name>
 			<value>false</value>
 		</right>
 	</object>
@@ -6843,20 +5546,6 @@
 			<name>Update</name>
 			<value>false</value>
 		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ПоставляемыеДанныеТребующиеОбработки.Dimension.ИдентификаторФайла</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.НастройкиТранспортаОбмена.Resource.FTPСоединениеПуть</name>
 		<right>
 			<name>Edit</name>
 			<value>false</value>
@@ -6886,13 +5575,6 @@
 		</right>
 	</object>
 	<object>
-		<name>Catalog.СценарииОбменовДанными.TabularSection.НастройкиОбмена.Attribute.ВидТранспортаОбмена</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
 		<name>Document.ЭлектронноеПисьмоВходящее</name>
 		<right>
 			<name>InteractiveDelete</name>
@@ -6905,131 +5587,6 @@
 			<name>Update</name>
 			<value>false</value>
 		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ЗапросыРазрешенийНаИспользованиеВнешнихРесурсов.Attribute.ДобавляемыеРазрешения</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.РазрешенияПереходаВПривилегированныйРежим.Dimension.Владелец</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.СообщенияОбменаДанными.Resource.ИмяФайлаСообщения</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.РазрешенныеКаталогиФайловойСистемы.Dimension.Адрес</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ЗапросыАдминистрированияРазрешенийИспользованияВнешнихРесурсов.Attribute.МоментВремени</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>DataProcessor.НастройкаРезервногоКопированияИБ.Attribute.ФайлЗагрузкиРезервнойКопии</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.АдресныйКлассификатор.Resource.Сокращение</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.РазрешенныеКаталогиФайловойСистемы.Resource.РазрешеноЧтениеДанных</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>DataProcessor.ОценкаПроизводительности.TabularSection.Производительность</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.АдресныйКлассификатор.Dimension.КодРайонаВКоде</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.РазрешенныеCOMКлассы</name>
-		<right>
-			<name>Update</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>TotalsControl</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.РазрешенныеCOMКлассы.StandardAttribute.Active</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.РазрешенныеCOMКлассы.StandardAttribute.LineNumber</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.РазрешенныеCOMКлассы.StandardAttribute.Recorder</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.РазрешенныеCOMКлассы.StandardAttribute.Period</name>
 		<right>
 			<name>Edit</name>
 			<value>false</value>
@@ -7135,112 +5692,6 @@
 		</right>
 	</object>
 	<object>
-		<name>Catalog.СообщенияСистемы.StandardAttribute.Predefined</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Catalog.СообщенияСистемы.StandardAttribute.Ref</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Catalog.СообщенияСистемы.StandardAttribute.DeletionMark</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Catalog.СообщенияСистемы.StandardAttribute.IsFolder</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Catalog.СообщенияСистемы.StandardAttribute.Owner</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Catalog.СообщенияСистемы.StandardAttribute.Parent</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Catalog.СообщенияСистемы.StandardAttribute.Description</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Catalog.СообщенияСистемы.StandardAttribute.Code</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.РазрешенныеИнтернетРесурсы.Resource.Порт</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>DataProcessor.ОценкаПроизводительности.TabularSection.Производительность.Attribute.ЦелевоеВремя</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
 		<name>CommonCommand.ЗагрузитьКурсыВалют</name>
 		<right>
 			<name>View</name>
@@ -7259,6 +5710,10 @@
 		</right>
 		<right>
 			<name>Delete</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>View</name>
 			<value>false</value>
 		</right>
 		<right>
@@ -7286,6 +5741,10 @@
 			<value>false</value>
 		</right>
 		<right>
+			<name>InputByString</name>
+			<value>false</value>
+		</right>
+		<right>
 			<name>InteractiveDeletePredefinedData</name>
 			<value>false</value>
 		</right>
@@ -7301,91 +5760,21 @@
 			<name>InteractiveDeleteMarkedPredefinedData</name>
 			<value>false</value>
 		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ЗапросыАдминистрированияРазрешенийИспользованияВнешнихРесурсов.Attribute.Операция</name>
 		<right>
-			<name>Edit</name>
+			<name>ViewDataHistory</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>EditDataHistoryVersionComment</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>SwitchToDataHistoryVersion</name>
 			<value>false</value>
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.НастройкиТранспортаОбмена.Resource.COMВариантРаботыИнформационнойБазы</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.РазрешенияПереходаВПривилегированныйРежим</name>
-		<right>
-			<name>Update</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>TotalsControl</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.РазрешенияПереходаВПривилегированныйРежим.StandardAttribute.Active</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.РазрешенияПереходаВПривилегированныйРежим.StandardAttribute.LineNumber</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.РазрешенияПереходаВПривилегированныйРежим.StandardAttribute.Recorder</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.РазрешенияПереходаВПривилегированныйРежим.StandardAttribute.Period</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>SessionParameter.ОбластьДанныхЗначение</name>
-		<right>
-			<name>Set</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Constant.ПараметрыДополнительныхРеквизитовИСведений</name>
-		<right>
-			<name>Update</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>CommonForm.НастройкиРегистрацииСобытийДоступаКПерсональнымДанным</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.УдалитьОчередьЗаданий</name>
+		<name>InformationRegister.БезопасноеХранилищеДанных</name>
 		<right>
 			<name>Read</name>
 			<value>false</value>
@@ -7400,6 +5789,10 @@
 		</right>
 		<right>
 			<name>Edit</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>TotalsControl</name>
 			<value>false</value>
 		</right>
 		<right>
@@ -7436,51 +5829,25 @@
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.УдалитьОчередьЗаданий.StandardAttribute.Active</name>
+		<name>SessionParameter.ОбластьДанныхЗначение</name>
 		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
+			<name>Set</name>
 			<value>false</value>
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.УдалитьОчередьЗаданий.StandardAttribute.LineNumber</name>
+		<name>CommonForm.НастройкиРегистрацииСобытийДоступаКПерсональнымДанным</name>
 		<right>
 			<name>View</name>
 			<value>false</value>
 		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
 	</object>
 	<object>
-		<name>InformationRegister.УдалитьОчередьЗаданий.StandardAttribute.Recorder</name>
+		<name>InformationRegister.УдалитьОчередьЗаданий</name>
 		<right>
-			<name>View</name>
+			<name>Read</name>
 			<value>false</value>
 		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.УдалитьОчередьЗаданий.StandardAttribute.Period</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Constant.ИспользоватьСинхронизациюДанныхВМоделиСервисаСЛокальнойПрограммой</name>
 		<right>
 			<name>Update</name>
 			<value>false</value>
@@ -7493,15 +5860,40 @@
 			<name>Edit</name>
 			<value>false</value>
 		</right>
-	</object>
-	<object>
-		<name>InformationRegister.УдалитьОчередьЗаданий.Resource.ДатаНачалаПоследнегоЗапуска</name>
 		<right>
-			<name>View</name>
+			<name>TotalsControl</name>
 			<value>false</value>
 		</right>
 		<right>
-			<name>Edit</name>
+			<name>ReadDataHistory</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>ReadDataHistoryOfMissingData</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>UpdateDataHistory</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>UpdateDataHistoryOfMissingData</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>UpdateDataHistoryVersionComment</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>ViewDataHistory</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>EditDataHistoryVersionComment</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>SwitchToDataHistoryVersion</name>
 			<value>false</value>
 		</right>
 	</object>
@@ -7513,20 +5905,17 @@
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.РазрешенныеИнтернетРесурсы.Dimension.Псевдоним</name>
+		<name>InformationRegister.ЗагруженныеВерсииАдресныхСведений</name>
 		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.УдалитьОчередьЗаданий.Resource.Использование</name>
-		<right>
-			<name>View</name>
+			<name>Update</name>
 			<value>false</value>
 		</right>
 		<right>
 			<name>Edit</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>TotalsControl</name>
 			<value>false</value>
 		</right>
 	</object>

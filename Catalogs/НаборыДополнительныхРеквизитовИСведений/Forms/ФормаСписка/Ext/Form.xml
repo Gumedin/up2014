@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
 	<AutoTitle>false</AutoTitle>
 	<CommandBarLocation>None</CommandBarLocation>
 	<VerticalScroll>useIfNecessary</VerticalScroll>
@@ -51,6 +51,18 @@
 				<Event name="OnChange">ЭтоНаборыДополнительныхСведенийПриИзменении</Event>
 			</Events>
 		</InputField>
+		<UsualGroup name="ГруппаПользовательскихНастроек" id="145">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа пользовательских настроек</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПользовательскихНастроекРасширеннаяПодсказка" id="146"/>
+		</UsualGroup>
 		<CommandBar name="КоманднаяПанельФормы" id="92">
 			<Title>
 				<v8:item>
@@ -58,12 +70,6 @@
 					<v8:content>Командная панель формы</v8:content>
 				</v8:item>
 			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Командная панель формы</v8:content>
-				</v8:item>
-			</ToolTip>
 			<ExtendedTooltip name="КоманднаяПанельФормыExtendedTooltip" id="104"/>
 			<ChildItems>
 				<Button name="СвойстваТолькоСоздать" id="101">
@@ -88,10 +94,6 @@
 							<v8:content>Добавить</v8:content>
 						</v8:item>
 					</Title>
-					<Picture>
-						<xr:Ref>StdPicture.CreateListItem</xr:Ref>
-						<xr:LoadTransparent>true</xr:LoadTransparent>
-					</Picture>
 					<ExtendedTooltip name="СвойстваПодменюДобавитьExtendedTooltip" id="106"/>
 					<ChildItems>
 						<Button name="СвойстваСоздать" id="62">
@@ -99,65 +101,71 @@
 							<CommandName>Form.Command.Создать</CommandName>
 							<ExtendedTooltip name="СвойстваСоздатьExtendedTooltip" id="107"/>
 						</Button>
-						<Button name="СвойстваСоздатьПоОбразцу" id="68">
+						<Button name="ДобавитьИзНабора" id="165">
 							<Type>CommandBarButton</Type>
-							<CommandName>Form.Command.СоздатьПоОбразцу</CommandName>
-							<ExtendedTooltip name="СвойстваСоздатьПоОбразцуExtendedTooltip" id="108"/>
-						</Button>
-						<Button name="СвойстваСоздатьОбщее" id="82">
-							<Type>CommandBarButton</Type>
-							<CommandName>Form.Command.СоздатьОбщее</CommandName>
-							<ExtendedTooltip name="СвойстваСоздатьОбщееExtendedTooltip" id="109"/>
+							<CommandName>Form.Command.ДобавитьИзНабора</CommandName>
+							<ExtendedTooltip name="ДобавитьИзНабораРасширеннаяПодсказка" id="166"/>
 						</Button>
 					</ChildItems>
 				</Popup>
-				<ButtonGroup name="СвойстваГруппаКнопок2" id="57">
+				<ButtonGroup name="СвойстваГруппаКнопокДействия" id="57">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
 							<v8:content>Свойства группа кнопок 2</v8:content>
 						</v8:item>
 					</Title>
-					<ExtendedTooltip name="СвойстваГруппаКнопок2ExtendedTooltip" id="110"/>
+					<ExtendedTooltip name="СвойстваГруппаКнопокДействияРасширеннаяПодсказка" id="110"/>
 					<ChildItems>
 						<Button name="СвойстваСкопировать" id="65">
 							<Type>CommandBarButton</Type>
+							<OnlyInAllActions>false</OnlyInAllActions>
 							<CommandName>Form.Command.Скопировать</CommandName>
 							<ExtendedTooltip name="СвойстваСкопироватьExtendedTooltip" id="111"/>
 						</Button>
 						<Button name="СвойстваИзменить" id="66">
 							<Type>CommandBarButton</Type>
+							<OnlyInAllActions>false</OnlyInAllActions>
 							<CommandName>Form.Command.Изменить</CommandName>
 							<ExtendedTooltip name="СвойстваИзменитьExtendedTooltip" id="112"/>
 						</Button>
 						<Button name="СвойстваПометитьНаУдаление" id="67">
 							<Type>CommandBarButton</Type>
+							<OnlyInAllActions>false</OnlyInAllActions>
 							<CommandName>Form.Command.ПометитьНаУдаление</CommandName>
 							<ExtendedTooltip name="СвойстваПометитьНаУдалениеExtendedTooltip" id="113"/>
 						</Button>
 					</ChildItems>
 				</ButtonGroup>
-				<ButtonGroup name="СвойстваГруппаКнопок3" id="56">
+				<ButtonGroup name="СвойстваГруппаКнопокПорядок" id="56">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Свойства группа кнопок 3</v8:content>
+							<v8:content>Свойства группа кнопок порядок</v8:content>
 						</v8:item>
 					</Title>
-					<ExtendedTooltip name="СвойстваГруппаКнопок3ExtendedTooltip" id="114"/>
+					<ExtendedTooltip name="СвойстваГруппаКнопокПорядокРасширеннаяПодсказка" id="114"/>
 					<ChildItems>
 						<Button name="СвойстваПереместитьВверх" id="63">
 							<Type>CommandBarButton</Type>
+							<OnlyInAllActions>false</OnlyInAllActions>
 							<CommandName>Form.Command.ПереместитьВверх</CommandName>
 							<ExtendedTooltip name="СвойстваПереместитьВверхExtendedTooltip" id="115"/>
 						</Button>
 						<Button name="СвойстваПереместитьВниз" id="64">
 							<Type>CommandBarButton</Type>
+							<OnlyInAllActions>false</OnlyInAllActions>
 							<CommandName>Form.Command.ПереместитьВниз</CommandName>
 							<ExtendedTooltip name="СвойстваПереместитьВнизExtendedTooltip" id="116"/>
 						</Button>
 					</ChildItems>
 				</ButtonGroup>
+				<Button name="ПоискИУдалениеДублей" id="169">
+					<Type>CommandBarButton</Type>
+					<OnlyInAllActions>false</OnlyInAllActions>
+					<CommandName>Form.Command.ПоискИУдалениеДублей</CommandName>
+					<ExtendedTooltip name="ПоискИУдалениеДублейРасширеннаяПодсказка" id="170"/>
+				</Button>
 				<Button name="СписокНайти" id="36">
 					<Type>CommandBarButton</Type>
 					<CommandName>Form.Item.НаборыСвойств.StandardCommand.Find</CommandName>
@@ -168,6 +176,27 @@
 					<CommandName>Form.Item.НаборыСвойств.StandardCommand.CancelSearch</CommandName>
 					<ExtendedTooltip name="СписокОтменитьПоискExtendedTooltip" id="118"/>
 				</Button>
+				<ButtonGroup name="ГруппаКнопокКопирование" id="177">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Кнопок копирование</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаКнопокКопированиеРасширеннаяПодсказка" id="178"/>
+					<ChildItems>
+						<Button name="КопироватьРеквизит" id="183">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.КопироватьРеквизит</CommandName>
+							<ExtendedTooltip name="КопироватьРеквизитРасширеннаяПодсказка" id="184"/>
+						</Button>
+						<Button name="ВставитьРеквизит" id="181">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.ВставитьРеквизит</CommandName>
+							<ExtendedTooltip name="ВставитьРеквизитРасширеннаяПодсказка" id="182"/>
+						</Button>
+					</ChildItems>
+				</ButtonGroup>
 				<Button name="ФормаИзменитьФорму" id="79">
 					<Type>CommandBarButton</Type>
 					<CommandName>Form.StandardCommand.CustomizeForm</CommandName>
@@ -180,17 +209,17 @@
 				</Button>
 			</ChildItems>
 		</CommandBar>
-		<UsualGroup name="ГоризонтальнаяГруппа1" id="70">
+		<UsualGroup name="ГруппаСвойства" id="70">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Горизонтальная группа 1</v8:content>
+					<v8:content>Свойства</v8:content>
 				</v8:item>
 			</Title>
 			<Group>Horizontal</Group>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
-			<ExtendedTooltip name="ГоризонтальнаяГруппа1ExtendedTooltip" id="121"/>
+			<ExtendedTooltip name="ГруппаСвойстваРасширеннаяПодсказка" id="121"/>
 			<ChildItems>
 				<Table name="НаборыСвойств" id="1">
 					<Representation>Tree</Representation>
@@ -199,10 +228,9 @@
 					<DefaultItem>true</DefaultItem>
 					<ChangeRowSet>false</ChangeRowSet>
 					<ChangeRowOrder>false</ChangeRowOrder>
-					<Width>30</Width>
 					<Header>false</Header>
 					<HorizontalLines>false</HorizontalLines>
-					<InitialTreeView>ExpandTopLevel</InitialTreeView>
+					<EnableDrag>true</EnableDrag>
 					<DataPath>НаборыСвойств</DataPath>
 					<RowPictureDataPath>НаборыСвойств.НомерКартинки</RowPictureDataPath>
 					<RowsPicture>
@@ -210,12 +238,15 @@
 						<xr:LoadTransparent>false</xr:LoadTransparent>
 					</RowsPicture>
 					<BorderColor>style:BorderColor</BorderColor>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Наборы свойств</v8:content>
+						</v8:item>
+					</Title>
 					<CommandSet>
 						<ExcludedCommand>Change</ExcludedCommand>
 					</CommandSet>
-					<SearchStringLocation>None</SearchStringLocation>
-					<ViewStatusLocation>None</ViewStatusLocation>
-					<SearchControlLocation>None</SearchControlLocation>
 					<AutoRefresh>false</AutoRefresh>
 					<AutoRefreshPeriod>60</AutoRefreshPeriod>
 					<Period>
@@ -226,40 +257,43 @@
 					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
 					<RestoreCurrentRow>false</RestoreCurrentRow>
 					<TopLevelParent xsi:nil="true"/>
-					<ShowRoot>true</ShowRoot>
+					<ShowRoot>false</ShowRoot>
 					<AllowRootChoice>false</AllowRootChoice>
 					<UpdateOnDataChange>Auto</UpdateOnDataChange>
+					<UserSettingsGroup>ГруппаПользовательскихНастроек</UserSettingsGroup>
 					<ContextMenu name="НаборыСвойствКонтекстноеМеню" id="2"/>
 					<AutoCommandBar name="НаборыСвойствКоманднаяПанель" id="3">
 						<Autofill>false</Autofill>
 					</AutoCommandBar>
 					<ExtendedTooltip name="НаборыСвойствExtendedTooltip" id="122"/>
-					<SearchStringAddition name="НаборыСвойствСтрокаПоиска" id="145">
+					<SearchStringAddition name="НаборыСвойствСтрокаПоиска" id="147">
 						<AdditionSource>
 							<Item>НаборыСвойств</Item>
 							<Type>SearchStringRepresentation</Type>
 						</AdditionSource>
-						<ContextMenu name="НаборыСвойствСтрокаПоискаКонтекстноеМеню" id="146"/>
-						<ExtendedTooltip name="НаборыСвойствСтрокаПоискаРасширеннаяПодсказка" id="147"/>
+						<ContextMenu name="НаборыСвойствСтрокаПоискаКонтекстноеМеню" id="148"/>
+						<ExtendedTooltip name="НаборыСвойствСтрокаПоискаРасширеннаяПодсказка" id="149"/>
 					</SearchStringAddition>
-					<ViewStatusAddition name="НаборыСвойствСостояниеПросмотра" id="148">
+					<ViewStatusAddition name="НаборыСвойствСостояниеПросмотра" id="150">
 						<AdditionSource>
 							<Item>НаборыСвойств</Item>
 							<Type>ViewStatusRepresentation</Type>
 						</AdditionSource>
-						<ContextMenu name="НаборыСвойствСостояниеПросмотраКонтекстноеМеню" id="149"/>
-						<ExtendedTooltip name="НаборыСвойствСостояниеПросмотраРасширеннаяПодсказка" id="150"/>
+						<ContextMenu name="НаборыСвойствСостояниеПросмотраКонтекстноеМеню" id="151"/>
+						<ExtendedTooltip name="НаборыСвойствСостояниеПросмотраРасширеннаяПодсказка" id="152"/>
 					</ViewStatusAddition>
-					<SearchControlAddition name="НаборыСвойствУправлениеПоиском" id="151">
+					<SearchControlAddition name="НаборыСвойствУправлениеПоиском" id="153">
 						<AdditionSource>
 							<Item>НаборыСвойств</Item>
 							<Type>SearchControl</Type>
 						</AdditionSource>
-						<ContextMenu name="НаборыСвойствУправлениеПоискомКонтекстноеМеню" id="152"/>
-						<ExtendedTooltip name="НаборыСвойствУправлениеПоискомРасширеннаяПодсказка" id="153"/>
+						<ContextMenu name="НаборыСвойствУправлениеПоискомКонтекстноеМеню" id="154"/>
+						<ExtendedTooltip name="НаборыСвойствУправлениеПоискомРасширеннаяПодсказка" id="155"/>
 					</SearchControlAddition>
 					<Events>
+						<Event name="DragCheck">НаборыСвойствПроверкаПеретаскивания</Event>
 						<Event name="OnActivateRow">НаборыСвойствПриАктивизацииСтроки</Event>
+						<Event name="Drag">НаборыСвойствПеретаскивание</Event>
 						<Event name="BeforeRowChange">НаборыСвойствПередНачаломИзменения</Event>
 					</Events>
 					<ChildItems>
@@ -290,7 +324,7 @@
 				</Table>
 				<Table name="Свойства" id="38">
 					<Representation>List</Representation>
-					<Width>70</Width>
+					<SelectionMode>SingleRow</SelectionMode>
 					<UseAlternationRowColor>true</UseAlternationRowColor>
 					<AutoInsertNewRow>true</AutoInsertNewRow>
 					<EnableStartDrag>true</EnableStartDrag>
@@ -302,6 +336,12 @@
 						<xr:LoadTransparent>false</xr:LoadTransparent>
 					</RowsPicture>
 					<BackColor>style:FormBackColor</BackColor>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Свойства</v8:content>
+						</v8:item>
+					</Title>
 					<CommandSet>
 						<ExcludedCommand>CancelSearch</ExcludedCommand>
 						<ExcludedCommand>EndEdit</ExcludedCommand>
@@ -309,9 +349,6 @@
 						<ExcludedCommand>SortListAsc</ExcludedCommand>
 						<ExcludedCommand>SortListDesc</ExcludedCommand>
 					</CommandSet>
-					<SearchStringLocation>None</SearchStringLocation>
-					<ViewStatusLocation>None</ViewStatusLocation>
-					<SearchControlLocation>None</SearchControlLocation>
 					<RowFilter xsi:nil="true"/>
 					<ContextMenu name="СвойстваКонтекстноеМеню" id="39">
 						<Autofill>false</Autofill>
@@ -349,15 +386,10 @@
 										<CommandName>Form.Command.Создать</CommandName>
 										<ExtendedTooltip name="СвойстваКонтекстноеМенюСоздатьExtendedTooltip" id="126"/>
 									</Button>
-									<Button name="СвойстваКонтекстноеМенюСоздатьПоОбразцу" id="85">
+									<Button name="СвойстваКонтекстноеМенюДобавитьИзНабора" id="167">
 										<Type>CommandBarButton</Type>
-										<CommandName>Form.Command.СоздатьПоОбразцу</CommandName>
-										<ExtendedTooltip name="СвойстваКонтекстноеМенюСоздатьПоОбразцуExtendedTooltip" id="127"/>
-									</Button>
-									<Button name="СвойстваКонтекстноеМенюСоздатьОбщее" id="86">
-										<Type>CommandBarButton</Type>
-										<CommandName>Form.Command.СоздатьОбщее</CommandName>
-										<ExtendedTooltip name="СвойстваКонтекстноеМенюСоздатьОбщееExtendedTooltip" id="128"/>
+										<CommandName>Form.Command.ДобавитьИзНабора</CommandName>
+										<ExtendedTooltip name="СвойстваКонтекстноеМенюДобавитьИзНабораРасширеннаяПодсказка" id="168"/>
 									</Button>
 								</ChildItems>
 							</Popup>
@@ -387,40 +419,52 @@
 									</Button>
 								</ChildItems>
 							</ButtonGroup>
+							<Button name="СвойстваКонтекстноеМенюКопироватьРеквизит" id="175">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.КопироватьРеквизит</CommandName>
+								<ExtendedTooltip name="СвойстваКонтекстноеМенюКопироватьРеквизитРасширеннаяПодсказка" id="176"/>
+							</Button>
+							<Button name="СвойстваКонтекстноеМенюВставитьРеквизит" id="173">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ВставитьРеквизит</CommandName>
+								<ExtendedTooltip name="СвойстваКонтекстноеМенюВставитьРеквизитРасширеннаяПодсказка" id="174"/>
+							</Button>
 						</ChildItems>
 					</ContextMenu>
 					<AutoCommandBar name="СвойстваКоманднаяПанель" id="40">
 						<Autofill>false</Autofill>
 					</AutoCommandBar>
 					<ExtendedTooltip name="СвойстваExtendedTooltip" id="133"/>
-					<SearchStringAddition name="СвойстваСтрокаПоиска" id="154">
+					<SearchStringAddition name="СвойстваСтрокаПоиска" id="156">
 						<AdditionSource>
 							<Item>Свойства</Item>
 							<Type>SearchStringRepresentation</Type>
 						</AdditionSource>
-						<ContextMenu name="СвойстваСтрокаПоискаКонтекстноеМеню" id="155"/>
-						<ExtendedTooltip name="СвойстваСтрокаПоискаРасширеннаяПодсказка" id="156"/>
+						<ContextMenu name="СвойстваСтрокаПоискаКонтекстноеМеню" id="157"/>
+						<ExtendedTooltip name="СвойстваСтрокаПоискаРасширеннаяПодсказка" id="158"/>
 					</SearchStringAddition>
-					<ViewStatusAddition name="СвойстваСостояниеПросмотра" id="157">
+					<ViewStatusAddition name="СвойстваСостояниеПросмотра" id="159">
 						<AdditionSource>
 							<Item>Свойства</Item>
 							<Type>ViewStatusRepresentation</Type>
 						</AdditionSource>
-						<ContextMenu name="СвойстваСостояниеПросмотраКонтекстноеМеню" id="158"/>
-						<ExtendedTooltip name="СвойстваСостояниеПросмотраРасширеннаяПодсказка" id="159"/>
+						<ContextMenu name="СвойстваСостояниеПросмотраКонтекстноеМеню" id="160"/>
+						<ExtendedTooltip name="СвойстваСостояниеПросмотраРасширеннаяПодсказка" id="161"/>
 					</ViewStatusAddition>
-					<SearchControlAddition name="СвойстваУправлениеПоиском" id="160">
+					<SearchControlAddition name="СвойстваУправлениеПоиском" id="162">
 						<AdditionSource>
 							<Item>Свойства</Item>
 							<Type>SearchControl</Type>
 						</AdditionSource>
-						<ContextMenu name="СвойстваУправлениеПоискомКонтекстноеМеню" id="161"/>
-						<ExtendedTooltip name="СвойстваУправлениеПоискомРасширеннаяПодсказка" id="162"/>
+						<ContextMenu name="СвойстваУправлениеПоискомКонтекстноеМеню" id="163"/>
+						<ExtendedTooltip name="СвойстваУправлениеПоискомРасширеннаяПодсказка" id="164"/>
 					</SearchControlAddition>
 					<Events>
+						<Event name="DragCheck">СвойстваПроверкаПеретаскивания</Event>
 						<Event name="BeforeAddRow">СвойстваПередНачаломДобавления</Event>
 						<Event name="BeforeDeleteRow">СвойстваПередУдалением</Event>
 						<Event name="OnActivateRow">СвойстваПриАктивизацииСтроки</Event>
+						<Event name="DragStart">СвойстваНачалоПеретаскивания</Event>
 						<Event name="ChoiceProcessing">СвойстваОбработкаВыбора</Event>
 						<Event name="BeforeRowChange">СвойстваПередНачаломИзменения</Event>
 					</Events>
@@ -538,6 +582,7 @@
 	Наборы.Родитель,
 	Наборы.ЭтоГруппа,
 	Наборы.Наименование,
+	Наборы.Используется,
 	ВЫБОР
 		КОГДА Наборы.ЭтоГруппа
 			ТОГДА Наборы.Наименование
@@ -569,7 +614,9 @@
 			КОГДА Наборы.Родитель = ЗНАЧЕНИЕ(Справочник.НаборыДополнительныхРеквизитовИСведений.ПустаяСсылка)
 				ТОГДА Наборы.Ссылка В (&amp;Наборы)
 			ИНАЧЕ Наборы.Родитель В (&amp;Наборы)
-		КОНЕЦ</QueryText>
+		КОНЕЦ
+	И Наборы.Используется
+			И ЕСТЬNULL(Наборы.Родитель.Используется, ИСТИНА)</QueryText>
 				<MainTable>Catalog.НаборыДополнительныхРеквизитовИСведений</MainTable>
 				<ListSettings>
 					<dcsset:filter>
@@ -804,45 +851,28 @@
 				<v8:Type>v8:ValueListType</v8:Type>
 			</Type>
 		</Attribute>
+		<Attribute name="КопируемыйРеквизит" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Копируемый реквизит</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="НаборПриемник" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Набор приемник</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.НаборыДополнительныхРеквизитовИСведений</v8:Type>
+			</Type>
+		</Attribute>
 	</Attributes>
 	<Commands>
-		<Command name="СоздатьПоОбразцу" id="1">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>По образцу...</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Создать уникальный реквизит, который будет иметь
-общий список значений с выбранным реквизитом.</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Action>СоздатьПоОбразцу</Action>
-			<FunctionalOptions>
-				<Item>FunctionalOption.ИспользоватьОбщиеДополнительныеЗначения</Item>
-			</FunctionalOptions>
-		</Command>
-		<Command name="СоздатьОбщее" id="2">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Общий...</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Выбрать общий реквизит из существующих</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Action>СоздатьОбщее</Action>
-			<FunctionalOptions>
-				<Item>FunctionalOption.ИспользоватьОбщиеДополнительныеРеквизитыИСведения</Item>
-			</FunctionalOptions>
-		</Command>
 		<Command name="ПереместитьВверх" id="3">
 			<Title>
 				<v8:item>
@@ -861,6 +891,7 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>ПереместитьВверх</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ПереместитьВниз" id="4">
 			<Title>
@@ -880,6 +911,7 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>ПереместитьВниз</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="Скопировать" id="5">
 			<Title>
@@ -900,6 +932,7 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>Скопировать</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="Изменить" id="6">
 			<Title>
@@ -920,6 +953,8 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>Изменить</Action>
+			<Representation>Text</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ПометитьНаУдаление" id="7">
 			<Title>
@@ -940,6 +975,7 @@
 			</Picture>
 			<Action>ПометитьНаУдаление</Action>
 			<Representation>Picture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="Создать" id="8">
 			<Title>
@@ -956,7 +992,72 @@
 				</v8:item>
 			</ToolTip>
 			<Action>Создать</Action>
-			<Representation>TextPicture</Representation>
+			<Representation>Text</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ДобавитьИзНабора" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Из другого набора...</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить из набора</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДобавитьИзНабора</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПоискИУдалениеДублей" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поиск и удаление дублей...</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поиск и удаление дублей</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПоискИУдалениеДублей</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КопироватьРеквизит" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Копировать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Копирует выделенный дополнительный реквизит</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СкопироватьВыделенныйРеквизит</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ВставитьРеквизит" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вставить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавляет скопированный дополнительный реквизит в текущий набор</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВставитьРеквизит</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 	</Commands>
 	<Parameters>

@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
 	<Title>
 		<v8:item>
 			<v8:lang>ru</v8:lang>
 			<v8:content>Напоминания</v8:content>
 		</v8:item>
 	</Title>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
 	<AutoTitle>false</AutoTitle>
-	<VerticalScroll>useIfNecessary</VerticalScroll>
 	<CommandSet>
 		<ExcludedCommand>Abort</ExcludedCommand>
 		<ExcludedCommand>Cancel</ExcludedCommand>
@@ -40,12 +40,6 @@
 					<v8:content>Панель кнопок</v8:content>
 				</v8:item>
 			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Панель кнопок</v8:content>
-				</v8:item>
-			</ToolTip>
 			<Group>Horizontal</Group>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
@@ -61,11 +55,6 @@
 					<CommandName>Form.Command.Прекратить</CommandName>
 					<ExtendedTooltip name="КнопкаПрекратитьExtendedTooltip" id="32"/>
 				</Button>
-				<LabelDecoration name="ПустаяНадпись" id="18">
-					<Width>5</Width>
-					<ContextMenu name="ПустаяНадписьКонтекстноеМеню" id="19"/>
-					<ExtendedTooltip name="ПустаяНадписьExtendedTooltip" id="33"/>
-				</LabelDecoration>
 				<InputField name="СрокПовторногоОповещения" id="12">
 					<DataPath>СрокПовторногоОповещения</DataPath>
 					<Title>
@@ -221,6 +210,12 @@
 				<xr:Ref>CommonPicture.КоллекцияНапоминания</xr:Ref>
 				<xr:LoadTransparent>false</xr:LoadTransparent>
 			</RowsPicture>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Напоминания</v8:content>
+				</v8:item>
+			</Title>
 			<CommandSet>
 				<ExcludedCommand>Add</ExcludedCommand>
 				<ExcludedCommand>CancelSearch</ExcludedCommand>
@@ -240,9 +235,6 @@
 					<v8:content>Список наступивших напоминаний</v8:content>
 				</v8:item>
 			</ToolTip>
-			<SearchStringLocation>None</SearchStringLocation>
-			<ViewStatusLocation>None</ViewStatusLocation>
-			<SearchControlLocation>None</SearchControlLocation>
 			<RowFilter xsi:nil="true"/>
 			<ContextMenu name="НапоминанияКонтекстноеМеню" id="2">
 				<Autofill>false</Autofill>
@@ -255,12 +247,6 @@
 								<v8:content>Действия с напоминаниями</v8:content>
 							</v8:item>
 						</Title>
-						<ToolTip>
-							<v8:item>
-								<v8:lang>ru</v8:lang>
-								<v8:content>Действия с напоминаниями</v8:content>
-							</v8:item>
-						</ToolTip>
 						<ExtendedTooltip name="ДействияСНапоминаниямиExtendedTooltip" id="36"/>
 						<ChildItems>
 							<Button name="НапоминанияКонтекстноеМенюОткрыть" id="20">
@@ -295,12 +281,6 @@
 								<v8:content>Действия со списком</v8:content>
 							</v8:item>
 						</Title>
-						<ToolTip>
-							<v8:item>
-								<v8:lang>ru</v8:lang>
-								<v8:content>Действия со списком</v8:content>
-							</v8:item>
-						</ToolTip>
 						<ExtendedTooltip name="ДействияСоСпискомExtendedTooltip" id="39"/>
 						<ChildItems>
 							<Button name="НапоминанияКонтекстноеМенюВывестиСписок" id="27">
@@ -542,6 +522,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>Отложить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="Прекратить" id="2">
 			<Title>
@@ -557,6 +538,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>Прекратить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="Открыть" id="4">
 			<Title>
@@ -568,7 +550,7 @@
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Открыть</v8:content>
+					<v8:content>Открыть предмет напоминания</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Picture>
@@ -576,6 +558,7 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>КомандаОткрыть</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="Изменить" id="5">
 			<Title>
@@ -596,6 +579,7 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>Изменить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 	</Commands>
 </Form>

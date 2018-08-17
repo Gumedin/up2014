@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
 	<Title>
 		<v8:item>
 			<v8:lang>ru</v8:lang>
@@ -8,48 +8,78 @@
 	</Title>
 	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
 	<AutoTitle>false</AutoTitle>
-	<VerticalScroll>useIfNecessary</VerticalScroll>
-	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
-		<ChildItems>
-			<Button name="ФормаПометкаУдаления" id="31">
-				<Type>CommandBarButton</Type>
-				<CommandName>Form.Command.ПометкаУдаления</CommandName>
-				<ExtendedTooltip name="ФормаПометкаУдаленияExtendedTooltip" id="47"/>
-			</Button>
-			<ButtonGroup name="ГруппаПоиск" id="34">
-				<Title>
-					<v8:item>
-						<v8:lang>ru</v8:lang>
-						<v8:content>Поиск</v8:content>
-					</v8:item>
-				</Title>
-				<ExtendedTooltip name="ГруппаПоискExtendedTooltip" id="48"/>
-				<ChildItems>
-					<Button name="ФормаОтменитьПоиск" id="33">
-						<Type>CommandBarButton</Type>
-						<CommandName>Form.StandardCommand.CancelSearch</CommandName>
-						<ExtendedTooltip name="ФормаОтменитьПоискExtendedTooltip" id="49"/>
-					</Button>
-					<Button name="ФормаНайти" id="32">
-						<Type>CommandBarButton</Type>
-						<CommandName>Form.StandardCommand.Find</CommandName>
-						<ExtendedTooltip name="ФормаНайтиExtendedTooltip" id="50"/>
-					</Button>
-				</ChildItems>
-			</ButtonGroup>
-			<Button name="ФормаКартаМаршрута" id="35">
-				<Type>CommandBarButton</Type>
-				<CommandName>Form.Command.КартаМаршрута</CommandName>
-				<ExtendedTooltip name="ФормаКартаМаршрутаExtendedTooltip" id="51"/>
-			</Button>
-		</ChildItems>
-	</AutoCommandBar>
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
 	<Events>
 		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 		<Event name="BeforeLoadDataFromSettingsAtServer">ПриЗагрузкеДанныхИзНастроекНаСервере</Event>
 	</Events>
 	<ChildItems>
+		<UsualGroup name="ГруппаПользовательскихНастроек" id="72">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа пользовательских настроек</v8:content>
+				</v8:item>
+			</Title>
+			<VerticalStretch>false</VerticalStretch>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПользовательскихНастроекРасширеннаяПодсказка" id="73"/>
+		</UsualGroup>
+		<CommandBar name="КоманднаяПанель" id="74">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Командная панель</v8:content>
+				</v8:item>
+			</Title>
+			<CommandSource>Form</CommandSource>
+			<ExtendedTooltip name="КоманднаяПанельРасширеннаяПодсказка" id="75"/>
+			<ChildItems>
+				<Button name="ФормаИзменить" id="67">
+					<Type>CommandBarButton</Type>
+					<OnlyInAllActions>true</OnlyInAllActions>
+					<CommandName>Form.StandardCommand.Change</CommandName>
+					<ExtendedTooltip name="ФормаИзменитьРасширеннаяПодсказка" id="68"/>
+				</Button>
+				<Button name="ФормаПометкаУдаления" id="31">
+					<Type>CommandBarButton</Type>
+					<OnlyInAllActions>false</OnlyInAllActions>
+					<CommandName>Form.Command.ПометкаУдаления</CommandName>
+					<ExtendedTooltip name="ФормаПометкаУдаленияExtendedTooltip" id="47"/>
+				</Button>
+				<ButtonGroup name="ГруппаПоиск" id="34">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Поиск</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаПоискExtendedTooltip" id="48"/>
+					<ChildItems>
+						<Button name="ФормаОтменитьПоиск" id="33">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.StandardCommand.CancelSearch</CommandName>
+							<ExtendedTooltip name="ФормаОтменитьПоискExtendedTooltip" id="49"/>
+						</Button>
+						<Button name="ФормаНайти" id="32">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.StandardCommand.Find</CommandName>
+							<ExtendedTooltip name="ФормаНайтиExtendedTooltip" id="50"/>
+						</Button>
+					</ChildItems>
+				</ButtonGroup>
+				<Button name="ФормаКартаМаршрута" id="35">
+					<Type>CommandBarButton</Type>
+					<Representation>PictureAndText</Representation>
+					<CommandName>Form.Command.КартаМаршрута</CommandName>
+					<ExtendedTooltip name="ФормаКартаМаршрутаExtendedTooltip" id="51"/>
+				</Button>
+			</ChildItems>
+		</CommandBar>
 		<Table name="Список" id="1">
 			<Representation>List</Representation>
 			<CommandBarLocation>None</CommandBarLocation>
@@ -61,12 +91,15 @@
 			<DataPath>Список</DataPath>
 			<RowPictureDataPath>Список.КартинкаСтроки</RowPictureDataPath>
 			<RowsPicture>
-				<xr:Ref>CommonPicture.ПиктограммыЭлементов</xr:Ref>
+				<xr:Ref>CommonPicture.СостоянияПроцессов</xr:Ref>
 				<xr:LoadTransparent>false</xr:LoadTransparent>
 			</RowsPicture>
-			<SearchStringLocation>None</SearchStringLocation>
-			<ViewStatusLocation>None</ViewStatusLocation>
-			<SearchControlLocation>None</SearchControlLocation>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список</v8:content>
+				</v8:item>
+			</Title>
 			<AutoRefresh>false</AutoRefresh>
 			<AutoRefreshPeriod>60</AutoRefreshPeriod>
 			<Period>
@@ -80,6 +113,7 @@
 			<ShowRoot>false</ShowRoot>
 			<AllowRootChoice>false</AllowRootChoice>
 			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<UserSettingsGroup>ГруппаПользовательскихНастроек</UserSettingsGroup>
 			<ContextMenu name="СписокКонтекстноеМеню" id="2">
 				<ChildItems>
 					<Button name="СписокКонтекстноеМенюИзменить" id="42">
@@ -93,6 +127,12 @@
 						<ExtendedTooltip name="СписокКонтекстноеМенюПометкаУдаленияExtendedTooltip" id="53"/>
 					</Button>
 					<ButtonGroup name="СписокКонтекстноеМенюГруппа" id="38">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Список контекстное меню группа</v8:content>
+							</v8:item>
+						</Title>
 						<ExtendedTooltip name="СписокКонтекстноеМенюГруппаExtendedTooltip" id="54"/>
 						<ChildItems>
 							<Button name="СписокКонтекстноеМенюНайти" id="43">
@@ -121,29 +161,29 @@
 			</ContextMenu>
 			<AutoCommandBar name="СписокКоманднаяПанель" id="3"/>
 			<ExtendedTooltip name="СписокExtendedTooltip" id="59"/>
-			<SearchStringAddition name="СписокСтрокаПоиска" id="67">
+			<SearchStringAddition name="СписокСтрокаПоиска" id="76">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>SearchStringRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="68"/>
-				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="69"/>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="77"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="78"/>
 			</SearchStringAddition>
-			<ViewStatusAddition name="СписокСостояниеПросмотра" id="70">
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="79">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>ViewStatusRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="71"/>
-				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="72"/>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="80"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="81"/>
 			</ViewStatusAddition>
-			<SearchControlAddition name="СписокУправлениеПоиском" id="73">
+			<SearchControlAddition name="СписокУправлениеПоиском" id="82">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>SearchControl</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="74"/>
-				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="75"/>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="83"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="84"/>
 			</SearchControlAddition>
 			<Events>
 				<Event name="Selection">СписокВыбор</Event>
@@ -153,12 +193,6 @@
 				<InputField name="Номер" id="6">
 					<DataPath>Список.Номер</DataPath>
 					<DefaultItem>true</DefaultItem>
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Номер</v8:content>
-						</v8:item>
-					</Title>
 					<Wrap>false</Wrap>
 					<ContextMenu name="НомерКонтекстноеМеню" id="7"/>
 					<ExtendedTooltip name="НомерExtendedTooltip" id="60"/>
@@ -172,31 +206,13 @@
 				<InputField name="Дата" id="8">
 					<DataPath>Список.Дата</DataPath>
 					<DefaultItem>true</DefaultItem>
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Дата</v8:content>
-						</v8:item>
-					</Title>
+					<HorizontalStretch>false</HorizontalStretch>
 					<Wrap>false</Wrap>
 					<ContextMenu name="ДатаКонтекстноеМеню" id="9"/>
 					<ExtendedTooltip name="ДатаExtendedTooltip" id="62"/>
 				</InputField>
-				<CheckBoxField name="Стартован" id="12">
-					<DataPath>Список.Стартован</DataPath>
-					<DefaultItem>true</DefaultItem>
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Стартован</v8:content>
-						</v8:item>
-					</Title>
-					<CheckBoxType>Auto</CheckBoxType>
-					<ContextMenu name="СтартованКонтекстноеМеню" id="13"/>
-					<ExtendedTooltip name="СтартованExtendedTooltip" id="63"/>
-				</CheckBoxField>
-				<CheckBoxField name="Завершен" id="10">
-					<DataPath>Список.Завершен</DataPath>
+				<InputField name="ДатаЗавершения" id="16">
+					<DataPath>Список.ДатаЗавершения</DataPath>
 					<DefaultItem>true</DefaultItem>
 					<Title>
 						<v8:item>
@@ -204,23 +220,24 @@
 							<v8:content>Завершен</v8:content>
 						</v8:item>
 					</Title>
-					<CheckBoxType>Auto</CheckBoxType>
-					<ContextMenu name="ЗавершенКонтекстноеМеню" id="11"/>
-					<ExtendedTooltip name="ЗавершенExtendedTooltip" id="64"/>
-				</CheckBoxField>
-				<InputField name="ДатаЗавершения" id="16">
-					<DataPath>Список.ДатаЗавершения</DataPath>
-					<DefaultItem>true</DefaultItem>
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Дата завершения</v8:content>
-						</v8:item>
-					</Title>
+					<HorizontalStretch>false</HorizontalStretch>
 					<Wrap>false</Wrap>
 					<ContextMenu name="ДатаЗавершенияКонтекстноеМеню" id="17"/>
 					<ExtendedTooltip name="ДатаЗавершенияExtendedTooltip" id="65"/>
 				</InputField>
+				<LabelField name="БизнесПроцесс" id="69">
+					<DataPath>Список.БизнесПроцесс</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<ContextMenu name="БизнесПроцессКонтекстноеМеню" id="70"/>
+					<ExtendedTooltip name="БизнесПроцессРасширеннаяПодсказка" id="71"/>
+				</LabelField>
+				<LabelField name="БизнесПроцессСостояние" id="85">
+					<DataPath>Список.БизнесПроцесс.Состояние</DataPath>
+					<ContextMenu name="БизнесПроцессСостояниеКонтекстноеМеню" id="86"/>
+					<ExtendedTooltip name="БизнесПроцессСостояниеРасширеннаяПодсказка" id="87"/>
+				</LabelField>
 			</ChildItems>
 		</Table>
 		<CheckBoxField name="ПоказыватьЗавершенные" id="29">
@@ -241,9 +258,9 @@
 			</Type>
 			<MainAttribute>true</MainAttribute>
 			<UseAlways>
-				<Field>~Список.ОтветственныйЗаБизнесПроцесс</Field>
 				<Field>Список.Автор</Field>
 				<Field>Список.БизнесПроцесс</Field>
+				<Field>Список.КартинкаСтроки</Field>
 			</UseAlways>
 			<Settings xsi:type="DynamicList">
 				<ManualQuery>true</ManualQuery>
@@ -260,11 +277,31 @@
 	РегистрСведенийДанныеБизнесПроцессов.ПометкаУдаления,
 	ВЫБОР
 		КОГДА РегистрСведенийДанныеБизнесПроцессов.ПометкаУдаления
-			ТОГДА 4
-		ИНАЧЕ 3
-	КОНЕЦ КАК КартинкаСтроки
+			ТОГДА 6
+		КОГДА РегистрСведенийДанныеБизнесПроцессов.Завершен = ИСТИНА
+			ТОГДА 5
+		КОГДА РегистрСведенийДанныеБизнесПроцессов.БизнесПроцесс.Состояние = ЗНАЧЕНИЕ(Перечисление.СостоянияБизнесПроцессов.Остановлен)
+			ТОГДА 0
+		КОГДА РегистрСведенийДанныеБизнесПроцессов.Стартован = ИСТИНА
+			ТОГДА 3
+		КОГДА ПроцессыДляЗапуска.Состояние = ЗНАЧЕНИЕ(Перечисление.СостоянияПроцессовДляЗапуска.ГотовКСтарту)
+				И ПроцессыДляЗапуска.ДатаОтложенногоСтарта &lt;&gt; ДАТАВРЕМЯ(1, 1, 1)
+			ТОГДА 1
+		КОГДА ПроцессыДляЗапуска.Состояние = ЗНАЧЕНИЕ(Перечисление.СостоянияПроцессовДляЗапуска.СтартОтменен)
+			ТОГДА 2
+		ИНАЧЕ 0
+	КОНЕЦ КАК КартинкаСтроки,
+	ВЫБОР
+		КОГДА ПроцессыДляЗапуска.Состояние ЕСТЬ NULL 
+			ТОГДА ЛОЖЬ
+		КОГДА ПроцессыДляЗапуска.Состояние = ЗНАЧЕНИЕ(Перечисление.СостоянияПроцессовДляЗапуска.ГотовКСтарту)
+			ТОГДА ИСТИНА
+		ИНАЧЕ ЛОЖЬ
+	КОНЕЦ КАК Отложен
 ИЗ
-	РегистрСведений.ДанныеБизнесПроцессов КАК РегистрСведенийДанныеБизнесПроцессов</QueryText>
+	РегистрСведений.ДанныеБизнесПроцессов КАК РегистрСведенийДанныеБизнесПроцессов
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ПроцессыДляЗапуска КАК ПроцессыДляЗапуска
+		ПО РегистрСведенийДанныеБизнесПроцессов.БизнесПроцесс = ПроцессыДляЗапуска.БизнесПроцесс</QueryText>
 				<MainTable>InformationRegister.ДанныеБизнесПроцессов</MainTable>
 				<ListSettings>
 					<dcsset:filter>
@@ -288,27 +325,6 @@
 						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
 					</dcsset:order>
 					<dcsset:conditionalAppearance>
-						<dcsset:item>
-							<dcsset:selection/>
-							<dcsset:filter>
-								<dcsset:item xsi:type="dcsset:FilterItemComparison">
-									<dcsset:left xsi:type="dcscor:Field">Завершен</dcsset:left>
-									<dcsset:comparisonType>Equal</dcsset:comparisonType>
-									<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
-								</dcsset:item>
-							</dcsset:filter>
-							<dcsset:appearance>
-								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-									<dcscor:use>false</dcscor:use>
-									<dcscor:parameter>ЦветФона</dcscor:parameter>
-									<dcscor:value xsi:type="v8ui:Color">auto</dcscor:value>
-								</dcscor:item>
-								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-									<dcscor:parameter>ЦветТекста</dcscor:parameter>
-									<dcscor:value xsi:type="v8ui:Color">style:ЗавершенныйБизнесПроцесс</dcscor:value>
-								</dcscor:item>
-							</dcsset:appearance>
-						</dcsset:item>
 						<dcsset:viewMode>Normal</dcsset:viewMode>
 						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
 					</dcsset:conditionalAppearance>
@@ -351,6 +367,7 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>ПометкаУдаления</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="КартаМаршрута" id="2">
 			<Title>
@@ -370,6 +387,7 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>КартаМаршрута</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 	</Commands>
 </Form>

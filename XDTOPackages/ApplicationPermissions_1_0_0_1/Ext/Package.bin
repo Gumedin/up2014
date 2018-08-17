@@ -10,7 +10,7 @@
 		<enumeration xsi:type="xs:string">FTPS</enumeration>
 	</valueType>
 	<objectType name="PermissionBase" abstract="true">
-		<property name="Description" type="xs:string"/>
+		<property name="Description" type="xs:string" lowerBound="0"/>
 	</objectType>
 	<objectType xmlns:d2p1="http://www.1c.ru/1cFresh/Application/Permissions/1.0.0.1" name="FileSystemAccess" base="d2p1:PermissionBase">
 		<property name="Path" type="xs:string"/>

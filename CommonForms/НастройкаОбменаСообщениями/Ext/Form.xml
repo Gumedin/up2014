@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
 	<CommandBarLocation>None</CommandBarLocation>
-	<VerticalScroll>useIfNecessary</VerticalScroll>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<Autofill>false</Autofill>
 	</AutoCommandBar>
@@ -18,6 +17,12 @@
 			<EnableStartDrag>true</EnableStartDrag>
 			<EnableDrag>true</EnableDrag>
 			<DataPath>СписокСостоянияУзлов</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список состояния узлов</v8:content>
+				</v8:item>
+			</Title>
 			<CommandSet>
 				<ExcludedCommand>Add</ExcludedCommand>
 				<ExcludedCommand>Change</ExcludedCommand>
@@ -30,9 +35,6 @@
 				<ExcludedCommand>SortListAsc</ExcludedCommand>
 				<ExcludedCommand>SortListDesc</ExcludedCommand>
 			</CommandSet>
-			<SearchStringLocation>None</SearchStringLocation>
-			<ViewStatusLocation>None</ViewStatusLocation>
-			<SearchControlLocation>None</SearchControlLocation>
 			<RowFilter xsi:nil="true"/>
 			<ContextMenu name="СписокСостоянияУзловКонтекстноеМеню" id="2">
 				<Autofill>false</Autofill>
@@ -43,6 +45,12 @@
 						<ExtendedTooltip name="СписокСостоянияУзловКонтекстноеМенюИзменитьКонечнуюТочкуExtendedTooltip" id="54"/>
 					</Button>
 					<ButtonGroup name="СписокСостоянияУзловКонтекстноеМенюГруппа2" id="38">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Список состояния узлов контекстное меню группа 2</v8:content>
+							</v8:item>
+						</Title>
 						<ExtendedTooltip name="СписокСостоянияУзловКонтекстноеМенюГруппа2ExtendedTooltip" id="55"/>
 						<ChildItems>
 							<Button name="СписокСостоянияУзловКонтекстноеМенюПерейтиВЖурналРегистрацииСобытийЗагрузкиДанных" id="40">
@@ -58,6 +66,12 @@
 						</ChildItems>
 					</ButtonGroup>
 					<ButtonGroup name="СписокСостоянияУзловКонтекстноеМенюГруппа1" id="37">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Список состояния узлов контекстное меню группа 1</v8:content>
+							</v8:item>
+						</Title>
 						<ExtendedTooltip name="СписокСостоянияУзловКонтекстноеМенюГруппа1ExtendedTooltip" id="58"/>
 						<ChildItems>
 							<Button name="СписокСостоянияУзловКонтекстноеМенюВывестиСписок" id="36">
@@ -78,12 +92,12 @@
 				<Autofill>false</Autofill>
 				<ChildItems>
 					<ButtonGroup name="СписокСостоянияУзловОтправитьИПолучитьСообщенияСейчас" id="30">
-						<ToolTip>
+						<Title>
 							<v8:item>
 								<v8:lang>ru</v8:lang>
 								<v8:content>Список состояния узлов отправить и получить сообщения сейчас</v8:content>
 							</v8:item>
-						</ToolTip>
+						</Title>
 						<ExtendedTooltip name="СписокСостоянияУзловОтправитьИПолучитьСообщенияСейчасExtendedTooltip" id="61"/>
 						<ChildItems>
 							<Button name="СписокСостоянияУзловОтправитьИПолучитьСообщения" id="21">
@@ -131,6 +145,12 @@
 						<ExtendedTooltip name="СписокСостоянияУзловИзменитьКонечнуюТочкуExtendedTooltip" id="67"/>
 					</Button>
 					<ButtonGroup name="СписокСостоянияУзловГруппа2" id="28">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Список состояния узлов группа 2</v8:content>
+							</v8:item>
+						</Title>
 						<ExtendedTooltip name="СписокСостоянияУзловГруппа2ExtendedTooltip" id="68"/>
 						<ChildItems>
 							<Button name="СписокСостоянияУзловОбновитьМонитор" id="20">
@@ -148,6 +168,12 @@
 						<ExtendedTooltip name="СписокСостоянияУзловНастроитьПодпискиExtendedTooltip" id="70"/>
 					</Button>
 					<ButtonGroup name="СписокСостоянияУзловГруппа1" id="27">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Список состояния узлов группа 1</v8:content>
+							</v8:item>
+						</Title>
 						<ExtendedTooltip name="СписокСостоянияУзловГруппа1ExtendedTooltip" id="71"/>
 						<ChildItems>
 							<Button name="СписокСостоянияУзловНайти" id="23">
@@ -184,41 +210,41 @@
 				</ChildItems>
 			</AutoCommandBar>
 			<ExtendedTooltip name="СписокСостоянияУзловExtendedTooltip" id="77"/>
-			<SearchStringAddition name="СписокСостоянияУзловСтрокаПоиска" id="91">
+			<SearchStringAddition name="СписокСостоянияУзловSearchString" id="91">
 				<AdditionSource>
 					<Item>СписокСостоянияУзлов</Item>
 					<Type>SearchStringRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокСостоянияУзловСтрокаПоискаКонтекстноеМеню" id="92"/>
-				<ExtendedTooltip name="СписокСостоянияУзловСтрокаПоискаРасширеннаяПодсказка" id="93"/>
+				<ContextMenu name="СписокСостоянияУзловSearchStringContextMenu" id="92"/>
+				<ExtendedTooltip name="СписокСостоянияУзловSearchStringExtendedTooltip" id="93"/>
 			</SearchStringAddition>
-			<ViewStatusAddition name="СписокСостоянияУзловСостояниеПросмотра" id="94">
+			<ViewStatusAddition name="СписокСостоянияУзловViewStatus" id="94">
 				<AdditionSource>
 					<Item>СписокСостоянияУзлов</Item>
 					<Type>ViewStatusRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокСостоянияУзловСостояниеПросмотраКонтекстноеМеню" id="95"/>
-				<ExtendedTooltip name="СписокСостоянияУзловСостояниеПросмотраРасширеннаяПодсказка" id="96"/>
+				<ContextMenu name="СписокСостоянияУзловViewStatusContextMenu" id="95"/>
+				<ExtendedTooltip name="СписокСостоянияУзловViewStatusExtendedTooltip" id="96"/>
 			</ViewStatusAddition>
-			<SearchControlAddition name="СписокСостоянияУзловУправлениеПоиском" id="97">
+			<SearchControlAddition name="СписокСостоянияУзловSearchControl" id="97">
 				<AdditionSource>
 					<Item>СписокСостоянияУзлов</Item>
 					<Type>SearchControl</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокСостоянияУзловУправлениеПоискомКонтекстноеМеню" id="98"/>
-				<ExtendedTooltip name="СписокСостоянияУзловУправлениеПоискомРасширеннаяПодсказка" id="99"/>
+				<ContextMenu name="СписокСостоянияУзловSearchControlContextMenu" id="98"/>
+				<ExtendedTooltip name="СписокСостоянияУзловSearchControlExtendedTooltip" id="99"/>
 			</SearchControlAddition>
 			<Events>
 				<Event name="Selection">СписокСостоянияУзловВыбор</Event>
 			</Events>
 			<ChildItems>
 				<ColumnGroup name="СписокСостоянияУзловГруппаОсновная" id="44">
-					<ToolTip>
+					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
 							<v8:content>Список состояния узлов группа основная</v8:content>
 						</v8:item>
-					</ToolTip>
+					</Title>
 					<Group>InCell</Group>
 					<ExtendedTooltip name="СписокСостоянияУзловГруппаОсновнаяExtendedTooltip" id="78"/>
 					<ChildItems>
@@ -243,21 +269,21 @@
 				</ColumnGroup>
 				<ColumnGroup name="ГруппаЗагрузки" id="52">
 					<EnableContentChange>true</EnableContentChange>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Загрузки</v8:content>
+						</v8:item>
+					</Title>
 					<ExtendedTooltip name="ГруппаЗагрузкиExtendedTooltip" id="81"/>
 					<ChildItems>
 						<ColumnGroup name="ГруппаСостоянияЗагрузки" id="18">
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Группа состояния загрузки</v8:content>
+									<v8:content>Состояния загрузки</v8:content>
 								</v8:item>
 							</Title>
-							<ToolTip>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Группа состояния загрузки</v8:content>
-								</v8:item>
-							</ToolTip>
 							<Group>InCell</Group>
 							<ExtendedTooltip name="ГруппаСостоянияЗагрузкиExtendedTooltip" id="82"/>
 							<ChildItems>
@@ -291,21 +317,21 @@
 				</ColumnGroup>
 				<ColumnGroup name="ГруппаВыгрузки" id="51">
 					<EnableContentChange>true</EnableContentChange>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выгрузки</v8:content>
+						</v8:item>
+					</Title>
 					<ExtendedTooltip name="ГруппаВыгрузкиExtendedTooltip" id="86"/>
 					<ChildItems>
 						<ColumnGroup name="ГруппаСостоянияВыгрузки" id="19">
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Группа состояния выгрузки</v8:content>
+									<v8:content>Состояния выгрузки</v8:content>
 								</v8:item>
 							</Title>
-							<ToolTip>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Группа состояния выгрузки</v8:content>
-								</v8:item>
-							</ToolTip>
 							<Group>InCell</Group>
 							<ExtendedTooltip name="ГруппаСостоянияВыгрузкиExtendedTooltip" id="87"/>
 							<ChildItems>
@@ -552,6 +578,7 @@
 			</Picture>
 			<Action>ПодключитьКонечнуюТочку</Action>
 			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ОтправитьИПолучитьСообщения" id="2">
 			<Title>
@@ -573,6 +600,7 @@
 			</Picture>
 			<Action>ОтправитьИПолучитьСообщения</Action>
 			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ОбновитьМонитор" id="3">
 			<Title>
@@ -593,6 +621,7 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>ОбновитьМонитор</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ИзменитьКонечнуюТочку" id="5">
 			<Title>
@@ -613,6 +642,7 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>ИзменитьКонечнуюТочку</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ПерейтиВЖурналРегистрацииСобытийВыгрузкиДанных" id="4">
 			<Title>
@@ -628,6 +658,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ПерейтиВЖурналРегистрацииСобытийВыгрузкиДанных</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ПерейтиВЖурналРегистрацииСобытийЗагрузкиДанных" id="6">
 			<Title>
@@ -643,6 +674,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ПерейтиВЖурналРегистрацииСобытийЗагрузкиДанных</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="НастроитьРасписаниеОтправкиИПолученияСообщенийСистемы" id="7">
 			<Title>
@@ -659,6 +691,7 @@
 			</ToolTip>
 			<Action>НастроитьРасписаниеОтправкиИПолученияСообщенийСистемы</Action>
 			<Representation>Picture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ВключитьОтключитьРасписаниеОтправкиИПолученияСообщенийСистемы" id="8">
 			<Title>
@@ -674,6 +707,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ВключитьОтключитьРасписаниеОтправкиИПолученияСообщенийСистемы</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="НастроитьПодписки" id="9">
 			<Title>
@@ -689,6 +723,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>НастроитьПодписки</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="Подробно" id="10">
 			<Title>
@@ -704,6 +739,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>Подробно</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 	</Commands>
 </Form>

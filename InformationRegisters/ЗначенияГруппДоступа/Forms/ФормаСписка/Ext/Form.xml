@@ -1,45 +1,70 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5">
-	<Width>80</Width>
-	<VerticalScroll>useIfNecessary</VerticalScroll>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
 	<CommandSet>
 		<ExcludedCommand>Copy</ExcludedCommand>
 	</CommandSet>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
-		<ChildItems>
-			<Button name="ФормаОбновитьДанныеРегистра" id="13">
-				<Type>CommandBarButton</Type>
-				<OnlyInAllActions>false</OnlyInAllActions>
-				<CommandName>Form.Command.ОбновитьДанныеРегистра</CommandName>
-				<ExtendedTooltip name="ФормаОбновитьДанныеРегистраExtendedTooltip" id="14"/>
-			</Button>
-			<Button name="ФормаВключитьВозможностьРедактирования" id="12">
-				<Type>CommandBarButton</Type>
-				<OnlyInAllActions>false</OnlyInAllActions>
-				<CommandName>Form.Command.ВключитьВозможностьРедактирования</CommandName>
-				<ExtendedTooltip name="ФормаВключитьВозможностьРедактированияExtendedTooltip" id="15"/>
-			</Button>
-		</ChildItems>
+		<Autofill>false</Autofill>
 	</AutoCommandBar>
 	<Events>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
+		<UsualGroup name="ГруппаПользовательскихНастроек" id="24">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа пользовательских настроек</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПользовательскихНастроекРасширеннаяПодсказка" id="25"/>
+		</UsualGroup>
+		<CommandBar name="КоманднаяПанель" id="26">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Командная панель</v8:content>
+				</v8:item>
+			</Title>
+			<CommandSource>Form</CommandSource>
+			<ExtendedTooltip name="КоманднаяПанельРасширеннаяПодсказка" id="27"/>
+			<ChildItems>
+				<Button name="ФормаОбновитьДанныеРегистра" id="13">
+					<Type>CommandBarButton</Type>
+					<OnlyInAllActions>false</OnlyInAllActions>
+					<CommandName>Form.Command.ОбновитьДанныеРегистра</CommandName>
+					<ExtendedTooltip name="ФормаОбновитьДанныеРегистраExtendedTooltip" id="14"/>
+				</Button>
+				<Button name="ФормаВключитьВозможностьРедактирования" id="12">
+					<Type>CommandBarButton</Type>
+					<OnlyInAllActions>false</OnlyInAllActions>
+					<CommandName>Form.Command.ВключитьВозможностьРедактирования</CommandName>
+					<ExtendedTooltip name="ФормаВключитьВозможностьРедактированияExtendedTooltip" id="15"/>
+				</Button>
+			</ChildItems>
+		</CommandBar>
 		<Table name="Список" id="1">
 			<Representation>List</Representation>
 			<CommandBarLocation>None</CommandBarLocation>
 			<DefaultItem>true</DefaultItem>
+			<Height>10</Height>
+			<HeaderHeight>2</HeaderHeight>
 			<UseAlternationRowColor>true</UseAlternationRowColor>
 			<InitialTreeView>ExpandTopLevel</InitialTreeView>
 			<EnableStartDrag>true</EnableStartDrag>
 			<DataPath>Список</DataPath>
 			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список</v8:content>
+				</v8:item>
+			</Title>
 			<CommandSet>
 				<ExcludedCommand>Copy</ExcludedCommand>
 			</CommandSet>
-			<SearchStringLocation>None</SearchStringLocation>
-			<ViewStatusLocation>None</ViewStatusLocation>
-			<SearchControlLocation>None</SearchControlLocation>
 			<AutoRefresh>false</AutoRefresh>
 			<AutoRefreshPeriod>60</AutoRefreshPeriod>
 			<Period>
@@ -53,58 +78,69 @@
 			<ShowRoot>true</ShowRoot>
 			<AllowRootChoice>false</AllowRootChoice>
 			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<UserSettingsGroup>ГруппаПользовательскихНастроек</UserSettingsGroup>
 			<ContextMenu name="СписокКонтекстноеМеню" id="2"/>
 			<AutoCommandBar name="СписокКоманднаяПанель" id="3">
 				<Autofill>false</Autofill>
 			</AutoCommandBar>
 			<ExtendedTooltip name="СписокExtendedTooltip" id="16"/>
-			<SearchStringAddition name="СписокСтрокаПоиска" id="24">
+			<SearchStringAddition name="СписокSearchString" id="28">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>SearchStringRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="25"/>
-				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="26"/>
+				<ContextMenu name="СписокSearchStringContextMenu" id="29"/>
+				<ExtendedTooltip name="СписокSearchStringExtendedTooltip" id="30"/>
 			</SearchStringAddition>
-			<ViewStatusAddition name="СписокСостояниеПросмотра" id="27">
+			<ViewStatusAddition name="СписокViewStatus" id="31">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>ViewStatusRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="28"/>
-				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="29"/>
+				<ContextMenu name="СписокViewStatusContextMenu" id="32"/>
+				<ExtendedTooltip name="СписокViewStatusExtendedTooltip" id="33"/>
 			</ViewStatusAddition>
-			<SearchControlAddition name="СписокУправлениеПоиском" id="30">
+			<SearchControlAddition name="СписокSearchControl" id="34">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>SearchControl</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="31"/>
-				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="32"/>
+				<ContextMenu name="СписокSearchControlContextMenu" id="35"/>
+				<ExtendedTooltip name="СписокSearchControlExtendedTooltip" id="36"/>
 			</SearchControlAddition>
 			<ChildItems>
-				<LabelField name="ГруппаДоступа" id="4">
+				<LabelField name="СписокГруппаДоступа" id="4">
 					<DataPath>Список.ГруппаДоступа</DataPath>
 					<DefaultItem>true</DefaultItem>
-					<ContextMenu name="ГруппаДоступаКонтекстноеМеню" id="5"/>
-					<ExtendedTooltip name="ГруппаДоступаExtendedTooltip" id="17"/>
+					<Width>20</Width>
+					<ContextMenu name="СписокГруппаДоступаКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="СписокГруппаДоступаРасширеннаяПодсказка" id="17"/>
 				</LabelField>
-				<LabelField name="ЗначениеДоступа" id="10">
+				<LabelField name="СписокЗначениеДоступа" id="10">
 					<DataPath>Список.ЗначениеДоступа</DataPath>
 					<DefaultItem>true</DefaultItem>
-					<ContextMenu name="ЗначениеДоступаКонтекстноеМеню" id="11"/>
-					<ExtendedTooltip name="ЗначениеДоступаExtendedTooltip" id="20"/>
+					<Width>20</Width>
+					<ContextMenu name="СписокЗначениеДоступаКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="СписокЗначениеДоступаРасширеннаяПодсказка" id="20"/>
 				</LabelField>
-				<LabelField name="ЗначениеРазрешено" id="21">
+				<LabelField name="СписокЗначениеРазрешено" id="21">
 					<DataPath>Список.ЗначениеРазрешено</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Значение
+разрешено</v8:content>
+						</v8:item>
+					</Title>
+					<Width>9</Width>
 					<Format>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
 							<v8:content>БЛ=Нет; БИ=Да</v8:content>
 						</v8:item>
 					</Format>
-					<ContextMenu name="ЗначениеРазрешеноКонтекстноеМеню" id="22"/>
-					<ExtendedTooltip name="ЗначениеРазрешеноРасширеннаяПодсказка" id="23"/>
+					<ContextMenu name="СписокЗначениеРазрешеноКонтекстноеМеню" id="22"/>
+					<ExtendedTooltip name="СписокЗначениеРазрешеноРасширеннаяПодсказка" id="23"/>
 				</LabelField>
 			</ChildItems>
 		</Table>
@@ -153,6 +189,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ВключитьВозможностьРедактирования</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ОбновитьДанныеРегистра" id="2">
 			<Title>
@@ -168,6 +205,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ОбновитьДанныеРегистра</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 	</Commands>
 </Form>

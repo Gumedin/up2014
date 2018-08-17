@@ -1,12 +1,11 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
 	<Title>
 		<v8:item>
 			<v8:lang>ru</v8:lang>
 			<v8:content>Разделение данных сеанса</v8:content>
 		</v8:item>
 	</Title>
-	<Width>60</Width>
 	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
 	<AutoTitle>false</AutoTitle>
 	<CommandBarLocation>Top</CommandBarLocation>
@@ -36,43 +35,46 @@
 			<EnableStartDrag>true</EnableStartDrag>
 			<EnableDrag>true</EnableDrag>
 			<DataPath>РазделениеДанныхСеанса</DataPath>
-			<SearchStringLocation>None</SearchStringLocation>
-			<ViewStatusLocation>None</ViewStatusLocation>
-			<SearchControlLocation>None</SearchControlLocation>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Разделение данных сеанса</v8:content>
+				</v8:item>
+			</Title>
 			<RowFilter xsi:nil="true"/>
 			<ContextMenu name="РазделениеДанныхСеансаКонтекстноеМеню" id="2"/>
 			<AutoCommandBar name="РазделениеДанныхСеансаКоманднаяПанель" id="3"/>
 			<ExtendedTooltip name="РазделениеДанныхСеансаРасширеннаяПодсказка" id="4"/>
-			<SearchStringAddition name="РазделениеДанныхСеансаСтрокаПоиска" id="29">
+			<SearchStringAddition name="РазделениеДанныхСеансаSearchString" id="29">
 				<AdditionSource>
 					<Item>РазделениеДанныхСеанса</Item>
 					<Type>SearchStringRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="РазделениеДанныхСеансаСтрокаПоискаКонтекстноеМеню" id="30"/>
-				<ExtendedTooltip name="РазделениеДанныхСеансаСтрокаПоискаРасширеннаяПодсказка" id="31"/>
+				<ContextMenu name="РазделениеДанныхСеансаSearchStringContextMenu" id="30"/>
+				<ExtendedTooltip name="РазделениеДанныхСеансаSearchStringExtendedTooltip" id="31"/>
 			</SearchStringAddition>
-			<ViewStatusAddition name="РазделениеДанныхСеансаСостояниеПросмотра" id="32">
+			<ViewStatusAddition name="РазделениеДанныхСеансаViewStatus" id="32">
 				<AdditionSource>
 					<Item>РазделениеДанныхСеанса</Item>
 					<Type>ViewStatusRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="РазделениеДанныхСеансаСостояниеПросмотраКонтекстноеМеню" id="33"/>
-				<ExtendedTooltip name="РазделениеДанныхСеансаСостояниеПросмотраРасширеннаяПодсказка" id="34"/>
+				<ContextMenu name="РазделениеДанныхСеансаViewStatusContextMenu" id="33"/>
+				<ExtendedTooltip name="РазделениеДанныхСеансаViewStatusExtendedTooltip" id="34"/>
 			</ViewStatusAddition>
-			<SearchControlAddition name="РазделениеДанныхСеансаУправлениеПоиском" id="35">
+			<SearchControlAddition name="РазделениеДанныхСеансаSearchControl" id="35">
 				<AdditionSource>
 					<Item>РазделениеДанныхСеанса</Item>
 					<Type>SearchControl</Type>
 				</AdditionSource>
-				<ContextMenu name="РазделениеДанныхСеансаУправлениеПоискомКонтекстноеМеню" id="36"/>
-				<ExtendedTooltip name="РазделениеДанныхСеансаУправлениеПоискомРасширеннаяПодсказка" id="37"/>
+				<ContextMenu name="РазделениеДанныхСеансаSearchControlContextMenu" id="36"/>
+				<ExtendedTooltip name="РазделениеДанныхСеансаSearchControlExtendedTooltip" id="37"/>
 			</SearchControlAddition>
 			<ChildItems>
 				<ColumnGroup name="ГруппаФлажокПредставление" id="27">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Группа флажок представление</v8:content>
+							<v8:content>Флажок представление</v8:content>
 						</v8:item>
 					</Title>
 					<Group>InCell</Group>
@@ -117,6 +119,12 @@
 			</ChildItems>
 		</Table>
 		<CommandBar name="ГруппаКоманднаяПанель" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Командная панель</v8:content>
+				</v8:item>
+			</Title>
 			<HorizontalLocation>Right</HorizontalLocation>
 			<ExtendedTooltip name="ГруппаКоманднаяПанельРасширеннаяПодсказка" id="15"/>
 			<ChildItems>
@@ -230,6 +238,7 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>ОтметитьВсе</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="СнятьФлажки" id="2">
 			<Title>
@@ -250,6 +259,7 @@
 			</Picture>
 			<Action>СнятьФлажки</Action>
 			<Representation>Picture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="КомандаОк" id="3">
 			<Title>
@@ -259,6 +269,7 @@
 				</v8:item>
 			</Title>
 			<Action>КомандаОк</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="КомандаОтмена" id="4">
 			<Title>
@@ -268,6 +279,7 @@
 				</v8:item>
 			</Title>
 			<Action>КомандаОтмена</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 	</Commands>
 	<Parameters>

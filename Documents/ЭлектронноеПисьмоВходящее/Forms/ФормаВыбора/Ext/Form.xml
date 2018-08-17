@@ -1,13 +1,26 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
 	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
-	<VerticalScroll>useIfNecessary</VerticalScroll>
 	<CommandSet>
 		<ExcludedCommand>Copy</ExcludedCommand>
 		<ExcludedCommand>Create</ExcludedCommand>
 	</CommandSet>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
 	<ChildItems>
+		<UsualGroup name="ГруппаПользовательскихНастроек" id="23">
+			<UserVisible>
+				<xr:Common>false</xr:Common>
+			</UserVisible>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа пользовательских настроек</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ExtendedTooltip name="ГруппаПользовательскихНастроекРасширеннаяПодсказка" id="24"/>
+		</UsualGroup>
 		<Table name="Список" id="1">
 			<Representation>List</Representation>
 			<CommandBarLocation>None</CommandBarLocation>
@@ -18,13 +31,16 @@
 			<EnableStartDrag>true</EnableStartDrag>
 			<DataPath>Список</DataPath>
 			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список</v8:content>
+				</v8:item>
+			</Title>
 			<CommandSet>
 				<ExcludedCommand>Copy</ExcludedCommand>
 				<ExcludedCommand>Create</ExcludedCommand>
 			</CommandSet>
-			<SearchStringLocation>None</SearchStringLocation>
-			<ViewStatusLocation>None</ViewStatusLocation>
-			<SearchControlLocation>None</SearchControlLocation>
 			<AutoRefresh>false</AutoRefresh>
 			<AutoRefreshPeriod>60</AutoRefreshPeriod>
 			<Period>
@@ -43,29 +59,29 @@
 				<Autofill>false</Autofill>
 			</AutoCommandBar>
 			<ExtendedTooltip name="СписокExtendedTooltip" id="14"/>
-			<SearchStringAddition name="СписокСтрокаПоиска" id="23">
+			<SearchStringAddition name="СписокSearchString" id="25">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>SearchStringRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="24"/>
-				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="25"/>
+				<ContextMenu name="СписокSearchStringContextMenu" id="26"/>
+				<ExtendedTooltip name="СписокSearchStringExtendedTooltip" id="27"/>
 			</SearchStringAddition>
-			<ViewStatusAddition name="СписокСостояниеПросмотра" id="26">
+			<ViewStatusAddition name="СписокViewStatus" id="28">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>ViewStatusRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="27"/>
-				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="28"/>
+				<ContextMenu name="СписокViewStatusContextMenu" id="29"/>
+				<ExtendedTooltip name="СписокViewStatusExtendedTooltip" id="30"/>
 			</ViewStatusAddition>
-			<SearchControlAddition name="СписокУправлениеПоиском" id="29">
+			<SearchControlAddition name="СписокSearchControl" id="31">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>SearchControl</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="30"/>
-				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="31"/>
+				<ContextMenu name="СписокSearchControlContextMenu" id="32"/>
+				<ExtendedTooltip name="СписокSearchControlExtendedTooltip" id="33"/>
 			</SearchControlAddition>
 			<Events>
 				<Event name="BeforeAddRow">СписокПередНачаломДобавления</Event>
@@ -121,8 +137,47 @@
 			</Type>
 			<MainAttribute>true</MainAttribute>
 			<Settings xsi:type="DynamicList">
-				<ManualQuery>false</ManualQuery>
+				<ManualQuery>true</ManualQuery>
 				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	ДокументЭлектронноеПисьмоВходящее.Ссылка,
+	ДокументЭлектронноеПисьмоВходящее.ПометкаУдаления,
+	ДокументЭлектронноеПисьмоВходящее.Номер,
+	ДокументЭлектронноеПисьмоВходящее.Дата,
+	ДокументЭлектронноеПисьмоВходящее.Проведен,
+	ДокументЭлектронноеПисьмоВходящее.Важность,
+	ДокументЭлектронноеПисьмоВходящее.ВнутреннийЗаголовок,
+	ДокументЭлектронноеПисьмоВходящее.ДатаПолучения,
+	ДокументЭлектронноеПисьмоВходящее.ЕстьВложения,
+	ДокументЭлектронноеПисьмоВходящее.ИдентификаторНаСервере,
+	ДокументЭлектронноеПисьмоВходящее.ИдентификаторОснования,
+	ДокументЭлектронноеПисьмоВходящее.ИдентификаторСообщения,
+	ДокументЭлектронноеПисьмоВходящее.ИдентификаторыОснований,
+	ДокументЭлектронноеПисьмоВходящее.Кодировка,
+	ДокументЭлектронноеПисьмоВходящее.Ответственный,
+	ДокументЭлектронноеПисьмоВходящее.ОтправительАдрес,
+	ДокументЭлектронноеПисьмоВходящее.ОтправительКонтакт,
+	ДокументЭлектронноеПисьмоВходящее.ОтправительПредставление,
+	ДокументЭлектронноеПисьмоВходящее.Размер,
+	ДокументЭлектронноеПисьмоВходящее.СписокПолучателейКопий,
+	ДокументЭлектронноеПисьмоВходящее.СписокПолучателейПисьма,
+	ДокументЭлектронноеПисьмоВходящее.Текст,
+	ДокументЭлектронноеПисьмоВходящее.ТекстHTML,
+	ДокументЭлектронноеПисьмоВходящее.Тема,
+	ДокументЭлектронноеПисьмоВходящее.ТипТекста,
+	ДокументЭлектронноеПисьмоВходящее.УчетнаяЗапись,
+	ДокументЭлектронноеПисьмоВходящее.ВзаимодействиеОснование,
+	ДокументЭлектронноеПисьмоВходящее.УведомитьОДоставке,
+	ДокументЭлектронноеПисьмоВходящее.УведомитьОПрочтении,
+	ДокументЭлектронноеПисьмоВходящее.Комментарий,
+	ПредметыПапкиВзаимодействий.Предмет КАК Предмет,
+	ПредметыПапкиВзаимодействий.ПапкаЭлектронногоПисьма,
+	ПредметыПапкиВзаимодействий.Рассмотрено,
+	ПредметыПапкиВзаимодействий.РассмотретьПосле
+ИЗ
+	Документ.ЭлектронноеПисьмоВходящее КАК ДокументЭлектронноеПисьмоВходящее
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ПредметыПапкиВзаимодействий КАК ПредметыПапкиВзаимодействий
+		ПО ПредметыПапкиВзаимодействий.Взаимодействие = ДокументЭлектронноеПисьмоВходящее.Ссылка</QueryText>
 				<MainTable>Document.ЭлектронноеПисьмоВходящее</MainTable>
 				<ListSettings>
 					<dcsset:filter>

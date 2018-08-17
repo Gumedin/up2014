@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5">
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
 	<Catalog uuid="e7b0ae70-0192-456c-9dc5-e66049fa9df2">
 		<InternalInfo>
 			<xr:GeneratedType name="CatalogObject.Файлы" category="Object">
@@ -40,13 +40,13 @@
 			<UseStandardCommands>false</UseStandardCommands>
 			<Owners/>
 			<SubordinationUse>ToItems</SubordinationUse>
-			<CodeLength>11</CodeLength>
+			<CodeLength>0</CodeLength>
 			<DescriptionLength>150</DescriptionLength>
 			<CodeType>String</CodeType>
 			<CodeAllowedLength>Variable</CodeAllowedLength>
 			<CodeSeries>WholeCatalog</CodeSeries>
-			<CheckUnique>true</CheckUnique>
-			<Autonumbering>true</Autonumbering>
+			<CheckUnique>false</CheckUnique>
+			<Autonumbering>false</Autonumbering>
 			<DefaultPresentation>AsDescription</DefaultPresentation>
 			<StandardAttributes>
 				<xr:StandardAttribute name="PredefinedDataName">
@@ -241,7 +241,7 @@
 					<xr:ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Наименование</v8:content>
+							<v8:content>Имя файла (без расширения)</v8:content>
 						</v8:item>
 					</xr:ToolTip>
 					<xr:ExtendedEdit>false</xr:ExtendedEdit>
@@ -254,12 +254,7 @@
 					<xr:DataHistory>Use</xr:DataHistory>
 					<xr:MarkNegatives>false</xr:MarkNegatives>
 					<xr:MinValue xsi:nil="true"/>
-					<xr:Synonym>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Краткое наименование</v8:content>
-						</v8:item>
-					</xr:Synonym>
+					<xr:Synonym/>
 					<xr:Comment/>
 					<xr:FullTextSearch>Use</xr:FullTextSearch>
 					<xr:ChoiceParameterLinks/>
@@ -331,14 +326,13 @@
 			<ChoiceMode>BothWays</ChoiceMode>
 			<InputByString>
 				<xr:Field>Catalog.Файлы.StandardAttribute.Description</xr:Field>
-				<xr:Field>Catalog.Файлы.StandardAttribute.Code</xr:Field>
 			</InputByString>
 			<SearchStringModeOnInputByString>Begin</SearchStringModeOnInputByString>
 			<FullTextSearchOnInputByString>DontUse</FullTextSearchOnInputByString>
 			<ChoiceDataGetModeOnInputByString>Directly</ChoiceDataGetModeOnInputByString>
 			<DefaultObjectForm>Catalog.Файлы.Form.ФормаЭлемента</DefaultObjectForm>
 			<DefaultFolderForm/>
-			<DefaultListForm>Catalog.Файлы.Form.ФормаСписка</DefaultListForm>
+			<DefaultListForm>Catalog.Файлы.Form.Файлы</DefaultListForm>
 			<DefaultChoiceForm>Catalog.Файлы.Form.ФормаВыбора</DefaultChoiceForm>
 			<DefaultFolderChoiceForm/>
 			<AuxiliaryObjectForm/>
@@ -361,7 +355,7 @@
 			<ListPresentation/>
 			<ExtendedListPresentation/>
 			<Explanation/>
-			<CreateOnInput>Use</CreateOnInput>
+			<CreateOnInput>DontUse</CreateOnInput>
 			<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 			<DataHistory>DontUse</DataHistory>
 		</Properties>
@@ -375,8 +369,10 @@
 							<v8:content>Автор</v8:content>
 						</v8:item>
 					</Synonym>
-					<Comment>Автор - пользователь, добавивший файл</Comment>
+					<Comment/>
 					<Type>
+						<v8:Type>cfg:CatalogRef.ВнешниеПользователи</v8:Type>
+						<v8:Type>cfg:CatalogRef.УчетныеЗаписиСинхронизацииФайлов</v8:Type>
 						<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
 					</Type>
 					<PasswordMode>false</PasswordMode>
@@ -385,7 +381,7 @@
 					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Пользователь, который добавил файл.</v8:content>
+							<v8:content>Пользователь, который добавил файл в список</v8:content>
 						</v8:item>
 					</ToolTip>
 					<MarkNegatives>false</MarkNegatives>
@@ -400,7 +396,7 @@
 					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
 					<ChoiceParameterLinks/>
 					<ChoiceParameters/>
-					<QuickChoice>DontUse</QuickChoice>
+					<QuickChoice>Auto</QuickChoice>
 					<CreateOnInput>Use</CreateOnInput>
 					<ChoiceForm/>
 					<LinkByType/>
@@ -417,13 +413,12 @@
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Владелец</v8:content>
+							<v8:content>Размещение</v8:content>
 						</v8:item>
 					</Synonym>
-					<Comment>Владелец файла</Comment>
+					<Comment/>
 					<Type>
-						<v8:Type>cfg:BusinessProcessRef.Задание</v8:Type>
-						<v8:Type>cfg:CatalogRef.ПапкиФайлов</v8:Type>
+						<v8:TypeSet>cfg:DefinedType.ВладелецФайлов</v8:TypeSet>
 					</Type>
 					<PasswordMode>false</PasswordMode>
 					<Format/>
@@ -431,7 +426,7 @@
 					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Владелец файла</v8:content>
+							<v8:content>Место размещения файла (папка или другой объект)</v8:content>
 						</v8:item>
 					</ToolTip>
 					<MarkNegatives>false</MarkNegatives>
@@ -489,7 +484,55 @@
 					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Дата заема на редактирование.</v8:content>
+							<v8:content>Дата, когда файл был занят для редактирования</v8:content>
+						</v8:item>
+					</ToolTip>
+					<MarkNegatives>false</MarkNegatives>
+					<Mask/>
+					<MultiLine>false</MultiLine>
+					<ExtendedEdit>false</ExtendedEdit>
+					<MinValue xsi:nil="true"/>
+					<MaxValue xsi:nil="true"/>
+					<FillFromFillingValue>false</FillFromFillingValue>
+					<FillValue xsi:nil="true"/>
+					<FillChecking>DontCheck</FillChecking>
+					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+					<ChoiceParameterLinks/>
+					<ChoiceParameters/>
+					<QuickChoice>Auto</QuickChoice>
+					<CreateOnInput>Auto</CreateOnInput>
+					<ChoiceForm/>
+					<LinkByType/>
+					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+					<Use>ForItem</Use>
+					<Indexing>DontIndex</Indexing>
+					<FullTextSearch>Use</FullTextSearch>
+					<DataHistory>Use</DataHistory>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="356a8091-4c0b-41d0-b8d2-963b3a807469">
+				<Properties>
+					<Name>ДатаМодификацииУниверсальная</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата модификации универсальная</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>DateTime</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+					<PasswordMode>false</PasswordMode>
+					<Format/>
+					<EditFormat/>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата изменения данных файла (универсальное время)</v8:content>
 						</v8:item>
 					</ToolTip>
 					<MarkNegatives>false</MarkNegatives>
@@ -524,7 +567,7 @@
 							<v8:content>Дата создания</v8:content>
 						</v8:item>
 					</Synonym>
-					<Comment>Дата добавления файла в базу</Comment>
+					<Comment/>
 					<Type>
 						<v8:Type>xs:dateTime</v8:Type>
 						<v8:DateQualifiers>
@@ -537,7 +580,7 @@
 					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Дата добавления файла в базу.</v8:content>
+							<v8:content>Дата добавления файла в список</v8:content>
 						</v8:item>
 					</ToolTip>
 					<MarkNegatives>false</MarkNegatives>
@@ -572,7 +615,7 @@
 							<v8:content>Зашифрован</v8:content>
 						</v8:item>
 					</Synonym>
-					<Comment>Файл зашифрован</Comment>
+					<Comment/>
 					<Type>
 						<v8:Type>xs:boolean</v8:Type>
 					</Type>
@@ -582,7 +625,7 @@
 					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Файл зашифрован</v8:content>
+							<v8:content>Признак того, что файл зашифрован</v8:content>
 						</v8:item>
 					</ToolTip>
 					<MarkNegatives>false</MarkNegatives>
@@ -614,10 +657,10 @@
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Индекс картинки</v8:content>
+							<v8:content>Индекс значка</v8:content>
 						</v8:item>
 					</Synonym>
-					<Comment>Индекс иконки, соответствующей расширению файла, для показа в списке</Comment>
+					<Comment/>
 					<Type>
 						<v8:Type>xs:decimal</v8:Type>
 						<v8:NumberQualifiers>
@@ -632,7 +675,7 @@
 					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Индекс иконки, соответствующей расширению файла, для показа в списке</v8:content>
+							<v8:content>Индекс значка файла (служебное поле)</v8:content>
 						</v8:item>
 					</ToolTip>
 					<MarkNegatives>false</MarkNegatives>
@@ -667,7 +710,7 @@
 							<v8:content>Описание</v8:content>
 						</v8:item>
 					</Synonym>
-					<Comment>Описание файла</Comment>
+					<Comment/>
 					<Type>
 						<v8:Type>xs:string</v8:Type>
 						<v8:StringQualifiers>
@@ -681,7 +724,7 @@
 					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Описание файла</v8:content>
+							<v8:content>Краткое описание файла</v8:content>
 						</v8:item>
 					</ToolTip>
 					<MarkNegatives>false</MarkNegatives>
@@ -713,10 +756,10 @@
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Подписан ЭП</v8:content>
+							<v8:content>Подписан электронно</v8:content>
 						</v8:item>
 					</Synonym>
-					<Comment>Файл подписан ЭП</Comment>
+					<Comment/>
 					<Type>
 						<v8:Type>xs:boolean</v8:Type>
 					</Type>
@@ -726,7 +769,7 @@
 					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Файл подписан ЭП</v8:content>
+							<v8:content>Признак того, что файл подписан электронно</v8:content>
 						</v8:item>
 					</ToolTip>
 					<MarkNegatives>false</MarkNegatives>
@@ -754,14 +797,14 @@
 			</Attribute>
 			<Attribute uuid="0526492c-be48-4c84-8d68-19fa1c7e9d6e">
 				<Properties>
-					<Name>ПолноеНаименование</Name>
+					<Name>УдалитьПолноеНаименование</Name>
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Полное наименование</v8:content>
+							<v8:content>(не используется) Полное наименование</v8:content>
 						</v8:item>
 					</Synonym>
-					<Comment>Полное наименование (длиной до 256 символов)</Comment>
+					<Comment/>
 					<Type>
 						<v8:Type>xs:string</v8:Type>
 						<v8:StringQualifiers>
@@ -775,7 +818,7 @@
 					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Полное наименование (длиной до 256 символов)</v8:content>
+							<v8:content>Имя файла (без расширения) длиной до 256 символов</v8:content>
 						</v8:item>
 					</ToolTip>
 					<MarkNegatives>false</MarkNegatives>
@@ -786,7 +829,7 @@
 					<MaxValue xsi:nil="true"/>
 					<FillFromFillingValue>false</FillFromFillingValue>
 					<FillValue xsi:type="xs:string">                                                                                                                                                                                                                                                                </FillValue>
-					<FillChecking>ShowError</FillChecking>
+					<FillChecking>DontCheck</FillChecking>
 					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
 					<ChoiceParameterLinks/>
 					<ChoiceParameters/>
@@ -810,8 +853,9 @@
 							<v8:content>Редактирует</v8:content>
 						</v8:item>
 					</Synonym>
-					<Comment>Пользователь, занявший файл для редактирования</Comment>
+					<Comment/>
 					<Type>
+						<v8:Type>cfg:CatalogRef.УчетныеЗаписиСинхронизацииФайлов</v8:Type>
 						<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
 					</Type>
 					<PasswordMode>false</PasswordMode>
@@ -820,7 +864,7 @@
 					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Пользователь, который занял файл для редактирования.</v8:content>
+							<v8:content>Пользователь, который занял файл для редактирования</v8:content>
 						</v8:item>
 					</ToolTip>
 					<MarkNegatives>false</MarkNegatives>
@@ -835,7 +879,7 @@
 					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
 					<ChoiceParameterLinks/>
 					<ChoiceParameters/>
-					<QuickChoice>DontUse</QuickChoice>
+					<QuickChoice>Auto</QuickChoice>
 					<CreateOnInput>Use</CreateOnInput>
 					<ChoiceForm/>
 					<LinkByType/>
@@ -855,7 +899,7 @@
 							<v8:content>Текст</v8:content>
 						</v8:item>
 					</Synonym>
-					<Comment>Текст, извлеченный из файла - для полнотекстового поиска</Comment>
+					<Comment/>
 					<Type>
 						<v8:Type>v8:ValueStorage</v8:Type>
 					</Type>
@@ -865,7 +909,7 @@
 					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Текст, извлеченный из файла - для полнотекстового поиска</v8:content>
+							<v8:content>Текст, извлеченный из файла (служебное поле)</v8:content>
 						</v8:item>
 					</ToolTip>
 					<MarkNegatives>false</MarkNegatives>
@@ -897,10 +941,10 @@
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Текущая версия</v8:content>
+							<v8:content>Активная версия</v8:content>
 						</v8:item>
 					</Synonym>
-					<Comment>Активная версия</Comment>
+					<Comment/>
 					<Type>
 						<v8:Type>cfg:CatalogRef.ВерсииФайлов</v8:Type>
 					</Type>
@@ -910,7 +954,7 @@
 					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Активная версия</v8:content>
+							<v8:content>Активная версия файла</v8:content>
 						</v8:item>
 					</ToolTip>
 					<MarkNegatives>false</MarkNegatives>
@@ -938,14 +982,14 @@
 			</Attribute>
 			<Attribute uuid="ec0c3187-de61-4bc8-a52a-7617f47ffb6d">
 				<Properties>
-					<Name>ТекущаяВерсияАвтор</Name>
+					<Name>Изменил</Name>
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Текущая версия автор</v8:content>
+							<v8:content>Отредактировал</v8:content>
 						</v8:item>
 					</Synonym>
-					<Comment>Автор - пользователь, создавший версию</Comment>
+					<Comment/>
 					<Type>
 						<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
 					</Type>
@@ -955,7 +999,7 @@
 					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Пользователь, который добавил версию файла.</v8:content>
+							<v8:content>Последний пользователь, который отредактировал файл</v8:content>
 						</v8:item>
 					</ToolTip>
 					<MarkNegatives>false</MarkNegatives>
@@ -983,14 +1027,14 @@
 			</Attribute>
 			<Attribute uuid="1e71ec59-55a4-45e8-a8c9-f70c2cb56589">
 				<Properties>
-					<Name>ТекущаяВерсияДатаМодификацииФайла</Name>
+					<Name>УдалитьТекущаяВерсияДатаМодификацииФайла</Name>
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Текущая версия дата модификации файла</v8:content>
+							<v8:content>(не используется) Дата изменения (местное время)</v8:content>
 						</v8:item>
 					</Synonym>
-					<Comment>Дата модификации файла - в локальном времени</Comment>
+					<Comment/>
 					<Type>
 						<v8:Type>xs:dateTime</v8:Type>
 						<v8:DateQualifiers>
@@ -1003,7 +1047,7 @@
 					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Дата изменения данных версии файла (местное время).</v8:content>
+							<v8:content>Дата изменения данных файла (местное время)</v8:content>
 						</v8:item>
 					</ToolTip>
 					<MarkNegatives>false</MarkNegatives>
@@ -1031,14 +1075,14 @@
 			</Attribute>
 			<Attribute uuid="fa3632fe-185b-49aa-85ae-dfb721835d40">
 				<Properties>
-					<Name>ТекущаяВерсияДатаСоздания</Name>
+					<Name>УдалитьТекущаяВерсияДатаСоздания</Name>
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Текущая версия дата создания</v8:content>
+							<v8:content>(не используется) Дата редактирования</v8:content>
 						</v8:item>
 					</Synonym>
-					<Comment>Дата создания версии</Comment>
+					<Comment/>
 					<Type>
 						<v8:Type>xs:dateTime</v8:Type>
 						<v8:DateQualifiers>
@@ -1051,7 +1095,7 @@
 					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Дата добавления версии файла в базу.</v8:content>
+							<v8:content>Дата, когда было закончено последнее редактирование файла</v8:content>
 						</v8:item>
 					</ToolTip>
 					<MarkNegatives>false</MarkNegatives>
@@ -1079,14 +1123,14 @@
 			</Attribute>
 			<Attribute uuid="a4f15108-477c-465e-aaea-cb495ef52cf5">
 				<Properties>
-					<Name>ТекущаяВерсияКод</Name>
+					<Name>УдалитьТекущаяВерсияКод</Name>
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Текущая версия код</v8:content>
+							<v8:content>(не используется) Код активной версии</v8:content>
 						</v8:item>
 					</Synonym>
-					<Comment>Текущая версия код</Comment>
+					<Comment/>
 					<Type>
 						<v8:Type>xs:string</v8:Type>
 						<v8:StringQualifiers>
@@ -1100,7 +1144,7 @@
 					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Код версии файла.</v8:content>
+							<v8:content>Код активной версии файла</v8:content>
 						</v8:item>
 					</ToolTip>
 					<MarkNegatives>false</MarkNegatives>
@@ -1128,14 +1172,14 @@
 			</Attribute>
 			<Attribute uuid="9cda5c2c-f401-4f63-b445-cef160296e48">
 				<Properties>
-					<Name>ТекущаяВерсияНомерВерсии</Name>
+					<Name>УдалитьТекущаяВерсияНомерВерсии</Name>
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Текущая версия номер версии</v8:content>
+							<v8:content>(не используется) Номер активной версии</v8:content>
 						</v8:item>
 					</Synonym>
-					<Comment>Номер версии</Comment>
+					<Comment/>
 					<Type>
 						<v8:Type>xs:decimal</v8:Type>
 						<v8:NumberQualifiers>
@@ -1150,7 +1194,7 @@
 					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Номер версии файла.</v8:content>
+							<v8:content>Номер активной версии файла</v8:content>
 						</v8:item>
 					</ToolTip>
 					<MarkNegatives>false</MarkNegatives>
@@ -1178,14 +1222,14 @@
 			</Attribute>
 			<Attribute uuid="e8ae4a26-3127-43ae-af7a-c2e278d2611d">
 				<Properties>
-					<Name>ТекущаяВерсияПутьКФайлу</Name>
+					<Name>ПутьКФайлу</Name>
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Текущая версия путь к файлу</v8:content>
+							<v8:content>Путь к файлу</v8:content>
 						</v8:item>
 					</Synonym>
-					<Comment>Дополнительный путь к файлу на диске (в случае если ТипХраненияФайла - на диске)</Comment>
+					<Comment/>
 					<Type>
 						<v8:Type>xs:string</v8:Type>
 						<v8:StringQualifiers>
@@ -1199,7 +1243,7 @@
 					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Дополнительный путь к файлу на диске (когда файл хранится в томе)</v8:content>
+							<v8:content>Путь к файлу в томе (служебное поле)</v8:content>
 						</v8:item>
 					</ToolTip>
 					<MarkNegatives>false</MarkNegatives>
@@ -1227,14 +1271,14 @@
 			</Attribute>
 			<Attribute uuid="b923c78f-d074-41b4-b832-086686258f19">
 				<Properties>
-					<Name>ТекущаяВерсияРазмер</Name>
+					<Name>Размер</Name>
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Текущая версия размер</v8:content>
+							<v8:content>Размер (байт)</v8:content>
 						</v8:item>
 					</Synonym>
-					<Comment>Размер файла версии</Comment>
+					<Comment/>
 					<Type>
 						<v8:Type>xs:decimal</v8:Type>
 						<v8:NumberQualifiers>
@@ -1249,7 +1293,7 @@
 					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Размер данных версии файла.</v8:content>
+							<v8:content>Размер файла в байтах</v8:content>
 						</v8:item>
 					</ToolTip>
 					<MarkNegatives>false</MarkNegatives>
@@ -1277,14 +1321,14 @@
 			</Attribute>
 			<Attribute uuid="8ff96413-6fdd-4b8d-a181-ea0d8633defc">
 				<Properties>
-					<Name>ТекущаяВерсияРасширение</Name>
+					<Name>Расширение</Name>
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Текущая версия расширение</v8:content>
+							<v8:content>Расширение</v8:content>
 						</v8:item>
 					</Synonym>
-					<Comment>Расширение файла версии</Comment>
+					<Comment/>
 					<Type>
 						<v8:Type>xs:string</v8:Type>
 						<v8:StringQualifiers>
@@ -1298,7 +1342,7 @@
 					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Расширение версии файла.</v8:content>
+							<v8:content>Расширение файла</v8:content>
 						</v8:item>
 					</ToolTip>
 					<MarkNegatives>false</MarkNegatives>
@@ -1326,14 +1370,14 @@
 			</Attribute>
 			<Attribute uuid="54604ed2-766b-4308-b99e-447817d82799">
 				<Properties>
-					<Name>ТекущаяВерсияТом</Name>
+					<Name>Том</Name>
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Текущая версия том</v8:content>
+							<v8:content>Том</v8:content>
 						</v8:item>
 					</Synonym>
-					<Comment>Ссылка на том (в случае если ТипХраненияФайла - на диске)</Comment>
+					<Comment/>
 					<Type>
 						<v8:Type>cfg:CatalogRef.ТомаХраненияФайлов</v8:Type>
 					</Type>
@@ -1378,7 +1422,7 @@
 							<v8:content>Хранить версии</v8:content>
 						</v8:item>
 					</Synonym>
-					<Comment>Хранить версии - если Ложь, у файла всегда одна версия - активная</Comment>
+					<Comment/>
 					<Type>
 						<v8:Type>xs:boolean</v8:Type>
 					</Type>
@@ -1388,7 +1432,8 @@
 					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Хранить версии - если Ложь, у файла всегда одна версия - активная</v8:content>
+							<v8:content>Добавлять версии файла при окончании редактирования.
+Если отключить, тогда будет хранится только последняя версия.</v8:content>
 						</v8:item>
 					</ToolTip>
 					<MarkNegatives>false</MarkNegatives>
@@ -1411,6 +1456,141 @@
 					<Use>ForItem</Use>
 					<Indexing>DontIndex</Indexing>
 					<FullTextSearch>Use</FullTextSearch>
+					<DataHistory>Use</DataHistory>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="ee008096-1ae8-4a64-9d3d-14cb15c8be70">
+				<Properties>
+					<Name>ТипХраненияФайла</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип хранения файла</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Type>
+						<v8:Type>cfg:EnumRef.ТипыХраненияФайлов</v8:Type>
+					</Type>
+					<PasswordMode>false</PasswordMode>
+					<Format/>
+					<EditFormat/>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип хранения файла (в томе или в информационной базе)</v8:content>
+						</v8:item>
+					</ToolTip>
+					<MarkNegatives>false</MarkNegatives>
+					<Mask/>
+					<MultiLine>false</MultiLine>
+					<ExtendedEdit>false</ExtendedEdit>
+					<MinValue xsi:nil="true"/>
+					<MaxValue xsi:nil="true"/>
+					<FillFromFillingValue>false</FillFromFillingValue>
+					<FillValue xsi:nil="true"/>
+					<FillChecking>ShowError</FillChecking>
+					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+					<ChoiceParameterLinks/>
+					<ChoiceParameters/>
+					<QuickChoice>Auto</QuickChoice>
+					<CreateOnInput>Auto</CreateOnInput>
+					<ChoiceForm/>
+					<LinkByType/>
+					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+					<Use>ForItem</Use>
+					<Indexing>Index</Indexing>
+					<FullTextSearch>DontUse</FullTextSearch>
+					<DataHistory>Use</DataHistory>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="a0a85b22-63ee-4a05-8b0d-1feb9ee07b0a">
+				<Properties>
+					<Name>СтатусИзвлеченияТекста</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статус извлечения текста</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Type>
+						<v8:Type>cfg:EnumRef.СтатусыИзвлеченияТекстаФайлов</v8:Type>
+					</Type>
+					<PasswordMode>false</PasswordMode>
+					<Format/>
+					<EditFormat/>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статус извлечения текста из файла (служебное поле)</v8:content>
+						</v8:item>
+					</ToolTip>
+					<MarkNegatives>false</MarkNegatives>
+					<Mask/>
+					<MultiLine>false</MultiLine>
+					<ExtendedEdit>false</ExtendedEdit>
+					<MinValue xsi:nil="true"/>
+					<MaxValue xsi:nil="true"/>
+					<FillFromFillingValue>false</FillFromFillingValue>
+					<FillValue xsi:type="xr:DesignTimeRef">Enum.СтатусыИзвлеченияТекстаФайлов.EmptyRef</FillValue>
+					<FillChecking>DontCheck</FillChecking>
+					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+					<ChoiceParameterLinks/>
+					<ChoiceParameters/>
+					<QuickChoice>Auto</QuickChoice>
+					<CreateOnInput>Auto</CreateOnInput>
+					<ChoiceForm/>
+					<LinkByType/>
+					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+					<Use>ForItem</Use>
+					<Indexing>Index</Indexing>
+					<FullTextSearch>Use</FullTextSearch>
+					<DataHistory>Use</DataHistory>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="a4754a7b-971f-4517-963e-b7cb9d57f86d">
+				<Properties>
+					<Name>ФайлХранилище</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Временное хранилище файла</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Type>
+						<v8:Type>v8:ValueStorage</v8:Type>
+					</Type>
+					<PasswordMode>false</PasswordMode>
+					<Format/>
+					<EditFormat/>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Временное хранилище файла (служебное поле)</v8:content>
+						</v8:item>
+					</ToolTip>
+					<MarkNegatives>false</MarkNegatives>
+					<Mask/>
+					<MultiLine>false</MultiLine>
+					<ExtendedEdit>false</ExtendedEdit>
+					<MinValue xsi:nil="true"/>
+					<MaxValue xsi:nil="true"/>
+					<FillFromFillingValue>false</FillFromFillingValue>
+					<FillValue xsi:nil="true"/>
+					<FillChecking>DontCheck</FillChecking>
+					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+					<ChoiceParameterLinks/>
+					<ChoiceParameters/>
+					<QuickChoice>Auto</QuickChoice>
+					<CreateOnInput>Auto</CreateOnInput>
+					<ChoiceForm/>
+					<LinkByType/>
+					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+					<Use>ForItem</Use>
+					<Indexing>DontIndex</Indexing>
+					<FullTextSearch>DontUse</FullTextSearch>
 					<DataHistory>Use</DataHistory>
 				</Properties>
 			</Attribute>
@@ -1612,21 +1792,21 @@
 			</TabularSection>
 			<TabularSection uuid="6d852a13-c85e-4e84-8396-f91c1ed0596e">
 				<InternalInfo>
-					<xr:GeneratedType name="CatalogTabularSection.Файлы.СертификатыШифрования" category="TabularSection">
+					<xr:GeneratedType name="CatalogTabularSection.Файлы.УдалитьСертификатыШифрования" category="TabularSection">
 						<xr:TypeId>4edc81ee-065f-4d98-a5b3-ee8df3e89e88</xr:TypeId>
 						<xr:ValueId>9fcb746e-31c3-4578-ad00-b6e02d812ff3</xr:ValueId>
 					</xr:GeneratedType>
-					<xr:GeneratedType name="CatalogTabularSectionRow.Файлы.СертификатыШифрования" category="TabularSectionRow">
+					<xr:GeneratedType name="CatalogTabularSectionRow.Файлы.УдалитьСертификатыШифрования" category="TabularSectionRow">
 						<xr:TypeId>642ff66d-d385-4723-ba95-90570a8eee81</xr:TypeId>
 						<xr:ValueId>d647fab9-1606-47af-abe4-ca542064ec0b</xr:ValueId>
 					</xr:GeneratedType>
 				</InternalInfo>
 				<Properties>
-					<Name>СертификатыШифрования</Name>
+					<Name>УдалитьСертификатыШифрования</Name>
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Сертификаты шифрования</v8:content>
+							<v8:content>(не используется) Сертификаты шифрования</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
@@ -1681,7 +1861,7 @@
 							<Type>
 								<v8:Type>xs:string</v8:Type>
 								<v8:StringQualifiers>
-									<v8:Length>255</v8:Length>
+									<v8:Length>28</v8:Length>
 									<v8:AllowedLength>Variable</v8:AllowedLength>
 								</v8:StringQualifiers>
 							</Type>
@@ -1737,7 +1917,7 @@
 							<ToolTip>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Кому выдан сертификат (имя, отдел и др. информация)</v8:content>
+									<v8:content>Владелец сертификата (фамилия имя, организация, должность)</v8:content>
 								</v8:item>
 							</ToolTip>
 							<MarkNegatives>false</MarkNegatives>
@@ -1769,7 +1949,7 @@
 									<v8:content>Сертификат</v8:content>
 								</v8:item>
 							</Synonym>
-							<Comment>Двоичные данные сертификата</Comment>
+							<Comment/>
 							<Type>
 								<v8:Type>v8:ValueStorage</v8:Type>
 							</Type>

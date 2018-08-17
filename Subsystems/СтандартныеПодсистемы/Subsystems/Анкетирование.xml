@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5">
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
 	<Subsystem uuid="739c01a9-1125-45ef-ab4e-8c73af4eeff0">
 		<Properties>
 			<Name>Анкетирование</Name>
@@ -40,7 +40,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ПревьюТабличногоВопросаОтветыВКолонках</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ПревьюТабличногоВопросаОтветыСтрокиИКолонки</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.МастерАнкетыПоРазделам</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.СписокРеспондента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ДоступныеАнкеты</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Report.АналитическийОтчетПоАнкетированию</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.КоллекцияДоступныеАнкеты</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.АрхивАнкета</xr:Item>
@@ -49,8 +49,13 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Role.ДобавлениеИзменениеШаблоновАнкет</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Role.ДобавлениеИзменениеОпросов</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ИспользоватьАнкетирование</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.ВариантыОтветовАнкетЗаполнитьЗначениеРеквизитаУпорядочивания</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.ВариантыОтветовАнкетСброситьЗначениеРеквизитаУпорядочивания</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DefinedType.Респондент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DefinedType.Интервьюер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.СпособыОтображенияПодсказок</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.РежимыАнкетирования</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ВидыПереключателяВАнкетах</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ДобавитьКомплексныйВопрос</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ВидыФлажкаВАнкетах</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects/>

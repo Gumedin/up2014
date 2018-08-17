@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Rights xmlns="http://v8.1c.ru/8.2/roles" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Rights" version="2.5">
+<Rights xmlns="http://v8.1c.ru/8.2/roles" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Rights" version="2.6">
 	<setForNewObjects>false</setForNewObjects>
 	<setForAttributesByDefault>true</setForAttributesByDefault>
 	<independentRightsOfChildObjects>false</independentRightsOfChildObjects>
@@ -25,7 +25,7 @@
 		</right>
 	</object>
 	<object>
-		<name>CommonCommand.ПолучитьНастройкиОбменаДаннымиДляВторойИнформационнойБазы</name>
+		<name>CommonCommand.ПолучитьНастройкиСинхронизацииДляДругойПрограммы</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -92,7 +92,7 @@
 		</right>
 	</object>
 	<object>
-		<name>CommonCommand.ОткрытьСценарииОбменовДанными</name>
+		<name>CommonCommand.СценарииСинхронизации</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -131,14 +131,14 @@
 		</right>
 	</object>
 	<object>
-		<name>CommonCommand.ОткрытьОбменыДанными</name>
+		<name>CommonCommand.НастройкиСинхронизацииДанных</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
 		</right>
 	</object>
 	<object>
-		<name>CommonCommand.ВыполнитьОбменДаннымиИнтерактивно</name>
+		<name>CommonCommand.СинхронизироватьСДополнительнымиПараметрами</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -216,7 +216,7 @@
 		</right>
 	</object>
 	<object>
-		<name>CommonCommand.ВыполнитьОбменДанными</name>
+		<name>CommonCommand.Синхронизировать</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -262,7 +262,7 @@
 		</right>
 	</object>
 	<object>
-		<name>CommonCommand.ПерейтиВЖурналРегистрацииСобытийВыгрузкиДанных</name>
+		<name>CommonCommand.СобытияОтправки</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -473,7 +473,7 @@
 		</right>
 	</object>
 	<object>
-		<name>CommonForm.ОбменыДанными</name>
+		<name>CommonForm.СинхронизацияДанных</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -487,7 +487,7 @@
 		</right>
 	</object>
 	<object>
-		<name>CommonCommand.ОткрытьПравилаКонвертацииОбъектов</name>
+		<name>CommonCommand.ЗагрузитьПравилаКонвертацииОбъектов</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -569,7 +569,7 @@
 		</right>
 	</object>
 	<object>
-		<name>CommonCommand.ОткрытьРезультатыОбменаДанными</name>
+		<name>CommonCommand.ПредупрежденияПриСинхронизацииДанных</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -590,7 +590,7 @@
 		</right>
 	</object>
 	<object>
-		<name>CommonCommand.ОткрытьПравилаРегистрацииОбъектов</name>
+		<name>CommonCommand.ЗагрузитьПравилаРегистрацииОбъектов</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -618,7 +618,7 @@
 		</right>
 	</object>
 	<object>
-		<name>CommonCommand.ПерейтиВЖурналРегистрацииСобытийЗагрузкиДанных</name>
+		<name>CommonCommand.СобытияПолучения</name>
 		<right>
 			<name>View</name>
 			<value>true</value>

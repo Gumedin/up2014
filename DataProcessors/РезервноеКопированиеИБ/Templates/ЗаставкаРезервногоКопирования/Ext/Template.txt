@@ -1,17 +1,27 @@
-﻿<html>
+﻿<!DOCTYPE html>
+<html>
 <head>
-    <meta http-equiv="Content-Language" content="ru-ru">
-    <meta http-equiv="Content-Type" content="text/html; charset=unicode">
+    <meta http-equiv="Content-Type" content="application/hta; charset=UTF-16">
+    <meta http-equiv="x-ua-compatible" content="IE=EmulateIE7">
+    <hta:application id="oHTA"
+        border="none"
+        caption="no"
+        contextmenu="no"
+        selection="no"
+        icon="splash.ico"
+        innerborder="no"
+        navigable="yes"
+        showintaskbar="yes"
+        scroll="no"
+        version="1.0.0.0" />
     <title>Резервное копирование информационной базы...</title>
-    <hta:application id="oHTA" border="none" caption="no" contextmenu="no" icon="splash.ico"
-        innerborder="no" navigable="yes" showintaskbar="yes" scroll="no" version="1.0.0.0" />
     <script language="javascript" src="helpers.js"></script>
     <script language="javascript" src="main.js"></script>
     <script language="javascript">
 
         // Размер и положение окна по умолчанию.
-        var splashWindowWidth = 600;
-        var splashWindowHeight = 320;
+        var splashWindowWidth = 604;
+        var splashWindowHeight = 324;
         var splashWindowLeft = 200;
         var splashWindowTop = 100;
 
@@ -46,33 +56,27 @@
                     ret = initialize();
                     break;
                 case 2:
-                    setProgress("Завершение работы пользователей");
+                    setProgress("Создание резервной копии информационной базы");
                     break;
                 case 3:
-                    ret = disconnectAndBlockUsersHTA(); 
-                    break;
-                case 4:
-                    setProgress("Cоздание резервной копии информационной базы");
-                    break;
-                case 5:
                     ret = backupDB();
                     break;
-                case 6:
+                case 4:
                     setProgress("Ожидание завершения резервного копирования");
                     break;
-                case 7:
+                case 5:
                     ret = WaitUntilFinish();
                     break;
-                case 8:
+                case 6:
                     setProgress("Разрешение подключений новых соединений");
                     break;
-                case 9:
+                case 7:
                     ret = allowConnections();
                     break;
-                case 10:
+                case 8:
                     setProgress("Завершение");
                     break;
-                case 11:
+                case 9:
                     // Все готово.
                     finalize(true);
                     runEnterprise();
@@ -85,12 +89,12 @@
             return ret;
         }
 
-        // Выпонить процедуру резервного копирования
+        // Выполнить процедуру резервного копирования
         function main() {
             if (finish)
                 return;
 
-            if (ret > 0)   // Если предыдущий шаг завершился неудачно...
+            if (ret !== 0 && ret !== -1)   // Если предыдущий шаг завершился неудачно...
             {
                 if (errStep == 0) {
 
@@ -114,9 +118,9 @@
             doStep(step);
 
             // Передача управления IE и повторный вызов main через 1 секунду (достаточно для завершения COM-соединения).
-            // Если еще не все сеансы завершены, то ret = -1 и ждем 18 секунд до следующей проверки.
+            // Если еще не все сеансы завершены, то ret = -1 и ждем 5 секунд до следующей проверки.
             if (!finish)
-                setTimeout("main()", ret != -1 ? 1000 : 18 * 1000);
+                setTimeout("main()", ret != -1 ? 1000 : 5 * 1000);
         }
 
         function checkClose() {
@@ -133,13 +137,15 @@
                 oFileSystemObject.DeleteFile(thisFileDir + '\\splash.png');
                 oFileSystemObject.DeleteFile(thisFileDir + '\\splash.ico');
                 oFileSystemObject.DeleteFile(thisFileDir + '\\progress.gif');
+                oFileSystemObject.DeleteFile(thisFileDir + '\\splash.hta');
+                oFileSystemObject.DeleteFile(thisFileDir + '\\templog.txt');
             }
             catch (e) { }
         }
 
     </script>
 </head>
-<body onload="window.setTimeout('main()',10);" background="splash.png" style="border: 0px;">
+<body onload="window.setTimeout('main()',10);" style="border: 2px; background-image:url(splash.png); background-repeat: no-repeat; background-position: center center; background-attachment: fixed; background-color: #B3B3B3;">
     <div id="progressIcon" style="position: absolute; left: 10px; top: 65px;">
         <img src="progress.gif" border="0" />
     </div>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
 	<Title>
 		<v8:item>
 			<v8:lang>ru</v8:lang>
@@ -10,7 +10,6 @@
 	<AutoTitle>false</AutoTitle>
 	<Customizable>false</Customizable>
 	<CommandBarLocation>None</CommandBarLocation>
-	<VerticalScroll>useIfNecessary</VerticalScroll>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
 	<Events>
 		<Event name="ChoiceProcessing">ОбработкаВыбора</Event>
@@ -18,19 +17,25 @@
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
-		<UsualGroup name="Группа" id="19">
+		<UsualGroup name="ГруппаФайлы" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Файлы</v8:content>
+				</v8:item>
+			</Title>
 			<Group>Vertical</Group>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
-			<ExtendedTooltip name="ГруппаExtendedTooltip" id="47"/>
+			<ExtendedTooltip name="ГруппаФайлыРасширеннаяПодсказка" id="47"/>
 			<ChildItems>
 				<UsualGroup name="Заголовок" id="26">
-					<ToolTip>
+					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
 							<v8:content>Заголовок</v8:content>
 						</v8:item>
-					</ToolTip>
+					</Title>
 					<Group>Horizontal</Group>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
@@ -53,11 +58,18 @@
 					<Representation>Tree</Representation>
 					<CommandBarLocation>None</CommandBarLocation>
 					<SkipOnInput>false</SkipOnInput>
+					<Height>6</Height>
 					<Header>false</Header>
 					<AutoInsertNewRow>true</AutoInsertNewRow>
 					<EnableStartDrag>true</EnableStartDrag>
 					<EnableDrag>true</EnableDrag>
 					<DataPath>ДеревоФайлов</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дерево файлов</v8:content>
+						</v8:item>
+					</Title>
 					<SearchStringLocation>None</SearchStringLocation>
 					<ViewStatusLocation>None</ViewStatusLocation>
 					<SearchControlLocation>None</SearchControlLocation>
@@ -90,6 +102,12 @@
 					</SearchControlAddition>
 					<ChildItems>
 						<ColumnGroup name="КартинкаИНаименование" id="40">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Картинка и наименование</v8:content>
+								</v8:item>
+							</Title>
 							<Group>InCell</Group>
 							<ExtendedTooltip name="КартинкаИНаименованиеExtendedTooltip" id="51"/>
 							<ChildItems>
@@ -156,12 +174,6 @@
 					<v8:content>Реквизиты файлов</v8:content>
 				</v8:item>
 			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Реквизиты файлов</v8:content>
-				</v8:item>
-			</ToolTip>
 			<Group>Vertical</Group>
 			<Representation>NormalSeparation</Representation>
 			<ShowTitle>false</ShowTitle>
@@ -176,6 +188,8 @@
 						</v8:item>
 					</Title>
 					<FooterHorizontalAlign>Left</FooterHorizontalAlign>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<Height>2</Height>
 					<MultiLine>true</MultiLine>
 					<BorderColor>style:BorderColor</BorderColor>
 					<ContextMenu name="ОписаниеКонтекстноеМеню" id="9"/>
@@ -195,21 +209,16 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Группа кодировка</v8:content>
+					<v8:content>Кодировка</v8:content>
 				</v8:item>
 			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Группа кодировка</v8:content>
-				</v8:item>
-			</ToolTip>
 			<Group>Horizontal</Group>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="ГруппаКодировкаExtendedTooltip" id="60"/>
 			<ChildItems>
 				<LabelDecoration name="ДекорацияКодировка" id="44">
+					<AutoMaxWidth>false</AutoMaxWidth>
 					<Title formatted="false">
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -227,6 +236,12 @@
 			</ChildItems>
 		</UsualGroup>
 		<CommandBar name="ОсновнаяКоманднаяПанель" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Основная командная панель</v8:content>
+				</v8:item>
+			</Title>
 			<HorizontalLocation>Right</HorizontalLocation>
 			<CommandSource>Form</CommandSource>
 			<ExtendedTooltip name="ОсновнаяКоманднаяПанельExtendedTooltip" id="63"/>
@@ -455,6 +470,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ЗагрузитьФайлы</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ВыбратьКодировку" id="2">
 			<Title>
@@ -470,6 +486,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ВыбратьКодировку</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 	</Commands>
 </Form>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
 	<Title>
 		<v8:item>
 			<v8:lang>ru</v8:lang>
@@ -9,7 +9,6 @@
 	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
 	<AutoTitle>false</AutoTitle>
 	<CommandBarLocation>Bottom</CommandBarLocation>
-	<VerticalScroll>useIfNecessary</VerticalScroll>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<HorizontalAlign>Right</HorizontalAlign>
 		<Autofill>false</Autofill>
@@ -31,16 +30,6 @@
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
-		<CheckBoxField name="ОдинПроксиДляВсехПротоколов" id="17">
-			<DataPath>ОдинПроксиДляВсехПротоколов</DataPath>
-			<TitleLocation>Right</TitleLocation>
-			<CheckBoxType>Auto</CheckBoxType>
-			<ContextMenu name="ОдинПроксиДляВсехПротоколовКонтекстноеМеню" id="18"/>
-			<ExtendedTooltip name="ОдинПроксиДляВсехПротоколовExtendedTooltip" id="32"/>
-			<Events>
-				<Event name="OnChange">ОдинПроксиДляВсехПротоколовПриИзменении</Event>
-			</Events>
-		</CheckBoxField>
 		<UsualGroup name="ГруппаПроксиСерверы" id="16">
 			<Title>
 				<v8:item>
@@ -48,14 +37,8 @@
 					<v8:content>Прокси серверы</v8:content>
 				</v8:item>
 			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Группа прокси серверы</v8:content>
-				</v8:item>
-			</ToolTip>
 			<Group>Vertical</Group>
-			<Representation>StrongSeparation</Representation>
+			<Representation>NormalSeparation</Representation>
 			<ChildItemsWidth>LeftWide</ChildItemsWidth>
 			<ExtendedTooltip name="ГруппаПроксиСерверыExtendedTooltip" id="33"/>
 			<ChildItems>
@@ -66,12 +49,6 @@
 							<v8:content>HTTP</v8:content>
 						</v8:item>
 					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Группа HTTP</v8:content>
-						</v8:item>
-					</ToolTip>
 					<Group>Horizontal</Group>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
@@ -87,6 +64,12 @@
 						</InputField>
 						<InputField name="ПортHTTP" id="6">
 							<DataPath>ПортHTTP</DataPath>
+							<EditFormat>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧН=; ЧГ=</v8:content>
+								</v8:item>
+							</EditFormat>
 							<MinValue xsi:type="xs:decimal">0</MinValue>
 							<MaxValue xsi:type="xs:decimal">65535</MaxValue>
 							<ContextMenu name="ПортHTTPКонтекстноеМеню" id="7"/>
@@ -101,12 +84,6 @@
 							<v8:content>HTTP</v8:content>
 						</v8:item>
 					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Группа HTTP</v8:content>
-						</v8:item>
-					</ToolTip>
 					<Group>Horizontal</Group>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
@@ -122,6 +99,12 @@
 						</InputField>
 						<InputField name="ПортHTTPS" id="10">
 							<DataPath>ПортHTTPS</DataPath>
+							<EditFormat>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧН=; ЧГ=</v8:content>
+								</v8:item>
+							</EditFormat>
 							<MinValue xsi:type="xs:decimal">0</MinValue>
 							<MaxValue xsi:type="xs:decimal">65535</MaxValue>
 							<ContextMenu name="ПортHTTPSКонтекстноеМеню" id="11"/>
@@ -157,6 +140,12 @@
 						</InputField>
 						<InputField name="ПортFTP" id="14">
 							<DataPath>ПортFTP</DataPath>
+							<EditFormat>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧН=; ЧГ=</v8:content>
+								</v8:item>
+							</EditFormat>
 							<MinValue xsi:type="xs:decimal">0</MinValue>
 							<MaxValue xsi:type="xs:decimal">65535</MaxValue>
 							<ContextMenu name="ПортFTPКонтекстноеМеню" id="15"/>
@@ -166,6 +155,22 @@
 				</UsualGroup>
 			</ChildItems>
 		</UsualGroup>
+		<CheckBoxField name="ОдинПроксиДляВсехПротоколов" id="17">
+			<DataPath>ОдинПроксиДляВсехПротоколов</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Один прокси-сервер для всех протоколов</v8:content>
+				</v8:item>
+			</Title>
+			<TitleLocation>Right</TitleLocation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ОдинПроксиДляВсехПротоколовКонтекстноеМеню" id="18"/>
+			<ExtendedTooltip name="ОдинПроксиДляВсехПротоколовExtendedTooltip" id="32"/>
+			<Events>
+				<Event name="OnChange">ОдинПроксиДляВсехПротоколовПриИзменении</Event>
+			</Events>
+		</CheckBoxField>
 		<UsualGroup name="ГруппаАдресовИсключений" id="19">
 			<Title>
 				<v8:item>
@@ -173,14 +178,8 @@
 					<v8:content>Не использовать прокси-сервер для адресов</v8:content>
 				</v8:item>
 			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Группа адресов исключений</v8:content>
-				</v8:item>
-			</ToolTip>
 			<Group>Vertical</Group>
-			<Representation>StrongSeparation</Representation>
+			<Representation>NormalSeparation</Representation>
 			<ExtendedTooltip name="ГруппаАдресовИсключенийExtendedTooltip" id="43"/>
 			<ChildItems>
 				<Table name="АдресаИсключений" id="20">
@@ -190,9 +189,12 @@
 					<EnableStartDrag>true</EnableStartDrag>
 					<EnableDrag>true</EnableDrag>
 					<DataPath>АдресаИсключений</DataPath>
-					<SearchStringLocation>None</SearchStringLocation>
-					<ViewStatusLocation>None</ViewStatusLocation>
-					<SearchControlLocation>None</SearchControlLocation>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Адреса исключений</v8:content>
+						</v8:item>
+					</Title>
 					<RowFilter xsi:nil="true"/>
 					<ContextMenu name="АдресаИсключенийКонтекстноеМеню" id="21"/>
 					<AutoCommandBar name="АдресаИсключенийКоманднаяПанель" id="22"/>
@@ -231,6 +233,7 @@
 					</ChildItems>
 				</Table>
 				<LabelDecoration name="ДекорацияПредупреждениеДляСервера" id="27">
+					<AutoMaxWidth>false</AutoMaxWidth>
 					<TextColor>style:ПоясняющийТекст</TextColor>
 					<Title formatted="false">
 						<v8:item>
@@ -433,6 +436,8 @@
 				</v8:item>
 			</ToolTip>
 			<Action>КнопкаОК</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 	</Commands>
 	<Parameters>

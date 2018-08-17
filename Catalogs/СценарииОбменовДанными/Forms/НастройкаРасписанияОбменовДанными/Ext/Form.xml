@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
 	<AutoTitle>false</AutoTitle>
-	<VerticalScroll>useIfNecessary</VerticalScroll>
 	<CommandSet>
 		<ExcludedCommand>CancelSearch</ExcludedCommand>
 		<ExcludedCommand>Change</ExcludedCommand>
@@ -77,15 +76,9 @@
 				<Title>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Группа кнопок</v8:content>
+						<v8:content>Кнопок</v8:content>
 					</v8:item>
 				</Title>
-				<ToolTip>
-					<v8:item>
-						<v8:lang>ru</v8:lang>
-						<v8:content>Группа кнопок</v8:content>
-					</v8:item>
-				</ToolTip>
 				<ExtendedTooltip name="ГруппаКнопокExtendedTooltip" id="42"/>
 				<ChildItems>
 					<Button name="ФормаВключитьОтключитьРегламентноеЗадание" id="15">
@@ -118,9 +111,12 @@
 			<EnableStartDrag>true</EnableStartDrag>
 			<DataPath>Список</DataPath>
 			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
-			<SearchStringLocation>None</SearchStringLocation>
-			<ViewStatusLocation>None</ViewStatusLocation>
-			<SearchControlLocation>None</SearchControlLocation>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список</v8:content>
+				</v8:item>
+			</Title>
 			<AutoRefresh>false</AutoRefresh>
 			<AutoRefreshPeriod>60</AutoRefreshPeriod>
 			<Period>
@@ -140,15 +136,9 @@
 						<Title>
 							<v8:item>
 								<v8:lang>ru</v8:lang>
-								<v8:content>Группа кнопок включения загрузки выгрузки данных</v8:content>
+								<v8:content>Кнопок включения загрузки выгрузки данных</v8:content>
 							</v8:item>
 						</Title>
-						<ToolTip>
-							<v8:item>
-								<v8:lang>ru</v8:lang>
-								<v8:content>Группа кнопок включения загрузки выгрузки данных</v8:content>
-							</v8:item>
-						</ToolTip>
 						<ExtendedTooltip name="ГруппаКнопокВключенияЗагрузкиВыгрузкиДанныхExtendedTooltip" id="45"/>
 						<ChildItems>
 							<Button name="СписокКонтекстноеМенюВключитьОтключитьЗагрузку" id="27">
@@ -170,12 +160,6 @@
 								<v8:content>Список контекстное меню группа кнопок</v8:content>
 							</v8:item>
 						</Title>
-						<ToolTip>
-							<v8:item>
-								<v8:lang>ru</v8:lang>
-								<v8:content>Список контекстное меню группа кнопок</v8:content>
-							</v8:item>
-						</ToolTip>
 						<ExtendedTooltip name="СписокКонтекстноеМенюГруппаКнопокExtendedTooltip" id="48"/>
 						<ChildItems>
 							<Button name="СписокКонтекстноеМенюВключитьОтключитьРегламентноеЗадание" id="16">
@@ -201,29 +185,29 @@
 				<Autofill>false</Autofill>
 			</AutoCommandBar>
 			<ExtendedTooltip name="СписокExtendedTooltip" id="52"/>
-			<SearchStringAddition name="СписокСтрокаПоиска" id="57">
+			<SearchStringAddition name="СписокSearchString" id="57">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>SearchStringRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="58"/>
-				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="59"/>
+				<ContextMenu name="СписокSearchStringContextMenu" id="58"/>
+				<ExtendedTooltip name="СписокSearchStringExtendedTooltip" id="59"/>
 			</SearchStringAddition>
-			<ViewStatusAddition name="СписокСостояниеПросмотра" id="60">
+			<ViewStatusAddition name="СписокViewStatus" id="60">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>ViewStatusRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="61"/>
-				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="62"/>
+				<ContextMenu name="СписокViewStatusContextMenu" id="61"/>
+				<ExtendedTooltip name="СписокViewStatusExtendedTooltip" id="62"/>
 			</ViewStatusAddition>
-			<SearchControlAddition name="СписокУправлениеПоиском" id="63">
+			<SearchControlAddition name="СписокSearchControl" id="63">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>SearchControl</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="64"/>
-				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="65"/>
+				<ContextMenu name="СписокSearchControlContextMenu" id="64"/>
+				<ExtendedTooltip name="СписокSearchControlExtendedTooltip" id="65"/>
 			</SearchControlAddition>
 			<Events>
 				<Event name="Selection">СписокВыбор</Event>
@@ -287,6 +271,7 @@
 			<ReadOnly>true</ReadOnly>
 			<AutoCellHeight>true</AutoCellHeight>
 			<ShowInHeader>false</ShowInHeader>
+			<AutoMaxWidth>false</AutoMaxWidth>
 			<TextColor>style:ПоясняющийТекст</TextColor>
 			<ContextMenu name="КомментарийКонтекстноеМеню" id="35"/>
 			<ExtendedTooltip name="КомментарийExtendedTooltip" id="56"/>
@@ -299,7 +284,6 @@
 			</Type>
 			<MainAttribute>true</MainAttribute>
 			<UseAlways>
-				<Field>~Список.ФлагНестандартногоИспользования</Field>
 				<Field>Список.Ref</Field>
 				<Field>Список.ИспользоватьРегламентноеЗадание</Field>
 				<Field>Список.ФлагИспользования</Field>
@@ -310,6 +294,38 @@
 				<ManualQuery>true</ManualQuery>
 				<DynamicDataRead>true</DynamicDataRead>
 				<QueryText>ВЫБРАТЬ
+    СценарииОбменовДаннымиНастройкиОбмена.Ссылка КАК Ссылка,
+    СценарииОбменовДаннымиНастройкиОбмена.Ссылка.ИспользоватьРегламентноеЗадание КАК ИспользоватьРегламентноеЗадание,
+    СценарииОбменовДаннымиНастройкиОбмена.Ссылка.Наименование КАК Наименование,
+    МАКСИМУМ(ВЫБОР
+            КОГДА СценарииОбменовДаннымиНастройкиОбмена.УзелИнформационнойБазы = &amp;УзелИнформационнойБазы
+                ТОГДА ИСТИНА
+            ИНАЧЕ ЛОЖЬ
+        КОНЕЦ) КАК ФлагИспользования,
+    МАКСИМУМ(ВЫБОР
+            КОГДА СценарииОбменовДаннымиНастройкиОбмена.УзелИнформационнойБазы = &amp;УзелИнформационнойБазы
+                    И СценарииОбменовДаннымиНастройкиОбмена.ВыполняемоеДействие = ЗНАЧЕНИЕ(Перечисление.ДействияПриОбмене.ЗагрузкаДанных)
+                ТОГДА ИСТИНА
+            ИНАЧЕ ЛОЖЬ
+        КОНЕЦ) КАК ФлагИспользованияЗагрузки,
+    МАКСИМУМ(ВЫБОР
+            КОГДА СценарииОбменовДаннымиНастройкиОбмена.УзелИнформационнойБазы = &amp;УзелИнформационнойБазы
+                    И СценарииОбменовДаннымиНастройкиОбмена.ВыполняемоеДействие = ЗНАЧЕНИЕ(Перечисление.ДействияПриОбмене.ВыгрузкаДанных)
+                ТОГДА ИСТИНА
+            ИНАЧЕ ЛОЖЬ
+        КОНЕЦ) КАК ФлагИспользованияВыгрузки
+ПОМЕСТИТЬ ВложенныйЗапрос
+ИЗ
+    Справочник.СценарииОбменовДанными.НастройкиОбмена КАК СценарииОбменовДаннымиНастройкиОбмена
+ГДЕ
+    НЕ СценарииОбменовДаннымиНастройкиОбмена.Ссылка.ПометкаУдаления
+
+СГРУППИРОВАТЬ ПО
+    СценарииОбменовДаннымиНастройкиОбмена.Ссылка,
+    СценарииОбменовДаннымиНастройкиОбмена.Ссылка.ИспользоватьРегламентноеЗадание,
+    СценарииОбменовДаннымиНастройкиОбмена.Ссылка.Наименование
+;
+ВЫБРАТЬ
 	СценарииОбменовДанными.Ссылка,
 	СценарииОбменовДанными.ИспользоватьРегламентноеЗадание,
 	СценарииОбменовДанными.Наименование,
@@ -319,37 +335,8 @@
 	СценарииОбменовДанными.Комментарий
 ИЗ
 	Справочник.СценарииОбменовДанными КАК СценарииОбменовДанными
-		ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
-			СценарииОбменовДаннымиНастройкиОбмена.Ссылка КАК Ссылка,
-			СценарииОбменовДаннымиНастройкиОбмена.Ссылка.ИспользоватьРегламентноеЗадание КАК ИспользоватьРегламентноеЗадание,
-			СценарииОбменовДаннымиНастройкиОбмена.Ссылка.Наименование КАК Наименование,
-			МАКСИМУМ(ВЫБОР
-					КОГДА СценарииОбменовДаннымиНастройкиОбмена.УзелИнформационнойБазы = &amp;УзелИнформационнойБазы
-						ТОГДА ИСТИНА
-					ИНАЧЕ ЛОЖЬ
-				КОНЕЦ) КАК ФлагИспользования,
-			МАКСИМУМ(ВЫБОР
-					КОГДА СценарииОбменовДаннымиНастройкиОбмена.УзелИнформационнойБазы = &amp;УзелИнформационнойБазы
-							И СценарииОбменовДаннымиНастройкиОбмена.ВыполняемоеДействие = ЗНАЧЕНИЕ(Перечисление.ДействияПриОбмене.ЗагрузкаДанных)
-						ТОГДА ИСТИНА
-					ИНАЧЕ ЛОЖЬ
-				КОНЕЦ) КАК ФлагИспользованияЗагрузки,
-			МАКСИМУМ(ВЫБОР
-					КОГДА СценарииОбменовДаннымиНастройкиОбмена.УзелИнформационнойБазы = &amp;УзелИнформационнойБазы
-							И СценарииОбменовДаннымиНастройкиОбмена.ВыполняемоеДействие = ЗНАЧЕНИЕ(Перечисление.ДействияПриОбмене.ВыгрузкаДанных)
-						ТОГДА ИСТИНА
-					ИНАЧЕ ЛОЖЬ
-				КОНЕЦ) КАК ФлагИспользованияВыгрузки
-		ИЗ
-			Справочник.СценарииОбменовДанными.НастройкиОбмена КАК СценарииОбменовДаннымиНастройкиОбмена
-		ГДЕ
-			НЕ СценарииОбменовДаннымиНастройкиОбмена.Ссылка.ПометкаУдаления
-		
-		СГРУППИРОВАТЬ ПО
-			СценарииОбменовДаннымиНастройкиОбмена.Ссылка,
-			СценарииОбменовДаннымиНастройкиОбмена.Ссылка.ИспользоватьРегламентноеЗадание,
-			СценарииОбменовДаннымиНастройкиОбмена.Ссылка.Наименование) КАК ВложенныйЗапрос
-		ПО (ВложенныйЗапрос.Ссылка = СценарииОбменовДанными.Ссылка)
+		ЛЕВОЕ СОЕДИНЕНИЕ ВложенныйЗапрос КАК ВложенныйЗапрос
+		ПО ВложенныйЗапрос.Ссылка = СценарииОбменовДанными.Ссылка
 ГДЕ
 	НЕ СценарииОбменовДанными.ПометкаУдаления
 </QueryText>
@@ -372,38 +359,6 @@
 						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
 					</dcsset:order>
 					<dcsset:conditionalAppearance>
-						<dcsset:item>
-							<dcsset:selection/>
-							<dcsset:filter>
-								<dcsset:item xsi:type="dcsset:FilterItemComparison">
-									<dcsset:left xsi:type="dcscor:Field">ИспользоватьРегламентноеЗадание</dcsset:left>
-									<dcsset:comparisonType>Equal</dcsset:comparisonType>
-									<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
-								</dcsset:item>
-							</dcsset:filter>
-							<dcsset:appearance>
-								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-									<dcscor:parameter>Шрифт</dcscor:parameter>
-									<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
-								</dcscor:item>
-							</dcsset:appearance>
-						</dcsset:item>
-						<dcsset:item>
-							<dcsset:selection/>
-							<dcsset:filter>
-								<dcsset:item xsi:type="dcsset:FilterItemComparison">
-									<dcsset:left xsi:type="dcscor:Field">ФлагИспользования</dcsset:left>
-									<dcsset:comparisonType>Equal</dcsset:comparisonType>
-									<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
-								</dcsset:item>
-							</dcsset:filter>
-							<dcsset:appearance>
-								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-									<dcscor:parameter>ЦветФона</dcscor:parameter>
-									<dcscor:value xsi:type="v8ui:Color">web:Azure</dcscor:value>
-								</dcscor:item>
-							</dcsset:appearance>
-						</dcsset:item>
 						<dcsset:viewMode>Normal</dcsset:viewMode>
 						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
 					</dcsset:conditionalAppearance>
@@ -433,6 +388,7 @@
 			</Picture>
 			<Action>Создать</Action>
 			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ИзменитьСценарийОбменаДанными" id="2">
 			<Title>
@@ -452,6 +408,7 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>ИзменитьСценарийОбменаДанными</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ВключитьОтключитьРегламентноеЗадание" id="3">
 			<Title>
@@ -471,6 +428,7 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>ВключитьОтключитьРегламентноеЗадание</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ВключитьОтключитьВыгрузку" id="5">
 			<Title>
@@ -486,6 +444,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ВключитьОтключитьВыгрузку</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ВключитьОтключитьЗагрузку" id="6">
 			<Title>
@@ -501,6 +460,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ВключитьОтключитьЗагрузку</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ВключитьОтключитьЗагрузкуВыгрузку" id="4">
 			<Title>
@@ -516,6 +476,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ВключитьОтключитьЗагрузкуВыгрузку</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ВыполнитьСценарий" id="7">
 			<Title>
@@ -537,6 +498,7 @@
 			</Picture>
 			<Action>ВыполнитьСценарий</Action>
 			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 	</Commands>
 	<Parameters>

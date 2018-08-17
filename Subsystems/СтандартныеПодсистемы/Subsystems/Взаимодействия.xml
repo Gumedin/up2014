@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5">
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
 	<Subsystem uuid="fe9a1d1a-19c0-499f-8e1b-09cadabe882f">
 		<Properties>
 			<Name>Взаимодействия</Name>
@@ -18,7 +18,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ВзаимодействияКлиент</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ВзаимодействияКлиентПереопределяемый</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ВзаимодействияКлиентСервер</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ВзаимодействияКлиентСерверПовтИспПереопределяемый</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ВзаимодействияКлиентСерверПереопределяемый</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ВзаимодействияПереопределяемый</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.Взаимодействия</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.УправлениеЭлектроннойПочтой</xr:Item>
@@ -56,12 +56,8 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ЭлектронноеПисьмоВходящееПрисоединенныеФайлы</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ЗапланированноеВзаимодействиеПрисоединенныеФайлы</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ТелефонныйЗвонокПрисоединенныеФайлы</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.ВыполнитьДействияПередЗаписьюПрисоединенногоФайлаВзаимодействия</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.ВыполнитьДействияПередУдалениемПрисоединенногоФайлаВзаимодействия</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.ВыполнитьДействияПриЗаписиПрисоединенногоФайлаВзаимодействия</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.УстановитьПометкуУдаленияПрисоединенныхФайловВзаимодействия</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.УстановитьПометкуУдаленияПрисоединенныхФайловДокументовВзаимодействия</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ВзаимодействияВызовСервера</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Enum.СпособыРедактированияЭлектронныхПисем</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.НастройкиУчетныхЗаписейЭлектроннойПочты</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.УведомленияОПрочтении</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Enum.ПорядокОтветовНаЗапросыУведомленийОПрочтении</xr:Item>
@@ -72,12 +68,10 @@
 				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.СоздатьПредопределенныеПапкиЭлектронныхПисем</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ВзаимодействияСобытия</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ПравилаОбработкиЭлектроннойПочты</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.ВзаимодействияЗаполнитьЗначениеРеквизитаУпорядочивания</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Constant.ИспользоватьПочтовыйКлиент</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Constant.ИспользоватьПрочиеВзаимодействия</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ИспользоватьПочтовыйКлиент</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ИспользоватьПрочиеВзаимодействия</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.ВзаимодействияСброситьЗначениеРеквизитаУпорядочивания</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.СнятьПризнакРассмотреноУВзаимодействия</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ПереместитьВПапкуПисем</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ПереместитьВЗакладкиВзаимодействия</xr:Item>
@@ -101,13 +95,23 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.СообщениеSMSПрисоединенныеФайлы</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Enum.СостоянияСообщенияSMS</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Enum.СостоянияДокументаСообщениеSMS</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Constant.АдресПубликацииИнформационнойБазыВИнтернете</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.КоличествоРассмотрено</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.СтроковыеКонтактыВзаимодействий</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.СостоянияКонтактовВзаимодействий</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.СостоянияПапокПисем</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.СостоянияПредметовВзаимодействий</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.КонтактыВзаимодействий</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.ПолучениеПредставленияВзаимодействия</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.ПолучениеПолейПредставленияВзаимодействия</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DefinedType.КонтактВзаимодействия</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DefinedType.ПредметВзаимодействия</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.НепринятыеКОбработкеПочтовымСерверомИсходящиеПисьма</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ВнешняяСсылкаНаОбъектИнформационнойБазы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ЗаблокированныеДляПолученияУчетныеЗаписи</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ДатыПоследнейЗагрузкиПочтовыхСообщений</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.ЗаполнитьНаборыЗначенийДоступаТабличныхЧастейДокументовВзаимодействия</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ПереслатьПисьмоКакВложение</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ВзаимодействияКлиентСерверСлужебныйПовтИсп</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects/>

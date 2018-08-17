@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
 	<Title>
 		<v8:item>
 			<v8:lang>ru</v8:lang>
@@ -7,7 +7,6 @@
 		</v8:item>
 	</Title>
 	<AutoTitle>false</AutoTitle>
-	<VerticalScroll>useIfNecessary</VerticalScroll>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<ChildItems>
 			<Button name="ДеревоУзловОбменаИзменитьРегистрацию" id="33">
@@ -49,12 +48,6 @@
 						<v8:content>Дополнительно</v8:content>
 					</v8:item>
 				</Title>
-				<ToolTip>
-					<v8:item>
-						<v8:lang>ru</v8:lang>
-						<v8:content>Группа2</v8:content>
-					</v8:item>
-				</ToolTip>
 				<ExtendedTooltip name="Группа2ExtendedTooltip" id="62"/>
 				<ChildItems>
 					<Button name="ФормаПеречитатьДеревоУзлов" id="49">
@@ -126,12 +119,15 @@
 				<ExcludedCommand>SortListDesc</ExcludedCommand>
 				<ExcludedCommand>Tree</ExcludedCommand>
 			</CommandSet>
-			<SearchStringLocation>None</SearchStringLocation>
-			<ViewStatusLocation>None</ViewStatusLocation>
-			<SearchControlLocation>None</SearchControlLocation>
 			<ContextMenu name="ДеревоУзловОбменаКонтекстноеМеню" id="2">
 				<ChildItems>
 					<ButtonGroup name="ДеревоУзловОбменаКонтекстноеМенюГруппа1" id="40">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Дерево узлов обмена контекстное меню группа 1</v8:content>
+							</v8:item>
+						</Title>
 						<ExtendedTooltip name="ДеревоУзловОбменаКонтекстноеМенюГруппа1ExtendedTooltip" id="65"/>
 						<ChildItems>
 							<Button name="ДеревоУзловОбменаКонтекстноеМенюПометитьВсеУзлы" id="41">
@@ -175,6 +171,12 @@
 						<ExtendedTooltip name="ДеревоУзловОбменаКонтекстноеМенюОткрытьФормуРедактированияОтУзлаExtendedTooltip" id="69"/>
 					</Button>
 					<ButtonGroup name="ДеревоУзловОбменаКонтекстноеМенюГруппа2" id="44">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Дерево узлов обмена контекстное меню группа 2</v8:content>
+							</v8:item>
+						</Title>
 						<ExtendedTooltip name="ДеревоУзловОбменаКонтекстноеМенюГруппа2ExtendedTooltip" id="70"/>
 						<ChildItems>
 							<Button name="ДеревоУзловОбменаКонтекстноеМенюВывестиСписок" id="45">
@@ -230,12 +232,6 @@
 							<v8:content>Описание узла</v8:content>
 						</v8:item>
 					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Описание узла</v8:content>
-						</v8:item>
-					</ToolTip>
 					<Group>InCell</Group>
 					<ExtendedTooltip name="ДеревоУзловОбменаПометкаНаименованиеExtendedTooltip" id="74"/>
 					<ChildItems>
@@ -329,15 +325,9 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Группа скрытых данных</v8:content>
+					<v8:content>Скрытых данных</v8:content>
 				</v8:item>
 			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Группа скрытых данных</v8:content>
-				</v8:item>
-			</ToolTip>
 			<Group>Vertical</Group>
 			<Representation>None</Representation>
 			<ExtendedTooltip name="ГруппаСкрытыхДанныхExtendedTooltip" id="81"/>
@@ -549,6 +539,7 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>ИзменитьРегистрацию</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ПометитьВсеУзлы" id="2">
 			<Title>
@@ -568,6 +559,7 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>ПометитьВсеУзлы</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="СнятьПометкуВсемУзлам" id="3">
 			<Title>
@@ -587,6 +579,7 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>СнятьПометкуВсемУзлам</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ИнвертироватьПометкуВсемУзлам" id="4">
 			<Title>
@@ -602,6 +595,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ИнвертироватьПометкуВсемУзлам</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ОткрытьФормуРедактированияОтУзла" id="5">
 			<Title>
@@ -617,6 +611,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ОткрытьФормуРедактированияОтУзла</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ПеречитатьДеревоУзлов" id="6">
 			<Title>
@@ -636,6 +631,7 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>ПеречитатьДеревоУзлов</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ОткрытьФормуНастроек" id="7">
 			<Title>
@@ -655,6 +651,7 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>ОткрытьФормуНастроек</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 	</Commands>
 	<Parameters>

@@ -1,15 +1,8 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Rights xmlns="http://v8.1c.ru/8.2/roles" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Rights" version="2.5">
+<Rights xmlns="http://v8.1c.ru/8.2/roles" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Rights" version="2.6">
 	<setForNewObjects>false</setForNewObjects>
 	<setForAttributesByDefault>true</setForAttributesByDefault>
 	<independentRightsOfChildObjects>false</independentRightsOfChildObjects>
-	<object>
-		<name>InformationRegister.АдресныйКлассификатор.Command.АдресныйКлассификатор</name>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-	</object>
 	<object>
 		<name>Constant.МаксимальнаяДлительностьВыполненияИсполняющегоФоновогоЗадания</name>
 		<right>
@@ -114,7 +107,30 @@
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.РазрешенныеПриложенияОперационнойСистемы</name>
+		<name>InformationRegister.СлужебныеАдресныеСведения</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>TotalsControl</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ЗамерыКомментарииСтатистики</name>
 		<right>
 			<name>Read</name>
 			<value>true</value>
@@ -184,6 +200,53 @@
 		</right>
 	</object>
 	<object>
+		<name>Catalog.ПрофилиКлючевыхОпераций</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Insert</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Delete</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveInsert</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveSetDeletionMark</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveClearDeletionMark</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveDeleteMarked</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InputByString</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Constant.ИспользоватьДополнительныеОтчетыИОбработки</name>
 		<right>
 			<name>Read</name>
@@ -199,6 +262,29 @@
 		</right>
 		<right>
 			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.СтатистикаКонфигурации</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>TotalsControl</name>
 			<value>true</value>
 		</right>
 	</object>
@@ -250,6 +336,25 @@
 		</right>
 	</object>
 	<object>
+		<name>Constant.ПериодХраненияЗамеров</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>CommonForm.УстановкаВедущейКонечнойТочки</name>
 		<right>
 			<name>View</name>
@@ -294,13 +399,9 @@
 		</right>
 	</object>
 	<object>
-		<name>Catalog.СообщенияОбластейДанных</name>
+		<name>InformationRegister.ДомаЗданияСтроения</name>
 		<right>
 			<name>Read</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Insert</name>
 			<value>true</value>
 		</right>
 		<right>
@@ -308,15 +409,7 @@
 			<value>true</value>
 		</right>
 		<right>
-			<name>Delete</name>
-			<value>true</value>
-		</right>
-		<right>
 			<name>View</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveInsert</name>
 			<value>true</value>
 		</right>
 		<right>
@@ -324,19 +417,7 @@
 			<value>true</value>
 		</right>
 		<right>
-			<name>InteractiveSetDeletionMark</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveClearDeletionMark</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveDeleteMarked</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InputByString</name>
+			<name>TotalsControl</name>
 			<value>true</value>
 		</right>
 	</object>
@@ -394,50 +475,6 @@
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.СоответствияОбъектовИнформационныхБаз.StandardAttribute.Active</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.СоответствияОбъектовИнформационныхБаз.StandardAttribute.LineNumber</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.СоответствияОбъектовИнформационныхБаз.StandardAttribute.Recorder</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.СоответствияОбъектовИнформационныхБаз.StandardAttribute.Period</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
 		<name>Constant.ИспользоватьСинхронизациюДанныхВЛокальномРежиме</name>
 		<right>
 			<name>Read</name>
@@ -457,7 +494,7 @@
 		</right>
 	</object>
 	<object>
-		<name>Constant.ВерсияКлассификатораБанковРФ</name>
+		<name>Constant.ВерсияКлассификатораБанков</name>
 		<right>
 			<name>Read</name>
 			<value>true</value>
@@ -506,6 +543,25 @@
 		</right>
 	</object>
 	<object>
+		<name>Constant.ИспользоватьАльтернативныйСерверДляЗагрузкиКлассификатораБанков</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Constant.ПрофильБезопасностиИнформационнойБазы</name>
 		<right>
 			<name>Read</name>
@@ -536,20 +592,43 @@
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.СоответствияОбъектовИнформационныхБаз.Dimension.УникальныйИдентификаторИсточника</name>
+		<name>CommonForm.НастройкаДоступаКСервисуMorpher</name>
 		<right>
 			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
+			<value>true</value>
 		</right>
 	</object>
 	<object>
-		<name>CommonCommand.ДополнительныеПечатныеФормыОбъекта</name>
+		<name>Report.ОценкаПроизводительности</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
 		<right>
 			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.УдалитьЗамерыВремениТехнологические</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>TotalsControl</name>
 			<value>true</value>
 		</right>
 	</object>
@@ -573,7 +652,7 @@
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.РежимыПодключенияВнешнихМодулей</name>
+		<name>InformationRegister.РазрешенияНаИспользованиеВнешнихРесурсов</name>
 		<right>
 			<name>Read</name>
 			<value>true</value>
@@ -596,9 +675,25 @@
 		</right>
 	</object>
 	<object>
-		<name>Catalog.КлассификаторБанковРФ.Command.КлассификаторБанковРФ</name>
+		<name>InformationRegister.РежимыПодключенияВнешнихМодулей</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
 		<right>
 			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>TotalsControl</name>
 			<value>true</value>
 		</right>
 	</object>
@@ -711,59 +806,6 @@
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.СоответствияОбъектовИнформационныхБаз.Dimension.УникальныйИдентификаторПриемника</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Constant.АдресДляВосстановленияПароляУчетнойЗаписи</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Update</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.АдресныеСокращения</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Update</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>TotalsControl</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
 		<name>Catalog.СценарииОбменовДанными</name>
 		<right>
 			<name>Read</name>
@@ -817,15 +859,7 @@
 			<value>true</value>
 		</right>
 		<right>
-			<name>Update</name>
-			<value>true</value>
-		</right>
-		<right>
 			<name>View</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Edit</name>
 			<value>true</value>
 		</right>
 	</object>
@@ -896,7 +930,7 @@
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.АдресныйКлассификатор</name>
+		<name>InformationRegister.УдалитьАдресныйКлассификатор</name>
 		<right>
 			<name>Read</name>
 			<value>true</value>
@@ -945,7 +979,26 @@
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.НастройкиТранспортаОбменаОбластейДанных</name>
+		<name>Constant.УдалитьЛогинДоступаКСервисуMorpher</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ПричиныИзмененияАдресныхСведений</name>
 		<right>
 			<name>Read</name>
 			<value>true</value>
@@ -1021,7 +1074,7 @@
 		</right>
 	</object>
 	<object>
-		<name>Constant.ПарольСлужебногоПользователяМенеджераСервиса</name>
+		<name>Constant.УдалитьПарольСлужебногоПользователяМенеджераСервиса</name>
 		<right>
 			<name>Read</name>
 			<value>true</value>
@@ -1274,25 +1327,6 @@
 		</right>
 	</object>
 	<object>
-		<name>Constant.ИспользоватьАвтономнуюРаботуВМоделиСервиса</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Update</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
 		<name>InformationRegister.ОбластиДанных</name>
 		<right>
 			<name>Read</name>
@@ -1312,6 +1346,13 @@
 		</right>
 		<right>
 			<name>TotalsControl</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.АдресныеОбъекты.Command.ПодключитьИнтернетПоддержку</name>
+		<right>
+			<name>View</name>
 			<value>true</value>
 		</right>
 	</object>
@@ -1358,7 +1399,7 @@
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.ЗапросыАдминистрированияРазрешенийИспользованияВнешнихРесурсов</name>
+		<name>Constant.КоличествоЗамеровВПакетеЭкспорта</name>
 		<right>
 			<name>Read</name>
 			<value>true</value>
@@ -1374,40 +1415,6 @@
 		<right>
 			<name>Edit</name>
 			<value>true</value>
-		</right>
-		<right>
-			<name>TotalsControl</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>Constant.ПараметрыРаботыПользователей</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Update</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.СоответствияОбъектовИнформационныхБаз.Attribute.ОбъектВыгруженПоСсылке</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
 		</right>
 	</object>
 	<object>
@@ -1483,7 +1490,14 @@
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.ПользовательскиеНастройкиДоступаКОбработкам</name>
+		<name>DataProcessor.ОценкаПроизводительности.Command.ИмпортЗамеровПроизводительности</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ПакетыИнформацииПриЗапуске</name>
 		<right>
 			<name>Read</name>
 			<value>true</value>
@@ -1502,6 +1516,13 @@
 		</right>
 		<right>
 			<name>TotalsControl</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.АдресныеОбъекты.Command.ОчиститьАдресныйКлассификатор</name>
+		<right>
+			<name>View</name>
 			<value>true</value>
 		</right>
 	</object>
@@ -1525,25 +1546,6 @@
 		</right>
 		<right>
 			<name>TotalsControl</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>Constant.РазделыОписанияИзмененийСистемы</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Update</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Edit</name>
 			<value>true</value>
 		</right>
 	</object>
@@ -1591,6 +1593,75 @@
 		</right>
 		<right>
 			<name>InputByString</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ЗамерыОбластиСтатистики</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>TotalsControl</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ДополнительныеАдресныеСведения</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>TotalsControl</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ОриентирыАдресныхОбъектов</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>TotalsControl</name>
 			<value>true</value>
 		</right>
 	</object>
@@ -1649,84 +1720,21 @@
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.НазначениеДополнительныхОбработок</name>
+		<name>DataProcessor.НастройкиЦентраМониторинга</name>
 		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Update</name>
+			<name>Use</name>
 			<value>true</value>
 		</right>
 		<right>
 			<name>View</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>TotalsControl</name>
 			<value>true</value>
 		</right>
 	</object>
 	<object>
-		<name>Catalog.СтраныМира</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Insert</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Update</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Delete</name>
-			<value>true</value>
-		</right>
+		<name>DataProcessor.ОценкаПроизводительности.Command.ЭкспортЗамеровПроизводительности</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveInsert</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveSetDeletionMark</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveClearDeletionMark</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveDeleteMarked</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InputByString</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.СоответствияОбъектовИнформационныхБаз.Resource.УникальныйИдентификаторИсточникаСтрокой</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
 		</right>
 	</object>
 	<object>
@@ -1791,24 +1799,9 @@
 		</right>
 	</object>
 	<object>
-		<name>DataProcessor.УправлениеПолнотекстовымПоиском</name>
-		<right>
-			<name>Use</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>Catalog.ДополнительныеОтчетыИОбработки</name>
+		<name>InformationRegister.УдалитьЗамерыВремени3</name>
 		<right>
 			<name>Read</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Insert</name>
 			<value>true</value>
 		</right>
 		<right>
@@ -1816,15 +1809,7 @@
 			<value>true</value>
 		</right>
 		<right>
-			<name>Delete</name>
-			<value>true</value>
-		</right>
-		<right>
 			<name>View</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveInsert</name>
 			<value>true</value>
 		</right>
 		<right>
@@ -1832,19 +1817,7 @@
 			<value>true</value>
 		</right>
 		<right>
-			<name>InteractiveSetDeletionMark</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveClearDeletionMark</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveDeleteMarked</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InputByString</name>
+			<name>TotalsControl</name>
 			<value>true</value>
 		</right>
 	</object>
@@ -1868,7 +1841,7 @@
 		</right>
 	</object>
 	<object>
-		<name>Constant.ПараметрыСлужебныхСобытий</name>
+		<name>Constant.ИспользоватьАльтернативныйСерверДляЗагрузкиКурсовВалют</name>
 		<right>
 			<name>Read</name>
 			<value>true</value>
@@ -1883,29 +1856,6 @@
 		</right>
 		<right>
 			<name>Edit</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.РазрешенныеКаталогиФайловойСистемы</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Update</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>TotalsControl</name>
 			<value>true</value>
 		</right>
 	</object>
@@ -1936,13 +1886,6 @@
 		</right>
 		<right>
 			<name>Edit</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.НазначениеДополнительныхОбработок.Command.НазначениеДополнительныхОбработок</name>
-		<right>
-			<name>View</name>
 			<value>true</value>
 		</right>
 	</object>
@@ -2046,7 +1989,7 @@
 		</right>
 	</object>
 	<object>
-		<name>Constant.КонечнаяТочкаМенеджераСервиса</name>
+		<name>Constant.УдалитьКонечнаяТочкаМенеджераСервиса</name>
 		<right>
 			<name>Read</name>
 			<value>true</value>
@@ -2112,36 +2055,6 @@
 		</right>
 	</object>
 	<object>
-		<name>DataProcessor.АвтоматическоеИзвлечениеТекстовДляВсехОбластейДанных</name>
-		<right>
-			<name>Use</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>Constant.ИспользоватьСинхронизациюДанныхВМоделиСервисаСПриложениемВИнтернете</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Update</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
 		<name>Constant.ОценкаПроизводительностиПериодЗаписи</name>
 		<right>
 			<name>Read</name>
@@ -2176,29 +2089,6 @@
 		</right>
 		<right>
 			<name>Edit</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.СостоянияОбменовДаннымиОбластейДанных</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Update</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>TotalsControl</name>
 			<value>true</value>
 		</right>
 	</object>
@@ -2241,18 +2131,7 @@
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.СоответствияОбъектовИнформационныхБаз.Dimension.УзелИнформационнойБазы</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ВерсииОбъектовАдресногоКлассификатора</name>
+		<name>InformationRegister.УдалитьЗамерыВремени2</name>
 		<right>
 			<name>Read</name>
 			<value>true</value>
@@ -2275,7 +2154,30 @@
 		</right>
 	</object>
 	<object>
-		<name>Constant.ИмяСлужебногоПользователяМенеджераСервиса</name>
+		<name>InformationRegister.ПараметрыРаботыПрограммы</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>TotalsControl</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Constant.УдалитьИмяСлужебногоПользователяМенеджераСервиса</name>
 		<right>
 			<name>Read</name>
 			<value>true</value>
@@ -2317,7 +2219,7 @@
 		</right>
 	</object>
 	<object>
-		<name>Constant.ПараметрыОграниченияДоступа</name>
+		<name>Constant.ИспользоватьНесколькоПроизводственныхКалендарей</name>
 		<right>
 			<name>Read</name>
 			<value>true</value>
@@ -2336,26 +2238,7 @@
 		</right>
 	</object>
 	<object>
-		<name>Constant.СинхронизироватьДанныеСПриложениемВИнтернетеПриНачалеРаботыПрограммы</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Update</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.СостоянияУспешныхОбменовДаннымиОбластейДанных</name>
+		<name>InformationRegister.ПравилаДляОбменаДанными</name>
 		<right>
 			<name>Read</name>
 			<value>true</value>
@@ -2378,37 +2261,7 @@
 		</right>
 	</object>
 	<object>
-		<name>Constant.ИспользоватьНесколькоПроизводственныхКалендарей</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Update</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.СоответствияОбъектовИнформационныхБаз.Dimension.ТипПриемника</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ПравилаДляОбменаДанными</name>
+		<name>InformationRegister.ОбластиСтатистики</name>
 		<right>
 			<name>Read</name>
 			<value>true</value>
@@ -2457,7 +2310,7 @@
 		</right>
 	</object>
 	<object>
-		<name>Constant.ВнутреннийАдресМенеджераСервиса</name>
+		<name>Constant.УдалитьВнутреннийАдресМенеджераСервиса</name>
 		<right>
 			<name>Read</name>
 			<value>true</value>
@@ -2476,7 +2329,7 @@
 		</right>
 	</object>
 	<object>
-		<name>Catalog.КлассификаторБанковРФ</name>
+		<name>Catalog.КлассификаторБанков</name>
 		<right>
 			<name>Read</name>
 			<value>true</value>
@@ -2542,7 +2395,7 @@
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.СообщенияОбменаДаннымиОбластейДанных</name>
+		<name>InformationRegister.ИсторияАдресныхОбъектов</name>
 		<right>
 			<name>Read</name>
 			<value>true</value>
@@ -2588,25 +2441,6 @@
 		</right>
 	</object>
 	<object>
-		<name>Constant.ПараметрыВариантовОтчетов</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Update</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
 		<name>InformationRegister.ЗамерыВремени</name>
 		<right>
 			<name>Read</name>
@@ -2630,7 +2464,37 @@
 		</right>
 	</object>
 	<object>
-		<name>CommonCommand.ОтчетыОбъекта</name>
+		<name>InformationRegister.УровниСокращенийАдресныхСведений</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>TotalsControl</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>DataProcessor.НастройкиЦентраМониторинга.Command.НастройкаОтправкиОтчетовОбОшибках</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.АдресныеОбъекты.Command.ЗагрузитьАдресныйКлассификатор</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -2675,9 +2539,90 @@
 		</right>
 	</object>
 	<object>
-		<name>DataProcessor.УправлениеПолнотекстовымПоиском.Command.УправлениеПолнотекстовымПоиском</name>
+		<name>InformationRegister.БуферОперацийСтатистики</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
 		<right>
 			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>TotalsControl</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Constant.ПараметрыЦентраМониторинга</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.УдалитьРейтингАктивностиОбластейДанных</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>TotalsControl</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ЗамерыВремениТехнологические</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>TotalsControl</name>
 			<value>true</value>
 		</right>
 	</object>
@@ -2720,7 +2665,7 @@
 		</right>
 	</object>
 	<object>
-		<name>Constant.ПараметрыБазовойФункциональности</name>
+		<name>Constant.ИспользоватьСервисСклоненияMorpher</name>
 		<right>
 			<name>Read</name>
 			<value>true</value>
@@ -2739,21 +2684,9 @@
 		</right>
 	</object>
 	<object>
-		<name>Constant.СведенияОбОбновленииИБ</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Update</name>
-			<value>true</value>
-		</right>
+		<name>CommonForm.Расширения</name>
 		<right>
 			<name>View</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Edit</name>
 			<value>true</value>
 		</right>
 	</object>
@@ -2812,7 +2745,7 @@
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.РазрешенныеВнешниеКомпоненты</name>
+		<name>Constant.КоличествоПотоковОбновленияИнформационнойБазы</name>
 		<right>
 			<name>Read</name>
 			<value>true</value>
@@ -2827,10 +2760,6 @@
 		</right>
 		<right>
 			<name>Edit</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>TotalsControl</name>
 			<value>true</value>
 		</right>
 	</object>
@@ -2930,7 +2859,7 @@
 		</right>
 	</object>
 	<object>
-		<name>DataProcessor.РезервноеКопированиеИБ.Command.ВыполнитьВосстановлениеИБ</name>
+		<name>DataProcessor.РезервноеКопированиеИБ.Command.ВыполнитьВосстановлениеДанных</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -2984,29 +2913,6 @@
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.ВерсииПодсистемОбластейДанных</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Update</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>TotalsControl</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
 		<name>SessionParameter.ПараметрыКлиентаНаСервере</name>
 		<right>
 			<name>Get</name>
@@ -3029,17 +2935,6 @@
 		<right>
 			<name>View</name>
 			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.СоответствияОбъектовИнформационныхБаз.Dimension.ТипИсточника</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
 		</right>
 	</object>
 	<object>
@@ -3097,34 +2992,11 @@
 			<value>true</value>
 		</right>
 		<right>
-			<name>InteractiveOpenExtDataProcessors</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveOpenExtReports</name>
+			<name>ConfigurationExtensionsAdministration</name>
 			<value>true</value>
 		</right>
 		<right>
 			<name>Output</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>Constant.СинхронизироватьДанныеСПриложениемВИнтернетеПриЗавершенииРаботыПрограммы</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Update</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Edit</name>
 			<value>true</value>
 		</right>
 	</object>
@@ -3171,6 +3043,13 @@
 		</right>
 	</object>
 	<object>
+		<name>DataProcessor.ОценкаПроизводительности.Command.НастройкиОценкиПроизводительности</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>InformationRegister.УдалитьСтраныМира</name>
 		<right>
 			<name>Read</name>
@@ -3194,14 +3073,7 @@
 		</right>
 	</object>
 	<object>
-		<name>CommonForm.МониторСинхронизацииДанныхВМоделиСервиса</name>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.РазрешенныеИнтернетРесурсы</name>
+		<name>InformationRegister.ДампыПлатформы</name>
 		<right>
 			<name>Read</name>
 			<value>true</value>
@@ -3220,6 +3092,48 @@
 		</right>
 		<right>
 			<name>TotalsControl</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ЗамерыОперацииСтатистики</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>TotalsControl</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Constant.ИсточникДанныхАдресногоКлассификатора</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
 			<value>true</value>
 		</right>
 	</object>
@@ -3243,6 +3157,75 @@
 		</right>
 	</object>
 	<object>
+		<name>InformationRegister.ЗамерыСтатистики</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>TotalsControl</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.КомментарииСтатистики</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>TotalsControl</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.АдресныеОбъекты</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>TotalsControl</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Constant.ВыполнитьРезервноеКопированиеОбластиДанных</name>
 		<right>
 			<name>Read</name>
@@ -3262,13 +3245,9 @@
 		</right>
 	</object>
 	<object>
-		<name>Catalog.ОчередьЗаданийОбластейДанных</name>
+		<name>InformationRegister.ОперацииСтатистики</name>
 		<right>
 			<name>Read</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Insert</name>
 			<value>true</value>
 		</right>
 		<right>
@@ -3276,15 +3255,7 @@
 			<value>true</value>
 		</right>
 		<right>
-			<name>Delete</name>
-			<value>true</value>
-		</right>
-		<right>
 			<name>View</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveInsert</name>
 			<value>true</value>
 		</right>
 		<right>
@@ -3292,19 +3263,7 @@
 			<value>true</value>
 		</right>
 		<right>
-			<name>InteractiveSetDeletionMark</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveClearDeletionMark</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveDeleteMarked</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InputByString</name>
+			<name>TotalsControl</name>
 			<value>true</value>
 		</right>
 	</object>
@@ -3324,6 +3283,52 @@
 		</right>
 		<right>
 			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.КомментарииОперацииСтатистики</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>TotalsControl</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ПакетыДляОтправки</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>TotalsControl</name>
 			<value>true</value>
 		</right>
 	</object>
@@ -3362,29 +3367,6 @@
 		</right>
 		<right>
 			<name>Edit</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.РазрешенныеCOMКлассы</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Update</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>TotalsControl</name>
 			<value>true</value>
 		</right>
 	</object>
@@ -3490,7 +3472,7 @@
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.РазрешенияПереходаВПривилегированныйРежим</name>
+		<name>InformationRegister.БезопасноеХранилищеДанных</name>
 		<right>
 			<name>Read</name>
 			<value>true</value>
@@ -3509,25 +3491,6 @@
 		</right>
 		<right>
 			<name>TotalsControl</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>Constant.ПараметрыДополнительныхРеквизитовИСведений</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Update</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Edit</name>
 			<value>true</value>
 		</right>
 	</object>
@@ -3562,26 +3525,14 @@
 		</right>
 	</object>
 	<object>
-		<name>Constant.ИспользоватьСинхронизациюДанныхВМоделиСервисаСЛокальнойПрограммой</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Update</name>
-			<value>true</value>
-		</right>
+		<name>CommonForm.ПодключениеКонечнойТочки</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
 		</right>
-		<right>
-			<name>Edit</name>
-			<value>true</value>
-		</right>
 	</object>
 	<object>
-		<name>InformationRegister.БлокировкиСеансовОбластейДанных</name>
+		<name>InformationRegister.ЗагруженныеВерсииАдресныхСведений</name>
 		<right>
 			<name>Read</name>
 			<value>true</value>
@@ -3600,20 +3551,6 @@
 		</right>
 		<right>
 			<name>TotalsControl</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>CommonForm.ПодключениеКонечнойТочки</name>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>CommonCommand.ЗаполнениеОбъекта</name>
-		<right>
-			<name>View</name>
 			<value>true</value>
 		</right>
 	</object>
