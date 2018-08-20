@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5">
 	<Title>
 		<v8:item>
 			<v8:lang>ru</v8:lang>
@@ -1711,7 +1711,6 @@
 				</v8:item>
 			</Title>
 			<Action>КомандаДалее</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ДеревоПомеченныхНаУдалениеУстановитьВсе" id="2">
 			<Title>
@@ -1731,7 +1730,6 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>ДеревоПомеченныхНаУдалениеУстановитьВсе</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ДеревоПомеченныхНаУдалениеСнятьВсе" id="3">
 			<Title>
@@ -1751,7 +1749,6 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>ДеревоПомеченныхНаУдалениеСнятьВсе</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="КомандаНазад" id="4">
 			<Title>
@@ -1761,7 +1758,6 @@
 				</v8:item>
 			</Title>
 			<Action>КомандаНазад</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ДеревоПомеченныхНаУдалениеОбновить" id="5">
 			<Title>
@@ -1783,7 +1779,6 @@
 			</Picture>
 			<Action>ДеревоПомеченныхНаУдалениеОбновить</Action>
 			<Representation>Picture</Representation>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="СвязиНеУдаленныхУдалить" id="6">
 			<Title>
@@ -1803,7 +1798,6 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>СвязиНеУдаленныхУдалить</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="НеУдаленныеЗаменитьНа" id="7">
 			<Title>
@@ -1819,7 +1813,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>НеУдаленныеЗаменитьНа</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ДеревоПомеченныхНаУдалениеИзменить" id="8">
 			<Title>
@@ -1840,7 +1833,6 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>ДеревоПомеченныхНаУдалениеИзменить</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="НеУдаленныеУдалить" id="9">
 			<Title>
@@ -1860,7 +1852,6 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>НеУдаленныеУдалить</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="УдалениеПомеченныхНастроитьРасписание" id="10">
 			<Title>
@@ -1876,7 +1867,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>УдалениеПомеченныхНастроитьРасписание</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 	</Commands>
 </Form>

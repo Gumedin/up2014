@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5">
 	<Title>
 		<v8:item>
 			<v8:lang>ru</v8:lang>
@@ -1853,7 +1853,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ИгнорироватьДокумент</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="НеИгнорироватьДокумент" id="2">
 			<Title>
@@ -1869,7 +1868,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>НеИгнорироватьДокумент</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ИзменитьВыделенныеДокументы" id="5">
 			<Title>
@@ -1886,7 +1884,6 @@
 			</ToolTip>
 			<Action>ИзменитьВыделенныеДокументы</Action>
 			<Representation>TextPicture</Representation>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="Обновить" id="7">
 			<Title>
@@ -1907,7 +1904,6 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>Обновить</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ПровестиДокумент" id="8">
 			<Title>
@@ -1928,7 +1924,6 @@
 			</Picture>
 			<Action>ПровестиДокумент</Action>
 			<Representation>TextPicture</Representation>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ИгнорироватьОбъект" id="9">
 			<Title>
@@ -1944,7 +1939,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ИгнорироватьОбъект</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ИзменитьВыделенныеОбъекты" id="11">
 			<Title>
@@ -1961,7 +1955,6 @@
 			</ToolTip>
 			<Action>ИзменитьВыделенныеОбъекты</Action>
 			<Representation>TextPicture</Representation>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="НеИгнорироватьОбъект" id="12">
 			<Title>
@@ -1977,7 +1970,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>НеИгнорироватьОбъект</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ОткрытьВерсиюНепринятые" id="15">
 			<Title>
@@ -1993,7 +1985,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ОткрытьВерсиюНепринятые</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ПоказатьОтличияНепринятые" id="16">
 			<Title>
@@ -2014,7 +2005,6 @@
 			</Picture>
 			<Action>ПоказатьОтличияНепринятые</Action>
 			<Representation>TextPicture</Representation>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ОткрытьВерсиюДоКонфликта" id="19">
 			<Title>
@@ -2030,7 +2020,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ОткрытьВерсиюДоКонфликта</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ПоказатьОтличияКоллизии" id="20">
 			<Title>
@@ -2051,7 +2040,6 @@
 			</Picture>
 			<Action>ПоказатьОтличияКоллизии</Action>
 			<Representation>TextPicture</Representation>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="Изменить" id="22">
 			<Title>
@@ -2073,7 +2061,6 @@
 			</Picture>
 			<Action>Изменить</Action>
 			<Representation>TextPicture</Representation>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ИгнорироватьКонфликт" id="23">
 			<Title>
@@ -2094,7 +2081,6 @@
 			</Picture>
 			<Action>ИгнорироватьКонфликт</Action>
 			<Representation>TextPicture</Representation>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ИгнорироватьНепринятый" id="3">
 			<Title>
@@ -2110,7 +2096,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ИгнорироватьНепринятый</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="НеИгнорироватьКонфликт" id="6">
 			<Title>
@@ -2126,7 +2111,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>НеИгнорироватьКонфликт</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="НеИгнорироватьНепринятый" id="13">
 			<Title>
@@ -2142,7 +2126,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>НеИгнорироватьНепринятый</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ПринятьВерсиюНепринятые" id="4">
 			<Title>
@@ -2158,7 +2141,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ПринятьВерсиюНепринятые</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ОткрытьВерсиюКонфликта" id="17">
 			<Title>
@@ -2174,7 +2156,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ОткрытьВерсиюКонфликта</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ОткрытьВерсиюНепринятыеВЭтойПрограмме" id="21">
 			<Title>
@@ -2190,7 +2171,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ОткрытьВерсиюНепринятыеВЭтойПрограмме</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ПоказыватьПроигнорированныеНепроведенные" id="24">
 			<Title>
@@ -2206,7 +2186,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ПоказыватьПроигнорированныеНепроведенные</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ПоказыватьПроигнорированныеНезаполненные" id="25">
 			<Title>
@@ -2222,7 +2201,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ПоказыватьПроигнорированныеНезаполненные</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ПоказыватьПроигнорированныеКонфликты" id="26">
 			<Title>
@@ -2238,7 +2216,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ПоказыватьПроигнорированныеКонфликты</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ПоказыватьПроигнорированныеНепринятые" id="27">
 			<Title>
@@ -2254,7 +2231,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ПоказыватьПроигнорированныеНепринятые</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ИзменитьРезультатКонфликта" id="18">
 			<Title>
@@ -2270,7 +2246,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ИзменитьРезультатКонфликта</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 	</Commands>
 	<Parameters>

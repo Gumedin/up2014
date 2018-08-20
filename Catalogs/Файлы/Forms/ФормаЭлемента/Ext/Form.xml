@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5">
 	<AutoTitle>false</AutoTitle>
 	<CommandSet>
 		<ExcludedCommand>Delete</ExcludedCommand>
@@ -1414,7 +1414,6 @@
 			</Picture>
 			<Action>СтандартнаяЗаписатьИЗакрыть</Action>
 			<Representation>Text</Representation>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="СтандартнаяЗаписать" id="2">
 			<Title>
@@ -1435,7 +1434,6 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>СтандартнаяЗаписать</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="СтандартныеУстановитьПометкуУдаления" id="5">
 			<Title>
@@ -1455,7 +1453,6 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>СтандартныеУстановитьПометкуУдаления</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="Подписать" id="7">
 			<Title>
@@ -1472,7 +1469,6 @@
 			</ToolTip>
 			<Action>Подписать</Action>
 			<Representation>TextPicture</Representation>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ОткрытьФайлДляПросмотра" id="9">
 			<Title>
@@ -1493,7 +1489,6 @@
 			</Picture>
 			<Action>ОткрытьФайлДляПросмотра</Action>
 			<Representation>TextPicture</Representation>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="СохранитьКак" id="10">
 			<Title>
@@ -1514,7 +1509,6 @@
 			</Picture>
 			<Action>СохранитьКак</Action>
 			<Representation>TextPicture</Representation>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ОткрытьКаталогФайла" id="11">
 			<Title>
@@ -1530,7 +1524,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ОткрытьКаталогФайла</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="Редактировать" id="12">
 			<Title>
@@ -1552,7 +1545,6 @@
 			</Picture>
 			<Action>Редактировать</Action>
 			<Representation>TextPicture</Representation>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ЗакончитьРедактирование" id="13">
 			<Title>
@@ -1573,7 +1565,6 @@
 			</Picture>
 			<Action>ЗакончитьРедактирование</Action>
 			<Representation>TextPicture</Representation>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="Освободить" id="14">
 			<Title>
@@ -1594,7 +1585,6 @@
 			</Picture>
 			<Action>Освободить</Action>
 			<Representation>TextPicture</Representation>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ДобавитьЭПИзФайла" id="6">
 			<Title>
@@ -1610,7 +1600,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ДобавитьЭПИзФайла</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="Зашифровать" id="8">
 			<Title>
@@ -1630,7 +1619,6 @@
 				<xr:LoadTransparent>false</xr:LoadTransparent>
 			</Picture>
 			<Action>Зашифровать</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="Расшифровать" id="15">
 			<Title>
@@ -1646,7 +1634,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>Расшифровать</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="СохранитьВместеСЭП" id="16">
 			<Title>
@@ -1662,7 +1649,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>СохранитьВместеСЭП</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ОбновитьИзФайлаНаДиске" id="17">
 			<Title>
@@ -1679,7 +1665,6 @@
 			</ToolTip>
 			<Action>ОбновитьИзФайлаНаДиске</Action>
 			<Representation>Text</Representation>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ОткрытьПодпись" id="18">
 			<Title>
@@ -1695,7 +1680,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>КомандаЭПСписокОткрытьПодпись</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ПроверитьЭП" id="19">
 			<Title>
@@ -1712,7 +1696,6 @@
 			</ToolTip>
 			<Action>ПроверитьЭП</Action>
 			<ModifiesSavedData>true</ModifiesSavedData>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="УдалитьЭП" id="20">
 			<Title>
@@ -1728,7 +1711,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>УдалитьЭП</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ПроверитьВсе" id="21">
 			<Title>
@@ -1745,7 +1727,6 @@
 			</ToolTip>
 			<Action>ПроверитьВсе</Action>
 			<ModifiesSavedData>true</ModifiesSavedData>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="СохранитьПодпись" id="22">
 			<Title>
@@ -1761,7 +1742,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>СохранитьПодпись</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ОткрытьСертификатШифрования" id="23">
 			<Title>
@@ -1777,7 +1757,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ОткрытьСертификатШифрования</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ПоказатьВСписке" id="24">
 			<Title>
@@ -1797,7 +1776,6 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>ПоказатьВСписке</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="СохранитьИзменения" id="25">
 			<Title>
@@ -1819,7 +1797,6 @@
 			<Action>СохранитьИзменения</Action>
 			<Representation>TextPicture</Representation>
 			<ModifiesSavedData>true</ModifiesSavedData>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="Отправить" id="26">
 			<Title>
@@ -1840,7 +1817,6 @@
 			</Picture>
 			<Action>Отправить</Action>
 			<Representation>TextPicture</Representation>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="Печать" id="27">
 			<Title>
@@ -1861,7 +1837,6 @@
 			</Picture>
 			<Action>Печать</Action>
 			<Representation>TextPicture</Representation>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ПечатьСоШтампом" id="28">
 			<Title>
@@ -1877,7 +1852,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ПечатьСоШтампом</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="Занять" id="3">
 			<Title>
@@ -1899,7 +1873,6 @@
 			<Action>Занять</Action>
 			<Representation>TextPicture</Representation>
 			<ModifiesSavedData>true</ModifiesSavedData>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 	</Commands>
 	<Parameters>
