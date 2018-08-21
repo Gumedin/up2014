@@ -6,7 +6,6 @@
 			<v8:content>Разделение данных сеанса</v8:content>
 		</v8:item>
 	</Title>
-	<Width>60</Width>
 	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
 	<AutoTitle>false</AutoTitle>
 	<CommandBarLocation>Top</CommandBarLocation>
@@ -36,43 +35,46 @@
 			<EnableStartDrag>true</EnableStartDrag>
 			<EnableDrag>true</EnableDrag>
 			<DataPath>РазделениеДанныхСеанса</DataPath>
-			<SearchStringLocation>None</SearchStringLocation>
-			<ViewStatusLocation>None</ViewStatusLocation>
-			<SearchControlLocation>None</SearchControlLocation>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Разделение данных сеанса</v8:content>
+				</v8:item>
+			</Title>
 			<RowFilter xsi:nil="true"/>
 			<ContextMenu name="РазделениеДанныхСеансаКонтекстноеМеню" id="2"/>
 			<AutoCommandBar name="РазделениеДанныхСеансаКоманднаяПанель" id="3"/>
 			<ExtendedTooltip name="РазделениеДанныхСеансаРасширеннаяПодсказка" id="4"/>
-			<SearchStringAddition name="РазделениеДанныхСеансаСтрокаПоиска" id="29">
+			<SearchStringAddition name="РазделениеДанныхСеансаSearchString" id="29">
 				<AdditionSource>
 					<Item>РазделениеДанныхСеанса</Item>
 					<Type>SearchStringRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="РазделениеДанныхСеансаСтрокаПоискаКонтекстноеМеню" id="30"/>
-				<ExtendedTooltip name="РазделениеДанныхСеансаСтрокаПоискаРасширеннаяПодсказка" id="31"/>
+				<ContextMenu name="РазделениеДанныхСеансаSearchStringContextMenu" id="30"/>
+				<ExtendedTooltip name="РазделениеДанныхСеансаSearchStringExtendedTooltip" id="31"/>
 			</SearchStringAddition>
-			<ViewStatusAddition name="РазделениеДанныхСеансаСостояниеПросмотра" id="32">
+			<ViewStatusAddition name="РазделениеДанныхСеансаViewStatus" id="32">
 				<AdditionSource>
 					<Item>РазделениеДанныхСеанса</Item>
 					<Type>ViewStatusRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="РазделениеДанныхСеансаСостояниеПросмотраКонтекстноеМеню" id="33"/>
-				<ExtendedTooltip name="РазделениеДанныхСеансаСостояниеПросмотраРасширеннаяПодсказка" id="34"/>
+				<ContextMenu name="РазделениеДанныхСеансаViewStatusContextMenu" id="33"/>
+				<ExtendedTooltip name="РазделениеДанныхСеансаViewStatusExtendedTooltip" id="34"/>
 			</ViewStatusAddition>
-			<SearchControlAddition name="РазделениеДанныхСеансаУправлениеПоиском" id="35">
+			<SearchControlAddition name="РазделениеДанныхСеансаSearchControl" id="35">
 				<AdditionSource>
 					<Item>РазделениеДанныхСеанса</Item>
 					<Type>SearchControl</Type>
 				</AdditionSource>
-				<ContextMenu name="РазделениеДанныхСеансаУправлениеПоискомКонтекстноеМеню" id="36"/>
-				<ExtendedTooltip name="РазделениеДанныхСеансаУправлениеПоискомРасширеннаяПодсказка" id="37"/>
+				<ContextMenu name="РазделениеДанныхСеансаSearchControlContextMenu" id="36"/>
+				<ExtendedTooltip name="РазделениеДанныхСеансаSearchControlExtendedTooltip" id="37"/>
 			</SearchControlAddition>
 			<ChildItems>
 				<ColumnGroup name="ГруппаФлажокПредставление" id="27">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Группа флажок представление</v8:content>
+							<v8:content>Флажок представление</v8:content>
 						</v8:item>
 					</Title>
 					<Group>InCell</Group>
@@ -117,6 +119,12 @@
 			</ChildItems>
 		</Table>
 		<CommandBar name="ГруппаКоманднаяПанель" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Командная панель</v8:content>
+				</v8:item>
+			</Title>
 			<HorizontalLocation>Right</HorizontalLocation>
 			<ExtendedTooltip name="ГруппаКоманднаяПанельРасширеннаяПодсказка" id="15"/>
 			<ChildItems>

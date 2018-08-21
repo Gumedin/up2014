@@ -6,15 +6,12 @@
 			<v8:content>Выберите изменяемые элементы</v8:content>
 		</v8:item>
 	</Title>
-	<Width>45</Width>
-	<Height>20</Height>
 	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
 	<AutoTitle>false</AutoTitle>
 	<CommandSet>
 		<ExcludedCommand>Abort</ExcludedCommand>
 		<ExcludedCommand>Cancel</ExcludedCommand>
 		<ExcludedCommand>Close</ExcludedCommand>
-		<ExcludedCommand>CustomizeForm</ExcludedCommand>
 		<ExcludedCommand>Help</ExcludedCommand>
 		<ExcludedCommand>Ignore</ExcludedCommand>
 		<ExcludedCommand>No</ExcludedCommand>
@@ -25,13 +22,17 @@
 		<ExcludedCommand>Yes</ExcludedCommand>
 	</CommandSet>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
-		<Autofill>false</Autofill>
 		<ChildItems>
 			<Button name="ФормаВыбрать" id="15">
 				<Type>CommandBarButton</Type>
 				<DefaultButton>true</DefaultButton>
 				<CommandName>Form.Command.Выбрать</CommandName>
 				<ExtendedTooltip name="ФормаВыбратьРасширеннаяПодсказка" id="16"/>
+			</Button>
+			<Button name="ФормаСнятьФлажки" id="31">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Item.ДоступныеОбъектыДляИзменения.StandardCommand.UncheckAll</CommandName>
+				<ExtendedTooltip name="ФормаСнятьФлажкиРасширеннаяПодсказка" id="32"/>
 			</Button>
 		</ChildItems>
 	</AutoCommandBar>
@@ -41,22 +42,26 @@
 	<ChildItems>
 		<Table name="ДоступныеОбъектыДляИзменения" id="8">
 			<Representation>List</Representation>
-			<ReadOnly>true</ReadOnly>
 			<ChangeRowSet>false</ChangeRowSet>
 			<ChangeRowOrder>false</ChangeRowOrder>
-			<SelectionMode>SingleRow</SelectionMode>
+			<MultipleChoice>true</MultipleChoice>
 			<Header>false</Header>
 			<HorizontalLines>false</HorizontalLines>
 			<VerticalLines>false</VerticalLines>
 			<AutoInsertNewRow>true</AutoInsertNewRow>
 			<DataPath>ДоступныеОбъектыДляИзменения</DataPath>
 			<RowPictureDataPath>ДоступныеОбъектыДляИзменения.Picture</RowPictureDataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Доступные объекты для изменения</v8:content>
+				</v8:item>
+			</Title>
 			<CommandSet>
 				<ExcludedCommand>Add</ExcludedCommand>
 				<ExcludedCommand>Change</ExcludedCommand>
 				<ExcludedCommand>CheckAll</ExcludedCommand>
 				<ExcludedCommand>Copy</ExcludedCommand>
-				<ExcludedCommand>CopyToClipboard</ExcludedCommand>
 				<ExcludedCommand>Delete</ExcludedCommand>
 				<ExcludedCommand>EndEdit</ExcludedCommand>
 				<ExcludedCommand>MoveDown</ExcludedCommand>
@@ -64,11 +69,7 @@
 				<ExcludedCommand>Pickup</ExcludedCommand>
 				<ExcludedCommand>SortListAsc</ExcludedCommand>
 				<ExcludedCommand>SortListDesc</ExcludedCommand>
-				<ExcludedCommand>UncheckAll</ExcludedCommand>
 			</CommandSet>
-			<SearchStringLocation>None</SearchStringLocation>
-			<ViewStatusLocation>None</ViewStatusLocation>
-			<SearchControlLocation>None</SearchControlLocation>
 			<ContextMenu name="ДоступныеОбъектыДляИзмененияКонтекстноеМеню" id="9"/>
 			<AutoCommandBar name="ДоступныеОбъектыДляИзмененияКоманднаяПанель" id="10">
 				<Autofill>false</Autofill>
@@ -102,12 +103,35 @@
 				<Event name="Selection">ДоступныеОбъектыДляИзмененияВыбор</Event>
 			</Events>
 			<ChildItems>
-				<InputField name="ДоступныеОбъектыДляИзмененияЗначение" id="12">
-					<DataPath>ДоступныеОбъектыДляИзменения.Value</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="ДоступныеОбъектыДляИзмененияЗначениеКонтекстноеМеню" id="13"/>
-					<ExtendedTooltip name="ДоступныеОбъектыДляИзмененияЗначениеРасширеннаяПодсказка" id="14"/>
-				</InputField>
+				<ColumnGroup name="ДоступныеОбъектыДляИзмененияГруппа" id="26">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Доступные объекты для изменения группа</v8:content>
+						</v8:item>
+					</Title>
+					<Group>InCell</Group>
+					<ExtendedTooltip name="ДоступныеОбъектыДляИзмененияГруппаРасширеннаяПодсказка" id="27"/>
+					<ChildItems>
+						<CheckBoxField name="ДоступныеОбъектыДляИзмененияПометка" id="28">
+							<DataPath>ДоступныеОбъектыДляИзменения.Check</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ДоступныеОбъектыДляИзмененияПометкаКонтекстноеМеню" id="29"/>
+							<ExtendedTooltip name="ДоступныеОбъектыДляИзмененияПометкаРасширеннаяПодсказка" id="30"/>
+							<Events>
+								<Event name="OnChange">ДоступныеОбъектыДляИзмененияПометкаПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+						<InputField name="ДоступныеОбъектыДляИзмененияЗначение" id="12">
+							<DataPath>ДоступныеОбъектыДляИзменения.Value</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ДоступныеОбъектыДляИзмененияЗначениеКонтекстноеМеню" id="13"/>
+							<ExtendedTooltip name="ДоступныеОбъектыДляИзмененияЗначениеРасширеннаяПодсказка" id="14"/>
+						</InputField>
+					</ChildItems>
+				</ColumnGroup>
 			</ChildItems>
 		</Table>
 	</ChildItems>
@@ -128,6 +152,7 @@
 			<Type>
 				<v8:Type>v8:ValueListType</v8:Type>
 			</Type>
+			<Settings xsi:type="v8:TypeDescription"/>
 		</Attribute>
 	</Attributes>
 	<Commands>
@@ -160,6 +185,15 @@
 		<Parameter name="ПоказыватьСкрытые">
 			<Type>
 				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="ВыбранныеТипы">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
 			</Type>
 		</Parameter>
 	</Parameters>

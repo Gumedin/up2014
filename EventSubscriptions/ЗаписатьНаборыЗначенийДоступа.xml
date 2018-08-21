@@ -11,13 +11,7 @@
 			</Synonym>
 			<Comment/>
 			<Source>
-				<v8:Type>cfg:BusinessProcessObject.Задание</v8:Type>
-				<v8:Type>cfg:DocumentObject.Встреча</v8:Type>
-				<v8:Type>cfg:DocumentObject.ЭлектронноеПисьмоВходящее</v8:Type>
-				<v8:Type>cfg:DocumentObject.ЗапланированноеВзаимодействие</v8:Type>
-				<v8:Type>cfg:DocumentObject.СообщениеSMS</v8:Type>
-				<v8:Type>cfg:DocumentObject.ТелефонныйЗвонок</v8:Type>
-				<v8:Type>cfg:DocumentObject.ЭлектронноеПисьмоИсходящее</v8:Type>
+				<v8:TypeSet>cfg:DefinedType.ВладелецНаборовЗначенийДоступаОбъект</v8:TypeSet>
 			</Source>
 			<Event>OnWrite</Event>
 			<Handler>CommonModule.УправлениеДоступомСлужебный.ЗаписатьНаборыЗначенийДоступаПриЗаписи</Handler>

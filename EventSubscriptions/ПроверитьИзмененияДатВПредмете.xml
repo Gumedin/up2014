@@ -11,8 +11,7 @@
 			</Synonym>
 			<Comment/>
 			<Source>
-				<v8:Type>cfg:CatalogObject.Заметки</v8:Type>
-				<v8:Type>cfg:TaskObject.ЗадачаИсполнителя</v8:Type>
+				<v8:TypeSet>cfg:DefinedType.ПредметНапоминанияОбъект</v8:TypeSet>
 			</Source>
 			<Event>OnWrite</Event>
 			<Handler>CommonModule.НапоминанияПользователяСлужебный.ПроверитьИзмененияДатВПредметеПриЗаписи</Handler>

@@ -1,58 +1,70 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5">
-	<Width>100</Width>
-	<VerticalScroll>useIfNecessary</VerticalScroll>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<Autofill>false</Autofill>
-		<ChildItems>
-			<Button name="ФормаВыбрать" id="21">
-				<Type>CommandBarButton</Type>
-				<DefaultButton>true</DefaultButton>
-				<CommandName>Form.StandardCommand.Choose</CommandName>
-				<ExtendedTooltip name="ФормаВыбратьExtendedTooltip" id="22"/>
-			</Button>
-			<Button name="ФормаСоздать" id="12">
-				<Type>CommandBarButton</Type>
-				<CommandName>Form.StandardCommand.Create</CommandName>
-				<ExtendedTooltip name="ФормаСоздатьExtendedTooltip" id="23"/>
-			</Button>
-			<Button name="ФормаСоздатьГруппу" id="15">
-				<Type>CommandBarButton</Type>
-				<CommandName>Form.StandardCommand.CreateFolder</CommandName>
-				<ExtendedTooltip name="ФормаСоздатьГруппуExtendedTooltip" id="24"/>
-			</Button>
-			<Button name="ФормаСкопировать" id="13">
-				<Type>CommandBarButton</Type>
-				<CommandName>Form.StandardCommand.Copy</CommandName>
-				<ExtendedTooltip name="ФормаСкопироватьExtendedTooltip" id="25"/>
-			</Button>
-			<ButtonGroup name="КоманднаяПанельФормы" id="14">
-				<Title>
-					<v8:item>
-						<v8:lang>ru</v8:lang>
-						<v8:content>Командная панель формы</v8:content>
-					</v8:item>
-				</Title>
-				<ToolTip>
-					<v8:item>
-						<v8:lang>ru</v8:lang>
-						<v8:content>Командная панель формы</v8:content>
-					</v8:item>
-				</ToolTip>
-				<CommandSource>Form</CommandSource>
-				<ExtendedTooltip name="КоманднаяПанельФормыExtendedTooltip" id="26"/>
-			</ButtonGroup>
-			<Button name="ФормаСправка" id="20">
-				<Type>CommandBarButton</Type>
-				<CommandName>Form.StandardCommand.Help</CommandName>
-				<ExtendedTooltip name="ФормаСправкаExtendedTooltip" id="27"/>
-			</Button>
-		</ChildItems>
 	</AutoCommandBar>
 	<Events>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
+		<UsualGroup name="ГруппаПользовательскихНастроек" id="40">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа пользовательских настроек</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПользовательскихНастроекРасширеннаяПодсказка" id="41"/>
+		</UsualGroup>
+		<CommandBar name="КоманднаяПанель" id="42">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Командная панель</v8:content>
+				</v8:item>
+			</Title>
+			<ExtendedTooltip name="КоманднаяПанельРасширеннаяПодсказка" id="43"/>
+			<ChildItems>
+				<Button name="ФормаВыбрать" id="21">
+					<Type>CommandBarButton</Type>
+					<DefaultButton>true</DefaultButton>
+					<CommandName>Form.StandardCommand.Choose</CommandName>
+					<ExtendedTooltip name="ФормаВыбратьExtendedTooltip" id="22"/>
+				</Button>
+				<Button name="ФормаСоздать" id="12">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.StandardCommand.Create</CommandName>
+					<ExtendedTooltip name="ФормаСоздатьExtendedTooltip" id="23"/>
+				</Button>
+				<Button name="ФормаСоздатьГруппу" id="15">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.StandardCommand.CreateFolder</CommandName>
+					<ExtendedTooltip name="ФормаСоздатьГруппуExtendedTooltip" id="24"/>
+				</Button>
+				<Button name="ФормаСкопировать" id="13">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.StandardCommand.Copy</CommandName>
+					<ExtendedTooltip name="ФормаСкопироватьExtendedTooltip" id="25"/>
+				</Button>
+				<ButtonGroup name="КоманднаяПанельФормы" id="14">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Командная панель формы</v8:content>
+						</v8:item>
+					</Title>
+					<CommandSource>Form</CommandSource>
+					<ExtendedTooltip name="КоманднаяПанельФормыExtendedTooltip" id="26"/>
+				</ButtonGroup>
+				<Button name="ФормаСправка" id="20">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.StandardCommand.Help</CommandName>
+					<ExtendedTooltip name="ФормаСправкаExtendedTooltip" id="27"/>
+				</Button>
+			</ChildItems>
+		</CommandBar>
 		<Table name="Список" id="1">
 			<CommandBarLocation>None</CommandBarLocation>
 			<SkipOnInput>false</SkipOnInput>
@@ -63,9 +75,12 @@
 			<EnableDrag>true</EnableDrag>
 			<DataPath>Список</DataPath>
 			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
-			<SearchStringLocation>None</SearchStringLocation>
-			<ViewStatusLocation>None</ViewStatusLocation>
-			<SearchControlLocation>None</SearchControlLocation>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список</v8:content>
+				</v8:item>
+			</Title>
 			<AutoRefresh>false</AutoRefresh>
 			<AutoRefreshPeriod>60</AutoRefreshPeriod>
 			<Period>
@@ -79,6 +94,7 @@
 			<ShowRoot>true</ShowRoot>
 			<AllowRootChoice>false</AllowRootChoice>
 			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<UserSettingsGroup>ГруппаПользовательскихНастроек</UserSettingsGroup>
 			<ContextMenu name="СписокКонтекстноеМеню" id="2">
 				<Autofill>false</Autofill>
 				<ChildItems>
@@ -104,12 +120,6 @@
 								<v8:content>Контекстное меню списка</v8:content>
 							</v8:item>
 						</Title>
-						<ToolTip>
-							<v8:item>
-								<v8:lang>ru</v8:lang>
-								<v8:content>Контекстное меню списка</v8:content>
-							</v8:item>
-						</ToolTip>
 						<CommandSource>Item.Список</CommandSource>
 						<ExtendedTooltip name="КонтекстноеМенюСпискаExtendedTooltip" id="31"/>
 					</ButtonGroup>
@@ -117,39 +127,41 @@
 			</ContextMenu>
 			<AutoCommandBar name="СписокКоманднаяПанель" id="3"/>
 			<ExtendedTooltip name="СписокExtendedTooltip" id="32"/>
-			<SearchStringAddition name="СписокСтрокаПоиска" id="40">
+			<SearchStringAddition name="СписокСтрокаПоиска" id="44">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>SearchStringRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="41"/>
-				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="42"/>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="45"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="46"/>
 			</SearchStringAddition>
-			<ViewStatusAddition name="СписокСостояниеПросмотра" id="43">
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="47">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>ViewStatusRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="44"/>
-				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="45"/>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="48"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="49"/>
 			</ViewStatusAddition>
-			<SearchControlAddition name="СписокУправлениеПоиском" id="46">
+			<SearchControlAddition name="СписокУправлениеПоиском" id="50">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>SearchControl</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="47"/>
-				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="48"/>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="51"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="52"/>
 			</SearchControlAddition>
 			<Events>
 				<Event name="ValueChoice">СписокВыборЗначения</Event>
 				<Event name="BeforeAddRow">СписокПередНачаломДобавления</Event>
 				<Event name="OnActivateRow">СписокПриАктивизацииСтроки</Event>
 				<Event name="Drag">СписокПеретаскивание</Event>
+				<Event name="OnGetDataAtServer">СписокПриПолученииДанныхНаСервере</Event>
+				<Event name="BeforeRowChange">СписокПередНачаломИзменения</Event>
 			</Events>
 			<ChildItems>
 				<InputField name="Наименование" id="4">
-					<DataPath>Список.Наименование</DataPath>
+					<DataPath>Список.Description</DataPath>
 					<DefaultItem>true</DefaultItem>
 					<Title>
 						<v8:item>
@@ -157,18 +169,21 @@
 							<v8:content>Наименование</v8:content>
 						</v8:item>
 					</Title>
+					<Width>40</Width>
 					<Wrap>false</Wrap>
 					<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
 					<ExtendedTooltip name="НаименованиеExtendedTooltip" id="33"/>
 				</InputField>
 				<InputField name="Профиль" id="6">
 					<DataPath>Список.Профиль</DataPath>
+					<Width>20</Width>
 					<Wrap>false</Wrap>
 					<ContextMenu name="ПрофильКонтекстноеМеню" id="7"/>
 					<ExtendedTooltip name="ПрофильExtendedTooltip" id="34"/>
 				</InputField>
 				<InputField name="Ответственный" id="10">
 					<DataPath>Список.Ответственный</DataPath>
+					<Width>20</Width>
 					<ContextMenu name="ОтветственныйКонтекстноеМеню" id="11"/>
 					<ExtendedTooltip name="ОтветственныйExtendedTooltip" id="35"/>
 				</InputField>
@@ -182,13 +197,13 @@
 				</LabelField>
 			</ChildItems>
 		</Table>
-		<LabelField name="Описание" id="8">
-			<DataPath>Items.Список.CurrentData.Описание</DataPath>
+		<LabelField name="Комментарий" id="8">
+			<DataPath>Items.Список.CurrentData.Комментарий</DataPath>
 			<TitleLocation>Left</TitleLocation>
 			<Height>2</Height>
 			<VerticalStretch>false</VerticalStretch>
-			<ContextMenu name="ОписаниеКонтекстноеМеню" id="9"/>
-			<ExtendedTooltip name="ОписаниеExtendedTooltip" id="36"/>
+			<ContextMenu name="КомментарийКонтекстноеМеню" id="9"/>
+			<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="36"/>
 		</LabelField>
 	</ChildItems>
 	<Attributes>
@@ -198,6 +213,7 @@
 			</Type>
 			<MainAttribute>true</MainAttribute>
 			<UseAlways>
+				<Field>Список.IsFolder</Field>
 				<Field>Список.Ref</Field>
 				<Field>Список.Пользователь</Field>
 			</UseAlways>
@@ -210,17 +226,10 @@
 	ГруппыДоступа.Предопределенный,
 	ГруппыДоступа.Родитель,
 	ГруппыДоступа.ЭтоГруппа,
-	ВЫБОР
-		КОГДА ТИПЗНАЧЕНИЯ(ГруппыДоступа.Пользователь) = ТИП(Справочник.Пользователи)
-			ТОГДА ГруппыДоступа.Наименование + ": " + ВЫРАЗИТЬ(ГруппыДоступа.Пользователь КАК Справочник.Пользователи).Наименование
-		КОГДА ТИПЗНАЧЕНИЯ(ГруппыДоступа.Пользователь) = ТИП(Справочник.ВнешниеПользователи)
-			ТОГДА ГруппыДоступа.Наименование + ": " + &amp;ОшибкаОбъектНеНайден
-		ИНАЧЕ ГруппыДоступа.Наименование
-	КОНЕЦ КАК Наименование,
+	ГруппыДоступа.Наименование,
 	ГруппыДоступа.Профиль,
-	ГруппыДоступа.ТипПользователей,
 	ГруппыДоступа.Пользователь,
-	ГруппыДоступа.Описание,
+	ГруппыДоступа.Комментарий,
 	ГруппыДоступа.Ответственный
 ИЗ
 	Справочник.ГруппыДоступа КАК ГруппыДоступа

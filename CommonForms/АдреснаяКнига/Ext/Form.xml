@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5">
 	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
-	<VerticalScroll>useIfNecessary</VerticalScroll>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<ChildItems>
 			<Button name="КомандаВыбрать" id="46">
@@ -23,15 +22,9 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Группа списки</v8:content>
+					<v8:content>Списки</v8:content>
 				</v8:item>
 			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Группа списки</v8:content>
-				</v8:item>
-			</ToolTip>
 			<Group>Horizontal</Group>
 			<Representation>None</Representation>
 			<ChildItemsWidth>Equal</ChildItemsWidth>
@@ -45,12 +38,6 @@
 							<v8:content>Страницы списки</v8:content>
 						</v8:item>
 					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Страницы списки</v8:content>
-						</v8:item>
-					</ToolTip>
 					<ExtendedTooltip name="СтраницыСпискиExtendedTooltip" id="183"/>
 					<Events>
 						<Event name="OnCurrentPageChange">СтраницыПриСменеСтраницы</Event>
@@ -63,12 +50,6 @@
 									<v8:content>Поиск контактов</v8:content>
 								</v8:item>
 							</Title>
-							<ToolTip>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Страница поиск контактов</v8:content>
-								</v8:item>
-							</ToolTip>
 							<ExtendedTooltip name="СтраницаПоискКонтактовExtendedTooltip" id="184"/>
 							<ChildItems>
 								<UsualGroup name="ГруппаСтрокаПоиска" id="51">
@@ -76,15 +57,9 @@
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>Группа строка поиска</v8:content>
+											<v8:content>Строка поиска</v8:content>
 										</v8:item>
 									</Title>
-									<ToolTip>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Группа строка поиска</v8:content>
-										</v8:item>
-									</ToolTip>
 									<Group>Horizontal</Group>
 									<Representation>None</Representation>
 									<ShowTitle>false</ShowTitle>
@@ -119,8 +94,16 @@
 									<CommandBarLocation>None</CommandBarLocation>
 									<ReadOnly>true</ReadOnly>
 									<SkipOnInput>false</SkipOnInput>
+									<AutoMaxHeight>false</AutoMaxHeight>
+									<HeightInTableRows>5</HeightInTableRows>
 									<AutoInsertNewRow>true</AutoInsertNewRow>
 									<DataPath>НайденныеКонтакты</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Найденные контакты</v8:content>
+										</v8:item>
+									</Title>
 									<CommandSet>
 										<ExcludedCommand>CancelSearch</ExcludedCommand>
 										<ExcludedCommand>Change</ExcludedCommand>
@@ -131,9 +114,6 @@
 										<ExcludedCommand>MoveDown</ExcludedCommand>
 										<ExcludedCommand>MoveUp</ExcludedCommand>
 									</CommandSet>
-									<SearchStringLocation>None</SearchStringLocation>
-									<ViewStatusLocation>None</ViewStatusLocation>
-									<SearchControlLocation>None</SearchControlLocation>
 									<RowFilter xsi:nil="true"/>
 									<ContextMenu name="НайденныеКонтактыКонтекстноеМеню" id="26">
 										<Autofill>false</Autofill>
@@ -190,38 +170,6 @@
 										</InputField>
 									</ChildItems>
 								</Table>
-								<UsualGroup name="ГруппаПоСтроке" id="115">
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Группа по строке</v8:content>
-										</v8:item>
-									</Title>
-									<ToolTip>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Группа по строке</v8:content>
-										</v8:item>
-									</ToolTip>
-									<Group>Horizontal</Group>
-									<Representation>None</Representation>
-									<ShowTitle>false</ShowTitle>
-									<ExtendedTooltip name="ГруппаПоСтрокеExtendedTooltip" id="193"/>
-									<ChildItems>
-										<LabelField name="ИнформацияОбАктуальностиИндексаППД" id="116">
-											<DataPath>ИнформацияОбАктуальностиИндексаППД</DataPath>
-											<TitleLocation>None</TitleLocation>
-											<ContextMenu name="ИнформацияОбАктуальностиИндексаППДКонтекстноеМеню" id="117"/>
-											<ExtendedTooltip name="ИнформацияОбАктуальностиИндексаППДExtendedTooltip" id="194"/>
-										</LabelField>
-										<Button name="КомандаОбновитьИндексППД" id="118">
-											<Type>UsualButton</Type>
-											<SkipOnInput>false</SkipOnInput>
-											<CommandName>Form.Command.КомандаОбновитьИндексППД</CommandName>
-											<ExtendedTooltip name="КомандаОбновитьИндексППДExtendedTooltip" id="195"/>
-										</Button>
-									</ChildItems>
-								</UsualGroup>
 							</ChildItems>
 						</Page>
 						<Page name="СтраницаВсеКонтактыПоПредмету" id="94">
@@ -231,12 +179,6 @@
 									<v8:content>Контакты по предмету</v8:content>
 								</v8:item>
 							</Title>
-							<ToolTip>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Страница все контакты по предмету</v8:content>
-								</v8:item>
-							</ToolTip>
 							<ExtendedTooltip name="СтраницаВсеКонтактыПоПредметуExtendedTooltip" id="196"/>
 							<ChildItems>
 								<Table name="КонтактыПоПредмету" id="121">
@@ -246,9 +188,12 @@
 									<SkipOnInput>false</SkipOnInput>
 									<AutoInsertNewRow>true</AutoInsertNewRow>
 									<DataPath>КонтактыПоПредмету</DataPath>
-									<SearchStringLocation>None</SearchStringLocation>
-									<ViewStatusLocation>None</ViewStatusLocation>
-									<SearchControlLocation>None</SearchControlLocation>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Контакты по предмету</v8:content>
+										</v8:item>
+									</Title>
 									<RowFilter xsi:nil="true"/>
 									<ContextMenu name="КонтактыПоПредметуКонтекстноеМеню" id="122">
 										<Autofill>false</Autofill>
@@ -332,6 +277,8 @@
 									<Representation>Tree</Representation>
 									<CommandBarLocation>None</CommandBarLocation>
 									<SkipOnInput>false</SkipOnInput>
+									<AutoMaxHeight>false</AutoMaxHeight>
+									<HeightInTableRows>5</HeightInTableRows>
 									<SelectionMode>SingleRow</SelectionMode>
 									<RowSelectionMode>Row</RowSelectionMode>
 									<Header>false</Header>
@@ -345,6 +292,12 @@
 										<xr:Ref>CommonPicture.СостоянияПользователей</xr:Ref>
 										<xr:LoadTransparent>false</xr:LoadTransparent>
 									</RowsPicture>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группы пользователей</v8:content>
+										</v8:item>
+									</Title>
 									<CommandSet>
 										<ExcludedCommand>Change</ExcludedCommand>
 										<ExcludedCommand>Copy</ExcludedCommand>
@@ -360,9 +313,6 @@
 										<ExcludedCommand>SetDeletionMark</ExcludedCommand>
 										<ExcludedCommand>Tree</ExcludedCommand>
 									</CommandSet>
-									<SearchStringLocation>None</SearchStringLocation>
-									<ViewStatusLocation>None</ViewStatusLocation>
-									<SearchControlLocation>None</SearchControlLocation>
 									<AutoRefresh>false</AutoRefresh>
 									<AutoRefreshPeriod>60</AutoRefreshPeriod>
 									<Period>
@@ -416,6 +366,7 @@
 								</Table>
 								<Table name="СписокПользователей" id="95">
 									<SkipOnInput>false</SkipOnInput>
+									<HeightInTableRows>6</HeightInTableRows>
 									<UseAlternationRowColor>true</UseAlternationRowColor>
 									<DataPath>СписокПользователей</DataPath>
 									<RowPictureDataPath>СписокПользователей.НомерКартинки</RowPictureDataPath>
@@ -423,15 +374,18 @@
 										<xr:Ref>CommonPicture.СостоянияПользователей</xr:Ref>
 										<xr:LoadTransparent>false</xr:LoadTransparent>
 									</RowsPicture>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Список пользователей</v8:content>
+										</v8:item>
+									</Title>
 									<CommandSet>
 										<ExcludedCommand>Change</ExcludedCommand>
 										<ExcludedCommand>Copy</ExcludedCommand>
 										<ExcludedCommand>Create</ExcludedCommand>
 										<ExcludedCommand>SetDeletionMark</ExcludedCommand>
 									</CommandSet>
-									<SearchStringLocation>None</SearchStringLocation>
-									<ViewStatusLocation>None</ViewStatusLocation>
-									<SearchControlLocation>None</SearchControlLocation>
 									<AutoRefresh>false</AutoRefresh>
 									<AutoRefreshPeriod>60</AutoRefreshPeriod>
 									<Period>
@@ -473,7 +427,7 @@
 										<ExtendedTooltip name="СписокПользователейУправлениеПоискомРасширеннаяПодсказка" id="280"/>
 									</SearchControlAddition>
 									<Events>
-										<Event name="Selection">СписокСправочникаВыбор</Event>
+										<Event name="Selection">Подключаемый_СписокСправочникаВыбор</Event>
 									</Events>
 									<ChildItems>
 										<InputField name="Пользователь" id="98">
@@ -498,15 +452,9 @@
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Группа получатели переместить</v8:content>
+							<v8:content>Получатели переместить</v8:content>
 						</v8:item>
 					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Группа получатели переместить</v8:content>
-						</v8:item>
-					</ToolTip>
 					<Group>Horizontal</Group>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
@@ -519,13 +467,8 @@
 									<v8:content>Страницы переместить</v8:content>
 								</v8:item>
 							</Title>
-							<ToolTip>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Страницы переместить</v8:content>
-								</v8:item>
-							</ToolTip>
-							<Width>3</Width>
+							<Width>5</Width>
+							<HorizontalStretch>false</HorizontalStretch>
 							<PagesRepresentation>None</PagesRepresentation>
 							<ExtendedTooltip name="СтраницыПереместитьExtendedTooltip" id="209"/>
 							<ChildItems>
@@ -536,12 +479,6 @@
 											<v8:content>Страница переместить одна таблица</v8:content>
 										</v8:item>
 									</Title>
-									<ToolTip>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Страница переместить одна таблица</v8:content>
-										</v8:item>
-									</ToolTip>
 									<ExtendedTooltip name="СтраницаПереместитьОднаТаблицаExtendedTooltip" id="210"/>
 									<ChildItems>
 										<LabelDecoration name="ДекорацияПереместитьВерхняя" id="153">
@@ -551,8 +488,10 @@
 										</LabelDecoration>
 										<Button name="ПереместитьИзСпискаВВыбранное" id="158">
 											<Type>UsualButton</Type>
-											<Width>3</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<AutoMaxHeight>false</AutoMaxHeight>
 											<CommandName>Form.Command.ПереместитьИзСпискаВВыбранное</CommandName>
+											<Font ref="sys:DefaultGUIFont" kind="WindowsFont"/>
 											<ExtendedTooltip name="ПереместитьИзСпискаВВыбранноеExtendedTooltip" id="212"/>
 										</Button>
 										<LabelDecoration name="ДекорацияПереместитьЦентр" id="159">
@@ -561,13 +500,11 @@
 										</LabelDecoration>
 										<Button name="ПереместитьИзВыбранногоВСписокВсе" id="157">
 											<Type>UsualButton</Type>
-											<Width>3</Width>
 											<CommandName>Form.Command.ПереместитьИзВыбранногоВСписокВсе</CommandName>
 											<ExtendedTooltip name="ПереместитьИзВыбранногоВСписокВсеExtendedTooltip" id="214"/>
 										</Button>
 										<Button name="ПереместитьИзВыбранногоВСписок" id="151">
 											<Type>UsualButton</Type>
-											<Width>3</Width>
 											<CommandName>Form.Command.ПереместитьИзВыбранногоВСписок</CommandName>
 											<ExtendedTooltip name="ПереместитьИзВыбранногоВСписокExtendedTooltip" id="215"/>
 										</Button>
@@ -585,12 +522,6 @@
 											<v8:content>Страница переместить две таблицы</v8:content>
 										</v8:item>
 									</Title>
-									<ToolTip>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Страница переместить две таблицы</v8:content>
-										</v8:item>
-									</ToolTip>
 									<ExtendedTooltip name="СтраницаПереместитьДвеТаблицыExtendedTooltip" id="217"/>
 									<ChildItems>
 										<LabelDecoration name="ДекорацияПереместитьВерхняяДвеТаблицы" id="164">
@@ -610,6 +541,7 @@
 										<Button name="ПереместитьИзВыбранногоВСписокДвеТаблицы" id="169">
 											<Type>UsualButton</Type>
 											<CommandName>Form.Command.ПереместитьИзВыбранногоВСписок</CommandName>
+											<Font ref="style:NormalTextFont" kind="StyleItem"/>
 											<ExtendedTooltip name="ПереместитьИзВыбранногоВСписокДвеТаблицыExtendedTooltip" id="221"/>
 										</Button>
 										<Button name="ПереместитьИзВыбранногоВСписокВсеДвеТаблицы" id="170">
@@ -639,16 +571,9 @@
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Группа получатели</v8:content>
+									<v8:content>Получатели</v8:content>
 								</v8:item>
 							</Title>
-							<ToolTip>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Группа получатели</v8:content>
-								</v8:item>
-							</ToolTip>
-							<HorizontalStretch>true</HorizontalStretch>
 							<Group>Vertical</Group>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
@@ -659,9 +584,12 @@
 									<SkipOnInput>false</SkipOnInput>
 									<HeightInTableRows>3</HeightInTableRows>
 									<DataPath>ПолучателиПисьма</DataPath>
-									<SearchStringLocation>None</SearchStringLocation>
-									<ViewStatusLocation>None</ViewStatusLocation>
-									<SearchControlLocation>None</SearchControlLocation>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Получатели письма</v8:content>
+										</v8:item>
+									</Title>
 									<RowFilter xsi:nil="true"/>
 									<ContextMenu name="ПолучателиПисьмаКонтекстноеМеню" id="57">
 										<Autofill>false</Autofill>
@@ -679,12 +607,6 @@
 														<v8:content>Найти контакт</v8:content>
 													</v8:item>
 												</Title>
-												<ToolTip>
-													<v8:item>
-														<v8:lang>ru</v8:lang>
-														<v8:content>Найти контакт</v8:content>
-													</v8:item>
-												</ToolTip>
 												<ExtendedTooltip name="НайтиКонтактExtendedTooltip" id="228"/>
 												<ChildItems>
 													<Button name="НайтиПоАдресу" id="140">
@@ -714,12 +636,6 @@
 														<v8:content>Изменить группу</v8:content>
 													</v8:item>
 												</Title>
-												<ToolTip>
-													<v8:item>
-														<v8:lang>ru</v8:lang>
-														<v8:content>Изменить группу</v8:content>
-													</v8:item>
-												</ToolTip>
 												<ExtendedTooltip name="ИзменитьГруппуExtendedTooltip" id="232"/>
 												<ChildItems>
 													<Button name="ИзменитьГруппуКому" id="135">
@@ -807,6 +723,8 @@
 											<DataPath>ПолучателиПисьма.Группа</DataPath>
 											<Width>12</Width>
 											<Wrap>false</Wrap>
+											<ListChoiceMode>true</ListChoiceMode>
+											<ChooseType>false</ChooseType>
 											<TextEdit>false</TextEdit>
 											<ChoiceList>
 												<xr:Item>
@@ -853,6 +771,7 @@
 										<InputField name="Адрес" id="59">
 											<DataPath>ПолучателиПисьма.Адрес</DataPath>
 											<Wrap>false</Wrap>
+											<DropListButton>true</DropListButton>
 											<TextColor>win:Highlight</TextColor>
 											<Font ref="sys:DefaultGUIFont" bold="false" italic="false" underline="true" strikeout="false" kind="WindowsFont"/>
 											<ContextMenu name="АдресКонтекстноеМеню" id="60"/>
@@ -902,7 +821,7 @@
 						</v8:item>
 					</Title>
 					<Type>
-						<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+						<v8:TypeSet>cfg:DefinedType.КонтактВзаимодействия</v8:TypeSet>
 					</Type>
 				</Column>
 				<Column name="Представление" id="2">
@@ -1016,7 +935,7 @@
 						</v8:item>
 					</Title>
 					<Type>
-						<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+						<v8:TypeSet>cfg:DefinedType.КонтактВзаимодействия</v8:TypeSet>
 					</Type>
 				</Column>
 				<Column name="Группа" id="4">
@@ -1062,7 +981,7 @@
 				<v8:Type>cfg:DynamicList</v8:Type>
 			</Type>
 			<UseAlways>
-				<Field>~СписокПользователей.IsFolder</Field>
+				<Field>СписокПользователей.Description</Field>
 			</UseAlways>
 			<Settings xsi:type="DynamicList">
 				<ManualQuery>true</ManualQuery>
@@ -1082,6 +1001,7 @@
 ГДЕ
 	Пользователи.Служебный = ЛОЖЬ
 	И Пользователи.ПометкаУдаления = ЛОЖЬ
+	И Пользователи.Недействителен = ЛОЖЬ
 	И ИСТИНА В
 			(ВЫБРАТЬ
 				ИСТИНА
@@ -1089,7 +1009,8 @@
 				РегистрСведений.СоставыГруппПользователей КАК СоставыГруппПользователей
 			ГДЕ
 				СоставыГруппПользователей.Пользователь = Пользователи.Ссылка
-				И СоставыГруппПользователей.ГруппаПользователей = &amp;ГруппаПользователей)</QueryText>
+				И СоставыГруппПользователей.ГруппаПользователей = &amp;ГруппаПользователей)
+</QueryText>
 				<MainTable>Catalog.Пользователи</MainTable>
 				<ListSettings>
 					<dcsset:filter>
@@ -1158,7 +1079,7 @@
 						</v8:item>
 					</Title>
 					<Type>
-						<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+						<v8:TypeSet>cfg:DefinedType.КонтактВзаимодействия</v8:TypeSet>
 					</Type>
 				</Column>
 				<Column name="Наименование" id="2">
@@ -1245,11 +1166,7 @@
 				</v8:item>
 			</Title>
 			<Type>
-				<v8:Type>cfg:DocumentRef.ЭлектронноеПисьмоИсходящее</v8:Type>
-				<v8:Type>cfg:DocumentRef.ЗапланированноеВзаимодействие</v8:Type>
-				<v8:Type>cfg:DocumentRef.ЭлектронноеПисьмоВходящее</v8:Type>
-				<v8:Type>cfg:DocumentRef.ТелефонныйЗвонок</v8:Type>
-				<v8:Type>cfg:DocumentRef.Встреча</v8:Type>
+				<v8:TypeSet>cfg:DefinedType.ПредметВзаимодействия</v8:TypeSet>
 			</Type>
 		</Attribute>
 		<Attribute name="ИндексАктуален" id="7">
@@ -1380,26 +1297,6 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>КомандаНайтиВыполнить</Action>
-			<Representation>TextPicture</Representation>
-		</Command>
-		<Command name="КомандаОбновитьИндексППД" id="4">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Обновить</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Обновить индекс полнотекстового поиска</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Picture>
-				<xr:Ref>StdPicture.Refresh</xr:Ref>
-				<xr:LoadTransparent>true</xr:LoadTransparent>
-			</Picture>
-			<Action>КомандаОбновитьИндексППДВыполнить</Action>
 			<Representation>TextPicture</Representation>
 		</Command>
 		<Command name="НайтиВСпискеИзСпискаПредметов" id="3">

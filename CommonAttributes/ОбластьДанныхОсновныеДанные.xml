@@ -29,7 +29,7 @@
 			<MinValue xsi:nil="true"/>
 			<MaxValue xsi:nil="true"/>
 			<FillFromFillingValue>false</FillFromFillingValue>
-			<FillValue xsi:nil="true"/>
+			<FillValue xsi:type="xs:decimal">0</FillValue>
 			<FillChecking>DontCheck</FillChecking>
 			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
 			<ChoiceParameterLinks/>
@@ -76,7 +76,7 @@
 					<xr:ConditionalSeparation/>
 				</xr:Item>
 				<xr:Item>
-					<xr:Metadata>InformationRegister.РазрешенныеПриложенияОперационнойСистемы</xr:Metadata>
+					<xr:Metadata>InformationRegister.СлужебныеАдресныеСведения</xr:Metadata>
 					<xr:Use>DontUse</xr:Use>
 					<xr:ConditionalSeparation/>
 				</xr:Item>
@@ -86,7 +86,22 @@
 					<xr:ConditionalSeparation/>
 				</xr:Item>
 				<xr:Item>
+					<xr:Metadata>InformationRegister.ЗамерыКомментарииСтатистики</xr:Metadata>
+					<xr:Use>DontUse</xr:Use>
+					<xr:ConditionalSeparation/>
+				</xr:Item>
+				<xr:Item>
 					<xr:Metadata>ExchangePlan.ОбменСообщениями</xr:Metadata>
+					<xr:Use>DontUse</xr:Use>
+					<xr:ConditionalSeparation/>
+				</xr:Item>
+				<xr:Item>
+					<xr:Metadata>ScheduledJob.ОчисткаНенужныхФайлов</xr:Metadata>
+					<xr:Use>DontUse</xr:Use>
+					<xr:ConditionalSeparation/>
+				</xr:Item>
+				<xr:Item>
+					<xr:Metadata>Catalog.ПрофилиКлючевыхОпераций</xr:Metadata>
 					<xr:Use>DontUse</xr:Use>
 					<xr:ConditionalSeparation/>
 				</xr:Item>
@@ -96,7 +111,22 @@
 					<xr:ConditionalSeparation/>
 				</xr:Item>
 				<xr:Item>
+					<xr:Metadata>InformationRegister.СтатистикаКонфигурации</xr:Metadata>
+					<xr:Use>DontUse</xr:Use>
+					<xr:ConditionalSeparation/>
+				</xr:Item>
+				<xr:Item>
 					<xr:Metadata>ChartOfCharacteristicTypes.РазделыДатЗапретаИзменения</xr:Metadata>
+					<xr:Use>DontUse</xr:Use>
+					<xr:ConditionalSeparation/>
+				</xr:Item>
+				<xr:Item>
+					<xr:Metadata>Constant.ПериодХраненияЗамеров</xr:Metadata>
+					<xr:Use>DontUse</xr:Use>
+					<xr:ConditionalSeparation/>
+				</xr:Item>
+				<xr:Item>
+					<xr:Metadata>ScheduledJob.ПолучениеСубъектовДляСкрытияПерсональныхДанных</xr:Metadata>
 					<xr:Use>DontUse</xr:Use>
 					<xr:ConditionalSeparation/>
 				</xr:Item>
@@ -107,6 +137,11 @@
 				</xr:Item>
 				<xr:Item>
 					<xr:Metadata>Catalog.СообщенияОбластейДанных</xr:Metadata>
+					<xr:Use>DontUse</xr:Use>
+					<xr:ConditionalSeparation/>
+				</xr:Item>
+				<xr:Item>
+					<xr:Metadata>InformationRegister.ДомаЗданияСтроения</xr:Metadata>
 					<xr:Use>DontUse</xr:Use>
 					<xr:ConditionalSeparation/>
 				</xr:Item>
@@ -126,7 +161,7 @@
 					<xr:ConditionalSeparation/>
 				</xr:Item>
 				<xr:Item>
-					<xr:Metadata>Constant.ВерсияКлассификатораБанковРФ</xr:Metadata>
+					<xr:Metadata>Constant.ВерсияКлассификатораБанков</xr:Metadata>
 					<xr:Use>DontUse</xr:Use>
 					<xr:ConditionalSeparation/>
 				</xr:Item>
@@ -136,12 +171,27 @@
 					<xr:ConditionalSeparation/>
 				</xr:Item>
 				<xr:Item>
+					<xr:Metadata>Constant.ИспользоватьАльтернативныйСерверДляЗагрузкиКлассификатораБанков</xr:Metadata>
+					<xr:Use>DontUse</xr:Use>
+					<xr:ConditionalSeparation/>
+				</xr:Item>
+				<xr:Item>
 					<xr:Metadata>Constant.ПрофильБезопасностиИнформационнойБазы</xr:Metadata>
 					<xr:Use>DontUse</xr:Use>
 					<xr:ConditionalSeparation/>
 				</xr:Item>
 				<xr:Item>
+					<xr:Metadata>InformationRegister.УдалитьЗамерыВремениТехнологические</xr:Metadata>
+					<xr:Use>DontUse</xr:Use>
+					<xr:ConditionalSeparation/>
+				</xr:Item>
+				<xr:Item>
 					<xr:Metadata>Constant.ИспользоватьСинхронизациюДанныхВМоделиСервиса</xr:Metadata>
+					<xr:Use>DontUse</xr:Use>
+					<xr:ConditionalSeparation/>
+				</xr:Item>
+				<xr:Item>
+					<xr:Metadata>InformationRegister.РазрешенияНаИспользованиеВнешнихРесурсов</xr:Metadata>
 					<xr:Use>DontUse</xr:Use>
 					<xr:ConditionalSeparation/>
 				</xr:Item>
@@ -176,12 +226,7 @@
 					<xr:ConditionalSeparation/>
 				</xr:Item>
 				<xr:Item>
-					<xr:Metadata>Constant.АдресДляВосстановленияПароляУчетнойЗаписи</xr:Metadata>
-					<xr:Use>DontUse</xr:Use>
-					<xr:ConditionalSeparation/>
-				</xr:Item>
-				<xr:Item>
-					<xr:Metadata>InformationRegister.АдресныеСокращения</xr:Metadata>
+					<xr:Metadata>ScheduledJob.СкрытиеПерсональныхДанныхСубъектов</xr:Metadata>
 					<xr:Use>DontUse</xr:Use>
 					<xr:ConditionalSeparation/>
 				</xr:Item>
@@ -206,7 +251,7 @@
 					<xr:ConditionalSeparation/>
 				</xr:Item>
 				<xr:Item>
-					<xr:Metadata>InformationRegister.АдресныйКлассификатор</xr:Metadata>
+					<xr:Metadata>InformationRegister.УдалитьАдресныйКлассификатор</xr:Metadata>
 					<xr:Use>DontUse</xr:Use>
 					<xr:ConditionalSeparation/>
 				</xr:Item>
@@ -216,7 +261,22 @@
 					<xr:ConditionalSeparation/>
 				</xr:Item>
 				<xr:Item>
-					<xr:Metadata>InformationRegister.НастройкиТранспортаОбменаОбластейДанных</xr:Metadata>
+					<xr:Metadata>ScheduledJob.СинхронизацияФайлов</xr:Metadata>
+					<xr:Use>DontUse</xr:Use>
+					<xr:ConditionalSeparation/>
+				</xr:Item>
+				<xr:Item>
+					<xr:Metadata>ScheduledJob.ОчисткаУстаревшихВерсийОбъектов</xr:Metadata>
+					<xr:Use>DontUse</xr:Use>
+					<xr:ConditionalSeparation/>
+				</xr:Item>
+				<xr:Item>
+					<xr:Metadata>Constant.УдалитьЛогинДоступаКСервисуMorpher</xr:Metadata>
+					<xr:Use>DontUse</xr:Use>
+					<xr:ConditionalSeparation/>
+				</xr:Item>
+				<xr:Item>
+					<xr:Metadata>InformationRegister.ПричиныИзмененияАдресныхСведений</xr:Metadata>
 					<xr:Use>DontUse</xr:Use>
 					<xr:ConditionalSeparation/>
 				</xr:Item>
@@ -226,7 +286,7 @@
 					<xr:ConditionalSeparation/>
 				</xr:Item>
 				<xr:Item>
-					<xr:Metadata>ScheduledJob.ЗагрузкаКлассификатораБанковРФССайтаРБК</xr:Metadata>
+					<xr:Metadata>ScheduledJob.ЗагрузкаКлассификатораБанков</xr:Metadata>
 					<xr:Use>DontUse</xr:Use>
 					<xr:ConditionalSeparation/>
 				</xr:Item>
@@ -236,7 +296,7 @@
 					<xr:ConditionalSeparation/>
 				</xr:Item>
 				<xr:Item>
-					<xr:Metadata>Constant.ПарольСлужебногоПользователяМенеджераСервиса</xr:Metadata>
+					<xr:Metadata>Constant.УдалитьПарольСлужебногоПользователяМенеджераСервиса</xr:Metadata>
 					<xr:Use>DontUse</xr:Use>
 					<xr:ConditionalSeparation/>
 				</xr:Item>
@@ -262,11 +322,6 @@
 				</xr:Item>
 				<xr:Item>
 					<xr:Metadata>Constant.СписокРасширенийФайловOpenDocument</xr:Metadata>
-					<xr:Use>DontUse</xr:Use>
-					<xr:ConditionalSeparation/>
-				</xr:Item>
-				<xr:Item>
-					<xr:Metadata>ScheduledJob.СинхронизацияДанныхСПриложениемВИнтернете</xr:Metadata>
 					<xr:Use>DontUse</xr:Use>
 					<xr:ConditionalSeparation/>
 				</xr:Item>
@@ -301,11 +356,6 @@
 					<xr:ConditionalSeparation/>
 				</xr:Item>
 				<xr:Item>
-					<xr:Metadata>Constant.ИспользоватьАвтономнуюРаботуВМоделиСервиса</xr:Metadata>
-					<xr:Use>DontUse</xr:Use>
-					<xr:ConditionalSeparation/>
-				</xr:Item>
-				<xr:Item>
 					<xr:Metadata>InformationRegister.ОбластиДанных</xr:Metadata>
 					<xr:Use>DontUse</xr:Use>
 					<xr:ConditionalSeparation/>
@@ -316,12 +366,17 @@
 					<xr:ConditionalSeparation/>
 				</xr:Item>
 				<xr:Item>
+					<xr:Metadata>Constant.ОтложенноеОбновлениеЗавершеноУспешно</xr:Metadata>
+					<xr:Use>DontUse</xr:Use>
+					<xr:ConditionalSeparation/>
+				</xr:Item>
+				<xr:Item>
 					<xr:Metadata>Constant.ИзвлекатьТекстыФайловНаСервере</xr:Metadata>
 					<xr:Use>DontUse</xr:Use>
 					<xr:ConditionalSeparation/>
 				</xr:Item>
 				<xr:Item>
-					<xr:Metadata>InformationRegister.ЗапросыАдминистрированияРазрешенийИспользованияВнешнихРесурсов</xr:Metadata>
+					<xr:Metadata>Constant.КоличествоЗамеровВПакетеЭкспорта</xr:Metadata>
 					<xr:Use>DontUse</xr:Use>
 					<xr:ConditionalSeparation/>
 				</xr:Item>
@@ -331,12 +386,12 @@
 					<xr:ConditionalSeparation/>
 				</xr:Item>
 				<xr:Item>
-					<xr:Metadata>Constant.ПараметрыРаботыПользователей</xr:Metadata>
+					<xr:Metadata>Constant.КаталогОбменаФайламиВМоделиСервисаLinux</xr:Metadata>
 					<xr:Use>DontUse</xr:Use>
 					<xr:ConditionalSeparation/>
 				</xr:Item>
 				<xr:Item>
-					<xr:Metadata>Constant.КаталогОбменаФайламиВМоделиСервисаLinux</xr:Metadata>
+					<xr:Metadata>ScheduledJob.КонтрольАктивностиПользователей</xr:Metadata>
 					<xr:Use>DontUse</xr:Use>
 					<xr:ConditionalSeparation/>
 				</xr:Item>
@@ -356,12 +411,12 @@
 					<xr:ConditionalSeparation/>
 				</xr:Item>
 				<xr:Item>
-					<xr:Metadata>InformationRegister.УдалитьОбластиКРезервномуКопированию</xr:Metadata>
+					<xr:Metadata>InformationRegister.ПакетыИнформацииПриЗапуске</xr:Metadata>
 					<xr:Use>DontUse</xr:Use>
 					<xr:ConditionalSeparation/>
 				</xr:Item>
 				<xr:Item>
-					<xr:Metadata>Constant.РазделыОписанияИзмененийСистемы</xr:Metadata>
+					<xr:Metadata>InformationRegister.УдалитьОбластиКРезервномуКопированию</xr:Metadata>
 					<xr:Use>DontUse</xr:Use>
 					<xr:ConditionalSeparation/>
 				</xr:Item>
@@ -371,13 +426,28 @@
 					<xr:ConditionalSeparation/>
 				</xr:Item>
 				<xr:Item>
-					<xr:Metadata>Catalog.ПроизводственныеКалендари</xr:Metadata>
+					<xr:Metadata>InformationRegister.ЗамерыОбластиСтатистики</xr:Metadata>
 					<xr:Use>DontUse</xr:Use>
 					<xr:ConditionalSeparation/>
 				</xr:Item>
 				<xr:Item>
-					<xr:Metadata>Catalog.СтраныМира</xr:Metadata>
-					<xr:Use>Use</xr:Use>
+					<xr:Metadata>InformationRegister.ДополнительныеАдресныеСведения</xr:Metadata>
+					<xr:Use>DontUse</xr:Use>
+					<xr:ConditionalSeparation/>
+				</xr:Item>
+				<xr:Item>
+					<xr:Metadata>InformationRegister.ОриентирыАдресныхОбъектов</xr:Metadata>
+					<xr:Use>DontUse</xr:Use>
+					<xr:ConditionalSeparation/>
+				</xr:Item>
+				<xr:Item>
+					<xr:Metadata>ScheduledJob.УдалениеУстаревшихПараметровРаботыВерсийРасширений</xr:Metadata>
+					<xr:Use>DontUse</xr:Use>
+					<xr:ConditionalSeparation/>
+				</xr:Item>
+				<xr:Item>
+					<xr:Metadata>Catalog.ПроизводственныеКалендари</xr:Metadata>
+					<xr:Use>DontUse</xr:Use>
 					<xr:ConditionalSeparation/>
 				</xr:Item>
 				<xr:Item>
@@ -386,7 +456,7 @@
 					<xr:ConditionalSeparation/>
 				</xr:Item>
 				<xr:Item>
-					<xr:Metadata>DocumentJournal.Взаимодействия</xr:Metadata>
+					<xr:Metadata>ScheduledJob.ОбновлениеВнешнихКомпонентССайта</xr:Metadata>
 					<xr:Use>DontUse</xr:Use>
 					<xr:ConditionalSeparation/>
 				</xr:Item>
@@ -397,6 +467,11 @@
 				</xr:Item>
 				<xr:Item>
 					<xr:Metadata>InformationRegister.УдалитьОчередьИзвлеченияТекста</xr:Metadata>
+					<xr:Use>DontUse</xr:Use>
+					<xr:ConditionalSeparation/>
+				</xr:Item>
+				<xr:Item>
+					<xr:Metadata>ScheduledJob.ОбновлениеСтатусовДоставкиSMS</xr:Metadata>
 					<xr:Use>DontUse</xr:Use>
 					<xr:ConditionalSeparation/>
 				</xr:Item>
@@ -416,6 +491,11 @@
 					<xr:ConditionalSeparation/>
 				</xr:Item>
 				<xr:Item>
+					<xr:Metadata>InformationRegister.УдалитьЗамерыВремени3</xr:Metadata>
+					<xr:Use>DontUse</xr:Use>
+					<xr:ConditionalSeparation/>
+				</xr:Item>
+				<xr:Item>
 					<xr:Metadata>Constant.ЧасовойПоясОбластиДанных</xr:Metadata>
 					<xr:Use>DontUse</xr:Use>
 					<xr:ConditionalSeparation/>
@@ -426,17 +506,12 @@
 					<xr:ConditionalSeparation/>
 				</xr:Item>
 				<xr:Item>
-					<xr:Metadata>Constant.ПараметрыСлужебныхСобытий</xr:Metadata>
-					<xr:Use>DontUse</xr:Use>
-					<xr:ConditionalSeparation/>
-				</xr:Item>
-				<xr:Item>
 					<xr:Metadata>ScheduledJob.ПланированиеОбработкиЗаданий</xr:Metadata>
 					<xr:Use>DontUse</xr:Use>
 					<xr:ConditionalSeparation/>
 				</xr:Item>
 				<xr:Item>
-					<xr:Metadata>InformationRegister.РазрешенныеКаталогиФайловойСистемы</xr:Metadata>
+					<xr:Metadata>Constant.ИспользоватьАльтернативныйСерверДляЗагрузкиКурсовВалют</xr:Metadata>
 					<xr:Use>DontUse</xr:Use>
 					<xr:ConditionalSeparation/>
 				</xr:Item>
@@ -471,27 +546,27 @@
 					<xr:ConditionalSeparation/>
 				</xr:Item>
 				<xr:Item>
-					<xr:Metadata>ScheduledJob.ПересчетТекущихЗначенийОтносительныхДатЗапретаИзменения</xr:Metadata>
-					<xr:Use>DontUse</xr:Use>
-					<xr:ConditionalSeparation/>
-				</xr:Item>
-				<xr:Item>
 					<xr:Metadata>Constant.КаталогСообщенийОбменаДаннымиДляLinux</xr:Metadata>
 					<xr:Use>DontUse</xr:Use>
 					<xr:ConditionalSeparation/>
 				</xr:Item>
 				<xr:Item>
-					<xr:Metadata>Constant.КонечнаяТочкаМенеджераСервиса</xr:Metadata>
+					<xr:Metadata>ScheduledJob.СтартОтложенныхПроцессов</xr:Metadata>
+					<xr:Use>DontUse</xr:Use>
+					<xr:ConditionalSeparation/>
+				</xr:Item>
+				<xr:Item>
+					<xr:Metadata>Constant.УдалитьКонечнаяТочкаМенеджераСервиса</xr:Metadata>
+					<xr:Use>DontUse</xr:Use>
+					<xr:ConditionalSeparation/>
+				</xr:Item>
+				<xr:Item>
+					<xr:Metadata>Constant.СведенияОБлокируемыхОбъектах</xr:Metadata>
 					<xr:Use>DontUse</xr:Use>
 					<xr:ConditionalSeparation/>
 				</xr:Item>
 				<xr:Item>
 					<xr:Metadata>Catalog.ПредопределенныеВариантыОтчетов</xr:Metadata>
-					<xr:Use>DontUse</xr:Use>
-					<xr:ConditionalSeparation/>
-				</xr:Item>
-				<xr:Item>
-					<xr:Metadata>Constant.ИспользоватьСинхронизациюДанныхВМоделиСервисаСПриложениемВИнтернете</xr:Metadata>
 					<xr:Use>DontUse</xr:Use>
 					<xr:ConditionalSeparation/>
 				</xr:Item>
@@ -506,11 +581,6 @@
 					<xr:ConditionalSeparation/>
 				</xr:Item>
 				<xr:Item>
-					<xr:Metadata>InformationRegister.СостоянияОбменовДаннымиОбластейДанных</xr:Metadata>
-					<xr:Use>DontUse</xr:Use>
-					<xr:ConditionalSeparation/>
-				</xr:Item>
-				<xr:Item>
 					<xr:Metadata>Constant.ИспользуютсяПрофилиБезопасности</xr:Metadata>
 					<xr:Use>DontUse</xr:Use>
 					<xr:ConditionalSeparation/>
@@ -521,7 +591,7 @@
 					<xr:ConditionalSeparation/>
 				</xr:Item>
 				<xr:Item>
-					<xr:Metadata>InformationRegister.ВерсииОбъектовАдресногоКлассификатора</xr:Metadata>
+					<xr:Metadata>InformationRegister.УдалитьЗамерыВремени2</xr:Metadata>
 					<xr:Use>DontUse</xr:Use>
 					<xr:ConditionalSeparation/>
 				</xr:Item>
@@ -531,7 +601,12 @@
 					<xr:ConditionalSeparation/>
 				</xr:Item>
 				<xr:Item>
-					<xr:Metadata>Constant.ИмяСлужебногоПользователяМенеджераСервиса</xr:Metadata>
+					<xr:Metadata>InformationRegister.ПараметрыРаботыПрограммы</xr:Metadata>
+					<xr:Use>DontUse</xr:Use>
+					<xr:ConditionalSeparation/>
+				</xr:Item>
+				<xr:Item>
+					<xr:Metadata>Constant.УдалитьИмяСлужебногоПользователяМенеджераСервиса</xr:Metadata>
 					<xr:Use>DontUse</xr:Use>
 					<xr:ConditionalSeparation/>
 				</xr:Item>
@@ -541,17 +616,7 @@
 					<xr:ConditionalSeparation/>
 				</xr:Item>
 				<xr:Item>
-					<xr:Metadata>Constant.ПараметрыОграниченияДоступа</xr:Metadata>
-					<xr:Use>DontUse</xr:Use>
-					<xr:ConditionalSeparation/>
-				</xr:Item>
-				<xr:Item>
-					<xr:Metadata>Constant.СинхронизироватьДанныеСПриложениемВИнтернетеПриНачалеРаботыПрограммы</xr:Metadata>
-					<xr:Use>DontUse</xr:Use>
-					<xr:ConditionalSeparation/>
-				</xr:Item>
-				<xr:Item>
-					<xr:Metadata>InformationRegister.СостоянияУспешныхОбменовДаннымиОбластейДанных</xr:Metadata>
+					<xr:Metadata>ScheduledJob.ОчисткаЗамеровВремени</xr:Metadata>
 					<xr:Use>DontUse</xr:Use>
 					<xr:ConditionalSeparation/>
 				</xr:Item>
@@ -566,6 +631,11 @@
 					<xr:ConditionalSeparation/>
 				</xr:Item>
 				<xr:Item>
+					<xr:Metadata>InformationRegister.ОбластиСтатистики</xr:Metadata>
+					<xr:Use>DontUse</xr:Use>
+					<xr:ConditionalSeparation/>
+				</xr:Item>
+				<xr:Item>
 					<xr:Metadata>Constant.НастройкаПодчиненногоУзлаРИБЗавершена</xr:Metadata>
 					<xr:Use>DontUse</xr:Use>
 					<xr:ConditionalSeparation/>
@@ -576,12 +646,12 @@
 					<xr:ConditionalSeparation/>
 				</xr:Item>
 				<xr:Item>
-					<xr:Metadata>Constant.ВнутреннийАдресМенеджераСервиса</xr:Metadata>
+					<xr:Metadata>Constant.УдалитьВнутреннийАдресМенеджераСервиса</xr:Metadata>
 					<xr:Use>DontUse</xr:Use>
 					<xr:ConditionalSeparation/>
 				</xr:Item>
 				<xr:Item>
-					<xr:Metadata>Catalog.КлассификаторБанковРФ</xr:Metadata>
+					<xr:Metadata>Catalog.КлассификаторБанков</xr:Metadata>
 					<xr:Use>DontUse</xr:Use>
 					<xr:ConditionalSeparation/>
 				</xr:Item>
@@ -591,7 +661,7 @@
 					<xr:ConditionalSeparation/>
 				</xr:Item>
 				<xr:Item>
-					<xr:Metadata>InformationRegister.СообщенияОбменаДаннымиОбластейДанных</xr:Metadata>
+					<xr:Metadata>InformationRegister.ИсторияАдресныхОбъектов</xr:Metadata>
 					<xr:Use>DontUse</xr:Use>
 					<xr:ConditionalSeparation/>
 				</xr:Item>
@@ -601,12 +671,17 @@
 					<xr:ConditionalSeparation/>
 				</xr:Item>
 				<xr:Item>
-					<xr:Metadata>Constant.ПараметрыВариантовОтчетов</xr:Metadata>
+					<xr:Metadata>ScheduledJob.СборИОтправкаСтатистики</xr:Metadata>
 					<xr:Use>DontUse</xr:Use>
 					<xr:ConditionalSeparation/>
 				</xr:Item>
 				<xr:Item>
 					<xr:Metadata>InformationRegister.ЗамерыВремени</xr:Metadata>
+					<xr:Use>DontUse</xr:Use>
+					<xr:ConditionalSeparation/>
+				</xr:Item>
+				<xr:Item>
+					<xr:Metadata>InformationRegister.УровниСокращенийАдресныхСведений</xr:Metadata>
 					<xr:Use>DontUse</xr:Use>
 					<xr:ConditionalSeparation/>
 				</xr:Item>
@@ -626,7 +701,32 @@
 					<xr:ConditionalSeparation/>
 				</xr:Item>
 				<xr:Item>
+					<xr:Metadata>InformationRegister.БуферОперацийСтатистики</xr:Metadata>
+					<xr:Use>DontUse</xr:Use>
+					<xr:ConditionalSeparation/>
+				</xr:Item>
+				<xr:Item>
+					<xr:Metadata>Constant.ПараметрыЦентраМониторинга</xr:Metadata>
+					<xr:Use>DontUse</xr:Use>
+					<xr:ConditionalSeparation/>
+				</xr:Item>
+				<xr:Item>
 					<xr:Metadata>ScheduledJob.УведомлениеИсполнителейОНовыхЗадачах</xr:Metadata>
+					<xr:Use>DontUse</xr:Use>
+					<xr:ConditionalSeparation/>
+				</xr:Item>
+				<xr:Item>
+					<xr:Metadata>InformationRegister.УдалитьРейтингАктивностиОбластейДанных</xr:Metadata>
+					<xr:Use>DontUse</xr:Use>
+					<xr:ConditionalSeparation/>
+				</xr:Item>
+				<xr:Item>
+					<xr:Metadata>ScheduledJob.ОтправкаSMS</xr:Metadata>
+					<xr:Use>DontUse</xr:Use>
+					<xr:ConditionalSeparation/>
+				</xr:Item>
+				<xr:Item>
+					<xr:Metadata>InformationRegister.ЗамерыВремениТехнологические</xr:Metadata>
 					<xr:Use>DontUse</xr:Use>
 					<xr:ConditionalSeparation/>
 				</xr:Item>
@@ -641,7 +741,7 @@
 					<xr:ConditionalSeparation/>
 				</xr:Item>
 				<xr:Item>
-					<xr:Metadata>Constant.ПараметрыБазовойФункциональности</xr:Metadata>
+					<xr:Metadata>Constant.ИспользоватьСервисСклоненияMorpher</xr:Metadata>
 					<xr:Use>DontUse</xr:Use>
 					<xr:ConditionalSeparation/>
 				</xr:Item>
@@ -651,12 +751,17 @@
 					<xr:ConditionalSeparation/>
 				</xr:Item>
 				<xr:Item>
+					<xr:Metadata>ScheduledJob.ЗапускДополнительныхОбработок</xr:Metadata>
+					<xr:Use>DontUse</xr:Use>
+					<xr:ConditionalSeparation/>
+				</xr:Item>
+				<xr:Item>
 					<xr:Metadata>ChartOfCharacteristicTypes.УдалитьВидыДоступа</xr:Metadata>
 					<xr:Use>DontUse</xr:Use>
 					<xr:ConditionalSeparation/>
 				</xr:Item>
 				<xr:Item>
-					<xr:Metadata>InformationRegister.РазрешенныеВнешниеКомпоненты</xr:Metadata>
+					<xr:Metadata>Constant.КоличествоПотоковОбновленияИнформационнойБазы</xr:Metadata>
 					<xr:Use>DontUse</xr:Use>
 					<xr:ConditionalSeparation/>
 				</xr:Item>
@@ -691,11 +796,6 @@
 					<xr:ConditionalSeparation/>
 				</xr:Item>
 				<xr:Item>
-					<xr:Metadata>Constant.СинхронизироватьДанныеСПриложениемВИнтернетеПриЗавершенииРаботыПрограммы</xr:Metadata>
-					<xr:Use>DontUse</xr:Use>
-					<xr:ConditionalSeparation/>
-				</xr:Item>
-				<xr:Item>
 					<xr:Metadata>Constant.КоличествоЭлементовВТранзакцииЗагрузкиДанных</xr:Metadata>
 					<xr:Use>DontUse</xr:Use>
 					<xr:ConditionalSeparation/>
@@ -721,7 +821,7 @@
 					<xr:ConditionalSeparation/>
 				</xr:Item>
 				<xr:Item>
-					<xr:Metadata>InformationRegister.РазрешенныеИнтернетРесурсы</xr:Metadata>
+					<xr:Metadata>ScheduledJob.ПроверкаВеденияУчета</xr:Metadata>
 					<xr:Use>DontUse</xr:Use>
 					<xr:ConditionalSeparation/>
 				</xr:Item>
@@ -731,12 +831,47 @@
 					<xr:ConditionalSeparation/>
 				</xr:Item>
 				<xr:Item>
+					<xr:Metadata>InformationRegister.ДампыПлатформы</xr:Metadata>
+					<xr:Use>DontUse</xr:Use>
+					<xr:ConditionalSeparation/>
+				</xr:Item>
+				<xr:Item>
+					<xr:Metadata>InformationRegister.ЗамерыОперацииСтатистики</xr:Metadata>
+					<xr:Use>DontUse</xr:Use>
+					<xr:ConditionalSeparation/>
+				</xr:Item>
+				<xr:Item>
+					<xr:Metadata>Constant.ИсточникДанныхАдресногоКлассификатора</xr:Metadata>
+					<xr:Use>DontUse</xr:Use>
+					<xr:ConditionalSeparation/>
+				</xr:Item>
+				<xr:Item>
 					<xr:Metadata>Constant.ПредставлениеОбластиДанных</xr:Metadata>
 					<xr:Use>DontUse</xr:Use>
 					<xr:ConditionalSeparation/>
 				</xr:Item>
 				<xr:Item>
+					<xr:Metadata>InformationRegister.ЗамерыСтатистики</xr:Metadata>
+					<xr:Use>DontUse</xr:Use>
+					<xr:ConditionalSeparation/>
+				</xr:Item>
+				<xr:Item>
+					<xr:Metadata>InformationRegister.КомментарииСтатистики</xr:Metadata>
+					<xr:Use>DontUse</xr:Use>
+					<xr:ConditionalSeparation/>
+				</xr:Item>
+				<xr:Item>
+					<xr:Metadata>InformationRegister.АдресныеОбъекты</xr:Metadata>
+					<xr:Use>DontUse</xr:Use>
+					<xr:ConditionalSeparation/>
+				</xr:Item>
+				<xr:Item>
 					<xr:Metadata>Constant.ВыполнитьРезервноеКопированиеОбластиДанных</xr:Metadata>
+					<xr:Use>DontUse</xr:Use>
+					<xr:ConditionalSeparation/>
+				</xr:Item>
+				<xr:Item>
+					<xr:Metadata>InformationRegister.ОперацииСтатистики</xr:Metadata>
 					<xr:Use>DontUse</xr:Use>
 					<xr:ConditionalSeparation/>
 				</xr:Item>
@@ -751,17 +886,27 @@
 					<xr:ConditionalSeparation/>
 				</xr:Item>
 				<xr:Item>
+					<xr:Metadata>InformationRegister.КомментарииОперацииСтатистики</xr:Metadata>
+					<xr:Use>DontUse</xr:Use>
+					<xr:ConditionalSeparation/>
+				</xr:Item>
+				<xr:Item>
+					<xr:Metadata>InformationRegister.ПакетыДляОтправки</xr:Metadata>
+					<xr:Use>DontUse</xr:Use>
+					<xr:ConditionalSeparation/>
+				</xr:Item>
+				<xr:Item>
 					<xr:Metadata>Constant.ДетализироватьОбновлениеИБВЖурналеРегистрации</xr:Metadata>
 					<xr:Use>DontUse</xr:Use>
 					<xr:ConditionalSeparation/>
 				</xr:Item>
 				<xr:Item>
-					<xr:Metadata>Constant.ИспользоватьСинхронизациюДанных</xr:Metadata>
+					<xr:Metadata>ScheduledJob.СборИОтправкаОтчетовОбОшибках</xr:Metadata>
 					<xr:Use>DontUse</xr:Use>
 					<xr:ConditionalSeparation/>
 				</xr:Item>
 				<xr:Item>
-					<xr:Metadata>InformationRegister.РазрешенныеCOMКлассы</xr:Metadata>
+					<xr:Metadata>Constant.ИспользоватьСинхронизациюДанных</xr:Metadata>
 					<xr:Use>DontUse</xr:Use>
 					<xr:ConditionalSeparation/>
 				</xr:Item>
@@ -776,12 +921,7 @@
 					<xr:ConditionalSeparation/>
 				</xr:Item>
 				<xr:Item>
-					<xr:Metadata>InformationRegister.РазрешенияПереходаВПривилегированныйРежим</xr:Metadata>
-					<xr:Use>DontUse</xr:Use>
-					<xr:ConditionalSeparation/>
-				</xr:Item>
-				<xr:Item>
-					<xr:Metadata>Constant.ПараметрыДополнительныхРеквизитовИСведений</xr:Metadata>
+					<xr:Metadata>InformationRegister.БезопасноеХранилищеДанных</xr:Metadata>
 					<xr:Use>DontUse</xr:Use>
 					<xr:ConditionalSeparation/>
 				</xr:Item>
@@ -791,12 +931,12 @@
 					<xr:ConditionalSeparation/>
 				</xr:Item>
 				<xr:Item>
-					<xr:Metadata>Constant.ИспользоватьСинхронизациюДанныхВМоделиСервисаСЛокальнойПрограммой</xr:Metadata>
+					<xr:Metadata>InformationRegister.БлокировкиСеансовОбластейДанных</xr:Metadata>
 					<xr:Use>DontUse</xr:Use>
 					<xr:ConditionalSeparation/>
 				</xr:Item>
 				<xr:Item>
-					<xr:Metadata>InformationRegister.БлокировкиСеансовОбластейДанных</xr:Metadata>
+					<xr:Metadata>InformationRegister.ЗагруженныеВерсииАдресныхСведений</xr:Metadata>
 					<xr:Use>DontUse</xr:Use>
 					<xr:ConditionalSeparation/>
 				</xr:Item>

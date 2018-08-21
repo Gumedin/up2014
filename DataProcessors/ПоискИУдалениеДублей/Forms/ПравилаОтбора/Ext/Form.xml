@@ -31,12 +31,6 @@
 						<v8:content>Форма группа справки</v8:content>
 					</v8:item>
 				</Title>
-				<ToolTip>
-					<v8:item>
-						<v8:lang>ru</v8:lang>
-						<v8:content>Форма группа справки</v8:content>
-					</v8:item>
-				</ToolTip>
 				<ExtendedTooltip name="ФормаГруппаСправкиРасширеннаяПодсказка" id="12"/>
 				<ChildItems>
 					<Button name="ФормаСправка" id="7">
@@ -59,37 +53,40 @@
 			<EnableStartDrag>true</EnableStartDrag>
 			<EnableDrag>true</EnableDrag>
 			<DataPath>КомпоновщикПредварительногоОтбора.Settings.Filter</DataPath>
-			<SearchStringLocation>None</SearchStringLocation>
-			<ViewStatusLocation>None</ViewStatusLocation>
-			<SearchControlLocation>None</SearchControlLocation>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Компоновщик предварительного отбора настройки отбор</v8:content>
+				</v8:item>
+			</Title>
 			<ViewMode>All</ViewMode>
 			<SettingsNamedItemDetailedRepresentation>false</SettingsNamedItemDetailedRepresentation>
 			<ContextMenu name="КомпоновщикПредварительногоОтбораНастройкиОтборКонтекстноеМеню" id="2"/>
 			<AutoCommandBar name="КомпоновщикПредварительногоОтбораНастройкиОтборКоманднаяПанель" id="3"/>
 			<ExtendedTooltip name="КомпоновщикПредварительногоОтбораНастройкиОтборРасширеннаяПодсказка" id="4"/>
-			<SearchStringAddition name="КомпоновщикПредварительногоОтбораНастройкиОтборСтрокаПоиска" id="13">
+			<SearchStringAddition name="КомпоновщикПредварительногоОтбораНастройкиОтборSearchString" id="13">
 				<AdditionSource>
 					<Item>КомпоновщикПредварительногоОтбораНастройкиОтбор</Item>
 					<Type>SearchStringRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="КомпоновщикПредварительногоОтбораНастройкиОтборСтрокаПоискаКонтекстноеМеню" id="14"/>
-				<ExtendedTooltip name="КомпоновщикПредварительногоОтбораНастройкиОтборСтрокаПоискаРасширеннаяПодсказка" id="15"/>
+				<ContextMenu name="КомпоновщикПредварительногоОтбораНастройкиОтборSearchStringContextMenu" id="14"/>
+				<ExtendedTooltip name="КомпоновщикПредварительногоОтбораНастройкиОтборSearchStringExtendedTooltip" id="15"/>
 			</SearchStringAddition>
-			<ViewStatusAddition name="КомпоновщикПредварительногоОтбораНастройкиОтборСостояниеПросмотра" id="16">
+			<ViewStatusAddition name="КомпоновщикПредварительногоОтбораНастройкиОтборViewStatus" id="16">
 				<AdditionSource>
 					<Item>КомпоновщикПредварительногоОтбораНастройкиОтбор</Item>
 					<Type>ViewStatusRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="КомпоновщикПредварительногоОтбораНастройкиОтборСостояниеПросмотраКонтекстноеМеню" id="17"/>
-				<ExtendedTooltip name="КомпоновщикПредварительногоОтбораНастройкиОтборСостояниеПросмотраРасширеннаяПодсказка" id="18"/>
+				<ContextMenu name="КомпоновщикПредварительногоОтбораНастройкиОтборViewStatusContextMenu" id="17"/>
+				<ExtendedTooltip name="КомпоновщикПредварительногоОтбораНастройкиОтборViewStatusExtendedTooltip" id="18"/>
 			</ViewStatusAddition>
-			<SearchControlAddition name="КомпоновщикПредварительногоОтбораНастройкиОтборУправлениеПоиском" id="19">
+			<SearchControlAddition name="КомпоновщикПредварительногоОтбораНастройкиОтборSearchControl" id="19">
 				<AdditionSource>
 					<Item>КомпоновщикПредварительногоОтбораНастройкиОтбор</Item>
 					<Type>SearchControl</Type>
 				</AdditionSource>
-				<ContextMenu name="КомпоновщикПредварительногоОтбораНастройкиОтборУправлениеПоискомКонтекстноеМеню" id="20"/>
-				<ExtendedTooltip name="КомпоновщикПредварительногоОтбораНастройкиОтборУправлениеПоискомРасширеннаяПодсказка" id="21"/>
+				<ContextMenu name="КомпоновщикПредварительногоОтбораНастройкиОтборSearchControlContextMenu" id="20"/>
+				<ExtendedTooltip name="КомпоновщикПредварительногоОтбораНастройкиОтборSearchControlExtendedTooltip" id="21"/>
 			</SearchControlAddition>
 		</Table>
 	</ChildItems>

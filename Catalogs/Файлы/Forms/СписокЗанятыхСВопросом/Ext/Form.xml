@@ -169,7 +169,7 @@
 								<Type>CommandBarButton</Type>
 								<SkipOnInput>false</SkipOnInput>
 								<CommandName>CommonCommand.ДополнительныеСведенияКоманднаяПанель</CommandName>
-								<DataPath>Items.Список.CurrentData.Ref</DataPath>
+								<DataPath>~Items.Список.CurrentData.Ref~Items.Список.CurrentData.Ссылка</DataPath>
 								<ExtendedTooltip name="ОбщаяКоманда_ДополнительныеСведенияExtendedTooltip" id="88"/>
 							</Button>
 						</ChildItems>
@@ -212,7 +212,7 @@
 					<ExtendedTooltip name="ГруппаExtendedTooltip" id="90"/>
 					<ChildItems>
 						<PictureField name="Картинка" id="7">
-							<DataPath>СписокФайлов.ИндексКартинки</DataPath>
+							<DataPath>~СписокФайлов.ИндексКартинки</DataPath>
 							<TitleLocation>None</TitleLocation>
 							<FooterHorizontalAlign>Left</FooterHorizontalAlign>
 							<Width>2</Width>
@@ -229,7 +229,7 @@
 							<ExtendedTooltip name="КартинкаExtendedTooltip" id="91"/>
 						</PictureField>
 						<InputField name="Наименование" id="9">
-							<DataPath>СписокФайлов.Description</DataPath>
+							<DataPath>~СписокФайлов.Description~СписокФайлов.Наименование</DataPath>
 							<DefaultItem>true</DefaultItem>
 							<Title>
 								<v8:item>
@@ -247,7 +247,7 @@
 					</ChildItems>
 				</ColumnGroup>
 				<InputField name="Описание" id="13">
-					<DataPath>СписокФайлов.Описание</DataPath>
+					<DataPath>~СписокФайлов.Описание</DataPath>
 					<FooterHorizontalAlign>Left</FooterHorizontalAlign>
 					<Height>1</Height>
 					<Wrap>false</Wrap>
@@ -256,7 +256,7 @@
 					<ExtendedTooltip name="ОписаниеExtendedTooltip" id="93"/>
 				</InputField>
 				<LabelField name="Ссылка" id="100">
-					<DataPath>СписокФайлов.Ref</DataPath>
+					<DataPath>~СписокФайлов.Ref~СписокФайлов.Ссылка</DataPath>
 					<UserVisible>
 						<xr:Common>false</xr:Common>
 					</UserVisible>
@@ -348,9 +348,9 @@
 			</Type>
 			<MainAttribute>true</MainAttribute>
 			<UseAlways>
-				<Field>СписокФайлов.Ref</Field>
-				<Field>СписокФайлов.Редактирует</Field>
-				<Field>СписокФайлов.ХранитьВерсии</Field>
+				<Field>~СписокФайлов.Ref~СписокФайлов.Ссылка</Field>
+				<Field>~СписокФайлов.Редактирует</Field>
+				<Field>~СписокФайлов.ХранитьВерсии</Field>
 			</UseAlways>
 			<Settings xsi:type="DynamicList">
 				<ManualQuery>true</ManualQuery>

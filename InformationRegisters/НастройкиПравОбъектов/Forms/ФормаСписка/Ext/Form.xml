@@ -1,45 +1,69 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5">
-	<Width>100</Width>
-	<VerticalScroll>useIfNecessary</VerticalScroll>
 	<CommandSet>
 		<ExcludedCommand>Copy</ExcludedCommand>
 	</CommandSet>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
-		<ChildItems>
-			<Button name="ФормаОбновитьВспомогательныеДанныеРегистра" id="33">
-				<Type>CommandBarButton</Type>
-				<OnlyInAllActions>false</OnlyInAllActions>
-				<CommandName>Form.Command.ОбновитьВспомогательныеДанныеРегистра</CommandName>
-				<ExtendedTooltip name="ФормаОбновитьВспомогательныеДанныеРегистраExtendedTooltip" id="39"/>
-			</Button>
-			<Button name="ФормаВключитьВозможностьРедактирования" id="32">
-				<Type>CommandBarButton</Type>
-				<OnlyInAllActions>false</OnlyInAllActions>
-				<CommandName>Form.Command.ВключитьВозможностьРедактирования</CommandName>
-				<ExtendedTooltip name="ФормаВключитьВозможностьРедактированияExtendedTooltip" id="40"/>
-			</Button>
-		</ChildItems>
+		<Autofill>false</Autofill>
 	</AutoCommandBar>
 	<Events>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
+		<UsualGroup name="ГруппаПользовательскихНастроек" id="69">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа пользовательских настроек</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПользовательскихНастроекРасширеннаяПодсказка" id="70"/>
+		</UsualGroup>
+		<CommandBar name="КоманднаяПанель" id="71">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Командная панель</v8:content>
+				</v8:item>
+			</Title>
+			<CommandSource>Form</CommandSource>
+			<ExtendedTooltip name="КоманднаяПанельРасширеннаяПодсказка" id="72"/>
+			<ChildItems>
+				<Button name="ФормаОбновитьВспомогательныеДанныеРегистра" id="33">
+					<Type>CommandBarButton</Type>
+					<OnlyInAllActions>false</OnlyInAllActions>
+					<CommandName>Form.Command.ОбновитьВспомогательныеДанныеРегистра</CommandName>
+					<ExtendedTooltip name="ФормаОбновитьВспомогательныеДанныеРегистраExtendedTooltip" id="39"/>
+				</Button>
+				<Button name="ФормаВключитьВозможностьРедактирования" id="32">
+					<Type>CommandBarButton</Type>
+					<OnlyInAllActions>false</OnlyInAllActions>
+					<CommandName>Form.Command.ВключитьВозможностьРедактирования</CommandName>
+					<ExtendedTooltip name="ФормаВключитьВозможностьРедактированияExtendedTooltip" id="40"/>
+				</Button>
+			</ChildItems>
+		</CommandBar>
 		<Table name="Список" id="1">
 			<Representation>List</Representation>
 			<CommandBarLocation>None</CommandBarLocation>
 			<DefaultItem>true</DefaultItem>
+			<Height>8</Height>
 			<UseAlternationRowColor>true</UseAlternationRowColor>
 			<InitialTreeView>ExpandTopLevel</InitialTreeView>
 			<EnableStartDrag>true</EnableStartDrag>
 			<DataPath>Список</DataPath>
 			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список</v8:content>
+				</v8:item>
+			</Title>
 			<CommandSet>
 				<ExcludedCommand>Copy</ExcludedCommand>
 			</CommandSet>
-			<SearchStringLocation>None</SearchStringLocation>
-			<ViewStatusLocation>None</ViewStatusLocation>
-			<SearchControlLocation>None</SearchControlLocation>
 			<AutoRefresh>false</AutoRefresh>
 			<AutoRefreshPeriod>60</AutoRefreshPeriod>
 			<Period>
@@ -53,179 +77,156 @@
 			<ShowRoot>true</ShowRoot>
 			<AllowRootChoice>false</AllowRootChoice>
 			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<UserSettingsGroup>ГруппаПользовательскихНастроек</UserSettingsGroup>
 			<ContextMenu name="СписокКонтекстноеМеню" id="2"/>
 			<AutoCommandBar name="СписокКоманднаяПанель" id="3">
 				<Autofill>false</Autofill>
 			</AutoCommandBar>
 			<ExtendedTooltip name="СписокExtendedTooltip" id="41"/>
-			<SearchStringAddition name="СписокСтрокаПоиска" id="69">
+			<SearchStringAddition name="СписокSearchString" id="73">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>SearchStringRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="70"/>
-				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="71"/>
+				<ContextMenu name="СписокSearchStringContextMenu" id="74"/>
+				<ExtendedTooltip name="СписокSearchStringExtendedTooltip" id="75"/>
 			</SearchStringAddition>
-			<ViewStatusAddition name="СписокСостояниеПросмотра" id="72">
+			<ViewStatusAddition name="СписокViewStatus" id="76">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>ViewStatusRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="73"/>
-				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="74"/>
+				<ContextMenu name="СписокViewStatusContextMenu" id="77"/>
+				<ExtendedTooltip name="СписокViewStatusExtendedTooltip" id="78"/>
 			</ViewStatusAddition>
-			<SearchControlAddition name="СписокУправлениеПоиском" id="75">
+			<SearchControlAddition name="СписокSearchControl" id="79">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>SearchControl</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="76"/>
-				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="77"/>
+				<ContextMenu name="СписокSearchControlContextMenu" id="80"/>
+				<ExtendedTooltip name="СписокSearchControlExtendedTooltip" id="81"/>
 			</SearchControlAddition>
 			<ChildItems>
-				<LabelField name="Объект" id="4">
+				<LabelField name="СписокОбъект" id="4">
 					<DataPath>Список.Объект</DataPath>
 					<DefaultItem>true</DefaultItem>
-					<ContextMenu name="ОбъектКонтекстноеМеню" id="5"/>
-					<ExtendedTooltip name="ОбъектРасширеннаяПодсказка" id="42"/>
+					<ContextMenu name="СписокОбъектКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="СписокОбъектРасширеннаяПодсказка" id="42"/>
 				</LabelField>
-				<LabelField name="Пользователь" id="6">
+				<LabelField name="СписокПользователь" id="6">
 					<DataPath>Список.Пользователь</DataPath>
 					<DefaultItem>true</DefaultItem>
-					<ContextMenu name="ПользовательКонтекстноеМеню" id="7"/>
-					<ExtendedTooltip name="ПользовательExtendedTooltip" id="43"/>
+					<ContextMenu name="СписокПользовательКонтекстноеМеню" id="7"/>
+					<ExtendedTooltip name="СписокПользовательРасширеннаяПодсказка" id="43"/>
 				</LabelField>
-				<LabelField name="Право" id="8">
+				<LabelField name="СписокПраво" id="8">
 					<DataPath>Список.Право</DataPath>
 					<DefaultItem>true</DefaultItem>
 					<Width>20</Width>
-					<ContextMenu name="ПравоКонтекстноеМеню" id="9"/>
-					<ExtendedTooltip name="ПравоExtendedTooltip" id="44"/>
+					<ContextMenu name="СписокПравоКонтекстноеМеню" id="9"/>
+					<ExtendedTooltip name="СписокПравоРасширеннаяПодсказка" id="44"/>
 				</LabelField>
-				<ColumnGroup name="ЗначениеПрава" id="38">
+				<ColumnGroup name="СписокГруппаЗначениеПрава" id="38">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Значение права</v8:content>
+							<v8:content>Список группа значение права</v8:content>
 						</v8:item>
 					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Значение права</v8:content>
-						</v8:item>
-					</ToolTip>
-					<ExtendedTooltip name="ЗначениеПраваExtendedTooltip" id="45"/>
+					<ExtendedTooltip name="СписокГруппаЗначениеПраваРасширеннаяПодсказка" id="45"/>
 					<ChildItems>
-						<CheckBoxField name="ПравоЗапрещено" id="12">
+						<CheckBoxField name="СписокПравоЗапрещено" id="12">
 							<DataPath>Список.ПравоЗапрещено</DataPath>
 							<DefaultItem>true</DefaultItem>
 							<CheckBoxType>Auto</CheckBoxType>
-							<ContextMenu name="ПравоЗапрещеноКонтекстноеМеню" id="13"/>
-							<ExtendedTooltip name="ПравоЗапрещеноРасширеннаяПодсказка" id="46"/>
+							<ContextMenu name="СписокПравоЗапрещеноКонтекстноеМеню" id="13"/>
+							<ExtendedTooltip name="СписокПравоЗапрещеноРасширеннаяПодсказка" id="46"/>
 						</CheckBoxField>
-						<CheckBoxField name="НаследованиеРазрешено" id="14">
+						<CheckBoxField name="СписокНаследованиеРазрешено" id="14">
 							<DataPath>Список.НаследованиеРазрешено</DataPath>
 							<DefaultItem>true</DefaultItem>
 							<CheckBoxType>Auto</CheckBoxType>
-							<ContextMenu name="НаследованиеРазрешеноКонтекстноеМеню" id="15"/>
-							<ExtendedTooltip name="НаследованиеРазрешеноРасширеннаяПодсказка" id="47"/>
+							<ContextMenu name="СписокНаследованиеРазрешеноКонтекстноеМеню" id="15"/>
+							<ExtendedTooltip name="СписокНаследованиеРазрешеноРасширеннаяПодсказка" id="47"/>
 						</CheckBoxField>
 					</ChildItems>
 				</ColumnGroup>
-				<LabelField name="Порядок" id="66">
+				<LabelField name="СписокПорядокНастройки" id="66">
 					<DataPath>Список.ПорядокНастройки</DataPath>
-					<ContextMenu name="ПорядокКонтекстноеМеню" id="67"/>
-					<ExtendedTooltip name="ПорядокРасширеннаяПодсказка" id="68"/>
+					<ContextMenu name="СписокПорядокНастройкиКонтекстноеМеню" id="67"/>
+					<ExtendedTooltip name="СписокПорядокНастройкиРасширеннаяПодсказка" id="68"/>
 				</LabelField>
-				<ColumnGroup name="УровеньПрава" id="58">
+				<ColumnGroup name="СписокГруппаУровеньПрава" id="58">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Уровень права</v8:content>
+							<v8:content>Список группа уровень права</v8:content>
 						</v8:item>
 					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Уровень права</v8:content>
-						</v8:item>
-					</ToolTip>
-					<ExtendedTooltip name="УровеньПраваРасширеннаяПодсказка" id="59"/>
+					<ExtendedTooltip name="СписокГруппаУровеньПраваРасширеннаяПодсказка" id="59"/>
 					<ChildItems>
-						<LabelField name="УровеньРазрешенияПрава" id="60">
+						<LabelField name="СписокУровеньРазрешенияПрава" id="60">
 							<DataPath>Список.УровеньРазрешенияПрава</DataPath>
-							<ContextMenu name="УровеньРазрешенияПраваКонтекстноеМеню" id="61"/>
-							<ExtendedTooltip name="УровеньРазрешенияПраваРасширеннаяПодсказка" id="62"/>
+							<ContextMenu name="СписокУровеньРазрешенияПраваКонтекстноеМеню" id="61"/>
+							<ExtendedTooltip name="СписокУровеньРазрешенияПраваРасширеннаяПодсказка" id="62"/>
 						</LabelField>
-						<LabelField name="УровеньЗапрещенияПрава" id="63">
+						<LabelField name="СписокУровеньЗапрещенияПрава" id="63">
 							<DataPath>Список.УровеньЗапрещенияПрава</DataPath>
-							<ContextMenu name="УровеньЗапрещенияПраваКонтекстноеМеню" id="64"/>
-							<ExtendedTooltip name="УровеньЗапрещенияПраваРасширеннаяПодсказка" id="65"/>
+							<ContextMenu name="СписокУровеньЗапрещенияПраваКонтекстноеМеню" id="64"/>
+							<ExtendedTooltip name="СписокУровеньЗапрещенияПраваРасширеннаяПодсказка" id="65"/>
 						</LabelField>
 					</ChildItems>
 				</ColumnGroup>
-				<LabelField name="Таблица" id="10">
+				<LabelField name="СписокТаблица" id="10">
 					<DataPath>Список.Таблица</DataPath>
 					<DefaultItem>true</DefaultItem>
-					<ContextMenu name="ТаблицаКонтекстноеМеню" id="11"/>
-					<ExtendedTooltip name="ТаблицаExtendedTooltip" id="48"/>
+					<ContextMenu name="СписокТаблицаКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="СписокТаблицаРасширеннаяПодсказка" id="48"/>
 				</LabelField>
-				<ColumnGroup name="УровеньЧтения" id="34">
+				<ColumnGroup name="СписокГруппаУровеньЧтения" id="34">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Уровень чтения</v8:content>
+							<v8:content>Список группа уровень чтения</v8:content>
 						</v8:item>
 					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Уровень чтения</v8:content>
-						</v8:item>
-					</ToolTip>
-					<ExtendedTooltip name="УровеньЧтенияРасширеннаяПодсказка" id="49"/>
+					<ExtendedTooltip name="СписокГруппаУровеньЧтенияРасширеннаяПодсказка" id="49"/>
 					<ChildItems>
-						<LabelField name="УровеньРазрешенияЧтения" id="16">
+						<LabelField name="СписокУровеньРазрешенияЧтения" id="16">
 							<DataPath>Список.УровеньРазрешенияЧтения</DataPath>
 							<DefaultItem>true</DefaultItem>
-							<ContextMenu name="УровеньРазрешенияЧтенияКонтекстноеМеню" id="17"/>
-							<ExtendedTooltip name="УровеньРазрешенияЧтенияРасширеннаяПодсказка" id="50"/>
+							<ContextMenu name="СписокУровеньРазрешенияЧтенияКонтекстноеМеню" id="17"/>
+							<ExtendedTooltip name="СписокУровеньРазрешенияЧтенияРасширеннаяПодсказка" id="50"/>
 						</LabelField>
-						<LabelField name="УровеньЗапрещенияЧтения" id="18">
+						<LabelField name="СписокУровеньЗапрещенияЧтения" id="18">
 							<DataPath>Список.УровеньЗапрещенияЧтения</DataPath>
 							<DefaultItem>true</DefaultItem>
-							<ContextMenu name="УровеньЗапрещенияЧтенияКонтекстноеМеню" id="19"/>
-							<ExtendedTooltip name="УровеньЗапрещенияЧтенияРасширеннаяПодсказка" id="51"/>
+							<ContextMenu name="СписокУровеньЗапрещенияЧтенияКонтекстноеМеню" id="19"/>
+							<ExtendedTooltip name="СписокУровеньЗапрещенияЧтенияРасширеннаяПодсказка" id="51"/>
 						</LabelField>
 					</ChildItems>
 				</ColumnGroup>
-				<ColumnGroup name="УровеньИзменения" id="36">
+				<ColumnGroup name="СписокГруппаУровеньИзменения" id="36">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Уровень изменения</v8:content>
+							<v8:content>Список группа уровень изменения</v8:content>
 						</v8:item>
 					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Уровень изменения</v8:content>
-						</v8:item>
-					</ToolTip>
-					<ExtendedTooltip name="УровеньИзмененияРасширеннаяПодсказка" id="55"/>
+					<ExtendedTooltip name="СписокГруппаУровеньИзмененияРасширеннаяПодсказка" id="55"/>
 					<ChildItems>
-						<LabelField name="УровеньРазрешенияИзменения" id="24">
+						<LabelField name="СписокУровеньРазрешенияИзменения" id="24">
 							<DataPath>Список.УровеньРазрешенияИзменения</DataPath>
 							<DefaultItem>true</DefaultItem>
-							<ContextMenu name="УровеньРазрешенияИзмененияКонтекстноеМеню" id="25"/>
-							<ExtendedTooltip name="УровеньРазрешенияИзмененияРасширеннаяПодсказка" id="56"/>
+							<ContextMenu name="СписокУровеньРазрешенияИзмененияКонтекстноеМеню" id="25"/>
+							<ExtendedTooltip name="СписокУровеньРазрешенияИзмененияРасширеннаяПодсказка" id="56"/>
 						</LabelField>
-						<LabelField name="УровеньЗапрещенияИзменения" id="26">
+						<LabelField name="СписокУровеньЗапрещенияИзменения" id="26">
 							<DataPath>Список.УровеньЗапрещенияИзменения</DataPath>
 							<DefaultItem>true</DefaultItem>
-							<ContextMenu name="УровеньЗапрещенияИзмененияКонтекстноеМеню" id="27"/>
-							<ExtendedTooltip name="УровеньЗапрещенияИзмененияРасширеннаяПодсказка" id="57"/>
+							<ContextMenu name="СписокУровеньЗапрещенияИзмененияКонтекстноеМеню" id="27"/>
+							<ExtendedTooltip name="СписокУровеньЗапрещенияИзмененияРасширеннаяПодсказка" id="57"/>
 						</LabelField>
 					</ChildItems>
 				</ColumnGroup>

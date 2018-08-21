@@ -11,13 +11,10 @@
 			</Synonym>
 			<Comment/>
 			<Source>
-				<v8:Type>cfg:CatalogObject.Инциденты</v8:Type>
-				<v8:Type>cfg:CatalogObject.ЗадачиПроектов</v8:Type>
-				<v8:Type>cfg:CatalogObject.Проекты</v8:Type>
-				<v8:Type>cfg:CatalogObject.ПосещенияКонтрагентов</v8:Type>
+				<v8:TypeSet>cfg:DefinedType.ВладелецПрисоединенныхФайловОбъект</v8:TypeSet>
 			</Source>
 			<Event>BeforeWrite</Event>
-			<Handler>CommonModule.ПрисоединенныеФайлы.УстановитьПометкуУдаленияПрисоединенныхФайлов</Handler>
+			<Handler>CommonModule.РаботаСФайлами.УстановитьПометкуУдаленияПрисоединенныхФайлов</Handler>
 		</Properties>
 	</EventSubscription>
 </MetaDataObject>

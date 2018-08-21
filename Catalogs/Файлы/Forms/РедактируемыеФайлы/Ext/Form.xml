@@ -155,7 +155,7 @@
 								<Type>CommandBarButton</Type>
 								<SkipOnInput>false</SkipOnInput>
 								<CommandName>CommonCommand.ДополнительныеСведенияКоманднаяПанель</CommandName>
-								<DataPath>Items.Список.CurrentData.Ref</DataPath>
+								<DataPath>~Items.Список.CurrentData.Ref~Items.Список.CurrentData.Ссылка</DataPath>
 								<ExtendedTooltip name="ОбщаяКоманда_ДополнительныеСведенияExtendedTooltip" id="86"/>
 							</Button>
 						</ChildItems>
@@ -199,7 +199,7 @@
 					<ExtendedTooltip name="ГруппаExtendedTooltip" id="88"/>
 					<ChildItems>
 						<PictureField name="Картинка" id="7">
-							<DataPath>СписокФайлов.ИндексКартинки</DataPath>
+							<DataPath>~СписокФайлов.ИндексКартинки</DataPath>
 							<TitleLocation>None</TitleLocation>
 							<FooterHorizontalAlign>Left</FooterHorizontalAlign>
 							<Width>2</Width>
@@ -216,7 +216,7 @@
 							<ExtendedTooltip name="КартинкаExtendedTooltip" id="89"/>
 						</PictureField>
 						<InputField name="Наименование" id="9">
-							<DataPath>СписокФайлов.Description</DataPath>
+							<DataPath>~СписокФайлов.Description~СписокФайлов.Наименование</DataPath>
 							<DefaultItem>true</DefaultItem>
 							<Title>
 								<v8:item>
@@ -232,7 +232,7 @@
 							<ExtendedTooltip name="НаименованиеExtendedTooltip" id="90"/>
 						</InputField>
 						<InputField name="Описание" id="13">
-							<DataPath>СписокФайлов.Описание</DataPath>
+							<DataPath>~СписокФайлов.Описание</DataPath>
 							<ShowInHeader>false</ShowInHeader>
 							<FooterHorizontalAlign>Left</FooterHorizontalAlign>
 							<Width>1</Width>
@@ -245,7 +245,7 @@
 					</ChildItems>
 				</ColumnGroup>
 				<LabelField name="ВладелецФайла" id="64">
-					<DataPath>СписокФайлов.ВладелецФайла</DataPath>
+					<DataPath>~СписокФайлов.ВладелецФайла</DataPath>
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -257,7 +257,7 @@
 					<ExtendedTooltip name="ВладелецФайлаExtendedTooltip" id="92"/>
 				</LabelField>
 				<LabelField name="ТекущаяВерсияРазмер" id="61">
-					<DataPath>СписокФайлов.Размер</DataPath>
+					<DataPath>~СписокФайлов.Размер</DataPath>
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -281,7 +281,7 @@
 					<ExtendedTooltip name="ТекущаяВерсияРазмерExtendedTooltip" id="93"/>
 				</LabelField>
 				<LabelField name="Ссылка" id="98">
-					<DataPath>СписокФайлов.Ref</DataPath>
+					<DataPath>~СписокФайлов.Ref~СписокФайлов.Ссылка</DataPath>
 					<UserVisible>
 						<xr:Common>false</xr:Common>
 					</UserVisible>
@@ -354,11 +354,11 @@
 			</Type>
 			<MainAttribute>true</MainAttribute>
 			<UseAlways>
+				<Field>~СписокФайлов.Ref~СписокФайлов.Ссылка</Field>
+				<Field>~СписокФайлов.Автор</Field>
 				<Field>~СписокФайлов.АвторТекущейВерсии</Field>
-				<Field>СписокФайлов.Ref</Field>
-				<Field>СписокФайлов.Автор</Field>
-				<Field>СписокФайлов.Редактирует</Field>
-				<Field>СписокФайлов.ХранитьВерсии</Field>
+				<Field>~СписокФайлов.Редактирует</Field>
+				<Field>~СписокФайлов.ХранитьВерсии</Field>
 			</UseAlways>
 			<Settings xsi:type="DynamicList">
 				<ManualQuery>true</ManualQuery>

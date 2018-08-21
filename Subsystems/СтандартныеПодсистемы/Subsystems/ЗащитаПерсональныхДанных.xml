@@ -10,7 +10,7 @@
 				</v8:item>
 			</Synonym>
 			<Comment>Защита персональных данных (в соответствии с требованиями 152-ФЗ)</Comment>
-			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<IncludeHelpInContents>false</IncludeHelpInContents>
 			<IncludeInCommandInterface>false</IncludeInCommandInterface>
 			<Explanation/>
 			<Picture/>
@@ -20,12 +20,31 @@
 				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ЗащитаПерсональныхДанныхПовтИсп</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ЗащитаПерсональныхДанныхПереопределяемый</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">StyleItem.СобытиеОтказ</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Role.ПодготовкаСогласияНаОбработкуПерсональныхДанных</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.СогласиеНаОбработкуПерсональныхДанных</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ЗащитаПерсональныхДанных</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ОбластиПерсональныхДанных</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.НастройкиРегистрацииСобытийДоступаКПерсональнымДанным</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ЗащитаПерсональныхДанныхКлиент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.СогласиеНаОбработкуПерсональныхДанных</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DefinedType.СубъектПерсональныхДанных</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ОтзывСогласияНаОбработкуПерсональныхДанных</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DocumentJournal.СогласияНаОбработкуПерсональныхДанных</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.СогласияНаОбработкуПерсональныхДанных</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.СогласияНаОбработкуПерсональныхДанныхИстекающие</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.СогласияНаОбработкуПерсональныхДанныхДействующие</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.СкрытиеКонфиденциальнойИнформации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.ПроверитьДатуЗапретаИзмененияПередУдалениемЗащитаПерсональныхДанных</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.ПроверитьДатуЗапретаИзмененияПередЗаписьюДокументаЗащитаПерсональныхДанных</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ScheduledJob.СкрытиеПерсональныхДанныхСубъектов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ScheduledJob.ПолучениеСубъектовДляСкрытияПерсональныхДанных</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ИспользоватьСкрытиеПерсональныхДанныхСубъектов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.СкрытьПерсональныеДанныеСубъектов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ОтсутствуетСогласие</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ДнейДоСкрытияПерсональныхДанныхСубъектов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ИспользоватьСкрытиеПерсональныхДанныхСубъектов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.СостоянияСубъектовДляСкрытия</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.СубъектыДляСкрытияПерсональныхДанных</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ЗащитаПерсональныхДанныхВызовСервера</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.КоллекцияОтсутствуетСогласие</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects/>

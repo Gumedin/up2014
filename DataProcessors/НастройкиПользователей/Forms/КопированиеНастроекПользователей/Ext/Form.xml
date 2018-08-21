@@ -6,11 +6,9 @@
 			<v8:content>Копирование настроек пользователей</v8:content>
 		</v8:item>
 	</Title>
-	<Width>49</Width>
 	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
 	<AutoTitle>false</AutoTitle>
 	<CommandBarLocation>Bottom</CommandBarLocation>
-	<VerticalScroll>useIfNecessary</VerticalScroll>
 	<CommandSet>
 		<ExcludedCommand>Abort</ExcludedCommand>
 		<ExcludedCommand>Cancel</ExcludedCommand>
@@ -81,77 +79,75 @@
 			<Representation>NormalSeparation</Representation>
 			<ExtendedTooltip name="ГруппаКомуКопироватьExtendedTooltip" id="73"/>
 			<ChildItems>
-				<RadioButtonField name="ПереключательКомуКопироватьНастройки" id="3">
-					<DataPath>ПереключательКомуКопироватьНастройки</DataPath>
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Кому скопировать</v8:content>
-						</v8:item>
-					</Title>
-					<TitleLocation>None</TitleLocation>
-					<RadioButtonType>Auto</RadioButtonType>
-					<ColumnsCount>1</ColumnsCount>
-					<ChoiceList>
-						<xr:Item>
-							<xr:Presentation/>
-							<xr:CheckState>0</xr:CheckState>
-							<xr:Value xsi:type="FormChoiceListDesTimeValue">
-								<Presentation>
-									<v8:item>
-										<v8:lang>ru</v8:lang>
-										<v8:content>Выбранным пользователям:</v8:content>
-									</v8:item>
-								</Presentation>
-								<Value xsi:type="xs:string">ВыбраннымПользователям</Value>
-							</xr:Value>
-						</xr:Item>
-						<xr:Item>
-							<xr:Presentation/>
-							<xr:CheckState>0</xr:CheckState>
-							<xr:Value xsi:type="FormChoiceListDesTimeValue">
-								<Presentation>
-									<v8:item>
-										<v8:lang>ru</v8:lang>
-										<v8:content>Всем пользователям</v8:content>
-									</v8:item>
-								</Presentation>
-								<Value xsi:type="xs:string">ВсемПользователям</Value>
-							</xr:Value>
-						</xr:Item>
-					</ChoiceList>
-					<ContextMenu name="ПереключательКомуКопироватьНастройкиКонтекстноеМеню" id="4"/>
-					<ExtendedTooltip name="ПереключательКомуКопироватьНастройкиExtendedTooltip" id="74"/>
-					<Events>
-						<Event name="OnChange">ПереключательКомуКопироватьНастройкиПриИзменении</Event>
-					</Events>
-				</RadioButtonField>
 				<UsualGroup name="ГруппаВыбратьПользователей" id="29">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Группа выбрать пользователей</v8:content>
+							<v8:content>Выбрать пользователей</v8:content>
 						</v8:item>
 					</Title>
-					<Group>Vertical</Group>
+					<Group>Horizontal</Group>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="ГруппаВыбратьПользователейExtendedTooltip" id="75"/>
 					<ChildItems>
+						<RadioButtonField name="ПереключательКомуКопироватьНастройки" id="3">
+							<DataPath>ПереключательКомуКопироватьНастройки</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Кому скопировать</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>None</TitleLocation>
+							<RadioButtonType>Auto</RadioButtonType>
+							<ColumnsCount>1</ColumnsCount>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Выбранным пользователям:</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:string">ВыбраннымПользователям</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Всем пользователям</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:string">ВсемПользователям</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="ПереключательКомуКопироватьНастройкиКонтекстноеМеню" id="4"/>
+							<ExtendedTooltip name="ПереключательКомуКопироватьНастройкиExtendedTooltip" id="74"/>
+							<Events>
+								<Event name="OnChange">ПереключательКомуКопироватьНастройкиПриИзменении</Event>
+							</Events>
+						</RadioButtonField>
 						<LabelDecoration name="ВыбратьПользователей" id="58">
-							<Width>27</Width>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>28</MaxWidth>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<MaxHeight>1</MaxHeight>
+							<VerticalStretch>false</VerticalStretch>
 							<Title formatted="false">
 								<v8:item>
 									<v8:lang>ru</v8:lang>
 									<v8:content>Выбрать</v8:content>
 								</v8:item>
 							</Title>
-							<ToolTip>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Выберите пользователей, которым необходимо скопировать настройки</v8:content>
-								</v8:item>
-							</ToolTip>
 							<Hyperlink>true</Hyperlink>
 							<ContextMenu name="ВыбратьПользователейКонтекстноеМеню" id="59"/>
 							<ExtendedTooltip name="ВыбратьПользователейExtendedTooltip" id="76"/>
@@ -171,69 +167,67 @@
 				</v8:item>
 			</Title>
 			<Group>Horizontal</Group>
-			<Representation>None</Representation>
+			<Representation>NormalSeparation</Representation>
 			<ExtendedTooltip name="ГруппаКопируемыеНастройкиExtendedTooltip" id="77"/>
 			<ChildItems>
-				<RadioButtonField name="ПереключательКопируемыеНастройки" id="62">
-					<DataPath>ПереключательКопируемыеНастройки</DataPath>
-					<TitleLocation>None</TitleLocation>
-					<RadioButtonType>Auto</RadioButtonType>
-					<ColumnsCount>1</ColumnsCount>
-					<ChoiceList>
-						<xr:Item>
-							<xr:Presentation/>
-							<xr:CheckState>0</xr:CheckState>
-							<xr:Value xsi:type="FormChoiceListDesTimeValue">
-								<Presentation>
-									<v8:item>
-										<v8:lang>ru</v8:lang>
-										<v8:content>Все настройки</v8:content>
-									</v8:item>
-								</Presentation>
-								<Value xsi:type="xs:string">СкопироватьВсе</Value>
-							</xr:Value>
-						</xr:Item>
-						<xr:Item>
-							<xr:Presentation/>
-							<xr:CheckState>0</xr:CheckState>
-							<xr:Value xsi:type="FormChoiceListDesTimeValue">
-								<Presentation>
-									<v8:item>
-										<v8:lang>ru</v8:lang>
-										<v8:content>Отдельные настройки:</v8:content>
-									</v8:item>
-								</Presentation>
-								<Value xsi:type="xs:string">СкопироватьОтдельные</Value>
-							</xr:Value>
-						</xr:Item>
-					</ChoiceList>
-					<ContextMenu name="ПереключательКопируемыеНастройкиКонтекстноеМеню" id="63"/>
-					<ExtendedTooltip name="ПереключательКопируемыеНастройкиExtendedTooltip" id="78"/>
-					<Events>
-						<Event name="OnChange">ПереключательКопируемыеНастройкиПриИзменении</Event>
-					</Events>
-				</RadioButtonField>
 				<UsualGroup name="ГруппаВыбрать" id="64">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Группа выбрать</v8:content>
+							<v8:content>Выбрать</v8:content>
 						</v8:item>
 					</Title>
-					<Group>Vertical</Group>
+					<VerticalStretch>true</VerticalStretch>
+					<Group>Horizontal</Group>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="ГруппаВыбратьExtendedTooltip" id="79"/>
 					<ChildItems>
-						<LabelDecoration name="Отступ1" id="65">
-							<ContextMenu name="Отступ1КонтекстноеМеню" id="66"/>
-							<ExtendedTooltip name="Отступ1ExtendedTooltip" id="80"/>
-						</LabelDecoration>
+						<RadioButtonField name="ПереключательКопируемыеНастройки" id="62">
+							<DataPath>ПереключательКопируемыеНастройки</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<RadioButtonType>Auto</RadioButtonType>
+							<ColumnsCount>1</ColumnsCount>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Все настройки</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:string">СкопироватьВсе</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Отдельные настройки:</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:string">СкопироватьОтдельные</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="ПереключательКопируемыеНастройкиКонтекстноеМеню" id="63"/>
+							<ExtendedTooltip name="ПереключательКопируемыеНастройкиExtendedTooltip" id="78"/>
+							<Events>
+								<Event name="OnChange">ПереключательКопируемыеНастройкиПриИзменении</Event>
+							</Events>
+						</RadioButtonField>
 						<LabelDecoration name="ВыбратьНастройки" id="60">
 							<Enabled>false</Enabled>
-							<Width>28</Width>
-							<Height>1</Height>
-							<HorizontalStretch>false</HorizontalStretch>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>32</MaxWidth>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<MaxHeight>1</MaxHeight>
 							<VerticalStretch>false</VerticalStretch>
 							<Title formatted="false">
 								<v8:item>
@@ -241,15 +235,8 @@
 									<v8:content>Выбрать</v8:content>
 								</v8:item>
 							</Title>
-							<ToolTip>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Выберите настройки, которые необходимо скопировать</v8:content>
-								</v8:item>
-							</ToolTip>
+							<GroupVerticalAlign>Bottom</GroupVerticalAlign>
 							<Hyperlink>true</Hyperlink>
-							<VerticalAlign>Top</VerticalAlign>
-							<TitleHeight>1</TitleHeight>
 							<ContextMenu name="ВыбратьНастройкиКонтекстноеМеню" id="61"/>
 							<ExtendedTooltip name="ВыбратьНастройкиExtendedTooltip" id="81"/>
 							<Events>
@@ -260,10 +247,6 @@
 				</UsualGroup>
 			</ChildItems>
 		</UsualGroup>
-		<LabelDecoration name="Отступ" id="67">
-			<ContextMenu name="ОтступКонтекстноеМеню" id="68"/>
-			<ExtendedTooltip name="ОтступExtendedTooltip" id="82"/>
-		</LabelDecoration>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="Объект" id="1">

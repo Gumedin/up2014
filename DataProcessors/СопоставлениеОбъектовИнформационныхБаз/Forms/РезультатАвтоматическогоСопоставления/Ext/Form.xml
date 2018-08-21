@@ -4,7 +4,6 @@
 	<AutoTitle>false</AutoTitle>
 	<Customizable>false</Customizable>
 	<CommandBarLocation>None</CommandBarLocation>
-	<VerticalScroll>useIfNecessary</VerticalScroll>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<HorizontalAlign>Right</HorizontalAlign>
 		<Autofill>false</Autofill>
@@ -34,12 +33,6 @@
 							<v8:content>Сопоставление объектов</v8:content>
 						</v8:item>
 					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Сопоставление объектов</v8:content>
-						</v8:item>
-					</ToolTip>
 					<ExtendedTooltip name="СопоставлениеОбъектовExtendedTooltip" id="152"/>
 					<ChildItems>
 						<CommandBar name="КоманднаяПанельТаблицы" id="69">
@@ -49,12 +42,6 @@
 									<v8:content>Командная панель таблицы</v8:content>
 								</v8:item>
 							</Title>
-							<ToolTip>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Командная панель таблицы</v8:content>
-								</v8:item>
-							</ToolTip>
 							<ExtendedTooltip name="КоманднаяПанельТаблицыExtendedTooltip" id="153"/>
 							<ChildItems>
 								<Button name="УстановитьПометки" id="70">
@@ -82,6 +69,12 @@
 							<EnableStartDrag>true</EnableStartDrag>
 							<EnableDrag>true</EnableDrag>
 							<DataPath>Объект.ТаблицаАвтоматическиСопоставленныхОбъектов</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Таблица автоматически сопоставленных объектов</v8:content>
+								</v8:item>
+							</Title>
 							<CommandSet>
 								<ExcludedCommand>Add</ExcludedCommand>
 								<ExcludedCommand>CancelSearch</ExcludedCommand>
@@ -98,42 +91,40 @@
 								<ExcludedCommand>SortListAsc</ExcludedCommand>
 								<ExcludedCommand>SortListDesc</ExcludedCommand>
 							</CommandSet>
-							<SearchStringLocation>None</SearchStringLocation>
-							<ViewStatusLocation>None</ViewStatusLocation>
-							<SearchControlLocation>None</SearchControlLocation>
 							<RowFilter xsi:nil="true"/>
 							<ContextMenu name="ТаблицаАвтоматическиСопоставленныхОбъектовКонтекстноеМеню" id="32"/>
 							<AutoCommandBar name="ТаблицаАвтоматическиСопоставленныхОбъектовКоманднаяПанель" id="33">
 								<Autofill>false</Autofill>
 							</AutoCommandBar>
 							<ExtendedTooltip name="ТаблицаАвтоматическиСопоставленныхОбъектовExtendedTooltip" id="156"/>
-							<SearchStringAddition name="ТаблицаАвтоматическиСопоставленныхОбъектовСтрокаПоиска" id="200">
+							<SearchStringAddition name="ТаблицаАвтоматическиСопоставленныхОбъектовСтрокаПоиска" id="206">
 								<AdditionSource>
 									<Item>ТаблицаАвтоматическиСопоставленныхОбъектов</Item>
 									<Type>SearchStringRepresentation</Type>
 								</AdditionSource>
-								<ContextMenu name="ТаблицаАвтоматическиСопоставленныхОбъектовСтрокаПоискаКонтекстноеМеню" id="201"/>
-								<ExtendedTooltip name="ТаблицаАвтоматическиСопоставленныхОбъектовСтрокаПоискаРасширеннаяПодсказка" id="202"/>
+								<ContextMenu name="ТаблицаАвтоматическиСопоставленныхОбъектовСтрокаПоискаКонтекстноеМеню" id="207"/>
+								<ExtendedTooltip name="ТаблицаАвтоматическиСопоставленныхОбъектовСтрокаПоискаРасширеннаяПодсказка" id="208"/>
 							</SearchStringAddition>
-							<ViewStatusAddition name="ТаблицаАвтоматическиСопоставленныхОбъектовСостояниеПросмотра" id="203">
+							<ViewStatusAddition name="ТаблицаАвтоматическиСопоставленныхОбъектовСостояниеПросмотра" id="209">
 								<AdditionSource>
 									<Item>ТаблицаАвтоматическиСопоставленныхОбъектов</Item>
 									<Type>ViewStatusRepresentation</Type>
 								</AdditionSource>
-								<ContextMenu name="ТаблицаАвтоматическиСопоставленныхОбъектовСостояниеПросмотраКонтекстноеМеню" id="204"/>
-								<ExtendedTooltip name="ТаблицаАвтоматическиСопоставленныхОбъектовСостояниеПросмотраРасширеннаяПодсказка" id="205"/>
+								<ContextMenu name="ТаблицаАвтоматическиСопоставленныхОбъектовСостояниеПросмотраКонтекстноеМеню" id="210"/>
+								<ExtendedTooltip name="ТаблицаАвтоматическиСопоставленныхОбъектовСостояниеПросмотраРасширеннаяПодсказка" id="211"/>
 							</ViewStatusAddition>
-							<SearchControlAddition name="ТаблицаАвтоматическиСопоставленныхОбъектовУправлениеПоиском" id="206">
+							<SearchControlAddition name="ТаблицаАвтоматическиСопоставленныхОбъектовУправлениеПоиском" id="212">
 								<AdditionSource>
 									<Item>ТаблицаАвтоматическиСопоставленныхОбъектов</Item>
 									<Type>SearchControl</Type>
 								</AdditionSource>
-								<ContextMenu name="ТаблицаАвтоматическиСопоставленныхОбъектовУправлениеПоискомКонтекстноеМеню" id="207"/>
-								<ExtendedTooltip name="ТаблицаАвтоматическиСопоставленныхОбъектовУправлениеПоискомРасширеннаяПодсказка" id="208"/>
+								<ContextMenu name="ТаблицаАвтоматическиСопоставленныхОбъектовУправлениеПоискомКонтекстноеМеню" id="213"/>
+								<ExtendedTooltip name="ТаблицаАвтоматическиСопоставленныхОбъектовУправлениеПоискомРасширеннаяПодсказка" id="214"/>
 							</SearchControlAddition>
 							<ChildItems>
 								<CheckBoxField name="ТаблицаАвтоматическиСопоставленныхОбъектовПометка" id="36">
 									<DataPath>Объект.ТаблицаАвтоматическиСопоставленныхОбъектов.Пометка</DataPath>
+									<TitleLocation>None</TitleLocation>
 									<EditMode>EnterOnInput</EditMode>
 									<CheckBoxType>Auto</CheckBoxType>
 									<ContextMenu name="ТаблицаАвтоматическиСопоставленныхОбъектовПометкаКонтекстноеМеню" id="37"/>
@@ -147,12 +138,6 @@
 											<v8:content>Поля приемника</v8:content>
 										</v8:item>
 									</Title>
-									<ToolTip>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Поля приемника</v8:content>
-										</v8:item>
-									</ToolTip>
 									<Group>InCell</Group>
 									<ExtendedTooltip name="ПоляПриемникаExtendedTooltip" id="158"/>
 									<ChildItems>
@@ -269,6 +254,12 @@
 						</Table>
 						<CommandBar name="КоманднаяПанельФормы" id="71">
 							<EnableContentChange>true</EnableContentChange>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Командная панель формы</v8:content>
+								</v8:item>
+							</Title>
 							<HorizontalLocation>Right</HorizontalLocation>
 							<ExtendedTooltip name="КоманднаяПанельФормыExtendedTooltip" id="172"/>
 							<ChildItems>
@@ -297,12 +288,6 @@
 							<v8:content>Ожидание сопоставления объектов</v8:content>
 						</v8:item>
 					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Ожидание сопоставления объектов</v8:content>
-						</v8:item>
-					</ToolTip>
 					<ExtendedTooltip name="ОжиданиеСопоставленияОбъектовExtendedTooltip" id="175"/>
 					<ChildItems>
 						<UsualGroup name="Рамка" id="120">
@@ -316,17 +301,17 @@
 							<HorizontalStretch>true</HorizontalStretch>
 							<VerticalStretch>true</VerticalStretch>
 							<Group>Vertical</Group>
-							<Representation>StrongSeparation</Representation>
+							<Representation>NormalSeparation</Representation>
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="РамкаExtendedTooltip" id="176"/>
 							<ChildItems>
 								<UsualGroup name="ГруппировкаСообщения" id="121">
-									<ToolTip>
+									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
 											<v8:content>Группировка сообщения</v8:content>
 										</v8:item>
-									</ToolTip>
+									</Title>
 									<Group>Horizontal</Group>
 									<Representation>NormalSeparation</Representation>
 									<ShowTitle>false</ShowTitle>
@@ -336,23 +321,15 @@
 											<Title>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
-													<v8:content>Группа картинки</v8:content>
+													<v8:content>Картинки</v8:content>
 												</v8:item>
 											</Title>
-											<ToolTip>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Группа картинки</v8:content>
-												</v8:item>
-											</ToolTip>
 											<Group>Vertical</Group>
 											<Representation>None</Representation>
 											<ShowTitle>false</ShowTitle>
 											<ExtendedTooltip name="ГруппаКартинкиExtendedTooltip" id="178"/>
 											<ChildItems>
 												<PictureDecoration name="Декорация14" id="123">
-													<Width>8</Width>
-													<Height>3</Height>
 													<SkipOnInput>false</SkipOnInput>
 													<Picture>
 														<xr:Ref>CommonPicture.СинхронизацияДанныхАнализДанных48</xr:Ref>
@@ -367,21 +344,16 @@
 											<Title>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
-													<v8:content>Группа сообщения</v8:content>
+													<v8:content>Сообщения</v8:content>
 												</v8:item>
 											</Title>
-											<ToolTip>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Группа сообщения</v8:content>
-												</v8:item>
-											</ToolTip>
 											<Group>Vertical</Group>
 											<Representation>None</Representation>
 											<ShowTitle>false</ShowTitle>
 											<ExtendedTooltip name="ГруппаСообщенияExtendedTooltip" id="180"/>
 											<ChildItems>
 												<LabelDecoration name="Декорация15" id="126">
+													<AutoMaxWidth>false</AutoMaxWidth>
 													<Height>3</Height>
 													<SkipOnInput>false</SkipOnInput>
 													<Title formatted="false">
@@ -410,12 +382,6 @@
 							<v8:content>Ошибка сопоставления объектов</v8:content>
 						</v8:item>
 					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Ошибка сопоставления объектов</v8:content>
-						</v8:item>
-					</ToolTip>
 					<ExtendedTooltip name="ОшибкаСопоставленияОбъектовExtendedTooltip" id="182"/>
 					<ChildItems>
 						<UsualGroup name="Рамка1" id="129">
@@ -429,11 +395,17 @@
 							<HorizontalStretch>true</HorizontalStretch>
 							<VerticalStretch>true</VerticalStretch>
 							<Group>Vertical</Group>
-							<Representation>StrongSeparation</Representation>
+							<Representation>NormalSeparation</Representation>
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="Рамка1ExtendedTooltip" id="183"/>
 							<ChildItems>
 								<UsualGroup name="ГруппировкаСообщения1" id="130">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группировка сообщения 1</v8:content>
+										</v8:item>
+									</Title>
 									<ToolTip>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
@@ -452,20 +424,12 @@
 													<v8:content>Группа картинки</v8:content>
 												</v8:item>
 											</Title>
-											<ToolTip>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Группа картинки</v8:content>
-												</v8:item>
-											</ToolTip>
 											<Group>Vertical</Group>
 											<Representation>None</Representation>
 											<ShowTitle>false</ShowTitle>
 											<ExtendedTooltip name="ГруппаКартинки1ExtendedTooltip" id="185"/>
 											<ChildItems>
 												<PictureDecoration name="Декорация3" id="132">
-													<Width>8</Width>
-													<Height>3</Height>
 													<SkipOnInput>false</SkipOnInput>
 													<Picture>
 														<xr:Ref>CommonPicture.Предупреждение32</xr:Ref>
@@ -483,18 +447,13 @@
 													<v8:content>Группа сообщения</v8:content>
 												</v8:item>
 											</Title>
-											<ToolTip>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Группа сообщения</v8:content>
-												</v8:item>
-											</ToolTip>
 											<Group>Vertical</Group>
 											<Representation>None</Representation>
 											<ShowTitle>false</ShowTitle>
 											<ExtendedTooltip name="ГруппаСообщения1ExtendedTooltip" id="187"/>
 											<ChildItems>
 												<LabelDecoration name="Декорация4" id="135">
+													<AutoMaxWidth>false</AutoMaxWidth>
 													<Height>3</Height>
 													<SkipOnInput>false</SkipOnInput>
 													<Title formatted="false">
@@ -511,10 +470,21 @@
 										</UsualGroup>
 									</ChildItems>
 								</UsualGroup>
+								<LabelDecoration name="Декорация1" id="200">
+									<VerticalStretch>true</VerticalStretch>
+									<ContextMenu name="Декорация1КонтекстноеМеню" id="201"/>
+									<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="202"/>
+								</LabelDecoration>
 							</ChildItems>
 						</UsualGroup>
 						<CommandBar name="КоманднаяПанельФормы2" id="148">
 							<EnableContentChange>true</EnableContentChange>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Командная панель формы 2</v8:content>
+								</v8:item>
+							</Title>
 							<HorizontalLocation>Right</HorizontalLocation>
 							<ExtendedTooltip name="КоманднаяПанельФормы2ExtendedTooltip" id="189"/>
 							<ChildItems>
@@ -554,11 +524,17 @@
 							<HorizontalStretch>true</HorizontalStretch>
 							<VerticalStretch>true</VerticalStretch>
 							<Group>Vertical</Group>
-							<Representation>StrongSeparation</Representation>
+							<Representation>NormalSeparation</Representation>
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="Рамка2ExtendedTooltip" id="192"/>
 							<ChildItems>
 								<UsualGroup name="ГруппировкаСообщения2" id="139">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группировка сообщения 2</v8:content>
+										</v8:item>
+									</Title>
 									<ToolTip>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
@@ -577,20 +553,12 @@
 													<v8:content>Группа картинки</v8:content>
 												</v8:item>
 											</Title>
-											<ToolTip>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Группа картинки</v8:content>
-												</v8:item>
-											</ToolTip>
 											<Group>Vertical</Group>
 											<Representation>None</Representation>
 											<ShowTitle>false</ShowTitle>
 											<ExtendedTooltip name="ГруппаКартинки2ExtendedTooltip" id="194"/>
 											<ChildItems>
 												<PictureDecoration name="Декорация5" id="141">
-													<Width>8</Width>
-													<Height>3</Height>
 													<SkipOnInput>false</SkipOnInput>
 													<Picture>
 														<xr:Ref>CommonPicture.Информация32</xr:Ref>
@@ -608,18 +576,13 @@
 													<v8:content>Группа сообщения</v8:content>
 												</v8:item>
 											</Title>
-											<ToolTip>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Группа сообщения</v8:content>
-												</v8:item>
-											</ToolTip>
 											<Group>Vertical</Group>
 											<Representation>None</Representation>
 											<ShowTitle>false</ShowTitle>
 											<ExtendedTooltip name="ГруппаСообщения2ExtendedTooltip" id="196"/>
 											<ChildItems>
 												<LabelDecoration name="Декорация6" id="144">
+													<AutoMaxWidth>false</AutoMaxWidth>
 													<Height>3</Height>
 													<SkipOnInput>false</SkipOnInput>
 													<Title formatted="false">
@@ -637,10 +600,21 @@
 										</UsualGroup>
 									</ChildItems>
 								</UsualGroup>
+								<LabelDecoration name="Декорация2" id="203">
+									<VerticalStretch>true</VerticalStretch>
+									<ContextMenu name="Декорация2КонтекстноеМеню" id="204"/>
+									<ExtendedTooltip name="Декорация2РасширеннаяПодсказка" id="205"/>
+								</LabelDecoration>
 							</ChildItems>
 						</UsualGroup>
 						<CommandBar name="КоманднаяПанельФормы1" id="146">
 							<EnableContentChange>true</EnableContentChange>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Командная панель формы 1</v8:content>
+								</v8:item>
+							</Title>
 							<HorizontalLocation>Right</HorizontalLocation>
 							<ExtendedTooltip name="КоманднаяПанельФормы1ExtendedTooltip" id="198"/>
 							<ChildItems>
@@ -731,56 +705,11 @@
 						</v8:StringQualifiers>
 					</Type>
 				</Column>
-				<Column name="ИмяСтраницыНавигации" id="4">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Имя страницы навигации</v8:content>
-						</v8:item>
-					</Title>
-					<Type>
-						<v8:Type>xs:string</v8:Type>
-						<v8:StringQualifiers>
-							<v8:Length>0</v8:Length>
-							<v8:AllowedLength>Variable</v8:AllowedLength>
-						</v8:StringQualifiers>
-					</Type>
-				</Column>
 				<Column name="ИмяОбработчикаПриОткрытии" id="5">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
 							<v8:content>Имя обработчика при открытии</v8:content>
-						</v8:item>
-					</Title>
-					<Type>
-						<v8:Type>xs:string</v8:Type>
-						<v8:StringQualifiers>
-							<v8:Length>0</v8:Length>
-							<v8:AllowedLength>Variable</v8:AllowedLength>
-						</v8:StringQualifiers>
-					</Type>
-				</Column>
-				<Column name="ИмяОбработчикаПриПереходеДалее" id="6">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Имя обработчика при переходе далее</v8:content>
-						</v8:item>
-					</Title>
-					<Type>
-						<v8:Type>xs:string</v8:Type>
-						<v8:StringQualifiers>
-							<v8:Length>0</v8:Length>
-							<v8:AllowedLength>Variable</v8:AllowedLength>
-						</v8:StringQualifiers>
-					</Type>
-				</Column>
-				<Column name="ИмяОбработчикаПриПереходеНазад" id="7">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Имя обработчика при переходе назад</v8:content>
 						</v8:item>
 					</Title>
 					<Type>

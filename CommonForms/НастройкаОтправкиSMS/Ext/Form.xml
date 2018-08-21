@@ -3,24 +3,63 @@
 	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
 	<VerticalScroll>useIfNecessary</VerticalScroll>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnWriteAtServer">ПриЗаписиНаСервере</Event>
+	</Events>
 	<ChildItems>
-		<InputField name="ПровайдерSMS" id="5">
-			<DataPath>НаборКонстант.ПровайдерSMS</DataPath>
+		<UsualGroup name="ПровайдерИОписание" id="22">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Провайдер</v8:content>
+					<v8:content>Провайдер и описание</v8:content>
 				</v8:item>
 			</Title>
-			<EditMode>EnterOnInput</EditMode>
-			<Width>30</Width>
-			<HorizontalStretch>false</HorizontalStretch>
-			<ClearButton>true</ClearButton>
-			<ContextMenu name="ПровайдерSMSКонтекстноеМеню" id="6"/>
-			<ExtendedTooltip name="ПровайдерSMSExtendedTooltip" id="11"/>
-		</InputField>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ПровайдерИОписаниеРасширеннаяПодсказка" id="23"/>
+			<ChildItems>
+				<InputField name="ПровайдерSMS" id="5">
+					<DataPath>НаборКонстант.ПровайдерSMS</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Провайдер</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTipRepresentation>Button</ToolTipRepresentation>
+					<EditMode>EnterOnInput</EditMode>
+					<Width>30</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ClearButton>false</ClearButton>
+					<BackColor>style:ФонУправляющегоПоля</BackColor>
+					<ContextMenu name="ПровайдерSMSКонтекстноеМеню" id="6"/>
+					<ExtendedTooltip name="ПровайдерSMSExtendedTooltip" id="11"/>
+					<Events>
+						<Event name="OnChange">ПровайдерSMSПриИзменении</Event>
+					</Events>
+				</InputField>
+				<LabelDecoration name="ОписаниеУслуги" id="19">
+					<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>?</v8:content>
+						</v8:item>
+					</Title>
+					<Hyperlink>true</Hyperlink>
+					<ContextMenu name="ОписаниеУслугиКонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="ОписаниеУслугиРасширеннаяПодсказка" id="21"/>
+					<Events>
+						<Event name="Click">ОписаниеУслугиНажатие</Event>
+					</Events>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
 		<InputField name="ЛогинДляОтправкиSMS" id="1">
-			<DataPath>НаборКонстант.ЛогинДляОтправкиSMS</DataPath>
+			<DataPath>ЛогинДляОтправкиSMS</DataPath>
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -30,11 +69,12 @@
 			<EditMode>EnterOnInput</EditMode>
 			<Width>30</Width>
 			<HorizontalStretch>false</HorizontalStretch>
+			<AutoMarkIncomplete>true</AutoMarkIncomplete>
 			<ContextMenu name="ЛогинДляОтправкиSMSКонтекстноеМеню" id="2"/>
 			<ExtendedTooltip name="ЛогинДляОтправкиSMSExtendedTooltip" id="12"/>
 		</InputField>
 		<InputField name="ПарольДляОтправкиSMS" id="3">
-			<DataPath>НаборКонстант.ПарольДляОтправкиSMS</DataPath>
+			<DataPath>ПарольДляОтправкиSMS</DataPath>
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -44,39 +84,19 @@
 			<EditMode>EnterOnInput</EditMode>
 			<Width>30</Width>
 			<HorizontalStretch>false</HorizontalStretch>
+			<PasswordMode>true</PasswordMode>
+			<AutoMarkIncomplete>true</AutoMarkIncomplete>
 			<ContextMenu name="ПарольДляОтправкиSMSКонтекстноеМеню" id="4"/>
 			<ExtendedTooltip name="ПарольДляОтправкиSMSExtendedTooltip" id="13"/>
 		</InputField>
-		<LabelDecoration name="ОписаниеУслугиБилайн" id="7">
-			<HorizontalStretch>true</HorizontalStretch>
-			<Title formatted="false">
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Описание услуги «Корпоративные SMS-сервисы» (Билайн)</v8:content>
-				</v8:item>
-			</Title>
-			<Hyperlink>true</Hyperlink>
-			<ContextMenu name="ОписаниеУслугиБилайнКонтекстноеМеню" id="8"/>
-			<ExtendedTooltip name="ОписаниеУслугиБилайнExtendedTooltip" id="14"/>
-			<Events>
-				<Event name="Click">ОписаниеУслугиБилайнНажатие</Event>
-			</Events>
-		</LabelDecoration>
-		<LabelDecoration name="ОписаниеУслугиМТС" id="9">
-			<HorizontalStretch>true</HorizontalStretch>
-			<Title formatted="false">
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Описание услуги «МТС Коммуникатор» (МТС)</v8:content>
-				</v8:item>
-			</Title>
-			<Hyperlink>true</Hyperlink>
-			<ContextMenu name="ОписаниеУслугиМТСКонтекстноеМеню" id="10"/>
-			<ExtendedTooltip name="ОписаниеУслугиМТСExtendedTooltip" id="15"/>
-			<Events>
-				<Event name="Click">ОписаниеУслугиМТСНажатие</Event>
-			</Events>
-		</LabelDecoration>
+		<InputField name="ИмяОтправителя" id="16">
+			<DataPath>ИмяОтправителя</DataPath>
+			<Width>30</Width>
+			<HorizontalStretch>false</HorizontalStretch>
+			<AutoMarkIncomplete>true</AutoMarkIncomplete>
+			<ContextMenu name="ИмяОтправителяКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="ИмяОтправителяРасширеннаяПодсказка" id="18"/>
+		</InputField>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="НаборКонстант" id="1">
@@ -88,6 +108,60 @@
 			<UseAlways>
 				<Field>НаборКонстант.РежимРаботы.Ref</Field>
 			</UseAlways>
+		</Attribute>
+		<Attribute name="ЛогинДляОтправкиSMS" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Логин для отправки SMS</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>100</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПарольДляОтправкиSMS" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пароль для отправки SMS</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>100</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИмяОтправителя" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имя отправителя</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ОписаниеУслуги" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Описание услуги</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
 		</Attribute>
 	</Attributes>
 </Form>

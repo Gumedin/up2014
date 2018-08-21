@@ -8,7 +8,6 @@
 	</Title>
 	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
 	<AutoTitle>false</AutoTitle>
-	<VerticalScroll>useIfNecessary</VerticalScroll>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<ChildItems>
 			<Button name="ФормаВыбратьУзел" id="29">
@@ -80,9 +79,6 @@
 				<ExcludedCommand>SortListDesc</ExcludedCommand>
 				<ExcludedCommand>Tree</ExcludedCommand>
 			</CommandSet>
-			<SearchStringLocation>None</SearchStringLocation>
-			<ViewStatusLocation>None</ViewStatusLocation>
-			<SearchControlLocation>None</SearchControlLocation>
 			<ContextMenu name="ДеревоУзловОбменаКонтекстноеМеню" id="2">
 				<Autofill>false</Autofill>
 				<ChildItems>
@@ -117,6 +113,12 @@
 						<ExtendedTooltip name="ДеревоУзловОбменаКонтекстноеМенюИзменитьУзелExtendedTooltip" id="39"/>
 					</Button>
 					<ButtonGroup name="ДеревоУзловОбменаКонтекстноеМенюГруппа1" id="33">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Дерево узлов обмена контекстное меню группа 1</v8:content>
+							</v8:item>
+						</Title>
 						<ExtendedTooltip name="ДеревоУзловОбменаКонтекстноеМенюГруппа1ExtendedTooltip" id="40"/>
 						<ChildItems>
 							<Button name="ДеревоУзловОбменаКонтекстноеМенюВывестиСписок" id="34">
@@ -172,12 +174,6 @@
 							<v8:content>Описание узла</v8:content>
 						</v8:item>
 					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Описание узла</v8:content>
-						</v8:item>
-					</ToolTip>
 					<Group>InCell</Group>
 					<ExtendedTooltip name="ДеревоУзловОбменаПометкаНаименованиеExtendedTooltip" id="44"/>
 					<ChildItems>

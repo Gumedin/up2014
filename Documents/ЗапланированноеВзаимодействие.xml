@@ -218,7 +218,7 @@
 			<FullTextSearchOnInputByString>DontUse</FullTextSearchOnInputByString>
 			<ChoiceDataGetModeOnInputByString>Directly</ChoiceDataGetModeOnInputByString>
 			<DefaultObjectForm>Document.ЗапланированноеВзаимодействие.Form.ФормаДокумента</DefaultObjectForm>
-			<DefaultListForm/>
+			<DefaultListForm>Document.ЗапланированноеВзаимодействие.Form.ФормаСписка</DefaultListForm>
 			<DefaultChoiceForm>Document.ЗапланированноеВзаимодействие.Form.ФормаВыбора</DefaultChoiceForm>
 			<AuxiliaryObjectForm/>
 			<AuxiliaryListForm/>
@@ -245,7 +245,7 @@
 			</ListPresentation>
 			<ExtendedListPresentation/>
 			<Explanation/>
-			<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+			<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
 			<DataHistory>DontUse</DataHistory>
 		</Properties>
 		<ChildObjects>
@@ -435,7 +435,7 @@
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>(не используется) Удалить рассмотрено</v8:content>
+							<v8:content>(не используется) Рассмотрено</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
@@ -479,7 +479,7 @@
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>(не используется) Удалить рассмотреть после</v8:content>
+							<v8:content>(не используется) Рассмотреть после</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
@@ -522,20 +522,16 @@
 			</Attribute>
 			<Attribute uuid="742a2e8c-496e-4e02-931d-d33f7afe07a5">
 				<Properties>
-					<Name>Предмет</Name>
+					<Name>УдалитьПредмет</Name>
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Предмет</v8:content>
+							<v8:content>(не используется) предмет</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
 					<Type>
-						<v8:Type>cfg:DocumentRef.ЭлектронноеПисьмоИсходящее</v8:Type>
-						<v8:Type>cfg:DocumentRef.ЗапланированноеВзаимодействие</v8:Type>
-						<v8:Type>cfg:DocumentRef.ЭлектронноеПисьмоВходящее</v8:Type>
-						<v8:Type>cfg:DocumentRef.ТелефонныйЗвонок</v8:Type>
-						<v8:Type>cfg:DocumentRef.Встреча</v8:Type>
+						<v8:TypeSet>cfg:DefinedType.ПредметВзаимодействия</v8:TypeSet>
 					</Type>
 					<PasswordMode>false</PasswordMode>
 					<Format/>
@@ -763,6 +759,7 @@
 			</Attribute>
 			<Form>ФормаДокумента</Form>
 			<Form>ФормаВыбора</Form>
+			<Form>ФормаСписка</Form>
 			<TabularSection uuid="23b46ecd-14dc-4cc5-8ff0-c676a8337aee">
 				<InternalInfo>
 					<xr:GeneratedType name="DocumentTabularSection.ЗапланированноеВзаимодействие.Участники" category="TabularSection">
@@ -826,7 +823,7 @@
 							</Synonym>
 							<Comment/>
 							<Type>
-								<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+								<v8:TypeSet>cfg:DefinedType.КонтактВзаимодействия</v8:TypeSet>
 							</Type>
 							<PasswordMode>false</PasswordMode>
 							<Format/>
@@ -1115,7 +1112,7 @@
 									<v8:lang>ru</v8:lang>
 									<v8:content>Уточняет значение доступа:
 - если идентификатор объекта метаданных, тогда уточняет проверку права
-(ПустаяСсылка - Изменение, иначе Чтение);
+(Пустая ссылка - Изменение, иначе Чтение);
 - если владелец настроек прав, тогда уточняет таблицу для выбора настроек прав.</v8:content>
 								</v8:item>
 							</ToolTip>

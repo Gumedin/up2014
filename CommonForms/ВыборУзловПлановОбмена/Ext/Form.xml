@@ -9,7 +9,6 @@
 	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
 	<AutoTitle>false</AutoTitle>
 	<Group>Horizontal</Group>
-	<VerticalScroll>useIfNecessary</VerticalScroll>
 	<CommandSet>
 		<ExcludedCommand>Abort</ExcludedCommand>
 		<ExcludedCommand>Cancel</ExcludedCommand>
@@ -55,6 +54,12 @@
 			<EnableStartDrag>true</EnableStartDrag>
 			<EnableDrag>true</EnableDrag>
 			<DataPath>УзлыПлановОбмена</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Узлы планов обмена</v8:content>
+				</v8:item>
+			</Title>
 			<CommandSet>
 				<ExcludedCommand>Add</ExcludedCommand>
 				<ExcludedCommand>Change</ExcludedCommand>
@@ -66,36 +71,33 @@
 				<ExcludedCommand>SortListAsc</ExcludedCommand>
 				<ExcludedCommand>SortListDesc</ExcludedCommand>
 			</CommandSet>
-			<SearchStringLocation>None</SearchStringLocation>
-			<ViewStatusLocation>None</ViewStatusLocation>
-			<SearchControlLocation>None</SearchControlLocation>
 			<RowFilter xsi:nil="true"/>
 			<ContextMenu name="УзлыПлановОбменаКонтекстноеМеню" id="15"/>
 			<AutoCommandBar name="УзлыПлановОбменаКоманднаяПанель" id="16"/>
 			<ExtendedTooltip name="УзлыПлановОбменаExtendedTooltip" id="30"/>
-			<SearchStringAddition name="УзлыПлановОбменаСтрокаПоиска" id="33">
+			<SearchStringAddition name="УзлыПлановОбменаSearchString" id="33">
 				<AdditionSource>
 					<Item>УзлыПлановОбмена</Item>
 					<Type>SearchStringRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="УзлыПлановОбменаСтрокаПоискаКонтекстноеМеню" id="34"/>
-				<ExtendedTooltip name="УзлыПлановОбменаСтрокаПоискаРасширеннаяПодсказка" id="35"/>
+				<ContextMenu name="УзлыПлановОбменаSearchStringContextMenu" id="34"/>
+				<ExtendedTooltip name="УзлыПлановОбменаSearchStringExtendedTooltip" id="35"/>
 			</SearchStringAddition>
-			<ViewStatusAddition name="УзлыПлановОбменаСостояниеПросмотра" id="36">
+			<ViewStatusAddition name="УзлыПлановОбменаViewStatus" id="36">
 				<AdditionSource>
 					<Item>УзлыПлановОбмена</Item>
 					<Type>ViewStatusRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="УзлыПлановОбменаСостояниеПросмотраКонтекстноеМеню" id="37"/>
-				<ExtendedTooltip name="УзлыПлановОбменаСостояниеПросмотраРасширеннаяПодсказка" id="38"/>
+				<ContextMenu name="УзлыПлановОбменаViewStatusContextMenu" id="37"/>
+				<ExtendedTooltip name="УзлыПлановОбменаViewStatusExtendedTooltip" id="38"/>
 			</ViewStatusAddition>
-			<SearchControlAddition name="УзлыПлановОбменаУправлениеПоиском" id="39">
+			<SearchControlAddition name="УзлыПлановОбменаSearchControl" id="39">
 				<AdditionSource>
 					<Item>УзлыПлановОбмена</Item>
 					<Type>SearchControl</Type>
 				</AdditionSource>
-				<ContextMenu name="УзлыПлановОбменаУправлениеПоискомКонтекстноеМеню" id="40"/>
-				<ExtendedTooltip name="УзлыПлановОбменаУправлениеПоискомРасширеннаяПодсказка" id="41"/>
+				<ContextMenu name="УзлыПлановОбменаSearchControlContextMenu" id="40"/>
+				<ExtendedTooltip name="УзлыПлановОбменаSearchControlExtendedTooltip" id="41"/>
 			</SearchControlAddition>
 			<Events>
 				<Event name="Selection">УзлыПлановОбменаВыбор</Event>

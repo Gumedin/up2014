@@ -1,8 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5">
-	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<WindowOpeningMode>LockWholeInterface</WindowOpeningMode>
 	<CommandBarLocation>Bottom</CommandBarLocation>
-	<VerticalScroll>useIfNecessary</VerticalScroll>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<HorizontalAlign>Right</HorizontalAlign>
 		<Autofill>false</Autofill>
@@ -35,10 +34,9 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Группа страницы</v8:content>
+					<v8:content>Страницы</v8:content>
 				</v8:item>
 			</Title>
-			<VerticalStretch>true</VerticalStretch>
 			<PagesRepresentation>None</PagesRepresentation>
 			<ExtendedTooltip name="ГруппаСтраницыExtendedTooltip" id="30"/>
 			<ChildItems>
@@ -53,6 +51,7 @@
 					<ExtendedTooltip name="СтраницаДоВыгрузкиExtendedTooltip" id="31"/>
 					<ChildItems>
 						<LabelDecoration name="ДекорацияСообщениеДоВыгрузки" id="1">
+							<AutoMaxWidth>false</AutoMaxWidth>
 							<Title formatted="false">
 								<v8:item>
 									<v8:lang>ru</v8:lang>
@@ -74,25 +73,29 @@
 							<v8:content>После выгрузки Успех</v8:content>
 						</v8:item>
 					</Title>
+					<Group>Horizontal</Group>
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="СтраницаПослеВыгрузкиУспехExtendedTooltip" id="33"/>
 					<ChildItems>
-						<LabelDecoration name="ДекорацияСообщениеПослеВыгрузкиУспех" id="9">
-							<HorizontalStretch>true</HorizontalStretch>
+						<PictureDecoration name="ДекорацияУспех" id="42">
 							<Title formatted="false">
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Процесс выгрузки успешно завершен.</v8:content>
+									<v8:content>Декорация успех</v8:content>
 								</v8:item>
 							</Title>
-							<ContextMenu name="ДекорацияСообщениеПослеВыгрузкиУспехКонтекстноеМеню" id="10"/>
-							<ExtendedTooltip name="ДекорацияСообщениеПослеВыгрузкиУспехExtendedTooltip" id="34"/>
-						</LabelDecoration>
+							<Picture>
+								<xr:Ref>CommonPicture.Успешно32</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ContextMenu name="ДекорацияУспехКонтекстноеМеню" id="43"/>
+							<ExtendedTooltip name="ДекорацияУспехРасширеннаяПодсказка" id="44"/>
+						</PictureDecoration>
 						<UsualGroup name="ГруппаФайл" id="13">
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Группа файл</v8:content>
+									<v8:content>Файл</v8:content>
 								</v8:item>
 							</Title>
 							<Group>Vertical</Group>
@@ -100,11 +103,23 @@
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="ГруппаФайлExtendedTooltip" id="35"/>
 							<ChildItems>
-								<LabelDecoration name="ДекорацияФайл" id="14">
+								<LabelDecoration name="ДекорацияСообщениеПослеВыгрузкиУспех" id="9">
+									<AutoMaxWidth>false</AutoMaxWidth>
 									<Title formatted="false">
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>Файл выгрузки помещен в хранилище менеджера сервиса.</v8:content>
+											<v8:content>Процесс создания копии успешно завершен.</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДекорацияСообщениеПослеВыгрузкиУспехКонтекстноеМеню" id="10"/>
+									<ExtendedTooltip name="ДекорацияСообщениеПослеВыгрузкиУспехExtendedTooltip" id="34"/>
+								</LabelDecoration>
+								<LabelDecoration name="ДекорацияФайл" id="14">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Файл выгрузки помещен в менеджер сервиса.</v8:content>
 										</v8:item>
 									</Title>
 									<ContextMenu name="ДекорацияФайлКонтекстноеМеню" id="15"/>
@@ -121,11 +136,27 @@
 							<v8:content>После выгрузки Ошибка</v8:content>
 						</v8:item>
 					</Title>
+					<Group>Horizontal</Group>
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="СтраницаПослеВыгрузкиОшибкаExtendedTooltip" id="37"/>
 					<ChildItems>
+						<PictureDecoration name="ДекорацияОшибка" id="39">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Декорация ошибка</v8:content>
+								</v8:item>
+							</Title>
+							<Picture>
+								<xr:Ref>CommonPicture.Ошибка32</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ContextMenu name="ДекорацияОшибкаКонтекстноеМеню" id="40"/>
+							<ExtendedTooltip name="ДекорацияОшибкаРасширеннаяПодсказка" id="41"/>
+						</PictureDecoration>
 						<InputField name="СообщениеОбОшибке" id="25">
 							<DataPath>СообщениеОбОшибке</DataPath>
+							<ReadOnly>true</ReadOnly>
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>

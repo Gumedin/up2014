@@ -3,7 +3,6 @@
 	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
 	<AutoTitle>false</AutoTitle>
 	<CommandBarLocation>Bottom</CommandBarLocation>
-	<VerticalScroll>useIfNecessary</VerticalScroll>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<HorizontalAlign>Right</HorizontalAlign>
 		<Autofill>false</Autofill>
@@ -32,15 +31,9 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Группа пользователи</v8:content>
+					<v8:content>Пользователи</v8:content>
 				</v8:item>
 			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Группа пользователи</v8:content>
-				</v8:item>
-			</ToolTip>
 			<Group>Horizontal</Group>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
@@ -60,7 +53,7 @@
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Команды нет в быстром доступе у пользователей</v8:content>
+							<v8:content>Все пользователи</v8:content>
 						</v8:item>
 					</Title>
 					<CommandSet>
@@ -74,9 +67,6 @@
 						<ExcludedCommand>SortListAsc</ExcludedCommand>
 						<ExcludedCommand>SortListDesc</ExcludedCommand>
 					</CommandSet>
-					<SearchStringLocation>None</SearchStringLocation>
-					<ViewStatusLocation>None</ViewStatusLocation>
-					<SearchControlLocation>None</SearchControlLocation>
 					<RowFilter xsi:nil="true"/>
 					<ContextMenu name="ВсеПользователиКонтекстноеМеню" id="2"/>
 					<AutoCommandBar name="ВсеПользователиКоманднаяПанель" id="3">
@@ -137,20 +127,18 @@
 				</Table>
 				<UsualGroup name="КомандыУправленияСписком" id="20">
 					<EnableContentChange>true</EnableContentChange>
-					<ToolTip>
+					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
 							<v8:content>Команды управления списком</v8:content>
 						</v8:item>
-					</ToolTip>
+					</Title>
+					<GroupVerticalAlign>Center</GroupVerticalAlign>
 					<Group>Vertical</Group>
-					<Representation>NormalSeparation</Representation>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="КомандыУправленияСпискомExtendedTooltip" id="38"/>
 					<ChildItems>
-						<LabelDecoration name="ПустаяДекорация" id="25">
-							<ContextMenu name="ПустаяДекорацияКонтекстноеМеню" id="26"/>
-							<ExtendedTooltip name="ПустаяДекорацияExtendedTooltip" id="39"/>
-						</LabelDecoration>
 						<Button name="УстановитьКомандуДляВыделенныхПользователей" id="28">
 							<Type>UsualButton</Type>
 							<CommandName>Form.Command.УстановитьКомандуДляВыделенныхПользователей</CommandName>
@@ -187,7 +175,7 @@
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Команда есть в быстром доступе у пользователей</v8:content>
+							<v8:content>Пользователи, для которых видна команда</v8:content>
 						</v8:item>
 					</Title>
 					<CommandSet>
@@ -201,9 +189,6 @@
 						<ExcludedCommand>SortListAsc</ExcludedCommand>
 						<ExcludedCommand>SortListDesc</ExcludedCommand>
 					</CommandSet>
-					<SearchStringLocation>None</SearchStringLocation>
-					<ViewStatusLocation>None</ViewStatusLocation>
-					<SearchControlLocation>None</SearchControlLocation>
 					<RowFilter xsi:nil="true"/>
 					<ContextMenu name="ПользователиКороткогоСпискаКонтекстноеМеню" id="14"/>
 					<AutoCommandBar name="ПользователиКороткогоСпискаКоманднаяПанель" id="15">
@@ -335,7 +320,7 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Добавить все &gt;&gt;</v8:content>
+					<v8:content>&gt;&gt;</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
@@ -350,7 +335,7 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Добавить &gt;</v8:content>
+					<v8:content>&gt;</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
@@ -365,7 +350,7 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>&lt;&lt; Удалить все</v8:content>
+					<v8:content>&lt;&lt;</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
@@ -380,7 +365,7 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>&lt; Удалить</v8:content>
+					<v8:content>&lt;</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>

@@ -9,7 +9,6 @@
 	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
 	<AutoTitle>false</AutoTitle>
 	<CommandBarLocation>Bottom</CommandBarLocation>
-	<VerticalScroll>useIfNecessary</VerticalScroll>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<HorizontalAlign>Right</HorizontalAlign>
 		<Autofill>false</Autofill>
@@ -74,35 +73,32 @@
 				<ExcludedCommand>SortListDesc</ExcludedCommand>
 				<ExcludedCommand>UncheckAll</ExcludedCommand>
 			</CommandSet>
-			<SearchStringLocation>None</SearchStringLocation>
-			<ViewStatusLocation>None</ViewStatusLocation>
-			<SearchControlLocation>None</SearchControlLocation>
 			<ContextMenu name="ВариантыНастроекКонтекстноеМеню" id="6"/>
 			<AutoCommandBar name="ВариантыНастроекКоманднаяПанель" id="7"/>
 			<ExtendedTooltip name="ВариантыНастроекExtendedTooltip" id="17"/>
-			<SearchStringAddition name="ВариантыНастроекСтрокаПоиска" id="20">
+			<SearchStringAddition name="ВариантыНастроекSearchString" id="20">
 				<AdditionSource>
 					<Item>ВариантыНастроек</Item>
 					<Type>SearchStringRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="ВариантыНастроекСтрокаПоискаКонтекстноеМеню" id="21"/>
-				<ExtendedTooltip name="ВариантыНастроекСтрокаПоискаРасширеннаяПодсказка" id="22"/>
+				<ContextMenu name="ВариантыНастроекSearchStringContextMenu" id="21"/>
+				<ExtendedTooltip name="ВариантыНастроекSearchStringExtendedTooltip" id="22"/>
 			</SearchStringAddition>
-			<ViewStatusAddition name="ВариантыНастроекСостояниеПросмотра" id="23">
+			<ViewStatusAddition name="ВариантыНастроекViewStatus" id="23">
 				<AdditionSource>
 					<Item>ВариантыНастроек</Item>
 					<Type>ViewStatusRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="ВариантыНастроекСостояниеПросмотраКонтекстноеМеню" id="24"/>
-				<ExtendedTooltip name="ВариантыНастроекСостояниеПросмотраРасширеннаяПодсказка" id="25"/>
+				<ContextMenu name="ВариантыНастроекViewStatusContextMenu" id="24"/>
+				<ExtendedTooltip name="ВариантыНастроекViewStatusExtendedTooltip" id="25"/>
 			</ViewStatusAddition>
-			<SearchControlAddition name="ВариантыНастроекУправлениеПоиском" id="26">
+			<SearchControlAddition name="ВариантыНастроекSearchControl" id="26">
 				<AdditionSource>
 					<Item>ВариантыНастроек</Item>
 					<Type>SearchControl</Type>
 				</AdditionSource>
-				<ContextMenu name="ВариантыНастроекУправлениеПоискомКонтекстноеМеню" id="27"/>
-				<ExtendedTooltip name="ВариантыНастроекУправлениеПоискомРасширеннаяПодсказка" id="28"/>
+				<ContextMenu name="ВариантыНастроекSearchControlContextMenu" id="27"/>
+				<ExtendedTooltip name="ВариантыНастроекSearchControlExtendedTooltip" id="28"/>
 			</SearchControlAddition>
 			<Events>
 				<Event name="Selection">ВариантыНастроекВыбор</Event>

@@ -177,7 +177,7 @@
 							<v8:content>Путь</v8:content>
 						</v8:item>
 					</Synonym>
-					<Comment>Относительный путь к файлу (путь к рабочему каталогу сюда не входит)</Comment>
+					<Comment/>
 					<Type>
 						<v8:Type>xs:string</v8:Type>
 						<v8:StringQualifiers>
@@ -225,7 +225,7 @@
 							<v8:content>Размер</v8:content>
 						</v8:item>
 					</Synonym>
-					<Comment>Размер файла в байтах</Comment>
+					<Comment/>
 					<Type>
 						<v8:Type>xs:decimal</v8:Type>
 						<v8:NumberQualifiers>
@@ -274,7 +274,7 @@
 							<v8:content>Дата помещения в рабочий каталог</v8:content>
 						</v8:item>
 					</Synonym>
-					<Comment>Дата помещения файла в рабочий каталог</Comment>
+					<Comment/>
 					<Type>
 						<v8:Type>xs:dateTime</v8:Type>
 						<v8:DateQualifiers>
@@ -321,7 +321,7 @@
 							<v8:content>На чтение</v8:content>
 						</v8:item>
 					</Synonym>
-					<Comment>Файл помещен на чтение</Comment>
+					<Comment/>
 					<Type>
 						<v8:Type>xs:boolean</v8:Type>
 					</Type>
@@ -403,16 +403,16 @@
 			</Resource>
 			<Dimension uuid="98c34ada-0b78-41db-9183-6d7b9e466bde">
 				<Properties>
-					<Name>Версия</Name>
+					<Name>Файл</Name>
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Версия</v8:content>
+							<v8:content>Файл</v8:content>
 						</v8:item>
 					</Synonym>
-					<Comment>Версия файла</Comment>
+					<Comment/>
 					<Type>
-						<v8:Type>cfg:CatalogRef.ВерсииФайлов</v8:Type>
+						<v8:TypeSet>cfg:DefinedType.ПрисоединенныйФайл</v8:TypeSet>
 					</Type>
 					<PasswordMode>false</PasswordMode>
 					<Format/>
@@ -435,7 +435,7 @@
 					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
 					<ChoiceParameterLinks/>
 					<ChoiceParameters/>
-					<QuickChoice>DontUse</QuickChoice>
+					<QuickChoice>Auto</QuickChoice>
 					<CreateOnInput>Use</CreateOnInput>
 					<ChoiceForm/>
 					<LinkByType/>
@@ -457,7 +457,7 @@
 							<v8:content>Пользователь</v8:content>
 						</v8:item>
 					</Synonym>
-					<Comment>Пользователь информационной базы</Comment>
+					<Comment/>
 					<Type>
 						<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
 					</Type>
@@ -467,7 +467,7 @@
 					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Пользователь информационной базы</v8:content>
+							<v8:content>Пользователь, который получил файл в свой рабочий каталог</v8:content>
 						</v8:item>
 					</ToolTip>
 					<MarkNegatives>false</MarkNegatives>

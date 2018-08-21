@@ -1,61 +1,79 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5">
-	<VerticalScroll>useIfNecessary</VerticalScroll>
 	<CommandSet>
 		<ExcludedCommand>Delete</ExcludedCommand>
 		<ExcludedCommand>SetDeletionMark</ExcludedCommand>
 	</CommandSet>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<Autofill>false</Autofill>
-		<ChildItems>
-			<Button name="ФормаСоздать" id="30">
-				<Type>CommandBarButton</Type>
-				<CommandName>Form.Item.Список.StandardCommand.Create</CommandName>
-				<ExtendedTooltip name="ФормаСоздатьРасширеннаяПодсказка" id="31"/>
-			</Button>
-			<Button name="ФормаСкопировать" id="32">
-				<Type>CommandBarButton</Type>
-				<CommandName>Form.Item.Список.StandardCommand.Copy</CommandName>
-				<ExtendedTooltip name="ФормаСкопироватьРасширеннаяПодсказка" id="33"/>
-			</Button>
-			<Button name="ФормаИзменить" id="34">
-				<Type>CommandBarButton</Type>
-				<CommandName>Form.Item.Список.StandardCommand.Change</CommandName>
-				<ExtendedTooltip name="ФормаИзменитьРасширеннаяПодсказка" id="35"/>
-			</Button>
-			<Button name="СписокУстановкаПометкиУдаления" id="28">
-				<Type>CommandBarButton</Type>
-				<CommandName>Form.Command.УстановкаПометкиУдаления</CommandName>
-				<ExtendedTooltip name="СписокУстановкаПометкиУдаленияРасширеннаяПодсказка" id="29"/>
-			</Button>
-			<Button name="ФормаНайти" id="36">
-				<Type>CommandBarButton</Type>
-				<CommandName>Form.Item.Список.StandardCommand.Find</CommandName>
-				<ExtendedTooltip name="ФормаНайтиРасширеннаяПодсказка" id="37"/>
-			</Button>
-			<Button name="ФормаОтменитьПоиск" id="38">
-				<Type>CommandBarButton</Type>
-				<CommandName>Form.Item.Список.StandardCommand.CancelSearch</CommandName>
-				<ExtendedTooltip name="ФормаОтменитьПоискРасширеннаяПодсказка" id="39"/>
-			</Button>
-			<Button name="ФормаНастройкаСписка" id="40">
-				<Type>CommandBarButton</Type>
-				<CommandName>Form.Item.Список.StandardCommand.ListSettings</CommandName>
-				<ExtendedTooltip name="ФормаНастройкаСпискаРасширеннаяПодсказка" id="41"/>
-			</Button>
-			<Button name="ФормаВывестиСписок" id="42">
-				<Type>CommandBarButton</Type>
-				<CommandName>Form.Item.Список.StandardCommand.OutputList</CommandName>
-				<ExtendedTooltip name="ФормаВывестиСписокРасширеннаяПодсказка" id="43"/>
-			</Button>
-			<Button name="ФормаОбновить" id="44">
-				<Type>CommandBarButton</Type>
-				<CommandName>Form.Item.Список.StandardCommand.Refresh</CommandName>
-				<ExtendedTooltip name="ФормаОбновитьРасширеннаяПодсказка" id="45"/>
-			</Button>
-		</ChildItems>
 	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
 	<ChildItems>
+		<UsualGroup name="ГруппаПользовательскихНастроек" id="62">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа пользовательских настроек</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПользовательскихНастроекРасширеннаяПодсказка" id="63"/>
+		</UsualGroup>
+		<CommandBar name="КоманднаяПанель" id="64">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Командная панель</v8:content>
+				</v8:item>
+			</Title>
+			<ExtendedTooltip name="КоманднаяПанельРасширеннаяПодсказка" id="65"/>
+			<ChildItems>
+				<Button name="ФормаСоздать" id="48">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.StandardCommand.Create</CommandName>
+					<ExtendedTooltip name="ФормаСоздатьРасширеннаяПодсказка" id="49"/>
+				</Button>
+				<Button name="ФормаСкопировать" id="50">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.StandardCommand.Copy</CommandName>
+					<ExtendedTooltip name="ФормаСкопироватьРасширеннаяПодсказка" id="51"/>
+				</Button>
+				<Button name="ФормаИзменить" id="52">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.StandardCommand.Change</CommandName>
+					<ExtendedTooltip name="ФормаИзменитьРасширеннаяПодсказка" id="53"/>
+				</Button>
+				<Button name="ФормаУстановкаПометкиУдаления" id="28">
+					<Type>CommandBarButton</Type>
+					<OnlyInAllActions>false</OnlyInAllActions>
+					<CommandName>Form.Command.УстановкаПометкиУдаления</CommandName>
+					<ExtendedTooltip name="ФормаУстановкаПометкиУдаленияРасширеннаяПодсказка" id="29"/>
+				</Button>
+				<ButtonGroup name="ФормаСтандартныеКоманды" id="46">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Форма стандартные команды</v8:content>
+						</v8:item>
+					</Title>
+					<CommandSource>Form</CommandSource>
+					<ExtendedTooltip name="ФормаСтандартныеКомандыРасширеннаяПодсказка" id="47"/>
+				</ButtonGroup>
+				<Button name="ФормаСправка" id="54">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.StandardCommand.Help</CommandName>
+					<ExtendedTooltip name="ФормаСправкаРасширеннаяПодсказка" id="55"/>
+				</Button>
+				<Button name="ПеренестиВсеФайлыВТома" id="75">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.Command.ПеренестиВсеФайлыВТома</CommandName>
+					<ExtendedTooltip name="ПеренестиВсеФайлыВТомаРасширеннаяПодсказка" id="76"/>
+				</Button>
+			</ChildItems>
+		</CommandBar>
 		<Table name="Список" id="1">
 			<Representation>List</Representation>
 			<CommandBarLocation>None</CommandBarLocation>
@@ -66,7 +84,14 @@
 			<EnableStartDrag>true</EnableStartDrag>
 			<DataPath>Список</DataPath>
 			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список</v8:content>
+				</v8:item>
+			</Title>
 			<CommandSet>
+				<ExcludedCommand>Delete</ExcludedCommand>
 				<ExcludedCommand>SetDeletionMark</ExcludedCommand>
 			</CommandSet>
 			<SearchStringLocation>None</SearchStringLocation>
@@ -85,93 +110,136 @@
 			<ShowRoot>true</ShowRoot>
 			<AllowRootChoice>false</AllowRootChoice>
 			<UpdateOnDataChange>Auto</UpdateOnDataChange>
-			<ContextMenu name="СписокКонтекстноеМеню" id="2"/>
+			<UserSettingsGroup>ГруппаПользовательскихНастроек</UserSettingsGroup>
+			<ContextMenu name="СписокКонтекстноеМеню" id="2">
+				<ChildItems>
+					<Button name="СписокКонтекстноеМенюУстановкаПометкиУдаления" id="77">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.УстановкаПометкиУдаления</CommandName>
+						<ExtendedTooltip name="СписокКонтекстноеМенюУстановкаПометкиУдаленияРасширеннаяПодсказка" id="78"/>
+					</Button>
+				</ChildItems>
+			</ContextMenu>
 			<AutoCommandBar name="СписокКоманднаяПанель" id="3">
 				<Autofill>false</Autofill>
 			</AutoCommandBar>
 			<ExtendedTooltip name="СписокExtendedTooltip" id="18"/>
-			<SearchStringAddition name="СписокСтрокаПоиска" id="46">
+			<SearchStringAddition name="СписокСтрокаПоиска" id="66">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>SearchStringRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="47"/>
-				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="48"/>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="67"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="68"/>
 			</SearchStringAddition>
-			<ViewStatusAddition name="СписокСостояниеПросмотра" id="49">
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="69">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>ViewStatusRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="50"/>
-				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="51"/>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="70"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="71"/>
 			</ViewStatusAddition>
-			<SearchControlAddition name="СписокУправлениеПоиском" id="52">
+			<SearchControlAddition name="СписокУправлениеПоиском" id="72">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>SearchControl</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="53"/>
-				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="54"/>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="73"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="74"/>
 			</SearchControlAddition>
 			<ChildItems>
-				<LabelField name="Наименование" id="4">
-					<DataPath>Список.Description</DataPath>
-					<DefaultItem>true</DefaultItem>
-					<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
-					<ExtendedTooltip name="НаименованиеExtendedTooltip" id="19"/>
-				</LabelField>
-				<LabelField name="ПорядокЗаполнения" id="6">
-					<DataPath>Список.ПорядокЗаполнения</DataPath>
-					<ContextMenu name="ПорядокЗаполненияКонтекстноеМеню" id="7"/>
-					<ExtendedTooltip name="ПорядокЗаполненияExtendedTooltip" id="20"/>
-				</LabelField>
-				<LabelField name="МаксимальныйРазмер" id="12">
-					<DataPath>Список.МаксимальныйРазмер</DataPath>
+				<ColumnGroup name="ВертикальнаяГруппа1" id="56">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Максимальный размер (Мб)</v8:content>
+							<v8:content>Вертикальная группа 1</v8:content>
 						</v8:item>
 					</Title>
-					<ContextMenu name="МаксимальныйРазмерКонтекстноеМеню" id="13"/>
-					<ExtendedTooltip name="МаксимальныйРазмерExtendedTooltip" id="21"/>
-				</LabelField>
-				<LabelField name="ПолныйПутьWindows" id="14">
-					<DataPath>Список.ПолныйПутьWindows</DataPath>
+					<ExtendedTooltip name="ВертикальнаяГруппа1РасширеннаяПодсказка" id="57"/>
+					<ChildItems>
+						<LabelField name="СписокНаименование" id="4">
+							<DataPath>Список.Description</DataPath>
+							<DefaultItem>true</DefaultItem>
+							<Width>25</Width>
+							<ContextMenu name="СписокНаименованиеКонтекстноеМеню" id="5"/>
+							<ExtendedTooltip name="СписокНаименованиеРасширеннаяПодсказка" id="19"/>
+						</LabelField>
+						<LabelField name="СписокКомментарий" id="10">
+							<DataPath>Список.Комментарий</DataPath>
+							<Width>25</Width>
+							<Height>1</Height>
+							<ContextMenu name="СписокКомментарийКонтекстноеМеню" id="11"/>
+							<ExtendedTooltip name="СписокКомментарийРасширеннаяПодсказка" id="24"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
+				<ColumnGroup name="ВертикальнаяГруппа2" id="58">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Полный путь Microsoft Windows</v8:content>
+							<v8:content>Вертикальная группа 2</v8:content>
 						</v8:item>
 					</Title>
-					<ContextMenu name="ПолныйПутьWindowsКонтекстноеМеню" id="15"/>
-					<ExtendedTooltip name="ПолныйПутьWindowsExtendedTooltip" id="22"/>
-				</LabelField>
-				<LabelField name="ПолныйПутьLinux" id="16">
-					<DataPath>Список.ПолныйПутьLinux</DataPath>
+					<ExtendedTooltip name="ВертикальнаяГруппа2РасширеннаяПодсказка" id="59"/>
+					<ChildItems>
+						<LabelField name="СписокПорядокЗаполнения" id="6">
+							<DataPath>Список.ПорядокЗаполнения</DataPath>
+							<Width>10</Width>
+							<ContextMenu name="СписокПорядокЗаполненияКонтекстноеМеню" id="7"/>
+							<ExtendedTooltip name="СписокПорядокЗаполненияРасширеннаяПодсказка" id="20"/>
+						</LabelField>
+						<LabelField name="СписокМаксимальныйРазмер" id="12">
+							<DataPath>Список.МаксимальныйРазмер</DataPath>
+							<Width>10</Width>
+							<ContextMenu name="СписокМаксимальныйРазмерКонтекстноеМеню" id="13"/>
+							<ExtendedTooltip name="СписокМаксимальныйРазмерРасширеннаяПодсказка" id="21"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
+				<ColumnGroup name="ВертикальнаяГруппа3" id="60">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Полный путь Linux</v8:content>
+							<v8:content>Вертикальная группа 3</v8:content>
 						</v8:item>
 					</Title>
-					<ContextMenu name="ПолныйПутьLinuxКонтекстноеМеню" id="17"/>
-					<ExtendedTooltip name="ПолныйПутьLinuxExtendedTooltip" id="23"/>
-				</LabelField>
-				<LabelField name="Комментарий" id="10">
-					<DataPath>Список.Комментарий</DataPath>
-					<Height>1</Height>
-					<ContextMenu name="КомментарийКонтекстноеМеню" id="11"/>
-					<ExtendedTooltip name="КомментарийExtendedTooltip" id="24"/>
-				</LabelField>
-				<LabelField name="Ссылка" id="25">
+					<ExtendedTooltip name="ВертикальнаяГруппа3РасширеннаяПодсказка" id="61"/>
+					<ChildItems>
+						<LabelField name="СписокПолныйПутьWindows" id="14">
+							<DataPath>Список.ПолныйПутьWindows</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Полный путь Microsoft Windows</v8:content>
+								</v8:item>
+							</Title>
+							<Width>45</Width>
+							<ContextMenu name="СписокПолныйПутьWindowsКонтекстноеМеню" id="15"/>
+							<ExtendedTooltip name="СписокПолныйПутьWindowsРасширеннаяПодсказка" id="22"/>
+						</LabelField>
+						<LabelField name="СписокПолныйПутьLinux" id="16">
+							<DataPath>Список.ПолныйПутьLinux</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Полный путь Linux</v8:content>
+								</v8:item>
+							</Title>
+							<Width>45</Width>
+							<ContextMenu name="СписокПолныйПутьLinuxКонтекстноеМеню" id="17"/>
+							<ExtendedTooltip name="СписокПолныйПутьLinuxРасширеннаяПодсказка" id="23"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
+				<LabelField name="СписокСсылка" id="25">
 					<DataPath>Список.Ref</DataPath>
 					<UserVisible>
 						<xr:Common>false</xr:Common>
 					</UserVisible>
-					<ContextMenu name="СсылкаКонтекстноеМеню" id="26"/>
-					<ExtendedTooltip name="СсылкаРасширеннаяПодсказка" id="27"/>
+					<Width>1</Width>
+					<ContextMenu name="СписокСсылкаКонтекстноеМеню" id="26"/>
+					<ExtendedTooltip name="СписокСсылкаРасширеннаяПодсказка" id="27"/>
 				</LabelField>
 			</ChildItems>
 		</Table>
@@ -234,6 +302,21 @@
 			</Picture>
 			<Action>УстановитьСнятьПометкуУдаления</Action>
 			<Representation>Picture</Representation>
+		</Command>
+		<Command name="ПеренестиВсеФайлыВТома" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перенести все файлы в тома</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перенести все файлы в тома</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПеренестиВсеФайлыВТома</Action>
 		</Command>
 	</Commands>
 </Form>

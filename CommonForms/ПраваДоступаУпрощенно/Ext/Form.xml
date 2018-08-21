@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5">
-	<VerticalScroll>useIfNecessary</VerticalScroll>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<ChildItems>
 			<Button name="ФормаЗаписать" id="67">
@@ -23,6 +22,7 @@
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
 		<Event name="BeforeClose">ПередЗакрытием</Event>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 		<Event name="FillCheckProcessingAtServer">ОбработкаПроверкиЗаполненияНаСервере</Event>
@@ -30,6 +30,7 @@
 	<ChildItems>
 		<LabelDecoration name="НедостаточноПравНаПросмотр" id="73">
 			<Visible>false</Visible>
+			<AutoMaxWidth>false</AutoMaxWidth>
 			<Title formatted="false">
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -46,12 +47,7 @@
 					<v8:content>Права и ограничения</v8:content>
 				</v8:item>
 			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Права и ограничения</v8:content>
-				</v8:item>
-			</ToolTip>
+			<Height>12</Height>
 			<Group>Horizontal</Group>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
@@ -60,11 +56,19 @@
 				<Table name="Профили" id="2">
 					<Representation>List</Representation>
 					<TitleLocation>Top</TitleLocation>
+					<ChangeRowSet>false</ChangeRowSet>
+					<ChangeRowOrder>false</ChangeRowOrder>
 					<Header>false</Header>
 					<AutoInsertNewRow>true</AutoInsertNewRow>
 					<EnableStartDrag>true</EnableStartDrag>
 					<EnableDrag>true</EnableDrag>
 					<DataPath>Профили</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Профили</v8:content>
+						</v8:item>
+					</Title>
 					<CommandSet>
 						<ExcludedCommand>Add</ExcludedCommand>
 						<ExcludedCommand>CancelSearch</ExcludedCommand>
@@ -78,9 +82,6 @@
 						<ExcludedCommand>SortListAsc</ExcludedCommand>
 						<ExcludedCommand>SortListDesc</ExcludedCommand>
 					</CommandSet>
-					<SearchStringLocation>None</SearchStringLocation>
-					<ViewStatusLocation>None</ViewStatusLocation>
-					<SearchControlLocation>None</SearchControlLocation>
 					<RowFilter xsi:nil="true"/>
 					<ContextMenu name="ПрофилиКонтекстноеМеню" id="3">
 						<Autofill>false</Autofill>
@@ -138,14 +139,21 @@
 					</ChildItems>
 				</Table>
 				<UsualGroup name="Доступ" id="11">
-					<TitleFont ref="style:TextFont" kind="StyleItem"/>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Доступ</v8:content>
+						</v8:item>
+					</Title>
 					<Group>Vertical</Group>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
+					<TitleDataPath>Items.Профили.CurrentData.ПрофильПредставление</TitleDataPath>
 					<ExtendedTooltip name="ДоступExtendedTooltip" id="82"/>
 					<ChildItems>
 						<LabelField name="НадписьПрофиль" id="60">
 							<DataPath>Items.Профили.CurrentData.ПрофильПредставление</DataPath>
+							<Visible>false</Visible>
 							<TitleLocation>None</TitleLocation>
 							<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
 							<ContextMenu name="НадписьПрофильКонтекстноеМеню" id="61"/>
@@ -157,8 +165,7 @@
 							<SkipOnInput>false</SkipOnInput>
 							<ChangeRowSet>false</ChangeRowSet>
 							<ChangeRowOrder>false</ChangeRowOrder>
-							<Width>45</Width>
-							<Height>10</Height>
+							<HeightInTableRows>2</HeightInTableRows>
 							<SelectionMode>SingleRow</SelectionMode>
 							<RowSelectionMode>Row</RowSelectionMode>
 							<HorizontalLines>false</HorizontalLines>
@@ -186,9 +193,6 @@
 								<ExcludedCommand>SortListAsc</ExcludedCommand>
 								<ExcludedCommand>SortListDesc</ExcludedCommand>
 							</CommandSet>
-							<SearchStringLocation>None</SearchStringLocation>
-							<ViewStatusLocation>None</ViewStatusLocation>
-							<SearchControlLocation>None</SearchControlLocation>
 							<RowFilter xsi:nil="true"/>
 							<ContextMenu name="ВидыДоступаКонтекстноеМеню" id="13">
 								<Autofill>false</Autofill>
@@ -207,18 +211,6 @@
 							</ContextMenu>
 							<AutoCommandBar name="ВидыДоступаКоманднаяПанель" id="14">
 								<Autofill>false</Autofill>
-								<ChildItems>
-									<Button name="ВидыДоступаИзменить" id="72">
-										<Type>CommandBarButton</Type>
-										<CommandName>Form.Item.ВидыДоступа.StandardCommand.Change</CommandName>
-										<ExtendedTooltip name="ВидыДоступаИзменитьExtendedTooltip" id="86"/>
-									</Button>
-									<Button name="ВидыДоступаЗакончитьРедактирование" id="71">
-										<Type>CommandBarButton</Type>
-										<CommandName>Form.Item.ВидыДоступа.StandardCommand.EndEdit</CommandName>
-										<ExtendedTooltip name="ВидыДоступаЗакончитьРедактированиеExtendedTooltip" id="87"/>
-									</Button>
-								</ChildItems>
 							</AutoCommandBar>
 							<ExtendedTooltip name="ВидыДоступаExtendedTooltip" id="88"/>
 							<SearchStringAddition name="ВидыДоступаСтрокаПоиска" id="121">
@@ -262,6 +254,7 @@
 											<v8:content>Вид доступа изменяется только в профиле</v8:content>
 										</v8:item>
 									</ToolTip>
+									<Width>17</Width>
 									<Wrap>false</Wrap>
 									<ListChoiceMode>true</ListChoiceMode>
 									<ContextMenu name="ВидыДоступаВидДоступаПредставлениеКонтекстноеМеню" id="57"/>
@@ -275,7 +268,7 @@
 											<v8:content>Способ определения разрешенных значений доступа</v8:content>
 										</v8:item>
 									</ToolTip>
-									<Width>30</Width>
+									<Width>23</Width>
 									<Wrap>false</Wrap>
 									<ChoiceButton>true</ChoiceButton>
 									<ListChoiceMode>true</ListChoiceMode>
@@ -295,28 +288,15 @@
 									<v8:content>Значения доступа по виду доступа</v8:content>
 								</v8:item>
 							</Title>
-							<ToolTip>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Значения доступа по виду доступа</v8:content>
-								</v8:item>
-							</ToolTip>
 							<Group>Vertical</Group>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
+							<TitleDataPath>НадписьВидДоступа</TitleDataPath>
 							<ExtendedTooltip name="ЗначенияДоступаПоВидуДоступаExtendedTooltip" id="91"/>
 							<ChildItems>
-								<LabelField name="НадписьВидДоступа" id="23">
-									<DataPath>НадписьВидДоступа</DataPath>
-									<TitleLocation>None</TitleLocation>
-									<Shortcut>Ctrl+S</Shortcut>
-									<HorizontalStretch>true</HorizontalStretch>
-									<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
-									<ContextMenu name="НадписьВидДоступаКонтекстноеМеню" id="24"/>
-									<ExtendedTooltip name="НадписьВидДоступаExtendedTooltip" id="93"/>
-								</LabelField>
 								<LabelDecoration name="ТекстВидДоступаНеИспользуется" id="107">
 									<Visible>false</Visible>
+									<AutoMaxWidth>false</AutoMaxWidth>
 									<Title formatted="false">
 										<v8:item>
 											<v8:lang>ru</v8:lang>
@@ -329,11 +309,18 @@
 								<Table name="ЗначенияДоступа" id="27">
 									<Representation>List</Representation>
 									<SkipOnInput>false</SkipOnInput>
+									<HeightInTableRows>2</HeightInTableRows>
 									<Header>false</Header>
 									<AutoInsertNewRow>true</AutoInsertNewRow>
 									<EnableStartDrag>true</EnableStartDrag>
 									<EnableDrag>true</EnableDrag>
 									<DataPath>ЗначенияДоступа</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Значения доступа</v8:content>
+										</v8:item>
+									</Title>
 									<CommandSet>
 										<ExcludedCommand>Copy</ExcludedCommand>
 										<ExcludedCommand>CopyToClipboard</ExcludedCommand>
@@ -341,70 +328,9 @@
 										<ExcludedCommand>OutputList</ExcludedCommand>
 										<ExcludedCommand>SelectAll</ExcludedCommand>
 									</CommandSet>
-									<SearchStringLocation>None</SearchStringLocation>
-									<ViewStatusLocation>None</ViewStatusLocation>
-									<SearchControlLocation>None</SearchControlLocation>
 									<RowFilter xsi:nil="true"/>
-									<ContextMenu name="ЗначенияДоступаКонтекстноеМеню" id="28">
-										<Autofill>false</Autofill>
-										<ChildItems>
-											<Button name="КонтекстноеМенюЗначенияДоступаДобавить" id="34">
-												<Type>CommandBarButton</Type>
-												<SkipOnInput>false</SkipOnInput>
-												<CommandName>Form.Item.ЗначенияДоступа.StandardCommand.Add</CommandName>
-												<ExtendedTooltip name="КонтекстноеМенюЗначенияДоступаДобавитьExtendedTooltip" id="96"/>
-											</Button>
-											<Button name="КонтекстноеМенюЗначенияДоступаУдалить" id="35">
-												<Type>CommandBarButton</Type>
-												<SkipOnInput>false</SkipOnInput>
-												<CommandName>Form.Item.ЗначенияДоступа.StandardCommand.Delete</CommandName>
-												<ExtendedTooltip name="КонтекстноеМенюЗначенияДоступаУдалитьExtendedTooltip" id="97"/>
-											</Button>
-										</ChildItems>
-									</ContextMenu>
-									<AutoCommandBar name="ЗначенияДоступаКоманднаяПанель" id="29">
-										<Autofill>false</Autofill>
-										<ChildItems>
-											<Button name="ЗначенияДоступаДобавить" id="36">
-												<Type>CommandBarButton</Type>
-												<SkipOnInput>false</SkipOnInput>
-												<CommandName>Form.Item.ЗначенияДоступа.StandardCommand.Add</CommandName>
-												<ExtendedTooltip name="ЗначенияДоступаДобавитьExtendedTooltip" id="98"/>
-											</Button>
-											<Button name="ЗначенияДоступаУдалить" id="37">
-												<Type>CommandBarButton</Type>
-												<SkipOnInput>false</SkipOnInput>
-												<CommandName>Form.Item.ЗначенияДоступа.StandardCommand.Delete</CommandName>
-												<ExtendedTooltip name="ЗначенияДоступаУдалитьExtendedTooltip" id="99"/>
-											</Button>
-											<Button name="ЗначенияДоступаПереместитьВверх" id="40">
-												<Type>CommandBarButton</Type>
-												<SkipOnInput>false</SkipOnInput>
-												<CommandName>Form.Item.ЗначенияДоступа.StandardCommand.MoveUp</CommandName>
-												<ExtendedTooltip name="ЗначенияДоступаПереместитьВверхExtendedTooltip" id="100"/>
-											</Button>
-											<Button name="ЗначенияДоступаПереместитьВниз" id="41">
-												<Type>CommandBarButton</Type>
-												<SkipOnInput>false</SkipOnInput>
-												<CommandName>Form.Item.ЗначенияДоступа.StandardCommand.MoveDown</CommandName>
-												<ExtendedTooltip name="ЗначенияДоступаПереместитьВнизExtendedTooltip" id="101"/>
-											</Button>
-											<Button name="СортироватьСписокПоВозрастанию" id="42">
-												<Type>CommandBarButton</Type>
-												<SkipOnInput>false</SkipOnInput>
-												<OnlyInAllActions>true</OnlyInAllActions>
-												<CommandName>Form.Item.ЗначенияДоступа.StandardCommand.SortListAsc</CommandName>
-												<ExtendedTooltip name="СортироватьСписокПоВозрастаниюExtendedTooltip" id="102"/>
-											</Button>
-											<Button name="СортироватьСписокПоУбыванию" id="43">
-												<Type>CommandBarButton</Type>
-												<SkipOnInput>false</SkipOnInput>
-												<OnlyInAllActions>true</OnlyInAllActions>
-												<CommandName>Form.Item.ЗначенияДоступа.StandardCommand.SortListDesc</CommandName>
-												<ExtendedTooltip name="СортироватьСписокПоУбываниюExtendedTooltip" id="103"/>
-											</Button>
-										</ChildItems>
-									</AutoCommandBar>
+									<ContextMenu name="ЗначенияДоступаКонтекстноеМеню" id="28"/>
+									<AutoCommandBar name="ЗначенияДоступаКоманднаяПанель" id="29"/>
 									<ExtendedTooltip name="ЗначенияДоступаExtendedTooltip" id="104"/>
 									<SearchStringAddition name="ЗначенияДоступаСтрокаПоиска" id="130">
 										<AdditionSource>
@@ -767,6 +693,28 @@
 				</v8:item>
 			</Title>
 			<Type/>
+		</Attribute>
+		<Attribute name="ОтказПриЗаписиИзменений" id="24">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отказ при записи изменений</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДоступностьТекущихОграничений" id="25">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Доступность текущих ограничений</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
 		</Attribute>
 	</Attributes>
 	<Commands>

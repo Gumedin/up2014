@@ -42,7 +42,7 @@
 			<DescriptionLength>150</DescriptionLength>
 			<Addressing>InformationRegister.ИсполнителиЗадач</Addressing>
 			<MainAddressingAttribute>Task.ЗадачаИсполнителя.AddressingAttribute.Исполнитель</MainAddressingAttribute>
-			<CurrentPerformer>SessionParameter.ТекущийПользователь</CurrentPerformer>
+			<CurrentPerformer>SessionParameter.АвторизованныйПользователь</CurrentPerformer>
 			<BasedOn/>
 			<StandardAttributes>
 				<xr:StandardAttribute name="Executed">
@@ -231,7 +231,7 @@
 					<xr:ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Дата создания задачи</v8:content>
+							<v8:content>Дата регистрации задачи</v8:content>
 						</v8:item>
 					</xr:ToolTip>
 					<xr:ExtendedEdit>false</xr:ExtendedEdit>
@@ -247,10 +247,10 @@
 					<xr:Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Создана</v8:content>
+							<v8:content>Записана</v8:content>
 						</v8:item>
 					</xr:Synonym>
-					<xr:Comment>Дата создания задачи</xr:Comment>
+					<xr:Comment/>
 					<xr:FullTextSearch>Use</xr:FullTextSearch>
 					<xr:ChoiceParameterLinks/>
 					<xr:FillValue xsi:type="xs:dateTime">0001-01-01T00:00:00</xr:FillValue>
@@ -279,7 +279,7 @@
 					<xr:Comment/>
 					<xr:FullTextSearch>Use</xr:FullTextSearch>
 					<xr:ChoiceParameterLinks/>
-					<xr:FillValue xsi:type="xs:string">            </xr:FillValue>
+					<xr:FillValue xsi:type="xs:string">              </xr:FillValue>
 					<xr:Mask/>
 					<xr:ChoiceParameters/>
 				</xr:StandardAttribute>
@@ -332,6 +332,7 @@
 					</Synonym>
 					<Comment>Автор бизнес-процесса, который сформировал задачу</Comment>
 					<Type>
+						<v8:Type>cfg:CatalogRef.ВнешниеПользователи</v8:Type>
 						<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
 					</Type>
 					<PasswordMode>false</PasswordMode>
@@ -374,7 +375,7 @@
 							<v8:content>Важность</v8:content>
 						</v8:item>
 					</Synonym>
-					<Comment>Важность задачи - для приоритезации исполнителем своих задач</Comment>
+					<Comment>Для упорядочивания исполнителем своих задач по приоритету</Comment>
 					<Type>
 						<v8:Type>cfg:EnumRef.ВариантыВажностиЗадачи</v8:Type>
 					</Type>
@@ -459,7 +460,7 @@
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Дата выполнения</v8:content>
+							<v8:content>Выполнена</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment>Дата и время фактического выполнения задачи</Comment>
@@ -509,7 +510,7 @@
 							<v8:content>Дата начала</v8:content>
 						</v8:item>
 					</Synonym>
-					<Comment>Дата начала выполнения задачи - для приоритезации исполнителем своих задач</Comment>
+					<Comment>Для упорядочивания исполнителем своих задач</Comment>
 					<Type>
 						<v8:Type>xs:dateTime</v8:Type>
 						<v8:DateQualifiers>
@@ -1032,6 +1033,7 @@
 					</Synonym>
 					<Comment/>
 					<Type>
+						<v8:Type>cfg:CatalogRef.ВнешниеПользователи</v8:Type>
 						<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
 					</Type>
 					<PasswordMode>false</PasswordMode>
@@ -1242,7 +1244,7 @@
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Перенаправить</v8:content>
+							<v8:content>Перенаправить...</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
