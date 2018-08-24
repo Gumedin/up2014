@@ -1,40 +1,64 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5">
-	<Width>110</Width>
-	<VerticalScroll>useIfNecessary</VerticalScroll>
 	<CommandSet>
 		<ExcludedCommand>Copy</ExcludedCommand>
 	</CommandSet>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
-		<ChildItems>
-			<Button name="ФормаВключитьВозможностьРедактирования" id="36">
-				<Type>CommandBarButton</Type>
-				<OnlyInAllActions>false</OnlyInAllActions>
-				<CommandName>Form.Command.ВключитьВозможностьРедактирования</CommandName>
-				<ExtendedTooltip name="ФормаВключитьВозможностьРедактированияExtendedTooltip" id="37"/>
-			</Button>
-		</ChildItems>
+		<Autofill>false</Autofill>
 	</AutoCommandBar>
 	<Events>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
+		<UsualGroup name="ГруппаПользовательскихНастроек" id="58">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа пользовательских настроек</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПользовательскихНастроекРасширеннаяПодсказка" id="59"/>
+		</UsualGroup>
+		<CommandBar name="КоманднаяПанель" id="60">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Командная панель</v8:content>
+				</v8:item>
+			</Title>
+			<CommandSource>Form</CommandSource>
+			<ExtendedTooltip name="КоманднаяПанельРасширеннаяПодсказка" id="61"/>
+			<ChildItems>
+				<Button name="ФормаВключитьВозможностьРедактирования" id="36">
+					<Type>CommandBarButton</Type>
+					<OnlyInAllActions>false</OnlyInAllActions>
+					<CommandName>Form.Command.ВключитьВозможностьРедактирования</CommandName>
+					<ExtendedTooltip name="ФормаВключитьВозможностьРедактированияExtendedTooltip" id="37"/>
+				</Button>
+			</ChildItems>
+		</CommandBar>
 		<Table name="Список" id="1">
 			<Representation>List</Representation>
 			<CommandBarLocation>None</CommandBarLocation>
 			<SkipOnInput>false</SkipOnInput>
 			<DefaultItem>true</DefaultItem>
+			<Height>8</Height>
 			<UseAlternationRowColor>true</UseAlternationRowColor>
 			<InitialTreeView>ExpandTopLevel</InitialTreeView>
 			<EnableStartDrag>true</EnableStartDrag>
 			<DataPath>Список</DataPath>
 			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список</v8:content>
+				</v8:item>
+			</Title>
 			<CommandSet>
 				<ExcludedCommand>Copy</ExcludedCommand>
 			</CommandSet>
-			<SearchStringLocation>None</SearchStringLocation>
-			<ViewStatusLocation>None</ViewStatusLocation>
-			<SearchControlLocation>None</SearchControlLocation>
 			<AutoRefresh>false</AutoRefresh>
 			<AutoRefreshPeriod>60</AutoRefreshPeriod>
 			<Period>
@@ -48,80 +72,81 @@
 			<ShowRoot>true</ShowRoot>
 			<AllowRootChoice>false</AllowRootChoice>
 			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<UserSettingsGroup>ГруппаПользовательскихНастроек</UserSettingsGroup>
 			<ContextMenu name="СписокКонтекстноеМеню" id="2"/>
 			<AutoCommandBar name="СписокКоманднаяПанель" id="3">
 				<Autofill>false</Autofill>
 			</AutoCommandBar>
 			<ExtendedTooltip name="СписокExtendedTooltip" id="38"/>
-			<SearchStringAddition name="СписокСтрокаПоиска" id="58">
+			<SearchStringAddition name="СписокSearchString" id="62">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>SearchStringRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="59"/>
-				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="60"/>
+				<ContextMenu name="СписокSearchStringContextMenu" id="63"/>
+				<ExtendedTooltip name="СписокSearchStringExtendedTooltip" id="64"/>
 			</SearchStringAddition>
-			<ViewStatusAddition name="СписокСостояниеПросмотра" id="61">
+			<ViewStatusAddition name="СписокViewStatus" id="65">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>ViewStatusRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="62"/>
-				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="63"/>
+				<ContextMenu name="СписокViewStatusContextMenu" id="66"/>
+				<ExtendedTooltip name="СписокViewStatusExtendedTooltip" id="67"/>
 			</ViewStatusAddition>
-			<SearchControlAddition name="СписокУправлениеПоиском" id="64">
+			<SearchControlAddition name="СписокSearchControl" id="68">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>SearchControl</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="65"/>
-				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="66"/>
+				<ContextMenu name="СписокSearchControlContextMenu" id="69"/>
+				<ExtendedTooltip name="СписокSearchControlExtendedTooltip" id="70"/>
 			</SearchControlAddition>
 			<ChildItems>
-				<LabelField name="Объект" id="4">
+				<LabelField name="СписокОбъект" id="4">
 					<DataPath>Список.Объект</DataPath>
 					<DefaultItem>true</DefaultItem>
-					<ContextMenu name="ОбъектКонтекстноеМеню" id="5"/>
-					<ExtendedTooltip name="ОбъектExtendedTooltip" id="39"/>
+					<ContextMenu name="СписокОбъектКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="СписокОбъектРасширеннаяПодсказка" id="39"/>
 				</LabelField>
-				<LabelField name="НомерНабора" id="6">
+				<LabelField name="СписокНомерНабора" id="6">
 					<DataPath>Список.НомерНабора</DataPath>
-					<ContextMenu name="НомерНабораКонтекстноеМеню" id="7"/>
-					<ExtendedTooltip name="НомерНабораExtendedTooltip" id="40"/>
+					<ContextMenu name="СписокНомерНабораКонтекстноеМеню" id="7"/>
+					<ExtendedTooltip name="СписокНомерНабораРасширеннаяПодсказка" id="40"/>
 				</LabelField>
-				<LabelField name="ЗначениеДоступа" id="10">
+				<LabelField name="СписокЗначениеДоступа" id="10">
 					<DataPath>Список.ЗначениеДоступа</DataPath>
-					<ContextMenu name="ЗначениеДоступаКонтекстноеМеню" id="11"/>
-					<ExtendedTooltip name="ЗначениеДоступаExtendedTooltip" id="42"/>
+					<ContextMenu name="СписокЗначениеДоступаКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="СписокЗначениеДоступаРасширеннаяПодсказка" id="42"/>
 				</LabelField>
-				<LabelField name="Уточнение" id="46">
+				<LabelField name="СписокУточнение" id="46">
 					<DataPath>Список.Уточнение</DataPath>
-					<ContextMenu name="УточнениеКонтекстноеМеню" id="47"/>
-					<ExtendedTooltip name="УточнениеРасширеннаяПодсказка" id="48"/>
+					<ContextMenu name="СписокУточнениеКонтекстноеМеню" id="47"/>
+					<ExtendedTooltip name="СписокУточнениеРасширеннаяПодсказка" id="48"/>
 				</LabelField>
-				<CheckBoxField name="Чтение" id="12">
+				<CheckBoxField name="СписокЧтение" id="12">
 					<DataPath>Список.Чтение</DataPath>
 					<CheckBoxType>Auto</CheckBoxType>
-					<ContextMenu name="ЧтениеКонтекстноеМеню" id="13"/>
-					<ExtendedTooltip name="ЧтениеExtendedTooltip" id="43"/>
+					<ContextMenu name="СписокЧтениеКонтекстноеМеню" id="13"/>
+					<ExtendedTooltip name="СписокЧтениеРасширеннаяПодсказка" id="43"/>
 				</CheckBoxField>
-				<CheckBoxField name="Изменение" id="16">
+				<CheckBoxField name="СписокИзменение" id="16">
 					<DataPath>Список.Изменение</DataPath>
 					<CheckBoxType>Auto</CheckBoxType>
-					<ContextMenu name="ИзменениеКонтекстноеМеню" id="17"/>
-					<ExtendedTooltip name="ИзменениеExtendedTooltip" id="45"/>
+					<ContextMenu name="СписокИзменениеКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="СписокИзменениеРасширеннаяПодсказка" id="45"/>
 				</CheckBoxField>
-				<CheckBoxField name="СтандартноеЗначение" id="52">
+				<CheckBoxField name="СписокСтандартноеЗначение" id="52">
 					<DataPath>Список.СтандартноеЗначение</DataPath>
 					<CheckBoxType>Auto</CheckBoxType>
-					<ContextMenu name="СтандартноеЗначениеКонтекстноеМеню" id="53"/>
-					<ExtendedTooltip name="СтандартноеЗначениеРасширеннаяПодсказка" id="54"/>
+					<ContextMenu name="СписокСтандартноеЗначениеКонтекстноеМеню" id="53"/>
+					<ExtendedTooltip name="СписокСтандартноеЗначениеРасширеннаяПодсказка" id="54"/>
 				</CheckBoxField>
-				<CheckBoxField name="ЗначениеБезГрупп" id="55">
+				<CheckBoxField name="СписокЗначениеБезГрупп" id="55">
 					<DataPath>Список.ЗначениеБезГрупп</DataPath>
 					<CheckBoxType>Auto</CheckBoxType>
-					<ContextMenu name="ЗначениеБезГруппКонтекстноеМеню" id="56"/>
-					<ExtendedTooltip name="ЗначениеБезГруппРасширеннаяПодсказка" id="57"/>
+					<ContextMenu name="СписокЗначениеБезГруппКонтекстноеМеню" id="56"/>
+					<ExtendedTooltip name="СписокЗначениеБезГруппРасширеннаяПодсказка" id="57"/>
 				</CheckBoxField>
 			</ChildItems>
 		</Table>

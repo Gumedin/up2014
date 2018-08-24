@@ -6,11 +6,10 @@
 			<v8:content>Изменение макета печатной формы</v8:content>
 		</v8:item>
 	</Title>
-	<Width>60</Width>
+	<Width>55</Width>
 	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
 	<AutoTitle>false</AutoTitle>
 	<CommandBarLocation>Bottom</CommandBarLocation>
-	<VerticalScroll>useIfNecessary</VerticalScroll>
 	<CommandSet>
 		<ExcludedCommand>Abort</ExcludedCommand>
 		<ExcludedCommand>Cancel</ExcludedCommand>
@@ -40,12 +39,6 @@
 					<v8:content>Диалог</v8:content>
 				</v8:item>
 			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Диалог</v8:content>
-				</v8:item>
-			</ToolTip>
 			<PagesRepresentation>None</PagesRepresentation>
 			<ExtendedTooltip name="ДиалогExtendedTooltip" id="63"/>
 			<ChildItems>
@@ -56,17 +49,11 @@
 							<v8:content>Страница загрузка на компьютер веб клиент</v8:content>
 						</v8:item>
 					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Страница загрузка на компьютер веб клиент</v8:content>
-						</v8:item>
-					</ToolTip>
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="СтраницаЗагрузкаНаКомпьютерВебКлиентExtendedTooltip" id="64"/>
 					<ChildItems>
 						<LabelDecoration name="НадписьПередЗагрузкойМакетаПрограммаВебКлиент" id="42">
-							<HorizontalStretch>true</HorizontalStretch>
+							<AutoMaxWidth>false</AutoMaxWidth>
 							<Title formatted="false">
 								<v8:item>
 									<v8:lang>ru</v8:lang>
@@ -79,8 +66,7 @@
 							<ExtendedTooltip name="НадписьПередЗагрузкойМакетаПрограммаВебКлиентExtendedTooltip" id="65"/>
 						</LabelDecoration>
 						<LabelDecoration name="СсылкаНаСтраницуПрограммыПередЗагрузкойВебКлиент" id="53">
-							<HorizontalStretch>true</HorizontalStretch>
-							<Font ref="sys:DefaultGUIFont" bold="false" italic="false" underline="true" strikeout="false" kind="WindowsFont"/>
+							<AutoMaxWidth>false</AutoMaxWidth>
 							<Title formatted="false">
 								<v8:item>
 									<v8:lang>ru</v8:lang>
@@ -95,7 +81,7 @@
 							</Events>
 						</LabelDecoration>
 						<LabelDecoration name="НадписьПередЗагрузкойМакетаИнструкцияВебКлиент" id="33">
-							<HorizontalStretch>true</HorizontalStretch>
+							<AutoMaxWidth>false</AutoMaxWidth>
 							<Title formatted="false">
 								<v8:item>
 									<v8:lang>ru</v8:lang>
@@ -114,17 +100,11 @@
 							<v8:content>Страница загрузка на компьютер</v8:content>
 						</v8:item>
 					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Страница загрузка на компьютер</v8:content>
-						</v8:item>
-					</ToolTip>
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="СтраницаЗагрузкаНаКомпьютерНеВебКлиентExtendedTooltip" id="68"/>
 					<ChildItems>
 						<LabelDecoration name="НадписьПередЗагрузкойМакетаПрограммаНеВебКлиент" id="40">
-							<HorizontalStretch>true</HorizontalStretch>
+							<AutoMaxWidth>false</AutoMaxWidth>
 							<Title formatted="false">
 								<v8:item>
 									<v8:lang>ru</v8:lang>
@@ -135,8 +115,7 @@
 							<ExtendedTooltip name="НадписьПередЗагрузкойМакетаПрограммаНеВебКлиентExtendedTooltip" id="69"/>
 						</LabelDecoration>
 						<LabelDecoration name="СсылкаНаСтраницуПрограммыПередЗагрузкойНеВебКлиент" id="57">
-							<HorizontalStretch>true</HorizontalStretch>
-							<Font ref="sys:DefaultGUIFont" bold="false" italic="false" underline="true" strikeout="false" kind="WindowsFont"/>
+							<AutoMaxWidth>false</AutoMaxWidth>
 							<Title formatted="false">
 								<v8:item>
 									<v8:lang>ru</v8:lang>
@@ -151,7 +130,7 @@
 							</Events>
 						</LabelDecoration>
 						<LabelDecoration name="НадписьПередЗагрузкойМакетаИнструкцияНеВебКлиент" id="38">
-							<HorizontalStretch>true</HorizontalStretch>
+							<AutoMaxWidth>false</AutoMaxWidth>
 							<Title formatted="false">
 								<v8:item>
 									<v8:lang>ru</v8:lang>
@@ -170,17 +149,11 @@
 							<v8:content>Страница загрузка в информационную базу веб клиент</v8:content>
 						</v8:item>
 					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Страница загрузка в информационную базу веб клиент</v8:content>
-						</v8:item>
-					</ToolTip>
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="СтраницаЗагрузкаВИнформационнуюБазуВебКлиентExtendedTooltip" id="72"/>
 					<ChildItems>
 						<LabelDecoration name="НадписьЗавершениеИзмененияВебКлиент" id="12">
-							<HorizontalStretch>true</HorizontalStretch>
+							<AutoMaxWidth>false</AutoMaxWidth>
 							<Title formatted="false">
 								<v8:item>
 									<v8:lang>ru</v8:lang>
@@ -195,8 +168,7 @@
 							<ExtendedTooltip name="НадписьЗавершениеИзмененияВебКлиентExtendedTooltip" id="73"/>
 						</LabelDecoration>
 						<LabelDecoration name="СсылкаНаСтраницуПрограммыЗавершениеИзмененияВебКлиент" id="59">
-							<HorizontalStretch>true</HorizontalStretch>
-							<Font ref="sys:DefaultGUIFont" bold="false" italic="false" underline="true" strikeout="false" kind="WindowsFont"/>
+							<AutoMaxWidth>false</AutoMaxWidth>
 							<Title formatted="false">
 								<v8:item>
 									<v8:lang>ru</v8:lang>
@@ -219,17 +191,11 @@
 							<v8:content>Страница загрузка в информационную базу</v8:content>
 						</v8:item>
 					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Страница загрузка в информационную базу</v8:content>
-						</v8:item>
-					</ToolTip>
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="СтраницаЗагрузкаВИнформационнуюБазуНеВебКлиентExtendedTooltip" id="75"/>
 					<ChildItems>
 						<LabelDecoration name="НадписьЗавершениеИзмененияНеВебКлиент" id="45">
-							<HorizontalStretch>true</HorizontalStretch>
+							<AutoMaxWidth>false</AutoMaxWidth>
 							<Title formatted="false">
 								<v8:item>
 									<v8:lang>ru</v8:lang>
@@ -244,8 +210,7 @@
 							<ExtendedTooltip name="НадписьЗавершениеИзмененияНеВебКлиентExtendedTooltip" id="76"/>
 						</LabelDecoration>
 						<LabelDecoration name="СсылкаНаСтраницуПрограммыЗавершениеИзмененияНеВебКлиент" id="61">
-							<HorizontalStretch>true</HorizontalStretch>
-							<Font ref="sys:DefaultGUIFont" bold="false" italic="false" underline="true" strikeout="false" kind="WindowsFont"/>
+							<AutoMaxWidth>false</AutoMaxWidth>
 							<Title formatted="false">
 								<v8:item>
 									<v8:lang>ru</v8:lang>
@@ -263,128 +228,113 @@
 				</Page>
 			</ChildItems>
 		</Pages>
-		<Pages name="КоманднаяПанель" id="28">
+		<UsualGroup name="ГруппаКоманднаяПанель" id="89">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Командная панель</v8:content>
 				</v8:item>
 			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Командная панель</v8:content>
-				</v8:item>
-			</ToolTip>
-			<HorizontalStretch>true</HorizontalStretch>
-			<PagesRepresentation>None</PagesRepresentation>
-			<ExtendedTooltip name="КоманднаяПанельExtendedTooltip" id="78"/>
+			<VerticalStretch>true</VerticalStretch>
+			<Group>Horizontal</Group>
+			<VerticalAlign>Bottom</VerticalAlign>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКоманднаяПанельРасширеннаяПодсказка" id="90"/>
 			<ChildItems>
-				<Page name="ПанельЗагрузка" id="29">
+				<Pages name="КоманднаяПанель" id="28">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Панель загрузка</v8:content>
+							<v8:content>Командная панель</v8:content>
 						</v8:item>
 					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Панель загрузка</v8:content>
-						</v8:item>
-					</ToolTip>
-					<ShowTitle>false</ShowTitle>
-					<ExtendedTooltip name="ПанельЗагрузкаExtendedTooltip" id="79"/>
+					<PagesRepresentation>None</PagesRepresentation>
+					<ExtendedTooltip name="КоманднаяПанельExtendedTooltip" id="78"/>
 					<ChildItems>
-						<CommandBar name="ГруппаКнопокЗагрузка" id="22">
+						<Page name="ПанельЗагрузка" id="29">
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Группа кнопок загрузка</v8:content>
+									<v8:content>Панель загрузка</v8:content>
 								</v8:item>
 							</Title>
-							<ToolTip>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Группа кнопок загрузка</v8:content>
-								</v8:item>
-							</ToolTip>
-							<HorizontalLocation>Right</HorizontalLocation>
-							<ExtendedTooltip name="ГруппаКнопокЗагрузкаExtendedTooltip" id="80"/>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ПанельЗагрузкаExtendedTooltip" id="79"/>
 							<ChildItems>
-								<Button name="КнопкаИзменить" id="25">
-									<Type>CommandBarButton</Type>
-									<CommandName>Form.Command.Изменить</CommandName>
-									<ExtendedTooltip name="КнопкаИзменитьExtendedTooltip" id="81"/>
-								</Button>
-								<Button name="КнопкаОтменаЗагрузки" id="27">
-									<Type>CommandBarButton</Type>
-									<CommandName>Form.Command.Отмена</CommandName>
-									<ExtendedTooltip name="КнопкаОтменаЗагрузкиExtendedTooltip" id="82"/>
-								</Button>
-								<Button name="КнопкаСправкаЗагрузка" id="31">
-									<Type>CommandBarButton</Type>
-									<CommandName>Form.StandardCommand.Help</CommandName>
-									<ExtendedTooltip name="КнопкаСправкаЗагрузкаExtendedTooltip" id="83"/>
-								</Button>
+								<CommandBar name="ГруппаКнопокЗагрузка" id="22">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Кнопок загрузка</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalLocation>Right</HorizontalLocation>
+									<ExtendedTooltip name="ГруппаКнопокЗагрузкаExtendedTooltip" id="80"/>
+									<ChildItems>
+										<Button name="КнопкаИзменить" id="25">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Command.Изменить</CommandName>
+											<ExtendedTooltip name="КнопкаИзменитьExtendedTooltip" id="81"/>
+										</Button>
+										<Button name="КнопкаОтменаЗагрузки" id="27">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Command.Отмена</CommandName>
+											<ExtendedTooltip name="КнопкаОтменаЗагрузкиExtendedTooltip" id="82"/>
+										</Button>
+										<Button name="КнопкаСправкаЗагрузка" id="31">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.StandardCommand.Help</CommandName>
+											<ExtendedTooltip name="КнопкаСправкаЗагрузкаExtendedTooltip" id="83"/>
+										</Button>
+									</ChildItems>
+								</CommandBar>
 							</ChildItems>
-						</CommandBar>
-					</ChildItems>
-				</Page>
-				<Page name="ПанельЗавершениеИзменения" id="30">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Панель завершение изменения</v8:content>
-						</v8:item>
-					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Панель завершение изменения</v8:content>
-						</v8:item>
-					</ToolTip>
-					<ShowTitle>false</ShowTitle>
-					<ExtendedTooltip name="ПанельЗавершениеИзмененияExtendedTooltip" id="84"/>
-					<ChildItems>
-						<CommandBar name="ГруппаКнопокЗавершениеИзменения" id="23">
+						</Page>
+						<Page name="ПанельЗавершениеИзменения" id="30">
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Группа кнопок завершение изменения</v8:content>
+									<v8:content>Панель завершение изменения</v8:content>
 								</v8:item>
 							</Title>
-							<ToolTip>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Группа кнопок завершение изменения</v8:content>
-								</v8:item>
-							</ToolTip>
-							<HorizontalLocation>Right</HorizontalLocation>
-							<ExtendedTooltip name="ГруппаКнопокЗавершениеИзмененияExtendedTooltip" id="85"/>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ПанельЗавершениеИзмененияExtendedTooltip" id="84"/>
 							<ChildItems>
-								<Button name="КнопкаЗавершитьИзменение" id="9">
-									<Type>CommandBarButton</Type>
-									<DefaultButton>true</DefaultButton>
-									<CommandName>Form.Command.ЗавершитьИзменение</CommandName>
-									<ExtendedTooltip name="КнопкаЗавершитьИзменениеExtendedTooltip" id="86"/>
-								</Button>
-								<Button name="КнопкаСправкаЗавершениеИзменения" id="24">
-									<Type>CommandBarButton</Type>
-									<CommandName>Form.StandardCommand.Help</CommandName>
-									<ExtendedTooltip name="КнопкаСправкаЗавершениеИзмененияExtendedTooltip" id="87"/>
-								</Button>
-								<Button name="КнопкаОтменаИзменений" id="32">
-									<Type>CommandBarButton</Type>
-									<CommandName>Form.Command.Отмена</CommandName>
-									<ExtendedTooltip name="КнопкаОтменаИзмененийExtendedTooltip" id="88"/>
-								</Button>
+								<CommandBar name="ГруппаКнопокЗавершениеИзменения" id="23">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Кнопок завершение изменения</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalLocation>Right</HorizontalLocation>
+									<ExtendedTooltip name="ГруппаКнопокЗавершениеИзмененияExtendedTooltip" id="85"/>
+									<ChildItems>
+										<Button name="КнопкаЗавершитьИзменение" id="9">
+											<Type>CommandBarButton</Type>
+											<DefaultButton>true</DefaultButton>
+											<CommandName>Form.Command.ЗавершитьИзменение</CommandName>
+											<ExtendedTooltip name="КнопкаЗавершитьИзменениеExtendedTooltip" id="86"/>
+										</Button>
+										<Button name="КнопкаСправкаЗавершениеИзменения" id="24">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.StandardCommand.Help</CommandName>
+											<ExtendedTooltip name="КнопкаСправкаЗавершениеИзмененияExtendedTooltip" id="87"/>
+										</Button>
+										<Button name="КнопкаОтменаИзменений" id="32">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Command.Отмена</CommandName>
+											<ExtendedTooltip name="КнопкаОтменаИзмененийExtendedTooltip" id="88"/>
+										</Button>
+									</ChildItems>
+								</CommandBar>
 							</ChildItems>
-						</CommandBar>
+						</Page>
 					</ChildItems>
-				</Page>
+				</Pages>
 			</ChildItems>
-		</Pages>
+		</UsualGroup>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="ИмяОбъектаМетаданныхМакета" id="2">
@@ -401,9 +351,6 @@
 					<v8:AllowedLength>Variable</v8:AllowedLength>
 				</v8:StringQualifiers>
 			</Type>
-			<Edit>
-				<xr:Common>false</xr:Common>
-			</Edit>
 		</Attribute>
 		<Attribute name="ИмяФайлаМакета" id="3">
 			<Title>
@@ -576,9 +523,6 @@
 					<v8:AllowedLength>Variable</v8:AllowedLength>
 				</v8:StringQualifiers>
 			</Type>
-			<Edit>
-				<xr:Common>false</xr:Common>
-			</Edit>
 		</Attribute>
 	</Attributes>
 	<Commands>
@@ -637,6 +581,7 @@
 					<v8:AllowedLength>Variable</v8:AllowedLength>
 				</v8:StringQualifiers>
 			</Type>
+			<KeyParameter>true</KeyParameter>
 		</Parameter>
 		<Parameter name="ТипМакета">
 			<Type>
@@ -653,10 +598,9 @@
 			</Type>
 			<KeyParameter>true</KeyParameter>
 		</Parameter>
-		<Parameter name="ЭтоВебКлиент">
-			<Type>
-				<v8:Type>xs:boolean</v8:Type>
-			</Type>
+		<Parameter name="ТабличныйДокумент">
+			<Type/>
+			<KeyParameter>true</KeyParameter>
 		</Parameter>
 	</Parameters>
 </Form>

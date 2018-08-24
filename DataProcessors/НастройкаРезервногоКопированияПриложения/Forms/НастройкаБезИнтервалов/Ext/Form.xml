@@ -9,7 +9,6 @@
 	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
 	<AutoTitle>false</AutoTitle>
 	<CommandBarLocation>Bottom</CommandBarLocation>
-	<VerticalScroll>useIfNecessary</VerticalScroll>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<HorizontalAlign>Right</HorizontalAlign>
 		<Autofill>false</Autofill>
@@ -123,7 +122,6 @@
 											<v8:content>Ежедневные копии</v8:content>
 										</v8:item>
 									</Title>
-									<HorizontalStretch>true</HorizontalStretch>
 									<Group>Horizontal</Group>
 									<Representation>None</Representation>
 									<ShowTitle>false</ShowTitle>
@@ -243,7 +241,6 @@
 											<v8:content>Ежедневные копии (количество)</v8:content>
 										</v8:item>
 									</Title>
-									<HorizontalStretch>true</HorizontalStretch>
 									<Group>Horizontal</Group>
 									<Representation>None</Representation>
 									<ShowTitle>false</ShowTitle>
@@ -261,6 +258,7 @@
 											<ExtendedTooltip name="КоличествоЕжедневныхКопийExtendedTooltip" id="92"/>
 										</InputField>
 										<LabelDecoration name="ДекорацияКопийЕжедневных" id="58">
+											<AutoMaxWidth>false</AutoMaxWidth>
 											<Title formatted="false">
 												<v8:item>
 													<v8:lang>ru</v8:lang>
@@ -296,6 +294,7 @@
 											<ExtendedTooltip name="КоличествоЕжемесячныхКопийExtendedTooltip" id="95"/>
 										</InputField>
 										<LabelDecoration name="ДекорацияКопийЕжемесячных" id="63">
+											<AutoMaxWidth>false</AutoMaxWidth>
 											<Title formatted="false">
 												<v8:item>
 													<v8:lang>ru</v8:lang>
@@ -331,6 +330,7 @@
 											<ExtendedTooltip name="КоличествоЕжегодныхКопийExtendedTooltip" id="98"/>
 										</InputField>
 										<LabelDecoration name="ДекорацияКопийЕжегодных" id="68">
+											<AutoMaxWidth>false</AutoMaxWidth>
 											<Title formatted="false">
 												<v8:item>
 													<v8:lang>ru</v8:lang>

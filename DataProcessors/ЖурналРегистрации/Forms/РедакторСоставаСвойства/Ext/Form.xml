@@ -6,13 +6,16 @@
 			<v8:content>Выбор значений для отбора</v8:content>
 		</v8:item>
 	</Title>
+	<Width>50</Width>
+	<Height>35</Height>
 	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
 	<AutoTitle>false</AutoTitle>
 	<CommandBarLocation>None</CommandBarLocation>
-	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<CommandSet>
+		<ExcludedCommand>CustomizeForm</ExcludedCommand>
+	</CommandSet>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
 	<Events>
-		<Event name="OnOpen">ПриОткрытии</Event>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
@@ -27,9 +30,12 @@
 			<InitialTreeView>ExpandAllLevels</InitialTreeView>
 			<DataPath>Список</DataPath>
 			<BorderColor>style:BorderColor</BorderColor>
-			<SearchStringLocation>None</SearchStringLocation>
-			<ViewStatusLocation>None</ViewStatusLocation>
-			<SearchControlLocation>None</SearchControlLocation>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список</v8:content>
+				</v8:item>
+			</Title>
 			<ContextMenu name="СписокКонтекстноеМеню" id="2"/>
 			<AutoCommandBar name="СписокКоманднаяПанель" id="3">
 				<Autofill>false</Autofill>
@@ -111,12 +117,6 @@
 					<v8:content>Кнопки формы</v8:content>
 				</v8:item>
 			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Кнопки формы</v8:content>
-				</v8:item>
-			</ToolTip>
 			<HorizontalLocation>Right</HorizontalLocation>
 			<ExtendedTooltip name="КнопкиФормыExtendedTooltip" id="20"/>
 			<ChildItems>
@@ -126,7 +126,6 @@
 					<SkipOnInput>false</SkipOnInput>
 					<CommandName>Form.Command.ВыбратьСоставОтбора</CommandName>
 					<TextColor>style:ButtonTextColor</TextColor>
-					<BackColor>style:ButtonBackColor</BackColor>
 					<BorderColor>style:BorderColor</BorderColor>
 					<ExtendedTooltip name="OKExtendedTooltip" id="21"/>
 				</Button>
@@ -228,7 +227,6 @@
 			<Type>
 				<v8:Type>v8:ValueListType</v8:Type>
 			</Type>
-			<Settings xsi:type="v8:TypeDescription"/>
 		</Attribute>
 		<Attribute name="ОтбираемыеПараметры" id="4">
 			<Title>
@@ -255,7 +253,6 @@
 			<Type>
 				<v8:Type>v8:ValueListType</v8:Type>
 			</Type>
-			<Settings xsi:type="v8:TypeDescription"/>
 		</Attribute>
 		<Attribute name="ПредставленияСобытий" id="6">
 			<Title>

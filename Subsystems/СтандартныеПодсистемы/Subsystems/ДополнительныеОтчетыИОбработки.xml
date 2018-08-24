@@ -10,20 +10,17 @@
 				</v8:item>
 			</Synonym>
 			<Comment/>
-			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<IncludeHelpInContents>false</IncludeHelpInContents>
 			<IncludeInCommandInterface>false</IncludeInCommandInterface>
 			<Explanation/>
 			<Picture/>
 			<Content>
-				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ДополнительныеПечатныеФормыОбъекта</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.ДополнительныеОтчетыИОбработки</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Enum.ВидыДополнительныхОтчетовИОбработок</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ОтчетыОбъекта</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ЗаполнениеОбъекта</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.СозданиеСвязанныхОбъектов</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.НазначениеДополнительныхОбработок</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ДополнительныеОтчетыИОбработки</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Role.ИспользованиеДополнительныхОтчетовИОбработок</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ЧтениеДополнительныхОтчетовИОбработок</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ДополнительныеОтчетыИОбработки</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ДополнительныеОтчетыИОбработкиКлиент</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Enum.СпособыВызоваДополнительныхОбработок</xr:Item>
@@ -36,12 +33,10 @@
 				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.НастройкаМоихОтчетовИОбработок</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ИспользоватьДополнительныеОбработкиЗаполненияОбъекта</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ИспользоватьДополнительныеОтчеты</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ИспользоватьДополнительныеПечатныеФормы</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ИспользоватьДополнительныеОбработкиСозданияСвязанныхОбъектов</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOptionsParameter.ДополнительныеОтчетыИОбработкиТипФормы</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOptionsParameter.ДополнительныеОтчетыИОбработкиОбъектНазначения</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ДополнительныеОтчетыИОбработкиВызовСервера</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.ДлительнаяОперацияДополнительныхОтчетовИОбработок</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Constant.ИспользоватьДополнительныеОтчетыИОбработки</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ИспользоватьДополнительныеОтчетыИОбработки</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ДополнительныеОтчетыИОбработкиПовтИсп</xr:Item>
@@ -54,8 +49,11 @@
 				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ДополнительныеОтчетыИОбработкиКлиентПереопределяемый</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">XDTOPackage.ApplicationExtensionsPermissions_1_0_0_1</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">XDTOPackage.ApplicationExtensionsManifest_1_0_0_1</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Constant.УдалитьПоказыватьКомандуДополнительныеПечатныеФормы</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Enum.РежимыСовместимостиРазрешенийДополнительныхОтчетовИОбработок</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ДополнительныеОтчетыАдминистрирование</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ДополнительныеОбработкиАдминистрирование</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.ДополнительныеОтчетыИОбработкиПередУдалениемИдентификатораОбъектаМетаданных</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DefinedType.ОбъектСДополнительнымиКомандами</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects/>

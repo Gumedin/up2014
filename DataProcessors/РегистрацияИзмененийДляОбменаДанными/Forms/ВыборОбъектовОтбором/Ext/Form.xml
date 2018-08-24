@@ -9,7 +9,6 @@
 	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
 	<AutoTitle>false</AutoTitle>
 	<CommandBarLocation>None</CommandBarLocation>
-	<VerticalScroll>useIfNecessary</VerticalScroll>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
 	<Events>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
@@ -23,19 +22,28 @@
 				</v8:item>
 			</Title>
 			<Group>Vertical</Group>
-			<Representation>StrongSeparation</Representation>
+			<Representation>NormalSeparation</Representation>
 			<ExtendedTooltip name="Группа1ExtendedTooltip" id="40"/>
 			<ChildItems>
 				<Table name="Отбор" id="15">
 					<Representation>Tree</Representation>
 					<Autofill>true</Autofill>
+					<Height>6</Height>
 					<InitialTreeView>ExpandAllLevels</InitialTreeView>
 					<EnableStartDrag>true</EnableStartDrag>
 					<EnableDrag>true</EnableDrag>
-					<DataPath>СписокДанных.Filter</DataPath>
-					<SearchStringLocation>None</SearchStringLocation>
-					<ViewStatusLocation>None</ViewStatusLocation>
-					<SearchControlLocation>None</SearchControlLocation>
+					<DataPath>СписокДанных.SettingsComposer.Settings.Filter</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отбор</v8:content>
+						</v8:item>
+					</Title>
+					<CommandSet>
+						<ExcludedCommand>HierarchicalList</ExcludedCommand>
+						<ExcludedCommand>List</ExcludedCommand>
+						<ExcludedCommand>Tree</ExcludedCommand>
+					</CommandSet>
 					<ViewMode>All</ViewMode>
 					<SettingsNamedItemDetailedRepresentation>false</SettingsNamedItemDetailedRepresentation>
 					<ContextMenu name="ОтборКонтекстноеМеню" id="16"/>
@@ -90,29 +98,29 @@
 						</ChildItems>
 					</AutoCommandBar>
 					<ExtendedTooltip name="ОтборExtendedTooltip" id="48"/>
-					<SearchStringAddition name="ОтборСтрокаПоиска" id="63">
+					<SearchStringAddition name="ОтборСтрокаПоиска" id="65">
 						<AdditionSource>
 							<Item>Отбор</Item>
 							<Type>SearchStringRepresentation</Type>
 						</AdditionSource>
-						<ContextMenu name="ОтборСтрокаПоискаКонтекстноеМеню" id="64"/>
-						<ExtendedTooltip name="ОтборСтрокаПоискаРасширеннаяПодсказка" id="65"/>
+						<ContextMenu name="ОтборСтрокаПоискаКонтекстноеМеню" id="66"/>
+						<ExtendedTooltip name="ОтборСтрокаПоискаРасширеннаяПодсказка" id="67"/>
 					</SearchStringAddition>
-					<ViewStatusAddition name="ОтборСостояниеПросмотра" id="66">
+					<ViewStatusAddition name="ОтборСостояниеПросмотра" id="68">
 						<AdditionSource>
 							<Item>Отбор</Item>
 							<Type>ViewStatusRepresentation</Type>
 						</AdditionSource>
-						<ContextMenu name="ОтборСостояниеПросмотраКонтекстноеМеню" id="67"/>
-						<ExtendedTooltip name="ОтборСостояниеПросмотраРасширеннаяПодсказка" id="68"/>
+						<ContextMenu name="ОтборСостояниеПросмотраКонтекстноеМеню" id="69"/>
+						<ExtendedTooltip name="ОтборСостояниеПросмотраРасширеннаяПодсказка" id="70"/>
 					</ViewStatusAddition>
-					<SearchControlAddition name="ОтборУправлениеПоиском" id="69">
+					<SearchControlAddition name="ОтборУправлениеПоиском" id="71">
 						<AdditionSource>
 							<Item>Отбор</Item>
 							<Type>SearchControl</Type>
 						</AdditionSource>
-						<ContextMenu name="ОтборУправлениеПоискомКонтекстноеМеню" id="70"/>
-						<ExtendedTooltip name="ОтборУправлениеПоискомРасширеннаяПодсказка" id="71"/>
+						<ContextMenu name="ОтборУправлениеПоискомКонтекстноеМеню" id="72"/>
+						<ExtendedTooltip name="ОтборУправлениеПоискомРасширеннаяПодсказка" id="73"/>
 					</SearchControlAddition>
 					<Events>
 						<Event name="OnChange">ОтборПриИзменении</Event>
@@ -120,19 +128,35 @@
 				</Table>
 			</ChildItems>
 		</UsualGroup>
+		<UsualGroup name="ГруппаПользовательскихНастроек" id="63">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа пользовательских настроек</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПользовательскихНастроекРасширеннаяПодсказка" id="64"/>
+		</UsualGroup>
 		<Table name="СписокДанных" id="10">
 			<Representation>List</Representation>
 			<TitleLocation>Auto</TitleLocation>
 			<CommandBarLocation>Bottom</CommandBarLocation>
 			<ChangeRowSet>false</ChangeRowSet>
 			<ChangeRowOrder>false</ChangeRowOrder>
+			<Height>5</Height>
 			<UseAlternationRowColor>true</UseAlternationRowColor>
 			<EnableStartDrag>true</EnableStartDrag>
 			<DataPath>СписокДанных</DataPath>
 			<RowPictureDataPath>СписокДанных.DefaultPicture</RowPictureDataPath>
-			<SearchStringLocation>None</SearchStringLocation>
-			<ViewStatusLocation>None</ViewStatusLocation>
-			<SearchControlLocation>None</SearchControlLocation>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список данных</v8:content>
+				</v8:item>
+			</Title>
 			<AutoRefresh>false</AutoRefresh>
 			<AutoRefreshPeriod>60</AutoRefreshPeriod>
 			<Period>
@@ -146,6 +170,7 @@
 			<ShowRoot>true</ShowRoot>
 			<AllowRootChoice>false</AllowRootChoice>
 			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<UserSettingsGroup>ГруппаПользовательскихНастроек</UserSettingsGroup>
 			<ContextMenu name="СписокДанныхКонтекстноеМеню" id="11">
 				<Autofill>false</Autofill>
 				<ChildItems>
@@ -177,6 +202,12 @@
 						<ExtendedTooltip name="СписокДанныхКонтекстноеМенюВыбратьТекущуюСтрокуExtendedTooltip" id="50"/>
 					</Button>
 					<ButtonGroup name="СписокДанныхКонтекстноеМенюГруппа2" id="31">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Список данных контекстное меню группа 2</v8:content>
+							</v8:item>
+						</Title>
 						<ExtendedTooltip name="СписокДанныхКонтекстноеМенюГруппа2ExtendedTooltip" id="51"/>
 						<ChildItems>
 							<Button name="СписокДанныхКонтекстноеМенюОткрытьТекущийОбъект" id="32">
@@ -197,6 +228,12 @@
 						</ChildItems>
 					</ButtonGroup>
 					<ButtonGroup name="СписокДанныхКонтекстноеМенюГруппа1" id="25">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Список данных контекстное меню группа 1</v8:content>
+							</v8:item>
+						</Title>
 						<ExtendedTooltip name="СписокДанныхКонтекстноеМенюГруппа1ExtendedTooltip" id="53"/>
 						<ChildItems>
 							<Button name="СписокДанныхКонтекстноеМенюНайти" id="26">
@@ -280,29 +317,29 @@
 				</ChildItems>
 			</AutoCommandBar>
 			<ExtendedTooltip name="СписокДанныхExtendedTooltip" id="62"/>
-			<SearchStringAddition name="СписокДанныхСтрокаПоиска" id="72">
+			<SearchStringAddition name="СписокДанныхСтрокаПоиска" id="74">
 				<AdditionSource>
 					<Item>СписокДанных</Item>
 					<Type>SearchStringRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокДанныхСтрокаПоискаКонтекстноеМеню" id="73"/>
-				<ExtendedTooltip name="СписокДанныхСтрокаПоискаРасширеннаяПодсказка" id="74"/>
+				<ContextMenu name="СписокДанныхСтрокаПоискаКонтекстноеМеню" id="75"/>
+				<ExtendedTooltip name="СписокДанныхСтрокаПоискаРасширеннаяПодсказка" id="76"/>
 			</SearchStringAddition>
-			<ViewStatusAddition name="СписокДанныхСостояниеПросмотра" id="75">
+			<ViewStatusAddition name="СписокДанныхСостояниеПросмотра" id="77">
 				<AdditionSource>
 					<Item>СписокДанных</Item>
 					<Type>ViewStatusRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокДанныхСостояниеПросмотраКонтекстноеМеню" id="76"/>
-				<ExtendedTooltip name="СписокДанныхСостояниеПросмотраРасширеннаяПодсказка" id="77"/>
+				<ContextMenu name="СписокДанныхСостояниеПросмотраКонтекстноеМеню" id="78"/>
+				<ExtendedTooltip name="СписокДанныхСостояниеПросмотраРасширеннаяПодсказка" id="79"/>
 			</ViewStatusAddition>
-			<SearchControlAddition name="СписокДанныхУправлениеПоиском" id="78">
+			<SearchControlAddition name="СписокДанныхУправлениеПоиском" id="80">
 				<AdditionSource>
 					<Item>СписокДанных</Item>
 					<Type>SearchControl</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокДанныхУправлениеПоискомКонтекстноеМеню" id="79"/>
-				<ExtendedTooltip name="СписокДанныхУправлениеПоискомРасширеннаяПодсказка" id="80"/>
+				<ContextMenu name="СписокДанныхУправлениеПоискомКонтекстноеМеню" id="81"/>
+				<ExtendedTooltip name="СписокДанныхУправлениеПоискомРасширеннаяПодсказка" id="82"/>
 			</SearchControlAddition>
 			<Events>
 				<Event name="Selection">СписокДанныхВыбор</Event>
@@ -334,7 +371,6 @@
 				<ListSettings>
 					<dcsset:filter>
 						<dcsset:viewMode>Normal</dcsset:viewMode>
-						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
 					</dcsset:filter>
 					<dcsset:order>
 						<dcsset:viewMode>Normal</dcsset:viewMode>

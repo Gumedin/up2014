@@ -416,11 +416,7 @@
 					</Synonym>
 					<Comment/>
 					<Type>
-						<v8:Type>cfg:CatalogRef.ВнешниеПользователи</v8:Type>
-						<v8:Type>cfg:CatalogRef.ГруппыВнешнихПользователей</v8:Type>
-						<v8:Type>cfg:CatalogRef.ГруппыПользователей</v8:Type>
-						<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
-						<v8:Type>cfg:EnumRef.ВидыНазначенияДатЗапрета</v8:Type>
+						<v8:TypeSet>cfg:DefinedType.АдресатЗапретаИзменения</v8:TypeSet>
 					</Type>
 					<PasswordMode>false</PasswordMode>
 					<Format/>
@@ -428,7 +424,7 @@
 					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Адресат настройки запрета:
+							<v8:content>Адресат запрета изменения:
 - пользователь,
 - группа пользователей,
 - внешний пользователь,

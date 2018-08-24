@@ -343,7 +343,7 @@
 			<ChoiceDataGetModeOnInputByString>Directly</ChoiceDataGetModeOnInputByString>
 			<DefaultObjectForm>Catalog.ПапкиФайлов.Form.ФормаЭлемента</DefaultObjectForm>
 			<DefaultFolderForm/>
-			<DefaultListForm/>
+			<DefaultListForm>Catalog.ПапкиФайлов.Form.ФормаСписка</DefaultListForm>
 			<DefaultChoiceForm>Catalog.ПапкиФайлов.Form.ФормаВыбора</DefaultChoiceForm>
 			<DefaultFolderChoiceForm/>
 			<AuxiliaryObjectForm/>
@@ -385,7 +385,7 @@
 							<v8:content>Описание</v8:content>
 						</v8:item>
 					</Synonym>
-					<Comment>Описание папки</Comment>
+					<Comment/>
 					<Type>
 						<v8:Type>xs:string</v8:Type>
 						<v8:StringQualifiers>
@@ -434,7 +434,7 @@
 							<v8:content>Ответственный</v8:content>
 						</v8:item>
 					</Synonym>
-					<Comment>Ответственный за папку</Comment>
+					<Comment/>
 					<Type>
 						<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
 					</Type>
@@ -479,7 +479,7 @@
 							<v8:content>Дата создания</v8:content>
 						</v8:item>
 					</Synonym>
-					<Comment>Дата создания папки</Comment>
+					<Comment/>
 					<Type>
 						<v8:Type>xs:dateTime</v8:Type>
 						<v8:DateQualifiers>
@@ -715,6 +715,7 @@
 				</ChildObjects>
 			</TabularSection>
 			<Form>ФормаЭлемента</Form>
+			<Form>ФормаСписка</Form>
 			<Form>ФормаВыбора</Form>
 		</ChildObjects>
 	</Catalog>

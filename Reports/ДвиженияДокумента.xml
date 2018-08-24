@@ -19,15 +19,15 @@
 					<v8:content>Движения документа</v8:content>
 				</v8:item>
 			</Synonym>
-			<Comment>Отчет по движениям документа</Comment>
-			<UseStandardCommands>true</UseStandardCommands>
-			<DefaultForm>Report.ДвиженияДокумента.Form.ФормаОтчета</DefaultForm>
+			<Comment/>
+			<UseStandardCommands>false</UseStandardCommands>
+			<DefaultForm>CommonForm.ФормаОтчета</DefaultForm>
 			<AuxiliaryForm/>
-			<MainDataCompositionSchema/>
-			<DefaultSettingsForm/>
+			<MainDataCompositionSchema>Report.ДвиженияДокумента.Template.ПустаяСхемаКомпоновкиДанных</MainDataCompositionSchema>
+			<DefaultSettingsForm>CommonForm.ФормаНастроекОтчета</DefaultSettingsForm>
 			<AuxiliarySettingsForm/>
-			<DefaultVariantForm/>
-			<VariantsStorage/>
+			<DefaultVariantForm>CommonForm.ФормаВариантаОтчета</DefaultVariantForm>
+			<VariantsStorage>SettingsStorage.ХранилищеВариантовОтчетов</VariantsStorage>
 			<SettingsStorage/>
 			<IncludeHelpInContents>false</IncludeHelpInContents>
 			<ExtendedPresentation/>
@@ -75,6 +75,8 @@
 			</Attribute>
 			<Form>ФормаОтчета</Form>
 			<Template>Макет</Template>
+			<Template>ПустаяСхемаКомпоновкиДанных</Template>
+			<Template>Заголовок</Template>
 			<Command uuid="73144a1c-4b3c-469e-bba0-0657db33d2ac">
 				<Properties>
 					<Name>ДвиженияДокумента</Name>

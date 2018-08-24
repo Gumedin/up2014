@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5">
 	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
-	<VerticalScroll>useIfNecessary</VerticalScroll>
 	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
 	<Events>
@@ -23,6 +22,9 @@
 			<ChooseType>false</ChooseType>
 			<ContextMenu name="НаименованиеКонтекстноеМеню" id="4"/>
 			<ExtendedTooltip name="НаименованиеExtendedTooltip" id="10"/>
+			<Events>
+				<Event name="OnChange">НаименованиеПриИзменении</Event>
+			</Events>
 		</InputField>
 		<Table name="КомпоновщикНастроекНастройкиОтбор" id="5">
 			<Representation>Tree</Representation>
@@ -31,9 +33,12 @@
 			<EnableStartDrag>true</EnableStartDrag>
 			<EnableDrag>true</EnableDrag>
 			<DataPath>КомпоновщикНастроек.Settings.Filter</DataPath>
-			<SearchStringLocation>None</SearchStringLocation>
-			<ViewStatusLocation>None</ViewStatusLocation>
-			<SearchControlLocation>None</SearchControlLocation>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Компоновщик настроек настройки отбор</v8:content>
+				</v8:item>
+			</Title>
 			<ViewMode>All</ViewMode>
 			<SettingsNamedItemDetailedRepresentation>false</SettingsNamedItemDetailedRepresentation>
 			<ContextMenu name="КомпоновщикНастроекНастройкиОтборКонтекстноеМеню" id="6"/>
@@ -48,30 +53,33 @@
 				</ChildItems>
 			</AutoCommandBar>
 			<ExtendedTooltip name="КомпоновщикНастроекНастройкиОтборExtendedTooltip" id="12"/>
-			<SearchStringAddition name="КомпоновщикНастроекНастройкиОтборСтрокаПоиска" id="13">
+			<SearchStringAddition name="КомпоновщикНастроекНастройкиОтборSearchString" id="13">
 				<AdditionSource>
 					<Item>КомпоновщикНастроекНастройкиОтбор</Item>
 					<Type>SearchStringRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="КомпоновщикНастроекНастройкиОтборСтрокаПоискаКонтекстноеМеню" id="14"/>
-				<ExtendedTooltip name="КомпоновщикНастроекНастройкиОтборСтрокаПоискаРасширеннаяПодсказка" id="15"/>
+				<ContextMenu name="КомпоновщикНастроекНастройкиОтборSearchStringContextMenu" id="14"/>
+				<ExtendedTooltip name="КомпоновщикНастроекНастройкиОтборSearchStringExtendedTooltip" id="15"/>
 			</SearchStringAddition>
-			<ViewStatusAddition name="КомпоновщикНастроекНастройкиОтборСостояниеПросмотра" id="16">
+			<ViewStatusAddition name="КомпоновщикНастроекНастройкиОтборViewStatus" id="16">
 				<AdditionSource>
 					<Item>КомпоновщикНастроекНастройкиОтбор</Item>
 					<Type>ViewStatusRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="КомпоновщикНастроекНастройкиОтборСостояниеПросмотраКонтекстноеМеню" id="17"/>
-				<ExtendedTooltip name="КомпоновщикНастроекНастройкиОтборСостояниеПросмотраРасширеннаяПодсказка" id="18"/>
+				<ContextMenu name="КомпоновщикНастроекНастройкиОтборViewStatusContextMenu" id="17"/>
+				<ExtendedTooltip name="КомпоновщикНастроекНастройкиОтборViewStatusExtendedTooltip" id="18"/>
 			</ViewStatusAddition>
-			<SearchControlAddition name="КомпоновщикНастроекНастройкиОтборУправлениеПоиском" id="19">
+			<SearchControlAddition name="КомпоновщикНастроекНастройкиОтборSearchControl" id="19">
 				<AdditionSource>
 					<Item>КомпоновщикНастроекНастройкиОтбор</Item>
 					<Type>SearchControl</Type>
 				</AdditionSource>
-				<ContextMenu name="КомпоновщикНастроекНастройкиОтборУправлениеПоискомКонтекстноеМеню" id="20"/>
-				<ExtendedTooltip name="КомпоновщикНастроекНастройкиОтборУправлениеПоискомРасширеннаяПодсказка" id="21"/>
+				<ContextMenu name="КомпоновщикНастроекНастройкиОтборSearchControlContextMenu" id="20"/>
+				<ExtendedTooltip name="КомпоновщикНастроекНастройкиОтборSearchControlExtendedTooltip" id="21"/>
 			</SearchControlAddition>
+			<Events>
+				<Event name="OnChange">КомпоновщикНастроекНастройкиОтборПриИзменении</Event>
+			</Events>
 		</Table>
 	</ChildItems>
 	<Attributes>

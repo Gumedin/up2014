@@ -28,7 +28,7 @@
 			<Synonym>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Назначение опросов</v8:content>
+					<v8:content>Проведение опросов</v8:content>
 				</v8:item>
 			</Synonym>
 			<Comment/>
@@ -199,17 +199,17 @@
 			<DataLockFields/>
 			<DataLockControlMode>Managed</DataLockControlMode>
 			<FullTextSearch>Use</FullTextSearch>
-			<ObjectPresentation/>
-			<ExtendedObjectPresentation/>
-			<ListPresentation>
+			<ObjectPresentation>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Назначения опросов</v8:content>
+					<v8:content>Проведение опроса</v8:content>
 				</v8:item>
-			</ListPresentation>
+			</ObjectPresentation>
+			<ExtendedObjectPresentation/>
+			<ListPresentation/>
 			<ExtendedListPresentation/>
 			<Explanation/>
-			<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+			<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
 			<DataHistory>DontUse</DataHistory>
 		</Properties>
 		<ChildObjects>
@@ -268,11 +268,7 @@
 					</Synonym>
 					<Comment/>
 					<Type>
-						<v8:Type>xs:string</v8:Type>
-						<v8:StringQualifiers>
-							<v8:Length>10</v8:Length>
-							<v8:AllowedLength>Variable</v8:AllowedLength>
-						</v8:StringQualifiers>
+						<v8:TypeSet>cfg:DefinedType.Респондент</v8:TypeSet>
 					</Type>
 					<PasswordMode>false</PasswordMode>
 					<Format/>
@@ -694,7 +690,7 @@
 							</Synonym>
 							<Comment/>
 							<Type>
-								<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+								<v8:TypeSet>cfg:DefinedType.Респондент</v8:TypeSet>
 							</Type>
 							<PasswordMode>false</PasswordMode>
 							<Format/>

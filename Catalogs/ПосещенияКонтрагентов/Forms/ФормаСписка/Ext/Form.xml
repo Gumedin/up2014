@@ -68,7 +68,7 @@
 			</SearchControlAddition>
 			<ChildItems>
 				<LabelField name="Ссылка" id="19">
-					<DataPath>Список.Ref</DataPath>
+					<DataPath>~Список.Ref~Список.Ссылка</DataPath>
 					<UserVisible>
 						<xr:Common>false</xr:Common>
 					</UserVisible>
@@ -76,52 +76,52 @@
 					<ExtendedTooltip name="СсылкаРасширеннаяПодсказка" id="21"/>
 				</LabelField>
 				<PictureField name="ЕстьФайлы" id="43">
-					<DataPath>Список.ЕстьФайлы</DataPath>
+					<DataPath>~Список.ЕстьФайлы</DataPath>
 					<TitleLocation>None</TitleLocation>
 					<HeaderPicture>
 						<xr:Ref>CommonPicture.Скрепка</xr:Ref>
-						<xr:LoadTransparent>false</xr:LoadTransparent>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
 					</HeaderPicture>
 					<ValuesPicture>
 						<xr:Ref>CommonPicture.КоллекцияСкрепка</xr:Ref>
-						<xr:LoadTransparent>false</xr:LoadTransparent>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
 					</ValuesPicture>
 					<ContextMenu name="ЕстьФайлыКонтекстноеМеню" id="44"/>
 					<ExtendedTooltip name="ЕстьФайлыРасширеннаяПодсказка" id="45"/>
 				</PictureField>
 				<LabelField name="Дата" id="22">
-					<DataPath>Список.Дата</DataPath>
+					<DataPath>~Список.Дата</DataPath>
 					<ContextMenu name="ДатаКонтекстноеМеню" id="23"/>
 					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="24"/>
 				</LabelField>
 				<CheckBoxField name="Отработано" id="28">
-					<DataPath>Список.Отработано</DataPath>
+					<DataPath>~Список.Отработано</DataPath>
 					<CheckBoxType>Auto</CheckBoxType>
 					<ContextMenu name="ОтработаноКонтекстноеМеню" id="29"/>
 					<ExtendedTooltip name="ОтработаноРасширеннаяПодсказка" id="30"/>
 				</CheckBoxField>
 				<LabelField name="Контрагент" id="25">
-					<DataPath>Список.Контрагент</DataPath>
+					<DataPath>~Список.Контрагент</DataPath>
 					<ContextMenu name="КонтрагентКонтекстноеМеню" id="26"/>
 					<ExtendedTooltip name="КонтрагентРасширеннаяПодсказка" id="27"/>
 				</LabelField>
 				<LabelField name="ПредметПосещения" id="31">
-					<DataPath>Список.ПредметПосещения</DataPath>
+					<DataPath>~Список.ПредметПосещения</DataPath>
 					<ContextMenu name="ПредметПосещенияКонтекстноеМеню" id="32"/>
 					<ExtendedTooltip name="ПредметПосещенияРасширеннаяПодсказка" id="33"/>
 				</LabelField>
 				<LabelField name="Уточнение" id="40">
-					<DataPath>Список.Уточнение</DataPath>
+					<DataPath>~Список.Уточнение</DataPath>
 					<ContextMenu name="УточнениеКонтекстноеМеню" id="41"/>
 					<ExtendedTooltip name="УточнениеРасширеннаяПодсказка" id="42"/>
 				</LabelField>
 				<LabelField name="Задание" id="34">
-					<DataPath>Список.Задание</DataPath>
+					<DataPath>~Список.Задание</DataPath>
 					<ContextMenu name="ЗаданиеКонтекстноеМеню" id="35"/>
 					<ExtendedTooltip name="ЗаданиеРасширеннаяПодсказка" id="36"/>
 				</LabelField>
 				<LabelField name="Результат" id="37">
-					<DataPath>Список.Результат</DataPath>
+					<DataPath>~Список.Результат</DataPath>
 					<ContextMenu name="РезультатКонтекстноеМеню" id="38"/>
 					<ExtendedTooltip name="РезультатРасширеннаяПодсказка" id="39"/>
 				</LabelField>

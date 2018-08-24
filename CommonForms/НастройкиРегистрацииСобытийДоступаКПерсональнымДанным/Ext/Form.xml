@@ -1,8 +1,13 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5">
-	<Width>60</Width>
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Регистрация событий доступа к персональным данным</v8:content>
+		</v8:item>
+	</Title>
 	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
-	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoTitle>false</AutoTitle>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<ChildItems>
 			<Button name="ФормаЗаписатьИЗакрыть" id="6">
@@ -24,38 +29,42 @@
 			<EnableStartDrag>true</EnableStartDrag>
 			<EnableDrag>true</EnableDrag>
 			<DataPath>ОбластиПерсональныхДанных</DataPath>
-			<SearchStringLocation>None</SearchStringLocation>
-			<ViewStatusLocation>None</ViewStatusLocation>
-			<SearchControlLocation>None</SearchControlLocation>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Области персональных данных</v8:content>
+				</v8:item>
+			</Title>
 			<ContextMenu name="ОбластиПерсональныхДанныхКонтекстноеМеню" id="8"/>
 			<AutoCommandBar name="ОбластиПерсональныхДанныхКоманднаяПанель" id="9"/>
 			<ExtendedTooltip name="ОбластиПерсональныхДанныхExtendedTooltip" id="11"/>
-			<SearchStringAddition name="ОбластиПерсональныхДанныхСтрокаПоиска" id="13">
+			<SearchStringAddition name="ОбластиПерсональныхДанныхSearchString" id="13">
 				<AdditionSource>
 					<Item>ОбластиПерсональныхДанных</Item>
 					<Type>SearchStringRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="ОбластиПерсональныхДанныхСтрокаПоискаКонтекстноеМеню" id="14"/>
-				<ExtendedTooltip name="ОбластиПерсональныхДанныхСтрокаПоискаРасширеннаяПодсказка" id="15"/>
+				<ContextMenu name="ОбластиПерсональныхДанныхSearchStringContextMenu" id="14"/>
+				<ExtendedTooltip name="ОбластиПерсональныхДанныхSearchStringExtendedTooltip" id="15"/>
 			</SearchStringAddition>
-			<ViewStatusAddition name="ОбластиПерсональныхДанныхСостояниеПросмотра" id="16">
+			<ViewStatusAddition name="ОбластиПерсональныхДанныхViewStatus" id="16">
 				<AdditionSource>
 					<Item>ОбластиПерсональныхДанных</Item>
 					<Type>ViewStatusRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="ОбластиПерсональныхДанныхСостояниеПросмотраКонтекстноеМеню" id="17"/>
-				<ExtendedTooltip name="ОбластиПерсональныхДанныхСостояниеПросмотраРасширеннаяПодсказка" id="18"/>
+				<ContextMenu name="ОбластиПерсональныхДанныхViewStatusContextMenu" id="17"/>
+				<ExtendedTooltip name="ОбластиПерсональныхДанныхViewStatusExtendedTooltip" id="18"/>
 			</ViewStatusAddition>
-			<SearchControlAddition name="ОбластиПерсональныхДанныхУправлениеПоиском" id="19">
+			<SearchControlAddition name="ОбластиПерсональныхДанныхSearchControl" id="19">
 				<AdditionSource>
 					<Item>ОбластиПерсональныхДанных</Item>
 					<Type>SearchControl</Type>
 				</AdditionSource>
-				<ContextMenu name="ОбластиПерсональныхДанныхУправлениеПоискомКонтекстноеМеню" id="20"/>
-				<ExtendedTooltip name="ОбластиПерсональныхДанныхУправлениеПоискомРасширеннаяПодсказка" id="21"/>
+				<ContextMenu name="ОбластиПерсональныхДанныхSearchControlContextMenu" id="20"/>
+				<ExtendedTooltip name="ОбластиПерсональныхДанныхSearchControlExtendedTooltip" id="21"/>
 			</SearchControlAddition>
 		</Table>
 		<LabelDecoration name="ДекорацияРегистрацияСобытияДоступНадпись" id="4">
+			<AutoMaxWidth>false</AutoMaxWidth>
 			<Height>2</Height>
 			<TextColor>style:ПоясняющийТекст</TextColor>
 			<Title formatted="false">

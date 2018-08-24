@@ -489,7 +489,7 @@
 			</Events>
 			<ChildItems>
 				<PictureField name="ПодписанЭП" id="91">
-					<DataPath>Список.ПодписанЭП</DataPath>
+					<DataPath>~Список.ПодписанЭП</DataPath>
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -515,7 +515,7 @@
 					<ExtendedTooltip name="ПодписанЭПРасширеннаяПодсказка" id="161"/>
 				</PictureField>
 				<PictureField name="Зашифрован" id="93">
-					<DataPath>Список.Зашифрован</DataPath>
+					<DataPath>~Список.Зашифрован</DataPath>
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -545,7 +545,7 @@
 					<ExtendedTooltip name="КартинкаИНаименованиеExtendedTooltip" id="163"/>
 					<ChildItems>
 						<PictureField name="Картинка" id="25">
-							<DataPath>Список.ИндексКартинки</DataPath>
+							<DataPath>~Список.ИндексКартинки</DataPath>
 							<ShowInHeader>false</ShowInHeader>
 							<FooterHorizontalAlign>Left</FooterHorizontalAlign>
 							<Width>2</Width>
@@ -561,7 +561,7 @@
 							<ExtendedTooltip name="КартинкаExtendedTooltip" id="164"/>
 						</PictureField>
 						<InputField name="Наименование" id="17">
-							<DataPath>Список.Description</DataPath>
+							<DataPath>~Список.Description~Список.Наименование</DataPath>
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
@@ -575,14 +575,14 @@
 					</ChildItems>
 				</ColumnGroup>
 				<InputField name="Описание" id="27">
-					<DataPath>Список.Описание</DataPath>
+					<DataPath>~Список.Описание</DataPath>
 					<Height>1</Height>
 					<Wrap>false</Wrap>
 					<ContextMenu name="ОписаниеКонтекстноеМеню" id="28"/>
 					<ExtendedTooltip name="ОписаниеExtendedTooltip" id="166"/>
 				</InputField>
 				<InputField name="ДатаСоздания" id="23">
-					<DataPath>Список.ДатаСоздания</DataPath>
+					<DataPath>~Список.ДатаСоздания</DataPath>
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -594,13 +594,13 @@
 					<ExtendedTooltip name="ДатаСозданияExtendedTooltip" id="167"/>
 				</InputField>
 				<InputField name="Автор" id="21">
-					<DataPath>Список.Автор</DataPath>
+					<DataPath>~Список.Автор</DataPath>
 					<Wrap>false</Wrap>
 					<ContextMenu name="АвторКонтекстноеМеню" id="22"/>
 					<ExtendedTooltip name="АвторExtendedTooltip" id="168"/>
 				</InputField>
 				<InputField name="Редактирует" id="29">
-					<DataPath>Список.Редактирует</DataPath>
+					<DataPath>~Список.Редактирует</DataPath>
 					<UserVisible>
 						<xr:Common>false</xr:Common>
 					</UserVisible>
@@ -609,7 +609,7 @@
 					<ExtendedTooltip name="РедактируетExtendedTooltip" id="169"/>
 				</InputField>
 				<LabelField name="ТекущаяВерсияРазмер" id="39">
-					<DataPath>Список.ТекущаяВерсияРазмер</DataPath>
+					<DataPath>~Список.ТекущаяВерсияРазмер</DataPath>
 					<UserVisible>
 						<xr:Common>false</xr:Common>
 					</UserVisible>
@@ -635,7 +635,7 @@
 					<ExtendedTooltip name="ТекущаяВерсияРазмерExtendedTooltip" id="170"/>
 				</LabelField>
 				<InputField name="ТекущаяВерсияАвтор" id="35">
-					<DataPath>Список.ТекущаяВерсияАвтор</DataPath>
+					<DataPath>~Список.ТекущаяВерсияАвтор</DataPath>
 					<UserVisible>
 						<xr:Common>false</xr:Common>
 					</UserVisible>
@@ -650,7 +650,7 @@
 					<ExtendedTooltip name="ТекущаяВерсияАвторExtendedTooltip" id="171"/>
 				</InputField>
 				<InputField name="ТекущаяВерсияДатаСоздания" id="37">
-					<DataPath>Список.ТекущаяВерсияДатаСоздания</DataPath>
+					<DataPath>~Список.ТекущаяВерсияДатаСоздания</DataPath>
 					<UserVisible>
 						<xr:Common>false</xr:Common>
 					</UserVisible>
@@ -665,7 +665,7 @@
 					<ExtendedTooltip name="ТекущаяВерсияДатаСозданияExtendedTooltip" id="172"/>
 				</InputField>
 				<CheckBoxField name="ХранитьВерсии" id="63">
-					<DataPath>Список.ХранитьВерсии</DataPath>
+					<DataPath>~Список.ХранитьВерсии</DataPath>
 					<UserVisible>
 						<xr:Common>false</xr:Common>
 					</UserVisible>
@@ -674,7 +674,7 @@
 					<ExtendedTooltip name="ХранитьВерсииExtendedTooltip" id="173"/>
 				</CheckBoxField>
 				<CheckBoxField name="РедактируетТекущийПользователь" id="65">
-					<DataPath>Список.РедактируетТекущийПользователь</DataPath>
+					<DataPath>~Список.РедактируетТекущийПользователь</DataPath>
 					<UserVisible>
 						<xr:Common>false</xr:Common>
 					</UserVisible>
@@ -683,7 +683,7 @@
 					<ExtendedTooltip name="РедактируетТекущийПользовательExtendedTooltip" id="174"/>
 				</CheckBoxField>
 				<LabelField name="Ссылка" id="89">
-					<DataPath>Список.Ref</DataPath>
+					<DataPath>~Список.Ref~Список.Ссылка</DataPath>
 					<UserVisible>
 						<xr:Common>false</xr:Common>
 					</UserVisible>
@@ -700,14 +700,14 @@
 			</Type>
 			<MainAttribute>true</MainAttribute>
 			<UseAlways>
+				<Field>~Список.Ref~Список.Ссылка</Field>
+				<Field>~Список.Зашифрован</Field>
 				<Field>~Список.Подписан</Field>
+				<Field>~Список.ПодписанЭП</Field>
 				<Field>~Список.ПодписанЭЦП</Field>
-				<Field>Список.Ref</Field>
-				<Field>Список.Зашифрован</Field>
-				<Field>Список.ПодписанЭП</Field>
-				<Field>Список.Редактирует</Field>
-				<Field>Список.РедактируетТекущийПользователь</Field>
-				<Field>Список.ХранитьВерсии</Field>
+				<Field>~Список.Редактирует</Field>
+				<Field>~Список.РедактируетТекущийПользователь</Field>
+				<Field>~Список.ХранитьВерсии</Field>
 			</UseAlways>
 			<Settings xsi:type="DynamicList">
 				<ManualQuery>true</ManualQuery>
@@ -991,7 +991,8 @@
 			</ToolTip>
 			<Picture>
 				<xr:Ref>CommonPicture.ПодписанЭП</xr:Ref>
-				<xr:LoadTransparent>false</xr:LoadTransparent>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+				<xr:TransparentPixel x="10" y="2"/>
 			</Picture>
 			<Action>Подписать</Action>
 			<FunctionalOptions>

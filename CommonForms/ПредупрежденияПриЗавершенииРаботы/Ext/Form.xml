@@ -6,11 +6,9 @@
 			<v8:content>Завершение работы</v8:content>
 		</v8:item>
 	</Title>
-	<Width>60</Width>
 	<WindowOpeningMode>LockWholeInterface</WindowOpeningMode>
 	<AutoTitle>false</AutoTitle>
 	<CommandBarLocation>Bottom</CommandBarLocation>
-	<VerticalScroll>useIfNecessary</VerticalScroll>
 	<CommandSet>
 		<ExcludedCommand>Abort</ExcludedCommand>
 		<ExcludedCommand>Cancel</ExcludedCommand>
@@ -50,21 +48,12 @@
 					<v8:content>Верхняя группа</v8:content>
 				</v8:item>
 			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Верхняя группа</v8:content>
-				</v8:item>
-			</ToolTip>
 			<Group>Horizontal</Group>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="ВерхняяГруппаExtendedTooltip" id="33"/>
 			<ChildItems>
 				<PictureDecoration name="КартинкаПредупреждения" id="18">
-					<Width>5</Width>
-					<Height>2</Height>
-					<VerticalStretch>false</VerticalStretch>
 					<Title formatted="false">
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -82,33 +71,13 @@
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Основная группа</v8:content>
+							<v8:content>Дополнительные действия при завершении работы:</v8:content>
 						</v8:item>
 					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Основная группа</v8:content>
-						</v8:item>
-					</ToolTip>
-					<VerticalStretch>true</VerticalStretch>
+					<Shortcut>Ctrl+S</Shortcut>
 					<Group>Vertical</Group>
 					<Representation>None</Representation>
-					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="ОсновнаяГруппаExtendedTooltip" id="35"/>
-					<ChildItems>
-						<LabelDecoration name="Декорация1" id="29">
-							<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
-							<Title formatted="false">
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Дополнительные действия при завершении работы:</v8:content>
-								</v8:item>
-							</Title>
-							<ContextMenu name="Декорация1КонтекстноеМеню" id="30"/>
-							<ExtendedTooltip name="Декорация1ExtendedTooltip" id="36"/>
-						</LabelDecoration>
-					</ChildItems>
 				</UsualGroup>
 			</ChildItems>
 		</UsualGroup>
@@ -124,7 +93,6 @@
 			<Type>
 				<v8:Type>v8:ValueListType</v8:Type>
 			</Type>
-			<Settings xsi:type="v8:TypeDescription"/>
 		</Attribute>
 		<Attribute name="МассивЗадачНаВыполнениеПослеЗакрытия" id="2">
 			<Title>
@@ -136,7 +104,6 @@
 			<Type>
 				<v8:Type>v8:ValueListType</v8:Type>
 			</Type>
-			<Settings xsi:type="v8:TypeDescription"/>
 		</Attribute>
 	</Attributes>
 	<Commands>

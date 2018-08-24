@@ -280,6 +280,7 @@
 					</Synonym>
 					<Comment/>
 					<Type>
+						<v8:Type>cfg:CatalogRef.ВнешниеПользователи</v8:Type>
 						<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
 					</Type>
 					<PasswordMode>false</PasswordMode>
@@ -410,18 +411,18 @@
 					<DataHistory>Use</DataHistory>
 				</Properties>
 			</Dimension>
-			<Form>АдресацияПоОбъекту</Form>
-			<Form>АдресацияПоОбъектуИРоли</Form>
+			<Form>РолиИИсполнителиЗадач</Form>
+			<Form>ИсполнителиРолиСОбъектомАдресации</Form>
 			<Form>ИсполнителиРоли</Form>
 			<Form>ФормаЗаписи</Form>
 			<Form>ФормаСписка</Form>
 			<Command uuid="679cc0df-df5c-4c33-8c64-c0b6cee39116">
 				<Properties>
-					<Name>НастройкаРолевойАдресации</Name>
+					<Name>РолиИИсполнителиЗадач</Name>
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Роли и исполнители бизнес-процессов</v8:content>
+							<v8:content>Роли и исполнители задач</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
@@ -433,7 +434,7 @@
 					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Назначить исполнителей на роли бизнес-процессов</v8:content>
+							<v8:content>Назначить исполнителей на роли</v8:content>
 						</v8:item>
 					</ToolTip>
 					<Picture/>

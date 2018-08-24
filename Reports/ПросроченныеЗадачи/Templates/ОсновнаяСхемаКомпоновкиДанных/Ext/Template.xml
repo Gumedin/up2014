@@ -67,6 +67,12 @@
 		<field xsi:type="DataSetFieldField">
 			<dataPath>ПросроченоДней</dataPath>
 			<field>ПросроченоДней</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Просрочено дней</v8:content>
+				</v8:item>
+			</title>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Автор</dataPath>
@@ -105,7 +111,10 @@
 ГДЕ
 	Задачи.Выполнена = ИСТИНА
 	И Задачи.СостояниеБизнесПроцесса = ЗНАЧЕНИЕ(Перечисление.СостоянияБизнесПроцессов.Активен)
-	И (ТИПЗНАЧЕНИЯ(Задачи.БизнесПроцесс) &lt;&gt; ТИП(БизнесПроцесс.Задание) ИЛИ Задачи.БизнесПроцесс.ЗадачаИсточник = ЗНАЧЕНИЕ(Задача.ЗадачаИсполнителя.ПустаяСсылка))</query>
+	И (ТИПЗНАЧЕНИЯ(Задачи.БизнесПроцесс) &lt;&gt; ТИП(БизнесПроцесс.Задание) ИЛИ Задачи.БизнесПроцесс.ЗадачаИсточник = ЗНАЧЕНИЕ(Задача.ЗадачаИсполнителя.ПустаяСсылка))
+{ГДЕ
+	(Задачи.Дата &gt;= &amp;ДатаНачала),
+	(Задачи.Дата &lt;= &amp;ДатаОкончания)}	</query>
 	</dataSet>
 	<totalField>
 		<dataPath>НеВСрок</dataPath>
@@ -115,6 +124,60 @@
 		<dataPath>ВсегоЗадач</dataPath>
 		<expression>Количество(ВсегоЗадач)</expression>
 	</totalField>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>v8:StandardPeriod</v8:Type>
+		</valueType>
+		<value xsi:type="v8:StandardPeriod">
+			<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+			<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+			<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+		</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ДатаНачала</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата начала</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;Период.ДатаНачала</expression>
+	</parameter>
+	<parameter>
+		<name>ДатаОкончания</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата окончания</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;Период.ДатаОкончания</expression>
+	</parameter>
 	<settingsVariant>
 		<dcsset:name>ЗадачиВыполненныеСНарушениемСроков</dcsset:name>
 		<dcsset:presentation xsi:type="v8:LocalStringType">
@@ -153,24 +216,39 @@
 					<dcsset:userSettingID>ae24a270-ba28-4bd4-ba5f-36804851339e</dcsset:userSettingID>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:FilterItemComparison">
-					<dcsset:left xsi:type="dcscor:Field">ДатаЗадачи</dcsset:left>
-					<dcsset:comparisonType>GreaterOrEqual</dcsset:comparisonType>
-					<dcsset:right xsi:type="v8:StandardBeginningDate">
-						<v8:variant xsi:type="v8:StandardBeginningDateVariant">BeginningOfThisWeek</v8:variant>
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Исполнитель</dcsset:left>
+					<dcsset:comparisonType>InList</dcsset:comparisonType>
+					<dcsset:right xsi:type="v8:ValueListType">
+						<v8:valueType/>
+						<v8:lastId xsi:type="xs:decimal">-1</v8:lastId>
 					</dcsset:right>
-					<dcsset:userSettingID>5427796f-bad4-4e42-a4da-85b6ed3eab36</dcsset:userSettingID>
-					<dcsset:userSettingPresentation xsi:type="xs:string">Дата начала</dcsset:userSettingPresentation>
-				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:FilterItemComparison">
-					<dcsset:left xsi:type="dcscor:Field">ДатаЗадачи</dcsset:left>
-					<dcsset:comparisonType>LessOrEqual</dcsset:comparisonType>
-					<dcsset:right xsi:type="v8:StandardBeginningDate">
-						<v8:variant xsi:type="v8:StandardBeginningDateVariant">BeginningOfThisDay</v8:variant>
-					</dcsset:right>
-					<dcsset:userSettingID>4487cfa3-fd3c-478f-b3ed-54af1134ad0a</dcsset:userSettingID>
-					<dcsset:userSettingPresentation xsi:type="xs:string">Дата окончания</dcsset:userSettingPresentation>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>b7914567-ba19-425b-b1a8-ff458c89f7a2</dcsset:userSettingID>
 				</dcsset:item>
 			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Период</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardPeriod">
+						<v8:variant xsi:type="v8:StandardPeriodVariant">ThisWeek</v8:variant>
+					</dcscor:value>
+					<dcsset:userSettingID>7e89839d-4174-481d-9d4c-6efe5936168f</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Важность</dcsset:field>
+					<dcsset:orderType>Desc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>ПросроченоДней</dcsset:field>
+					<dcsset:orderType>Desc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>17c16db5-81a3-4eb0-8d68-adb87dc350fa</dcsset:userSettingID>
+			</dcsset:order>
 			<dcsset:outputParameters>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 					<dcscor:parameter>ВыводитьЗаголовок</dcscor:parameter>

@@ -6,11 +6,8 @@
 			<v8:content>Выбор пользователей для копирования настроек</v8:content>
 		</v8:item>
 	</Title>
-	<Width>70</Width>
-	<Height>20</Height>
 	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
 	<AutoTitle>false</AutoTitle>
-	<VerticalScroll>useIfNecessary</VerticalScroll>
 	<CommandSet>
 		<ExcludedCommand>Abort</ExcludedCommand>
 		<ExcludedCommand>Cancel</ExcludedCommand>
@@ -41,12 +38,6 @@
 					<v8:content>Командная панель</v8:content>
 				</v8:item>
 			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Командная панель</v8:content>
-				</v8:item>
-			</ToolTip>
 			<CommandSource>Form</CommandSource>
 			<ExtendedTooltip name="КоманднаяПанельExtendedTooltip" id="51"/>
 			<ChildItems>
@@ -86,6 +77,7 @@
 			</ChildItems>
 		</CommandBar>
 		<LabelDecoration name="Надпись" id="23">
+			<AutoMaxWidth>false</AutoMaxWidth>
 			<Title formatted="false">
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -102,12 +94,6 @@
 					<v8:content>Выбор пользователей</v8:content>
 				</v8:item>
 			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Выбор пользователя</v8:content>
-				</v8:item>
-			</ToolTip>
 			<Group>Horizontal</Group>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
@@ -151,9 +137,6 @@
 						<ExcludedCommand>SortListDesc</ExcludedCommand>
 						<ExcludedCommand>Tree</ExcludedCommand>
 					</CommandSet>
-					<SearchStringLocation>None</SearchStringLocation>
-					<ViewStatusLocation>None</ViewStatusLocation>
-					<SearchControlLocation>None</SearchControlLocation>
 					<ContextMenu name="ГруппыПользователейКонтекстноеМеню" id="13">
 						<Autofill>false</Autofill>
 						<ChildItems>
@@ -178,29 +161,29 @@
 						<Autofill>false</Autofill>
 					</AutoCommandBar>
 					<ExtendedTooltip name="ГруппыПользователейExtendedTooltip" id="63"/>
-					<SearchStringAddition name="ГруппыПользователейСтрокаПоиска" id="77">
+					<SearchStringAddition name="ГруппыПользователейSearchString" id="77">
 						<AdditionSource>
 							<Item>ГруппыПользователей</Item>
 							<Type>SearchStringRepresentation</Type>
 						</AdditionSource>
-						<ContextMenu name="ГруппыПользователейСтрокаПоискаКонтекстноеМеню" id="78"/>
-						<ExtendedTooltip name="ГруппыПользователейСтрокаПоискаРасширеннаяПодсказка" id="79"/>
+						<ContextMenu name="ГруппыПользователейSearchStringContextMenu" id="78"/>
+						<ExtendedTooltip name="ГруппыПользователейSearchStringExtendedTooltip" id="79"/>
 					</SearchStringAddition>
-					<ViewStatusAddition name="ГруппыПользователейСостояниеПросмотра" id="80">
+					<ViewStatusAddition name="ГруппыПользователейViewStatus" id="80">
 						<AdditionSource>
 							<Item>ГруппыПользователей</Item>
 							<Type>ViewStatusRepresentation</Type>
 						</AdditionSource>
-						<ContextMenu name="ГруппыПользователейСостояниеПросмотраКонтекстноеМеню" id="81"/>
-						<ExtendedTooltip name="ГруппыПользователейСостояниеПросмотраРасширеннаяПодсказка" id="82"/>
+						<ContextMenu name="ГруппыПользователейViewStatusContextMenu" id="81"/>
+						<ExtendedTooltip name="ГруппыПользователейViewStatusExtendedTooltip" id="82"/>
 					</ViewStatusAddition>
-					<SearchControlAddition name="ГруппыПользователейУправлениеПоиском" id="83">
+					<SearchControlAddition name="ГруппыПользователейSearchControl" id="83">
 						<AdditionSource>
 							<Item>ГруппыПользователей</Item>
 							<Type>SearchControl</Type>
 						</AdditionSource>
-						<ContextMenu name="ГруппыПользователейУправлениеПоискомКонтекстноеМеню" id="84"/>
-						<ExtendedTooltip name="ГруппыПользователейУправлениеПоискомРасширеннаяПодсказка" id="85"/>
+						<ContextMenu name="ГруппыПользователейSearchControlContextMenu" id="84"/>
+						<ExtendedTooltip name="ГруппыПользователейSearchControlExtendedTooltip" id="85"/>
 					</SearchControlAddition>
 					<Events>
 						<Event name="Selection">ГруппыПользователейВыбор</Event>
@@ -211,15 +194,9 @@
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Группа и картинка</v8:content>
+									<v8:content>И картинка</v8:content>
 								</v8:item>
 							</Title>
-							<ToolTip>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Группа и картинка</v8:content>
-								</v8:item>
-							</ToolTip>
 							<Group>InCell</Group>
 							<ExtendedTooltip name="ГруппаИКартинкаExtendedTooltip" id="64"/>
 							<ChildItems>
@@ -269,9 +246,6 @@
 						<ExcludedCommand>SortListAsc</ExcludedCommand>
 						<ExcludedCommand>SortListDesc</ExcludedCommand>
 					</CommandSet>
-					<SearchStringLocation>None</SearchStringLocation>
-					<ViewStatusLocation>None</ViewStatusLocation>
-					<SearchControlLocation>None</SearchControlLocation>
 					<RowFilter xsi:nil="true"/>
 					<ContextMenu name="СписокПользователейКонтекстноеМеню" id="2">
 						<Autofill>false</Autofill>
@@ -297,29 +271,29 @@
 						<HorizontalAlign>Right</HorizontalAlign>
 					</AutoCommandBar>
 					<ExtendedTooltip name="СписокПользователейExtendedTooltip" id="70"/>
-					<SearchStringAddition name="СписокПользователейСтрокаПоиска" id="86">
+					<SearchStringAddition name="СписокПользователейSearchString" id="86">
 						<AdditionSource>
 							<Item>СписокПользователей</Item>
 							<Type>SearchStringRepresentation</Type>
 						</AdditionSource>
-						<ContextMenu name="СписокПользователейСтрокаПоискаКонтекстноеМеню" id="87"/>
-						<ExtendedTooltip name="СписокПользователейСтрокаПоискаРасширеннаяПодсказка" id="88"/>
+						<ContextMenu name="СписокПользователейSearchStringContextMenu" id="87"/>
+						<ExtendedTooltip name="СписокПользователейSearchStringExtendedTooltip" id="88"/>
 					</SearchStringAddition>
-					<ViewStatusAddition name="СписокПользователейСостояниеПросмотра" id="89">
+					<ViewStatusAddition name="СписокПользователейViewStatus" id="89">
 						<AdditionSource>
 							<Item>СписокПользователей</Item>
 							<Type>ViewStatusRepresentation</Type>
 						</AdditionSource>
-						<ContextMenu name="СписокПользователейСостояниеПросмотраКонтекстноеМеню" id="90"/>
-						<ExtendedTooltip name="СписокПользователейСостояниеПросмотраРасширеннаяПодсказка" id="91"/>
+						<ContextMenu name="СписокПользователейViewStatusContextMenu" id="90"/>
+						<ExtendedTooltip name="СписокПользователейViewStatusExtendedTooltip" id="91"/>
 					</ViewStatusAddition>
-					<SearchControlAddition name="СписокПользователейУправлениеПоиском" id="92">
+					<SearchControlAddition name="СписокПользователейSearchControl" id="92">
 						<AdditionSource>
 							<Item>СписокПользователей</Item>
 							<Type>SearchControl</Type>
 						</AdditionSource>
-						<ContextMenu name="СписокПользователейУправлениеПоискомКонтекстноеМеню" id="93"/>
-						<ExtendedTooltip name="СписокПользователейУправлениеПоискомРасширеннаяПодсказка" id="94"/>
+						<ContextMenu name="СписокПользователейSearchControlContextMenu" id="93"/>
+						<ExtendedTooltip name="СписокПользователейSearchControlExtendedTooltip" id="94"/>
 					</SearchControlAddition>
 					<Events>
 						<Event name="Selection">СписокПользователейВыбор</Event>
@@ -329,15 +303,9 @@
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Группа пользователи</v8:content>
+									<v8:content>Пользователи</v8:content>
 								</v8:item>
 							</Title>
-							<ToolTip>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Группа пользователи</v8:content>
-								</v8:item>
-							</ToolTip>
 							<Group>InCell</Group>
 							<ExtendedTooltip name="ГруппаПользователиExtendedTooltip" id="71"/>
 							<ChildItems>
@@ -369,15 +337,9 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Группа показывать пользователей дочерних групп</v8:content>
+					<v8:content>Показывать пользователей дочерних групп</v8:content>
 				</v8:item>
 			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Группа показывать пользователей дочерних групп</v8:content>
-				</v8:item>
-			</ToolTip>
 			<PagesRepresentation>None</PagesRepresentation>
 			<ExtendedTooltip name="ГруппаПоказыватьПользователейДочернихГруппExtendedTooltip" id="74"/>
 			<ChildItems>
@@ -385,15 +347,9 @@
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Группа установить свойство</v8:content>
+							<v8:content>Установить свойство</v8:content>
 						</v8:item>
 					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Группа установить свойство</v8:content>
-						</v8:item>
-					</ToolTip>
 					<ExtendedTooltip name="ГруппаУстановитьСвойствоExtendedTooltip" id="75"/>
 					<ChildItems>
 						<CheckBoxField name="ПоказыватьПользователейДочернихГрупп" id="25">
@@ -837,6 +793,12 @@
 					<v8:Length>0</v8:Length>
 					<v8:AllowedLength>Variable</v8:AllowedLength>
 				</v8:StringQualifiers>
+			</Type>
+		</Parameter>
+		<Parameter name="Пользователь">
+			<Type>
+				<v8:Type>cfg:CatalogRef.ВнешниеПользователи</v8:Type>
+				<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
 			</Type>
 		</Parameter>
 	</Parameters>

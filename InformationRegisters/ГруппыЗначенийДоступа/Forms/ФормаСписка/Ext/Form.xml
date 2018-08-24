@@ -1,30 +1,50 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5">
-	<Width>100</Width>
-	<VerticalScroll>useIfNecessary</VerticalScroll>
 	<CommandSet>
 		<ExcludedCommand>Copy</ExcludedCommand>
 	</CommandSet>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
-		<ChildItems>
-			<Button name="ФормаОбновитьДанныеРегистра" id="25">
-				<Type>CommandBarButton</Type>
-				<OnlyInAllActions>false</OnlyInAllActions>
-				<CommandName>Form.Command.ОбновитьДанныеРегистра</CommandName>
-				<ExtendedTooltip name="ФормаОбновитьДанныеРегистраExtendedTooltip" id="28"/>
-			</Button>
-			<Button name="ФормаВключитьВозможностьРедактирования" id="24">
-				<Type>CommandBarButton</Type>
-				<OnlyInAllActions>false</OnlyInAllActions>
-				<CommandName>Form.Command.ВключитьВозможностьРедактирования</CommandName>
-				<ExtendedTooltip name="ФормаВключитьВозможностьРедактированияExtendedTooltip" id="29"/>
-			</Button>
-		</ChildItems>
+		<Autofill>false</Autofill>
 	</AutoCommandBar>
 	<Events>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
+		<UsualGroup name="ГруппаПользовательскихНастроек" id="43">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа пользовательских настроек</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПользовательскихНастроекРасширеннаяПодсказка" id="44"/>
+		</UsualGroup>
+		<CommandBar name="КоманднаяПанель" id="45">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Командная панель</v8:content>
+				</v8:item>
+			</Title>
+			<CommandSource>Form</CommandSource>
+			<ExtendedTooltip name="КоманднаяПанельРасширеннаяПодсказка" id="46"/>
+			<ChildItems>
+				<Button name="ФормаОбновитьДанныеРегистра" id="25">
+					<Type>CommandBarButton</Type>
+					<OnlyInAllActions>false</OnlyInAllActions>
+					<CommandName>Form.Command.ОбновитьДанныеРегистра</CommandName>
+					<ExtendedTooltip name="ФормаОбновитьДанныеРегистраExtendedTooltip" id="28"/>
+				</Button>
+				<Button name="ФормаВключитьВозможностьРедактирования" id="24">
+					<Type>CommandBarButton</Type>
+					<OnlyInAllActions>false</OnlyInAllActions>
+					<CommandName>Form.Command.ВключитьВозможностьРедактирования</CommandName>
+					<ExtendedTooltip name="ФормаВключитьВозможностьРедактированияExtendedTooltip" id="29"/>
+				</Button>
+			</ChildItems>
+		</CommandBar>
 		<Table name="Список" id="1">
 			<Representation>List</Representation>
 			<CommandBarLocation>None</CommandBarLocation>
@@ -34,12 +54,15 @@
 			<EnableStartDrag>true</EnableStartDrag>
 			<DataPath>Список</DataPath>
 			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список</v8:content>
+				</v8:item>
+			</Title>
 			<CommandSet>
 				<ExcludedCommand>Copy</ExcludedCommand>
 			</CommandSet>
-			<SearchStringLocation>None</SearchStringLocation>
-			<ViewStatusLocation>None</ViewStatusLocation>
-			<SearchControlLocation>None</SearchControlLocation>
 			<AutoRefresh>false</AutoRefresh>
 			<AutoRefreshPeriod>60</AutoRefreshPeriod>
 			<Period>
@@ -53,96 +76,97 @@
 			<ShowRoot>true</ShowRoot>
 			<AllowRootChoice>false</AllowRootChoice>
 			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<UserSettingsGroup>ГруппаПользовательскихНастроек</UserSettingsGroup>
 			<ContextMenu name="СписокКонтекстноеМеню" id="2"/>
 			<AutoCommandBar name="СписокКоманднаяПанель" id="3">
 				<Autofill>false</Autofill>
 			</AutoCommandBar>
 			<ExtendedTooltip name="СписокExtendedTooltip" id="30"/>
-			<SearchStringAddition name="СписокСтрокаПоиска" id="43">
+			<SearchStringAddition name="СписокSearchString" id="47">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>SearchStringRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="44"/>
-				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="45"/>
+				<ContextMenu name="СписокSearchStringContextMenu" id="48"/>
+				<ExtendedTooltip name="СписокSearchStringExtendedTooltip" id="49"/>
 			</SearchStringAddition>
-			<ViewStatusAddition name="СписокСостояниеПросмотра" id="46">
+			<ViewStatusAddition name="СписокViewStatus" id="50">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>ViewStatusRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="47"/>
-				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="48"/>
+				<ContextMenu name="СписокViewStatusContextMenu" id="51"/>
+				<ExtendedTooltip name="СписокViewStatusExtendedTooltip" id="52"/>
 			</ViewStatusAddition>
-			<SearchControlAddition name="СписокУправлениеПоиском" id="49">
+			<SearchControlAddition name="СписокSearchControl" id="53">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>SearchControl</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="50"/>
-				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="51"/>
+				<ContextMenu name="СписокSearchControlContextMenu" id="54"/>
+				<ExtendedTooltip name="СписокSearchControlExtendedTooltip" id="55"/>
 			</SearchControlAddition>
 			<ChildItems>
-				<LabelField name="ГруппаДанных" id="26">
+				<LabelField name="СписокГруппаДанных" id="26">
 					<DataPath>Список.ГруппаДанных</DataPath>
 					<HorizontalAlign>Left</HorizontalAlign>
 					<Width>30</Width>
-					<ContextMenu name="ГруппаДанныхКонтекстноеМеню" id="27"/>
-					<ExtendedTooltip name="ГруппаДанныхРасширеннаяПодсказка" id="42"/>
+					<ContextMenu name="СписокГруппаДанныхКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="СписокГруппаДанныхРасширеннаяПодсказка" id="42"/>
 				</LabelField>
-				<ColumnGroup name="ЗначениеДоступаСКартинкой" id="22">
+				<ColumnGroup name="СписокГруппаЗначениеДоступаСКартинкой" id="22">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Значение доступа с картинкой</v8:content>
+							<v8:content>Список группа значение доступа с картинкой</v8:content>
 						</v8:item>
 					</Title>
 					<Group>InCell</Group>
-					<ExtendedTooltip name="ЗначениеДоступаСКартинкойExtendedTooltip" id="32"/>
+					<ExtendedTooltip name="СписокГруппаЗначениеДоступаСКартинкойРасширеннаяПодсказка" id="32"/>
 					<ChildItems>
-						<PictureField name="КартинкаЗначенияДоступа" id="18">
+						<PictureField name="СписокНомерКартинкиЗначенияДоступа" id="18">
 							<DataPath>Список.НомерКартинкиЗначенияДоступа</DataPath>
 							<TitleLocation>None</TitleLocation>
 							<ValuesPicture>
 								<xr:Ref>CommonPicture.СостоянияПользователей</xr:Ref>
 								<xr:LoadTransparent>false</xr:LoadTransparent>
 							</ValuesPicture>
-							<ContextMenu name="КартинкаЗначенияДоступаКонтекстноеМеню" id="19"/>
-							<ExtendedTooltip name="КартинкаЗначенияДоступаExtendedTooltip" id="33"/>
+							<ContextMenu name="СписокНомерКартинкиЗначенияДоступаКонтекстноеМеню" id="19"/>
+							<ExtendedTooltip name="СписокНомерКартинкиЗначенияДоступаРасширеннаяПодсказка" id="33"/>
 						</PictureField>
-						<LabelField name="ЗначениеДоступа" id="6">
+						<LabelField name="СписокЗначениеДоступа" id="6">
 							<DataPath>Список.ЗначениеДоступа</DataPath>
 							<DefaultItem>true</DefaultItem>
-							<ContextMenu name="ЗначениеДоступаКонтекстноеМеню" id="7"/>
-							<ExtendedTooltip name="ЗначениеДоступаExtendedTooltip" id="34"/>
+							<ContextMenu name="СписокЗначениеДоступаКонтекстноеМеню" id="7"/>
+							<ExtendedTooltip name="СписокЗначениеДоступаРасширеннаяПодсказка" id="34"/>
 						</LabelField>
 					</ChildItems>
 				</ColumnGroup>
-				<ColumnGroup name="ГруппаДоступаСКартинкой" id="23">
+				<ColumnGroup name="СписокГруппаДоступаСКартинкой" id="23">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Группа доступа с картинкой</v8:content>
+							<v8:content>Список группа доступа с картинкой</v8:content>
 						</v8:item>
 					</Title>
 					<Group>InCell</Group>
-					<ExtendedTooltip name="ГруппаДоступаСКартинкойExtendedTooltip" id="36"/>
+					<ExtendedTooltip name="СписокГруппаДоступаСКартинкойРасширеннаяПодсказка" id="36"/>
 					<ChildItems>
-						<PictureField name="НомерКартинкиГруппыЗначенийДоступа" id="20">
+						<PictureField name="СписокНомерКартинкиГруппыЗначенийДоступа" id="20">
 							<DataPath>Список.НомерКартинкиГруппыЗначенийДоступа</DataPath>
 							<TitleLocation>None</TitleLocation>
 							<ValuesPicture>
 								<xr:Ref>CommonPicture.СостоянияПользователей</xr:Ref>
 								<xr:LoadTransparent>false</xr:LoadTransparent>
 							</ValuesPicture>
-							<ContextMenu name="НомерКартинкиГруппыЗначенийДоступаКонтекстноеМеню" id="21"/>
-							<ExtendedTooltip name="НомерКартинкиГруппыЗначенийДоступаExtendedTooltip" id="37"/>
+							<ContextMenu name="СписокНомерКартинкиГруппыЗначенийДоступаКонтекстноеМеню" id="21"/>
+							<ExtendedTooltip name="СписокНомерКартинкиГруппыЗначенийДоступаРасширеннаяПодсказка" id="37"/>
 						</PictureField>
-						<LabelField name="ГруппаЗначенийДоступа" id="10">
+						<LabelField name="СписокГруппаЗначенийДоступа" id="10">
 							<DataPath>Список.ГруппаЗначенийДоступа</DataPath>
 							<DefaultItem>true</DefaultItem>
-							<ContextMenu name="ГруппаЗначенийДоступаКонтекстноеМеню" id="11"/>
-							<ExtendedTooltip name="ГруппаЗначенийДоступаExtendedTooltip" id="38"/>
+							<ContextMenu name="СписокГруппаЗначенийДоступаКонтекстноеМеню" id="11"/>
+							<ExtendedTooltip name="СписокГруппаЗначенийДоступаРасширеннаяПодсказка" id="38"/>
 						</LabelField>
 					</ChildItems>
 				</ColumnGroup>
@@ -156,14 +180,8 @@
 			</Type>
 			<MainAttribute>true</MainAttribute>
 			<UseAlways>
-				<Field>~Список.ВидДоступа</Field>
-				<Field>~Список.ГруппаДоступа</Field>
-				<Field>~Список.ИспользоватьПраваСсылки</Field>
-				<Field>~Список.НаследоватьПраваРодителей</Field>
-				<Field>~Список.НомерКартинкиГруппыДоступа</Field>
-				<Field>~Список.СвязьСРодителем</Field>
-				<Field>~Список.ТолькоВидДоступа</Field>
 				<Field>Список.DefaultPicture</Field>
+				<Field>Список.ГруппаДанных</Field>
 				<Field>Список.ЗначениеДоступа</Field>
 				<Field>Список.НомерКартинкиЗначенияДоступа</Field>
 			</UseAlways>

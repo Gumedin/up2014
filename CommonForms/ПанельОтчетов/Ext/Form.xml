@@ -2,7 +2,6 @@
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5">
 	<AutoTitle>false</AutoTitle>
 	<CommandBarLocation>Bottom</CommandBarLocation>
-	<VerticalScroll>use</VerticalScroll>
 	<CommandSet>
 		<ExcludedCommand>Abort</ExcludedCommand>
 		<ExcludedCommand>Cancel</ExcludedCommand>
@@ -22,299 +21,185 @@
 	<Events>
 		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
 		<Event name="OnOpen">ПриОткрытии</Event>
-		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnReopen">ПриПовторномОткрытии</Event>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
-		<UsualGroup name="ВерхняяПанельСтрока1" id="305">
+		<UsualGroup name="ВерхняяПанельСтрока1" id="395">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content> </v8:content>
+					<v8:content>Верхняя панель строка 1</v8:content>
 				</v8:item>
 			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content> </v8:content>
-				</v8:item>
-			</ToolTip>
 			<Group>Horizontal</Group>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
-			<ExtendedTooltip name="ВерхняяПанельСтрока1РасширеннаяПодсказка" id="306"/>
+			<ExtendedTooltip name="ВерхняяПанельСтрока1РасширеннаяПодсказка" id="396"/>
 			<ChildItems>
-				<InputField name="СтрокаПоиска" id="252">
+				<InputField name="СтрокаПоиска" id="397">
 					<DataPath>СтрокаПоиска</DataPath>
 					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Отбор по наименованию</v8:content>
+							<v8:content>Поиск отчетов по наименованиям, описаниям, именам авторов, а также по наименованиям полей и другим настройкам.</v8:content>
 						</v8:item>
 					</ToolTip>
-					<Width>32</Width>
-					<HorizontalStretch>false</HorizontalStretch>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>30</MaxWidth>
+					<Height>1</Height>
 					<DropListButton>true</DropListButton>
 					<ClearButton>true</ClearButton>
-					<ContextMenu name="СтрокаПоискаКонтекстноеМеню" id="253"/>
-					<ExtendedTooltip name="СтрокаПоискаРасширеннаяПодсказка" id="266"/>
+					<ContextMenu name="СтрокаПоискаКонтекстноеМеню" id="398"/>
+					<ExtendedTooltip name="СтрокаПоискаРасширеннаяПодсказка" id="399"/>
 					<Events>
 						<Event name="OnChange">СтрокаПоискаПриИзменении</Event>
 						<Event name="TextEditEnd">СтрокаПоискаОкончаниеВводаТекста</Event>
 					</Events>
 				</InputField>
-				<Button name="ВыполнитьПоиск" id="313">
+				<Button name="ВыполнитьПоиск" id="400">
 					<Type>UsualButton</Type>
 					<CommandName>Form.Command.ВыполнитьПоиск</CommandName>
-					<ExtendedTooltip name="ВыполнитьПоискРасширеннаяПодсказка" id="314"/>
+					<ExtendedTooltip name="ВыполнитьПоискРасширеннаяПодсказка" id="401"/>
 				</Button>
-				<RadioButtonField name="ИскатьВоВсехРазделах" id="342">
+				<CheckBoxField name="ИскатьВоВсехРазделах" id="402">
 					<DataPath>ИскатьВоВсехРазделах</DataPath>
-					<TitleLocation>None</TitleLocation>
-					<RadioButtonType>Auto</RadioButtonType>
-					<ChoiceList>
-						<xr:Item>
-							<xr:Presentation/>
-							<xr:CheckState>0</xr:CheckState>
-							<xr:Value xsi:type="FormChoiceListDesTimeValue">
-								<Presentation>
-									<v8:item>
-										<v8:lang>ru</v8:lang>
-										<v8:content>Только в этом разделе</v8:content>
-									</v8:item>
-								</Presentation>
-								<Value xsi:type="xs:decimal">0</Value>
-							</xr:Value>
-						</xr:Item>
-						<xr:Item>
-							<xr:Presentation/>
-							<xr:CheckState>0</xr:CheckState>
-							<xr:Value xsi:type="FormChoiceListDesTimeValue">
-								<Presentation>
-									<v8:item>
-										<v8:lang>ru</v8:lang>
-										<v8:content>Во всех разделах</v8:content>
-									</v8:item>
-								</Presentation>
-								<Value xsi:type="xs:decimal">1</Value>
-							</xr:Value>
-						</xr:Item>
-					</ChoiceList>
-					<ContextMenu name="ИскатьВоВсехРазделахКонтекстноеМеню" id="343"/>
-					<ExtendedTooltip name="ИскатьВоВсехРазделахРасширеннаяПодсказка" id="344"/>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ИскатьВоВсехРазделахКонтекстноеМеню" id="403"/>
+					<ExtendedTooltip name="ИскатьВоВсехРазделахРасширеннаяПодсказка" id="404"/>
 					<Events>
 						<Event name="OnChange">ИскатьВоВсехРазделахПриИзменении</Event>
 					</Events>
-				</RadioButtonField>
-				<InputField name="ОтборАвтор" id="250">
-					<DataPath>ОтборАвтор</DataPath>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Отбор по авторам</v8:content>
-						</v8:item>
-					</ToolTip>
-					<Width>25</Width>
-					<HorizontalStretch>false</HorizontalStretch>
-					<ChoiceButton>true</ChoiceButton>
-					<ClearButton>true</ClearButton>
-					<SpinButton>false</SpinButton>
-					<OpenButton>false</OpenButton>
-					<ChoiceListButton>false</ChoiceListButton>
-					<ContextMenu name="ОтборАвторКонтекстноеМеню" id="251"/>
-					<ExtendedTooltip name="ОтборАвторExtendedTooltip" id="267"/>
-					<Events>
-						<Event name="OnChange">ОтборАвторПриИзменении</Event>
-					</Events>
-				</InputField>
-				<CommandBar name="ВерхняяКоманднаяПанель" id="307">
+				</CheckBoxField>
+				<UsualGroup name="ГруппаКоманднаяПанельПравая" id="405">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content> </v8:content>
+							<v8:content>Командная панель правая</v8:content>
 						</v8:item>
 					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content> </v8:content>
-						</v8:item>
-					</ToolTip>
-					<HorizontalLocation>Right</HorizontalLocation>
-					<CommandSource>Form</CommandSource>
-					<ExtendedTooltip name="ВерхняяКоманднаяПанельРасширеннаяПодсказка" id="308"/>
+					<HorizontalStretch>true</HorizontalStretch>
+					<Group>Horizontal</Group>
+					<HorizontalAlign>Right</HorizontalAlign>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаКоманднаяПанельПраваяРасширеннаяПодсказка" id="406"/>
 					<ChildItems>
-						<Button name="Настроить" id="231">
-							<Type>CommandBarButton</Type>
-							<OnlyInAllActions>true</OnlyInAllActions>
-							<Width>12</Width>
-							<CommandName>Form.Command.Настроить</CommandName>
-							<ExtendedTooltip name="НастроитьExtendedTooltip" id="269"/>
-						</Button>
-						<Button name="ФормаОбновить" id="263">
-							<Type>CommandBarButton</Type>
-							<OnlyInAllActions>false</OnlyInAllActions>
-							<CommandName>Form.Command.Обновить</CommandName>
-							<ExtendedTooltip name="ФормаОбновитьExtendedTooltip" id="272"/>
-						</Button>
-						<Button name="ФормаВсеОтчеты" id="360">
-							<Type>CommandBarButton</Type>
-							<OnlyInAllActions>false</OnlyInAllActions>
-							<CommandName>Form.Command.ВсеОтчеты</CommandName>
-							<ExtendedTooltip name="ФормаВсеОтчетыРасширеннаяПодсказка" id="361"/>
-						</Button>
-						<ButtonGroup name="Настройки" id="309">
+						<CheckBoxField name="ПоказыватьПодсказки" id="407">
+							<DataPath>ПоказыватьПодсказки</DataPath>
+							<Visible>false</Visible>
+							<TitleLocation>Right</TitleLocation>
+							<GroupVerticalAlign>Center</GroupVerticalAlign>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ПоказыватьПодсказкиКонтекстноеМеню" id="408"/>
+							<ExtendedTooltip name="ПоказыватьПодсказкиРасширеннаяПодсказка" id="409"/>
+							<Events>
+								<Event name="OnChange">ПоказыватьПодсказкиПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+						<CommandBar name="КоманднаяПанель" id="410">
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Настройки</v8:content>
+									<v8:content>Командная панель</v8:content>
 								</v8:item>
 							</Title>
-							<ToolTip>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Настройки</v8:content>
-								</v8:item>
-							</ToolTip>
-							<ExtendedTooltip name="НастройкиРасширеннаяПодсказка" id="310"/>
+							<Width>26</Width>
+							<Height>1</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<HorizontalLocation>Right</HorizontalLocation>
+							<ExtendedTooltip name="КоманднаяПанельРасширеннаяПодсказка" id="411"/>
 							<ChildItems>
-								<Button name="СброситьМоиНастройки" id="239">
+								<Button name="Настроить" id="412">
+									<Type>CommandBarButton</Type>
+									<OnlyInAllActions>true</OnlyInAllActions>
+									<Width>12</Width>
+									<CommandName>Form.Command.Настроить</CommandName>
+									<ExtendedTooltip name="НастроитьExtendedTooltip" id="413"/>
+								</Button>
+								<Button name="ФормаОбновить" id="414">
 									<Type>CommandBarButton</Type>
 									<OnlyInAllActions>false</OnlyInAllActions>
-									<CommandName>Form.Command.СброситьМоиНастройки</CommandName>
-									<ExtendedTooltip name="СброситьМоиНастройкиExtendedTooltip" id="273"/>
+									<CommandName>Form.Command.Обновить</CommandName>
+									<ExtendedTooltip name="ФормаОбновитьExtendedTooltip" id="415"/>
+								</Button>
+								<Button name="ФормаВсеОтчеты" id="416">
+									<Type>CommandBarButton</Type>
+									<OnlyInAllActions>false</OnlyInAllActions>
+									<CommandName>Form.Command.ВсеОтчеты</CommandName>
+									<ExtendedTooltip name="ФормаВсеОтчетыРасширеннаяПодсказка" id="417"/>
+								</Button>
+								<ButtonGroup name="Настройки" id="418">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Настройки</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="НастройкиРасширеннаяПодсказка" id="419"/>
+									<ChildItems>
+										<Button name="СброситьМоиНастройки" id="420">
+											<Type>CommandBarButton</Type>
+											<OnlyInAllActions>false</OnlyInAllActions>
+											<CommandName>Form.Command.СброситьМоиНастройки</CommandName>
+											<ExtendedTooltip name="СброситьМоиНастройкиExtendedTooltip" id="421"/>
+										</Button>
+									</ChildItems>
+								</ButtonGroup>
+								<Button name="ФормаИзменитьФорму" id="422">
+									<Type>CommandBarButton</Type>
+									<OnlyInAllActions>false</OnlyInAllActions>
+									<CommandName>Form.StandardCommand.CustomizeForm</CommandName>
+									<ExtendedTooltip name="ФормаИзменитьФормуExtendedTooltip" id="423"/>
+								</Button>
+								<Button name="Справка" id="426">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.StandardCommand.Help</CommandName>
+									<ExtendedTooltip name="СправкаРасширеннаяПодсказка" id="427"/>
 								</Button>
 							</ChildItems>
-						</ButtonGroup>
-						<Button name="ФормаИзменитьФорму" id="264">
-							<Type>CommandBarButton</Type>
-							<OnlyInAllActions>false</OnlyInAllActions>
-							<CommandName>Form.StandardCommand.CustomizeForm</CommandName>
-							<ExtendedTooltip name="ФормаИзменитьФормуExtendedTooltip" id="275"/>
-						</Button>
+						</CommandBar>
 					</ChildItems>
-				</CommandBar>
-			</ChildItems>
-		</UsualGroup>
-		<UsualGroup name="ГруппаПоказыватьПодсказки" id="352">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content> </v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content> </v8:content>
-				</v8:item>
-			</ToolTip>
-			<Group>Vertical</Group>
-			<Representation>None</Representation>
-			<ShowTitle>false</ShowTitle>
-			<ExtendedTooltip name="ГруппаПоказыватьПодсказкиРасширеннаяПодсказка" id="353"/>
-			<ChildItems>
-				<RadioButtonField name="ПоказыватьПодсказки" id="357">
-					<DataPath>ПоказыватьПодсказки</DataPath>
-					<TitleLocation>None</TitleLocation>
-					<RadioButtonType>Auto</RadioButtonType>
-					<ChoiceList>
-						<xr:Item>
-							<xr:Presentation/>
-							<xr:CheckState>0</xr:CheckState>
-							<xr:Value xsi:type="FormChoiceListDesTimeValue">
-								<Presentation>
-									<v8:item>
-										<v8:lang>ru</v8:lang>
-										<v8:content>Показывать описания отчетов</v8:content>
-									</v8:item>
-								</Presentation>
-								<Value xsi:type="xs:decimal">1</Value>
-							</xr:Value>
-						</xr:Item>
-						<xr:Item>
-							<xr:Presentation/>
-							<xr:CheckState>0</xr:CheckState>
-							<xr:Value xsi:type="FormChoiceListDesTimeValue">
-								<Presentation>
-									<v8:item>
-										<v8:lang>ru</v8:lang>
-										<v8:content>Не показывать описания</v8:content>
-									</v8:item>
-								</Presentation>
-								<Value xsi:type="xs:decimal">0</Value>
-							</xr:Value>
-						</xr:Item>
-					</ChoiceList>
-					<ContextMenu name="ПоказыватьПодсказкиКонтекстноеМеню" id="358"/>
-					<ExtendedTooltip name="ПоказыватьПодсказкиРасширеннаяПодсказка" id="359"/>
-					<Events>
-						<Event name="OnChange">ПоказыватьПодсказкиПриИзменении</Event>
-					</Events>
-				</RadioButtonField>
-				<LabelDecoration name="ПустаяДекорация1" id="354">
-					<HorizontalStretch>true</HorizontalStretch>
-					<Title formatted="false">
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content> </v8:content>
-						</v8:item>
-					</Title>
-					<ContextMenu name="ПустаяДекорация1КонтекстноеМеню" id="355"/>
-					<ExtendedTooltip name="ПустаяДекорация1РасширеннаяПодсказка" id="356"/>
-				</LabelDecoration>
+				</UsualGroup>
 			</ChildItems>
 		</UsualGroup>
 		<UsualGroup name="Колонки" id="3">
-			<HorizontalStretch>true</HorizontalStretch>
-			<VerticalStretch>false</VerticalStretch>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Колонки</v8:content>
+				</v8:item>
+			</Title>
 			<Group>Vertical</Group>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="КолонкиExtendedTooltip" id="283"/>
 			<ChildItems>
-				<UsualGroup name="БыстрыйДоступШапка" id="323">
+				<UsualGroup name="БыстрыйДоступШапка" id="375">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content> </v8:content>
+							<v8:content>Быстрый доступ шапка</v8:content>
 						</v8:item>
 					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content> </v8:content>
-						</v8:item>
-					</ToolTip>
 					<Group>Horizontal</Group>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
-					<ExtendedTooltip name="БыстрыйДоступШапкаРасширеннаяПодсказка" id="324"/>
+					<ExtendedTooltip name="БыстрыйДоступШапкаРасширеннаяПодсказка" id="376"/>
 					<ChildItems>
-						<PictureDecoration name="БыстрыйДоступШапкаКартинка" id="328">
-							<Width>2</Width>
-							<Height>1</Height>
-							<HorizontalStretch>false</HorizontalStretch>
-							<VerticalStretch>false</VerticalStretch>
-							<Title formatted="false">
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content> </v8:content>
-								</v8:item>
-							</Title>
+						<PictureDecoration name="БыстрыйДоступШапкаКартинка" id="377">
 							<Picture>
 								<xr:Ref>CommonPicture.БыстрыйДоступ</xr:Ref>
 								<xr:LoadTransparent>false</xr:LoadTransparent>
 							</Picture>
-							<ContextMenu name="БыстрыйДоступШапкаКартинкаКонтекстноеМеню" id="329"/>
-							<ExtendedTooltip name="БыстрыйДоступШапкаКартинкаРасширеннаяПодсказка" id="330"/>
+							<ContextMenu name="БыстрыйДоступШапкаКартинкаКонтекстноеМеню" id="378"/>
+							<ExtendedTooltip name="БыстрыйДоступШапкаКартинкаРасширеннаяПодсказка" id="379"/>
 						</PictureDecoration>
-						<LabelDecoration name="БыстрыйДоступШапкаНадпись" id="331">
+						<LabelDecoration name="БыстрыйДоступШапкаНадпись" id="380">
+							<AutoMaxWidth>false</AutoMaxWidth>
 							<Height>1</Height>
-							<HorizontalStretch>false</HorizontalStretch>
-							<VerticalStretch>false</VerticalStretch>
 							<TextColor>style:ГруппаВариантовОтчетовЦвет</TextColor>
-							<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
 							<Title formatted="false">
 								<v8:item>
 									<v8:lang>ru</v8:lang>
@@ -323,12 +208,13 @@
 							</Title>
 							<ToolTipRepresentation>Button</ToolTipRepresentation>
 							<VerticalAlign>Center</VerticalAlign>
-							<ContextMenu name="БыстрыйДоступШапкаНадписьКонтекстноеМеню" id="332"/>
-							<ExtendedTooltip name="БыстрыйДоступШапкаНадписьРасширеннаяПодсказка" id="333">
+							<ContextMenu name="БыстрыйДоступШапкаНадписьКонтекстноеМеню" id="381"/>
+							<ExtendedTooltip name="БыстрыйДоступШапкаНадписьРасширеннаяПодсказка" id="382">
 								<Title formatted="false">
 									<v8:item>
 										<v8:lang>ru</v8:lang>
-										<v8:content>В быстрый доступ следует перемещать отчеты, которые используются постоянно.
+										<v8:content>Для перемещения отчета в эту группу нажмите на отчете правой кнопкой мыши и выберите "Переместить в быстрый доступ".
+В быстрый доступ следует перемещать отчеты, которые используются постоянно.
 Отчеты, перемещенные в быстрый доступ, будут отображаться вверху панели отчетов, выше всех остальных отчетов.
 Это персональная настройка, у каждого пользователя свой быстрый доступ.</v8:content>
 									</v8:item>
@@ -337,26 +223,20 @@
 						</LabelDecoration>
 					</ChildItems>
 				</UsualGroup>
-				<UsualGroup name="ПодсказкаДляРежимаНастройки" id="334">
+				<UsualGroup name="ПодсказкаДляРежимаНастройки" id="367">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
 							<v8:content>Подсказка для режима настройки</v8:content>
 						</v8:item>
 					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Подсказка для режима настройки</v8:content>
-						</v8:item>
-					</ToolTip>
 					<Group>Horizontal</Group>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
-					<ExtendedTooltip name="ПодсказкаДляРежимаНастройкиРасширеннаяПодсказка" id="335"/>
+					<ExtendedTooltip name="ПодсказкаДляРежимаНастройкиРасширеннаяПодсказка" id="368"/>
 					<ChildItems>
-						<LabelDecoration name="БыстрыйДоступПодсказкаКогдаНеНастроен" id="339">
-							<HorizontalStretch>false</HorizontalStretch>
+						<LabelDecoration name="БыстрыйДоступПодсказкаКогдаНеНастроен" id="369">
+							<AutoMaxWidth>false</AutoMaxWidth>
 							<SkipOnInput>true</SkipOnInput>
 							<TextColor>style:ПоясняющийТекст</TextColor>
 							<Title formatted="false">
@@ -366,8 +246,8 @@
 </v8:content>
 								</v8:item>
 							</Title>
-							<ContextMenu name="БыстрыйДоступПодсказкаКогдаНеНастроенКонтекстноеМеню" id="340"/>
-							<ExtendedTooltip name="БыстрыйДоступПодсказкаКогдаНеНастроенРасширеннаяПодсказка" id="341"/>
+							<ContextMenu name="БыстрыйДоступПодсказкаКогдаНеНастроенКонтекстноеМеню" id="370"/>
+							<ExtendedTooltip name="БыстрыйДоступПодсказкаКогдаНеНастроенРасширеннаяПодсказка" id="371"/>
 						</LabelDecoration>
 					</ChildItems>
 				</UsualGroup>
@@ -378,14 +258,9 @@
 							<v8:content>Быстрый доступ</v8:content>
 						</v8:item>
 					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Быстрый доступ</v8:content>
-						</v8:item>
-					</ToolTip>
-					<Group>Horizontal</Group>
+					<Group>Vertical</Group>
 					<Representation>None</Representation>
+					<United>false</United>
 					<ChildItemsWidth>Equal</ChildItemsWidth>
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="БыстрыйДоступExtendedTooltip" id="284"/>
@@ -394,15 +269,9 @@
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content> </v8:content>
+									<v8:content>Быстрый доступ колонка 1</v8:content>
 								</v8:item>
 							</Title>
-							<ToolTip>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content> </v8:content>
-								</v8:item>
-							</ToolTip>
 							<Group>Vertical</Group>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
@@ -412,89 +281,40 @@
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content> </v8:content>
+									<v8:content>Быстрый доступ колонка 2</v8:content>
 								</v8:item>
 							</Title>
-							<ToolTip>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content> </v8:content>
-								</v8:item>
-							</ToolTip>
 							<Group>Vertical</Group>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="БыстрыйДоступКолонка2ExtendedTooltip" id="286"/>
 						</UsualGroup>
-						<UsualGroup name="БыстрыйДоступКолонка3" id="32">
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content> </v8:content>
-								</v8:item>
-							</Title>
-							<ToolTip>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content> </v8:content>
-								</v8:item>
-							</ToolTip>
-							<Group>Vertical</Group>
-							<Representation>None</Representation>
-							<ShowTitle>false</ShowTitle>
-							<ExtendedTooltip name="БыстрыйДоступКолонка3ExtendedTooltip" id="287"/>
-						</UsualGroup>
 					</ChildItems>
 				</UsualGroup>
 				<UsualGroup name="БыстрыйДоступПодвал" id="315">
+					<Visible>false</Visible>
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content> </v8:content>
+							<v8:content>Быстрый доступ подвал</v8:content>
 						</v8:item>
 					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content> </v8:content>
-						</v8:item>
-					</ToolTip>
 					<Group>Vertical</Group>
 					<Representation>None</Representation>
+					<United>false</United>
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="БыстрыйДоступПодвалРасширеннаяПодсказка" id="316"/>
 					<ChildItems>
 						<LabelDecoration name="БыстрыйДоступПодвалЛиния" id="317">
+							<AutoMaxWidth>false</AutoMaxWidth>
 							<HorizontalStretch>true</HorizontalStretch>
-							<VerticalStretch>false</VerticalStretch>
 							<SkipOnInput>true</SkipOnInput>
-							<Title formatted="false">
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content> </v8:content>
-								</v8:item>
-							</Title>
 							<Border width="1">
-								<v8ui:style xsi:type="v8ui:ControlBorderType">Underline</v8ui:style>
+								<v8ui:style xsi:type="v8ui:ControlBorderType">Overline</v8ui:style>
 							</Border>
 							<ContextMenu name="БыстрыйДоступПодвалЛинияКонтекстноеМеню" id="318"/>
 							<ExtendedTooltip name="БыстрыйДоступПодвалЛинияРасширеннаяПодсказка" id="319"/>
 						</LabelDecoration>
-						<PictureDecoration name="БыстрыйДоступПодвалПустаяДекорация" id="320">
-							<Width>1</Width>
-							<Height>1</Height>
-							<HorizontalStretch>true</HorizontalStretch>
-							<VerticalStretch>true</VerticalStretch>
-							<Title formatted="false">
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content> </v8:content>
-								</v8:item>
-							</Title>
-							<PictureSize>Stretch</PictureSize>
-							<ContextMenu name="БыстрыйДоступПодвалПустаяДекорацияКонтекстноеМеню" id="321"/>
-							<ExtendedTooltip name="БыстрыйДоступПодвалПустаяДекорацияРасширеннаяПодсказка" id="322"/>
-						</PictureDecoration>
 					</ChildItems>
 				</UsualGroup>
 				<UsualGroup name="БезГруппы" id="48">
@@ -504,14 +324,9 @@
 							<v8:content>Без группы</v8:content>
 						</v8:item>
 					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Без группы</v8:content>
-						</v8:item>
-					</ToolTip>
 					<Group>Horizontal</Group>
 					<Representation>None</Representation>
+					<United>false</United>
 					<ChildItemsWidth>Equal</ChildItemsWidth>
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="БезГруппыExtendedTooltip" id="289"/>
@@ -520,15 +335,9 @@
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content> </v8:content>
+									<v8:content>Без группы колонка 1</v8:content>
 								</v8:item>
 							</Title>
-							<ToolTip>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content> </v8:content>
-								</v8:item>
-							</ToolTip>
 							<Group>Vertical</Group>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
@@ -538,49 +347,19 @@
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content> </v8:content>
+									<v8:content>Без группы колонка 2</v8:content>
 								</v8:item>
 							</Title>
-							<ToolTip>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content> </v8:content>
-								</v8:item>
-							</ToolTip>
 							<Group>Vertical</Group>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="БезГруппыКолонка2ExtendedTooltip" id="291"/>
 						</UsualGroup>
-						<UsualGroup name="БезГруппыКолонка3" id="65">
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content> </v8:content>
-								</v8:item>
-							</Title>
-							<ToolTip>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content> </v8:content>
-								</v8:item>
-							</ToolTip>
-							<Group>Vertical</Group>
-							<Representation>None</Representation>
-							<ShowTitle>false</ShowTitle>
-							<ExtendedTooltip name="БезГруппыКолонка3ExtendedTooltip" id="292"/>
-						</UsualGroup>
 					</ChildItems>
 				</UsualGroup>
 				<LabelDecoration name="БезГруппыПодвал" id="43">
-					<VerticalStretch>false</VerticalStretch>
+					<AutoMaxWidth>false</AutoMaxWidth>
 					<SkipOnInput>true</SkipOnInput>
-					<Title formatted="false">
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content> </v8:content>
-						</v8:item>
-					</Title>
 					<ContextMenu name="БезГруппыПодвалКонтекстноеМеню" id="44"/>
 					<ExtendedTooltip name="БезГруппыПодвалРасширеннаяПодсказка" id="293"/>
 				</LabelDecoration>
@@ -591,14 +370,9 @@
 							<v8:content>С группой</v8:content>
 						</v8:item>
 					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>С группой</v8:content>
-						</v8:item>
-					</ToolTip>
 					<Group>Horizontal</Group>
 					<Representation>None</Representation>
+					<United>false</United>
 					<ChildItemsWidth>Equal</ChildItemsWidth>
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="СГруппойExtendedTooltip" id="294"/>
@@ -607,15 +381,9 @@
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content> </v8:content>
+									<v8:content>С группой колонка 1</v8:content>
 								</v8:item>
 							</Title>
-							<ToolTip>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content> </v8:content>
-								</v8:item>
-							</ToolTip>
 							<Group>Vertical</Group>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
@@ -625,83 +393,56 @@
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content> </v8:content>
+									<v8:content>С группой колонка 2</v8:content>
 								</v8:item>
 							</Title>
-							<ToolTip>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content> </v8:content>
-								</v8:item>
-							</ToolTip>
 							<Group>Vertical</Group>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="СГруппойКолонка2ExtendedTooltip" id="296"/>
 						</UsualGroup>
-						<UsualGroup name="СГруппойКолонка3" id="154">
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content> </v8:content>
-								</v8:item>
-							</Title>
-							<ToolTip>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content> </v8:content>
-								</v8:item>
-							</ToolTip>
-							<Group>Vertical</Group>
-							<Representation>None</Representation>
-							<ShowTitle>false</ShowTitle>
-							<ExtendedTooltip name="СГруппойКолонка3ExtendedTooltip" id="297"/>
-						</UsualGroup>
 					</ChildItems>
 				</UsualGroup>
 				<LabelDecoration name="СГруппойПодвал" id="216">
-					<VerticalStretch>false</VerticalStretch>
+					<AutoMaxWidth>false</AutoMaxWidth>
 					<SkipOnInput>true</SkipOnInput>
-					<Title formatted="false">
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content> </v8:content>
-						</v8:item>
-					</Title>
 					<ContextMenu name="СГруппойПодвалКонтекстноеМеню" id="217"/>
 					<ExtendedTooltip name="СГруппойПодвалРасширеннаяПодсказка" id="298"/>
 				</LabelDecoration>
-				<UsualGroup name="СмТакже" id="198">
-					<Title>
+				<LabelDecoration name="СмТакжеЗаголовок" id="428">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<SkipOnInput>true</SkipOnInput>
+					<TextColor>style:ГруппаВариантовОтчетовЦвет</TextColor>
+					<Font ref="style:NormalTextFont" height="0" kind="StyleItem"/>
+					<Title formatted="false">
 						<v8:item>
 							<v8:lang>ru</v8:lang>
 							<v8:content>См. также</v8:content>
 						</v8:item>
 					</Title>
-					<TitleFont ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
-					<ToolTip>
+					<ContextMenu name="СмТакжеЗаголовокКонтекстноеМеню" id="429"/>
+					<ExtendedTooltip name="СмТакжеЗаголовокРасширеннаяПодсказка" id="430"/>
+				</LabelDecoration>
+				<UsualGroup name="СмТакже" id="198">
+					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
 							<v8:content>См также</v8:content>
 						</v8:item>
-					</ToolTip>
+					</Title>
 					<Group>Horizontal</Group>
+					<United>false</United>
 					<ChildItemsWidth>Equal</ChildItemsWidth>
+					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="СмТакжеExtendedTooltip" id="299"/>
 					<ChildItems>
 						<UsualGroup name="СмТакжеКолонка1" id="199">
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content> </v8:content>
+									<v8:content>См также колонка 1</v8:content>
 								</v8:item>
 							</Title>
-							<ToolTip>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content> </v8:content>
-								</v8:item>
-							</ToolTip>
 							<Group>Vertical</Group>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
@@ -711,49 +452,19 @@
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content> </v8:content>
+									<v8:content>См также колонка 2</v8:content>
 								</v8:item>
 							</Title>
-							<ToolTip>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content> </v8:content>
-								</v8:item>
-							</ToolTip>
 							<Group>Vertical</Group>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="СмТакжеКолонка2ExtendedTooltip" id="301"/>
 						</UsualGroup>
-						<UsualGroup name="СмТакжеКолонка3" id="215">
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content> </v8:content>
-								</v8:item>
-							</Title>
-							<ToolTip>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content> </v8:content>
-								</v8:item>
-							</ToolTip>
-							<Group>Vertical</Group>
-							<Representation>None</Representation>
-							<ShowTitle>false</ShowTitle>
-							<ExtendedTooltip name="СмТакжеКолонка3ExtendedTooltip" id="302"/>
-						</UsualGroup>
 					</ChildItems>
 				</UsualGroup>
 				<LabelDecoration name="СмТакжеПодвал" id="218">
-					<VerticalStretch>false</VerticalStretch>
+					<AutoMaxWidth>false</AutoMaxWidth>
 					<SkipOnInput>true</SkipOnInput>
-					<Title formatted="false">
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content> </v8:content>
-						</v8:item>
-					</Title>
 					<ContextMenu name="СмТакжеПодвалКонтекстноеМеню" id="219"/>
 					<ExtendedTooltip name="СмТакжеПодвалРасширеннаяПодсказка" id="303"/>
 				</LabelDecoration>
@@ -766,45 +477,34 @@
 					<v8:content>Отчеты, найденные в других разделах</v8:content>
 				</v8:item>
 			</Title>
-			<TitleFont ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Результаты поиска из других разделов группа</v8:content>
-				</v8:item>
-			</ToolTip>
 			<Group>Vertical</Group>
+			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="РезультатыПоискаИзДругихРазделовГруппаРасширеннаяПодсказка" id="346"/>
 			<ChildItems>
-				<LabelDecoration name="РезультатыПоискаИзДругихРазделовДекорация" id="347">
-					<HorizontalStretch>true</HorizontalStretch>
-					<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+				<LabelDecoration name="РезультатыПоискаИзДругихРазделовШапка" id="383">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<Height>2</Height>
+					<TextColor>style:FormTextColor</TextColor>
+					<Font ref="sys:DefaultGUIFont" faceName="Arial" height="11" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
 					<Title formatted="false">
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Отчеты, найденные в других разделах:
-
-</v8:content>
+							<v8:content>Отчеты, найденные в других разделах:</v8:content>
 						</v8:item>
 					</Title>
-					<BorderColor>style:ToolTipTextColor</BorderColor>
-					<ContextMenu name="РезультатыПоискаИзДругихРазделовДекорацияКонтекстноеМеню" id="348"/>
-					<ExtendedTooltip name="РезультатыПоискаИзДругихРазделовДекорацияРасширеннаяПодсказка" id="349"/>
+					<ToolTipRepresentation>None</ToolTipRepresentation>
+					<VerticalAlign>Center</VerticalAlign>
+					<ContextMenu name="РезультатыПоискаИзДругихРазделовШапкаКонтекстноеМеню" id="384"/>
+					<ExtendedTooltip name="РезультатыПоискаИзДругихРазделовШапкаРасширеннаяПодсказка" id="385"/>
 				</LabelDecoration>
 				<UsualGroup name="РезультатыПоискаИзДругихРазделов" id="350">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content> </v8:content>
+							<v8:content>Результаты поиска из других разделов</v8:content>
 						</v8:item>
 					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content> </v8:content>
-						</v8:item>
-					</ToolTip>
 					<Group>Vertical</Group>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
@@ -816,15 +516,9 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content> </v8:content>
+					<v8:content>Подвал формы</v8:content>
 				</v8:item>
 			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content> </v8:content>
-				</v8:item>
-			</ToolTip>
 			<Group>Horizontal</Group>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
@@ -833,44 +527,33 @@
 				<Button name="СсылкаВсеОтчеты" id="261">
 					<Type>Hyperlink</Type>
 					<CommandName>Form.Command.ВсеОтчеты</CommandName>
-					<TextColor>style:ВидимыйВариантОтчетаЦвет</TextColor>
+					<TextColor>style:ГиперссылкаЦвет</TextColor>
 					<ExtendedTooltip name="СсылкаВсеОтчетыExtendedTooltip" id="304"/>
 				</Button>
+				<LabelDecoration name="Декорация2" id="389">
+					<Hyperlink>true</Hyperlink>
+					<ContextMenu name="Декорация2КонтекстноеМеню" id="390"/>
+					<ExtendedTooltip name="Декорация2РасширеннаяПодсказка" id="391"/>
+				</LabelDecoration>
+				<LabelDecoration name="ОписаниеМобильногоПриложения" id="392">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Как посмотреть отчеты на смартфоне или планшете?</v8:content>
+						</v8:item>
+					</Title>
+					<Hyperlink>true</Hyperlink>
+					<ContextMenu name="ОписаниеМобильногоПриложенияКонтекстноеМеню" id="393"/>
+					<ExtendedTooltip name="ОписаниеМобильногоПриложенияРасширеннаяПодсказка" id="394"/>
+					<Events>
+						<Event name="Click">ОписаниеМобильногоПриложенияНажатие</Event>
+					</Events>
+				</LabelDecoration>
 			</ChildItems>
 		</UsualGroup>
 	</ChildItems>
 	<Attributes>
-		<Attribute name="ТекущийРазделПолноеИмя" id="1">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Текущий раздел полное имя</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>xs:string</v8:Type>
-				<v8:StringQualifiers>
-					<v8:Length>0</v8:Length>
-					<v8:AllowedLength>Variable</v8:AllowedLength>
-				</v8:StringQualifiers>
-			</Type>
-		</Attribute>
-		<Attribute name="ВыведеноЭлементовВариантов" id="3">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Выведено элементов вариантов</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>xs:decimal</v8:Type>
-				<v8:NumberQualifiers>
-					<v8:Digits>10</v8:Digits>
-					<v8:FractionDigits>0</v8:FractionDigits>
-					<v8:AllowedSign>Any</v8:AllowedSign>
-				</v8:NumberQualifiers>
-			</Type>
-		</Attribute>
 		<Attribute name="РежимНастройки" id="4">
 			<Title>
 				<v8:item>
@@ -904,13 +587,7 @@
 				<v8:Type>v8ui:Color</v8:Type>
 			</Type>
 		</Attribute>
-		<Attribute name="ШрифтЖирный" id="7">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Шрифт жирный</v8:content>
-				</v8:item>
-			</Title>
+		<Attribute name="ШрифтВажнойНадписи" id="7">
 			<Type>
 				<v8:Type>v8ui:Font</v8:Type>
 			</Type>
@@ -945,6 +622,7 @@
 						</v8:item>
 					</Title>
 					<Type>
+						<v8:Type>cfg:CatalogRef.ИдентификаторыОбъектовРасширений</v8:Type>
 						<v8:Type>xs:string</v8:Type>
 						<v8:Type>cfg:CatalogRef.ДополнительныеОтчетыИОбработки</v8:Type>
 						<v8:Type>cfg:CatalogRef.ИдентификаторыОбъектовМетаданных</v8:Type>
@@ -1007,6 +685,7 @@
 						</v8:item>
 					</Title>
 					<Type>
+						<v8:Type>cfg:CatalogRef.ИдентификаторыОбъектовРасширений</v8:Type>
 						<v8:Type>cfg:CatalogRef.ИдентификаторыОбъектовМетаданных</v8:Type>
 					</Type>
 				</Column>
@@ -1095,17 +774,6 @@
 						</v8:StringQualifiers>
 					</Type>
 				</Column>
-				<Column name="ИзмененПользователем" id="14">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Изменен пользователем</v8:content>
-						</v8:item>
-					</Title>
-					<Type>
-						<v8:Type>xs:boolean</v8:Type>
-					</Type>
-				</Column>
 				<Column name="ИмяОтчета" id="16">
 					<Title>
 						<v8:item>
@@ -1132,17 +800,6 @@
 						<v8:Type>xs:boolean</v8:Type>
 					</Type>
 				</Column>
-				<Column name="СвоиНастройки" id="18">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Свои настройки</v8:content>
-						</v8:item>
-					</Title>
-					<Type>
-						<v8:Type>xs:boolean</v8:Type>
-					</Type>
-				</Column>
 				<Column name="Автор" id="19">
 					<Title>
 						<v8:item>
@@ -1151,14 +808,15 @@
 						</v8:item>
 					</Title>
 					<Type>
+						<v8:Type>cfg:CatalogRef.ВнешниеПользователи</v8:Type>
 						<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
 					</Type>
 				</Column>
-				<Column name="СкрытОтбором" id="20">
+				<Column name="КлючЗамеров" id="15">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Скрыт отбором</v8:content>
+							<v8:content>Ключ замеров</v8:content>
 						</v8:item>
 					</Title>
 					<Type>
@@ -1232,17 +890,6 @@
 				<v8:Type>v8ui:Picture</v8:Type>
 			</Type>
 		</Attribute>
-		<Attribute name="ОтборАвтор" id="8">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Автор</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
-			</Type>
-		</Attribute>
 		<Attribute name="СтрокаПоиска" id="11">
 			<Title>
 				<v8:item>
@@ -1266,6 +913,7 @@
 				</v8:item>
 			</Title>
 			<Type>
+				<v8:Type>cfg:CatalogRef.ИдентификаторыОбъектовРасширений</v8:Type>
 				<v8:Type>cfg:CatalogRef.ИдентификаторыОбъектовМетаданных</v8:Type>
 			</Type>
 		</Attribute>
@@ -1279,9 +927,6 @@
 			<Type>
 				<v8:Type>v8:ValueTable</v8:Type>
 			</Type>
-			<Edit>
-				<xr:Common>false</xr:Common>
-			</Edit>
 			<Columns>
 				<Column name="Ссылка" id="1">
 					<Title>
@@ -1291,6 +936,7 @@
 						</v8:item>
 					</Title>
 					<Type>
+						<v8:Type>cfg:CatalogRef.ИдентификаторыОбъектовРасширений</v8:Type>
 						<v8:Type>cfg:CatalogRef.ИдентификаторыОбъектовМетаданных</v8:Type>
 					</Type>
 				</Column>
@@ -1393,6 +1039,7 @@
 						</v8:item>
 					</Title>
 					<Type>
+						<v8:Type>cfg:CatalogRef.ИдентификаторыОбъектовРасширений</v8:Type>
 						<v8:Type>cfg:CatalogRef.ИдентификаторыОбъектовМетаданных</v8:Type>
 					</Type>
 				</Column>
@@ -1404,7 +1051,24 @@
 						</v8:item>
 					</Title>
 					<Type>
+						<v8:Type>cfg:CatalogRef.ИдентификаторыОбъектовРасширений</v8:Type>
 						<v8:Type>cfg:CatalogRef.ИдентификаторыОбъектовМетаданных</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ВидимыхВариантов" id="10">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Видимых вариантов</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
 					</Type>
 				</Column>
 			</Columns>
@@ -1424,32 +1088,22 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Искать</v8:content>
+					<v8:content>Во всех разделах</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
-				<v8:Type>xs:decimal</v8:Type>
-				<v8:NumberQualifiers>
-					<v8:Digits>1</v8:Digits>
-					<v8:FractionDigits>0</v8:FractionDigits>
-					<v8:AllowedSign>Any</v8:AllowedSign>
-				</v8:NumberQualifiers>
+				<v8:Type>xs:boolean</v8:Type>
 			</Type>
 		</Attribute>
 		<Attribute name="ПоказыватьПодсказки" id="20">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Отображение описаний</v8:content>
+					<v8:content>Описания отчетов</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
-				<v8:Type>xs:decimal</v8:Type>
-				<v8:NumberQualifiers>
-					<v8:Digits>0</v8:Digits>
-					<v8:FractionDigits>0</v8:FractionDigits>
-					<v8:AllowedSign>Any</v8:AllowedSign>
-				</v8:NumberQualifiers>
+				<v8:Type>xs:boolean</v8:Type>
 			</Type>
 		</Attribute>
 		<Attribute name="ЦветПодсветкиНайденныхСлов" id="21">
@@ -1485,19 +1139,72 @@
 				<v8:Type>v8ui:Color</v8:Type>
 			</Type>
 		</Attribute>
+		<Attribute name="ШрифтВажнойГруппы" id="8">
+			<Type>
+				<v8:Type>v8ui:Font</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ШрифтОбычнойГруппы" id="23">
+			<Type>
+				<v8:Type>v8ui:Font</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ШрифтРаздела" id="24">
+			<Type>
+				<v8:Type>v8ui:Font</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЦветРаздела" id="25">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Цвет раздела</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8ui:Color</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПараметрыКлиента" id="26">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметры клиента</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="БыстрыйПоискВариантовПоИмениЭлемента" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Быстрый поиск вариантов по имени элемента</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="БыстрыйПоискПодсистемПоСсылке" id="27">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Быстрый поиск подсистем по ссылке</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
 	</Attributes>
 	<Commands>
 		<Command name="Настроить" id="1">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Настроить</v8:content>
+					<v8:content>Настройка</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Настроить видимость и быстрый доступ к отчетам данного раздела</v8:content>
+					<v8:content>Настроить видимость и быстрый доступ к отчетам этой панели</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Shortcut>F2</Shortcut>
@@ -1526,7 +1233,6 @@
 				<xr:LoadTransparent>false</xr:LoadTransparent>
 			</Picture>
 			<Action>ПереместитьВБыстрыйДоступ</Action>
-			<ModifiesSavedData>true</ModifiesSavedData>
 		</Command>
 		<Command name="УбратьИзБыстрогоДоступа" id="3">
 			<Title>
@@ -1551,13 +1257,13 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Изменить</v8:content>
+					<v8:content>Изменить...</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Изменить</v8:content>
+					<v8:content>Открыть карточку варианта отчета...</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Picture>

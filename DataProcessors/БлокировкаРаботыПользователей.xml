@@ -21,20 +21,20 @@
 			</Synonym>
 			<Comment/>
 			<UseStandardCommands>true</UseStandardCommands>
-			<DefaultForm>DataProcessor.БлокировкаРаботыПользователей.Form.Форма</DefaultForm>
+			<DefaultForm>DataProcessor.БлокировкаРаботыПользователей.Form.БлокировкаСоединенийСИнформационнойБазой</DefaultForm>
 			<AuxiliaryForm/>
-			<IncludeHelpInContents>false</IncludeHelpInContents>
+			<IncludeHelpInContents>true</IncludeHelpInContents>
 			<ExtendedPresentation/>
 			<Explanation/>
 		</Properties>
 		<ChildObjects>
 			<Attribute uuid="e4abafc6-f859-4d96-9818-5b9bf8d66d69">
 				<Properties>
-					<Name>ВременноЗапретитьРаботуПользователей</Name>
+					<Name>ЗапретитьРаботуПользователей</Name>
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Временно запретить работу пользователей</v8:content>
+							<v8:content>Запретить работу пользователей</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
@@ -276,7 +276,7 @@
 					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 				</Properties>
 			</Attribute>
-			<Form>Форма</Form>
+			<Form>БлокировкаСоединенийСИнформационнойБазой</Form>
 			<Form>ОшибкаУстановкиМонопольногоРежима</Form>
 		</ChildObjects>
 	</DataProcessor>

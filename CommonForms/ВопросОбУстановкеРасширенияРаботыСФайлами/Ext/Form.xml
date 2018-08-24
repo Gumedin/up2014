@@ -10,7 +10,6 @@
 	<AutoTitle>false</AutoTitle>
 	<Customizable>false</Customizable>
 	<CommandBarLocation>Bottom</CommandBarLocation>
-	<VerticalScroll>useIfNecessary</VerticalScroll>
 	<CommandSet>
 		<ExcludedCommand>Abort</ExcludedCommand>
 		<ExcludedCommand>Cancel</ExcludedCommand>
@@ -53,13 +52,12 @@
 	</Events>
 	<ChildItems>
 		<LabelDecoration name="ДекорацияПояснение" id="6">
-			<HorizontalStretch>true</HorizontalStretch>
-			<VerticalStretch>true</VerticalStretch>
+			<AutoMaxWidth>false</AutoMaxWidth>
 			<SkipOnInput>false</SkipOnInput>
 			<Title formatted="false">
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Для удобной работы с программой предлагается установить расширение работы с файлами. 
+					<v8:content>Для удобной работы с программой предлагается установить расширение для веб-клиента 1С:Предприятие. 
 Установить?</v8:content>
 				</v8:item>
 			</Title>
@@ -96,7 +94,7 @@
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Установить расширение работы с файлами и продолжить</v8:content>
+					<v8:content>Установить расширение для веб-клиента 1С:Предприятие и продолжить</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>УстановитьИПродолжить</Action>
@@ -111,7 +109,7 @@
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Продолжить без установки расширения работы с файлами</v8:content>
+					<v8:content>Продолжить без установки расширения для веб-клиента 1С:Предприятие</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ПродолжитьБезУстановки</Action>

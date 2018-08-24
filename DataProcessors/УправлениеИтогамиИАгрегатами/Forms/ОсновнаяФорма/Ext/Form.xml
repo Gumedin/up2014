@@ -10,7 +10,6 @@
 	<AutoTitle>false</AutoTitle>
 	<Customizable>false</Customizable>
 	<CommandBarLocation>None</CommandBarLocation>
-	<VerticalScroll>useIfNecessary</VerticalScroll>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<HorizontalAlign>Right</HorizontalAlign>
 	</AutoCommandBar>
@@ -27,12 +26,6 @@
 					<v8:content>Операции</v8:content>
 				</v8:item>
 			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Операции</v8:content>
-				</v8:item>
-			</ToolTip>
 			<ExtendedTooltip name="ОперацииExtendedTooltip" id="330"/>
 			<ChildItems>
 				<Page name="БыстрыйДоступ" id="6">
@@ -42,13 +35,6 @@
 							<v8:content>Типовые операции</v8:content>
 						</v8:item>
 					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Типовые операции</v8:content>
-						</v8:item>
-					</ToolTip>
-					<VerticalStretch>true</VerticalStretch>
 					<ExtendedTooltip name="БыстрыйДоступExtendedTooltip" id="331"/>
 					<ChildItems>
 						<UsualGroup name="БыстрыйДоступИтоги" id="212">
@@ -58,14 +44,6 @@
 									<v8:content>Итоги</v8:content>
 								</v8:item>
 							</Title>
-							<TitleFont ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
-							<ToolTip>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Быстрый доступ итоги</v8:content>
-								</v8:item>
-							</ToolTip>
-							<HorizontalStretch>true</HorizontalStretch>
 							<Group>Vertical</Group>
 							<Representation>NormalSeparation</Representation>
 							<ExtendedTooltip name="БыстрыйДоступИтогиExtendedTooltip" id="332"/>
@@ -74,15 +52,9 @@
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>Группа установить период рассчитанных итогов</v8:content>
+											<v8:content>Установить период рассчитанных итогов</v8:content>
 										</v8:item>
 									</Title>
-									<ToolTip>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Группа установить период рассчитанных итогов</v8:content>
-										</v8:item>
-									</ToolTip>
 									<Group>Horizontal</Group>
 									<Representation>None</Representation>
 									<ShowTitle>false</ShowTitle>
@@ -91,27 +63,26 @@
 										<Button name="УстановитьПериодРассчитанныхИтогов" id="219">
 											<Type>UsualButton</Type>
 											<SkipOnInput>false</SkipOnInput>
-											<Width>25</Width>
+											<Width>30</Width>
 											<Height>2</Height>
+											<GroupVerticalAlign>Center</GroupVerticalAlign>
 											<CommandName>Form.Command.УстановитьПериодРассчитанныхИтогов</CommandName>
 											<ExtendedTooltip name="УстановитьПериодРассчитанныхИтоговExtendedTooltip" id="334"/>
 										</Button>
 										<LabelDecoration name="ОписаниеУстановкиПериода" id="328">
-											<Width>55</Width>
-											<Height>4</Height>
-											<HorizontalStretch>true</HorizontalStretch>
-											<VerticalStretch>false</VerticalStretch>
+											<AutoMaxWidth>false</AutoMaxWidth>
 											<SkipOnInput>true</SkipOnInput>
-											<TextColor>web:DarkBlue</TextColor>
+											<TextColor>style:ПоясняющийТекст</TextColor>
 											<Title formatted="false">
 												<v8:item>
 													<v8:lang>ru</v8:lang>
-													<v8:content>Установить период рассчитанных итогов для всех регистров накопления и бухгалтерии, у которых включены итоги. 
+													<v8:content>Установить период рассчитанных итогов для всех регистров, у которых включены итоги.
 Для регистров накопления - на %1.
 Для регистров бухгалтерии - на %2.</v8:content>
 												</v8:item>
 											</Title>
-											<VerticalAlign>Top</VerticalAlign>
+											<GroupVerticalAlign>Center</GroupVerticalAlign>
+											<VerticalAlign>Center</VerticalAlign>
 											<ContextMenu name="ОписаниеУстановкиПериодаКонтекстноеМеню" id="329"/>
 											<ExtendedTooltip name="ОписаниеУстановкиПериодаExtendedTooltip" id="335"/>
 										</LabelDecoration>
@@ -121,15 +92,9 @@
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>Группа включение итогов</v8:content>
+											<v8:content>Включение итогов</v8:content>
 										</v8:item>
 									</Title>
-									<ToolTip>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Группа включение итогов</v8:content>
-										</v8:item>
-									</ToolTip>
 									<Group>Horizontal</Group>
 									<Representation>None</Representation>
 									<ShowTitle>false</ShowTitle>
@@ -138,25 +103,24 @@
 										<Button name="ВключитьИспользованиеИтогов" id="220">
 											<Type>UsualButton</Type>
 											<SkipOnInput>false</SkipOnInput>
-											<Width>25</Width>
+											<Width>30</Width>
 											<Height>2</Height>
+											<GroupVerticalAlign>Center</GroupVerticalAlign>
 											<CommandName>Form.Command.ВключитьИспользованиеИтоговБыстрыйДоступ</CommandName>
 											<ExtendedTooltip name="ВключитьИспользованиеИтоговExtendedTooltip" id="337"/>
 										</Button>
 										<LabelDecoration name="ПростыеИтогиОписание" id="282">
-											<Width>55</Width>
-											<Height>2</Height>
-											<HorizontalStretch>true</HorizontalStretch>
-											<VerticalStretch>false</VerticalStretch>
+											<AutoMaxWidth>false</AutoMaxWidth>
 											<SkipOnInput>true</SkipOnInput>
-											<TextColor>web:DarkBlue</TextColor>
+											<TextColor>style:ПоясняющийТекст</TextColor>
 											<Title formatted="false">
 												<v8:item>
 													<v8:lang>ru</v8:lang>
 													<v8:content>Включить режим использования итогов для всех регистров, у которых в данный момент выключено использование итогов.</v8:content>
 												</v8:item>
 											</Title>
-											<VerticalAlign>Top</VerticalAlign>
+											<GroupVerticalAlign>Center</GroupVerticalAlign>
+											<VerticalAlign>Center</VerticalAlign>
 											<ContextMenu name="ПростыеИтогиОписаниеКонтекстноеМеню" id="283"/>
 											<ExtendedTooltip name="ПростыеИтогиОписаниеExtendedTooltip" id="338"/>
 										</LabelDecoration>
@@ -164,64 +128,51 @@
 								</UsualGroup>
 							</ChildItems>
 						</UsualGroup>
-						<UsualGroup name="ГруппаБыстрыйДоступАггрегаты" id="214">
+						<UsualGroup name="ГруппаБыстрыйДоступАгрегаты" id="214">
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
 									<v8:content>Агрегаты</v8:content>
 								</v8:item>
 							</Title>
-							<TitleFont ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
-							<ToolTip>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Группа быстрый доступ агрегаты</v8:content>
-								</v8:item>
-							</ToolTip>
 							<Group>Vertical</Group>
 							<Representation>NormalSeparation</Representation>
-							<ExtendedTooltip name="ГруппаБыстрыйДоступАггрегатыExtendedTooltip" id="339"/>
+							<ExtendedTooltip name="ГруппаБыстрыйДоступАгрегатыРасширеннаяПодсказка" id="339"/>
 							<ChildItems>
 								<UsualGroup name="ГруппаПерестроениеИЗаполнениеАгрегатов" id="289">
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>Группа перестроение и заполнение агрегатов</v8:content>
+											<v8:content>Перестроение и заполнение агрегатов</v8:content>
 										</v8:item>
 									</Title>
-									<ToolTip>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Группа перестроение и заполнение агрегатов</v8:content>
-										</v8:item>
-									</ToolTip>
 									<Group>Horizontal</Group>
 									<Representation>None</Representation>
+									<United>false</United>
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="ГруппаПерестроениеИЗаполнениеАгрегатовExtendedTooltip" id="340"/>
 									<ChildItems>
 										<Button name="ПерестроитьИЗаполнитьАгрегаты" id="222">
 											<Type>UsualButton</Type>
 											<SkipOnInput>false</SkipOnInput>
-											<Width>25</Width>
+											<Width>30</Width>
 											<Height>2</Height>
+											<GroupVerticalAlign>Center</GroupVerticalAlign>
 											<CommandName>Form.Command.ЗаполнитьАгрегатыИВыполнитьПерестроение</CommandName>
 											<ExtendedTooltip name="ПерестроитьИЗаполнитьАгрегатыExtendedTooltip" id="341"/>
 										</Button>
 										<LabelDecoration name="ПростоеПостроениеИЗаполнениеОписание" id="292">
-											<Width>55</Width>
-											<Height>2</Height>
-											<HorizontalStretch>true</HorizontalStretch>
-											<VerticalStretch>false</VerticalStretch>
+											<AutoMaxWidth>false</AutoMaxWidth>
 											<SkipOnInput>true</SkipOnInput>
-											<TextColor>web:DarkBlue</TextColor>
+											<TextColor>style:ПоясняющийТекст</TextColor>
 											<Title formatted="false">
 												<v8:item>
 													<v8:lang>ru</v8:lang>
-													<v8:content>Выполнить  перестроение и заполнение агрегатов для всех регистров, у которых включен режим агрегатов и установлено их использование.</v8:content>
+													<v8:content>Выполнить перестроение и заполнение агрегатов для всех регистров, у которых включен режим агрегатов и установлено их использование.</v8:content>
 												</v8:item>
 											</Title>
-											<VerticalAlign>Top</VerticalAlign>
+											<GroupVerticalAlign>Center</GroupVerticalAlign>
+											<VerticalAlign>Center</VerticalAlign>
 											<ContextMenu name="ПростоеПостроениеИЗаполнениеОписаниеКонтекстноеМеню" id="293"/>
 											<ExtendedTooltip name="ПростоеПостроениеИЗаполнениеОписаниеExtendedTooltip" id="342"/>
 										</LabelDecoration>
@@ -231,42 +182,36 @@
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>Группа получение оптимальных агрегатов</v8:content>
+											<v8:content>Получение оптимальных агрегатов</v8:content>
 										</v8:item>
 									</Title>
-									<ToolTip>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Группа получение оптимальных агрегатов</v8:content>
-										</v8:item>
-									</ToolTip>
 									<Group>Horizontal</Group>
 									<Representation>None</Representation>
+									<United>false</United>
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="ГруппаПолучениеОптимальныхАгрегатовExtendedTooltip" id="343"/>
 									<ChildItems>
 										<Button name="ПолучитьОптимальныеАгрегаты" id="223">
 											<Type>UsualButton</Type>
 											<SkipOnInput>false</SkipOnInput>
-											<Width>25</Width>
+											<Width>30</Width>
 											<Height>2</Height>
+											<GroupVerticalAlign>Center</GroupVerticalAlign>
 											<CommandName>Form.Command.ПолучитьОптимальныеАгрегаты</CommandName>
 											<ExtendedTooltip name="ПолучитьОптимальныеАгрегатыExtendedTooltip" id="344"/>
 										</Button>
 										<LabelDecoration name="ПростоеПолучениеОптимальныхАгрегатов" id="290">
-											<Width>55</Width>
-											<Height>2</Height>
-											<HorizontalStretch>true</HorizontalStretch>
-											<VerticalStretch>false</VerticalStretch>
+											<AutoMaxWidth>false</AutoMaxWidth>
 											<SkipOnInput>true</SkipOnInput>
-											<TextColor>web:DarkBlue</TextColor>
+											<TextColor>style:ПоясняющийТекст</TextColor>
 											<Title formatted="false">
 												<v8:item>
 													<v8:lang>ru</v8:lang>
 													<v8:content>Выполнить расчет списка оптимальных агрегатов для всех регистров, для которых в Конфигураторе заданы агрегаты.</v8:content>
 												</v8:item>
 											</Title>
-											<VerticalAlign>Top</VerticalAlign>
+											<GroupVerticalAlign>Center</GroupVerticalAlign>
+											<VerticalAlign>Center</VerticalAlign>
 											<ContextMenu name="ПростоеПолучениеОптимальныхАгрегатовКонтекстноеМеню" id="291"/>
 											<ExtendedTooltip name="ПростоеПолучениеОптимальныхАгрегатовExtendedTooltip" id="345"/>
 										</LabelDecoration>
@@ -283,12 +228,6 @@
 							<v8:content>Расширенная</v8:content>
 						</v8:item>
 					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Расширенные возможности</v8:content>
-						</v8:item>
-					</ToolTip>
 					<ExtendedTooltip name="РасширенныеВозможностиExtendedTooltip" id="346"/>
 					<ChildItems>
 						<Pages name="РасширенныеИнструменты" id="209">
@@ -298,12 +237,6 @@
 									<v8:content>Расширенные инструменты</v8:content>
 								</v8:item>
 							</Title>
-							<ToolTip>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Расширенные инструменты</v8:content>
-								</v8:item>
-							</ToolTip>
 							<ExtendedTooltip name="РасширенныеИнструментыExtendedTooltip" id="347"/>
 							<ChildItems>
 								<Page name="ГруппаИтогов" id="2">
@@ -327,10 +260,15 @@
 											<SkipOnInput>false</SkipOnInput>
 											<ChangeRowSet>false</ChangeRowSet>
 											<ChangeRowOrder>false</ChangeRowOrder>
-											<HeightInTableRows>5</HeightInTableRows>
 											<AutoInsertNewRow>true</AutoInsertNewRow>
 											<DataPath>СписокИтогов</DataPath>
 											<RowPictureDataPath>СписокИтогов.Картинка</RowPictureDataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Список итогов</v8:content>
+												</v8:item>
+											</Title>
 											<CommandSet>
 												<ExcludedCommand>Add</ExcludedCommand>
 												<ExcludedCommand>Change</ExcludedCommand>
@@ -342,9 +280,6 @@
 												<ExcludedCommand>MoveUp</ExcludedCommand>
 												<ExcludedCommand>OutputList</ExcludedCommand>
 											</CommandSet>
-											<SearchStringLocation>None</SearchStringLocation>
-											<ViewStatusLocation>None</ViewStatusLocation>
-											<SearchControlLocation>None</SearchControlLocation>
 											<RowFilter xsi:nil="true"/>
 											<ContextMenu name="СписокИтоговКонтекстноеМеню" id="10">
 												<Autofill>false</Autofill>
@@ -380,6 +315,7 @@
 												<ChildItems>
 													<Button name="ОбновитьСостояниеИтогов" id="42">
 														<Type>CommandBarButton</Type>
+														<Representation>Text</Representation>
 														<SkipOnInput>false</SkipOnInput>
 														<CommandName>Form.Command.ОбновитьСостояниеИтогов</CommandName>
 														<ExtendedTooltip name="ОбновитьСостояниеИтоговExtendedTooltip" id="353"/>
@@ -534,43 +470,35 @@
 												</ChildItems>
 											</AutoCommandBar>
 											<ExtendedTooltip name="СписокИтоговExtendedTooltip" id="371"/>
-											<SearchStringAddition name="СписокИтоговСтрокаПоиска" id="414">
+											<SearchStringAddition name="СписокИтоговСтрокаПоиска" id="424">
 												<AdditionSource>
 													<Item>СписокИтогов</Item>
 													<Type>SearchStringRepresentation</Type>
 												</AdditionSource>
-												<ContextMenu name="СписокИтоговСтрокаПоискаКонтекстноеМеню" id="415"/>
-												<ExtendedTooltip name="СписокИтоговСтрокаПоискаРасширеннаяПодсказка" id="416"/>
+												<ContextMenu name="СписокИтоговСтрокаПоискаКонтекстноеМеню" id="425"/>
+												<ExtendedTooltip name="СписокИтоговСтрокаПоискаРасширеннаяПодсказка" id="426"/>
 											</SearchStringAddition>
-											<ViewStatusAddition name="СписокИтоговСостояниеПросмотра" id="417">
+											<ViewStatusAddition name="СписокИтоговСостояниеПросмотра" id="427">
 												<AdditionSource>
 													<Item>СписокИтогов</Item>
 													<Type>ViewStatusRepresentation</Type>
 												</AdditionSource>
-												<ContextMenu name="СписокИтоговСостояниеПросмотраКонтекстноеМеню" id="418"/>
-												<ExtendedTooltip name="СписокИтоговСостояниеПросмотраРасширеннаяПодсказка" id="419"/>
+												<ContextMenu name="СписокИтоговСостояниеПросмотраКонтекстноеМеню" id="428"/>
+												<ExtendedTooltip name="СписокИтоговСостояниеПросмотраРасширеннаяПодсказка" id="429"/>
 											</ViewStatusAddition>
-											<SearchControlAddition name="СписокИтоговУправлениеПоиском" id="420">
+											<SearchControlAddition name="СписокИтоговУправлениеПоиском" id="430">
 												<AdditionSource>
 													<Item>СписокИтогов</Item>
 													<Type>SearchControl</Type>
 												</AdditionSource>
-												<ContextMenu name="СписокИтоговУправлениеПоискомКонтекстноеМеню" id="421"/>
-												<ExtendedTooltip name="СписокИтоговУправлениеПоискомРасширеннаяПодсказка" id="422"/>
+												<ContextMenu name="СписокИтоговУправлениеПоискомКонтекстноеМеню" id="431"/>
+												<ExtendedTooltip name="СписокИтоговУправлениеПоискомРасширеннаяПодсказка" id="432"/>
 											</SearchControlAddition>
 											<Events>
 												<Event name="Selection">СписокИтоговВыбор</Event>
 												<Event name="OnActivateRow">СписокИтоговПриАктивизацииСтроки</Event>
 											</Events>
 											<ChildItems>
-												<InputField name="ИтогиНаименование" id="12">
-													<DataPath>СписокИтогов.Наименование</DataPath>
-													<ReadOnly>true</ReadOnly>
-													<EditMode>EnterOnInput</EditMode>
-													<Wrap>false</Wrap>
-													<ContextMenu name="ИтогиНаименованиеКонтекстноеМеню" id="13"/>
-													<ExtendedTooltip name="ИтогиНаименованиеExtendedTooltip" id="372"/>
-												</InputField>
 												<CheckBoxField name="ИтогиИспользоватьИтоги" id="14">
 													<DataPath>СписокИтогов.ИспользоватьИтоги</DataPath>
 													<ToolTip>
@@ -584,6 +512,57 @@
 													<ContextMenu name="ИтогиИспользоватьИтогиКонтекстноеМеню" id="15"/>
 													<ExtendedTooltip name="ИтогиИспользоватьИтогиExtendedTooltip" id="373"/>
 												</CheckBoxField>
+												<ColumnGroup name="СписокИтоговНаименованиеИРежим" id="414">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Список итогов наименование и режим</v8:content>
+														</v8:item>
+													</Title>
+													<ExtendedTooltip name="СписокИтоговНаименованиеИРежимРасширеннаяПодсказка" id="415"/>
+													<ChildItems>
+														<InputField name="ИтогиНаименование" id="12">
+															<DataPath>СписокИтогов.Наименование</DataPath>
+															<ReadOnly>true</ReadOnly>
+															<EditMode>EnterOnInput</EditMode>
+															<Wrap>false</Wrap>
+															<ContextMenu name="ИтогиНаименованиеКонтекстноеМеню" id="13"/>
+															<ExtendedTooltip name="ИтогиНаименованиеExtendedTooltip" id="372"/>
+														</InputField>
+														<InputField name="ИтогиАгрегатыИтоги" id="71">
+															<DataPath>СписокИтогов.АгрегатыИтоги</DataPath>
+															<ReadOnly>true</ReadOnly>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Какой режим использует регистр: итогов или агрегатов</v8:content>
+																</v8:item>
+															</ToolTip>
+															<HorizontalAlign>Left</HorizontalAlign>
+															<EditMode>EnterOnInput</EditMode>
+															<ShowInHeader>false</ShowInHeader>
+															<Wrap>false</Wrap>
+															<Font ref="sys:DefaultGUIFont" bold="false" italic="true" underline="false" strikeout="false" kind="WindowsFont"/>
+															<ContextMenu name="ИтогиАгрегатыИтогиКонтекстноеМеню" id="72"/>
+															<ExtendedTooltip name="ИтогиАгрегатыИтогиExtendedTooltip" id="377"/>
+														</InputField>
+													</ChildItems>
+												</ColumnGroup>
+												<InputField name="ИтогиПериодИтогов" id="18">
+													<DataPath>СписокИтогов.ПериодИтогов</DataPath>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Текущая дата актуальности итогов</v8:content>
+														</v8:item>
+													</ToolTip>
+													<EditMode>EnterOnInput</EditMode>
+													<Width>9</Width>
+													<HorizontalStretch>false</HorizontalStretch>
+													<Wrap>false</Wrap>
+													<ContextMenu name="ИтогиПериодИтоговКонтекстноеМеню" id="19"/>
+													<ExtendedTooltip name="ИтогиПериодИтоговExtendedTooltip" id="375"/>
+												</InputField>
 												<CheckBoxField name="ИтогиИспользоватьТекущиеИтоги" id="16">
 													<DataPath>СписокИтогов.ИспользоватьТекущиеИтоги</DataPath>
 													<ToolTip>
@@ -597,31 +576,6 @@
 													<ContextMenu name="ИтогиИспользоватьТекущиеИтогиКонтекстноеМеню" id="17"/>
 													<ExtendedTooltip name="ИтогиИспользоватьТекущиеИтогиExtendedTooltip" id="374"/>
 												</CheckBoxField>
-												<InputField name="ИтогиПериодИтогов" id="18">
-													<DataPath>СписокИтогов.ПериодИтогов</DataPath>
-													<ToolTip>
-														<v8:item>
-															<v8:lang>ru</v8:lang>
-															<v8:content>Текущая дата актуальности итогов</v8:content>
-														</v8:item>
-													</ToolTip>
-													<EditMode>EnterOnInput</EditMode>
-													<Wrap>false</Wrap>
-													<Format>
-														<v8:item>
-															<v8:lang>ru</v8:lang>
-															<v8:content>DLF=DD</v8:content>
-														</v8:item>
-													</Format>
-													<EditFormat>
-														<v8:item>
-															<v8:lang>ru</v8:lang>
-															<v8:content>DLF=D</v8:content>
-														</v8:item>
-													</EditFormat>
-													<ContextMenu name="ИтогиПериодИтоговКонтекстноеМеню" id="19"/>
-													<ExtendedTooltip name="ИтогиПериодИтоговExtendedTooltip" id="375"/>
-												</InputField>
 												<CheckBoxField name="ИтогиРазделениеИтогов" id="185">
 													<DataPath>СписокИтогов.РазделениеИтогов</DataPath>
 													<ReadOnly>true</ReadOnly>
@@ -636,25 +590,14 @@
 													<ContextMenu name="ИтогиРазделениеИтоговКонтекстноеМеню" id="186"/>
 													<ExtendedTooltip name="ИтогиРазделениеИтоговExtendedTooltip" id="376"/>
 												</CheckBoxField>
-												<InputField name="ИтогиАгрегатыИтоги" id="71">
-													<DataPath>СписокИтогов.АгрегатыИтоги</DataPath>
-													<ReadOnly>true</ReadOnly>
-													<ToolTip>
-														<v8:item>
-															<v8:lang>ru</v8:lang>
-															<v8:content>Какой режим использует регистр: итогов или агрегатов</v8:content>
-														</v8:item>
-													</ToolTip>
-													<HorizontalAlign>Left</HorizontalAlign>
-													<EditMode>EnterOnInput</EditMode>
-													<Wrap>false</Wrap>
-													<ContextMenu name="ИтогиАгрегатыИтогиКонтекстноеМеню" id="72"/>
-													<ExtendedTooltip name="ИтогиАгрегатыИтогиExtendedTooltip" id="377"/>
-												</InputField>
 											</ChildItems>
 										</Table>
 										<CheckBoxField name="ПрерыватьПриОшибке" id="264">
 											<DataPath>ПрерыватьПриОшибке</DataPath>
+											<Visible>false</Visible>
+											<UserVisible>
+												<xr:Common>false</xr:Common>
+											</UserVisible>
 											<TitleLocation>Right</TitleLocation>
 											<CheckBoxType>Auto</CheckBoxType>
 											<ContextMenu name="ПрерыватьПриОшибкеКонтекстноеМеню" id="265"/>
@@ -681,40 +624,43 @@
 											<Representation>List</Representation>
 											<ReadOnly>true</ReadOnly>
 											<SkipOnInput>false</SkipOnInput>
-											<HeightInTableRows>4</HeightInTableRows>
+											<Height>6</Height>
 											<AutoInsertNewRow>true</AutoInsertNewRow>
 											<DataPath>АгрегатыПоРегистрам</DataPath>
 											<RowPictureDataPath>АгрегатыПоРегистрам.Картинка</RowPictureDataPath>
-											<SearchStringLocation>None</SearchStringLocation>
-											<ViewStatusLocation>None</ViewStatusLocation>
-											<SearchControlLocation>None</SearchControlLocation>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Агрегаты по регистрам</v8:content>
+												</v8:item>
+											</Title>
 											<RowFilter xsi:nil="true"/>
 											<ContextMenu name="АгрегатыПоРегистрамКонтекстноеМеню" id="57">
 												<Autofill>false</Autofill>
 												<ChildItems>
-													<Button name="КМАгрРегВключитьРежимАгрегатов" id="313">
+													<Button name="МенюАгрегатыВключитьРежимАгрегатов" id="313">
 														<Type>CommandBarButton</Type>
 														<SkipOnInput>false</SkipOnInput>
 														<CommandName>Form.Command.ВключитьРежимАгрегатов</CommandName>
-														<ExtendedTooltip name="КМАгрРегВключитьРежимАгрегатовExtendedTooltip" id="380"/>
+														<ExtendedTooltip name="МенюАгрегатыВключитьРежимАгрегатовРасширеннаяПодсказка" id="380"/>
 													</Button>
-													<Button name="КМАгрРегПерестроитьАгрегаты" id="314">
+													<Button name="МенюАгрегатыПерестроитьАгрегаты" id="314">
 														<Type>CommandBarButton</Type>
 														<SkipOnInput>false</SkipOnInput>
 														<CommandName>Form.Command.ПерестроитьАгрегаты</CommandName>
-														<ExtendedTooltip name="КМАгрРегПерестроитьАгрегатыExtendedTooltip" id="381"/>
+														<ExtendedTooltip name="МенюАгрегатыПерестроитьАгрегатыРасширеннаяПодсказка" id="381"/>
 													</Button>
-													<Button name="КМАгрРегАгрегатыОптимальные" id="315">
+													<Button name="МенюАгрегатыАгрегатыОптимальные" id="315">
 														<Type>CommandBarButton</Type>
 														<SkipOnInput>false</SkipOnInput>
 														<CommandName>Form.Command.АгрегатыОптимальные</CommandName>
-														<ExtendedTooltip name="КМАгрРегАгрегатыОптимальныеExtendedTooltip" id="382"/>
+														<ExtendedTooltip name="МенюАгрегатыАгрегатыОптимальныеРасширеннаяПодсказка" id="382"/>
 													</Button>
-													<Button name="КМАгрРегВыделитьВсе" id="312">
+													<Button name="МенюАгрегатыВыделитьВсе" id="312">
 														<Type>CommandBarButton</Type>
 														<SkipOnInput>false</SkipOnInput>
 														<CommandName>Form.Item.АгрегатыПоРегистрам.StandardCommand.SelectAll</CommandName>
-														<ExtendedTooltip name="КМАгрРегВыделитьВсеExtendedTooltip" id="383"/>
+														<ExtendedTooltip name="МенюАгрегатыВыделитьВсеРасширеннаяПодсказка" id="383"/>
 													</Button>
 												</ChildItems>
 											</ContextMenu>
@@ -819,66 +765,38 @@
 												</ChildItems>
 											</AutoCommandBar>
 											<ExtendedTooltip name="АгрегатыПоРегистрамExtendedTooltip" id="396"/>
-											<SearchStringAddition name="АгрегатыПоРегистрамСтрокаПоиска" id="423">
+											<SearchStringAddition name="АгрегатыПоРегистрамСтрокаПоиска" id="433">
 												<AdditionSource>
 													<Item>АгрегатыПоРегистрам</Item>
 													<Type>SearchStringRepresentation</Type>
 												</AdditionSource>
-												<ContextMenu name="АгрегатыПоРегистрамСтрокаПоискаКонтекстноеМеню" id="424"/>
-												<ExtendedTooltip name="АгрегатыПоРегистрамСтрокаПоискаРасширеннаяПодсказка" id="425"/>
+												<ContextMenu name="АгрегатыПоРегистрамСтрокаПоискаКонтекстноеМеню" id="434"/>
+												<ExtendedTooltip name="АгрегатыПоРегистрамСтрокаПоискаРасширеннаяПодсказка" id="435"/>
 											</SearchStringAddition>
-											<ViewStatusAddition name="АгрегатыПоРегистрамСостояниеПросмотра" id="426">
+											<ViewStatusAddition name="АгрегатыПоРегистрамСостояниеПросмотра" id="436">
 												<AdditionSource>
 													<Item>АгрегатыПоРегистрам</Item>
 													<Type>ViewStatusRepresentation</Type>
 												</AdditionSource>
-												<ContextMenu name="АгрегатыПоРегистрамСостояниеПросмотраКонтекстноеМеню" id="427"/>
-												<ExtendedTooltip name="АгрегатыПоРегистрамСостояниеПросмотраРасширеннаяПодсказка" id="428"/>
+												<ContextMenu name="АгрегатыПоРегистрамСостояниеПросмотраКонтекстноеМеню" id="437"/>
+												<ExtendedTooltip name="АгрегатыПоРегистрамСостояниеПросмотраРасширеннаяПодсказка" id="438"/>
 											</ViewStatusAddition>
-											<SearchControlAddition name="АгрегатыПоРегистрамУправлениеПоиском" id="429">
+											<SearchControlAddition name="АгрегатыПоРегистрамУправлениеПоиском" id="439">
 												<AdditionSource>
 													<Item>АгрегатыПоРегистрам</Item>
 													<Type>SearchControl</Type>
 												</AdditionSource>
-												<ContextMenu name="АгрегатыПоРегистрамУправлениеПоискомКонтекстноеМеню" id="430"/>
-												<ExtendedTooltip name="АгрегатыПоРегистрамУправлениеПоискомРасширеннаяПодсказка" id="431"/>
+												<ContextMenu name="АгрегатыПоРегистрамУправлениеПоискомКонтекстноеМеню" id="440"/>
+												<ExtendedTooltip name="АгрегатыПоРегистрамУправлениеПоискомРасширеннаяПодсказка" id="441"/>
 											</SearchControlAddition>
 											<Events>
 												<Event name="OnActivateRow">АгрегатыПоРегистрамПриАктивизацииСтроки</Event>
 											</Events>
 											<ChildItems>
-												<InputField name="АгрегатыПоРегистрамНаименование" id="59">
-													<DataPath>АгрегатыПоРегистрам.Наименование</DataPath>
-													<ReadOnly>true</ReadOnly>
-													<EditMode>EnterOnInput</EditMode>
-													<Width>30</Width>
-													<Wrap>false</Wrap>
-													<ContextMenu name="АгрегатыПоРегистрамНаименованиеКонтекстноеМеню" id="60"/>
-													<ExtendedTooltip name="АгрегатыПоРегистрамНаименованиеРасширеннаяПодсказка" id="397"/>
-												</InputField>
-												<InputField name="АгрегатыПоРегистрамРежимАгрегатов" id="61">
-													<DataPath>АгрегатыПоРегистрам.РежимАгрегатов</DataPath>
-													<ReadOnly>true</ReadOnly>
-													<EditMode>EnterOnInput</EditMode>
-													<Wrap>false</Wrap>
-													<Format>
-														<v8:item>
-															<v8:lang>ru</v8:lang>
-															<v8:content>BF=Итоги; BT=Агрегаты</v8:content>
-														</v8:item>
-													</Format>
-													<EditFormat>
-														<v8:item>
-															<v8:lang>ru</v8:lang>
-															<v8:content>BF=Итоги; BT=Агрегаты</v8:content>
-														</v8:item>
-													</EditFormat>
-													<ContextMenu name="АгрегатыПоРегистрамРежимАгрегатовКонтекстноеМеню" id="62"/>
-													<ExtendedTooltip name="АгрегатыПоРегистрамРежимАгрегатовРасширеннаяПодсказка" id="398"/>
-												</InputField>
 												<CheckBoxField name="АгрегатыПоРегистрамИспользованиеАгрегатов" id="63">
 													<DataPath>АгрегатыПоРегистрам.ИспользованиеАгрегатов</DataPath>
 													<ReadOnly>true</ReadOnly>
+													<TitleLocation>None</TitleLocation>
 													<ToolTip>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
@@ -886,46 +804,123 @@
 														</v8:item>
 													</ToolTip>
 													<EditMode>EnterOnInput</EditMode>
+													<HeaderPicture>
+														<xr:Ref>CommonPicture.Успешно</xr:Ref>
+														<xr:LoadTransparent>false</xr:LoadTransparent>
+													</HeaderPicture>
 													<CheckBoxType>Auto</CheckBoxType>
 													<ContextMenu name="АгрегатыПоРегистрамИспользованиеАгрегатовКонтекстноеМеню" id="64"/>
 													<ExtendedTooltip name="АгрегатыПоРегистрамИспользованиеАгрегатовРасширеннаяПодсказка" id="399"/>
 												</CheckBoxField>
-												<InputField name="АгрегатыПоРегистрамДатаПостроения" id="69">
-													<DataPath>АгрегатыПоРегистрам.ДатаПостроения</DataPath>
-													<ReadOnly>true</ReadOnly>
-													<EditMode>EnterOnInput</EditMode>
-													<Width>10</Width>
-													<Wrap>false</Wrap>
-													<ContextMenu name="АгрегатыПоРегистрамДатаПостроенияКонтекстноеМеню" id="70"/>
-													<ExtendedTooltip name="АгрегатыПоРегистрамДатаПостроенияРасширеннаяПодсказка" id="400"/>
-												</InputField>
-												<InputField name="АгрегатыПоРегистрамЭффект" id="91">
-													<DataPath>АгрегатыПоРегистрам.Эффект</DataPath>
-													<ReadOnly>true</ReadOnly>
-													<EditMode>EnterOnInput</EditMode>
-													<Width>10</Width>
-													<Wrap>false</Wrap>
-													<ContextMenu name="АгрегатыПоРегистрамЭффектКонтекстноеМеню" id="92"/>
-													<ExtendedTooltip name="АгрегатыПоРегистрамЭффектРасширеннаяПодсказка" id="401"/>
-												</InputField>
-												<InputField name="АгрегатыПоРегистрамРазмер" id="89">
-													<DataPath>АгрегатыПоРегистрам.Размер</DataPath>
-													<ReadOnly>true</ReadOnly>
-													<EditMode>EnterOnInput</EditMode>
-													<Width>10</Width>
-													<Wrap>false</Wrap>
-													<ContextMenu name="АгрегатыПоРегистрамРазмерКонтекстноеМеню" id="90"/>
-													<ExtendedTooltip name="АгрегатыПоРегистрамРазмерРасширеннаяПодсказка" id="402"/>
-												</InputField>
-												<InputField name="АгрегатыПоРегистрамОграничениеРазмера" id="107">
-													<DataPath>АгрегатыПоРегистрам.ОграничениеРазмера</DataPath>
-													<ReadOnly>true</ReadOnly>
-													<EditMode>EnterOnInput</EditMode>
-													<Width>10</Width>
-													<Wrap>false</Wrap>
-													<ContextMenu name="АгрегатыПоРегистрамОграничениеРазмераКонтекстноеМеню" id="108"/>
-													<ExtendedTooltip name="АгрегатыПоРегистрамОграничениеРазмераРасширеннаяПодсказка" id="403"/>
-												</InputField>
+												<ColumnGroup name="АгрегатыПоРегистрамНаименованиеИРежим" id="420">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Агрегаты по регистрам наименование и режим</v8:content>
+														</v8:item>
+													</Title>
+													<ExtendedTooltip name="АгрегатыПоРегистрамНаименованиеИРежимРасширеннаяПодсказка" id="421"/>
+													<ChildItems>
+														<InputField name="АгрегатыПоРегистрамНаименование" id="59">
+															<DataPath>АгрегатыПоРегистрам.Наименование</DataPath>
+															<ReadOnly>true</ReadOnly>
+															<EditMode>EnterOnInput</EditMode>
+															<Wrap>false</Wrap>
+															<ContextMenu name="АгрегатыПоРегистрамНаименованиеКонтекстноеМеню" id="60"/>
+															<ExtendedTooltip name="АгрегатыПоРегистрамНаименованиеРасширеннаяПодсказка" id="397"/>
+														</InputField>
+														<InputField name="АгрегатыПоРегистрамРежимАгрегатов" id="61">
+															<DataPath>АгрегатыПоРегистрам.РежимАгрегатов</DataPath>
+															<ReadOnly>true</ReadOnly>
+															<EditMode>EnterOnInput</EditMode>
+															<ShowInHeader>false</ShowInHeader>
+															<Wrap>false</Wrap>
+															<Format>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>БЛ='Используются данные итогов'; БИ='Используются данные агрегатов'</v8:content>
+																</v8:item>
+															</Format>
+															<EditFormat>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>БЛ='Используются данные итогов'; БИ='Используются данные агрегатов'</v8:content>
+																</v8:item>
+															</EditFormat>
+															<Font ref="sys:DefaultGUIFont" bold="false" italic="true" underline="false" strikeout="false" kind="WindowsFont"/>
+															<ContextMenu name="АгрегатыПоРегистрамРежимАгрегатовКонтекстноеМеню" id="62"/>
+															<ExtendedTooltip name="АгрегатыПоРегистрамРежимАгрегатовРасширеннаяПодсказка" id="398"/>
+														</InputField>
+													</ChildItems>
+												</ColumnGroup>
+												<ColumnGroup name="АгрегатыПоРегистрамГруппаДатаИЭффект" id="422">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Агрегаты по регистрам группа дата и эффект</v8:content>
+														</v8:item>
+													</Title>
+													<ExtendedTooltip name="АгрегатыПоРегистрамГруппаДатаИЭффектРасширеннаяПодсказка" id="423"/>
+													<ChildItems>
+														<InputField name="АгрегатыПоРегистрамДатаПостроения" id="69">
+															<DataPath>АгрегатыПоРегистрам.ДатаПостроения</DataPath>
+															<ReadOnly>true</ReadOnly>
+															<EditMode>EnterOnInput</EditMode>
+															<Width>13</Width>
+															<Wrap>false</Wrap>
+															<ContextMenu name="АгрегатыПоРегистрамДатаПостроенияКонтекстноеМеню" id="70"/>
+															<ExtendedTooltip name="АгрегатыПоРегистрамДатаПостроенияРасширеннаяПодсказка" id="400"/>
+														</InputField>
+														<InputField name="АгрегатыПоРегистрамЭффект" id="91">
+															<DataPath>АгрегатыПоРегистрам.Эффект</DataPath>
+															<ReadOnly>true</ReadOnly>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Ожидаемое уменьшение среднего времени выполнения запроса с использованием агрегатов</v8:content>
+																</v8:item>
+															</ToolTip>
+															<EditMode>EnterOnInput</EditMode>
+															<Wrap>false</Wrap>
+															<ContextMenu name="АгрегатыПоРегистрамЭффектКонтекстноеМеню" id="92"/>
+															<ExtendedTooltip name="АгрегатыПоРегистрамЭффектРасширеннаяПодсказка" id="401"/>
+														</InputField>
+													</ChildItems>
+												</ColumnGroup>
+												<ColumnGroup name="АгрегатыПоРегистрамГруппаРазмеры" id="418">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Агрегаты по регистрам группа размеры</v8:content>
+														</v8:item>
+													</Title>
+													<ExtendedTooltip name="АгрегатыПоРегистрамГруппаРазмерыРасширеннаяПодсказка" id="419"/>
+													<ChildItems>
+														<InputField name="АгрегатыПоРегистрамРазмер" id="89">
+															<DataPath>АгрегатыПоРегистрам.Размер</DataPath>
+															<ReadOnly>true</ReadOnly>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Размер таблицы агрегата (оценочный показатель)</v8:content>
+																</v8:item>
+															</ToolTip>
+															<EditMode>EnterOnInput</EditMode>
+															<Wrap>false</Wrap>
+															<ContextMenu name="АгрегатыПоРегистрамРазмерКонтекстноеМеню" id="90"/>
+															<ExtendedTooltip name="АгрегатыПоРегистрамРазмерРасширеннаяПодсказка" id="402"/>
+														</InputField>
+														<InputField name="АгрегатыПоРегистрамОграничениеРазмера" id="107">
+															<DataPath>АгрегатыПоРегистрам.ОграничениеРазмера</DataPath>
+															<ReadOnly>true</ReadOnly>
+															<EditMode>EnterOnInput</EditMode>
+															<Width>17</Width>
+															<Wrap>false</Wrap>
+															<ContextMenu name="АгрегатыПоРегистрамОграничениеРазмераКонтекстноеМеню" id="108"/>
+															<ExtendedTooltip name="АгрегатыПоРегистрамОграничениеРазмераРасширеннаяПодсказка" id="403"/>
+														</InputField>
+													</ChildItems>
+												</ColumnGroup>
 											</ChildItems>
 										</Table>
 										<Table name="СписокАгрегатов" id="73">
@@ -936,10 +931,15 @@
 											<SkipOnInput>false</SkipOnInput>
 											<ChangeRowSet>false</ChangeRowSet>
 											<ChangeRowOrder>false</ChangeRowOrder>
-											<HeightInTableRows>3</HeightInTableRows>
+											<Height>3</Height>
 											<AutoInsertNewRow>true</AutoInsertNewRow>
 											<DataPath>СписокАгрегатовРегистра</DataPath>
-											<TitleFont ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Список агрегатов</v8:content>
+												</v8:item>
+											</Title>
 											<CommandSet>
 												<ExcludedCommand>Add</ExcludedCommand>
 												<ExcludedCommand>CancelSearch</ExcludedCommand>
@@ -956,86 +956,96 @@
 												<ExcludedCommand>SortListAsc</ExcludedCommand>
 												<ExcludedCommand>SortListDesc</ExcludedCommand>
 											</CommandSet>
-											<SearchStringLocation>None</SearchStringLocation>
-											<ViewStatusLocation>None</ViewStatusLocation>
-											<SearchControlLocation>None</SearchControlLocation>
 											<RowFilter xsi:nil="true"/>
 											<ContextMenu name="СписокАгрегатовКонтекстноеМеню" id="74"/>
 											<AutoCommandBar name="СписокАгрегатовКоманднаяПанель" id="75">
 												<Autofill>false</Autofill>
 											</AutoCommandBar>
 											<ExtendedTooltip name="СписокАгрегатовExtendedTooltip" id="404"/>
-											<SearchStringAddition name="СписокАгрегатовСтрокаПоиска" id="432">
+											<SearchStringAddition name="СписокАгрегатовСтрокаПоиска" id="442">
 												<AdditionSource>
 													<Item>СписокАгрегатов</Item>
 													<Type>SearchStringRepresentation</Type>
 												</AdditionSource>
-												<ContextMenu name="СписокАгрегатовСтрокаПоискаКонтекстноеМеню" id="433"/>
-												<ExtendedTooltip name="СписокАгрегатовСтрокаПоискаРасширеннаяПодсказка" id="434"/>
+												<ContextMenu name="СписокАгрегатовСтрокаПоискаКонтекстноеМеню" id="443"/>
+												<ExtendedTooltip name="СписокАгрегатовСтрокаПоискаРасширеннаяПодсказка" id="444"/>
 											</SearchStringAddition>
-											<ViewStatusAddition name="СписокАгрегатовСостояниеПросмотра" id="435">
+											<ViewStatusAddition name="СписокАгрегатовСостояниеПросмотра" id="445">
 												<AdditionSource>
 													<Item>СписокАгрегатов</Item>
 													<Type>ViewStatusRepresentation</Type>
 												</AdditionSource>
-												<ContextMenu name="СписокАгрегатовСостояниеПросмотраКонтекстноеМеню" id="436"/>
-												<ExtendedTooltip name="СписокАгрегатовСостояниеПросмотраРасширеннаяПодсказка" id="437"/>
+												<ContextMenu name="СписокАгрегатовСостояниеПросмотраКонтекстноеМеню" id="446"/>
+												<ExtendedTooltip name="СписокАгрегатовСостояниеПросмотраРасширеннаяПодсказка" id="447"/>
 											</ViewStatusAddition>
-											<SearchControlAddition name="СписокАгрегатовУправлениеПоиском" id="438">
+											<SearchControlAddition name="СписокАгрегатовУправлениеПоиском" id="448">
 												<AdditionSource>
 													<Item>СписокАгрегатов</Item>
 													<Type>SearchControl</Type>
 												</AdditionSource>
-												<ContextMenu name="СписокАгрегатовУправлениеПоискомКонтекстноеМеню" id="439"/>
-												<ExtendedTooltip name="СписокАгрегатовУправлениеПоискомРасширеннаяПодсказка" id="440"/>
+												<ContextMenu name="СписокАгрегатовУправлениеПоискомКонтекстноеМеню" id="449"/>
+												<ExtendedTooltip name="СписокАгрегатовУправлениеПоискомРасширеннаяПодсказка" id="450"/>
 											</SearchControlAddition>
 											<ChildItems>
-												<CheckBoxField name="АгрИспользование" id="97">
-													<DataPath>СписокАгрегатовРегистра.Использование</DataPath>
-													<EditMode>EnterOnInput</EditMode>
-													<CheckBoxType>Auto</CheckBoxType>
-													<ContextMenu name="АгрИспользованиеКонтекстноеМеню" id="98"/>
-													<ExtendedTooltip name="АгрИспользованиеExtendedTooltip" id="405"/>
-												</CheckBoxField>
-												<InputField name="АгрПериодичность" id="322">
-													<DataPath>СписокАгрегатовРегистра.Периодичность</DataPath>
-													<EditMode>EnterOnInput</EditMode>
-													<Width>15</Width>
-													<Wrap>false</Wrap>
-													<ContextMenu name="АгрПериодичностьКонтекстноеМеню" id="323"/>
-													<ExtendedTooltip name="АгрПериодичностьExtendedTooltip" id="406"/>
-												</InputField>
-												<InputField name="АгрИзмерения" id="95">
+												<ColumnGroup name="АгрегатыРегистраПериодичностьИИспользование" id="416">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Агрегаты регистра периодичность и использование</v8:content>
+														</v8:item>
+													</Title>
+													<Group>InCell</Group>
+													<ExtendedTooltip name="АгрегатыРегистраПериодичностьИИспользованиеРасширеннаяПодсказка" id="417"/>
+													<ChildItems>
+														<CheckBoxField name="СписокАгрегатовИспользование" id="97">
+															<DataPath>СписокАгрегатовРегистра.Использование</DataPath>
+															<EditMode>EnterOnInput</EditMode>
+															<ShowInHeader>false</ShowInHeader>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="СписокАгрегатовИспользованиеКонтекстноеМеню" id="98"/>
+															<ExtendedTooltip name="СписокАгрегатовИспользованиеРасширеннаяПодсказка" id="405"/>
+														</CheckBoxField>
+														<InputField name="СписокАгрегатовПериодичность" id="322">
+															<DataPath>СписокАгрегатовРегистра.Периодичность</DataPath>
+															<EditMode>EnterOnInput</EditMode>
+															<Width>15</Width>
+															<Wrap>false</Wrap>
+															<ContextMenu name="СписокАгрегатовПериодичностьКонтекстноеМеню" id="323"/>
+															<ExtendedTooltip name="СписокАгрегатовПериодичностьРасширеннаяПодсказка" id="406"/>
+														</InputField>
+													</ChildItems>
+												</ColumnGroup>
+												<InputField name="СписокАгрегатовИзмерения" id="95">
 													<DataPath>СписокАгрегатовРегистра.Измерения</DataPath>
 													<EditMode>EnterOnInput</EditMode>
 													<Width>15</Width>
 													<Wrap>false</Wrap>
-													<ContextMenu name="АгрИзмеренияКонтекстноеМеню" id="96"/>
-													<ExtendedTooltip name="АгрИзмеренияExtendedTooltip" id="407"/>
+													<ContextMenu name="СписокАгрегатовИзмеренияКонтекстноеМеню" id="96"/>
+													<ExtendedTooltip name="СписокАгрегатовИзмеренияРасширеннаяПодсказка" id="407"/>
 												</InputField>
-												<InputField name="АгрНачалоПериода" id="101">
+												<InputField name="СписокАгрегатовНачалоПериода" id="101">
 													<DataPath>СписокАгрегатовРегистра.НачалоПериода</DataPath>
 													<EditMode>EnterOnInput</EditMode>
 													<Width>10</Width>
 													<Wrap>false</Wrap>
-													<ContextMenu name="АгрНачалоПериодаКонтекстноеМеню" id="102"/>
-													<ExtendedTooltip name="АгрНачалоПериодаExtendedTooltip" id="408"/>
+													<ContextMenu name="СписокАгрегатовНачалоПериодаКонтекстноеМеню" id="102"/>
+													<ExtendedTooltip name="СписокАгрегатовНачалоПериодаРасширеннаяПодсказка" id="408"/>
 												</InputField>
-												<InputField name="АгрКонецПериода" id="99">
+												<InputField name="СписокАгрегатовКонецПериода" id="99">
 													<DataPath>СписокАгрегатовРегистра.КонецПериода</DataPath>
 													<EditMode>EnterOnInput</EditMode>
 													<Width>10</Width>
 													<Wrap>false</Wrap>
-													<ContextMenu name="АгрКонецПериодаКонтекстноеМеню" id="100"/>
-													<ExtendedTooltip name="АгрКонецПериодаExtendedTooltip" id="409"/>
+													<ContextMenu name="СписокАгрегатовКонецПериодаКонтекстноеМеню" id="100"/>
+													<ExtendedTooltip name="СписокАгрегатовКонецПериодаРасширеннаяПодсказка" id="409"/>
 												</InputField>
-												<InputField name="АгрРазмер" id="105">
+												<InputField name="СписокАгрегатовРазмер" id="105">
 													<DataPath>СписокАгрегатовРегистра.Размер</DataPath>
 													<EditMode>EnterOnInput</EditMode>
 													<Width>10</Width>
 													<Wrap>false</Wrap>
-													<ContextMenu name="АгрРазмерКонтекстноеМеню" id="106"/>
-													<ExtendedTooltip name="АгрРазмерExtendedTooltip" id="410"/>
+													<ContextMenu name="СписокАгрегатовРазмерКонтекстноеМеню" id="106"/>
+													<ExtendedTooltip name="СписокАгрегатовРазмерРасширеннаяПодсказка" id="410"/>
 												</InputField>
 											</ChildItems>
 										</Table>
@@ -1054,27 +1064,20 @@
 					<v8:content>Подвал</v8:content>
 				</v8:item>
 			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Подвал</v8:content>
-				</v8:item>
-			</ToolTip>
-			<HorizontalStretch>true</HorizontalStretch>
 			<Group>Horizontal</Group>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="ПодвалExtendedTooltip" id="411"/>
 			<ChildItems>
-				<LabelField name="ГиперссылкаСТекстом" id="326">
-					<DataPath>ТекстГиперСсылки</DataPath>
+				<LabelField name="ТекстГиперссылки" id="326">
+					<DataPath>ТекстГиперссылки</DataPath>
 					<TitleLocation>None</TitleLocation>
-					<HorizontalAlign>Right</HorizontalAlign>
-					<Width>25</Width>
+					<HorizontalAlign>Left</HorizontalAlign>
+					<AutoMaxWidth>false</AutoMaxWidth>
 					<HorizontalStretch>true</HorizontalStretch>
 					<Hiperlink>true</Hiperlink>
-					<ContextMenu name="ГиперссылкаСТекстомКонтекстноеМеню" id="327"/>
-					<ExtendedTooltip name="ГиперссылкаСТекстомExtendedTooltip" id="412"/>
+					<ContextMenu name="ТекстГиперссылкиКонтекстноеМеню" id="327"/>
+					<ExtendedTooltip name="ТекстГиперссылкиРасширеннаяПодсказка" id="412"/>
 					<Events>
 						<Event name="Click">ГиперссылкаСТекстомНажатие</Event>
 					</Events>
@@ -1117,7 +1120,7 @@
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Регистр</v8:content>
+							<v8:content>Регистр и режим использования</v8:content>
 						</v8:item>
 					</Title>
 					<Type>
@@ -1143,7 +1146,7 @@
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Текущие итоги</v8:content>
+							<v8:content>Текущие</v8:content>
 						</v8:item>
 					</Title>
 					<Type>
@@ -1154,7 +1157,7 @@
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Период итогов</v8:content>
+							<v8:content>Период</v8:content>
 						</v8:item>
 					</Title>
 					<Type>
@@ -1206,11 +1209,11 @@
 						</v8:StringQualifiers>
 					</Type>
 				</Column>
-				<Column name="ОборотныйРег" id="11">
+				<Column name="ОстаткиИОбороты" id="11">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Оборотный рег</v8:content>
+							<v8:content>Остатки и обороты</v8:content>
 						</v8:item>
 					</Title>
 					<Type>
@@ -1237,7 +1240,7 @@
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Разделение итогов</v8:content>
+							<v8:content>Разделение</v8:content>
 						</v8:item>
 					</Title>
 					<Type>
@@ -1561,21 +1564,6 @@
 				</v8:DateQualifiers>
 			</Type>
 		</Attribute>
-		<Attribute name="ПутьКОбъектуМетаданных" id="12">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Путь к объекту метаданных</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>xs:string</v8:Type>
-				<v8:StringQualifiers>
-					<v8:Length>0</v8:Length>
-					<v8:AllowedLength>Variable</v8:AllowedLength>
-				</v8:StringQualifiers>
-			</Type>
-		</Attribute>
 		<Attribute name="ПутьКОптимальнымАгрегатам" id="13">
 			<Title>
 				<v8:item>
@@ -1665,11 +1653,11 @@
 				<Field>ПериодПерерасчетаРегистров</Field>
 			</Save>
 		</Attribute>
-		<Attribute name="ТекстГиперСсылки" id="11">
+		<Attribute name="ТекстГиперссылки" id="11">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Текст гипер ссылки</v8:content>
+					<v8:content>Текст гиперссылки</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -1746,7 +1734,7 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Обновить состояние итогов</v8:content>
+					<v8:content>Обновить</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
@@ -1761,7 +1749,7 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>ОбновитьСостояниеИтогов</Action>
-			<Representation>Picture</Representation>
+			<Representation>Text</Representation>
 		</Command>
 		<Command name="УстановитьПериодИтогов" id="6">
 			<Title>
@@ -1812,7 +1800,7 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Обновить состояние</v8:content>
+					<v8:content>Обновить</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
@@ -1918,6 +1906,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ОчиститьАгрегатыПоРегистрам</Action>
+			<Representation>Text</Representation>
 		</Command>
 		<Command name="ЗаполнитьАгрегатыПоРегистрам" id="16">
 			<Title>

@@ -249,7 +249,7 @@
 			</ListPresentation>
 			<ExtendedListPresentation/>
 			<Explanation/>
-			<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+			<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
 			<DataHistory>DontUse</DataHistory>
 		</Properties>
 		<ChildObjects>
@@ -779,7 +779,7 @@
 					</Synonym>
 					<Comment/>
 					<Type>
-						<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+						<v8:TypeSet>cfg:DefinedType.КонтактВзаимодействия</v8:TypeSet>
 					</Type>
 					<PasswordMode>false</PasswordMode>
 					<Format/>
@@ -866,7 +866,7 @@
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>(не используется) Удалить рассмотрено</v8:content>
+							<v8:content>(не используется) Рассмотрено</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
@@ -910,7 +910,7 @@
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>(не используется) Удалить рассмотреть после</v8:content>
+							<v8:content>(не используется) Рассмотреть после</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
@@ -953,20 +953,16 @@
 			</Attribute>
 			<Attribute uuid="7caabe33-184f-45db-bef4-59d4e9cd2394">
 				<Properties>
-					<Name>Предмет</Name>
+					<Name>УдалитьПредмет</Name>
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Предмет</v8:content>
+							<v8:content>(не используется) предмет</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
 					<Type>
-						<v8:Type>cfg:DocumentRef.ЭлектронноеПисьмоИсходящее</v8:Type>
-						<v8:Type>cfg:DocumentRef.ЗапланированноеВзаимодействие</v8:Type>
-						<v8:Type>cfg:DocumentRef.ЭлектронноеПисьмоВходящее</v8:Type>
-						<v8:Type>cfg:DocumentRef.ТелефонныйЗвонок</v8:Type>
-						<v8:Type>cfg:DocumentRef.Встреча</v8:Type>
+						<v8:TypeSet>cfg:DefinedType.ПредметВзаимодействия</v8:TypeSet>
 					</Type>
 					<PasswordMode>false</PasswordMode>
 					<Format/>
@@ -1715,7 +1711,7 @@
 							</Synonym>
 							<Comment/>
 							<Type>
-								<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+								<v8:TypeSet>cfg:DefinedType.КонтактВзаимодействия</v8:TypeSet>
 							</Type>
 							<PasswordMode>false</PasswordMode>
 							<Format/>
@@ -1903,7 +1899,7 @@
 							</Synonym>
 							<Comment/>
 							<Type>
-								<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+								<v8:TypeSet>cfg:DefinedType.КонтактВзаимодействия</v8:TypeSet>
 							</Type>
 							<PasswordMode>false</PasswordMode>
 							<Format/>
@@ -2091,7 +2087,7 @@
 							</Synonym>
 							<Comment/>
 							<Type>
-								<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+								<v8:TypeSet>cfg:DefinedType.КонтактВзаимодействия</v8:TypeSet>
 							</Type>
 							<PasswordMode>false</PasswordMode>
 							<Format/>
@@ -2288,7 +2284,7 @@
 									<v8:lang>ru</v8:lang>
 									<v8:content>Уточняет значение доступа:
 - если идентификатор объекта метаданных, тогда уточняет проверку права
-(ПустаяСсылка - Изменение, иначе Чтение);
+(Пустая ссылка - Изменение, иначе Чтение);
 - если владелец настроек прав, тогда уточняет таблицу для выбора настроек прав.</v8:content>
 								</v8:item>
 							</ToolTip>
@@ -2553,12 +2549,7 @@
 							</Synonym>
 							<Comment/>
 							<Type>
-								<v8:Type>xs:string</v8:Type>
-								<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
-								<v8:StringQualifiers>
-									<v8:Length>100</v8:Length>
-									<v8:AllowedLength>Variable</v8:AllowedLength>
-								</v8:StringQualifiers>
+								<v8:TypeSet>cfg:DefinedType.КонтактВзаимодействия</v8:TypeSet>
 							</Type>
 							<PasswordMode>false</PasswordMode>
 							<Format/>
@@ -2897,11 +2888,17 @@
 					</CommandParameterType>
 					<ParameterUseMode>Single</ParameterUseMode>
 					<ModifiesData>false</ModifiesData>
-					<Representation>PictureAndText</Representation>
-					<ToolTip/>
+					<Representation>Text</Representation>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ответить</v8:content>
+						</v8:item>
+					</ToolTip>
 					<Picture>
 						<xr:Ref>CommonPicture.ОтветитьНаЭлектронноеПисьмо</xr:Ref>
-						<xr:LoadTransparent>false</xr:LoadTransparent>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+						<xr:TransparentPixel x="1" y="3"/>
 					</Picture>
 					<Shortcut/>
 				</Properties>
@@ -2922,11 +2919,17 @@
 					</CommandParameterType>
 					<ParameterUseMode>Single</ParameterUseMode>
 					<ModifiesData>false</ModifiesData>
-					<Representation>PictureAndText</Representation>
-					<ToolTip/>
+					<Representation>Picture</Representation>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ответить всем</v8:content>
+						</v8:item>
+					</ToolTip>
 					<Picture>
 						<xr:Ref>CommonPicture.ОтветитьНаЭлектронноеПисьмоВсем</xr:Ref>
-						<xr:LoadTransparent>false</xr:LoadTransparent>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+						<xr:TransparentPixel x="2" y="2"/>
 					</Picture>
 					<Shortcut/>
 				</Properties>
@@ -2947,11 +2950,17 @@
 					</CommandParameterType>
 					<ParameterUseMode>Single</ParameterUseMode>
 					<ModifiesData>false</ModifiesData>
-					<Representation>PictureAndText</Representation>
-					<ToolTip/>
+					<Representation>Picture</Representation>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Переслать</v8:content>
+						</v8:item>
+					</ToolTip>
 					<Picture>
 						<xr:Ref>CommonPicture.ПереслатьЭлектронноеПисьмо</xr:Ref>
-						<xr:LoadTransparent>false</xr:LoadTransparent>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+						<xr:TransparentPixel x="2" y="2"/>
 					</Picture>
 					<Shortcut/>
 				</Properties>

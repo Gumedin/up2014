@@ -8,7 +8,6 @@
 	</Title>
 	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
 	<AutoTitle>false</AutoTitle>
-	<VerticalScroll>useIfNecessary</VerticalScroll>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<Autofill>false</Autofill>
 	</AutoCommandBar>
@@ -25,12 +24,6 @@
 					<v8:content>Фильтры</v8:content>
 				</v8:item>
 			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Фильтры</v8:content>
-				</v8:item>
-			</ToolTip>
 			<Group>Horizontal</Group>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
@@ -142,7 +135,6 @@
 					<ExtendedTooltip name="ФильтрПоПредметуExtendedTooltip" id="36"/>
 					<Events>
 						<Event name="OnChange">ФильтрПоПредметуПриИзменении</Event>
-						<Event name="AutoComplete">ФильтрПоПредметуАвтоПодбор</Event>
 					</Events>
 				</InputField>
 				<CheckBoxField name="ПоказыватьУдаленные" id="31">
@@ -163,6 +155,18 @@
 				</CheckBoxField>
 			</ChildItems>
 		</UsualGroup>
+		<UsualGroup name="ГруппаПользовательскихНастроек" id="43">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа пользовательских настроек</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПользовательскихНастроекРасширеннаяПодсказка" id="44"/>
+		</UsualGroup>
 		<CommandBar name="КоманднаяПанель" id="33">
 			<Title>
 				<v8:item>
@@ -170,12 +174,6 @@
 					<v8:content>Командная панель</v8:content>
 				</v8:item>
 			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Командная панель</v8:content>
-				</v8:item>
-			</ToolTip>
 			<CommandSource>Form</CommandSource>
 			<ExtendedTooltip name="КоманднаяПанельExtendedTooltip" id="38"/>
 		</CommandBar>
@@ -192,9 +190,12 @@
 				<xr:Ref>CommonPicture.КоллекцияЗаметки</xr:Ref>
 				<xr:LoadTransparent>false</xr:LoadTransparent>
 			</RowsPicture>
-			<SearchStringLocation>None</SearchStringLocation>
-			<ViewStatusLocation>None</ViewStatusLocation>
-			<SearchControlLocation>None</SearchControlLocation>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список</v8:content>
+				</v8:item>
+			</Title>
 			<AutoRefresh>false</AutoRefresh>
 			<AutoRefreshPeriod>60</AutoRefreshPeriod>
 			<Period>
@@ -208,34 +209,35 @@
 			<ShowRoot>false</ShowRoot>
 			<AllowRootChoice>false</AllowRootChoice>
 			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<UserSettingsGroup>ГруппаПользовательскихНастроек</UserSettingsGroup>
 			<ContextMenu name="СписокКонтекстноеМеню" id="2"/>
 			<AutoCommandBar name="СписокКоманднаяПанель" id="3">
 				<Autofill>false</Autofill>
 			</AutoCommandBar>
 			<ExtendedTooltip name="СписокExtendedTooltip" id="39"/>
-			<SearchStringAddition name="СписокСтрокаПоиска" id="43">
+			<SearchStringAddition name="СписокСтрокаПоиска" id="45">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>SearchStringRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="44"/>
-				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="45"/>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="46"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="47"/>
 			</SearchStringAddition>
-			<ViewStatusAddition name="СписокСостояниеПросмотра" id="46">
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="48">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>ViewStatusRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="47"/>
-				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="48"/>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="49"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="50"/>
 			</ViewStatusAddition>
-			<SearchControlAddition name="СписокУправлениеПоиском" id="49">
+			<SearchControlAddition name="СписокУправлениеПоиском" id="51">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>SearchControl</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="50"/>
-				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="51"/>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="52"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="53"/>
 			</SearchControlAddition>
 			<ChildItems>
 				<LabelField name="Тема" id="20">
@@ -246,18 +248,35 @@
 							<v8:content>Тема</v8:content>
 						</v8:item>
 					</Title>
+					<AutoCellHeight>true</AutoCellHeight>
+					<Width>30</Width>
 					<ContextMenu name="ТемаКонтекстноеМеню" id="21"/>
 					<ExtendedTooltip name="ТемаExtendedTooltip" id="40"/>
 				</LabelField>
 				<LabelField name="Предмет" id="22">
 					<DataPath>Список.ПредставлениеПредмета</DataPath>
+					<Width>30</Width>
 					<ContextMenu name="ПредметКонтекстноеМеню" id="23"/>
 					<ExtendedTooltip name="ПредметExtendedTooltip" id="41"/>
 				</LabelField>
 				<LabelField name="ДатаИзменения" id="24">
 					<DataPath>Список.ДатаИзменения</DataPath>
+					<Format>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ДЛФ=D</v8:content>
+						</v8:item>
+					</Format>
 					<ContextMenu name="ДатаИзмененияКонтекстноеМеню" id="25"/>
 					<ExtendedTooltip name="ДатаИзмененияExtendedTooltip" id="42"/>
+				</LabelField>
+				<LabelField name="Ссылка" id="54">
+					<DataPath>Список.Ref</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<ContextMenu name="СсылкаКонтекстноеМеню" id="55"/>
+					<ExtendedTooltip name="СсылкаРасширеннаяПодсказка" id="56"/>
 				</LabelField>
 			</ChildItems>
 		</Table>
@@ -268,6 +287,9 @@
 				<v8:Type>cfg:DynamicList</v8:Type>
 			</Type>
 			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>Список.Ref</Field>
+			</UseAlways>
 			<Settings xsi:type="DynamicList">
 				<ManualQuery>true</ManualQuery>
 				<DynamicDataRead>true</DynamicDataRead>
@@ -318,30 +340,6 @@
 						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
 					</dcsset:order>
 					<dcsset:conditionalAppearance>
-						<dcsset:item>
-							<dcsset:selection/>
-							<dcsset:filter>
-								<dcsset:item xsi:type="dcsset:FilterItemGroup">
-									<dcsset:groupType>AndGroup</dcsset:groupType>
-									<dcsset:item xsi:type="dcsset:FilterItemComparison">
-										<dcsset:left xsi:type="dcscor:Field">ДляРабочегоСтола</dcsset:left>
-										<dcsset:comparisonType>Equal</dcsset:comparisonType>
-										<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
-									</dcsset:item>
-									<dcsset:item xsi:type="dcsset:FilterItemComparison">
-										<dcsset:left xsi:type="dcscor:Field">ПометкаУдаления</dcsset:left>
-										<dcsset:comparisonType>Equal</dcsset:comparisonType>
-										<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
-									</dcsset:item>
-								</dcsset:item>
-							</dcsset:filter>
-							<dcsset:appearance>
-								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-									<dcscor:parameter>Шрифт</dcscor:parameter>
-									<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
-								</dcscor:item>
-							</dcsset:appearance>
-						</dcsset:item>
 						<dcsset:viewMode>Normal</dcsset:viewMode>
 						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
 					</dcsset:conditionalAppearance>

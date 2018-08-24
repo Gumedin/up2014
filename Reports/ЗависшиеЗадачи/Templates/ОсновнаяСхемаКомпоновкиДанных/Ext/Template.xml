@@ -30,7 +30,7 @@
 			<title xsi:type="v8:LocalStringType">
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Исполнитель</v8:content>
+					<v8:content>Ответственный</v8:content>
 				</v8:item>
 			</title>
 		</field>
@@ -148,7 +148,7 @@
 		<title xsi:type="v8:LocalStringType">
 			<v8:item>
 				<v8:lang>ru</v8:lang>
-				<v8:content>Координатор выполнения задач</v8:content>
+				<v8:content>Ответственный</v8:content>
 			</v8:item>
 		</title>
 		<valueType>
@@ -172,12 +172,6 @@
 			</v8:item>
 		</dcsset:presentation>
 		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
-			<dcsset:selection>
-				<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
-				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>Количество</dcsset:field>
-				</dcsset:item>
-			</dcsset:selection>
 			<dcsset:filter>
 				<dcsset:item xsi:type="dcsset:FilterItemComparison">
 					<dcsset:left xsi:type="dcscor:Field">ПризнакНаличияИсполнителей</dcsset:left>
@@ -190,6 +184,7 @@
 					<dcsset:left xsi:type="dcscor:Field">Автор</dcsset:left>
 					<dcsset:comparisonType>Equal</dcsset:comparisonType>
 					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.Пользователи.ПустаяСсылка</dcsset:right>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
 					<dcsset:userSettingID>7da04b8a-5d82-4dc2-8ef2-bfdfbba3f062</dcsset:userSettingID>
 				</dcsset:item>
 			</dcsset:filter>
@@ -258,7 +253,7 @@
 							<dcscor:value xsi:type="v8:LocalStringType">
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Исполнитель не назначен</v8:content>
+									<v8:content>Ответственный не назначен</v8:content>
 								</v8:item>
 							</dcscor:value>
 						</dcscor:item>
@@ -325,11 +320,26 @@
 						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
 					</dcsset:order>
 					<dcsset:selection>
-						<dcsset:item xsi:type="dcsset:SelectedItemField">
-							<dcsset:field>ОсновнойОбъектАдресации</dcsset:field>
-						</dcsset:item>
-						<dcsset:item xsi:type="dcsset:SelectedItemField">
-							<dcsset:field>ДополнительныйОбъектАдресации</dcsset:field>
+						<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>ОсновнойОбъектАдресации</dcsset:field>
+								<dcsset:lwsTitle>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Основной</v8:content>
+									</v8:item>
+								</dcsset:lwsTitle>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>ДополнительныйОбъектАдресации</dcsset:field>
+								<dcsset:lwsTitle>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>доп. объект адресации задач</v8:content>
+									</v8:item>
+								</dcsset:lwsTitle>
+							</dcsset:item>
+							<dcsset:placement>Together</dcsset:placement>
 						</dcsset:item>
 						<dcsset:item xsi:type="dcsset:SelectedItemField">
 							<dcsset:field>Количество</dcsset:field>
@@ -353,6 +363,23 @@
 								<dcsset:field>РольИсполнителя</dcsset:field>
 							</dcsset:item>
 						</dcsset:selection>
+						<dcsset:item>
+							<dcsset:order>
+								<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+							</dcsset:order>
+							<dcsset:selection>
+								<dcsset:item xsi:type="dcsset:SelectedItemField">
+									<dcsset:field>Ссылка</dcsset:field>
+								</dcsset:item>
+							</dcsset:selection>
+							<dcsset:userSettingID>4a22c52f-9466-49c6-ab5a-e08b38d9d6fa</dcsset:userSettingID>
+							<dcsset:userSettingPresentation xsi:type="v8:LocalStringType">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Подробно</v8:content>
+								</v8:item>
+							</dcsset:userSettingPresentation>
+						</dcsset:item>
 					</dcsset:item>
 				</dcsset:row>
 				<dcsset:selection>
@@ -366,7 +393,7 @@
 		<dcsset:presentation xsi:type="v8:LocalStringType">
 			<v8:item>
 				<v8:lang>ru</v8:lang>
-				<v8:content>Зависшие задачи по исполнителям</v8:content>
+				<v8:content>Зависшие задачи по ответственным</v8:content>
 			</v8:item>
 		</dcsset:presentation>
 		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
@@ -541,16 +568,41 @@
 							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
 						</dcsset:order>
 						<dcsset:selection>
-							<dcsset:item xsi:type="dcsset:SelectedItemField">
-								<dcsset:field>ОсновнойОбъектАдресации</dcsset:field>
+							<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+								<dcsset:item xsi:type="dcsset:SelectedItemField">
+									<dcsset:field>ОсновнойОбъектАдресации</dcsset:field>
+									<dcsset:lwsTitle>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Основной</v8:content>
+										</v8:item>
+									</dcsset:lwsTitle>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:SelectedItemField">
+									<dcsset:field>ДополнительныйОбъектАдресации</dcsset:field>
+									<dcsset:lwsTitle>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>доп. объект адресации</v8:content>
+										</v8:item>
+									</dcsset:lwsTitle>
+								</dcsset:item>
+								<dcsset:placement>Together</dcsset:placement>
 							</dcsset:item>
 							<dcsset:item xsi:type="dcsset:SelectedItemField">
-								<dcsset:field>ДополнительныйОбъектАдресации</dcsset:field>
-							</dcsset:item>
-							<dcsset:item xsi:type="dcsset:SelectedItemField">
-								<dcsset:field>Ссылка</dcsset:field>
+								<dcsset:field>Количество</dcsset:field>
 							</dcsset:item>
 						</dcsset:selection>
+						<dcsset:item>
+							<dcsset:order>
+								<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+							</dcsset:order>
+							<dcsset:selection>
+								<dcsset:item xsi:type="dcsset:SelectedItemField">
+									<dcsset:field>Ссылка</dcsset:field>
+								</dcsset:item>
+							</dcsset:selection>
+						</dcsset:item>
 					</dcsset:item>
 				</dcsset:row>
 				<dcsset:selection>
@@ -711,11 +763,26 @@
 						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
 					</dcsset:order>
 					<dcsset:selection>
-						<dcsset:item xsi:type="dcsset:SelectedItemField">
-							<dcsset:field>ОсновнойОбъектАдресации</dcsset:field>
-						</dcsset:item>
-						<dcsset:item xsi:type="dcsset:SelectedItemField">
-							<dcsset:field>ДополнительныйОбъектАдресации</dcsset:field>
+						<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>ОсновнойОбъектАдресации</dcsset:field>
+								<dcsset:lwsTitle>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Основной</v8:content>
+									</v8:item>
+								</dcsset:lwsTitle>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>ДополнительныйОбъектАдресации</dcsset:field>
+								<dcsset:lwsTitle>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>доп. объект адресации</v8:content>
+									</v8:item>
+								</dcsset:lwsTitle>
+							</dcsset:item>
+							<dcsset:placement>Together</dcsset:placement>
 						</dcsset:item>
 						<dcsset:item xsi:type="dcsset:SelectedItemField">
 							<dcsset:field>Количество</dcsset:field>
@@ -815,8 +882,14 @@
 							<dcscor:value xsi:type="v8ui:Color">style:ПросроченныеДанныеЦвет</dcscor:value>
 						</dcscor:item>
 					</dcsset:appearance>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
 					<dcsset:userSettingID>8f0025cd-eb21-4541-81ac-0c30842ca2cf</dcsset:userSettingID>
-					<dcsset:userSettingPresentation xsi:type="xs:string">Выделять задачи без назначенных исполнителей</dcsset:userSettingPresentation>
+					<dcsset:userSettingPresentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выделять задачи без назначенных исполнителей</v8:content>
+						</v8:item>
+					</dcsset:userSettingPresentation>
 				</dcsset:item>
 				<dcsset:item>
 					<dcsset:selection>
@@ -836,7 +909,7 @@
 							<dcscor:value xsi:type="v8:LocalStringType">
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Не указан</v8:content>
+									<v8:content>Объект адресации не указан</v8:content>
 								</v8:item>
 							</dcscor:value>
 						</dcscor:item>
@@ -861,6 +934,25 @@
 								<v8:item>
 									<v8:lang>ru</v8:lang>
 									<v8:content>Исполнитель не назначен</v8:content>
+								</v8:item>
+							</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>Ссылка.СрокИсполнения</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Формат</dcscor:parameter>
+							<dcscor:value xsi:type="v8:LocalStringType">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ДЛФ=D</v8:content>
 								</v8:item>
 							</dcscor:value>
 						</dcscor:item>
@@ -907,11 +999,26 @@
 						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
 					</dcsset:order>
 					<dcsset:selection>
-						<dcsset:item xsi:type="dcsset:SelectedItemField">
-							<dcsset:field>ОсновнойОбъектАдресации</dcsset:field>
-						</dcsset:item>
-						<dcsset:item xsi:type="dcsset:SelectedItemField">
-							<dcsset:field>ДополнительныйОбъектАдресации</dcsset:field>
+						<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>ОсновнойОбъектАдресации</dcsset:field>
+								<dcsset:lwsTitle>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Основной</v8:content>
+									</v8:item>
+								</dcsset:lwsTitle>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>ДополнительныйОбъектАдресации</dcsset:field>
+								<dcsset:lwsTitle>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>доп. объект адресации</v8:content>
+									</v8:item>
+								</dcsset:lwsTitle>
+							</dcsset:item>
+							<dcsset:placement>Together</dcsset:placement>
 						</dcsset:item>
 						<dcsset:item xsi:type="dcsset:SelectedItemField">
 							<dcsset:field>Количество</dcsset:field>
@@ -920,10 +1027,26 @@
 					<dcsset:item>
 						<dcsset:order>
 							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+							<dcsset:item xsi:type="dcsset:OrderItemField">
+								<dcsset:field>Ссылка.СрокИсполнения</dcsset:field>
+								<dcsset:orderType>Asc</dcsset:orderType>
+							</dcsset:item>
 						</dcsset:order>
 						<dcsset:selection>
-							<dcsset:item xsi:type="dcsset:SelectedItemField">
-								<dcsset:field>Ссылка</dcsset:field>
+							<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+								<dcsset:item xsi:type="dcsset:SelectedItemField">
+									<dcsset:field>Ссылка</dcsset:field>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:SelectedItemField">
+									<dcsset:field>Ссылка.СрокИсполнения</dcsset:field>
+									<dcsset:lwsTitle>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Срок</v8:content>
+										</v8:item>
+									</dcsset:lwsTitle>
+								</dcsset:item>
+								<dcsset:placement>Horizontally</dcsset:placement>
 							</dcsset:item>
 						</dcsset:selection>
 					</dcsset:item>

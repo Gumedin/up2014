@@ -1,10 +1,8 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5">
-	<Width>85</Width>
 	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
 	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
 	<Group>Horizontal</Group>
-	<VerticalScroll>useIfNecessary</VerticalScroll>
 	<CommandSet>
 		<ExcludedCommand>CustomizeForm</ExcludedCommand>
 	</CommandSet>
@@ -31,12 +29,6 @@
 					<v8:content>Страницы</v8:content>
 				</v8:item>
 			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Страницы</v8:content>
-				</v8:item>
-			</ToolTip>
 			<ExtendedTooltip name="СтраницыExtendedTooltip" id="56"/>
 			<ChildItems>
 				<Page name="Пользователи" id="24">
@@ -46,12 +38,6 @@
 							<v8:content>Пользователи</v8:content>
 						</v8:item>
 					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Пользователи</v8:content>
-						</v8:item>
-					</ToolTip>
 					<ExtendedTooltip name="ПользователиExtendedTooltip" id="57"/>
 					<ChildItems>
 						<CommandBar name="КоманднаяПанельПользователи" id="31">
@@ -61,12 +47,6 @@
 									<v8:content>Командная панель пользователи</v8:content>
 								</v8:item>
 							</Title>
-							<ToolTip>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Командная панель пользователи</v8:content>
-								</v8:item>
-							</ToolTip>
 							<CommandSource>Item.СписокПользователи</CommandSource>
 							<ExtendedTooltip name="КоманднаяПанельПользователиExtendedTooltip" id="58"/>
 						</CommandBar>
@@ -86,6 +66,12 @@
 								<xr:Ref>CommonPicture.СостоянияПользователей</xr:Ref>
 								<xr:LoadTransparent>false</xr:LoadTransparent>
 							</RowsPicture>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Список пользователи</v8:content>
+								</v8:item>
+							</Title>
 							<CommandSet>
 								<ExcludedCommand>Change</ExcludedCommand>
 								<ExcludedCommand>Choose</ExcludedCommand>
@@ -94,9 +80,6 @@
 								<ExcludedCommand>Delete</ExcludedCommand>
 								<ExcludedCommand>SetDeletionMark</ExcludedCommand>
 							</CommandSet>
-							<SearchStringLocation>None</SearchStringLocation>
-							<ViewStatusLocation>None</ViewStatusLocation>
-							<SearchControlLocation>None</SearchControlLocation>
 							<AutoRefresh>false</AutoRefresh>
 							<AutoRefreshPeriod>60</AutoRefreshPeriod>
 							<Period>
@@ -113,29 +96,29 @@
 							<ContextMenu name="СписокПользователиКонтекстноеМеню" id="2"/>
 							<AutoCommandBar name="СписокПользователиКоманднаяПанель" id="3"/>
 							<ExtendedTooltip name="СписокПользователиExtendedTooltip" id="59"/>
-							<SearchStringAddition name="СписокПользователиСтрокаПоиска" id="65">
+							<SearchStringAddition name="СписокПользователиSearchString" id="65">
 								<AdditionSource>
 									<Item>СписокПользователи</Item>
 									<Type>SearchStringRepresentation</Type>
 								</AdditionSource>
-								<ContextMenu name="СписокПользователиСтрокаПоискаКонтекстноеМеню" id="66"/>
-								<ExtendedTooltip name="СписокПользователиСтрокаПоискаРасширеннаяПодсказка" id="67"/>
+								<ContextMenu name="СписокПользователиSearchStringContextMenu" id="66"/>
+								<ExtendedTooltip name="СписокПользователиSearchStringExtendedTooltip" id="67"/>
 							</SearchStringAddition>
-							<ViewStatusAddition name="СписокПользователиСостояниеПросмотра" id="68">
+							<ViewStatusAddition name="СписокПользователиViewStatus" id="68">
 								<AdditionSource>
 									<Item>СписокПользователи</Item>
 									<Type>ViewStatusRepresentation</Type>
 								</AdditionSource>
-								<ContextMenu name="СписокПользователиСостояниеПросмотраКонтекстноеМеню" id="69"/>
-								<ExtendedTooltip name="СписокПользователиСостояниеПросмотраРасширеннаяПодсказка" id="70"/>
+								<ContextMenu name="СписокПользователиViewStatusContextMenu" id="69"/>
+								<ExtendedTooltip name="СписокПользователиViewStatusExtendedTooltip" id="70"/>
 							</ViewStatusAddition>
-							<SearchControlAddition name="СписокПользователиУправлениеПоиском" id="71">
+							<SearchControlAddition name="СписокПользователиSearchControl" id="71">
 								<AdditionSource>
 									<Item>СписокПользователи</Item>
 									<Type>SearchControl</Type>
 								</AdditionSource>
-								<ContextMenu name="СписокПользователиУправлениеПоискомКонтекстноеМеню" id="72"/>
-								<ExtendedTooltip name="СписокПользователиУправлениеПоискомРасширеннаяПодсказка" id="73"/>
+								<ContextMenu name="СписокПользователиSearchControlContextMenu" id="72"/>
+								<ExtendedTooltip name="СписокПользователиSearchControlExtendedTooltip" id="73"/>
 							</SearchControlAddition>
 							<Events>
 								<Event name="ValueChoice">СписокПользователиВыборЗначения</Event>
@@ -159,12 +142,6 @@
 							<v8:content>Роли исполнителей</v8:content>
 						</v8:item>
 					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Роли</v8:content>
-						</v8:item>
-					</ToolTip>
 					<ExtendedTooltip name="РолиExtendedTooltip" id="61"/>
 					<ChildItems>
 						<Table name="СписокРоли" id="26">
@@ -177,6 +154,12 @@
 							<EnableStartDrag>true</EnableStartDrag>
 							<DataPath>СписокРоли</DataPath>
 							<RowPictureDataPath>СписокРоли.DefaultPicture</RowPictureDataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Список роли</v8:content>
+								</v8:item>
+							</Title>
 							<CommandSet>
 								<ExcludedCommand>Change</ExcludedCommand>
 								<ExcludedCommand>Choose</ExcludedCommand>
@@ -185,9 +168,6 @@
 								<ExcludedCommand>Delete</ExcludedCommand>
 								<ExcludedCommand>SetDeletionMark</ExcludedCommand>
 							</CommandSet>
-							<SearchStringLocation>None</SearchStringLocation>
-							<ViewStatusLocation>None</ViewStatusLocation>
-							<SearchControlLocation>None</SearchControlLocation>
 							<AutoRefresh>false</AutoRefresh>
 							<AutoRefreshPeriod>60</AutoRefreshPeriod>
 							<Period>
@@ -204,29 +184,29 @@
 							<ContextMenu name="СписокРолиКонтекстноеМеню" id="27"/>
 							<AutoCommandBar name="СписокРолиКоманднаяПанель" id="28"/>
 							<ExtendedTooltip name="СписокРолиExtendedTooltip" id="62"/>
-							<SearchStringAddition name="СписокРолиСтрокаПоиска" id="74">
+							<SearchStringAddition name="СписокРолиSearchString" id="74">
 								<AdditionSource>
 									<Item>СписокРоли</Item>
 									<Type>SearchStringRepresentation</Type>
 								</AdditionSource>
-								<ContextMenu name="СписокРолиСтрокаПоискаКонтекстноеМеню" id="75"/>
-								<ExtendedTooltip name="СписокРолиСтрокаПоискаРасширеннаяПодсказка" id="76"/>
+								<ContextMenu name="СписокРолиSearchStringContextMenu" id="75"/>
+								<ExtendedTooltip name="СписокРолиSearchStringExtendedTooltip" id="76"/>
 							</SearchStringAddition>
-							<ViewStatusAddition name="СписокРолиСостояниеПросмотра" id="77">
+							<ViewStatusAddition name="СписокРолиViewStatus" id="77">
 								<AdditionSource>
 									<Item>СписокРоли</Item>
 									<Type>ViewStatusRepresentation</Type>
 								</AdditionSource>
-								<ContextMenu name="СписокРолиСостояниеПросмотраКонтекстноеМеню" id="78"/>
-								<ExtendedTooltip name="СписокРолиСостояниеПросмотраРасширеннаяПодсказка" id="79"/>
+								<ContextMenu name="СписокРолиViewStatusContextMenu" id="78"/>
+								<ExtendedTooltip name="СписокРолиViewStatusExtendedTooltip" id="79"/>
 							</ViewStatusAddition>
-							<SearchControlAddition name="СписокРолиУправлениеПоиском" id="80">
+							<SearchControlAddition name="СписокРолиSearchControl" id="80">
 								<AdditionSource>
 									<Item>СписокРоли</Item>
 									<Type>SearchControl</Type>
 								</AdditionSource>
-								<ContextMenu name="СписокРолиУправлениеПоискомКонтекстноеМеню" id="81"/>
-								<ExtendedTooltip name="СписокРолиУправлениеПоискомРасширеннаяПодсказка" id="82"/>
+								<ContextMenu name="СписокРолиSearchControlContextMenu" id="81"/>
+								<ExtendedTooltip name="СписокРолиSearchControlExtendedTooltip" id="82"/>
 							</SearchControlAddition>
 							<Events>
 								<Event name="ValueChoice">СписокРолиВыборЗначения</Event>
@@ -263,7 +243,6 @@
 				<v8:Type>cfg:DynamicList</v8:Type>
 			</Type>
 			<UseAlways>
-				<Field>~СписокПользователи.Подразделение</Field>
 				<Field>СписокПользователи.Ref</Field>
 			</UseAlways>
 			<Settings xsi:type="DynamicList">
@@ -277,8 +256,6 @@
 	ВЫБОР
 		КОГДА Пользователи.ПометкаУдаления
 			ТОГДА 0
-		КОГДА Пользователи.ИдентификаторПользователяИБ = &amp;ПустойУникальныйИдентификатор
-			ТОГДА 4
 		ИНАЧЕ 1
 	КОНЕЦ КАК НомерКартинки
 ИЗ
@@ -370,27 +347,6 @@
 						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
 					</dcsset:order>
 					<dcsset:conditionalAppearance>
-						<dcsset:item>
-							<dcsset:selection/>
-							<dcsset:filter>
-								<dcsset:item xsi:type="dcsset:FilterItemComparison">
-									<dcsset:left xsi:type="dcscor:Field">ВнешняяРоль</dcsset:left>
-									<dcsset:comparisonType>Equal</dcsset:comparisonType>
-									<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
-								</dcsset:item>
-								<dcsset:item xsi:type="dcsset:FilterItemComparison">
-									<dcsset:left xsi:type="dcscor:Field">ЕстьИсполнители</dcsset:left>
-									<dcsset:comparisonType>Equal</dcsset:comparisonType>
-									<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
-								</dcsset:item>
-							</dcsset:filter>
-							<dcsset:appearance>
-								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-									<dcscor:parameter>ЦветТекста</dcscor:parameter>
-									<dcscor:value xsi:type="v8ui:Color">style:РольБезИсполнителей</dcscor:value>
-								</dcscor:item>
-							</dcsset:appearance>
-						</dcsset:item>
 						<dcsset:viewMode>Normal</dcsset:viewMode>
 						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
 					</dcsset:conditionalAppearance>

@@ -23,7 +23,7 @@
 			<UseStandardCommands>true</UseStandardCommands>
 			<DefaultForm>DataProcessor.ЗагрузкаКурсовВалют.Form.Форма</DefaultForm>
 			<AuxiliaryForm/>
-			<IncludeHelpInContents>false</IncludeHelpInContents>
+			<IncludeHelpInContents>true</IncludeHelpInContents>
 			<ExtendedPresentation/>
 			<Explanation/>
 		</Properties>
@@ -34,7 +34,7 @@
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>С</v8:content>
+							<v8:content>Начало периода загрузки</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
@@ -76,7 +76,7 @@
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>По</v8:content>
+							<v8:content>Окончание периода загрузки</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
@@ -184,7 +184,12 @@
 							<PasswordMode>false</PasswordMode>
 							<Format/>
 							<EditFormat/>
-							<ToolTip/>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Цифровой код валюты по общероссийскому классификатору валют</v8:content>
+								</v8:item>
+							</ToolTip>
 							<MarkNegatives>false</MarkNegatives>
 							<Mask/>
 							<MultiLine>false</MultiLine>
@@ -397,7 +402,12 @@
 							<PasswordMode>false</PasswordMode>
 							<Format/>
 							<EditFormat/>
-							<ToolTip/>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Загружать курс</v8:content>
+								</v8:item>
+							</ToolTip>
 							<MarkNegatives>false</MarkNegatives>
 							<Mask/>
 							<MultiLine>false</MultiLine>
@@ -468,7 +478,7 @@
 							<Synonym>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Валюта</v8:content>
+									<v8:content>Представление</v8:content>
 								</v8:item>
 							</Synonym>
 							<Comment/>
@@ -482,7 +492,12 @@
 							<PasswordMode>false</PasswordMode>
 							<Format/>
 							<EditFormat/>
-							<ToolTip/>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Название валюты</v8:content>
+								</v8:item>
+							</ToolTip>
 							<MarkNegatives>false</MarkNegatives>
 							<Mask/>
 							<MultiLine>false</MultiLine>
@@ -522,7 +537,12 @@
 							<PasswordMode>false</PasswordMode>
 							<Format/>
 							<EditFormat/>
-							<ToolTip/>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Символьный код валюты</v8:content>
+								</v8:item>
+							</ToolTip>
 							<MarkNegatives>false</MarkNegatives>
 							<Mask/>
 							<MultiLine>false</MultiLine>
@@ -545,6 +565,10 @@
 				</ChildObjects>
 			</TabularSection>
 			<Form>Форма</Form>
+			<Form>СообщенияОбОшибках</Form>
+			<Form>ПараметрыПрописиВалюты</Form>
+			<Form>ПодборВалютИзКлассификатора</Form>
+			<Template>ОбщероссийскийКлассификаторВалют</Template>
 		</ChildObjects>
 	</DataProcessor>
 </MetaDataObject>

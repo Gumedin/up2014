@@ -11,10 +11,7 @@
 			</Synonym>
 			<Comment/>
 			<Source>
-				<v8:Type>cfg:CatalogObject.ФизическиеЛица</v8:Type>
-				<v8:Type>cfg:CatalogObject.Организации</v8:Type>
-				<v8:Type>cfg:CatalogObject.Контрагенты</v8:Type>
-				<v8:Type>cfg:CatalogObject.Пользователи</v8:Type>
+				<v8:TypeSet>cfg:DefinedType.ВладелецКонтактнойИнформации</v8:TypeSet>
 			</Source>
 			<Event>Filling</Event>
 			<Handler>CommonModule.УправлениеКонтактнойИнформацией.ОбработкаЗаполненияКонтактнойИнформации</Handler>

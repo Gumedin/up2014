@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5">
 	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
-	<VerticalScroll>useIfNecessary</VerticalScroll>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<Autofill>false</Autofill>
 	</AutoCommandBar>
@@ -20,6 +19,12 @@
 			<AutoInsertNewRow>true</AutoInsertNewRow>
 			<DataPath>СписокПолей</DataPath>
 			<RowPictureDataPath>СписокПолей.Picture</RowPictureDataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список полей</v8:content>
+				</v8:item>
+			</Title>
 			<CommandSet>
 				<ExcludedCommand>Add</ExcludedCommand>
 				<ExcludedCommand>Change</ExcludedCommand>
@@ -34,35 +39,32 @@
 				<ExcludedCommand>SortListAsc</ExcludedCommand>
 				<ExcludedCommand>SortListDesc</ExcludedCommand>
 			</CommandSet>
-			<SearchStringLocation>None</SearchStringLocation>
-			<ViewStatusLocation>None</ViewStatusLocation>
-			<SearchControlLocation>None</SearchControlLocation>
 			<ContextMenu name="СписокПолейКонтекстноеМеню" id="2"/>
 			<AutoCommandBar name="СписокПолейКоманднаяПанель" id="3"/>
 			<ExtendedTooltip name="СписокПолейExtendedTooltip" id="14"/>
-			<SearchStringAddition name="СписокПолейСтрокаПоиска" id="20">
+			<SearchStringAddition name="СписокПолейSearchString" id="20">
 				<AdditionSource>
 					<Item>СписокПолей</Item>
 					<Type>SearchStringRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокПолейСтрокаПоискаКонтекстноеМеню" id="21"/>
-				<ExtendedTooltip name="СписокПолейСтрокаПоискаРасширеннаяПодсказка" id="22"/>
+				<ContextMenu name="СписокПолейSearchStringContextMenu" id="21"/>
+				<ExtendedTooltip name="СписокПолейSearchStringExtendedTooltip" id="22"/>
 			</SearchStringAddition>
-			<ViewStatusAddition name="СписокПолейСостояниеПросмотра" id="23">
+			<ViewStatusAddition name="СписокПолейViewStatus" id="23">
 				<AdditionSource>
 					<Item>СписокПолей</Item>
 					<Type>ViewStatusRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокПолейСостояниеПросмотраКонтекстноеМеню" id="24"/>
-				<ExtendedTooltip name="СписокПолейСостояниеПросмотраРасширеннаяПодсказка" id="25"/>
+				<ContextMenu name="СписокПолейViewStatusContextMenu" id="24"/>
+				<ExtendedTooltip name="СписокПолейViewStatusExtendedTooltip" id="25"/>
 			</ViewStatusAddition>
-			<SearchControlAddition name="СписокПолейУправлениеПоиском" id="26">
+			<SearchControlAddition name="СписокПолейSearchControl" id="26">
 				<AdditionSource>
 					<Item>СписокПолей</Item>
 					<Type>SearchControl</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокПолейУправлениеПоискомКонтекстноеМеню" id="27"/>
-				<ExtendedTooltip name="СписокПолейУправлениеПоискомРасширеннаяПодсказка" id="28"/>
+				<ContextMenu name="СписокПолейSearchControlContextMenu" id="27"/>
+				<ExtendedTooltip name="СписокПолейSearchControlExtendedTooltip" id="28"/>
 			</SearchControlAddition>
 			<ChildItems>
 				<CheckBoxField name="СписокПолейПометка" id="6">
@@ -83,6 +85,12 @@
 		</Table>
 		<CommandBar name="ПанельКнопок" id="11">
 			<EnableContentChange>true</EnableContentChange>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Панель кнопок</v8:content>
+				</v8:item>
+			</Title>
 			<HorizontalLocation>Right</HorizontalLocation>
 			<ExtendedTooltip name="ПанельКнопокExtendedTooltip" id="17"/>
 			<ChildItems>
@@ -113,7 +121,6 @@
 			<Type>
 				<v8:Type>v8:ValueListType</v8:Type>
 			</Type>
-			<Settings xsi:type="v8:TypeDescription"/>
 		</Attribute>
 	</Attributes>
 	<Commands>

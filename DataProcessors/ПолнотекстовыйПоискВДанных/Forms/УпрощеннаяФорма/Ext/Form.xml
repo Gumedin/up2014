@@ -3,7 +3,6 @@
 	<Group>Horizontal</Group>
 	<Customizable>false</Customizable>
 	<CommandBarLocation>None</CommandBarLocation>
-	<VerticalScroll>useIfNecessary</VerticalScroll>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
 	<Events>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
@@ -13,6 +12,9 @@
 			<DataPath>СтрокаПоиска</DataPath>
 			<TitleLocation>None</TitleLocation>
 			<FooterHorizontalAlign>Left</FooterHorizontalAlign>
+			<Width>25</Width>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<MaxWidth>40</MaxWidth>
 			<Wrap>false</Wrap>
 			<AvailableTypes>
 				<v8:Type>xs:string</v8:Type>
@@ -22,12 +24,17 @@
 				</v8:StringQualifiers>
 			</AvailableTypes>
 			<BorderColor>style:BorderColor</BorderColor>
+			<InputHint>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Найти документ или файл</v8:content>
+				</v8:item>
+			</InputHint>
 			<ContextMenu name="СтрокаПоискаКонтекстноеМеню" id="6"/>
 			<ExtendedTooltip name="СтрокаПоискаExtendedTooltip" id="7"/>
 		</InputField>
 		<Button name="Найти" id="4">
 			<Type>UsualButton</Type>
-			<Representation>PictureAndText</Representation>
 			<DefaultButton>true</DefaultButton>
 			<SkipOnInput>false</SkipOnInput>
 			<Height>1</Height>
@@ -72,13 +79,13 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Найти...</v8:content>
+					<v8:content>Найти</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Найти текст</v8:content>
+					<v8:content>Найти документ по наименованию или части фразы</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Picture>

@@ -1,15 +1,28 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5">
-	<Width>100</Width>
 	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
 	<CommandBarLocation>None</CommandBarLocation>
-	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<CommandSet>
+		<ExcludedCommand>SetDeletionMark</ExcludedCommand>
+	</CommandSet>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
 	<Events>
 		<Event name="OnLoadDataFromSettingsAtServer">ПриЗагрузкеДанныхИзНастроекНаСервере</Event>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
+		<UsualGroup name="ГруппаПользовательскихНастроек" id="78">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа пользовательских настроек</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПользовательскихНастроекРасширеннаяПодсказка" id="79"/>
+		</UsualGroup>
 		<UsualGroup name="БыстрыеОтборы" id="22">
 			<Title>
 				<v8:item>
@@ -17,12 +30,6 @@
 					<v8:content>Быстрые отборы</v8:content>
 				</v8:item>
 			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Быстрые отборы</v8:content>
-				</v8:item>
-			</ToolTip>
 			<Group>Horizontal</Group>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
@@ -31,13 +38,17 @@
 				<InputField name="ВидОтбор" id="20">
 					<DataPath>ВидОтбор</DataPath>
 					<HorizontalStretch>false</HorizontalStretch>
-					<ChoiceButton>true</ChoiceButton>
 					<ClearButton>true</ClearButton>
 					<ListChoiceMode>true</ListChoiceMode>
 					<ChooseType>false</ChooseType>
 					<IncompleteChoiceMode>OnActivate</IncompleteChoiceMode>
-					<TextEdit>false</TextEdit>
 					<ChoiceListButton>false</ChoiceListButton>
+					<InputHint>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Все</v8:content>
+						</v8:item>
+					</InputHint>
 					<ContextMenu name="ВидОтборКонтекстноеМеню" id="21"/>
 					<ExtendedTooltip name="ВидОтборExtendedTooltip" id="33"/>
 					<Events>
@@ -48,13 +59,17 @@
 					<DataPath>ПубликацияОтбор</DataPath>
 					<Width>26</Width>
 					<HorizontalStretch>false</HorizontalStretch>
-					<ChoiceButton>true</ChoiceButton>
 					<ClearButton>true</ClearButton>
 					<ListChoiceMode>true</ListChoiceMode>
 					<ChooseType>false</ChooseType>
 					<IncompleteChoiceMode>OnActivate</IncompleteChoiceMode>
-					<TextEdit>false</TextEdit>
 					<ChoiceListButton>false</ChoiceListButton>
+					<InputHint>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Все</v8:content>
+						</v8:item>
+					</InputHint>
 					<ContextMenu name="ПубликацияОтборКонтекстноеМеню" id="18"/>
 					<ExtendedTooltip name="ПубликацияОтборExtendedTooltip" id="34"/>
 					<Events>
@@ -70,12 +85,6 @@
 					<v8:content>Командная панель</v8:content>
 				</v8:item>
 			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Командная панель</v8:content>
-				</v8:item>
-			</ToolTip>
 			<ExtendedTooltip name="КоманднаяПанельExtendedTooltip" id="35"/>
 			<ChildItems>
 				<ButtonGroup name="КнопкиДобавления" id="26">
@@ -85,12 +94,6 @@
 							<v8:content>Кнопки добавления</v8:content>
 						</v8:item>
 					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Кнопки добавления</v8:content>
-						</v8:item>
-					</ToolTip>
 					<ExtendedTooltip name="КнопкиДобавленияExtendedTooltip" id="36"/>
 					<ChildItems>
 						<Button name="Создать" id="27">
@@ -113,6 +116,54 @@
 						</Button>
 					</ChildItems>
 				</ButtonGroup>
+				<ButtonGroup name="ГруппаЗагрузитьВыгрузить" id="99">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Загрузить выгрузить</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаЗагрузитьВыгрузитьРасширеннаяПодсказка" id="100"/>
+					<ChildItems>
+						<Button name="ЗагрузитьИзФайла" id="56">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.ЗагрузитьИзФайла</CommandName>
+							<ExtendedTooltip name="ЗагрузитьИзФайлаРасширеннаяПодсказка" id="57"/>
+						</Button>
+						<Button name="ВыгрузитьВФайл" id="58">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.ВыгрузитьВФайл</CommandName>
+							<ExtendedTooltip name="ВыгрузитьВФайлРасширеннаяПодсказка" id="59"/>
+						</Button>
+					</ChildItems>
+				</ButtonGroup>
+				<ButtonGroup name="ГруппаИзменить" id="103">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Изменить</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаИзменитьРасширеннаяПодсказка" id="104"/>
+					<ChildItems>
+						<Button name="ИзменитьПометкуУдаленияБезПрофилей" id="105">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Item.Список.StandardCommand.SetDeletionMark</CommandName>
+							<ExtendedTooltip name="ИзменитьПометкуУдаленияБезПрофилейРасширеннаяПодсказка" id="106"/>
+						</Button>
+						<Button name="ИзменитьПометкуУдаленияСПрофилями" id="95">
+							<Type>CommandBarButton</Type>
+							<OnlyInAllActions>false</OnlyInAllActions>
+							<CommandName>Form.Command.ИзменитьПометкуУдаленияСПрофилями</CommandName>
+							<ExtendedTooltip name="ИзменитьПометкуУдаленияСПрофилямиРасширеннаяПодсказка" id="96"/>
+						</Button>
+						<Button name="ИзменитьВыделенные" id="62">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.ИзменитьВыделенные</CommandName>
+							<ExtendedTooltip name="ИзменитьВыделенныеРасширеннаяПодсказка" id="63"/>
+						</Button>
+					</ChildItems>
+				</ButtonGroup>
 				<ButtonGroup name="КомандыФормы" id="30">
 					<Title>
 						<v8:item>
@@ -120,31 +171,38 @@
 							<v8:content>Команды формы</v8:content>
 						</v8:item>
 					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Команды формы</v8:content>
-						</v8:item>
-					</ToolTip>
 					<CommandSource>Form</CommandSource>
 					<ExtendedTooltip name="КомандыФормыExtendedTooltip" id="40"/>
 				</ButtonGroup>
-				<Button name="ЗагрузитьИзФайла" id="56">
-					<Type>CommandBarButton</Type>
-					<CommandName>Form.Command.ЗагрузитьИзФайла</CommandName>
-					<ExtendedTooltip name="ЗагрузитьИзФайлаРасширеннаяПодсказка" id="57"/>
-				</Button>
-				<Button name="ВыгрузитьВФайл" id="58">
-					<Type>CommandBarButton</Type>
-					<CommandName>Form.Command.ВыгрузитьВФайл</CommandName>
-					<ExtendedTooltip name="ВыгрузитьВФайлРасширеннаяПодсказка" id="59"/>
-				</Button>
-				<Button name="ИзменитьВыделенные" id="62">
-					<Type>CommandBarButton</Type>
-					<OnlyInAllActions>false</OnlyInAllActions>
-					<CommandName>Form.Command.ИзменитьВыделенные</CommandName>
-					<ExtendedTooltip name="ИзменитьВыделенныеРасширеннаяПодсказка" id="63"/>
-				</Button>
+				<Popup name="ГруппаИзменениеПубликации" id="64">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Публикация</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаИзменениеПубликацииРасширеннаяПодсказка" id="65"/>
+					<ChildItems>
+						<Button name="Используется" id="72">
+							<Type>CommandBarButton</Type>
+							<OnlyInAllActions>true</OnlyInAllActions>
+							<CommandName>Form.Command.ПубликацияИспользуется</CommandName>
+							<ExtendedTooltip name="ИспользуетсяРасширеннаяПодсказка" id="73"/>
+						</Button>
+						<Button name="РежимОтладки" id="76">
+							<Type>CommandBarButton</Type>
+							<OnlyInAllActions>true</OnlyInAllActions>
+							<CommandName>Form.Command.ПубликацияРежимОтладки</CommandName>
+							<ExtendedTooltip name="РежимОтладкиРасширеннаяПодсказка" id="77"/>
+						</Button>
+						<Button name="Отключена" id="74">
+							<Type>CommandBarButton</Type>
+							<OnlyInAllActions>true</OnlyInAllActions>
+							<CommandName>Form.Command.ПубликацияОтключена</CommandName>
+							<ExtendedTooltip name="ОтключенаРасширеннаяПодсказка" id="75"/>
+						</Button>
+					</ChildItems>
+				</Popup>
 				<Button name="Справка" id="31">
 					<Type>CommandBarButton</Type>
 					<CommandName>Form.StandardCommand.Help</CommandName>
@@ -162,9 +220,12 @@
 			<EnableDrag>true</EnableDrag>
 			<DataPath>Список</DataPath>
 			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
-			<SearchStringLocation>None</SearchStringLocation>
-			<ViewStatusLocation>None</ViewStatusLocation>
-			<SearchControlLocation>None</SearchControlLocation>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список</v8:content>
+				</v8:item>
+			</Title>
 			<AutoRefresh>false</AutoRefresh>
 			<AutoRefreshPeriod>60</AutoRefreshPeriod>
 			<Period>
@@ -178,53 +239,148 @@
 			<ShowRoot>false</ShowRoot>
 			<AllowRootChoice>false</AllowRootChoice>
 			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<UserSettingsGroup>ГруппаПользовательскихНастроек</UserSettingsGroup>
 			<ContextMenu name="СписокКонтекстноеМеню" id="2">
+				<Autofill>false</Autofill>
 				<ChildItems>
-					<Button name="ЗагрузитьИзФайлаСписок" id="54">
-						<Type>CommandBarButton</Type>
-						<CommandName>Form.Command.ЗагрузитьИзФайла</CommandName>
-						<ExtendedTooltip name="ЗагрузитьИзФайлаСписокРасширеннаяПодсказка" id="55"/>
-					</Button>
-					<Button name="ВыгрузитьВФайлСписок" id="52">
-						<Type>CommandBarButton</Type>
-						<CommandName>Form.Command.ВыгрузитьВФайл</CommandName>
-						<ExtendedTooltip name="ВыгрузитьВФайлСписокРасширеннаяПодсказка" id="53"/>
-					</Button>
-					<Button name="ИзменитьВыделенныеСписок" id="60">
-						<Type>CommandBarButton</Type>
-						<CommandName>Form.Command.ИзменитьВыделенные</CommandName>
-						<ExtendedTooltip name="ИзменитьВыделенныеСписокРасширеннаяПодсказка" id="61"/>
-					</Button>
+					<ButtonGroup name="КнопкиДобавленияМеню" id="111">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Кнопки добавления</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="КнопкиДобавленияМенюРасширеннаяПодсказка" id="112"/>
+						<ChildItems>
+							<Button name="СоздатьМеню" id="113">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.StandardCommand.Create</CommandName>
+								<ExtendedTooltip name="СоздатьМенюРасширеннаяПодсказка" id="114"/>
+							</Button>
+							<Button name="СоздатьГруппуМеню" id="115">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.StandardCommand.CreateFolder</CommandName>
+								<ExtendedTooltip name="СоздатьГруппуМенюРасширеннаяПодсказка" id="116"/>
+							</Button>
+							<Button name="СкопироватьМеню" id="117">
+								<Type>CommandBarButton</Type>
+								<UserVisible>
+									<xr:Common>false</xr:Common>
+								</UserVisible>
+								<CommandName>Form.StandardCommand.Copy</CommandName>
+								<ExtendedTooltip name="СкопироватьМенюРасширеннаяПодсказка" id="118"/>
+							</Button>
+						</ChildItems>
+					</ButtonGroup>
+					<Popup name="ГруппаИзменениеПубликацииМеню" id="119">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Публикация</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="ГруппаИзменениеПубликацииМенюРасширеннаяПодсказка" id="120"/>
+						<ChildItems>
+							<Button name="ИспользуетсяМеню" id="121">
+								<Type>CommandBarButton</Type>
+								<OnlyInAllActions>true</OnlyInAllActions>
+								<CommandName>Form.Command.ПубликацияИспользуется</CommandName>
+								<ExtendedTooltip name="ИспользуетсяМенюРасширеннаяПодсказка" id="122"/>
+							</Button>
+							<Button name="РежимОтладкиМеню" id="123">
+								<Type>CommandBarButton</Type>
+								<OnlyInAllActions>true</OnlyInAllActions>
+								<CommandName>Form.Command.ПубликацияРежимОтладки</CommandName>
+								<ExtendedTooltip name="РежимОтладкиМенюРасширеннаяПодсказка" id="124"/>
+							</Button>
+							<Button name="ОтключенаМеню" id="125">
+								<Type>CommandBarButton</Type>
+								<OnlyInAllActions>true</OnlyInAllActions>
+								<CommandName>Form.Command.ПубликацияОтключена</CommandName>
+								<ExtendedTooltip name="ОтключенаМенюРасширеннаяПодсказка" id="126"/>
+							</Button>
+						</ChildItems>
+					</Popup>
+					<ButtonGroup name="ГруппаИзменитьМеню" id="107">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Изменить меню</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="ГруппаИзменитьМенюРасширеннаяПодсказка" id="108"/>
+						<ChildItems>
+							<Button name="ИзменитьПометкуУдаленияБезПрофилейМеню" id="109">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.Список.StandardCommand.SetDeletionMark</CommandName>
+								<ExtendedTooltip name="ИзменитьПометкуУдаленияБезПрофилейМенюРасширеннаяПодсказка" id="110"/>
+							</Button>
+							<Button name="ИзменитьПометкуУдаленияСПрофилямиМеню" id="93">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ИзменитьПометкуУдаленияСПрофилями</CommandName>
+								<ExtendedTooltip name="ИзменитьПометкуУдаленияСПрофилямиМенюРасширеннаяПодсказка" id="94"/>
+							</Button>
+							<Button name="ИзменитьВыделенныеМеню" id="60">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ИзменитьВыделенные</CommandName>
+								<ExtendedTooltip name="ИзменитьВыделенныеМенюРасширеннаяПодсказка" id="61"/>
+							</Button>
+						</ChildItems>
+					</ButtonGroup>
+					<ButtonGroup name="ГруппаЗагрузитьВыгрузитьМеню" id="101">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Загрузить выгрузить меню</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="ГруппаЗагрузитьВыгрузитьМенюРасширеннаяПодсказка" id="102"/>
+						<ChildItems>
+							<Button name="ЗагрузитьИзФайлаМеню" id="54">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ЗагрузитьИзФайла</CommandName>
+								<ExtendedTooltip name="ЗагрузитьИзФайлаМенюРасширеннаяПодсказка" id="55"/>
+							</Button>
+							<Button name="ВыгрузитьВФайлМеню" id="52">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ВыгрузитьВФайл</CommandName>
+								<ExtendedTooltip name="ВыгрузитьВФайлМенюРасширеннаяПодсказка" id="53"/>
+							</Button>
+						</ChildItems>
+					</ButtonGroup>
 				</ChildItems>
 			</ContextMenu>
 			<AutoCommandBar name="СписокКоманднаяПанель" id="3">
 				<Autofill>false</Autofill>
 			</AutoCommandBar>
 			<ExtendedTooltip name="СписокExtendedTooltip" id="42"/>
-			<SearchStringAddition name="СписокСтрокаПоиска" id="64">
+			<SearchStringAddition name="СписокСтрокаПоиска" id="80">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>SearchStringRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="65"/>
-				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="66"/>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="81"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="82"/>
 			</SearchStringAddition>
-			<ViewStatusAddition name="СписокСостояниеПросмотра" id="67">
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="83">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>ViewStatusRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="68"/>
-				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="69"/>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="84"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="85"/>
 			</ViewStatusAddition>
-			<SearchControlAddition name="СписокУправлениеПоиском" id="70">
+			<SearchControlAddition name="СписокУправлениеПоиском" id="86">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>SearchControl</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="71"/>
-				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="72"/>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="87"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="88"/>
 			</SearchControlAddition>
+			<Events>
+				<Event name="BeforeDeleteRow">СписокПередУдалением</Event>
+			</Events>
 			<ChildItems>
 				<LabelField name="Наименование" id="4">
 					<DataPath>Список.Description</DataPath>
@@ -234,21 +390,33 @@
 				</LabelField>
 				<LabelField name="Вид" id="13">
 					<DataPath>Список.Вид</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<Width>21</Width>
+					<HorizontalStretch>false</HorizontalStretch>
 					<ContextMenu name="ВидКонтекстноеМеню" id="14"/>
 					<ExtendedTooltip name="ВидExtendedTooltip" id="44"/>
 				</LabelField>
 				<LabelField name="Публикация" id="11">
 					<DataPath>Список.Публикация</DataPath>
+					<Width>12</Width>
+					<HorizontalStretch>false</HorizontalStretch>
 					<ContextMenu name="ПубликацияКонтекстноеМеню" id="12"/>
 					<ExtendedTooltip name="ПубликацияExtendedTooltip" id="45"/>
 				</LabelField>
 				<LabelField name="Версия" id="9">
 					<DataPath>Список.Версия</DataPath>
+					<Width>7</Width>
+					<HorizontalStretch>false</HorizontalStretch>
 					<ContextMenu name="ВерсияКонтекстноеМеню" id="10"/>
 					<ExtendedTooltip name="ВерсияExtendedTooltip" id="46"/>
 				</LabelField>
 				<LabelField name="Ответственный" id="7">
 					<DataPath>Список.Ответственный</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
 					<ContextMenu name="ОтветственныйКонтекстноеМеню" id="8"/>
 					<ExtendedTooltip name="ОтветственныйExtendedTooltip" id="47"/>
 				</LabelField>
@@ -278,10 +446,13 @@
 			</Type>
 			<MainAttribute>true</MainAttribute>
 			<UseAlways>
+				<Field>Список.DeletionMark</Field>
+				<Field>Список.Description</Field>
 				<Field>Список.IsFolder</Field>
 				<Field>Список.Ref</Field>
 				<Field>Список.ИмяОбъекта</Field>
 				<Field>Список.ИмяФайла</Field>
+				<Field>Список.Публикация</Field>
 				<Field>Список.ЭтоОтчет</Field>
 			</UseAlways>
 			<Settings xsi:type="DynamicList">
@@ -369,6 +540,17 @@
 				<Field>ВидОтбор</Field>
 			</Save>
 		</Attribute>
+		<Attribute name="ПрофилиИспользуются" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Профили используются</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
 	</Attributes>
 	<Commands>
 		<Command name="ВыгрузитьВФайл" id="1">
@@ -423,6 +605,88 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ИзменитьВыделенные</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.СтандартныеПодсистемыВЛокальномРежиме</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="ПубликацияРежимОтладки" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Режим отладки</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ПубликацияРежимОтладки</Action>
+		</Command>
+		<Command name="ПубликацияОтключена" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отключена</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ПубликацияОтключена</Action>
+		</Command>
+		<Command name="ПубликацияИспользуется" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Используется</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ПубликацияИспользуется</Action>
+		</Command>
+		<Command name="ИзменитьПометкуУдаленияСПрофилями" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пометить на удаление / Снять пометку</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пометить на удаление / Снять пометку</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.MarkToDelete</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ИзменитьПометкуУдаленияСПрофилями</Action>
 		</Command>
 	</Commands>
+	<CommandInterface>
+		<CommandBar>
+			<Item>
+				<Command>0:4ef362ee-0350-49fe-b40a-3ffa1576aa36</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormCommandBarImportant</CommandGroup>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>0:4769b1a9-c88a-4d5e-9520-ea46da1ac861</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormCommandBarImportant</CommandGroup>
+				<Index>2</Index>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>0:1ea304f6-8e8f-4479-aceb-086cf9709ce7</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormCommandBarImportant</CommandGroup>
+				<Index>1</Index>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+		</CommandBar>
+	</CommandInterface>
 </Form>

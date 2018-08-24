@@ -8,9 +8,7 @@
 	</Title>
 	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
 	<AutoTitle>false</AutoTitle>
-	<VerticalScroll>useIfNecessary</VerticalScroll>
 	<CommandSet>
-		<ExcludedCommand>Create</ExcludedCommand>
 		<ExcludedCommand>CreateFolder</ExcludedCommand>
 		<ExcludedCommand>HierarchicalList</ExcludedCommand>
 		<ExcludedCommand>LevelDown</ExcludedCommand>
@@ -21,51 +19,34 @@
 	</CommandSet>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<Autofill>false</Autofill>
-		<ChildItems>
-			<Button name="Создать" id="8">
-				<Type>CommandBarButton</Type>
-				<Representation>PictureAndText</Representation>
-				<CommandName>Form.Command.СоздатьЗаметку</CommandName>
-				<Picture>
-					<xr:Ref>StdPicture.CreateListItem</xr:Ref>
-					<xr:LoadTransparent>true</xr:LoadTransparent>
-				</Picture>
-				<Title>
-					<v8:item>
-						<v8:lang>ru</v8:lang>
-						<v8:content>Создать</v8:content>
-					</v8:item>
-				</Title>
-				<ExtendedTooltip name="СоздатьExtendedTooltip" id="31"/>
-			</Button>
-			<ButtonGroup name="СтандартныеКоманды" id="22">
-				<Title>
-					<v8:item>
-						<v8:lang>ru</v8:lang>
-						<v8:content>Стандартные команды</v8:content>
-					</v8:item>
-				</Title>
-				<ToolTip>
-					<v8:item>
-						<v8:lang>ru</v8:lang>
-						<v8:content>Стандартные команды</v8:content>
-					</v8:item>
-				</ToolTip>
-				<CommandSource>Form</CommandSource>
-				<ExtendedTooltip name="СтандартныеКомандыExtendedTooltip" id="32"/>
-			</ButtonGroup>
-			<Button name="ФормаСправка" id="27">
-				<Type>CommandBarButton</Type>
-				<CommandName>Form.StandardCommand.Help</CommandName>
-				<ExtendedTooltip name="ФормаСправкаExtendedTooltip" id="33"/>
-			</Button>
-		</ChildItems>
 	</AutoCommandBar>
 	<Events>
 		<Event name="OnLoadDataFromSettingsAtServer">ПриЗагрузкеДанныхИзНастроекНаСервере</Event>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
+		<UsualGroup name="ГруппаПользовательскихНастроек" id="43">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа пользовательских настроек</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПользовательскихНастроекРасширеннаяПодсказка" id="44"/>
+		</UsualGroup>
+		<CommandBar name="КоманднаяПанель" id="41">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Командная панель</v8:content>
+				</v8:item>
+			</Title>
+			<CommandSource>Form</CommandSource>
+			<ExtendedTooltip name="КоманднаяПанельРасширеннаяПодсказка" id="42"/>
+		</CommandBar>
 		<Table name="Список" id="1">
 			<Representation>List</Representation>
 			<CommandBarLocation>None</CommandBarLocation>
@@ -79,6 +60,12 @@
 				<xr:Ref>CommonPicture.КоллекцияЗаметки</xr:Ref>
 				<xr:LoadTransparent>false</xr:LoadTransparent>
 			</RowsPicture>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список</v8:content>
+				</v8:item>
+			</Title>
 			<CommandSet>
 				<ExcludedCommand>CreateFolder</ExcludedCommand>
 				<ExcludedCommand>HierarchicalList</ExcludedCommand>
@@ -88,9 +75,6 @@
 				<ExcludedCommand>MoveItem</ExcludedCommand>
 				<ExcludedCommand>Tree</ExcludedCommand>
 			</CommandSet>
-			<SearchStringLocation>None</SearchStringLocation>
-			<ViewStatusLocation>None</ViewStatusLocation>
-			<SearchControlLocation>None</SearchControlLocation>
 			<AutoRefresh>false</AutoRefresh>
 			<AutoRefreshPeriod>60</AutoRefreshPeriod>
 			<Period>
@@ -104,58 +88,57 @@
 			<ShowRoot>true</ShowRoot>
 			<AllowRootChoice>false</AllowRootChoice>
 			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<UserSettingsGroup>ГруппаПользовательскихНастроек</UserSettingsGroup>
 			<ContextMenu name="СписокКонтекстноеМеню" id="2"/>
 			<AutoCommandBar name="СписокКоманднаяПанель" id="3"/>
 			<ExtendedTooltip name="СписокExtendedTooltip" id="34"/>
-			<SearchStringAddition name="СписокСтрокаПоиска" id="41">
+			<SearchStringAddition name="СписокSearchString" id="48">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>SearchStringRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="42"/>
-				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="43"/>
+				<ContextMenu name="СписокSearchStringContextMenu" id="49"/>
+				<ExtendedTooltip name="СписокSearchStringExtendedTooltip" id="50"/>
 			</SearchStringAddition>
-			<ViewStatusAddition name="СписокСостояниеПросмотра" id="44">
+			<ViewStatusAddition name="СписокViewStatus" id="51">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>ViewStatusRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="45"/>
-				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="46"/>
+				<ContextMenu name="СписокViewStatusContextMenu" id="52"/>
+				<ExtendedTooltip name="СписокViewStatusExtendedTooltip" id="53"/>
 			</ViewStatusAddition>
-			<SearchControlAddition name="СписокУправлениеПоиском" id="47">
+			<SearchControlAddition name="СписокSearchControl" id="54">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>SearchControl</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="48"/>
-				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="49"/>
+				<ContextMenu name="СписокSearchControlContextMenu" id="55"/>
+				<ExtendedTooltip name="СписокSearchControlExtendedTooltip" id="56"/>
 			</SearchControlAddition>
+			<Events>
+				<Event name="BeforeAddRow">СписокПередНачаломДобавления</Event>
+			</Events>
 			<ChildItems>
-				<LabelField name="Ссылка" id="20">
-					<DataPath>Список.Ref</DataPath>
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Тема</v8:content>
-						</v8:item>
-					</Title>
-					<ContextMenu name="СсылкаКонтекстноеМеню" id="21"/>
-					<ExtendedTooltip name="СсылкаExtendedTooltip" id="35"/>
-				</LabelField>
-				<LabelField name="СрокИсполнения" id="6">
-					<DataPath>~Список.СрокИсполнения</DataPath>
-					<ContextMenu name="СрокИсполненияКонтекстноеМеню" id="7"/>
-					<ExtendedTooltip name="СрокИсполненияExtendedTooltip" id="36"/>
+				<LabelField name="Наименование" id="45">
+					<DataPath>Список.Description</DataPath>
+					<AutoCellHeight>true</AutoCellHeight>
+					<Width>30</Width>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="46"/>
+					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="47"/>
 				</LabelField>
 				<LabelField name="Автор" id="25">
 					<DataPath>Список.Автор</DataPath>
-					<UserVisible>
-						<xr:Common>false</xr:Common>
-						<xr:Value name="Role.ПолныеПрава">true</xr:Value>
-					</UserVisible>
 					<ContextMenu name="АвторКонтекстноеМеню" id="26"/>
 					<ExtendedTooltip name="АвторExtendedTooltip" id="37"/>
+				</LabelField>
+				<LabelField name="Ссылка" id="57">
+					<DataPath>Список.Ref</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<ContextMenu name="СсылкаКонтекстноеМеню" id="58"/>
+					<ExtendedTooltip name="СсылкаРасширеннаяПодсказка" id="59"/>
 				</LabelField>
 			</ChildItems>
 		</Table>
@@ -166,12 +149,6 @@
 					<v8:content>Фильтры</v8:content>
 				</v8:item>
 			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Фильтры</v8:content>
-				</v8:item>
-			</ToolTip>
 			<Group>Horizontal</Group>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
@@ -179,10 +156,6 @@
 			<ChildItems>
 				<CheckBoxField name="ПоказыватьЗаметкиДругихПользователей" id="23">
 					<DataPath>ПоказыватьЗаметкиДругихПользователей</DataPath>
-					<UserVisible>
-						<xr:Common>false</xr:Common>
-						<xr:Value name="Role.ПолныеПрава">true</xr:Value>
-					</UserVisible>
 					<TitleLocation>Right</TitleLocation>
 					<CheckBoxType>Auto</CheckBoxType>
 					<ContextMenu name="ПоказыватьЗаметкиДругихПользователейКонтекстноеМеню" id="24"/>
@@ -210,6 +183,9 @@
 				<v8:Type>cfg:DynamicList</v8:Type>
 			</Type>
 			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>Список.Ref</Field>
+			</UseAlways>
 			<Settings xsi:type="DynamicList">
 				<ManualQuery>true</ManualQuery>
 				<DynamicDataRead>true</DynamicDataRead>
@@ -255,30 +231,6 @@
 						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
 					</dcsset:order>
 					<dcsset:conditionalAppearance>
-						<dcsset:item>
-							<dcsset:selection/>
-							<dcsset:filter>
-								<dcsset:item xsi:type="dcsset:FilterItemGroup">
-									<dcsset:groupType>AndGroup</dcsset:groupType>
-									<dcsset:item xsi:type="dcsset:FilterItemComparison">
-										<dcsset:left xsi:type="dcscor:Field">ДляРабочегоСтола</dcsset:left>
-										<dcsset:comparisonType>Equal</dcsset:comparisonType>
-										<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
-									</dcsset:item>
-									<dcsset:item xsi:type="dcsset:FilterItemComparison">
-										<dcsset:left xsi:type="dcscor:Field">ПометкаУдаления</dcsset:left>
-										<dcsset:comparisonType>Equal</dcsset:comparisonType>
-										<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
-									</dcsset:item>
-								</dcsset:item>
-							</dcsset:filter>
-							<dcsset:appearance>
-								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-									<dcscor:parameter>Шрифт</dcscor:parameter>
-									<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
-								</dcscor:item>
-							</dcsset:appearance>
-						</dcsset:item>
 						<dcsset:viewMode>Normal</dcsset:viewMode>
 						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
 					</dcsset:conditionalAppearance>
@@ -325,21 +277,4 @@
 			</Save>
 		</Attribute>
 	</Attributes>
-	<Commands>
-		<Command name="СоздатьЗаметку" id="1">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Создать заметку</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Создать заметку</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Action>СоздатьЗаметку</Action>
-		</Command>
-	</Commands>
 </Form>

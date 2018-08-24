@@ -10,7 +10,7 @@
 				</v8:item>
 			</Synonym>
 			<Comment/>
-			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<IncludeHelpInContents>false</IncludeHelpInContents>
 			<IncludeInCommandInterface>false</IncludeInCommandInterface>
 			<Explanation/>
 			<Picture/>
@@ -46,7 +46,6 @@
 				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ПраваРолей</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.НастройкиПравОбъектов</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ЗависимостиПравДоступа</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Constant.ПараметрыОграниченияДоступа</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">DefinedType.ЗначениеДоступа</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Enum.ДополнительныеЗначенияДоступа</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">DefinedType.ВладелецНастроекПрав</xr:Item>
@@ -63,6 +62,14 @@
 				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ЗначенияГруппДоступа</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ГруппыЗначенийДоступа</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.НаборыЗначенийДоступа</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DefinedType.ВладелецНаборовЗначенийДоступаОбъект</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DefinedType.ВладелецНастроекПравОбъект</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DefinedType.ВладелецСОграничениемПоНаборамЗначенийДоступаОбъект</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DefinedType.ВладелецВнешнихЗначенийВНаборахЗначенийДоступаОбъект</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DefinedType.ЗначениеДоступаСГруппамиЗначенийДоступаОбъект</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.ЗаполнитьНаборыЗначенийДоступаТабличныхЧастей</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.ОбновитьГруппыВладельцевНастроекПрав</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">SessionParameter.ОграничениеДоступаНаУровнеЗаписейВключено</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects/>

@@ -9,25 +9,22 @@
 	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
 	<AutoTitle>false</AutoTitle>
 	<CommandBarLocation>None</CommandBarLocation>
-	<VerticalScroll>useIfNecessary</VerticalScroll>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
 	<Events>
 		<Event name="OnOpen">ПриОткрытии</Event>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
-		<UsualGroup name="Группа3" id="6">
+		<UsualGroup name="НомераСообщений" id="6">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Номера сообщений</v8:content>
 				</v8:item>
 			</Title>
-			<HorizontalStretch>true</HorizontalStretch>
-			<VerticalStretch>true</VerticalStretch>
 			<Group>Horizontal</Group>
-			<Representation>StrongSeparation</Representation>
-			<ExtendedTooltip name="Группа3ExtendedTooltip" id="15"/>
+			<Representation>NormalSeparation</Representation>
+			<ExtendedTooltip name="НомераСообщенийРасширеннаяПодсказка" id="15"/>
 			<ChildItems>
 				<InputField name="НомерОтправленного" id="7">
 					<DataPath>НомерОтправленного</DataPath>
@@ -48,14 +45,31 @@
 							<v8:content>Принятого</v8:content>
 						</v8:item>
 					</Title>
+					<DropListButton>false</DropListButton>
+					<ChoiceButton>false</ChoiceButton>
+					<ClearButton>false</ClearButton>
+					<SpinButton>false</SpinButton>
+					<OpenButton>false</OpenButton>
+					<CreateButton>false</CreateButton>
+					<ChoiceButtonPicture>
+						<xr:Abs>ChoiceButtonPicture.bmp</xr:Abs>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+						<xr:TransparentPixel x="81" y="106"/>
+					</ChoiceButtonPicture>
 					<ContextMenu name="НомерПринятогоКонтекстноеМеню" id="10"/>
 					<ExtendedTooltip name="НомерПринятогоExtendedTooltip" id="17"/>
 				</InputField>
 			</ChildItems>
 		</UsualGroup>
-		<CommandBar name="Группа4" id="11">
+		<CommandBar name="КомандыГоризонтально" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команды горизонтально</v8:content>
+				</v8:item>
+			</Title>
 			<HorizontalLocation>Right</HorizontalLocation>
-			<ExtendedTooltip name="Группа4ExtendedTooltip" id="18"/>
+			<ExtendedTooltip name="КомандыГоризонтальноРасширеннаяПодсказка" id="18"/>
 			<ChildItems>
 				<Button name="ЗаписатьИзмененияУзла" id="14">
 					<Type>CommandBarButton</Type>
@@ -153,6 +167,15 @@
 					<v8:AllowedLength>Variable</v8:AllowedLength>
 				</v8:StringQualifiers>
 			</Type>
+		</Attribute>
+		<Attribute name="ПредупреждениеПриОткрытии" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Предупреждение при открытии</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
 		</Attribute>
 	</Attributes>
 	<Commands>

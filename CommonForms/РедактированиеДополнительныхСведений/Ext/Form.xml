@@ -6,11 +6,9 @@
 			<v8:content>Дополнительные сведения</v8:content>
 		</v8:item>
 	</Title>
-	<Width>60</Width>
 	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
 	<AutoTitle>false</AutoTitle>
 	<CommandBarLocation>Top</CommandBarLocation>
-	<VerticalScroll>useIfNecessary</VerticalScroll>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<ChildItems>
 			<Button name="ФормаЗаписатьИЗакрыть" id="21">
@@ -51,9 +49,12 @@
 			<SelectionMode>SingleRow</SelectionMode>
 			<AutoInsertNewRow>true</AutoInsertNewRow>
 			<DataPath>ТаблицаЗначенийСвойств</DataPath>
-			<SearchStringLocation>None</SearchStringLocation>
-			<ViewStatusLocation>None</ViewStatusLocation>
-			<SearchControlLocation>None</SearchControlLocation>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица значений свойств</v8:content>
+				</v8:item>
+			</Title>
 			<RowFilter xsi:nil="true"/>
 			<ContextMenu name="ТаблицаЗначенийСвойствКонтекстноеМеню" id="4">
 				<Autofill>false</Autofill>
@@ -87,12 +88,19 @@
 			<Events>
 				<Event name="BeforeAddRow">ТаблицаЗначенийСвойствПередНачаломДобавления</Event>
 				<Event name="BeforeDeleteRow">ТаблицаЗначенийСвойствПередУдалением</Event>
+				<Event name="BeforeRowChange">ТаблицаЗначенийСвойствПередНачаломИзменения</Event>
 				<Event name="OnStartEdit">ТаблицаЗначенийСвойствПриНачалеРедактирования</Event>
 				<Event name="OnChange">ТаблицаЗначенийСвойствПриИзменении</Event>
 			</Events>
 			<ChildItems>
 				<ColumnGroup name="ТаблицаЗначенийСвойствКартинкаИСвойство" id="15">
 					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Таблица значений свойств картинка и свойство</v8:content>
+						</v8:item>
+					</Title>
 					<HorizontalStretch>false</HorizontalStretch>
 					<Group>InCell</Group>
 					<ExtendedTooltip name="ТаблицаЗначенийСвойствКартинкаИСвойствоExtendedTooltip" id="26"/>
@@ -138,13 +146,6 @@
 							<v8:content>БЛ=Нет; БИ=Да</v8:content>
 						</v8:item>
 					</Format>
-					<ChoiceParameterLinks>
-						<xr:Link>
-							<xr:Name>Отбор.Владелец</xr:Name>
-							<xr:DataPath xsi:type="xs:string">Items.ТаблицаЗначенийСвойств.CurrentData.Свойство</xr:DataPath>
-							<xr:ValueChange>Clear</xr:ValueChange>
-						</xr:Link>
-					</ChoiceParameterLinks>
 					<ContextMenu name="ТаблицаЗначенийСвойствЗначениеКонтекстноеМеню" id="11"/>
 					<ExtendedTooltip name="ТаблицаЗначенийСвойствЗначениеExtendedTooltip" id="29"/>
 				</InputField>
@@ -258,6 +259,28 @@
 						<v8:Type>cfg:CatalogRef.НаборыДополнительныхРеквизитовИСведений</v8:Type>
 					</Type>
 				</Column>
+				<Column name="ВладелецДополнительныхЗначений" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Владелец дополнительных значений</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:ChartOfCharacteristicTypesRef.ДополнительныеРеквизитыИСведения</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ДоступноДляИзменения" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Доступно для изменения</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
 			</Columns>
 		</Attribute>
 		<Attribute name="ДоступныеНаборыСвойств" id="2">
@@ -270,7 +293,6 @@
 			<Type>
 				<v8:Type>v8:ValueListType</v8:Type>
 			</Type>
-			<Settings xsi:type="v8:TypeDescription"/>
 		</Attribute>
 		<Attribute name="СсылкаНаОбъект" id="5">
 			<Title>
@@ -309,11 +331,6 @@
 					<v8:content>Изменить состав дополнительных сведений</v8:content>
 				</v8:item>
 			</ToolTip>
-			<Use>
-				<xr:Common>false</xr:Common>
-				<xr:Value name="Role.ИзменениеДополнительныхСведений">true</xr:Value>
-				<xr:Value name="Role.ПолныеПрава">true</xr:Value>
-			</Use>
 			<Picture>
 				<xr:Ref>StdPicture.ListSettings</xr:Ref>
 				<xr:LoadTransparent>true</xr:LoadTransparent>
@@ -327,11 +344,6 @@
 					<v8:content>Записать</v8:content>
 				</v8:item>
 			</Title>
-			<Use>
-				<xr:Common>false</xr:Common>
-				<xr:Value name="Role.ИзменениеДополнительныхСведений">true</xr:Value>
-				<xr:Value name="Role.ПолныеПрава">true</xr:Value>
-			</Use>
 			<Picture>
 				<xr:Ref>StdPicture.Write</xr:Ref>
 				<xr:LoadTransparent>true</xr:LoadTransparent>
@@ -351,11 +363,6 @@
 					<v8:content>Записать и закрыть</v8:content>
 				</v8:item>
 			</ToolTip>
-			<Use>
-				<xr:Common>false</xr:Common>
-				<xr:Value name="Role.ИзменениеДополнительныхСведений">true</xr:Value>
-				<xr:Value name="Role.ПолныеПрава">true</xr:Value>
-			</Use>
 			<Action>ЗаписатьИЗакрыть</Action>
 		</Command>
 	</Commands>
@@ -365,11 +372,6 @@
 				<v8:TypeSet>cfg:AnyRef</v8:TypeSet>
 			</Type>
 			<KeyParameter>true</KeyParameter>
-		</Parameter>
-		<Parameter name="ПанельНавигацииФормы">
-			<Type>
-				<v8:Type>xs:boolean</v8:Type>
-			</Type>
 		</Parameter>
 	</Parameters>
 </Form>

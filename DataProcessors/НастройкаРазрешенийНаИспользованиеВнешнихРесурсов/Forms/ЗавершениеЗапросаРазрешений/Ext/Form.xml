@@ -17,9 +17,6 @@
 	</Events>
 	<ChildItems>
 		<PictureDecoration name="ДекорацияКартинка" id="1">
-			<Width>8</Width>
-			<Height>3</Height>
-			<VerticalStretch>true</VerticalStretch>
 			<Title formatted="false">
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -28,19 +25,18 @@
 			</Title>
 			<Picture>
 				<xr:Ref>CommonPicture.ДлительнаяОперация48</xr:Ref>
-				<xr:LoadTransparent>false</xr:LoadTransparent>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<ContextMenu name="ДекорацияКартинкаКонтекстноеМеню" id="2"/>
 			<ExtendedTooltip name="ДекорацияКартинкаРасширеннаяПодсказка" id="3"/>
 		</PictureDecoration>
 		<LabelDecoration name="ДекорацияЗаголовок" id="4">
-			<HorizontalStretch>true</HorizontalStretch>
-			<VerticalStretch>true</VerticalStretch>
+			<AutoMaxWidth>false</AutoMaxWidth>
 			<Title formatted="false">
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Выполняется ожидание применения изменений в
-настройках профилей безопасности в кластере серверов.
+					<v8:content>Применяются изменения в настройках профилей безопасности
+в кластере серверов.
 
 Это может занять длительное время (в пределах минуты).
 Пожалуйста, подождите...</v8:content>

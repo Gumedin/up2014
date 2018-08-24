@@ -351,7 +351,7 @@
 			</Use>
 			<Picture>
 				<xr:Ref>CommonPicture.Монеты</xr:Ref>
-				<xr:LoadTransparent>false</xr:LoadTransparent>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>УстановитьРасходыДляКонтрагентовПосещений</Action>
 			<Representation>TextPicture</Representation>
@@ -376,7 +376,7 @@
 			</Use>
 			<Picture>
 				<xr:Ref>CommonPicture.Монеты</xr:Ref>
-				<xr:LoadTransparent>false</xr:LoadTransparent>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>УстановитьРасходыДляПосещенийКонтрагентов</Action>
 			<Representation>TextPicture</Representation>
@@ -389,6 +389,9 @@
 				<Type>Auto</Type>
 				<CommandGroup>FormNavigationPanelGoTo</CommandGroup>
 				<Index>2</Index>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
 			</Item>
 			<Item>
 				<Command>InformationRegister.КонтрагентыПосещений.StandardCommand.OpenByValue.Контрагент</Command>
@@ -405,6 +408,9 @@
 				<Type>Auto</Type>
 				<CommandGroup>FormNavigationPanelGoTo</CommandGroup>
 				<Index>3</Index>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
 			</Item>
 		</NavigationPanel>
 		<CommandBar>

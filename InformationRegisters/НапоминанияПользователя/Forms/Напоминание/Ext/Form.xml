@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5">
 	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
-	<VerticalScroll>useIfNecessary</VerticalScroll>
 	<CommandSet>
 		<ExcludedCommand>Copy</ExcludedCommand>
 		<ExcludedCommand>CustomizeForm</ExcludedCommand>
@@ -11,11 +10,12 @@
 	</CommandSet>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<ChildItems>
-			<Button name="Прекратить" id="109">
+			<Button name="Удалить" id="109">
 				<Type>CommandBarButton</Type>
 				<Representation>Text</Representation>
-				<CommandName>Form.Command.Прекратить</CommandName>
-				<ExtendedTooltip name="ПрекратитьExtendedTooltip" id="110"/>
+				<OnlyInAllActions>true</OnlyInAllActions>
+				<CommandName>Form.Command.Удалить</CommandName>
+				<ExtendedTooltip name="УдалитьРасширеннаяПодсказка" id="110"/>
 			</Button>
 		</ChildItems>
 	</AutoCommandBar>
@@ -28,6 +28,45 @@
 		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
 	</Events>
 	<ChildItems>
+		<UsualGroup name="Предмет" id="134">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Предмет</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ПредметРасширеннаяПодсказка" id="135"/>
+			<ChildItems>
+				<LabelDecoration name="НадписьПредмет" id="131">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Предмет:</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="НадписьПредметКонтекстноеМеню" id="132"/>
+					<ExtendedTooltip name="НадписьПредметРасширеннаяПодсказка" id="133"/>
+				</LabelDecoration>
+				<LabelDecoration name="ПредметНапоминания" id="128">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Предмет напоминания</v8:content>
+						</v8:item>
+					</Title>
+					<Hyperlink>true</Hyperlink>
+					<ContextMenu name="ПредметНапоминанияКонтекстноеМеню" id="129"/>
+					<ExtendedTooltip name="ПредметНапоминанияРасширеннаяПодсказка" id="130"/>
+					<Events>
+						<Event name="Click">ПредметНапоминанияНажатие</Event>
+					</Events>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
 		<InputField name="Текст" id="15">
 			<DataPath>Объект.Описание</DataPath>
 			<DefaultItem>true</DefaultItem>
@@ -39,6 +78,7 @@
 			</Title>
 			<TitleLocation>None</TitleLocation>
 			<Width>30</Width>
+			<AutoMaxWidth>false</AutoMaxWidth>
 			<EditTextUpdate>OnValueChange</EditTextUpdate>
 			<ContextMenu name="ТекстКонтекстноеМеню" id="16"/>
 			<ExtendedTooltip name="ТекстExtendedTooltip" id="111"/>
@@ -50,14 +90,8 @@
 					<v8:content>Напомнить</v8:content>
 				</v8:item>
 			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Настройка времени</v8:content>
-				</v8:item>
-			</ToolTip>
-			<VerticalStretch>false</VerticalStretch>
 			<Group>Horizontal</Group>
+			<VerticalAlign>Center</VerticalAlign>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="НастройкаВремениExtendedTooltip" id="112"/>
@@ -69,44 +103,36 @@
 							<v8:content>Панель переключателей</v8:content>
 						</v8:item>
 					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Панель переключателей</v8:content>
-						</v8:item>
-					</ToolTip>
 					<Group>Horizontal</Group>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="ПанельПереключателейExtendedTooltip" id="113"/>
-					<ChildItems>
-						<InputField name="СпособУстановкиВремениНапоминания" id="39">
-							<DataPath>СпособУстановкиВремениНапоминания</DataPath>
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Напомнить</v8:content>
-								</v8:item>
-							</Title>
-							<TitleLocation>Left</TitleLocation>
-							<ToolTip>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Время, через которое нужно напомнить, или способ установки времени напоминания</v8:content>
-								</v8:item>
-							</ToolTip>
-							<Width>20</Width>
-							<DropListButton>true</DropListButton>
-							<ChooseType>false</ChooseType>
-							<EditTextUpdate>OnValueChange</EditTextUpdate>
-							<ContextMenu name="СпособУстановкиВремениНапоминанияКонтекстноеМеню" id="40"/>
-							<ExtendedTooltip name="СпособУстановкиВремениНапоминанияExtendedTooltip" id="114"/>
-							<Events>
-								<Event name="OnChange">СпособУстановкиВремениНапоминанияПриИзменении</Event>
-							</Events>
-						</InputField>
-					</ChildItems>
 				</UsualGroup>
+				<InputField name="СпособУстановкиВремениНапоминания" id="39">
+					<DataPath>СпособУстановкиВремениНапоминания</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Напомнить</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>Left</TitleLocation>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Время, через которое нужно напомнить, или способ установки времени напоминания</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Width>20</Width>
+					<DropListButton>true</DropListButton>
+					<ChooseType>false</ChooseType>
+					<EditTextUpdate>OnValueChange</EditTextUpdate>
+					<ContextMenu name="СпособУстановкиВремениНапоминанияКонтекстноеМеню" id="40"/>
+					<ExtendedTooltip name="СпособУстановкиВремениНапоминанияExtendedTooltip" id="114"/>
+					<Events>
+						<Event name="OnChange">СпособУстановкиВремениНапоминанияПриИзменении</Event>
+					</Events>
+				</InputField>
 				<Pages name="ПанельДетальныхНастроек" id="72">
 					<Title>
 						<v8:item>
@@ -114,12 +140,6 @@
 							<v8:content>Панель детальных настроек</v8:content>
 						</v8:item>
 					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Панель детальных настроек</v8:content>
-						</v8:item>
-					</ToolTip>
 					<PagesRepresentation>None</PagesRepresentation>
 					<ExtendedTooltip name="ПанельДетальныхНастроекExtendedTooltip" id="115"/>
 					<ChildItems>
@@ -130,26 +150,20 @@
 									<v8:content>Без детализации</v8:content>
 								</v8:item>
 							</Title>
-							<ToolTip>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Без детализации</v8:content>
-								</v8:item>
-							</ToolTip>
+							<VerticalStretch>true</VerticalStretch>
 							<Group>Horizontal</Group>
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="БезДетализацииExtendedTooltip" id="116"/>
 							<ChildItems>
 								<LabelDecoration name="РасчетноеВремяНапоминания" id="97">
 									<HorizontalStretch>true</HorizontalStretch>
-									<VerticalStretch>true</VerticalStretch>
+									<VerticalStretch>false</VerticalStretch>
 									<ToolTip>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
 											<v8:content>Расчетное время</v8:content>
 										</v8:item>
 									</ToolTip>
-									<VerticalAlign>Bottom</VerticalAlign>
 									<ContextMenu name="РасчетноеВремяНапоминанияКонтекстноеМеню" id="98"/>
 									<ExtendedTooltip name="РасчетноеВремяНапоминанияExtendedTooltip" id="117"/>
 								</LabelDecoration>
@@ -162,12 +176,6 @@
 									<v8:content>Дата время</v8:content>
 								</v8:item>
 							</Title>
-							<ToolTip>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Дата время</v8:content>
-								</v8:item>
-							</ToolTip>
 							<Group>Horizontal</Group>
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="ДатаВремяExtendedTooltip" id="118"/>
@@ -221,6 +229,7 @@
 									</EditFormat>
 									<ChooseType>false</ChooseType>
 									<EditTextUpdate>OnValueChange</EditTextUpdate>
+									<ChoiceListHeight>10</ChoiceListHeight>
 									<DropListWidth>5</DropListWidth>
 									<ContextMenu name="ВремяКонтекстноеМеню" id="20"/>
 									<ExtendedTooltip name="ВремяExtendedTooltip" id="120"/>
@@ -237,18 +246,12 @@
 									<v8:content>Настройка источника</v8:content>
 								</v8:item>
 							</Title>
-							<ToolTip>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Настройка источника</v8:content>
-								</v8:item>
-							</ToolTip>
 							<Group>Horizontal</Group>
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="НастройкаИсточникаExtendedTooltip" id="121"/>
 							<ChildItems>
 								<LabelDecoration name="НадписьЗа" id="57">
-									<HorizontalStretch>false</HorizontalStretch>
+									<AutoMaxWidth>false</AutoMaxWidth>
 									<Title formatted="false">
 										<v8:item>
 											<v8:lang>ru</v8:lang>
@@ -452,7 +455,7 @@
 									</Events>
 								</InputField>
 								<LabelDecoration name="НадписьДо" id="33">
-									<HorizontalStretch>false</HorizontalStretch>
+									<AutoMaxWidth>false</AutoMaxWidth>
 									<Title formatted="false">
 										<v8:item>
 											<v8:lang>ru</v8:lang>
@@ -471,7 +474,7 @@
 											<v8:content>Имя реквизита предмета, относительно которого устанавливается время напоминания</v8:content>
 										</v8:item>
 									</ToolTip>
-									<Width>13</Width>
+									<Width>20</Width>
 									<HorizontalStretch>false</HorizontalStretch>
 									<ListChoiceMode>true</ListChoiceMode>
 									<ChooseType>false</ChooseType>
@@ -488,12 +491,6 @@
 									<v8:content>Настройка периодичности</v8:content>
 								</v8:item>
 							</Title>
-							<ToolTip>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Настройка периодичности</v8:content>
-								</v8:item>
-							</ToolTip>
 							<Group>Horizontal</Group>
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="НастройкаПериодичностиExtendedTooltip" id="126"/>
@@ -660,30 +657,36 @@
 				</v8:item>
 			</Title>
 			<Type/>
-			<Edit>
-				<xr:Common>false</xr:Common>
-			</Edit>
 		</Attribute>
-	</Attributes>
-	<Commands>
-		<Command name="Прекратить" id="1">
+		<Attribute name="НастройкиПодсистемы" id="8">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Прекратить</v8:content>
+					<v8:content>Настройки подсистемы</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Удалить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Прекратить напоминание</v8:content>
+					<v8:content>Удалить напоминание</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Picture>
-				<xr:Ref>StdPicture.Stop</xr:Ref>
+				<xr:Ref>StdPicture.Delete</xr:Ref>
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
-			<Action>Прекратить</Action>
+			<Action>Удалить</Action>
 			<Representation>Picture</Representation>
 		</Command>
 	</Commands>

@@ -4,7 +4,6 @@
 	<AutoTitle>false</AutoTitle>
 	<Customizable>false</Customizable>
 	<CommandBarLocation>Bottom</CommandBarLocation>
-	<VerticalScroll>useIfNecessary</VerticalScroll>
 	<CommandSet>
 		<ExcludedCommand>Help</ExcludedCommand>
 	</CommandSet>
@@ -50,21 +49,12 @@
 					<v8:content>Сообщение для пользователя</v8:content>
 				</v8:item>
 			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Сообщение для пользователя</v8:content>
-				</v8:item>
-			</ToolTip>
 			<Group>Horizontal</Group>
-			<Representation>StrongSeparation</Representation>
+			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="СообщениеДляПользователяExtendedTooltip" id="42"/>
 			<ChildItems>
 				<PictureDecoration name="ЗначокСообщения" id="21">
-					<Width>4</Width>
-					<Height>4</Height>
-					<HorizontalStretch>false</HorizontalStretch>
 					<SkipOnInput>false</SkipOnInput>
 					<Title formatted="false">
 						<v8:item>
@@ -83,6 +73,7 @@
 					<DataPath>Сообщение</DataPath>
 					<TitleLocation>None</TitleLocation>
 					<VerticalAlign>Center</VerticalAlign>
+					<AutoMaxWidth>false</AutoMaxWidth>
 					<HorizontalStretch>true</HorizontalStretch>
 					<VerticalStretch>true</VerticalStretch>
 					<ContextMenu name="СообщениеКонтекстноеМеню" id="15"/>
@@ -97,18 +88,13 @@
 					<v8:content>Описание файла в рабочем каталоге</v8:content>
 				</v8:item>
 			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Описание файла в рабочем каталоге</v8:content>
-				</v8:item>
-			</ToolTip>
 			<Group>Vertical</Group>
 			<Representation>NormalSeparation</Representation>
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="ОписаниеФайлаВРабочемКаталогеExtendedTooltip" id="45"/>
 			<ChildItems>
 				<LabelDecoration name="НадписьФайлВРабочемКаталоге" id="17">
+					<AutoMaxWidth>false</AutoMaxWidth>
 					<SkipOnInput>false</SkipOnInput>
 					<Title formatted="false">
 						<v8:item>
@@ -126,12 +112,6 @@
 							<v8:content>Файл и кнопка</v8:content>
 						</v8:item>
 					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Файл и кнопка</v8:content>
-						</v8:item>
-					</ToolTip>
 					<Group>Horizontal</Group>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
@@ -141,6 +121,8 @@
 							<DataPath>ПолноеИмяФайлаВРабочемКаталоге</DataPath>
 							<ReadOnly>true</ReadOnly>
 							<TitleLocation>None</TitleLocation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>68</MaxWidth>
 							<ContextMenu name="ПолноеИмяФайлаВРабочемКаталогеКонтекстноеМеню" id="2"/>
 							<ExtendedTooltip name="ПолноеИмяФайлаВРабочемКаталогеРасширеннаяПодсказка" id="48"/>
 						</InputField>
@@ -161,12 +143,6 @@
 					<v8:content>Свойства файлов</v8:content>
 				</v8:item>
 			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Свойства файлов</v8:content>
-				</v8:item>
-			</ToolTip>
 			<Group>Horizontal</Group>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
@@ -179,15 +155,7 @@
 							<v8:content>Дата изменения (местное время)</v8:content>
 						</v8:item>
 					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Дата изменения</v8:content>
-						</v8:item>
-					</ToolTip>
-					<HorizontalStretch>true</HorizontalStretch>
 					<Group>Vertical</Group>
-					<Representation>StrongSeparation</Representation>
 					<ExtendedTooltip name="ДатаИзмененияExtendedTooltip" id="51"/>
 					<ChildItems>
 						<InputField name="ДатаИзмененияВРабочемКаталоге" id="28">
@@ -213,15 +181,7 @@
 							<v8:content>Размер (байт)</v8:content>
 						</v8:item>
 					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Размер</v8:content>
-						</v8:item>
-					</ToolTip>
-					<HorizontalStretch>true</HorizontalStretch>
 					<Group>Vertical</Group>
-					<Representation>StrongSeparation</Representation>
 					<ExtendedTooltip name="РазмерExtendedTooltip" id="54"/>
 					<ChildItems>
 						<InputField name="РазмерВРабочемКаталоге" id="32">

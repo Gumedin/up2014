@@ -9,7 +9,6 @@
 	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
 	<AutoTitle>false</AutoTitle>
 	<CommandBarLocation>None</CommandBarLocation>
-	<VerticalScroll>useIfNecessary</VerticalScroll>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<Autofill>false</Autofill>
 	</AutoCommandBar>
@@ -22,6 +21,7 @@
 			<DataPath>ПоясняющаяНадпись</DataPath>
 			<TitleTextColor>style:ПоясняющийТекст</TitleTextColor>
 			<TitleLocation>None</TitleLocation>
+			<AutoMaxWidth>false</AutoMaxWidth>
 			<Height>2</Height>
 			<TextColor>style:ПоясняющийТекст</TextColor>
 			<ContextMenu name="ПоясняющаяНадписьКонтекстноеМеню" id="13"/>
@@ -38,6 +38,12 @@
 			<AutoInsertNewRow>true</AutoInsertNewRow>
 			<DataPath>СписокПолейСопоставления</DataPath>
 			<RowPictureDataPath>СписокПолейСопоставления.Picture</RowPictureDataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список полей сопоставления</v8:content>
+				</v8:item>
+			</Title>
 			<CommandSet>
 				<ExcludedCommand>Add</ExcludedCommand>
 				<ExcludedCommand>Change</ExcludedCommand>
@@ -52,35 +58,32 @@
 				<ExcludedCommand>SortListAsc</ExcludedCommand>
 				<ExcludedCommand>SortListDesc</ExcludedCommand>
 			</CommandSet>
-			<SearchStringLocation>None</SearchStringLocation>
-			<ViewStatusLocation>None</ViewStatusLocation>
-			<SearchControlLocation>None</SearchControlLocation>
 			<ContextMenu name="СписокПолейСопоставленияКонтекстноеМеню" id="2"/>
 			<AutoCommandBar name="СписокПолейСопоставленияКоманднаяПанель" id="3"/>
 			<ExtendedTooltip name="СписокПолейСопоставленияExtendedTooltip" id="17"/>
-			<SearchStringAddition name="СписокПолейСопоставленияСтрокаПоиска" id="23">
+			<SearchStringAddition name="СписокПолейСопоставленияSearchString" id="23">
 				<AdditionSource>
 					<Item>СписокПолейСопоставления</Item>
 					<Type>SearchStringRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокПолейСопоставленияСтрокаПоискаКонтекстноеМеню" id="24"/>
-				<ExtendedTooltip name="СписокПолейСопоставленияСтрокаПоискаРасширеннаяПодсказка" id="25"/>
+				<ContextMenu name="СписокПолейСопоставленияSearchStringContextMenu" id="24"/>
+				<ExtendedTooltip name="СписокПолейСопоставленияSearchStringExtendedTooltip" id="25"/>
 			</SearchStringAddition>
-			<ViewStatusAddition name="СписокПолейСопоставленияСостояниеПросмотра" id="26">
+			<ViewStatusAddition name="СписокПолейСопоставленияViewStatus" id="26">
 				<AdditionSource>
 					<Item>СписокПолейСопоставления</Item>
 					<Type>ViewStatusRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокПолейСопоставленияСостояниеПросмотраКонтекстноеМеню" id="27"/>
-				<ExtendedTooltip name="СписокПолейСопоставленияСостояниеПросмотраРасширеннаяПодсказка" id="28"/>
+				<ContextMenu name="СписокПолейСопоставленияViewStatusContextMenu" id="27"/>
+				<ExtendedTooltip name="СписокПолейСопоставленияViewStatusExtendedTooltip" id="28"/>
 			</ViewStatusAddition>
-			<SearchControlAddition name="СписокПолейСопоставленияУправлениеПоиском" id="29">
+			<SearchControlAddition name="СписокПолейСопоставленияSearchControl" id="29">
 				<AdditionSource>
 					<Item>СписокПолейСопоставления</Item>
 					<Type>SearchControl</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокПолейСопоставленияУправлениеПоискомКонтекстноеМеню" id="30"/>
-				<ExtendedTooltip name="СписокПолейСопоставленияУправлениеПоискомРасширеннаяПодсказка" id="31"/>
+				<ContextMenu name="СписокПолейСопоставленияSearchControlContextMenu" id="30"/>
+				<ExtendedTooltip name="СписокПолейСопоставленияSearchControlExtendedTooltip" id="31"/>
 			</SearchControlAddition>
 			<Events>
 				<Event name="OnChange">СписокПолейСопоставленияПриИзменении</Event>
@@ -104,6 +107,12 @@
 		</Table>
 		<CommandBar name="ПанельКнопок" id="11">
 			<EnableContentChange>true</EnableContentChange>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Панель кнопок</v8:content>
+				</v8:item>
+			</Title>
 			<HorizontalLocation>Right</HorizontalLocation>
 			<ExtendedTooltip name="ПанельКнопокExtendedTooltip" id="20"/>
 			<ChildItems>
@@ -134,7 +143,6 @@
 			<Type>
 				<v8:Type>v8:ValueListType</v8:Type>
 			</Type>
-			<Settings xsi:type="v8:TypeDescription"/>
 		</Attribute>
 		<Attribute name="ПоясняющаяНадпись" id="2">
 			<Title>

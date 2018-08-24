@@ -111,7 +111,7 @@
 					<xr:ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Дополнительный внешний идентификатор таблицы объекта метаданных</v8:content>
+							<v8:content>Ссылка на объект метаданных в базе данных</v8:content>
 						</v8:item>
 					</xr:ToolTip>
 					<xr:ExtendedEdit>false</xr:ExtendedEdit>
@@ -124,12 +124,7 @@
 					<xr:DataHistory>Use</xr:DataHistory>
 					<xr:MarkNegatives>false</xr:MarkNegatives>
 					<xr:MinValue xsi:nil="true"/>
-					<xr:Synonym>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Идентификатор</v8:content>
-						</v8:item>
-					</xr:Synonym>
+					<xr:Synonym/>
 					<xr:Comment/>
 					<xr:FullTextSearch>Use</xr:FullTextSearch>
 					<xr:ChoiceParameterLinks/>
@@ -238,7 +233,12 @@
 					<xr:DataHistory>Use</xr:DataHistory>
 					<xr:MarkNegatives>false</xr:MarkNegatives>
 					<xr:MinValue xsi:nil="true"/>
-					<xr:Synonym/>
+					<xr:Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа объектов</v8:content>
+						</v8:item>
+					</xr:Synonym>
 					<xr:Comment/>
 					<xr:FullTextSearch>Use</xr:FullTextSearch>
 					<xr:ChoiceParameterLinks/>
@@ -338,7 +338,7 @@
 			<ObjectPresentation>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Идентификатор объекта метаданых</v8:content>
+					<v8:content>Идентификатор объекта метаданных</v8:content>
 				</v8:item>
 			</ObjectPresentation>
 			<ExtendedObjectPresentation/>
@@ -662,7 +662,14 @@
 					</Synonym>
 					<Comment/>
 					<Type>
-						<v8:TypeSet>cfg:AnyRef</v8:TypeSet>
+						<v8:TypeSet>cfg:ExchangePlanRef</v8:TypeSet>
+						<v8:TypeSet>cfg:BusinessProcessRef</v8:TypeSet>
+						<v8:TypeSet>cfg:DocumentRef</v8:TypeSet>
+						<v8:TypeSet>cfg:ChartOfCalculationTypesRef</v8:TypeSet>
+						<v8:TypeSet>cfg:TaskRef</v8:TypeSet>
+						<v8:TypeSet>cfg:ChartOfCharacteristicTypesRef</v8:TypeSet>
+						<v8:TypeSet>cfg:ChartOfAccountsRef</v8:TypeSet>
+						<v8:TypeSet>cfg:CatalogRef</v8:TypeSet>
 					</Type>
 					<PasswordMode>false</PasswordMode>
 					<Format/>

@@ -7,7 +7,6 @@
 		</v8:item>
 	</Title>
 	<AutoTitle>false</AutoTitle>
-	<VerticalScroll>useIfNecessary</VerticalScroll>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<ChildItems>
 			<Button name="ДеревоУзловОбменаИзменитьРегистрацию" id="33">
@@ -49,12 +48,6 @@
 						<v8:content>Дополнительно</v8:content>
 					</v8:item>
 				</Title>
-				<ToolTip>
-					<v8:item>
-						<v8:lang>ru</v8:lang>
-						<v8:content>Группа2</v8:content>
-					</v8:item>
-				</ToolTip>
 				<ExtendedTooltip name="Группа2ExtendedTooltip" id="62"/>
 				<ChildItems>
 					<Button name="ФормаПеречитатьДеревоУзлов" id="49">
@@ -126,12 +119,15 @@
 				<ExcludedCommand>SortListDesc</ExcludedCommand>
 				<ExcludedCommand>Tree</ExcludedCommand>
 			</CommandSet>
-			<SearchStringLocation>None</SearchStringLocation>
-			<ViewStatusLocation>None</ViewStatusLocation>
-			<SearchControlLocation>None</SearchControlLocation>
 			<ContextMenu name="ДеревоУзловОбменаКонтекстноеМеню" id="2">
 				<ChildItems>
 					<ButtonGroup name="ДеревоУзловОбменаКонтекстноеМенюГруппа1" id="40">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Дерево узлов обмена контекстное меню группа 1</v8:content>
+							</v8:item>
+						</Title>
 						<ExtendedTooltip name="ДеревоУзловОбменаКонтекстноеМенюГруппа1ExtendedTooltip" id="65"/>
 						<ChildItems>
 							<Button name="ДеревоУзловОбменаКонтекстноеМенюПометитьВсеУзлы" id="41">
@@ -175,6 +171,12 @@
 						<ExtendedTooltip name="ДеревоУзловОбменаКонтекстноеМенюОткрытьФормуРедактированияОтУзлаExtendedTooltip" id="69"/>
 					</Button>
 					<ButtonGroup name="ДеревоУзловОбменаКонтекстноеМенюГруппа2" id="44">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Дерево узлов обмена контекстное меню группа 2</v8:content>
+							</v8:item>
+						</Title>
 						<ExtendedTooltip name="ДеревоУзловОбменаКонтекстноеМенюГруппа2ExtendedTooltip" id="70"/>
 						<ChildItems>
 							<Button name="ДеревоУзловОбменаКонтекстноеМенюВывестиСписок" id="45">
@@ -230,12 +232,6 @@
 							<v8:content>Описание узла</v8:content>
 						</v8:item>
 					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Описание узла</v8:content>
-						</v8:item>
-					</ToolTip>
 					<Group>InCell</Group>
 					<ExtendedTooltip name="ДеревоУзловОбменаПометкаНаименованиеExtendedTooltip" id="74"/>
 					<ChildItems>
@@ -329,15 +325,9 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Группа скрытых данных</v8:content>
+					<v8:content>Скрытых данных</v8:content>
 				</v8:item>
 			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Группа скрытых данных</v8:content>
-				</v8:item>
-			</ToolTip>
 			<Group>Vertical</Group>
 			<Representation>None</Representation>
 			<ExtendedTooltip name="ГруппаСкрытыхДанныхExtendedTooltip" id="81"/>

@@ -345,7 +345,7 @@
 							<v8:content>Комментарий</v8:content>
 						</v8:item>
 					</Synonym>
-					<Comment>Описание тома</Comment>
+					<Comment/>
 					<Type>
 						<v8:Type>xs:string</v8:Type>
 						<v8:StringQualifiers>
@@ -391,10 +391,10 @@
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Максимальный размер</v8:content>
+							<v8:content>Предел, МБ</v8:content>
 						</v8:item>
 					</Synonym>
-					<Comment>Максимальный размер файлов на томе, в Мб</Comment>
+					<Comment/>
 					<Type>
 						<v8:Type>xs:decimal</v8:Type>
 						<v8:NumberQualifiers>
@@ -409,7 +409,7 @@
 					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Максимальный размер файлов на томе, в Мб</v8:content>
+							<v8:content>Максимальный размер всех файлов в томе в мегабайтах.</v8:content>
 						</v8:item>
 					</ToolTip>
 					<MarkNegatives>false</MarkNegatives>
@@ -444,7 +444,7 @@
 							<v8:content>Полный путь linux</v8:content>
 						</v8:item>
 					</Synonym>
-					<Comment>Полный путь в Linux</Comment>
+					<Comment/>
 					<Type>
 						<v8:Type>xs:string</v8:Type>
 						<v8:StringQualifiers>
@@ -493,7 +493,7 @@
 							<v8:content>Полный путь windows</v8:content>
 						</v8:item>
 					</Synonym>
-					<Comment>Полный путь в UNC формате</Comment>
+					<Comment/>
 					<Type>
 						<v8:Type>xs:string</v8:Type>
 						<v8:StringQualifiers>
@@ -539,10 +539,10 @@
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Порядок заполнения</v8:content>
+							<v8:content>Порядок</v8:content>
 						</v8:item>
 					</Synonym>
-					<Comment>Определяет порядок заполнения томов - начинаем с наименьшего</Comment>
+					<Comment/>
 					<Type>
 						<v8:Type>xs:decimal</v8:Type>
 						<v8:NumberQualifiers>
@@ -557,7 +557,8 @@
 					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Определяет порядок заполнения томов - начинаем с наименьшего</v8:content>
+							<v8:content>Порядок заполнения томов файлами,
+начиная с наименьшего значения.</v8:content>
 						</v8:item>
 					</ToolTip>
 					<MarkNegatives>false</MarkNegatives>
@@ -585,6 +586,8 @@
 			</Attribute>
 			<Form>ФормаЭлемента</Form>
 			<Form>ФормаСписка</Form>
+			<Form>УдалениеЛишнихФайловИзТома</Form>
+			<Template>МакетОтчета</Template>
 		</ChildObjects>
 	</Catalog>
 </MetaDataObject>

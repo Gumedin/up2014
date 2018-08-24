@@ -4,7 +4,6 @@
 	<SaveDataInSettings>UseList</SaveDataInSettings>
 	<AutoFillCheck>false</AutoFillCheck>
 	<Customizable>false</Customizable>
-	<VerticalScroll>useIfNecessary</VerticalScroll>
 	<CommandSet>
 		<ExcludedCommand>RestoreValues</ExcludedCommand>
 		<ExcludedCommand>SaveValues</ExcludedCommand>
@@ -44,15 +43,15 @@
 				</Title>
 				<ExtendedTooltip name="ФормаНастройкаExtendedTooltip" id="76"/>
 			</Button>
-			<Button name="ФормаЭкспортДанных" id="93">
+			<Button name="ФормаЭкспортЗамеров" id="118">
 				<Type>CommandBarButton</Type>
 				<OnlyInAllActions>false</OnlyInAllActions>
-				<CommandName>Form.Command.ЭкспортДанных</CommandName>
+				<CommandName>Form.Command.ЭкспортЗамеров</CommandName>
 				<Picture>
-					<xr:Ref>StdPicture.SaveValues</xr:Ref>
+					<xr:Ref>StdPicture.CreateInitialImage</xr:Ref>
 					<xr:LoadTransparent>true</xr:LoadTransparent>
 				</Picture>
-				<ExtendedTooltip name="ФормаЭкспортДанныхРасширеннаяПодсказка" id="94"/>
+				<ExtendedTooltip name="ФормаЭкспортЗамеровРасширеннаяПодсказка" id="119"/>
 			</Button>
 		</ChildItems>
 	</AutoCommandBar>
@@ -66,74 +65,165 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Настройка периода</v8:content>
+					<v8:content>Настройки отбора замеров</v8:content>
 				</v8:item>
 			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Настройки</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Group>Horizontal</Group>
+			<Group>Vertical</Group>
 			<ExtendedTooltip name="НастройкиExtendedTooltip" id="77"/>
 			<ChildItems>
-				<InputField name="ДатаНачала" id="69">
-					<DataPath>Объект.ДатаНачала</DataPath>
-					<ContextMenu name="ДатаНачалаКонтекстноеМеню" id="70"/>
-					<ExtendedTooltip name="ДатаНачалаExtendedTooltip" id="78"/>
-				</InputField>
-				<InputField name="ДатаОкончания" id="71">
-					<DataPath>Объект.ДатаОкончания</DataPath>
-					<ContextMenu name="ДатаОкончанияКонтекстноеМеню" id="72"/>
-					<ExtendedTooltip name="ДатаОкончанияExtendedTooltip" id="79"/>
-				</InputField>
-				<InputField name="Шаг" id="4">
-					<DataPath>Объект.Шаг</DataPath>
-					<HorizontalStretch>false</HorizontalStretch>
-					<DropListButton>true</DropListButton>
-					<ChoiceList>
-						<xr:Item>
-							<xr:Presentation/>
-							<xr:CheckState>0</xr:CheckState>
-							<xr:Value xsi:type="FormChoiceListDesTimeValue">
-								<Presentation/>
-								<Value xsi:type="xs:string">Час</Value>
-							</xr:Value>
-						</xr:Item>
-						<xr:Item>
-							<xr:Presentation/>
-							<xr:CheckState>0</xr:CheckState>
-							<xr:Value xsi:type="FormChoiceListDesTimeValue">
-								<Presentation/>
-								<Value xsi:type="xs:string">День</Value>
-							</xr:Value>
-						</xr:Item>
-						<xr:Item>
-							<xr:Presentation/>
-							<xr:CheckState>0</xr:CheckState>
-							<xr:Value xsi:type="FormChoiceListDesTimeValue">
-								<Presentation/>
-								<Value xsi:type="xs:string">Неделя</Value>
-							</xr:Value>
-						</xr:Item>
-						<xr:Item>
-							<xr:Presentation/>
-							<xr:CheckState>0</xr:CheckState>
-							<xr:Value xsi:type="FormChoiceListDesTimeValue">
-								<Presentation>
-									<v8:item>
-										<v8:lang>ru</v8:lang>
-										<v8:content>Месяц (30 дней)</v8:content>
-									</v8:item>
-								</Presentation>
-								<Value xsi:type="xs:string">Месяц</Value>
-							</xr:Value>
-						</xr:Item>
-					</ChoiceList>
-					<ContextMenu name="ШагКонтекстноеМеню" id="5"/>
-					<ExtendedTooltip name="ШагExtendedTooltip" id="80"/>
-				</InputField>
+				<UsualGroup name="НастройкаПериода" id="99">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройка периода</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Horizontal</Group>
+					<ShowTitle>false</ShowTitle>
+					<ThroughAlign>Use</ThroughAlign>
+					<ExtendedTooltip name="НастройкаПериодаРасширеннаяПодсказка" id="100"/>
+					<ChildItems>
+						<InputField name="ДатаНачала" id="69">
+							<DataPath>Объект.ДатаНачала</DataPath>
+							<ContextMenu name="ДатаНачалаКонтекстноеМеню" id="70"/>
+							<ExtendedTooltip name="ДатаНачалаExtendedTooltip" id="78"/>
+						</InputField>
+						<InputField name="ДатаОкончания" id="71">
+							<DataPath>Объект.ДатаОкончания</DataPath>
+							<ContextMenu name="ДатаОкончанияКонтекстноеМеню" id="72"/>
+							<ExtendedTooltip name="ДатаОкончанияExtendedTooltip" id="79"/>
+							<Events>
+								<Event name="ChoiceProcessing">ДатаОкончанияОбработкаВыбора</Event>
+							</Events>
+						</InputField>
+						<InputField name="Шаг" id="4">
+							<DataPath>Объект.Шаг</DataPath>
+							<HorizontalStretch>false</HorizontalStretch>
+							<DropListButton>true</DropListButton>
+							<ListChoiceMode>true</ListChoiceMode>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation/>
+										<Value xsi:type="xs:string">Час</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation/>
+										<Value xsi:type="xs:string">День</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation/>
+										<Value xsi:type="xs:string">Неделя</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Месяц (30 дней)</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:string">Месяц</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="ШагКонтекстноеМеню" id="5"/>
+							<ExtendedTooltip name="ШагExtendedTooltip" id="80"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="НастройкаКомментарий" id="101">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройка комментарий</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Horizontal</Group>
+					<ShowTitle>false</ShowTitle>
+					<ThroughAlign>Use</ThroughAlign>
+					<ExtendedTooltip name="НастройкаКомментарийРасширеннаяПодсказка" id="102"/>
+					<ChildItems>
+						<InputField name="Комментарий" id="103">
+							<DataPath>Объект.Комментарий</DataPath>
+							<ChoiceButton>true</ChoiceButton>
+							<ContextMenu name="КомментарийКонтекстноеМеню" id="104"/>
+							<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="105"/>
+							<Events>
+								<Event name="StartChoice">КомментарийНачалоВыбора</Event>
+								<Event name="ChoiceProcessing">КомментарийОбработкаВыбора</Event>
+							</Events>
+						</InputField>
+						<InputField name="ВариантФильтраКомментарий" id="106">
+							<DataPath>Объект.ВариантФильтраКомментарий</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Вариант фильтра</v8:content>
+								</v8:item>
+							</Title>
+							<ListChoiceMode>true</ListChoiceMode>
+							<ChooseType>false</ChooseType>
+							<TextEdit>false</TextEdit>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Не фильтровать</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:string">НеФильтровать</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Равен</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:string">Равен</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Содержит</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:string">Содержит</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="ВариантФильтраКомментарийКонтекстноеМеню" id="107"/>
+							<ExtendedTooltip name="ВариантФильтраКомментарийРасширеннаяПодсказка" id="108"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
 			</ChildItems>
 		</UsualGroup>
 		<Pages name="Форма" id="18">
@@ -143,12 +233,6 @@
 					<v8:content>Форма</v8:content>
 				</v8:item>
 			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Форма</v8:content>
-				</v8:item>
-			</ToolTip>
 			<ExtendedTooltip name="ФормаExtendedTooltip" id="81"/>
 			<Events>
 				<Event name="OnCurrentPageChange">ФормаПриСменеСтраницы</Event>
@@ -161,12 +245,6 @@
 							<v8:content>Таблица</v8:content>
 						</v8:item>
 					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Страница таблица</v8:content>
-						</v8:item>
-					</ToolTip>
 					<ExtendedTooltip name="СтраницаТаблицаExtendedTooltip" id="82"/>
 					<ChildItems>
 						<Table name="Производительность" id="23">
@@ -175,6 +253,12 @@
 							<SelectionMode>SingleRow</SelectionMode>
 							<AutoInsertNewRow>true</AutoInsertNewRow>
 							<DataPath>Объект.Производительность</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Производительность</v8:content>
+								</v8:item>
+							</Title>
 							<CommandSet>
 								<ExcludedCommand>Add</ExcludedCommand>
 								<ExcludedCommand>CancelSearch</ExcludedCommand>
@@ -188,9 +272,6 @@
 								<ExcludedCommand>SortListAsc</ExcludedCommand>
 								<ExcludedCommand>SortListDesc</ExcludedCommand>
 							</CommandSet>
-							<SearchStringLocation>None</SearchStringLocation>
-							<ViewStatusLocation>None</ViewStatusLocation>
-							<SearchControlLocation>None</SearchControlLocation>
 							<RowFilter xsi:nil="true"/>
 							<ContextMenu name="ПроизводительностьКонтекстноеМеню" id="24">
 								<Autofill>false</Autofill>
@@ -266,29 +347,29 @@
 								</ChildItems>
 							</AutoCommandBar>
 							<ExtendedTooltip name="ПроизводительностьExtendedTooltip" id="87"/>
-							<SearchStringAddition name="ПроизводительностьСтрокаПоиска" id="99">
+							<SearchStringAddition name="ПроизводительностьSearchString" id="109">
 								<AdditionSource>
 									<Item>Производительность</Item>
 									<Type>SearchStringRepresentation</Type>
 								</AdditionSource>
-								<ContextMenu name="ПроизводительностьСтрокаПоискаКонтекстноеМеню" id="100"/>
-								<ExtendedTooltip name="ПроизводительностьСтрокаПоискаРасширеннаяПодсказка" id="101"/>
+								<ContextMenu name="ПроизводительностьSearchStringContextMenu" id="110"/>
+								<ExtendedTooltip name="ПроизводительностьSearchStringExtendedTooltip" id="111"/>
 							</SearchStringAddition>
-							<ViewStatusAddition name="ПроизводительностьСостояниеПросмотра" id="102">
+							<ViewStatusAddition name="ПроизводительностьViewStatus" id="112">
 								<AdditionSource>
 									<Item>Производительность</Item>
 									<Type>ViewStatusRepresentation</Type>
 								</AdditionSource>
-								<ContextMenu name="ПроизводительностьСостояниеПросмотраКонтекстноеМеню" id="103"/>
-								<ExtendedTooltip name="ПроизводительностьСостояниеПросмотраРасширеннаяПодсказка" id="104"/>
+								<ContextMenu name="ПроизводительностьViewStatusContextMenu" id="113"/>
+								<ExtendedTooltip name="ПроизводительностьViewStatusExtendedTooltip" id="114"/>
 							</ViewStatusAddition>
-							<SearchControlAddition name="ПроизводительностьУправлениеПоиском" id="105">
+							<SearchControlAddition name="ПроизводительностьSearchControl" id="115">
 								<AdditionSource>
 									<Item>Производительность</Item>
 									<Type>SearchControl</Type>
 								</AdditionSource>
-								<ContextMenu name="ПроизводительностьУправлениеПоискомКонтекстноеМеню" id="106"/>
-								<ExtendedTooltip name="ПроизводительностьУправлениеПоискомРасширеннаяПодсказка" id="107"/>
+								<ContextMenu name="ПроизводительностьSearchControlContextMenu" id="116"/>
+								<ExtendedTooltip name="ПроизводительностьSearchControlExtendedTooltip" id="117"/>
 							</SearchControlAddition>
 							<Events>
 								<Event name="Selection">ПроизводительностьВыбор</Event>
@@ -342,12 +423,6 @@
 							<v8:content>Диаграмма</v8:content>
 						</v8:item>
 					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Страница диаграмма</v8:content>
-						</v8:item>
-					</ToolTip>
 					<ExtendedTooltip name="СтраницаДиаграммаExtendedTooltip" id="91"/>
 					<ChildItems>
 						<ChartField name="Диаграмма" id="21">
@@ -374,8 +449,10 @@
 			<MainAttribute>true</MainAttribute>
 			<Save>
 				<Field>1/0:f54fde64-ca9e-49cc-8dc9-59ecaf4625a8</Field>
+				<Field>Объект.ВариантФильтраКомментарий</Field>
 				<Field>Объект.ДатаНачала</Field>
 				<Field>Объект.ДатаОкончания</Field>
+				<Field>Объект.Комментарий</Field>
 				<Field>Объект.Шаг</Field>
 			</Save>
 		</Attribute>
@@ -395,6 +472,17 @@
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Диаграмма обновлена</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЕстьБСП" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Есть БСП</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -447,21 +535,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ПереместитьВниз</Action>
-		</Command>
-		<Command name="ЭкспортДанных" id="4">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Экспорт данных</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Экспорт данных</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Action>ЭкспортДанных</Action>
 		</Command>
 		<Command name="Настройка" id="5">
 			<Title>
@@ -537,6 +610,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>УдалитьКлючевуюОперацию</Action>
+		</Command>
+		<Command name="ЭкспортЗамеров" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Экспорт замеров</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Экспорт замеров</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЭкспортЗамеров</Action>
 		</Command>
 	</Commands>
 </Form>
