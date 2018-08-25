@@ -1,0 +1,1580 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Проект</dataPath>
+			<field>Проект</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>МенеджерПроекта</dataPath>
+			<field>МенеджерПроекта</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОбеспДоходыФинансовые</dataPath>
+			<field>ОбеспДоходыФинансовые</field>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=15; ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОплатаВознаграждение</dataPath>
+			<field>ОплатаВознаграждение</field>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=15; ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОплатаДоходыФинансовые</dataPath>
+			<field>ОплатаДоходыФинансовые</field>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=15; ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОплатаРасходыНаВознагр</dataPath>
+			<field>ОплатаРасходыНаВознагр</field>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=15; ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПланВознаграждение</dataPath>
+			<field>ПланВознаграждение</field>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=15; ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПланДоходыВсего</dataPath>
+			<field>ПланДоходыВсего</field>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=15; ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПланДоходыФинансовые</dataPath>
+			<field>ПланДоходыФинансовые</field>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=15; ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПланРасходыНаВознагр</dataPath>
+			<field>ПланРасходыНаВознагр</field>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=15; ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОплатаДоходыВсего</dataPath>
+			<field>ОплатаДоходыВсего</field>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=15; ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗадачаПроекта</dataPath>
+			<field>ЗадачаПроекта</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>АктыДоходыФин</dataPath>
+			<field>АктыДоходыФин</field>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=15; ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Месяц</dataPath>
+			<field>Месяц</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТипСуммы</dataPath>
+			<field>ТипСуммы</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтатьяСметы</dataPath>
+			<field>СтатьяСметы</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СубПодряд</dataPath>
+			<field>СубПодряд</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Суб подряд</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=15; ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РасходыПоВыплатеЗП</dataPath>
+			<field>РасходыПоВыплатеЗП</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расходы по выплате ЗП</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=15; ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ФОТПП</dataPath>
+			<field>ФОТПП</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ФОТПП</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=15; ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РасходыПрочиеПрямые</dataPath>
+			<field>РасходыПрочиеПрямые</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расходы прочие прямые</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=15; ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	ЗадачиПроектов.Ссылка КАК ЗадачаПроекта,
+	ЗадачиПроектов.Владелец КАК Проект,
+	ЗадачиПроектов.Владелец.МенеджерПроекта КАК МенеджерПроекта,
+	ВЫБОР
+		КОГДА ЗадачиПроектов.НачалоРабот = ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+			ТОГДА ЗадачиПроектов.Владелец.ГодПроекта
+		ИНАЧЕ ГОД(ЗадачиПроектов.НачалоРабот)
+	КОНЕЦ КАК ГодЗадачи
+ПОМЕСТИТЬ ВТ_Проекты
+ИЗ
+	Справочник.ЗадачиПроектов КАК ЗадачиПроектов
+ГДЕ
+	(&amp;ВсеПроекты
+			ИЛИ ЗадачиПроектов.Владелец В (&amp;Проекты))
+	И (&amp;ВсеГодыПроектов
+			ИЛИ ЗадачиПроектов.Владелец.ГодПроекта = &amp;ГодПроекта)
+	И (&amp;ВсеМенеджеры
+			ИЛИ ЗадачиПроектов.Владелец.МенеджерПроекта В (&amp;МенеджерПроекта))
+	И ЗадачиПроектов.Владелец.Статус В(&amp;Статусы)
+	И (&amp;ВсеГодыЗадач
+			ИЛИ &amp;ГодЗадачи = ВЫБОР
+				КОГДА ЗадачиПроектов.НачалоРабот = ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+					ТОГДА ЗадачиПроектов.Владелец.ГодПроекта
+				ИНАЧЕ ГОД(ЗадачиПроектов.НачалоРабот)
+			КОНЕЦ)
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_Проекты.Проект,
+	ВТ_Проекты.ЗадачаПроекта,
+	ВТ_Проекты.МенеджерПроекта,
+	СУММА(ВЫБОР
+			КОГДА Расчет.Статья = &amp;стДоходыФинансовые
+				ТОГДА Расчет.Сумма
+			ИНАЧЕ 0
+		КОНЕЦ) КАК ПланДоходыФинансовые,
+	СУММА(ВЫБОР
+			КОГДА Расчет.Статья = &amp;стДоходыВс
+				ТОГДА Расчет.Сумма
+			ИНАЧЕ 0
+		КОНЕЦ) КАК ПланДоходыВсего,
+	СУММА(ВЫБОР
+			КОГДА Расчет.Статья = &amp;стВознаграждениеПосредника
+				ТОГДА Расчет.Сумма
+			ИНАЧЕ 0
+		КОНЕЦ) КАК ПланВознаграждение,
+	СУММА(ВЫБОР
+			КОГДА Расчет.Статья = &amp;стРасходыНаВознагр
+				ТОГДА Расчет.Сумма
+			ИНАЧЕ 0
+		КОНЕЦ) КАК ПланРасходыНаВознагр,
+	СУММА(0) КАК ОбеспДоходыФинансовые,
+	СУММА(0) КАК ОплатаДоходыФинансовые,
+	СУММА(0) КАК ОплатаВознаграждение,
+	СУММА(0) КАК ОплатаРасходыНаВознагр,
+	СУММА(0) КАК ОплатаДоходыВсего,
+	СУММА(0) КАК АктыДоходыФин,
+	СУММА(0) КАК ФОТПП,
+	СУММА(0) КАК РасходыПрочиеПрямые,
+	СУММА(0) КАК РасходыПоВыплатеЗП,
+	СУММА(0) КАК СубПодряд
+ИЗ
+	ВТ_Проекты КАК ВТ_Проекты
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Документ.СметаЗадачиПроекта.Расчет КАК Расчет
+		ПО ВТ_Проекты.ЗадачаПроекта = Расчет.Ссылка.ЗадачаПроекта
+ГДЕ
+	Расчет.Ссылка.Проведен
+
+СГРУППИРОВАТЬ ПО
+	ВТ_Проекты.Проект,
+	ВТ_Проекты.МенеджерПроекта,
+	ВТ_Проекты.ЗадачаПроекта
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ВТ_Проекты.Проект,
+	ВТ_Проекты.ЗадачаПроекта,
+	ВТ_Проекты.МенеджерПроекта,
+	СУММА(0),
+	СУММА(0),
+	СУММА(0),
+	СУММА(0),
+	СУММА(ДоговорыЗадачиПроекта.Сумма),
+	СУММА(0),
+	СУММА(0),
+	СУММА(0),
+	СУММА(0),
+	СУММА(0),
+	СУММА(0),
+	СУММА(0),
+	СУММА(0),
+	СУММА(0)
+ИЗ
+	ВТ_Проекты КАК ВТ_Проекты
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Документ.Договор.ЗадачиПроекта КАК ДоговорыЗадачиПроекта
+		ПО ВТ_Проекты.ЗадачаПроекта = ДоговорыЗадачиПроекта.ЗадачаПроекта
+ГДЕ
+	НЕ ДоговорыЗадачиПроекта.Ссылка.ПометкаУдаления
+
+СГРУППИРОВАТЬ ПО
+	ВТ_Проекты.ЗадачаПроекта,
+	ВТ_Проекты.Проект,
+	ВТ_Проекты.МенеджерПроекта
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ВТ_Проекты.Проект,
+	ВТ_Проекты.ЗадачаПроекта,
+	ВТ_Проекты.МенеджерПроекта,
+	СУММА(0),
+	СУММА(0),
+	СУММА(0),
+	СУММА(0),
+	СУММА(0),
+	СУММА(Оплата.ДоходыВс + Оплата.ВознагрПосредника + Оплата.РасходыВознПосредника),
+	СУММА(Оплата.ВознагрПосредника),
+	СУММА(Оплата.РасходыВознПосредника),
+	СУММА(Оплата.ДоходыВс),
+	СУММА(0),
+	СУММА(0),
+	СУММА(0),
+	СУММА(0),
+	СУММА(0)
+ИЗ
+	ВТ_Проекты КАК ВТ_Проекты
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Документ.Оплата.РасшифровкаПлатежа КАК Оплата
+		ПО ВТ_Проекты.ЗадачаПроекта = Оплата.ЗадачаПроекта
+ГДЕ
+	Оплата.Ссылка.Проведен
+
+СГРУППИРОВАТЬ ПО
+	ВТ_Проекты.ЗадачаПроекта,
+	ВТ_Проекты.Проект,
+	ВТ_Проекты.МенеджерПроекта
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ВТ_Проекты.Проект,
+	ВТ_Проекты.ЗадачаПроекта,
+	ВТ_Проекты.МенеджерПроекта,
+	СУММА(0),
+	СУММА(0),
+	СУММА(0),
+	СУММА(0),
+	СУММА(0),
+	СУММА(0),
+	СУММА(0),
+	СУММА(0),
+	СУММА(0),
+	СУММА(ДокументУТКоммерческоеВознаграждение.Сумма),
+	СУММА(0),
+	СУММА(0),
+	СУММА(0),
+	СУММА(0)
+ИЗ
+	ВТ_Проекты КАК ВТ_Проекты
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Документ.ДокументУТ.КоммерческоеВознаграждение КАК ДокументУТКоммерческоеВознаграждение
+		ПО ВТ_Проекты.ЗадачаПроекта = ДокументУТКоммерческоеВознаграждение.ЗадачаПроекта
+ГДЕ
+	ДокументУТКоммерческоеВознаграждение.Ссылка.Проведен
+
+СГРУППИРОВАТЬ ПО
+	ВТ_Проекты.Проект,
+	ВТ_Проекты.ЗадачаПроекта,
+	ВТ_Проекты.МенеджерПроекта
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ВТ_Проекты.Проект,
+	ВТ_Проекты.ЗадачаПроекта,
+	ВТ_Проекты.МенеджерПроекта,
+	СУММА(0),
+	СУММА(0),
+	СУММА(0),
+	СУММА(0),
+	СУММА(0),
+	СУММА(0),
+	СУММА(0),
+	СУММА(0),
+	СУММА(0),
+	СУММА(0),
+	СУММА(ВЫБОР
+			КОГДА БюджетПоМесяцамОбороты.СтатьяСметы = &amp;стФОТПП
+					И БюджетПоМесяцамОбороты.ТипСуммы = ЗНАЧЕНИЕ(Перечисление.ТипСуммыБюджета.Факт)
+				ТОГДА БюджетПоМесяцамОбороты.СуммаОборот
+			ИНАЧЕ 0
+		КОНЕЦ),
+	СУММА(ВЫБОР
+			КОГДА БюджетПоМесяцамОбороты.СтатьяСметы = &amp;стРасходыПрочиеПрямые
+					И БюджетПоМесяцамОбороты.ТипСуммы = ЗНАЧЕНИЕ(Перечисление.ТипСуммыБюджета.Факт)
+				ТОГДА БюджетПоМесяцамОбороты.СуммаОборот
+			ИНАЧЕ 0
+		КОНЕЦ),
+	СУММА(ВЫБОР
+			КОГДА БюджетПоМесяцамОбороты.СтатьяСметы = &amp;стРасходыПоВыплатеЗП
+					И БюджетПоМесяцамОбороты.ТипСуммы = ЗНАЧЕНИЕ(Перечисление.ТипСуммыБюджета.Факт)
+				ТОГДА БюджетПоМесяцамОбороты.СуммаОборот
+			ИНАЧЕ 0
+		КОНЕЦ),
+	СУММА(ВЫБОР
+			КОГДА БюджетПоМесяцамОбороты.СтатьяСметы = &amp;стСубПодряд
+					И БюджетПоМесяцамОбороты.ТипСуммы = ЗНАЧЕНИЕ(Перечисление.ТипСуммыБюджета.Факт)
+				ТОГДА БюджетПоМесяцамОбороты.СуммаОборот
+			ИНАЧЕ 0
+		КОНЕЦ)
+ИЗ
+	ВТ_Проекты КАК ВТ_Проекты
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрНакопления.БюджетПоМесяцам.Обороты КАК БюджетПоМесяцамОбороты
+		ПО ВТ_Проекты.ЗадачаПроекта = БюджетПоМесяцамОбороты.ЗадачаПроекта
+
+СГРУППИРОВАТЬ ПО
+	ВТ_Проекты.Проект,
+	ВТ_Проекты.ЗадачаПроекта,
+	ВТ_Проекты.МенеджерПроекта</query>
+	</dataSet>
+	<totalField>
+		<dataPath>АктыДоходыФин</dataPath>
+		<expression>Сумма(АктыДоходыФин)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ОбеспДоходыФинансовые</dataPath>
+		<expression>Сумма(ОбеспДоходыФинансовые)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ОплатаВознаграждение</dataPath>
+		<expression>Сумма(ОплатаВознаграждение)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ОплатаДоходыВсего</dataPath>
+		<expression>Сумма(ОплатаДоходыВсего)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ОплатаДоходыФинансовые</dataPath>
+		<expression>Сумма(ОплатаДоходыФинансовые)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ОплатаРасходыНаВознагр</dataPath>
+		<expression>Сумма(ОплатаРасходыНаВознагр)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ПланВознаграждение</dataPath>
+		<expression>Сумма(ПланВознаграждение)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ПланДоходыВсего</dataPath>
+		<expression>Сумма(ПланДоходыВсего)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ПланДоходыФинансовые</dataPath>
+		<expression>Сумма(ПланДоходыФинансовые)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ПланРасходыНаВознагр</dataPath>
+		<expression>Сумма(ПланРасходыНаВознагр)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>РасходыПоВыплатеЗП</dataPath>
+		<expression>Сумма(РасходыПоВыплатеЗП)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>РасходыПрочиеПрямые</dataPath>
+		<expression>Сумма(РасходыПрочиеПрямые)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СубПодряд</dataPath>
+		<expression>Сумма(СубПодряд)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ФОТПП</dataPath>
+		<expression>Сумма(ФОТПП)</expression>
+	</totalField>
+	<parameter>
+		<name>ВсеМенеджеры</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Все менеджеры</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:boolean</v8:Type>
+		</valueType>
+		<value xsi:type="xs:boolean">false</value>
+		<useRestriction>true</useRestriction>
+		<expression>НЕ ЗначениеЗаполнено( &amp;МенеджерПроекта ) ИЛИ  &amp;МенеджерПроекта = Неопределено</expression>
+	</parameter>
+	<parameter>
+		<name>ВсеПроекты</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Все проекты</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:boolean</v8:Type>
+		</valueType>
+		<value xsi:type="xs:boolean">false</value>
+		<useRestriction>true</useRestriction>
+		<expression>НЕ ЗначениеЗаполнено( &amp;Проекты ) ИЛИ  &amp;Проекты = Неопределено</expression>
+	</parameter>
+	<parameter>
+		<name>ГодПроекта</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Год проекта</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>4</v8:Digits>
+				<v8:FractionDigits>0</v8:FractionDigits>
+				<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</valueType>
+		<value xsi:type="xs:decimal">0</value>
+		<useRestriction>false</useRestriction>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>МенеджерПроекта</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Менеджер проекта</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ФизическиеЛица</v8:Type>
+		</valueType>
+		<useRestriction>false</useRestriction>
+		<valueListAllowed>true</valueListAllowed>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>Проекты</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Проекты</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Проекты</v8:Type>
+		</valueType>
+		<useRestriction>false</useRestriction>
+		<valueListAllowed>true</valueListAllowed>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>стВознаграждениеПосредника</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Ст вознаграждение посредника</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.СтатьиСметы</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Справочник.СтатьиСметы.ВознагрПосредника</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>стДоходыВс</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Ст доходы вс</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.СтатьиСметы</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Справочник.СтатьиСметы.ДоходыВс</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>стДоходыФинансовые</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Ст доходы финансовые</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.СтатьиСметы</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Справочник.СтатьиСметы.ДохФинансовые</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>стРасходыНаВознагр</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Ст расходы на вознагр</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.СтатьиСметы</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Справочник.СтатьиСметы.РасходыВознПосредника</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Статусы</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Статусы</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:EnumRef.СтатусыПроектов</v8:Type>
+		</valueType>
+		<useRestriction>false</useRestriction>
+		<valueListAllowed>true</valueListAllowed>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>НачалоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>КонецПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>стФОТПП</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Ст ФОТПП</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.СтатьиСметы</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Справочник.СтатьиСметы.ФОТ_ПП</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>стРасходыПоВыплатеЗП</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Ст расходы по выплате ЗП</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.СтатьиСметы</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Справочник.СтатьиСметы.РасходыПоВыплате_ФОТ</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>стРасходыПрочиеПрямые</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Ст расходы прочие прямые</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.СтатьиСметы</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Справочник.СтатьиСметы.РасходыППпоПроекту</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>стСубПодряд</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Ст суб подряд</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.СтатьиСметы</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Справочник.СтатьиСметы.Субподряд</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ВсеГодыЗадач</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Все годы задач</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:boolean</v8:Type>
+		</valueType>
+		<value xsi:type="xs:boolean">false</value>
+		<useRestriction>true</useRestriction>
+		<expression>НЕ ЗначениеЗаполнено( &amp;ГодЗадачи )</expression>
+	</parameter>
+	<parameter>
+		<name>ВсеГодыПроектов</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Все годы проектов</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:boolean</v8:Type>
+		</valueType>
+		<value xsi:type="xs:boolean">false</value>
+		<useRestriction>true</useRestriction>
+		<expression>НЕ ЗначениеЗаполнено( &amp;ГодПроекта )</expression>
+	</parameter>
+	<parameter>
+		<name>ГодЗадачи</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Год задачи</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>4</v8:Digits>
+				<v8:FractionDigits>0</v8:FractionDigits>
+				<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</valueType>
+		<value xsi:type="xs:decimal">0</value>
+		<useRestriction>false</useRestriction>
+		<use>Always</use>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:userFields>
+				<dcsset:item xsi:type="dcsset:UserFieldExpression">
+					<dcsset:dataPath>ПользовательскиеПоля.Поле1</dcsset:dataPath>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Об,%</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:detailExpression>Выбор
+	Когда ПланДоходыФинансовые = 0
+		Тогда 0
+	Иначе ОбеспДоходыФинансовые / ПланДоходыФинансовые * 100
+Конец</dcsset:detailExpression>
+					<dcsset:detailExpressionPresentation>Выбор
+	Когда [План доходы финансовые] = 0
+		Тогда 0
+	Иначе [Обесп доходы финансовые] / [План доходы финансовые] * 100
+Конец</dcsset:detailExpressionPresentation>
+					<dcsset:totalExpression>Выбор
+	Когда ПланДоходыФинансовые = 0
+		Тогда 0
+	Иначе ОбеспДоходыФинансовые / ПланДоходыФинансовые * 100
+Конец</dcsset:totalExpression>
+					<dcsset:totalExpressionPresentation>Выбор
+	Когда [План доходы финансовые] = 0
+		Тогда 0
+	Иначе [Обесп доходы финансовые] / [План доходы финансовые] * 100
+Конец</dcsset:totalExpressionPresentation>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:UserFieldExpression">
+					<dcsset:dataPath>ПользовательскиеПоля.Поле3</dcsset:dataPath>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Опл, д,%</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:detailExpression>Выбор
+	Когда ПланДоходыВсего = 0
+		Тогда 0
+	Иначе ОплатаДоходыВсего / ПланДоходыВсего * 100
+Конец</dcsset:detailExpression>
+					<dcsset:detailExpressionPresentation>Выбор
+	Когда [План доходы всего] = 0
+		Тогда 0
+	Иначе [Оплата доходы всего] / [План доходы всего] * 100
+Конец</dcsset:detailExpressionPresentation>
+					<dcsset:totalExpression>Выбор
+	Когда ПланДоходыВсего = 0
+		Тогда 0
+	Иначе ОплатаДоходыВсего / ПланДоходыВсего * 100
+Конец</dcsset:totalExpression>
+					<dcsset:totalExpressionPresentation>Выбор
+	Когда [План доходы всего] = 0
+		Тогда 0
+	Иначе [Оплата доходы всего] / [План доходы всего] * 100
+Конец</dcsset:totalExpressionPresentation>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:UserFieldExpression">
+					<dcsset:dataPath>ПользовательскиеПоля.Поле4</dcsset:dataPath>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Опл, в,%</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:detailExpression>Выбор
+	Когда ПланВознаграждение = 0
+		Тогда 0
+	Иначе ОплатаВознаграждение / ПланВознаграждение * 100
+Конец</dcsset:detailExpression>
+					<dcsset:detailExpressionPresentation>Выбор
+	Когда [План вознаграждение] = 0
+		Тогда 0
+	Иначе [Оплата вознаграждение] / [План вознаграждение] * 100
+Конец</dcsset:detailExpressionPresentation>
+					<dcsset:totalExpression>Выбор
+	Когда ПланВознаграждение = 0
+		Тогда 0
+	Иначе ОплатаВознаграждение / ПланВознаграждение * 100
+Конец</dcsset:totalExpression>
+					<dcsset:totalExpressionPresentation>Выбор
+	Когда [План вознаграждение] = 0
+		Тогда 0
+	Иначе [Оплата вознаграждение] / [План вознаграждение] * 100
+Конец</dcsset:totalExpressionPresentation>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:UserFieldExpression">
+					<dcsset:dataPath>ПользовательскиеПоля.Поле5</dcsset:dataPath>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Опл, р,%</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:detailExpression>Выбор
+	Когда ПланРасходыНаВознагр = 0
+		Тогда 0
+	Иначе ОплатаРасходыНаВознагр / ПланРасходыНаВознагр * 100
+Конец</dcsset:detailExpression>
+					<dcsset:detailExpressionPresentation>Выбор
+	Когда [План расходы на вознагр] = 0
+		Тогда 0
+	Иначе [Оплата расходы на вознагр] / [План расходы на вознагр] * 100
+Конец</dcsset:detailExpressionPresentation>
+					<dcsset:totalExpression>Выбор
+	Когда ПланРасходыНаВознагр = 0
+		Тогда 0
+	Иначе ОплатаРасходыНаВознагр / ПланРасходыНаВознагр * 100
+Конец</dcsset:totalExpression>
+					<dcsset:totalExpressionPresentation>Выбор
+	Когда [План расходы на вознагр] = 0
+		Тогда 0
+	Иначе [Оплата расходы на вознагр] / [План расходы на вознагр] * 100
+Конец</dcsset:totalExpressionPresentation>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:UserFieldExpression">
+					<dcsset:dataPath>ПользовательскиеПоля.Поле2</dcsset:dataPath>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Опл, д.ф.,%</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:detailExpression>Выбор
+	Когда ОбеспДоходыФинансовые = 0
+		Тогда 0
+	Иначе ОплатаДоходыФинансовые / ОбеспДоходыФинансовые * 100
+Конец</dcsset:detailExpression>
+					<dcsset:detailExpressionPresentation>Выбор
+	Когда [Обесп доходы финансовые] = 0
+		Тогда 0
+	Иначе [Оплата доходы финансовые] / [Обесп доходы финансовые] * 100
+Конец</dcsset:detailExpressionPresentation>
+					<dcsset:totalExpression>Выбор
+	Когда ОбеспДоходыФинансовые = 0
+		Тогда 0
+	Иначе ОплатаДоходыФинансовые / ОбеспДоходыФинансовые * 100
+Конец</dcsset:totalExpression>
+					<dcsset:totalExpressionPresentation>Выбор
+	Когда [Обесп доходы финансовые] = 0
+		Тогда 0
+	Иначе [Оплата доходы финансовые] / [Обесп доходы финансовые] * 100
+Конец</dcsset:totalExpressionPresentation>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:UserFieldExpression">
+					<dcsset:dataPath>ПользовательскиеПоля.Поле6</dcsset:dataPath>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Акты, д.ф %</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:detailExpression>Выбор
+	Когда ПланДоходыФинансовые = 0
+		Тогда 0
+	Иначе АктыДоходыФин / ПланДоходыФинансовые * 100
+Конец</dcsset:detailExpression>
+					<dcsset:detailExpressionPresentation>Выбор
+	Когда [План доходы финансовые] = 0
+		Тогда 0
+	Иначе [Акты доходы фин] / [План доходы финансовые] * 100
+Конец</dcsset:detailExpressionPresentation>
+					<dcsset:totalExpression>Выбор
+	Когда ПланДоходыФинансовые = 0
+		Тогда 0
+	Иначе АктыДоходыФин / ПланДоходыФинансовые * 100
+Конец</dcsset:totalExpression>
+					<dcsset:totalExpressionPresentation>Выбор
+	Когда [План доходы финансовые] = 0
+		Тогда 0
+	Иначе [Акты доходы фин] / [План доходы финансовые] * 100
+Конец</dcsset:totalExpressionPresentation>
+				</dcsset:item>
+			</dcsset:userFields>
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>МенеджерПроекта</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Проект</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Доход финансовый</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ПланДоходыФинансовые</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ОбеспДоходыФинансовые</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ПользовательскиеПоля.Поле1</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>АктыДоходыФин</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ПользовательскиеПоля.Поле6</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ОплатаДоходыФинансовые</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ПользовательскиеПоля.Поле2</dcsset:field>
+					</dcsset:item>
+					<dcsset:placement>Auto</dcsset:placement>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Доходы</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ПланДоходыВсего</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ОплатаДоходыВсего</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ПользовательскиеПоля.Поле3</dcsset:field>
+					</dcsset:item>
+					<dcsset:placement>Auto</dcsset:placement>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вознаграждение посредника</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ПланВознаграждение</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ОплатаВознаграждение</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ПользовательскиеПоля.Поле4</dcsset:field>
+					</dcsset:item>
+					<dcsset:placement>Auto</dcsset:placement>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Расходы на вознаграждение</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ОплатаРасходыНаВознагр</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ПланРасходыНаВознагр</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ПользовательскиеПоля.Поле5</dcsset:field>
+					</dcsset:item>
+					<dcsset:placement>Auto</dcsset:placement>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ГодПроекта</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">0</dcscor:value>
+					<dcsset:userSettingID>251dcfc5-8163-4819-809b-d071ed5c2ca8</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>МенеджерПроекта</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:userSettingID>b8b381f3-7752-4b56-8aa9-c36402024181</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Проекты</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:userSettingID>cb9283e9-e878-4a91-90eb-80902e828d4a</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Статусы</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DesignTimeValue">Перечисление.СтатусыПроектов.ВРаботе</dcscor:value>
+					<dcscor:value xsi:type="dcscor:DesignTimeValue">Перечисление.СтатусыПроектов.Заблокирован</dcscor:value>
+					<dcscor:value xsi:type="dcscor:DesignTimeValue">Перечисление.СтатусыПроектов.Закрыт</dcscor:value>
+					<dcsset:userSettingID>c623788c-32ba-4013-b41b-50839e73a596</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ГодЗадачи</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">0</dcscor:value>
+					<dcsset:userSettingID>d8829f09-cf3e-4358-9810-1d0def89d760</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:conditionalAppearance>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>ПользовательскиеПоля.Поле1</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ПользовательскиеПоля.Поле3</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ПользовательскиеПоля.Поле4</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ПользовательскиеПоля.Поле2</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ПользовательскиеПоля.Поле5</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ПользовательскиеПоля.Поле6</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Формат</dcscor:parameter>
+							<dcscor:value xsi:type="v8:LocalStringType">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧЦ=5; ЧДЦ=1</v8:content>
+								</v8:item>
+							</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+			</dcsset:conditionalAppearance>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Заголовок</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Обеспечение и оплата проектов (по задачам)</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>МенеджерПроекта</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Проект</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:item xsi:type="dcsset:StructureItemGroup">
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>ЗадачаПроекта</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+					</dcsset:item>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+	<settingsVariant>
+		<dcsset:name>ПрямыеПроизводственныеРасходы</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Прямые произ.расходы</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:userFields>
+				<dcsset:item xsi:type="dcsset:UserFieldExpression">
+					<dcsset:dataPath>ПользовательскиеПоля.Поле1</dcsset:dataPath>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Об,%</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:detailExpression>Выбор
+	Когда ПланДоходыФинансовые = 0
+		Тогда 0
+	Иначе ОбеспДоходыФинансовые / ПланДоходыФинансовые * 100
+Конец</dcsset:detailExpression>
+					<dcsset:detailExpressionPresentation>Выбор
+	Когда [План доходы финансовые] = 0
+		Тогда 0
+	Иначе [Обесп доходы финансовые] / [План доходы финансовые] * 100
+Конец</dcsset:detailExpressionPresentation>
+					<dcsset:totalExpression>Выбор
+	Когда ПланДоходыФинансовые = 0
+		Тогда 0
+	Иначе ОбеспДоходыФинансовые / ПланДоходыФинансовые * 100
+Конец</dcsset:totalExpression>
+					<dcsset:totalExpressionPresentation>Выбор
+	Когда [План доходы финансовые] = 0
+		Тогда 0
+	Иначе [Обесп доходы финансовые] / [План доходы финансовые] * 100
+Конец</dcsset:totalExpressionPresentation>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:UserFieldExpression">
+					<dcsset:dataPath>ПользовательскиеПоля.Поле3</dcsset:dataPath>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Опл, д,%</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:detailExpression>Выбор
+	Когда ПланДоходыВсего = 0
+		Тогда 0
+	Иначе ОплатаДоходыВсего / ПланДоходыВсего * 100
+Конец</dcsset:detailExpression>
+					<dcsset:detailExpressionPresentation>Выбор
+	Когда [План доходы всего] = 0
+		Тогда 0
+	Иначе [Оплата доходы всего] / [План доходы всего] * 100
+Конец</dcsset:detailExpressionPresentation>
+					<dcsset:totalExpression>Выбор
+	Когда ПланДоходыВсего = 0
+		Тогда 0
+	Иначе ОплатаДоходыВсего / ПланДоходыВсего * 100
+Конец</dcsset:totalExpression>
+					<dcsset:totalExpressionPresentation>Выбор
+	Когда [План доходы всего] = 0
+		Тогда 0
+	Иначе [Оплата доходы всего] / [План доходы всего] * 100
+Конец</dcsset:totalExpressionPresentation>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:UserFieldExpression">
+					<dcsset:dataPath>ПользовательскиеПоля.Поле4</dcsset:dataPath>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Опл, в,%</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:detailExpression>Выбор
+	Когда ПланВознаграждение = 0
+		Тогда 0
+	Иначе ОплатаВознаграждение / ПланВознаграждение * 100
+Конец</dcsset:detailExpression>
+					<dcsset:detailExpressionPresentation>Выбор
+	Когда [План вознаграждение] = 0
+		Тогда 0
+	Иначе [Оплата вознаграждение] / [План вознаграждение] * 100
+Конец</dcsset:detailExpressionPresentation>
+					<dcsset:totalExpression>Выбор
+	Когда ПланВознаграждение = 0
+		Тогда 0
+	Иначе ОплатаВознаграждение / ПланВознаграждение * 100
+Конец</dcsset:totalExpression>
+					<dcsset:totalExpressionPresentation>Выбор
+	Когда [План вознаграждение] = 0
+		Тогда 0
+	Иначе [Оплата вознаграждение] / [План вознаграждение] * 100
+Конец</dcsset:totalExpressionPresentation>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:UserFieldExpression">
+					<dcsset:dataPath>ПользовательскиеПоля.Поле5</dcsset:dataPath>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Опл, р,%</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:detailExpression>Выбор
+	Когда ПланРасходыНаВознагр = 0
+		Тогда 0
+	Иначе ОплатаРасходыНаВознагр / ПланРасходыНаВознагр * 100
+Конец</dcsset:detailExpression>
+					<dcsset:detailExpressionPresentation>Выбор
+	Когда [План расходы на вознагр] = 0
+		Тогда 0
+	Иначе [Оплата расходы на вознагр] / [План расходы на вознагр] * 100
+Конец</dcsset:detailExpressionPresentation>
+					<dcsset:totalExpression>Выбор
+	Когда ПланРасходыНаВознагр = 0
+		Тогда 0
+	Иначе ОплатаРасходыНаВознагр / ПланРасходыНаВознагр * 100
+Конец</dcsset:totalExpression>
+					<dcsset:totalExpressionPresentation>Выбор
+	Когда [План расходы на вознагр] = 0
+		Тогда 0
+	Иначе [Оплата расходы на вознагр] / [План расходы на вознагр] * 100
+Конец</dcsset:totalExpressionPresentation>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:UserFieldExpression">
+					<dcsset:dataPath>ПользовательскиеПоля.Поле2</dcsset:dataPath>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Опл, д.ф.,%</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:detailExpression>Выбор
+	Когда ОбеспДоходыФинансовые = 0
+		Тогда 0
+	Иначе ОплатаДоходыФинансовые / ОбеспДоходыФинансовые * 100
+Конец</dcsset:detailExpression>
+					<dcsset:detailExpressionPresentation>Выбор
+	Когда [Обесп доходы финансовые] = 0
+		Тогда 0
+	Иначе [Оплата доходы финансовые] / [Обесп доходы финансовые] * 100
+Конец</dcsset:detailExpressionPresentation>
+					<dcsset:totalExpression>Выбор
+	Когда ОбеспДоходыФинансовые = 0
+		Тогда 0
+	Иначе ОплатаДоходыФинансовые / ОбеспДоходыФинансовые * 100
+Конец</dcsset:totalExpression>
+					<dcsset:totalExpressionPresentation>Выбор
+	Когда [Обесп доходы финансовые] = 0
+		Тогда 0
+	Иначе [Оплата доходы финансовые] / [Обесп доходы финансовые] * 100
+Конец</dcsset:totalExpressionPresentation>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:UserFieldExpression">
+					<dcsset:dataPath>ПользовательскиеПоля.Поле6</dcsset:dataPath>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Акты, д.ф %</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:detailExpression>Выбор
+	Когда ПланДоходыФинансовые = 0
+		Тогда 0
+	Иначе АктыДоходыФин / ПланДоходыФинансовые * 100
+Конец</dcsset:detailExpression>
+					<dcsset:detailExpressionPresentation>Выбор
+	Когда [План доходы финансовые] = 0
+		Тогда 0
+	Иначе [Акты доходы фин] / [План доходы финансовые] * 100
+Конец</dcsset:detailExpressionPresentation>
+					<dcsset:totalExpression>Выбор
+	Когда ПланДоходыФинансовые = 0
+		Тогда 0
+	Иначе АктыДоходыФин / ПланДоходыФинансовые * 100
+Конец</dcsset:totalExpression>
+					<dcsset:totalExpressionPresentation>Выбор
+	Когда [План доходы финансовые] = 0
+		Тогда 0
+	Иначе [Акты доходы фин] / [План доходы финансовые] * 100
+Конец</dcsset:totalExpressionPresentation>
+				</dcsset:item>
+			</dcsset:userFields>
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>МенеджерПроекта</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Проект</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Доход финансовый</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ПланДоходыФинансовые</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ОбеспДоходыФинансовые</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ПользовательскиеПоля.Поле1</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>АктыДоходыФин</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ПользовательскиеПоля.Поле6</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ОплатаДоходыФинансовые</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ПользовательскиеПоля.Поле2</dcsset:field>
+					</dcsset:item>
+					<dcsset:placement>Auto</dcsset:placement>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Прямые производственные расходы, факт</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ФОТПП</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>ФОТ произ.персонала</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>РасходыПоВыплатеЗП</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Расходы по выплате ЗП</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>РасходыПрочиеПрямые</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Прочие пр.расходы</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>СубПодряд</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Субподряд</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:placement>Auto</dcsset:placement>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ГодПроекта</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">0</dcscor:value>
+					<dcsset:userSettingID>251dcfc5-8163-4819-809b-d071ed5c2ca8</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>МенеджерПроекта</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:userSettingID>b8b381f3-7752-4b56-8aa9-c36402024181</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Проекты</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:userSettingID>cb9283e9-e878-4a91-90eb-80902e828d4a</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Статусы</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DesignTimeValue">Перечисление.СтатусыПроектов.ВРаботе</dcscor:value>
+					<dcscor:value xsi:type="dcscor:DesignTimeValue">Перечисление.СтатусыПроектов.Заблокирован</dcscor:value>
+					<dcscor:value xsi:type="dcscor:DesignTimeValue">Перечисление.СтатусыПроектов.Закрыт</dcscor:value>
+					<dcsset:userSettingID>c623788c-32ba-4013-b41b-50839e73a596</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ГодЗадачи</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">0</dcscor:value>
+					<dcsset:userSettingID>5549d7ef-e455-4659-b189-06d1cf296c08</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:conditionalAppearance>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>ПользовательскиеПоля.Поле1</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ПользовательскиеПоля.Поле3</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ПользовательскиеПоля.Поле4</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ПользовательскиеПоля.Поле2</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ПользовательскиеПоля.Поле5</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ПользовательскиеПоля.Поле6</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Формат</dcscor:parameter>
+							<dcscor:value xsi:type="v8:LocalStringType">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧЦ=5; ЧДЦ=1</v8:content>
+								</v8:item>
+							</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+			</dcsset:conditionalAppearance>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Заголовок</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Обеспечение и оплата проектов (по задачам)</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>МенеджерПроекта</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Проект</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:item xsi:type="dcsset:StructureItemGroup">
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>ЗадачаПроекта</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+					</dcsset:item>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>
