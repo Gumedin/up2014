@@ -86,6 +86,32 @@
 					<ContextMenu name="ВидТиповойЗадачиКонтекстноеМеню" id="14"/>
 					<ExtendedTooltip name="ВидТиповойЗадачиРасширеннаяПодсказка" id="15"/>
 				</LabelField>
+				<LabelField name="Родитель" id="25">
+					<DataPath>Список.Parent</DataPath>
+					<ContextMenu name="РодительКонтекстноеМеню" id="26"/>
+					<ExtendedTooltip name="РодительРасширеннаяПодсказка" id="27"/>
+				</LabelField>
+				<CheckBoxField name="Предопределенный" id="28">
+					<DataPath>Список.Predefined</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ПредопределенныйКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="ПредопределенныйРасширеннаяПодсказка" id="30"/>
+				</CheckBoxField>
+				<LabelField name="КоммерческоеВозн1" id="31">
+					<DataPath>Список.КоммерческоеВозн1</DataPath>
+					<ContextMenu name="КоммерческоеВозн1КонтекстноеМеню" id="32"/>
+					<ExtendedTooltip name="КоммерческоеВозн1РасширеннаяПодсказка" id="33"/>
+				</LabelField>
+				<LabelField name="КоммерческоеВозн2" id="34">
+					<DataPath>Список.КоммерческоеВозн2</DataPath>
+					<ContextMenu name="КоммерческоеВозн2КонтекстноеМеню" id="35"/>
+					<ExtendedTooltip name="КоммерческоеВозн2РасширеннаяПодсказка" id="36"/>
+				</LabelField>
+				<LabelField name="ТипНоменклатуры" id="37">
+					<DataPath>Список.ТипНоменклатуры</DataPath>
+					<ContextMenu name="ТипНоменклатурыКонтекстноеМеню" id="38"/>
+					<ExtendedTooltip name="ТипНоменклатурыРасширеннаяПодсказка" id="39"/>
+				</LabelField>
 			</ChildItems>
 		</Table>
 	</ChildItems>
