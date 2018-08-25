@@ -167,10 +167,8 @@
 			<Subsystem>Производство</Subsystem>
 			<Subsystem>Подразделения</Subsystem>
 			<Subsystem>Сервис</Subsystem>
-			<Subsystem>ДиректорыПроектов</Subsystem>
 			<Subsystem>КлиентМенеджерыПроектов</Subsystem>
 			<Subsystem>Сотрудники</Subsystem>
-			<Subsystem>ТиражныеПроекты</Subsystem>
 			<Subsystem>НСИ</Subsystem>
 			<Subsystem>СтандартныеПодсистемы</Subsystem>
 			<StyleItem>ВидДняПроизводственногоКалендаряВоскресеньеЦвет</StyleItem>
@@ -462,7 +460,6 @@
 			<CommonPicture>Скрепка</CommonPicture>
 			<CommonPicture>СкрытаяНастройкаОтчета</CommonPicture>
 			<CommonPicture>СнятьПризнакРассмотреноУВзаимодействия</CommonPicture>
-			<CommonPicture>ПодсистемаДП</CommonPicture>
 			<CommonPicture>ПодсистемаЗакупки</CommonPicture>
 			<CommonPicture>ПодсистемаКлиентМенеджер</CommonPicture>
 			<CommonPicture>ПодсистемаКМ</CommonPicture>
@@ -672,7 +669,6 @@
 			<Role>ПроектМенеджерТП</Role>
 			<Role>Сотрудник</Role>
 			<Role>ФинансовыйМенеджер</Role>
-			<Role>ДиректорПроектов</Role>
 			<Role>РуководительПроизводства</Role>
 			<Role>КоммерческийДиректор</Role>
 			<Role>ФинансовыйДиректор</Role>
@@ -2218,8 +2214,8 @@
 			<Report>АгентскоеВознаграждение</Report>
 			<Report>АнализЗагруженностиПодразделений</Report>
 			<Report>АнализПлановРабот</Report>
-			<Report>БДРпоТипамДохода</Report>
-			<Report>БонусыПоАктам</Report>
+			<Report>_БДРпоТипамДохода</Report>
+			<Report>_БонусыПоАктам</Report>
 			<Report>ОценкаПроизводительности</Report>
 			<Report>ЕжемесячнаяОценкаРаботыСотрудника</Report>
 			<Report>ЗагруженностьРесурсов</Report>
@@ -2227,7 +2223,8 @@
 			<Report>ЗакрытиеЗадачПоМесяцам</Report>
 			<Report>ЗакрытиеПлановРабот</Report>
 			<Report>ЗакрытиеПлановРаботПоМесяцам</Report>
-			<Report>ЗакрытиеСДР</Report>
+			<Report>_ЗакрытиеСДР</Report>
+			<Report>_ЗакрытиеТиражныхРаботПоТабелю</Report>
 			<Report>ИнцидентыЗадачиПроекта</Report>
 			<Report>ИсполнениеПланаРаботЗаМесяц</Report>
 			<Report>ИсполнениеПланаРабот</Report>
@@ -2238,23 +2235,19 @@
 			<Report>НагрузкаПоПланамРабот</Report>
 			<Report>НачислениеРКОПоСтатьям</Report>
 			<Report>ОбеспечениеИОплатаПроектов</Report>
-			<Report>ОбИОплПроектовПоЗадачам2017</Report>
-			<Report>ОстаткиВознагражденияПоМесяцам</Report>
+			<Report>_ОстаткиВознагражденияПоМесяцам</Report>
 			<Report>ОстаткиКоммерческихРасходов</Report>
 			<Report>ОстаткиПоСтатьям</Report>
 			<Report>ОстаткиПоСтатьям2017</Report>
-			<Report>ОтчетПоФОТдляКМ</Report>
+			<Report>_ОтчетПоФОТдляКМ</Report>
 			<Report>ОтчетПоФондамДПУ</Report>
 			<Report>ОтчетПоФондам</Report>
 			<Report>ОтчетПоДоговорам</Report>
 			<Report>ОценкаСотрудникаЗаПериод</Report>
 			<Report>ПлановыеЗадачи</Report>
-			<Report>ПланДоходовПоЗадачеПроекта</Report>
-			<Report>ПланДоходовПоПроектам</Report>
-			<Report>ПланДоходовПоТипамДоходов</Report>
-			<Report>ПланФакт2017</Report>
-			<Report>ПланФактПроекта</Report>
-			<Report>ПланФактЗадачиПроекта</Report>
+			<Report>_ПланДоходовПоЗадачеПроекта</Report>
+			<Report>_ПланДоходовПоПроектам</Report>
+			<Report>_ПланДоходовПоТипамДоходов</Report>
 			<Report>ПосещенияГант</Report>
 			<Report>ПосещенияСотрудников</Report>
 			<Report>ПоступленияВФондПодразделений</Report>
@@ -2264,7 +2257,7 @@
 			<Report>ПрочиеПрямыеРасходыПоМесяцам</Report>
 			<Report>ПечатьТабеляРабочегоВремени</Report>
 			<Report>РасходыПоСотрудникам</Report>
-			<Report>РасходыПоФинансовымСтатьямБДР</Report>
+			<Report>_РасходыПоФинансовымСтатьямБДР</Report>
 			<Report>РасчетКРПоЗадачамППЛО</Report>
 			<Report>РейтингЦентраКомпетенции</Report>
 			<Report>СертификатыСотрудников</Report>
