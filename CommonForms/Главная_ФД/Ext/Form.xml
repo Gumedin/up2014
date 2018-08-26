@@ -26,6 +26,10 @@
 							<TitleLocation>None</TitleLocation>
 							<ContextMenu name="HTMLДокументаКонтекстноеМеню" id="128"/>
 							<ExtendedTooltip name="HTMLДокументаРасширеннаяПодсказка" id="129"/>
+							<Events>
+								<Event name="DocumentComplete">HTMLДокументаДокументСформирован</Event>
+								<Event name="OnClick">HTMLДокументаПриНажатии</Event>
+							</Events>
 						</HTMLDocumentField>
 						<Button name="Редактор" id="135">
 							<Type>UsualButton</Type>
@@ -61,29 +65,6 @@
 							<CommandName>Form.Command.Записать</CommandName>
 							<ExtendedTooltip name="ЗаписатьРасширеннаяПодсказка" id="124"/>
 						</Button>
-					</ChildItems>
-				</Page>
-				<Page name="Шаблон" id="139">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Шаблон</v8:content>
-						</v8:item>
-					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Шаблон</v8:content>
-						</v8:item>
-					</ToolTip>
-					<ExtendedTooltip name="ШаблонРасширеннаяПодсказка" id="140"/>
-					<ChildItems>
-						<TextDocumentField name="СтатистикаФинансы" id="141">
-							<DataPath>СтатистикаФинансы</DataPath>
-							<ReadOnly>true</ReadOnly>
-							<ContextMenu name="СтатистикаФинансыКонтекстноеМеню" id="142"/>
-							<ExtendedTooltip name="СтатистикаФинансыРасширеннаяПодсказка" id="143"/>
-						</TextDocumentField>
 					</ChildItems>
 				</Page>
 			</ChildItems>
