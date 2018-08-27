@@ -50,7 +50,31 @@
 			<value>true</value>
 		</right>
 		<right>
+			<name>Insert</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Delete</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Posting</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>UndoPosting</name>
+			<value>true</value>
+		</right>
+		<right>
 			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
 			<value>true</value>
 		</right>
 		<right>
@@ -257,6 +281,10 @@
 	</object>
 	<object>
 		<name>Document.АктТиражногоПодразделения.Attribute.НомерАктаРеализации</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
 		<right>
 			<name>Edit</name>
 			<value>false</value>
@@ -648,6 +676,10 @@
 	<object>
 		<name>Document.АктТиражногоПодразделения.Attribute.ПланРабот</name>
 		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
 			<name>Edit</name>
 			<value>false</value>
 		</right>
@@ -789,6 +821,10 @@
 	<object>
 		<name>Document.АктТиражногоПодразделения.Attribute.Организация</name>
 		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
 			<name>Edit</name>
 			<value>false</value>
 		</right>
@@ -871,6 +907,10 @@
 	</object>
 	<object>
 		<name>Document.АктТиражногоПодразделения.Attribute.Подразделение</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
 		<right>
 			<name>Edit</name>
 			<value>false</value>
@@ -1068,6 +1108,10 @@
 	</object>
 	<object>
 		<name>Document.АктТиражногоПодразделения.Attribute.ФизическоеЛицо</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
 		<right>
 			<name>Edit</name>
 			<value>false</value>
@@ -1535,6 +1579,17 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ПланРаботТиражный.Attribute.ТребуетсяПодтверждение</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
 		<name>CommonForm.НапоминаниеПриРедактировании</name>
 		<right>
 			<name>View</name>
@@ -1585,19 +1640,7 @@
 			<value>true</value>
 		</right>
 		<right>
-			<name>InteractiveInsert</name>
-			<value>true</value>
-		</right>
-		<right>
 			<name>Edit</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveSetDeletionMark</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveClearDeletionMark</name>
 			<value>true</value>
 		</right>
 		<right>
@@ -1788,6 +1831,17 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ПланРаботТиражный.Attribute.СкидкаКлиенту</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
 		<name>CommonForm.ФормаОтчета</name>
 		<right>
 			<name>View</name>
@@ -1885,6 +1939,10 @@
 	<object>
 		<name>Document.АктТиражногоПодразделения.Attribute.Договор</name>
 		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
 			<name>Edit</name>
 			<value>false</value>
 		</right>
@@ -1970,69 +2028,6 @@
 		<name>CommonCommand.ПосещенияНачальникаПодразделения</name>
 		<right>
 			<name>View</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>Document.ПланРаботТиражный</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Insert</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Update</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Posting</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>UndoPosting</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveInsert</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveSetDeletionMark</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveClearDeletionMark</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractivePosting</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractivePostingRegular</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveUndoPosting</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveChangeOfPosted</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InputByString</name>
 			<value>true</value>
 		</right>
 	</object>
@@ -2167,6 +2162,10 @@
 	<object>
 		<name>Document.АктТиражногоПодразделения.Attribute.Сумма</name>
 		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
 			<name>Edit</name>
 			<value>false</value>
 		</right>
@@ -2215,43 +2214,11 @@
 			<value>true</value>
 		</right>
 		<right>
-			<name>Posting</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>UndoPosting</name>
-			<value>true</value>
-		</right>
-		<right>
 			<name>View</name>
 			<value>true</value>
 		</right>
 		<right>
-			<name>InteractiveInsert</name>
-			<value>true</value>
-		</right>
-		<right>
 			<name>Edit</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveSetDeletionMark</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveClearDeletionMark</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractivePosting</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractivePostingRegular</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveUndoPosting</name>
 			<value>true</value>
 		</right>
 		<right>
@@ -2276,6 +2243,17 @@
 		<right>
 			<name>Edit</name>
 			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.АктТиражногоПодразделения.Attribute.Комментарий</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
 		</right>
 	</object>
 	<object>
@@ -2396,6 +2374,17 @@
 		<right>
 			<name>View</name>
 			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПланРаботТиражный.Attribute.Закрыт</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
 		</right>
 	</object>
 	<object>
@@ -2644,7 +2633,31 @@
 			<value>true</value>
 		</right>
 		<right>
+			<name>Insert</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Delete</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Posting</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>UndoPosting</name>
+			<value>true</value>
+		</right>
+		<right>
 			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
 			<value>true</value>
 		</right>
 		<right>
@@ -2685,6 +2698,10 @@
 			<value>true</value>
 		</right>
 		<right>
+			<name>Delete</name>
+			<value>true</value>
+		</right>
+		<right>
 			<name>Posting</name>
 			<value>true</value>
 		</right>
@@ -2697,31 +2714,7 @@
 			<value>true</value>
 		</right>
 		<right>
-			<name>InteractiveInsert</name>
-			<value>true</value>
-		</right>
-		<right>
 			<name>Edit</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveSetDeletionMark</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveClearDeletionMark</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractivePosting</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractivePostingRegular</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveUndoPosting</name>
 			<value>true</value>
 		</right>
 		<right>
@@ -3009,22 +3002,11 @@
 		</right>
 	</object>
 	<object>
-		<name>Document.АктТиражногоПодразделения</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
+		<name>Document.АктТиражногоПодразделения.StandardAttribute.Posted</name>
 		<right>
 			<name>View</name>
-			<value>true</value>
+			<value>false</value>
 		</right>
-		<right>
-			<name>InputByString</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>Document.АктТиражногоПодразделения.StandardAttribute.Posted</name>
 		<right>
 			<name>Edit</name>
 			<value>false</value>
@@ -3033,12 +3015,20 @@
 	<object>
 		<name>Document.АктТиражногоПодразделения.StandardAttribute.Ref</name>
 		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
 			<name>Edit</name>
 			<value>false</value>
 		</right>
 	</object>
 	<object>
 		<name>Document.АктТиражногоПодразделения.StandardAttribute.DeletionMark</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
 		<right>
 			<name>Edit</name>
 			<value>false</value>
@@ -3047,6 +3037,10 @@
 	<object>
 		<name>Document.АктТиражногоПодразделения.StandardAttribute.Date</name>
 		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
 			<name>Edit</name>
 			<value>false</value>
 		</right>
@@ -3054,12 +3048,31 @@
 	<object>
 		<name>Document.АктТиражногоПодразделения.StandardAttribute.Number</name>
 		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПланРаботТиражный.Attribute.ОстатокПоСмете</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
 			<name>Edit</name>
 			<value>false</value>
 		</right>
 	</object>
 	<object>
 		<name>Document.АктТиражногоПодразделения.Attribute.Контрагент</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
 		<right>
 			<name>Edit</name>
 			<value>false</value>
