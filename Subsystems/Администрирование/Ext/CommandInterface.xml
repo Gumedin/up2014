@@ -3,12 +3,12 @@
 	<CommandsVisibility>
 		<Command name="Catalog.Пользователи.StandardCommand.OpenList">
 			<Visibility>
-				<xr:Common>false</xr:Common>
+				<xr:Common>true</xr:Common>
 			</Visibility>
 		</Command>
 		<Command name="Catalog.ГруппыДоступа.StandardCommand.OpenList">
 			<Visibility>
-				<xr:Common>false</xr:Common>
+				<xr:Common>true</xr:Common>
 			</Visibility>
 		</Command>
 		<Command name="Catalog.ВнешниеПользователи.StandardCommand.OpenList">
@@ -18,7 +18,7 @@
 		</Command>
 		<Command name="DataProcessor.ЖурналРегистрации.Command.ЖурналРегистрации">
 			<Visibility>
-				<xr:Common>false</xr:Common>
+				<xr:Common>true</xr:Common>
 			</Visibility>
 		</Command>
 		<Command name="DataProcessor.ЗащитаПерсональныхДанных.Command.ЗащитаПерсональныхДанных">
@@ -28,17 +28,17 @@
 		</Command>
 		<Command name="CommonCommand.ПанельОтчетовАдминистрирование">
 			<Visibility>
-				<xr:Common>false</xr:Common>
+				<xr:Common>true</xr:Common>
 			</Visibility>
 		</Command>
 		<Command name="Catalog.ВариантыОтчетов.StandardCommand.OpenList">
 			<Visibility>
-				<xr:Common>false</xr:Common>
+				<xr:Common>true</xr:Common>
 			</Visibility>
 		</Command>
 		<Command name="Catalog.ДополнительныеОтчетыИОбработки.StandardCommand.OpenList">
 			<Visibility>
-				<xr:Common>false</xr:Common>
+				<xr:Common>true</xr:Common>
 			</Visibility>
 		</Command>
 		<Command name="Catalog.РассылкиОтчетов.StandardCommand.OpenList">
@@ -52,11 +52,6 @@
 			</Visibility>
 		</Command>
 		<Command name="Catalog.ВидыКонтактнойИнформации.StandardCommand.OpenList">
-			<Visibility>
-				<xr:Common>false</xr:Common>
-			</Visibility>
-		</Command>
-		<Command name="DataProcessor.РегламентныеИФоновыеЗадания.Command.РегламентныеИФоновыеЗадания">
 			<Visibility>
 				<xr:Common>false</xr:Common>
 			</Visibility>
@@ -77,11 +72,6 @@
 			</Visibility>
 		</Command>
 		<Command name="CommonCommand.НастройкиСинхронизацииДанных">
-			<Visibility>
-				<xr:Common>false</xr:Common>
-			</Visibility>
-		</Command>
-		<Command name="CommonCommand.СинхронизацияДанныхВМоделиСервиса">
 			<Visibility>
 				<xr:Common>false</xr:Common>
 			</Visibility>
@@ -141,11 +131,6 @@
 				<xr:Common>false</xr:Common>
 			</Visibility>
 		</Command>
-		<Command name="0:b8a966ba-3452-44df-91d0-7040ecd3e4c2">
-			<Visibility>
-				<xr:Common>false</xr:Common>
-			</Visibility>
-		</Command>
 		<Command name="Catalog.НаборыДополнительныхРеквизитовИСведений.Command.ДополнительныеРеквизиты">
 			<Visibility>
 				<xr:Common>false</xr:Common>
@@ -176,19 +161,9 @@
 				<xr:Common>false</xr:Common>
 			</Visibility>
 		</Command>
-		<Command name="CommonCommand.АвтономнаяРаботаВМоделиСервиса">
-			<Visibility>
-				<xr:Common>true</xr:Common>
-			</Visibility>
-		</Command>
-		<Command name="CommonCommand.АвтономнаяРабота">
-			<Visibility>
-				<xr:Common>true</xr:Common>
-			</Visibility>
-		</Command>
 		<Command name="DataProcessor.АктивныеПользователи.Command.АктивныеПользователи">
 			<Visibility>
-				<xr:Common>false</xr:Common>
+				<xr:Common>true</xr:Common>
 			</Visibility>
 		</Command>
 		<Command name="Catalog.ГруппыВнешнихПользователей.StandardCommand.OpenList">
@@ -198,27 +173,7 @@
 		</Command>
 		<Command name="Catalog.ГруппыПользователей.StandardCommand.OpenList">
 			<Visibility>
-				<xr:Common>false</xr:Common>
-			</Visibility>
-		</Command>
-		<Command name="0:d5507c4b-2185-4938-9b9f-9f424e9592a4">
-			<Visibility>
-				<xr:Common>false</xr:Common>
-			</Visibility>
-		</Command>
-		<Command name="0:c411827b-fa66-4a84-9560-12ffff43ba8b">
-			<Visibility>
-				<xr:Common>false</xr:Common>
-			</Visibility>
-		</Command>
-		<Command name="0:2a5a6e14-d41b-4218-8cf5-c59d5c683350">
-			<Visibility>
-				<xr:Common>false</xr:Common>
-			</Visibility>
-		</Command>
-		<Command name="0:22577964-6af5-44af-a2f2-6049dc67c1ce">
-			<Visibility>
-				<xr:Common>false</xr:Common>
+				<xr:Common>true</xr:Common>
 			</Visibility>
 		</Command>
 		<Command name="DataProcessor.РезервноеКопированиеИБ.Command.ПоказатьРезультат">
@@ -228,7 +183,7 @@
 		</Command>
 		<Command name="Catalog.ПрофилиГруппДоступа.StandardCommand.OpenList">
 			<Visibility>
-				<xr:Common>false</xr:Common>
+				<xr:Common>true</xr:Common>
 			</Visibility>
 		</Command>
 		<Command name="Catalog.СценарииОбменовДанными.StandardCommand.OpenList">
@@ -322,16 +277,6 @@
 			</Visibility>
 		</Command>
 		<Command name="InformationRegister.ДатыЗапретаИзменения.Command.ДатыЗапретаИзмененияДанных">
-			<Visibility>
-				<xr:Common>false</xr:Common>
-			</Visibility>
-		</Command>
-		<Command name="100:5e01ee62-d690-42bd-997e-491c90ea1c56">
-			<Visibility>
-				<xr:Common>false</xr:Common>
-			</Visibility>
-		</Command>
-		<Command name="0:b40d32dd-ac4a-41b4-b009-86cb9cdb3370">
 			<Visibility>
 				<xr:Common>false</xr:Common>
 			</Visibility>
@@ -543,14 +488,6 @@
 			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
 			<Placement>Auto</Placement>
 		</Command>
-		<Command name="CommonCommand.АвтономнаяРаботаВМоделиСервиса">
-			<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
-			<Placement>Auto</Placement>
-		</Command>
-		<Command name="CommonCommand.АвтономнаяРабота">
-			<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
-			<Placement>Auto</Placement>
-		</Command>
 		<Command name="DataProcessor.АктивныеПользователи.Command.АктивныеПользователи">
 			<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
 			<Placement>Auto</Placement>
@@ -636,9 +573,6 @@
 		<Command name="DataProcessor.ПанельАдминистрированияБСП.Command.ПечатныеФормыОтчетыИОбработки">
 			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
 		</Command>
-		<Command name="0:ab494025-00b8-46f2-92a0-7b097cf8c901">
-			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
-		</Command>
 		<Command name="Catalog.ВидыКонтактнойИнформации.StandardCommand.OpenList">
 			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
 		</Command>
@@ -655,9 +589,6 @@
 			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
 		</Command>
 		<Command name="CommonCommand.НастройкиСинхронизацииДанных">
-			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
-		</Command>
-		<Command name="CommonCommand.СинхронизацияДанныхВМоделиСервиса">
 			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
 		</Command>
 		<Command name="Catalog.Валюты.StandardCommand.OpenList">
@@ -693,9 +624,6 @@
 		<Command name="InformationRegister.АдресныеОбъекты.Command.ОчиститьАдресныйКлассификатор">
 			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
 		</Command>
-		<Command name="0:b8a966ba-3452-44df-91d0-7040ecd3e4c2">
-			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
-		</Command>
 		<Command name="Catalog.НаборыДополнительныхРеквизитовИСведений.Command.ДополнительныеРеквизиты">
 			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
 		</Command>
@@ -717,12 +645,6 @@
 		<Command name="Catalog.ПравилаПроверкиУчета.StandardCommand.OpenList">
 			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
 		</Command>
-		<Command name="CommonCommand.АвтономнаяРаботаВМоделиСервиса">
-			<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
-		</Command>
-		<Command name="CommonCommand.АвтономнаяРабота">
-			<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
-		</Command>
 		<Command name="DataProcessor.АктивныеПользователи.Command.АктивныеПользователи">
 			<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
 		</Command>
@@ -730,18 +652,6 @@
 			<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
 		</Command>
 		<Command name="Catalog.ГруппыПользователей.StandardCommand.OpenList">
-			<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
-		</Command>
-		<Command name="0:d5507c4b-2185-4938-9b9f-9f424e9592a4">
-			<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
-		</Command>
-		<Command name="0:c411827b-fa66-4a84-9560-12ffff43ba8b">
-			<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
-		</Command>
-		<Command name="0:2a5a6e14-d41b-4218-8cf5-c59d5c683350">
-			<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
-		</Command>
-		<Command name="0:22577964-6af5-44af-a2f2-6049dc67c1ce">
 			<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
 		</Command>
 		<Command name="DataProcessor.РезервноеКопированиеИБ.Command.ПоказатьРезультат">
@@ -762,8 +672,8 @@
 		<Command name="Catalog.УчетныеЗаписиЭлектроннойПочты.StandardCommand.OpenList">
 			<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
 		</Command>
-		<Command name="100:b04b4979-1328-492e-8f87-bcff499c00c0">
-			<CommandGroup>ActionsPanelTools</CommandGroup>
+		<Command name="Catalog.УчетныеЗаписиЭлектроннойПочты.Command.НастройкиСистемнойУчетнойЗаписи">
+			<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
 		</Command>
 		<Command name="DataProcessor.АвтоматическоеИзвлечениеТекстов.Command.АвтоматическоеИзвлечениеТекстов">
 			<CommandGroup>ActionsPanelTools</CommandGroup>
@@ -777,15 +687,6 @@
 		<Command name="CommonForm.ВходВОбластьДанных.StandardCommand.Open">
 			<CommandGroup>ActionsPanelTools</CommandGroup>
 		</Command>
-		<Command name="100:5d323808-0c04-4e21-bfd2-61dbdcbafde8">
-			<CommandGroup>ActionsPanelTools</CommandGroup>
-		</Command>
-		<Command name="0:636983ac-b8c1-481d-b5b0-26cdb31fe770">
-			<CommandGroup>ActionsPanelTools</CommandGroup>
-		</Command>
-		<Command name="0:c1092cd5-ebef-4ca7-aa41-aba9ff112eef">
-			<CommandGroup>ActionsPanelTools</CommandGroup>
-		</Command>
 		<Command name="DataProcessor.РезервноеКопированиеИБ.Command.ВыполнитьВосстановлениеДанных">
 			<CommandGroup>ActionsPanelTools</CommandGroup>
 		</Command>
@@ -796,12 +697,6 @@
 			<CommandGroup>ActionsPanelTools</CommandGroup>
 		</Command>
 		<Command name="InformationRegister.ДатыЗапретаИзменения.Command.ДатыЗапретаИзмененияДанных">
-			<CommandGroup>ActionsPanelTools</CommandGroup>
-		</Command>
-		<Command name="100:5e01ee62-d690-42bd-997e-491c90ea1c56">
-			<CommandGroup>ActionsPanelTools</CommandGroup>
-		</Command>
-		<Command name="0:b40d32dd-ac4a-41b4-b009-86cb9cdb3370">
 			<CommandGroup>ActionsPanelTools</CommandGroup>
 		</Command>
 		<Command name="CommonCommand.ДополнительныеОбработкиАдминистрирование">
@@ -907,6 +802,9 @@
 			<CommandGroup>ActionsPanelTools</CommandGroup>
 		</Command>
 		<Command name="DataProcessor.НастройкиЦентраМониторинга.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="Catalog.КлассификаторБанков.Command.КлассификаторБанковРФ">
 			<CommandGroup>ActionsPanelTools</CommandGroup>
 		</Command>
 	</CommandsOrder>
