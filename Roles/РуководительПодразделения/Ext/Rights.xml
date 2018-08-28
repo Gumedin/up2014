@@ -119,6 +119,10 @@
 			<value>true</value>
 		</right>
 		<right>
+			<name>Delete</name>
+			<value>true</value>
+		</right>
+		<right>
 			<name>View</name>
 			<value>true</value>
 		</right>
@@ -381,6 +385,13 @@
 		</right>
 		<right>
 			<name>InputByString</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>CommonCommand.ПланыРаботПроектМенеджера</name>
+		<right>
+			<name>View</name>
 			<value>true</value>
 		</right>
 	</object>
@@ -1234,6 +1245,13 @@
 		</right>
 	</object>
 	<object>
+		<name>Subsystem.Производство</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>CommonForm.НастройкиКриптографии</name>
 		<right>
 			<name>View</name>
@@ -1649,29 +1667,6 @@
 		</right>
 	</object>
 	<object>
-		<name>Catalog.ФизическиеЛица</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Update</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InputByString</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
 		<name>Catalog.СтатусыСотрудников</name>
 		<right>
 			<name>Read</name>
@@ -1937,6 +1932,17 @@
 		</right>
 	</object>
 	<object>
+		<name>Report.ЗакрытиеПлановРабот</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Document.АктТиражногоПодразделения.Attribute.Договор</name>
 		<right>
 			<name>View</name>
@@ -2182,6 +2188,17 @@
 		</right>
 	</object>
 	<object>
+		<name>Report.ЗакрытиеПлановРаботПоМесяцам</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Report.АналитическийОтчетПоАнкетированию</name>
 		<right>
 			<name>Use</name>
@@ -2271,17 +2288,6 @@
 		</right>
 	</object>
 	<object>
-		<name>Report.ПосещенияГант</name>
-		<right>
-			<name>Use</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
 		<name>CommonCommand.ЗаявкаНаВыплатуИзФондаРуководительПодразделения</name>
 		<right>
 			<name>View</name>
@@ -2329,6 +2335,37 @@
 		</right>
 	</object>
 	<object>
+		<name>Catalog.КалькуляторПланаРабот</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Insert</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Delete</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InputByString</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Catalog.ЕдиницыИзмерения</name>
 		<right>
 			<name>Read</name>
@@ -2364,13 +2401,6 @@
 			<name>Read</name>
 			<value>true</value>
 		</right>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>CommonCommand.ТабельРаботЗПТ_РуководительПодразделения</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -2452,6 +2482,13 @@
 			<name>Use</name>
 			<value>true</value>
 		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>CommonCommand.ЗадачиПроектаПроектМенеджера</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -2807,6 +2844,13 @@
 		</right>
 	</object>
 	<object>
+		<name>Subsystem.Производство.Subsystem.ПланыРабот</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Document.ПланРаботТиражный.TabularSection.Расчет.Attribute.СуммаФОТ</name>
 		<right>
 			<name>View</name>
@@ -2819,6 +2863,17 @@
 	</object>
 	<object>
 		<name>CommonCommand.НастройкиТекущегоПользователя</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Report.АнализПлановРабот</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -3355,6 +3410,13 @@
 		</right>
 		<right>
 			<name>InputByString</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Subsystem.Производство.Subsystem.ЗадачиПроектов</name>
+		<right>
+			<name>View</name>
 			<value>true</value>
 		</right>
 	</object>

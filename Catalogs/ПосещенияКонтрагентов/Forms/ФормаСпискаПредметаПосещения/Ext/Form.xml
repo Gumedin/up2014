@@ -87,7 +87,7 @@
 							</Events>
 							<ChildItems>
 								<LabelField name="Ссылка" id="57">
-									<DataPath>~Список.Ref~Список.Ссылка</DataPath>
+									<DataPath>Список.Ref</DataPath>
 									<UserVisible>
 										<xr:Common>false</xr:Common>
 									</UserVisible>
@@ -95,7 +95,7 @@
 									<ExtendedTooltip name="СсылкаРасширеннаяПодсказка" id="59"/>
 								</LabelField>
 								<PictureField name="ЕстьФайлы" id="43">
-									<DataPath>~Список.ЕстьФайлы</DataPath>
+									<DataPath>Список.ЕстьФайлы</DataPath>
 									<TitleLocation>None</TitleLocation>
 									<HeaderPicture>
 										<xr:Ref>CommonPicture.Скрепка</xr:Ref>
@@ -109,13 +109,13 @@
 									<ExtendedTooltip name="ЕстьФайлыРасширеннаяПодсказка" id="45"/>
 								</PictureField>
 								<CheckBoxField name="Отработано" id="28">
-									<DataPath>~Список.Отработано</DataPath>
+									<DataPath>Список.Отработано</DataPath>
 									<CheckBoxType>Auto</CheckBoxType>
 									<ContextMenu name="ОтработаноКонтекстноеМеню" id="29"/>
 									<ExtendedTooltip name="ОтработаноРасширеннаяПодсказка" id="30"/>
 								</CheckBoxField>
 								<LabelField name="Дата" id="19">
-									<DataPath>~Список.Дата</DataPath>
+									<DataPath>Список.Дата</DataPath>
 									<Format>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
@@ -126,7 +126,7 @@
 									<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="21"/>
 								</LabelField>
 								<LabelField name="Дата1" id="37">
-									<DataPath>~Список.Дата</DataPath>
+									<DataPath>Список.Дата</DataPath>
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
@@ -143,22 +143,22 @@
 									<ExtendedTooltip name="Дата1РасширеннаяПодсказка" id="39"/>
 								</LabelField>
 								<LabelField name="ФизическоеЛицо" id="31">
-									<DataPath>~Список.ФизическоеЛицо</DataPath>
+									<DataPath>Список.ФизическоеЛицо</DataPath>
 									<ContextMenu name="ФизическоеЛицоКонтекстноеМеню" id="32"/>
 									<ExtendedTooltip name="ФизическоеЛицоРасширеннаяПодсказка" id="33"/>
 								</LabelField>
 								<LabelField name="Уточнение" id="40">
-									<DataPath>~Список.Уточнение</DataPath>
+									<DataPath>Список.Уточнение</DataPath>
 									<ContextMenu name="УточнениеКонтекстноеМеню" id="41"/>
 									<ExtendedTooltip name="УточнениеРасширеннаяПодсказка" id="42"/>
 								</LabelField>
 								<LabelField name="Количество" id="60">
-									<DataPath>~Список.Количество</DataPath>
+									<DataPath>Список.Количество</DataPath>
 									<ContextMenu name="КоличествоКонтекстноеМеню" id="61"/>
 									<ExtendedTooltip name="КоличествоРасширеннаяПодсказка" id="62"/>
 								</LabelField>
 								<LabelField name="Часов" id="25">
-									<DataPath>~Список.Часов</DataPath>
+									<DataPath>Список.Часов</DataPath>
 									<ContextMenu name="ЧасовКонтекстноеМеню" id="26"/>
 									<ExtendedTooltip name="ЧасовРасширеннаяПодсказка" id="27"/>
 								</LabelField>
@@ -199,7 +199,7 @@
 			</Edit>
 			<MainAttribute>true</MainAttribute>
 			<UseAlways>
-				<Field>~Список.ФайлКартинки</Field>
+				<Field>Список.ФайлКартинки</Field>
 			</UseAlways>
 			<Settings xsi:type="DynamicList">
 				<ManualQuery>true</ManualQuery>
@@ -233,7 +233,7 @@
 	СправочникПосещенияКонтрагентов.ФайлКартинки
 ИЗ
 	Справочник.ПосещенияКонтрагентов КАК СправочникПосещенияКонтрагентов
-		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.НаличиеПрисоединенныхФайлов КАК НаличиеПрисоединенныхФайлов
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.НаличиеФайлов КАК НаличиеПрисоединенныхФайлов
 		ПО (НаличиеПрисоединенныхФайлов.ОбъектСФайлами = СправочникПосещенияКонтрагентов.Ссылка)
 ГДЕ
 	НЕ СправочникПосещенияКонтрагентов.ПометкаУдаления
