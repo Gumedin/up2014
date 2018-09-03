@@ -57,6 +57,7 @@
 		</InputField>
 		<InputField name="ДокументУТ" id="69">
 			<DataPath>Объект.Акт</DataPath>
+			<Enabled>false</Enabled>
 			<ChoiceParameterLinks>
 				<xr:Link>
 					<xr:Name>Отбор.Договор</xr:Name>
@@ -70,6 +71,79 @@
 		<Pages name="Группа1" id="27">
 			<ExtendedTooltip name="Группа1ExtendedTooltip" id="77"/>
 			<ChildItems>
+				<Page name="ГруппаАкт" id="127">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Акты ВР</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа акт</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>HorizontalIfPossible</Group>
+					<ExtendedTooltip name="ГруппаАктРасширеннаяПодсказка" id="128"/>
+					<ChildItems>
+						<Table name="АктыВыполненныхРабот" id="129">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.АктыВыполненныхРабот</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="АктыВыполненныхРаботКонтекстноеМеню" id="130"/>
+							<AutoCommandBar name="АктыВыполненныхРаботКоманднаяПанель" id="131"/>
+							<ExtendedTooltip name="АктыВыполненныхРаботРасширеннаяПодсказка" id="132"/>
+							<SearchStringAddition name="АктыВыполненныхРаботСтрокаПоиска" id="133">
+								<AdditionSource>
+									<Item>АктыВыполненныхРабот</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="АктыВыполненныхРаботСтрокаПоискаКонтекстноеМеню" id="134"/>
+								<ExtendedTooltip name="АктыВыполненныхРаботСтрокаПоискаРасширеннаяПодсказка" id="135"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="АктыВыполненныхРаботСостояниеПросмотра" id="136">
+								<AdditionSource>
+									<Item>АктыВыполненныхРабот</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="АктыВыполненныхРаботСостояниеПросмотраКонтекстноеМеню" id="137"/>
+								<ExtendedTooltip name="АктыВыполненныхРаботСостояниеПросмотраРасширеннаяПодсказка" id="138"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="АктыВыполненныхРаботУправлениеПоиском" id="139">
+								<AdditionSource>
+									<Item>АктыВыполненныхРабот</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="АктыВыполненныхРаботУправлениеПоискомКонтекстноеМеню" id="140"/>
+								<ExtendedTooltip name="АктыВыполненныхРаботУправлениеПоискомРасширеннаяПодсказка" id="141"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="АктыВыполненныхРаботНомерСтроки" id="142">
+									<DataPath>Объект.АктыВыполненныхРабот.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="АктыВыполненныхРаботНомерСтрокиКонтекстноеМеню" id="143"/>
+									<ExtendedTooltip name="АктыВыполненныхРаботНомерСтрокиРасширеннаяПодсказка" id="144"/>
+								</LabelField>
+								<InputField name="АктыВыполненныхРаботАкт" id="145">
+									<DataPath>Объект.АктыВыполненныхРабот.Акт</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ChoiceParameterLinks>
+										<xr:Link>
+											<xr:Name>Отбор.Договор</xr:Name>
+											<xr:DataPath xsi:type="xs:string">Объект.Договор</xr:DataPath>
+											<xr:ValueChange>Clear</xr:ValueChange>
+										</xr:Link>
+									</ChoiceParameterLinks>
+									<ContextMenu name="АктыВыполненныхРаботАктКонтекстноеМеню" id="146"/>
+									<ExtendedTooltip name="АктыВыполненныхРаботАктРасширеннаяПодсказка" id="147"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
 				<Page name="ГруппаРПлатежа" id="28">
 					<Title>
 						<v8:item>
