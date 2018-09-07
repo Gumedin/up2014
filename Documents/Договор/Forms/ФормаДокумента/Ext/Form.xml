@@ -135,6 +135,72 @@
 				<Pages name="Группа6" id="260">
 					<ExtendedTooltip name="Группа6РасширеннаяПодсказка" id="261"/>
 					<ChildItems>
+						<Page name="Проекты" id="337">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Проекты</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Проекты</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>HorizontalIfPossible</Group>
+							<ExtendedTooltip name="ПроектыРасширеннаяПодсказка" id="338"/>
+							<ChildItems>
+								<Table name="Проекты1" id="339">
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<DataPath>Объект.Проекты</DataPath>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="Проекты1КонтекстноеМеню" id="340"/>
+									<AutoCommandBar name="Проекты1КоманднаяПанель" id="341"/>
+									<ExtendedTooltip name="Проекты1РасширеннаяПодсказка" id="342"/>
+									<SearchStringAddition name="Проекты1СтрокаПоиска" id="343">
+										<AdditionSource>
+											<Item>Проекты1</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="Проекты1СтрокаПоискаКонтекстноеМеню" id="344"/>
+										<ExtendedTooltip name="Проекты1СтрокаПоискаРасширеннаяПодсказка" id="345"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="Проекты1СостояниеПросмотра" id="346">
+										<AdditionSource>
+											<Item>Проекты1</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="Проекты1СостояниеПросмотраКонтекстноеМеню" id="347"/>
+										<ExtendedTooltip name="Проекты1СостояниеПросмотраРасширеннаяПодсказка" id="348"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="Проекты1УправлениеПоиском" id="349">
+										<AdditionSource>
+											<Item>Проекты1</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="Проекты1УправлениеПоискомКонтекстноеМеню" id="350"/>
+										<ExtendedTooltip name="Проекты1УправлениеПоискомРасширеннаяПодсказка" id="351"/>
+									</SearchControlAddition>
+									<ChildItems>
+										<LabelField name="Проекты1НомерСтроки" id="352">
+											<DataPath>Объект.Проекты.LineNumber</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="Проекты1НомерСтрокиКонтекстноеМеню" id="353"/>
+											<ExtendedTooltip name="Проекты1НомерСтрокиРасширеннаяПодсказка" id="354"/>
+										</LabelField>
+										<InputField name="Проекты1Проект" id="355">
+											<DataPath>Объект.Проекты.Проект</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="Проекты1ПроектКонтекстноеМеню" id="356"/>
+											<ExtendedTooltip name="Проекты1ПроектРасширеннаяПодсказка" id="357"/>
+										</InputField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</Page>
 						<Page name="ГруппаЗадачиПроекта" id="14">
 							<Title>
 								<v8:item>
@@ -308,13 +374,6 @@
 													<DataPath>Объект.ЗадачиПроекта.ЗадачаПроекта</DataPath>
 													<EditMode>EnterOnInput</EditMode>
 													<HorizontalStretch>false</HorizontalStretch>
-													<ChoiceParameterLinks>
-														<xr:Link>
-															<xr:Name>Отбор.Владелец</xr:Name>
-															<xr:DataPath xsi:type="xs:string">Объект.Проект</xr:DataPath>
-															<xr:ValueChange>Clear</xr:ValueChange>
-														</xr:Link>
-													</ChoiceParameterLinks>
 													<ContextMenu name="ЗадачиПроектаЗадачаПроектаКонтекстноеМеню" id="21"/>
 													<ExtendedTooltip name="ЗадачиПроектаЗадачаПроектаРасширеннаяПодсказка" id="103"/>
 												</InputField>
