@@ -72,7 +72,6 @@
 			<ExtendedTooltip name="МенеджерExtendedTooltip" id="61"/>
 		</InputField>
 		<UsualGroup name="Группа1" id="49">
-			<Enabled>false</Enabled>
 			<Group>Horizontal</Group>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
@@ -297,13 +296,22 @@
 					<ExtendedTooltip name="ОплатаРасширеннаяПодсказка" id="91"/>
 					<ChildItems>
 						<Table name="ТаблицаОплата" id="94">
+							<Footer>true</Footer>
 							<AutoInsertNewRow>true</AutoInsertNewRow>
 							<EnableStartDrag>true</EnableStartDrag>
 							<EnableDrag>true</EnableDrag>
 							<DataPath>Объект.ТаблицаОплата</DataPath>
 							<RowFilter xsi:nil="true"/>
 							<ContextMenu name="ТаблицаОплатаКонтекстноеМеню" id="95"/>
-							<AutoCommandBar name="ТаблицаОплатаКоманднаяПанель" id="96"/>
+							<AutoCommandBar name="ТаблицаОплатаКоманднаяПанель" id="96">
+								<ChildItems>
+									<Button name="ЗаполнитьОплаты" id="116">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ЗаполнитьОплаты</CommandName>
+										<ExtendedTooltip name="ЗаполнитьОплатыРасширеннаяПодсказка" id="117"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
 							<ExtendedTooltip name="ТаблицаОплатаРасширеннаяПодсказка" id="97"/>
 							<SearchStringAddition name="ТаблицаОплатаСтрокаПоиска" id="98">
 								<AdditionSource>
@@ -348,6 +356,13 @@
 									</ChoiceParameterLinks>
 									<ContextMenu name="ТаблицаОплатаДокументОплатыКонтекстноеМеню" id="111"/>
 									<ExtendedTooltip name="ТаблицаОплатаДокументОплатыРасширеннаяПодсказка" id="112"/>
+								</InputField>
+								<InputField name="ТаблицаОплатаОбеспечено" id="118">
+									<DataPath>Объект.ТаблицаОплата.Обеспечено</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<FooterDataPath>Объект.ТаблицаОплата.TotalОбеспечено</FooterDataPath>
+									<ContextMenu name="ТаблицаОплатаОбеспеченоКонтекстноеМеню" id="119"/>
+									<ExtendedTooltip name="ТаблицаОплатаОбеспеченоРасширеннаяПодсказка" id="120"/>
 								</InputField>
 								<CheckBoxField name="ТаблицаОплатаАванс" id="113">
 									<DataPath>Объект.ТаблицаОплата.Аванс</DataPath>
@@ -527,6 +542,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>РаспределитьНачислениеПоЗадачам</Action>
+		</Command>
+		<Command name="ЗаполнитьОплаты" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить оплаты</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить оплаты</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьОплаты</Action>
 		</Command>
 	</Commands>
 </Form>

@@ -57,7 +57,6 @@
 		</InputField>
 		<InputField name="ДокументУТ" id="69">
 			<DataPath>Объект.Акт</DataPath>
-			<Enabled>false</Enabled>
 			<ChoiceParameterLinks>
 				<xr:Link>
 					<xr:Name>Отбор.Договор</xr:Name>
@@ -88,13 +87,22 @@
 					<ExtendedTooltip name="ГруппаАктРасширеннаяПодсказка" id="128"/>
 					<ChildItems>
 						<Table name="АктыВыполненныхРабот" id="129">
+							<Footer>true</Footer>
 							<AutoInsertNewRow>true</AutoInsertNewRow>
 							<EnableStartDrag>true</EnableStartDrag>
 							<EnableDrag>true</EnableDrag>
 							<DataPath>Объект.АктыВыполненныхРабот</DataPath>
 							<RowFilter xsi:nil="true"/>
 							<ContextMenu name="АктыВыполненныхРаботКонтекстноеМеню" id="130"/>
-							<AutoCommandBar name="АктыВыполненныхРаботКоманднаяПанель" id="131"/>
+							<AutoCommandBar name="АктыВыполненныхРаботКоманднаяПанель" id="131">
+								<ChildItems>
+									<Button name="АктыВыполненныхРаботЗполнитьАкты" id="160">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ЗполнитьАкты</CommandName>
+										<ExtendedTooltip name="АктыВыполненныхРаботЗполнитьАктыРасширеннаяПодсказка" id="161"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
 							<ExtendedTooltip name="АктыВыполненныхРаботРасширеннаяПодсказка" id="132"/>
 							<SearchStringAddition name="АктыВыполненныхРаботСтрокаПоиска" id="133">
 								<AdditionSource>
@@ -139,6 +147,34 @@
 									</ChoiceParameterLinks>
 									<ContextMenu name="АктыВыполненныхРаботАктКонтекстноеМеню" id="146"/>
 									<ExtendedTooltip name="АктыВыполненныхРаботАктРасширеннаяПодсказка" id="147"/>
+								</InputField>
+								<InputField name="АктыВыполненныхРаботСуммаАкта" id="148">
+									<DataPath>Объект.АктыВыполненныхРабот.СуммаАкта</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<FooterDataPath>Объект.АктыВыполненныхРабот.TotalСуммаАкта</FooterDataPath>
+									<ContextMenu name="АктыВыполненныхРаботСуммаАктаКонтекстноеМеню" id="149"/>
+									<ExtendedTooltip name="АктыВыполненныхРаботСуммаАктаРасширеннаяПодсказка" id="150"/>
+								</InputField>
+								<InputField name="АктыВыполненныхРаботОплаченоРанее" id="151">
+									<DataPath>Объект.АктыВыполненныхРабот.ОбеспеченоРанее</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<FooterDataPath>Объект.АктыВыполненныхРабот.TotalОбеспеченоРанее</FooterDataPath>
+									<ContextMenu name="АктыВыполненныхРаботОплаченоРанееКонтекстноеМеню" id="152"/>
+									<ExtendedTooltip name="АктыВыполненныхРаботОплаченоРанееРасширеннаяПодсказка" id="153"/>
+								</InputField>
+								<InputField name="АктыВыполненныхРаботОбеспечено" id="154">
+									<DataPath>Объект.АктыВыполненныхРабот.Обеспечено</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<FooterDataPath>Объект.АктыВыполненныхРабот.TotalОбеспечено</FooterDataPath>
+									<ContextMenu name="АктыВыполненныхРаботОбеспеченоКонтекстноеМеню" id="155"/>
+									<ExtendedTooltip name="АктыВыполненныхРаботОбеспеченоРасширеннаяПодсказка" id="156"/>
+								</InputField>
+								<InputField name="АктыВыполненныхРаботНеОбеспечено" id="157">
+									<DataPath>Объект.АктыВыполненныхРабот.НеОбеспечено</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<FooterDataPath>Объект.АктыВыполненныхРабот.TotalНеОбеспечено</FooterDataPath>
+									<ContextMenu name="АктыВыполненныхРаботНеОбеспеченоКонтекстноеМеню" id="158"/>
+									<ExtendedTooltip name="АктыВыполненныхРаботНеОбеспеченоРасширеннаяПодсказка" id="159"/>
 								</InputField>
 							</ChildItems>
 						</Table>
@@ -594,6 +630,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>РаспределитьОплатуПоЗадачам2016</Action>
+		</Command>
+		<Command name="ЗполнитьАкты" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Зполнить акты</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Зполнить акты</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗполнитьАкты</Action>
 		</Command>
 	</Commands>
 </Form>
