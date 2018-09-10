@@ -70,6 +70,116 @@
 		<Pages name="Группа1" id="27">
 			<ExtendedTooltip name="Группа1ExtendedTooltip" id="77"/>
 			<ChildItems>
+				<Page name="ГруппаАкт" id="127">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Акты ВР</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа акт</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>HorizontalIfPossible</Group>
+					<ExtendedTooltip name="ГруппаАктРасширеннаяПодсказка" id="128"/>
+					<ChildItems>
+						<Table name="АктыВыполненныхРабот" id="129">
+							<Footer>true</Footer>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.АктыВыполненныхРабот</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="АктыВыполненныхРаботКонтекстноеМеню" id="130"/>
+							<AutoCommandBar name="АктыВыполненныхРаботКоманднаяПанель" id="131">
+								<ChildItems>
+									<Button name="АктыВыполненныхРаботЗполнитьАкты" id="160">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ЗполнитьАкты</CommandName>
+										<ExtendedTooltip name="АктыВыполненныхРаботЗполнитьАктыРасширеннаяПодсказка" id="161"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="АктыВыполненныхРаботРасширеннаяПодсказка" id="132"/>
+							<SearchStringAddition name="АктыВыполненныхРаботСтрокаПоиска" id="133">
+								<AdditionSource>
+									<Item>АктыВыполненныхРабот</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="АктыВыполненныхРаботСтрокаПоискаКонтекстноеМеню" id="134"/>
+								<ExtendedTooltip name="АктыВыполненныхРаботСтрокаПоискаРасширеннаяПодсказка" id="135"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="АктыВыполненныхРаботСостояниеПросмотра" id="136">
+								<AdditionSource>
+									<Item>АктыВыполненныхРабот</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="АктыВыполненныхРаботСостояниеПросмотраКонтекстноеМеню" id="137"/>
+								<ExtendedTooltip name="АктыВыполненныхРаботСостояниеПросмотраРасширеннаяПодсказка" id="138"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="АктыВыполненныхРаботУправлениеПоиском" id="139">
+								<AdditionSource>
+									<Item>АктыВыполненныхРабот</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="АктыВыполненныхРаботУправлениеПоискомКонтекстноеМеню" id="140"/>
+								<ExtendedTooltip name="АктыВыполненныхРаботУправлениеПоискомРасширеннаяПодсказка" id="141"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="АктыВыполненныхРаботНомерСтроки" id="142">
+									<DataPath>Объект.АктыВыполненныхРабот.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="АктыВыполненныхРаботНомерСтрокиКонтекстноеМеню" id="143"/>
+									<ExtendedTooltip name="АктыВыполненныхРаботНомерСтрокиРасширеннаяПодсказка" id="144"/>
+								</LabelField>
+								<InputField name="АктыВыполненныхРаботАкт" id="145">
+									<DataPath>Объект.АктыВыполненныхРабот.Акт</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ChoiceParameterLinks>
+										<xr:Link>
+											<xr:Name>Отбор.Договор</xr:Name>
+											<xr:DataPath xsi:type="xs:string">Объект.Договор</xr:DataPath>
+											<xr:ValueChange>Clear</xr:ValueChange>
+										</xr:Link>
+									</ChoiceParameterLinks>
+									<ContextMenu name="АктыВыполненныхРаботАктКонтекстноеМеню" id="146"/>
+									<ExtendedTooltip name="АктыВыполненныхРаботАктРасширеннаяПодсказка" id="147"/>
+								</InputField>
+								<InputField name="АктыВыполненныхРаботСуммаАкта" id="148">
+									<DataPath>Объект.АктыВыполненныхРабот.СуммаАкта</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<FooterDataPath>Объект.АктыВыполненныхРабот.TotalСуммаАкта</FooterDataPath>
+									<ContextMenu name="АктыВыполненныхРаботСуммаАктаКонтекстноеМеню" id="149"/>
+									<ExtendedTooltip name="АктыВыполненныхРаботСуммаАктаРасширеннаяПодсказка" id="150"/>
+								</InputField>
+								<InputField name="АктыВыполненныхРаботОплаченоРанее" id="151">
+									<DataPath>Объект.АктыВыполненныхРабот.ОбеспеченоРанее</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<FooterDataPath>Объект.АктыВыполненныхРабот.TotalОбеспеченоРанее</FooterDataPath>
+									<ContextMenu name="АктыВыполненныхРаботОплаченоРанееКонтекстноеМеню" id="152"/>
+									<ExtendedTooltip name="АктыВыполненныхРаботОплаченоРанееРасширеннаяПодсказка" id="153"/>
+								</InputField>
+								<InputField name="АктыВыполненныхРаботОбеспечено" id="154">
+									<DataPath>Объект.АктыВыполненныхРабот.Обеспечено</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<FooterDataPath>Объект.АктыВыполненныхРабот.TotalОбеспечено</FooterDataPath>
+									<ContextMenu name="АктыВыполненныхРаботОбеспеченоКонтекстноеМеню" id="155"/>
+									<ExtendedTooltip name="АктыВыполненныхРаботОбеспеченоРасширеннаяПодсказка" id="156"/>
+								</InputField>
+								<InputField name="АктыВыполненныхРаботНеОбеспечено" id="157">
+									<DataPath>Объект.АктыВыполненныхРабот.НеОбеспечено</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<FooterDataPath>Объект.АктыВыполненныхРабот.TotalНеОбеспечено</FooterDataPath>
+									<ContextMenu name="АктыВыполненныхРаботНеОбеспеченоКонтекстноеМеню" id="158"/>
+									<ExtendedTooltip name="АктыВыполненныхРаботНеОбеспеченоРасширеннаяПодсказка" id="159"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
 				<Page name="ГруппаРПлатежа" id="28">
 					<Title>
 						<v8:item>
@@ -520,6 +630,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>РаспределитьОплатуПоЗадачам2016</Action>
+		</Command>
+		<Command name="ЗполнитьАкты" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Зполнить акты</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Зполнить акты</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗполнитьАкты</Action>
 		</Command>
 	</Commands>
 </Form>

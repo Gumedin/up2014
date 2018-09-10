@@ -77,8 +77,14 @@
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="Группа1ExtendedTooltip" id="62"/>
 			<ChildItems>
-				<InputField name="Оплата" id="47">
+				<InputField name="Оплата_устар" id="47">
 					<DataPath>Объект.Оплата</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Оплата (не использовать)</v8:content>
+						</v8:item>
+					</Title>
 					<ChoiceParameterLinks>
 						<xr:Link>
 							<xr:Name>Отбор.Договор</xr:Name>
@@ -86,11 +92,17 @@
 							<xr:ValueChange>Clear</xr:ValueChange>
 						</xr:Link>
 					</ChoiceParameterLinks>
-					<ContextMenu name="ОплатаКонтекстноеМеню" id="48"/>
-					<ExtendedTooltip name="ОплатаExtendedTooltip" id="63"/>
+					<ContextMenu name="Оплата_устарКонтекстноеМеню" id="48"/>
+					<ExtendedTooltip name="Оплата_устарРасширеннаяПодсказка" id="63"/>
 				</InputField>
 				<CheckBoxField name="Аванс" id="50">
 					<DataPath>Объект.Аванс</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Аванс (не использовать)</v8:content>
+						</v8:item>
+					</Title>
 					<CheckBoxType>Auto</CheckBoxType>
 					<ContextMenu name="АвансКонтекстноеМеню" id="51"/>
 					<ExtendedTooltip name="АвансExtendedTooltip" id="64"/>
@@ -103,152 +115,277 @@
 			<ContextMenu name="СуммаДокументаКонтекстноеМеню" id="10"/>
 			<ExtendedTooltip name="СуммаДокументаExtendedTooltip" id="65"/>
 		</InputField>
-		<Table name="КоммерческоеВознаграждение" id="17">
-			<Representation>List</Representation>
-			<Footer>true</Footer>
-			<AutoInsertNewRow>true</AutoInsertNewRow>
-			<EnableStartDrag>true</EnableStartDrag>
-			<EnableDrag>true</EnableDrag>
-			<DataPath>Объект.КоммерческоеВознаграждение</DataPath>
-			<SearchStringLocation>None</SearchStringLocation>
-			<ViewStatusLocation>None</ViewStatusLocation>
-			<SearchControlLocation>None</SearchControlLocation>
-			<RowFilter xsi:nil="true"/>
-			<ContextMenu name="КоммерческоеВознаграждениеКонтекстноеМеню" id="18"/>
-			<AutoCommandBar name="КоммерческоеВознаграждениеКоманднаяПанель" id="19">
-				<ChildItems>
-					<Button name="КоммерческоеВознаграждениеЗаполнитьПоЗадачиПоДоговору" id="41">
-						<Type>CommandBarButton</Type>
-						<CommandName>Form.Command.ЗаполнитьПоЗадачиПоДоговору</CommandName>
-						<ExtendedTooltip name="КоммерческоеВознаграждениеЗаполнитьПоЗадачиПоДоговоруExtendedTooltip" id="66"/>
-					</Button>
-					<Button name="КоммерческоеВознаграждениеРаспределитьНачислениеПоЗадачам" id="42">
-						<Type>CommandBarButton</Type>
-						<CommandName>Form.Command.РаспределитьНачислениеПоЗадачам</CommandName>
-						<ExtendedTooltip name="КоммерческоеВознаграждениеРаспределитьНачислениеПоЗадачамExtendedTooltip" id="67"/>
-					</Button>
-				</ChildItems>
-			</AutoCommandBar>
-			<ExtendedTooltip name="КоммерческоеВознаграждениеExtendedTooltip" id="68"/>
-			<SearchStringAddition name="КоммерческоеВознаграждениеСтрокаПоиска" id="79">
-				<AdditionSource>
-					<Item>КоммерческоеВознаграждение</Item>
-					<Type>SearchStringRepresentation</Type>
-				</AdditionSource>
-				<ContextMenu name="КоммерческоеВознаграждениеСтрокаПоискаКонтекстноеМеню" id="80"/>
-				<ExtendedTooltip name="КоммерческоеВознаграждениеСтрокаПоискаРасширеннаяПодсказка" id="81"/>
-			</SearchStringAddition>
-			<ViewStatusAddition name="КоммерческоеВознаграждениеСостояниеПросмотра" id="82">
-				<AdditionSource>
-					<Item>КоммерческоеВознаграждение</Item>
-					<Type>ViewStatusRepresentation</Type>
-				</AdditionSource>
-				<ContextMenu name="КоммерческоеВознаграждениеСостояниеПросмотраКонтекстноеМеню" id="83"/>
-				<ExtendedTooltip name="КоммерческоеВознаграждениеСостояниеПросмотраРасширеннаяПодсказка" id="84"/>
-			</ViewStatusAddition>
-			<SearchControlAddition name="КоммерческоеВознаграждениеУправлениеПоиском" id="85">
-				<AdditionSource>
-					<Item>КоммерческоеВознаграждение</Item>
-					<Type>SearchControl</Type>
-				</AdditionSource>
-				<ContextMenu name="КоммерческоеВознаграждениеУправлениеПоискомКонтекстноеМеню" id="86"/>
-				<ExtendedTooltip name="КоммерческоеВознаграждениеУправлениеПоискомРасширеннаяПодсказка" id="87"/>
-			</SearchControlAddition>
-			<Events>
-				<Event name="OnChange">КоммерческоеВознаграждениеПриИзменении</Event>
-			</Events>
-			<ChildItems>
-				<LabelField name="КоммерческоеВознаграждениеНомерСтроки" id="20">
-					<DataPath>Объект.КоммерческоеВознаграждение.LineNumber</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="КоммерческоеВознаграждениеНомерСтрокиКонтекстноеМеню" id="21"/>
-					<ExtendedTooltip name="КоммерческоеВознаграждениеНомерСтрокиExtendedTooltip" id="69"/>
-				</LabelField>
-				<InputField name="КоммерческоеВознаграждениеЗадачаПроекта" id="22">
-					<DataPath>Объект.КоммерческоеВознаграждение.ЗадачаПроекта</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="КоммерческоеВознаграждениеЗадачаПроектаКонтекстноеМеню" id="23"/>
-					<ExtendedTooltip name="КоммерческоеВознаграждениеЗадачаПроектаExtendedTooltip" id="70"/>
-				</InputField>
-				<InputField name="КоммерческоеВознаграждениеСуммаОбеспечено" id="31">
-					<DataPath>Объект.КоммерческоеВознаграждение.СуммаОбеспечено</DataPath>
-					<ReadOnly>true</ReadOnly>
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Обеспечено</v8:content>
-						</v8:item>
-					</Title>
-					<EditMode>EnterOnInput</EditMode>
-					<FooterDataPath>Объект.КоммерческоеВознаграждение.TotalСуммаОбеспечено</FooterDataPath>
-					<ContextMenu name="КоммерческоеВознаграждениеСуммаОбеспеченоКонтекстноеМеню" id="32"/>
-					<ExtendedTooltip name="КоммерческоеВознаграждениеСуммаОбеспеченоExtendedTooltip" id="71"/>
-				</InputField>
-				<InputField name="КоммерческоеВознаграждениеСумма" id="24">
-					<DataPath>Объект.КоммерческоеВознаграждение.Сумма</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<FooterDataPath>Объект.КоммерческоеВознаграждение.TotalСумма</FooterDataPath>
-					<ContextMenu name="КоммерческоеВознаграждениеСуммаКонтекстноеМеню" id="25"/>
-					<ExtendedTooltip name="КоммерческоеВознаграждениеСуммаExtendedTooltip" id="72"/>
-				</InputField>
-				<InputField name="КоммерческоеВознаграждениеСуммаПоСмете" id="43">
-					<DataPath>Объект.КоммерческоеВознаграждение.СуммаПоСмете</DataPath>
-					<ReadOnly>true</ReadOnly>
-					<EditMode>EnterOnInput</EditMode>
-					<FooterDataPath>Объект.КоммерческоеВознаграждение.TotalСуммаПоСмете</FooterDataPath>
-					<ContextMenu name="КоммерческоеВознаграждениеСуммаПоСметеКонтекстноеМеню" id="44"/>
-					<ExtendedTooltip name="КоммерческоеВознаграждениеСуммаПоСметеExtendedTooltip" id="73"/>
-				</InputField>
-				<InputField name="КоммерческоеВознаграждениеСуммаНачислено" id="39">
-					<DataPath>Объект.КоммерческоеВознаграждение.СуммаНачислено</DataPath>
-					<ReadOnly>true</ReadOnly>
-					<EditMode>EnterOnInput</EditMode>
-					<FooterDataPath>СуммаНачислено</FooterDataPath>
-					<ContextMenu name="КоммерческоеВознаграждениеСуммаНачисленоКонтекстноеМеню" id="40"/>
-					<ExtendedTooltip name="КоммерческоеВознаграждениеСуммаНачисленоExtendedTooltip" id="74"/>
-				</InputField>
-				<InputField name="КоммерческоеВознаграждениеСуммаВознаграждения" id="26">
-					<DataPath>Объект.КоммерческоеВознаграждение.СуммаВознаграждения</DataPath>
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Начислено КР</v8:content>
-						</v8:item>
-					</Title>
-					<EditMode>EnterOnInput</EditMode>
-					<FooterDataPath>Объект.КоммерческоеВознаграждение.TotalСуммаВознаграждения</FooterDataPath>
-					<ContextMenu name="КоммерческоеВознаграждениеСуммаВознагражденияКонтекстноеМеню" id="27"/>
-					<ExtendedTooltip name="КоммерческоеВознаграждениеСуммаВознагражденияExtendedTooltip" id="75"/>
-					<Events>
-						<Event name="OnChange">КоммерческоеВознаграждениеСуммаВознагражденияПриИзменении</Event>
-					</Events>
-				</InputField>
-				<CheckBoxField name="КоммерческоеВознаграждениеВручную" id="52">
-					<DataPath>Объект.КоммерческоеВознаграждение.Вручную</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<CheckBoxType>Auto</CheckBoxType>
-					<ContextMenu name="КоммерческоеВознаграждениеВручнуюКонтекстноеМеню" id="53"/>
-					<ExtendedTooltip name="КоммерческоеВознаграждениеВручнуюExtendedTooltip" id="76"/>
-				</CheckBoxField>
-				<InputField name="КоммерческоеВознаграждениеСуммаНеНачислено" id="35">
-					<DataPath>Объект.КоммерческоеВознаграждение.СуммаНеНачислено</DataPath>
-					<ReadOnly>true</ReadOnly>
-					<EditMode>EnterOnInput</EditMode>
-					<FooterDataPath>СуммаНеНачислено</FooterDataPath>
-					<ContextMenu name="КоммерческоеВознаграждениеСуммаНеНачисленоКонтекстноеМеню" id="36"/>
-					<ExtendedTooltip name="КоммерческоеВознаграждениеСуммаНеНачисленоExtendedTooltip" id="77"/>
-				</InputField>
-			</ChildItems>
-		</Table>
 		<LabelField name="ИсполнительДокумента" id="11">
 			<DataPath>Объект.ИсполнительДокумента</DataPath>
 			<EditMode>EnterOnInput</EditMode>
 			<ContextMenu name="ИсполнительДокументаКонтекстноеМеню" id="12"/>
 			<ExtendedTooltip name="ИсполнительДокументаExtendedTooltip" id="78"/>
 		</LabelField>
+		<Pages name="Группа2" id="88">
+			<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="89"/>
+			<ChildItems>
+				<Page name="Вознаграждение" id="92">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вознаграждение</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вознаграждение</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>HorizontalIfPossible</Group>
+					<ExtendedTooltip name="ВознаграждениеРасширеннаяПодсказка" id="93"/>
+					<ChildItems>
+						<Table name="КоммерческоеВознаграждение" id="17">
+							<Representation>List</Representation>
+							<Footer>true</Footer>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.КоммерческоеВознаграждение</DataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="КоммерческоеВознаграждениеКонтекстноеМеню" id="18"/>
+							<AutoCommandBar name="КоммерческоеВознаграждениеКоманднаяПанель" id="19">
+								<ChildItems>
+									<Button name="КоммерческоеВознаграждениеЗаполнитьПоЗадачиПоДоговору" id="41">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ЗаполнитьПоЗадачиПоДоговору</CommandName>
+										<ExtendedTooltip name="КоммерческоеВознаграждениеЗаполнитьПоЗадачиПоДоговоруExtendedTooltip" id="66"/>
+									</Button>
+									<Button name="КоммерческоеВознаграждениеРаспределитьНачислениеПоЗадачам" id="42">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.РаспределитьНачислениеПоЗадачам</CommandName>
+										<ExtendedTooltip name="КоммерческоеВознаграждениеРаспределитьНачислениеПоЗадачамExtendedTooltip" id="67"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="КоммерческоеВознаграждениеExtendedTooltip" id="68"/>
+							<SearchStringAddition name="КоммерческоеВознаграждениеСтрокаПоиска" id="79">
+								<AdditionSource>
+									<Item>КоммерческоеВознаграждение</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="КоммерческоеВознаграждениеСтрокаПоискаКонтекстноеМеню" id="80"/>
+								<ExtendedTooltip name="КоммерческоеВознаграждениеСтрокаПоискаРасширеннаяПодсказка" id="81"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="КоммерческоеВознаграждениеСостояниеПросмотра" id="82">
+								<AdditionSource>
+									<Item>КоммерческоеВознаграждение</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="КоммерческоеВознаграждениеСостояниеПросмотраКонтекстноеМеню" id="83"/>
+								<ExtendedTooltip name="КоммерческоеВознаграждениеСостояниеПросмотраРасширеннаяПодсказка" id="84"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="КоммерческоеВознаграждениеУправлениеПоиском" id="85">
+								<AdditionSource>
+									<Item>КоммерческоеВознаграждение</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="КоммерческоеВознаграждениеУправлениеПоискомКонтекстноеМеню" id="86"/>
+								<ExtendedTooltip name="КоммерческоеВознаграждениеУправлениеПоискомРасширеннаяПодсказка" id="87"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="OnChange">КоммерческоеВознаграждениеПриИзменении</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="КоммерческоеВознаграждениеНомерСтроки" id="20">
+									<DataPath>Объект.КоммерческоеВознаграждение.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КоммерческоеВознаграждениеНомерСтрокиКонтекстноеМеню" id="21"/>
+									<ExtendedTooltip name="КоммерческоеВознаграждениеНомерСтрокиExtendedTooltip" id="69"/>
+								</LabelField>
+								<InputField name="КоммерческоеВознаграждениеЗадачаПроекта" id="22">
+									<DataPath>Объект.КоммерческоеВознаграждение.ЗадачаПроекта</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КоммерческоеВознаграждениеЗадачаПроектаКонтекстноеМеню" id="23"/>
+									<ExtendedTooltip name="КоммерческоеВознаграждениеЗадачаПроектаExtendedTooltip" id="70"/>
+								</InputField>
+								<InputField name="КоммерческоеВознаграждениеСуммаОбеспечено" id="31">
+									<DataPath>Объект.КоммерческоеВознаграждение.СуммаОбеспечено</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Обеспечено</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<FooterDataPath>Объект.КоммерческоеВознаграждение.TotalСуммаОбеспечено</FooterDataPath>
+									<ContextMenu name="КоммерческоеВознаграждениеСуммаОбеспеченоКонтекстноеМеню" id="32"/>
+									<ExtendedTooltip name="КоммерческоеВознаграждениеСуммаОбеспеченоExtendedTooltip" id="71"/>
+								</InputField>
+								<InputField name="КоммерческоеВознаграждениеСумма" id="24">
+									<DataPath>Объект.КоммерческоеВознаграждение.Сумма</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<FooterDataPath>Объект.КоммерческоеВознаграждение.TotalСумма</FooterDataPath>
+									<ContextMenu name="КоммерческоеВознаграждениеСуммаКонтекстноеМеню" id="25"/>
+									<ExtendedTooltip name="КоммерческоеВознаграждениеСуммаExtendedTooltip" id="72"/>
+								</InputField>
+								<InputField name="КоммерческоеВознаграждениеСуммаПоСмете" id="43">
+									<DataPath>Объект.КоммерческоеВознаграждение.СуммаПоСмете</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<FooterDataPath>Объект.КоммерческоеВознаграждение.TotalСуммаПоСмете</FooterDataPath>
+									<ContextMenu name="КоммерческоеВознаграждениеСуммаПоСметеКонтекстноеМеню" id="44"/>
+									<ExtendedTooltip name="КоммерческоеВознаграждениеСуммаПоСметеExtendedTooltip" id="73"/>
+								</InputField>
+								<InputField name="КоммерческоеВознаграждениеСуммаНачислено" id="39">
+									<DataPath>Объект.КоммерческоеВознаграждение.СуммаНачислено</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<FooterDataPath>СуммаНачислено</FooterDataPath>
+									<ContextMenu name="КоммерческоеВознаграждениеСуммаНачисленоКонтекстноеМеню" id="40"/>
+									<ExtendedTooltip name="КоммерческоеВознаграждениеСуммаНачисленоExtendedTooltip" id="74"/>
+								</InputField>
+								<InputField name="КоммерческоеВознаграждениеСуммаВознаграждения" id="26">
+									<DataPath>Объект.КоммерческоеВознаграждение.СуммаВознаграждения</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Начислено КР</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<FooterDataPath>Объект.КоммерческоеВознаграждение.TotalСуммаВознаграждения</FooterDataPath>
+									<ContextMenu name="КоммерческоеВознаграждениеСуммаВознагражденияКонтекстноеМеню" id="27"/>
+									<ExtendedTooltip name="КоммерческоеВознаграждениеСуммаВознагражденияExtendedTooltip" id="75"/>
+									<Events>
+										<Event name="OnChange">КоммерческоеВознаграждениеСуммаВознагражденияПриИзменении</Event>
+									</Events>
+								</InputField>
+								<CheckBoxField name="КоммерческоеВознаграждениеВручную" id="52">
+									<DataPath>Объект.КоммерческоеВознаграждение.Вручную</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="КоммерческоеВознаграждениеВручнуюКонтекстноеМеню" id="53"/>
+									<ExtendedTooltip name="КоммерческоеВознаграждениеВручнуюExtendedTooltip" id="76"/>
+								</CheckBoxField>
+								<InputField name="КоммерческоеВознаграждениеСуммаНеНачислено" id="35">
+									<DataPath>Объект.КоммерческоеВознаграждение.СуммаНеНачислено</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<FooterDataPath>СуммаНеНачислено</FooterDataPath>
+									<ContextMenu name="КоммерческоеВознаграждениеСуммаНеНачисленоКонтекстноеМеню" id="36"/>
+									<ExtendedTooltip name="КоммерческоеВознаграждениеСуммаНеНачисленоExtendedTooltip" id="77"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="Оплата" id="90">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Оплата</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Оплата</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>HorizontalIfPossible</Group>
+					<ExtendedTooltip name="ОплатаРасширеннаяПодсказка" id="91"/>
+					<ChildItems>
+						<Table name="ТаблицаОплата" id="94">
+							<Footer>true</Footer>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.ТаблицаОплата</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ТаблицаОплатаКонтекстноеМеню" id="95"/>
+							<AutoCommandBar name="ТаблицаОплатаКоманднаяПанель" id="96">
+								<ChildItems>
+									<Button name="ЗаполнитьОплаты" id="116">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ЗаполнитьОплаты</CommandName>
+										<ExtendedTooltip name="ЗаполнитьОплатыРасширеннаяПодсказка" id="117"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ТаблицаОплатаРасширеннаяПодсказка" id="97"/>
+							<SearchStringAddition name="ТаблицаОплатаСтрокаПоиска" id="98">
+								<AdditionSource>
+									<Item>ТаблицаОплата</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаОплатаСтрокаПоискаКонтекстноеМеню" id="99"/>
+								<ExtendedTooltip name="ТаблицаОплатаСтрокаПоискаРасширеннаяПодсказка" id="100"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ТаблицаОплатаСостояниеПросмотра" id="101">
+								<AdditionSource>
+									<Item>ТаблицаОплата</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаОплатаСостояниеПросмотраКонтекстноеМеню" id="102"/>
+								<ExtendedTooltip name="ТаблицаОплатаСостояниеПросмотраРасширеннаяПодсказка" id="103"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ТаблицаОплатаУправлениеПоиском" id="104">
+								<AdditionSource>
+									<Item>ТаблицаОплата</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаОплатаУправлениеПоискомКонтекстноеМеню" id="105"/>
+								<ExtendedTooltip name="ТаблицаОплатаУправлениеПоискомРасширеннаяПодсказка" id="106"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ТаблицаОплатаНомерСтроки" id="107">
+									<DataPath>Объект.ТаблицаОплата.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТаблицаОплатаНомерСтрокиКонтекстноеМеню" id="108"/>
+									<ExtendedTooltip name="ТаблицаОплатаНомерСтрокиРасширеннаяПодсказка" id="109"/>
+								</LabelField>
+								<InputField name="ТаблицаОплатаДокументОплаты" id="110">
+									<DataPath>Объект.ТаблицаОплата.ДокументОплаты</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ChoiceParameterLinks>
+										<xr:Link>
+											<xr:Name>Отбор.Договор</xr:Name>
+											<xr:DataPath xsi:type="xs:string">Объект.Договор</xr:DataPath>
+											<xr:ValueChange>Clear</xr:ValueChange>
+										</xr:Link>
+									</ChoiceParameterLinks>
+									<ContextMenu name="ТаблицаОплатаДокументОплатыКонтекстноеМеню" id="111"/>
+									<ExtendedTooltip name="ТаблицаОплатаДокументОплатыРасширеннаяПодсказка" id="112"/>
+								</InputField>
+								<InputField name="ТаблицаОплатаОбеспечено" id="118">
+									<DataPath>Объект.ТаблицаОплата.Обеспечено</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<FooterDataPath>Объект.ТаблицаОплата.TotalОбеспечено</FooterDataPath>
+									<ContextMenu name="ТаблицаОплатаОбеспеченоКонтекстноеМеню" id="119"/>
+									<ExtendedTooltip name="ТаблицаОплатаОбеспеченоРасширеннаяПодсказка" id="120"/>
+								</InputField>
+								<CheckBoxField name="ТаблицаОплатаАванс" id="113">
+									<DataPath>Объект.ТаблицаОплата.Аванс</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ТаблицаОплатаАвансКонтекстноеМеню" id="114"/>
+									<ExtendedTooltip name="ТаблицаОплатаАвансРасширеннаяПодсказка" id="115"/>
+								</CheckBoxField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="Объект" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Объект</v8:content>
+				</v8:item>
+			</Title>
 			<Type>
 				<v8:Type>cfg:DocumentObject.ДокументУТ</v8:Type>
 			</Type>
@@ -405,6 +542,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>РаспределитьНачислениеПоЗадачам</Action>
+		</Command>
+		<Command name="ЗаполнитьОплаты" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить оплаты</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить оплаты</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьОплаты</Action>
 		</Command>
 	</Commands>
 </Form>
