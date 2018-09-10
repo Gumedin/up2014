@@ -38,9 +38,7 @@
 			<UpdateOnDataChange>Auto</UpdateOnDataChange>
 			<UserSettingsGroup>СписокКомпоновщикНастроекПользовательскиеНастройки</UserSettingsGroup>
 			<ContextMenu name="СписокКонтекстноеМеню" id="4"/>
-			<AutoCommandBar name="СписокКоманднаяПанель" id="5">
-				<Autofill>false</Autofill>
-			</AutoCommandBar>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="5"/>
 			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="6"/>
 			<SearchStringAddition name="СписокСтрокаПоиска" id="7">
 				<AdditionSource>
@@ -72,24 +70,117 @@
 					<UserVisible>
 						<xr:Common>false</xr:Common>
 					</UserVisible>
+					<HorizontalStretch>false</HorizontalStretch>
+					<VerticalStretch>false</VerticalStretch>
 					<ContextMenu name="СсылкаКонтекстноеМеню" id="23"/>
 					<ExtendedTooltip name="СсылкаРасширеннаяПодсказка" id="24"/>
 				</LabelField>
 				<LabelField name="Наименование" id="16">
 					<DataPath>Список.Description</DataPath>
 					<DefaultItem>true</DefaultItem>
+					<HorizontalStretch>false</HorizontalStretch>
+					<VerticalStretch>false</VerticalStretch>
 					<ContextMenu name="НаименованиеКонтекстноеМеню" id="17"/>
 					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="18"/>
 				</LabelField>
+				<LabelField name="Мнемокод" id="70">
+					<DataPath>Список.Мнемокод</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<Enabled>false</Enabled>
+					<HorizontalStretch>false</HorizontalStretch>
+					<VerticalStretch>false</VerticalStretch>
+					<ContextMenu name="МнемокодКонтекстноеМеню" id="71"/>
+					<ExtendedTooltip name="МнемокодРасширеннаяПодсказка" id="72"/>
+				</LabelField>
 				<LabelField name="ИНН" id="25">
 					<DataPath>Список.ИНН</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<HorizontalStretch>false</HorizontalStretch>
+					<VerticalStretch>false</VerticalStretch>
 					<ContextMenu name="ИННКонтекстноеМеню" id="26"/>
 					<ExtendedTooltip name="ИННРасширеннаяПодсказка" id="27"/>
 				</LabelField>
 				<LabelField name="КПП" id="28">
 					<DataPath>Список.КПП</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<HorizontalStretch>false</HorizontalStretch>
+					<VerticalStretch>false</VerticalStretch>
 					<ContextMenu name="КППКонтекстноеМеню" id="29"/>
 					<ExtendedTooltip name="КППРасширеннаяПодсказка" id="30"/>
+				</LabelField>
+				<LabelField name="Код" id="31">
+					<DataPath>Список.Code</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<HorizontalStretch>false</HorizontalStretch>
+					<VerticalStretch>false</VerticalStretch>
+					<ContextMenu name="КодКонтекстноеМеню" id="32"/>
+					<ExtendedTooltip name="КодРасширеннаяПодсказка" id="33"/>
+				</LabelField>
+				<CheckBoxField name="Предопределенный" id="49">
+					<DataPath>Список.Predefined</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ПредопределенныйКонтекстноеМеню" id="50"/>
+					<ExtendedTooltip name="ПредопределенныйРасширеннаяПодсказка" id="51"/>
+				</CheckBoxField>
+				<LabelField name="КодПоОКПО" id="61">
+					<DataPath>Список.КодПоОКПО</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<HorizontalStretch>false</HorizontalStretch>
+					<VerticalStretch>false</VerticalStretch>
+					<ContextMenu name="КодПоОКПОКонтекстноеМеню" id="62"/>
+					<ExtendedTooltip name="КодПоОКПОРасширеннаяПодсказка" id="63"/>
+				</LabelField>
+				<LabelField name="Комментарий" id="64">
+					<DataPath>Список.Комментарий</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<HorizontalStretch>false</HorizontalStretch>
+					<VerticalStretch>false</VerticalStretch>
+					<ContextMenu name="КомментарийКонтекстноеМеню" id="65"/>
+					<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="66"/>
+				</LabelField>
+				<LabelField name="НаименованиеПолное" id="73">
+					<DataPath>Список.НаименованиеПолное</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<HorizontalStretch>false</HorizontalStretch>
+					<VerticalStretch>false</VerticalStretch>
+					<ContextMenu name="НаименованиеПолноеКонтекстноеМеню" id="74"/>
+					<ExtendedTooltip name="НаименованиеПолноеРасширеннаяПодсказка" id="75"/>
+				</LabelField>
+				<CheckBoxField name="ПроездНеОплачивается" id="76">
+					<DataPath>Список.ПроездНеОплачивается</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ПроездНеОплачиваетсяКонтекстноеМеню" id="77"/>
+					<ExtendedTooltip name="ПроездНеОплачиваетсяРасширеннаяПодсказка" id="78"/>
+				</CheckBoxField>
+				<LabelField name="Расходы" id="79">
+					<DataPath>Список.Расходы</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<HorizontalStretch>false</HorizontalStretch>
+					<VerticalStretch>false</VerticalStretch>
+					<ContextMenu name="РасходыКонтекстноеМеню" id="80"/>
+					<ExtendedTooltip name="РасходыРасширеннаяПодсказка" id="81"/>
 				</LabelField>
 			</ChildItems>
 		</Table>
@@ -100,9 +191,34 @@
 				<v8:Type>cfg:DynamicList</v8:Type>
 			</Type>
 			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>Список.Мнемокод</Field>
+			</UseAlways>
 			<Settings xsi:type="DynamicList">
-				<ManualQuery>false</ManualQuery>
-				<DynamicDataRead>true</DynamicDataRead>
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>false</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	СправочникКонтрагенты.Ссылка,
+	СправочникКонтрагенты.ПометкаУдаления,
+	СправочникКонтрагенты.Родитель,
+	СправочникКонтрагенты.ЭтоГруппа,
+	СправочникКонтрагенты.Код,
+	СправочникКонтрагенты.Наименование,
+	СправочникКонтрагенты.ИНН,
+	СправочникКонтрагенты.КПП,
+	СправочникКонтрагенты.НаименованиеПолное,
+	СправочникКонтрагенты.Комментарий,
+	СправочникКонтрагенты.КодПоОКПО,
+	СправочникКонтрагенты.Мнемокод,
+	СправочникКонтрагенты.Расходы,
+	СправочникКонтрагенты.ТехническаяХарактеристка,
+	СправочникКонтрагенты.ПроездНеОплачивается,
+	СправочникКонтрагенты.КонтактнаяИнформация,
+	СправочникКонтрагенты.КонтактныеЛица,
+	СправочникКонтрагенты.Предопределенный,
+	СправочникКонтрагенты.ИмяПредопределенныхДанных
+ИЗ
+	Справочник.Контрагенты КАК СправочникКонтрагенты</QueryText>
 				<MainTable>Catalog.Контрагенты</MainTable>
 				<ListSettings>
 					<dcsset:filter>

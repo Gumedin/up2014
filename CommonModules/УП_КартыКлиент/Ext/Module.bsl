@@ -6,7 +6,7 @@
    |<head> 
    |    <title>Примеры.Геокодирование.</title> 
    |    <meta http-equiv=""Content-Type"" content=""text/html; charset=utf-8"" /> 
-   |    <script src=""http://api-maps.yandex.ru/1.1/index.xml?key=ANpUFEkBAAAAf7jmJwMAHGZHrcKNDsbEqEVjEUtCmufxQMwAAAAAAAAAAAAvVrubVT4btztbduoIgTLAeFILaQ=="" type=""text/javascript""></script> 
+   |    <script src=""http://api-maps.yandex.ru/1.1/"" type=""text/javascript""></script> 
    |    <script type=""text/javascript""> 
    |        var map, geoResult; 
    // Создание обработчика для события window.onLoad 
