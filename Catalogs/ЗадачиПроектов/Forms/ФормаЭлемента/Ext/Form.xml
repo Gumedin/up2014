@@ -219,179 +219,6 @@
 						</TextDocumentField>
 					</ChildItems>
 				</Page>
-				<Page name="ГруппаРеализацииОтгрузки" id="170">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>График реализации</v8:content>
-						</v8:item>
-					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Группа реализации отгрузки</v8:content>
-						</v8:item>
-					</ToolTip>
-					<ExtendedTooltip name="ГруппаРеализацииОтгрузкиРасширеннаяПодсказка" id="171"/>
-					<ChildItems>
-						<Table name="ЭтапыГрафикаОтгрузки" id="172">
-							<Footer>true</Footer>
-							<AutoInsertNewRow>true</AutoInsertNewRow>
-							<EnableStartDrag>true</EnableStartDrag>
-							<EnableDrag>true</EnableDrag>
-							<DataPath>Объект.ЭтапыГрафикаРеализации</DataPath>
-							<RowFilter xsi:nil="true"/>
-							<ContextMenu name="ЭтапыГрафикаОтгрузкиКонтекстноеМеню" id="173"/>
-							<AutoCommandBar name="ЭтапыГрафикаОтгрузкиКоманднаяПанель" id="174">
-								<ChildItems>
-									<Button name="ЭтапыГрафикаРеализацииПересчитатьГрафикОтгрузки" id="206">
-										<Type>CommandBarButton</Type>
-										<CommandName>Form.Command.ПересчитатьГрафикРеализации</CommandName>
-										<ExtendedTooltip name="ЭтапыГрафикаРеализацииПересчитатьГрафикОтгрузкиРасширеннаяПодсказка" id="207"/>
-									</Button>
-									<ButtonGroup name="ЭтапыГрафикаРеализацииГруппа1" id="218">
-										<Visible>false</Visible>
-										<Title>
-											<v8:item>
-												<v8:lang>ru</v8:lang>
-												<v8:content>Этапы графика реализации группа1</v8:content>
-											</v8:item>
-										</Title>
-										<ToolTip>
-											<v8:item>
-												<v8:lang>ru</v8:lang>
-												<v8:content>Этапы графика реализации группа1</v8:content>
-											</v8:item>
-										</ToolTip>
-										<ExtendedTooltip name="ЭтапыГрафикаРеализацииГруппа1РасширеннаяПодсказка" id="219"/>
-										<ChildItems>
-											<Button name="ЭтапыГрафикаРеализацииУстановитьФлажкиФиксированоОтгр" id="210">
-												<Type>CommandBarButton</Type>
-												<CommandName>Form.Command.УстановитьФлажкиФиксированоОтгр</CommandName>
-												<ExtendedTooltip name="ЭтапыГрафикаРеализацииУстановитьФлажкиФиксированоОтгрРасширеннаяПодсказка" id="211"/>
-											</Button>
-											<Button name="ЭтапыГрафикаРеализацииСнятьФлажкиФиксированоОтгр" id="212">
-												<Type>CommandBarButton</Type>
-												<CommandName>Form.Command.СнятьФлажкиФиксированоОтгр</CommandName>
-												<ExtendedTooltip name="ЭтапыГрафикаРеализацииСнятьФлажкиФиксированоОтгрРасширеннаяПодсказка" id="213"/>
-											</Button>
-										</ChildItems>
-									</ButtonGroup>
-									<ButtonGroup name="ЭтапыГрафикаРеализацииГруппа2" id="220">
-										<Visible>false</Visible>
-										<Title>
-											<v8:item>
-												<v8:lang>ru</v8:lang>
-												<v8:content>Этапы графика реализации группа2</v8:content>
-											</v8:item>
-										</Title>
-										<ToolTip>
-											<v8:item>
-												<v8:lang>ru</v8:lang>
-												<v8:content>Этапы графика реализации группа2</v8:content>
-											</v8:item>
-										</ToolTip>
-										<ExtendedTooltip name="ЭтапыГрафикаРеализацииГруппа2РасширеннаяПодсказка" id="221"/>
-										<ChildItems>
-											<Button name="ЭтапыГрафикаРеализацииУстановитьФлажкиГарантированоОтгр" id="214">
-												<Type>CommandBarButton</Type>
-												<CommandName>Form.Command.УстановитьФлажкиГарантированоОтгр</CommandName>
-												<ExtendedTooltip name="ЭтапыГрафикаРеализацииУстановитьФлажкиГарантированоОтгрРасширеннаяПодсказка" id="215"/>
-											</Button>
-											<Button name="ЭтапыГрафикаРеализацииСнятьФлажкиГарантированоОтгр" id="216">
-												<Type>CommandBarButton</Type>
-												<CommandName>Form.Command.СнятьФлажкиГарантированоОтгр</CommandName>
-												<ExtendedTooltip name="ЭтапыГрафикаРеализацииСнятьФлажкиГарантированоОтгрРасширеннаяПодсказка" id="217"/>
-											</Button>
-										</ChildItems>
-									</ButtonGroup>
-								</ChildItems>
-							</AutoCommandBar>
-							<ExtendedTooltip name="ЭтапыГрафикаОтгрузкиРасширеннаяПодсказка" id="175"/>
-							<SearchStringAddition name="ЭтапыГрафикаОтгрузкиСтрокаПоиска" id="176">
-								<AdditionSource>
-									<Item>Группа5</Item>
-									<Type>SearchStringRepresentation</Type>
-								</AdditionSource>
-								<ContextMenu name="ЭтапыГрафикаОтгрузкиСтрокаПоискаКонтекстноеМеню" id="177"/>
-								<ExtendedTooltip name="ЭтапыГрафикаОтгрузкиСтрокаПоискаРасширеннаяПодсказка" id="178"/>
-							</SearchStringAddition>
-							<ViewStatusAddition name="ЭтапыГрафикаОтгрузкиСостояниеПросмотра" id="179">
-								<AdditionSource>
-									<Item>Группа5</Item>
-									<Type>ViewStatusRepresentation</Type>
-								</AdditionSource>
-								<ContextMenu name="ЭтапыГрафикаОтгрузкиСостояниеПросмотраКонтекстноеМеню" id="180"/>
-								<ExtendedTooltip name="ЭтапыГрафикаОтгрузкиСостояниеПросмотраРасширеннаяПодсказка" id="181"/>
-							</ViewStatusAddition>
-							<SearchControlAddition name="ЭтапыГрафикаОтгрузкиУправлениеПоиском" id="182">
-								<AdditionSource>
-									<Item>Группа5</Item>
-									<Type>SearchControl</Type>
-								</AdditionSource>
-								<ContextMenu name="ЭтапыГрафикаОтгрузкиУправлениеПоискомКонтекстноеМеню" id="183"/>
-								<ExtendedTooltip name="ЭтапыГрафикаОтгрузкиУправлениеПоискомРасширеннаяПодсказка" id="184"/>
-							</SearchControlAddition>
-							<Events>
-								<Event name="OnChange">ЭтапыГрафикаОтгрузкиПриИзменении</Event>
-							</Events>
-							<ChildItems>
-								<LabelField name="ЭтапыГрафикаОтгрузкиНомерСтроки" id="185">
-									<DataPath>Объект.ЭтапыГрафикаРеализации.LineNumber</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<HorizontalStretch>false</HorizontalStretch>
-									<ContextMenu name="ЭтапыГрафикаОтгрузкиНомерСтрокиКонтекстноеМеню" id="186"/>
-									<ExtendedTooltip name="ЭтапыГрафикаОтгрузкиНомерСтрокиРасширеннаяПодсказка" id="187"/>
-								</LabelField>
-								<InputField name="ЭтапыГрафикаОтгрузкиДатаОтгрузки" id="188">
-									<DataPath>Объект.ЭтапыГрафикаРеализации.ДатаРеализации</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<HorizontalStretch>false</HorizontalStretch>
-									<ContextMenu name="ЭтапыГрафикаОтгрузкиДатаОтгрузкиКонтекстноеМеню" id="189"/>
-									<ExtendedTooltip name="ЭтапыГрафикаОтгрузкиДатаОтгрузкиРасширеннаяПодсказка" id="190"/>
-									<Events>
-										<Event name="OnChange">ЭтапыГрафикаОтгрузкиДатаОтгрузкиПриИзменении</Event>
-									</Events>
-								</InputField>
-								<InputField name="ЭтапыГрафикаОтгрузкиВидПлана" id="276">
-									<DataPath>Объект.ЭтапыГрафикаРеализации.ВидПлана</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<HorizontalStretch>false</HorizontalStretch>
-									<ContextMenu name="ЭтапыГрафикаОтгрузкиВидПланаКонтекстноеМеню" id="277"/>
-									<ExtendedTooltip name="ЭтапыГрафикаОтгрузкиВидПланаРасширеннаяПодсказка" id="278"/>
-								</InputField>
-								<InputField name="ЭтапыГрафикаОтгрузкиСуммаПлан" id="279">
-									<DataPath>Объект.ЭтапыГрафикаРеализации.СуммаПлан</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<HorizontalStretch>false</HorizontalStretch>
-									<ContextMenu name="ЭтапыГрафикаОтгрузкиСуммаПланКонтекстноеМеню" id="280"/>
-									<ExtendedTooltip name="ЭтапыГрафикаОтгрузкиСуммаПланРасширеннаяПодсказка" id="281"/>
-								</InputField>
-								<InputField name="ЭтапыГрафикаОтгрузкиСуммаФакт" id="282">
-									<DataPath>Объект.ЭтапыГрафикаРеализации.СуммаФакт</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<HorizontalStretch>false</HorizontalStretch>
-									<ContextMenu name="ЭтапыГрафикаОтгрузкиСуммаФактКонтекстноеМеню" id="283"/>
-									<ExtendedTooltip name="ЭтапыГрафикаОтгрузкиСуммаФактРасширеннаяПодсказка" id="284"/>
-								</InputField>
-								<InputField name="ЭтапыГрафикаОтгрузкиСуммаОплата" id="293">
-									<DataPath>Объект.ЭтапыГрафикаРеализации.СуммаОплата</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<HorizontalStretch>false</HorizontalStretch>
-									<ContextMenu name="ЭтапыГрафикаОтгрузкиСуммаОплатаКонтекстноеМеню" id="294"/>
-									<ExtendedTooltip name="ЭтапыГрафикаОтгрузкиСуммаОплатаРасширеннаяПодсказка" id="295"/>
-								</InputField>
-								<InputField name="ЭтапыГрафикаОтгрузкиКомментарий" id="197">
-									<DataPath>Объект.ЭтапыГрафикаРеализации.Комментарий</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<HorizontalStretch>true</HorizontalStretch>
-									<ContextMenu name="ЭтапыГрафикаОтгрузкиКомментарийКонтекстноеМеню" id="198"/>
-									<ExtendedTooltip name="ЭтапыГрафикаОтгрузкиКомментарийРасширеннаяПодсказка" id="199"/>
-								</InputField>
-							</ChildItems>
-						</Table>
-					</ChildItems>
-				</Page>
 				<Page name="ГруппаИсполнители" id="40">
 					<Title>
 						<v8:item>
@@ -467,6 +294,12 @@
 									<Events>
 										<Event name="OnChange">ИсполнителиДолжностьПриИзменении</Event>
 									</Events>
+								</InputField>
+								<InputField name="ИсполнителиЗагрузка" id="338">
+									<DataPath>Объект.Исполнители.Загрузка</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИсполнителиЗагрузкаКонтекстноеМеню" id="339"/>
+									<ExtendedTooltip name="ИсполнителиЗагрузкаРасширеннаяПодсказка" id="340"/>
 								</InputField>
 								<InputField name="ИсполнителиТарифнаяСтавка" id="92">
 									<DataPath>Объект.Исполнители.ТарифнаяСтавка</DataPath>
@@ -678,6 +511,261 @@
 						</CheckBoxField>
 					</ChildItems>
 				</Page>
+				<Page name="ГруппаВех" id="296">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Контрольные точки</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа вех</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаВехРасширеннаяПодсказка" id="297"/>
+					<ChildItems>
+						<Table name="КонтрольныеТочки" id="298">
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.КонтрольныеТочки</DataPath>
+							<RowPictureDataPath>1/0:e04e1515-871d-4067-be4b-c6d4822e76f7/10000000</RowPictureDataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="КонтрольныеТочкиКонтекстноеМеню" id="299"/>
+							<AutoCommandBar name="КонтрольныеТочкиКоманднаяПанель" id="300"/>
+							<ExtendedTooltip name="КонтрольныеТочкиРасширеннаяПодсказка" id="301"/>
+							<SearchStringAddition name="КонтрольныеТочкиСтрокаПоиска" id="302">
+								<AdditionSource>
+									<Item>КонтрольныеТочки</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="КонтрольныеТочкиСтрокаПоискаКонтекстноеМеню" id="303"/>
+								<ExtendedTooltip name="КонтрольныеТочкиСтрокаПоискаРасширеннаяПодсказка" id="304"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="КонтрольныеТочкиСостояниеПросмотра" id="305">
+								<AdditionSource>
+									<Item>КонтрольныеТочки</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="КонтрольныеТочкиСостояниеПросмотраКонтекстноеМеню" id="306"/>
+								<ExtendedTooltip name="КонтрольныеТочкиСостояниеПросмотраРасширеннаяПодсказка" id="307"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="КонтрольныеТочкиУправлениеПоиском" id="308">
+								<AdditionSource>
+									<Item>КонтрольныеТочки</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="КонтрольныеТочкиУправлениеПоискомКонтекстноеМеню" id="309"/>
+								<ExtendedTooltip name="КонтрольныеТочкиУправлениеПоискомРасширеннаяПодсказка" id="310"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="КонтрольныеТочкиНомерСтроки" id="341">
+									<DataPath>Объект.КонтрольныеТочки.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КонтрольныеТочкиНомерСтрокиКонтекстноеМеню" id="342"/>
+									<ExtendedTooltip name="КонтрольныеТочкиНомерСтрокиРасширеннаяПодсказка" id="343"/>
+								</LabelField>
+								<InputField name="КонтрольныеТочкиНаименование" id="344">
+									<DataPath>Объект.КонтрольныеТочки.Наименование</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КонтрольныеТочкиНаименованиеКонтекстноеМеню" id="345"/>
+									<ExtendedTooltip name="КонтрольныеТочкиНаименованиеРасширеннаяПодсказка" id="346"/>
+								</InputField>
+								<InputField name="КонтрольныеТочкиДатаПлан" id="347">
+									<DataPath>Объект.КонтрольныеТочки.ДатаПлан</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КонтрольныеТочкиДатаПланКонтекстноеМеню" id="348"/>
+									<ExtendedTooltip name="КонтрольныеТочкиДатаПланРасширеннаяПодсказка" id="349"/>
+								</InputField>
+								<InputField name="КонтрольныеТочкиДатаФакт" id="350">
+									<DataPath>Объект.КонтрольныеТочки.ДатаФакт</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КонтрольныеТочкиДатаФактКонтекстноеМеню" id="351"/>
+									<ExtendedTooltip name="КонтрольныеТочкиДатаФактРасширеннаяПодсказка" id="352"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаРеализацииОтгрузки" id="170">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>График реализации</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа реализации отгрузки</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаРеализацииОтгрузкиРасширеннаяПодсказка" id="171"/>
+					<ChildItems>
+						<Table name="ЭтапыГрафикаОтгрузки" id="172">
+							<Footer>true</Footer>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.ЭтапыГрафикаРеализации</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ЭтапыГрафикаОтгрузкиКонтекстноеМеню" id="173"/>
+							<AutoCommandBar name="ЭтапыГрафикаОтгрузкиКоманднаяПанель" id="174">
+								<ChildItems>
+									<Button name="ЭтапыГрафикаРеализацииПересчитатьГрафикОтгрузки" id="206">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ПересчитатьГрафикРеализации</CommandName>
+										<ExtendedTooltip name="ЭтапыГрафикаРеализацииПересчитатьГрафикОтгрузкиРасширеннаяПодсказка" id="207"/>
+									</Button>
+									<ButtonGroup name="ЭтапыГрафикаРеализацииГруппа1" id="218">
+										<Visible>false</Visible>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Этапы графика реализации группа1</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Этапы графика реализации группа1</v8:content>
+											</v8:item>
+										</ToolTip>
+										<ExtendedTooltip name="ЭтапыГрафикаРеализацииГруппа1РасширеннаяПодсказка" id="219"/>
+										<ChildItems>
+											<Button name="ЭтапыГрафикаРеализацииУстановитьФлажкиФиксированоОтгр" id="210">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.УстановитьФлажкиФиксированоОтгр</CommandName>
+												<ExtendedTooltip name="ЭтапыГрафикаРеализацииУстановитьФлажкиФиксированоОтгрРасширеннаяПодсказка" id="211"/>
+											</Button>
+											<Button name="ЭтапыГрафикаРеализацииСнятьФлажкиФиксированоОтгр" id="212">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.СнятьФлажкиФиксированоОтгр</CommandName>
+												<ExtendedTooltip name="ЭтапыГрафикаРеализацииСнятьФлажкиФиксированоОтгрРасширеннаяПодсказка" id="213"/>
+											</Button>
+										</ChildItems>
+									</ButtonGroup>
+									<ButtonGroup name="ЭтапыГрафикаРеализацииГруппа2" id="220">
+										<Visible>false</Visible>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Этапы графика реализации группа2</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Этапы графика реализации группа2</v8:content>
+											</v8:item>
+										</ToolTip>
+										<ExtendedTooltip name="ЭтапыГрафикаРеализацииГруппа2РасширеннаяПодсказка" id="221"/>
+										<ChildItems>
+											<Button name="ЭтапыГрафикаРеализацииУстановитьФлажкиГарантированоОтгр" id="214">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.УстановитьФлажкиГарантированоОтгр</CommandName>
+												<ExtendedTooltip name="ЭтапыГрафикаРеализацииУстановитьФлажкиГарантированоОтгрРасширеннаяПодсказка" id="215"/>
+											</Button>
+											<Button name="ЭтапыГрафикаРеализацииСнятьФлажкиГарантированоОтгр" id="216">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.СнятьФлажкиГарантированоОтгр</CommandName>
+												<ExtendedTooltip name="ЭтапыГрафикаРеализацииСнятьФлажкиГарантированоОтгрРасширеннаяПодсказка" id="217"/>
+											</Button>
+										</ChildItems>
+									</ButtonGroup>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ЭтапыГрафикаОтгрузкиРасширеннаяПодсказка" id="175"/>
+							<SearchStringAddition name="ЭтапыГрафикаОтгрузкиСтрокаПоиска" id="176">
+								<AdditionSource>
+									<Item>Группа5</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ЭтапыГрафикаОтгрузкиСтрокаПоискаКонтекстноеМеню" id="177"/>
+								<ExtendedTooltip name="ЭтапыГрафикаОтгрузкиСтрокаПоискаРасширеннаяПодсказка" id="178"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ЭтапыГрафикаОтгрузкиСостояниеПросмотра" id="179">
+								<AdditionSource>
+									<Item>Группа5</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ЭтапыГрафикаОтгрузкиСостояниеПросмотраКонтекстноеМеню" id="180"/>
+								<ExtendedTooltip name="ЭтапыГрафикаОтгрузкиСостояниеПросмотраРасширеннаяПодсказка" id="181"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ЭтапыГрафикаОтгрузкиУправлениеПоиском" id="182">
+								<AdditionSource>
+									<Item>Группа5</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ЭтапыГрафикаОтгрузкиУправлениеПоискомКонтекстноеМеню" id="183"/>
+								<ExtendedTooltip name="ЭтапыГрафикаОтгрузкиУправлениеПоискомРасширеннаяПодсказка" id="184"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="OnChange">ЭтапыГрафикаОтгрузкиПриИзменении</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="ЭтапыГрафикаОтгрузкиНомерСтроки" id="185">
+									<DataPath>Объект.ЭтапыГрафикаРеализации.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ContextMenu name="ЭтапыГрафикаОтгрузкиНомерСтрокиКонтекстноеМеню" id="186"/>
+									<ExtendedTooltip name="ЭтапыГрафикаОтгрузкиНомерСтрокиРасширеннаяПодсказка" id="187"/>
+								</LabelField>
+								<InputField name="ЭтапыГрафикаОтгрузкиДатаОтгрузки" id="188">
+									<DataPath>Объект.ЭтапыГрафикаРеализации.ДатаРеализации</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ContextMenu name="ЭтапыГрафикаОтгрузкиДатаОтгрузкиКонтекстноеМеню" id="189"/>
+									<ExtendedTooltip name="ЭтапыГрафикаОтгрузкиДатаОтгрузкиРасширеннаяПодсказка" id="190"/>
+									<Events>
+										<Event name="OnChange">ЭтапыГрафикаОтгрузкиДатаОтгрузкиПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ЭтапыГрафикаОтгрузкиВидПлана" id="276">
+									<DataPath>Объект.ЭтапыГрафикаРеализации.ВидПлана</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ContextMenu name="ЭтапыГрафикаОтгрузкиВидПланаКонтекстноеМеню" id="277"/>
+									<ExtendedTooltip name="ЭтапыГрафикаОтгрузкиВидПланаРасширеннаяПодсказка" id="278"/>
+								</InputField>
+								<InputField name="ЭтапыГрафикаОтгрузкиСуммаПлан" id="279">
+									<DataPath>Объект.ЭтапыГрафикаРеализации.СуммаПлан</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ContextMenu name="ЭтапыГрафикаОтгрузкиСуммаПланКонтекстноеМеню" id="280"/>
+									<ExtendedTooltip name="ЭтапыГрафикаОтгрузкиСуммаПланРасширеннаяПодсказка" id="281"/>
+								</InputField>
+								<InputField name="ЭтапыГрафикаОтгрузкиСуммаФакт" id="282">
+									<DataPath>Объект.ЭтапыГрафикаРеализации.СуммаФакт</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ContextMenu name="ЭтапыГрафикаОтгрузкиСуммаФактКонтекстноеМеню" id="283"/>
+									<ExtendedTooltip name="ЭтапыГрафикаОтгрузкиСуммаФактРасширеннаяПодсказка" id="284"/>
+								</InputField>
+								<InputField name="ЭтапыГрафикаОтгрузкиСуммаОплата" id="293">
+									<DataPath>Объект.ЭтапыГрафикаРеализации.СуммаОплата</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ContextMenu name="ЭтапыГрафикаОтгрузкиСуммаОплатаКонтекстноеМеню" id="294"/>
+									<ExtendedTooltip name="ЭтапыГрафикаОтгрузкиСуммаОплатаРасширеннаяПодсказка" id="295"/>
+								</InputField>
+								<InputField name="ЭтапыГрафикаОтгрузкиКомментарий" id="197">
+									<DataPath>Объект.ЭтапыГрафикаРеализации.Комментарий</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<HorizontalStretch>true</HorizontalStretch>
+									<ContextMenu name="ЭтапыГрафикаОтгрузкиКомментарийКонтекстноеМеню" id="198"/>
+									<ExtendedTooltip name="ЭтапыГрафикаОтгрузкиКомментарийРасширеннаяПодсказка" id="199"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
 				<Page name="ГруппаКомментарий" id="270">
 					<Title>
 						<v8:item>
@@ -834,6 +922,56 @@
 			<Type>
 				<v8:Type>xs:boolean</v8:Type>
 			</Type>
+		</Attribute>
+		<Attribute name="КонтрольныеТочки" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контрольные точки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	СправочникЗадачиПроектовВехи.Ссылка КАК Ссылка,
+	СправочникЗадачиПроектовВехи.ПометкаУдаления КАК ПометкаУдаления,
+	СправочникЗадачиПроектовВехи.Владелец КАК Владелец,
+	СправочникЗадачиПроектовВехи.Код КАК Код,
+	СправочникЗадачиПроектовВехи.Наименование КАК Наименование,
+	СправочникЗадачиПроектовВехи.Дата КАК Дата,
+	СправочникЗадачиПроектовВехи.Предопределенный КАК Предопределенный,
+	СправочникЗадачиПроектовВехи.ИмяПредопределенныхДанных КАК ИмяПредопределенныхДанных
+ИЗ
+	Справочник.ЗадачиПроектовВехи КАК СправочникЗадачиПроектовВехи
+ГДЕ
+	СправочникЗадачиПроектовВехи.Владелец = &amp;Владелец</QueryText>
+				<MainTable>Catalog.ЗадачиПроектовВехи</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Владелец</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.ЗадачиПроектов.ПустаяСсылка</dcsset:right>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
 		</Attribute>
 	</Attributes>
 	<Commands>
@@ -1351,6 +1489,38 @@
 			</Item>
 			<Item>
 				<Command>Catalog.ЗадачиПроектов.Command.ПечатьПлановыхЗадач</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>Document.ПланРаботТиражный.StandardCommand.CreateBasedOn</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>Document.ТабельРаботПоЗадачеПроектаТиражный.StandardCommand.CreateBasedOn</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>Document.РасходПоЗадачеПроизводство.StandardCommand.CreateBasedOn</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>Report.ИнцидентыЗадачиПроекта.Command.ОтчетОбИнцидентах</Command>
 				<Type>Auto</Type>
 				<DefaultVisible>false</DefaultVisible>
 				<Visible>
