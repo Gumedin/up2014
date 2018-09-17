@@ -12,6 +12,11 @@
 				<CommandName>Form.Command.ЗаполнитьИзКалькулятора</CommandName>
 				<ExtendedTooltip name="ФормаЗаполнитьИзКалькулятораРасширеннаяПодсказка" id="262"/>
 			</Button>
+			<Button name="ФормаЗаполнитьПоЗадаче" id="327">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ЗаполнитьПоЗадаче</CommandName>
+				<ExtendedTooltip name="ФормаЗаполнитьПоЗадачеРасширеннаяПодсказка" id="328"/>
+			</Button>
 			<Button name="ФормаПересчитатьСтавки" id="325">
 				<Type>CommandBarButton</Type>
 				<CommandName>Form.Command.ПересчитатьСтавки</CommandName>
@@ -1170,6 +1175,25 @@
 			</Picture>
 			<Action>ПересчитатьСтавки</Action>
 			<Representation>Picture</Representation>
+		</Command>
+		<Command name="ЗаполнитьПоЗадаче" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить по задаче</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить по исполнителям задачи</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.Встреча</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ЗаполнитьПоЗадаче</Action>
 		</Command>
 	</Commands>
 	<CommandInterface>
