@@ -78,31 +78,20 @@
 				</v8:item>
 			</title>
 		</field>
-		<field xsi:type="DataSetFieldField">
-			<dataPath>ГодЗадачи</dataPath>
-			<field>ГодЗадачи</field>
-			<title xsi:type="v8:LocalStringType">
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Год задачи</v8:content>
-				</v8:item>
-			</title>
-		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ
-	Акт.ЗадачаПроекта КАК ЗадачаПроекта,
+	Акт.ЗадачаПроекта,
 	Акт.ЗадачаПроекта.ТиповаяЗадача.ВидТиповойЗадачи КАК ВидТЗ,
-	Акт.Ссылка.Менеджер КАК Менеджер,
-	Акт.Ссылка.Контрагент КАК Контрагент,
+	Акт.Ссылка.Менеджер,
+	Акт.Ссылка.Контрагент,
 	Акт.ЗадачаПроекта.Владелец.Код КАК КодПроекта,
 	СУММА(Акт.Сумма) КАК СуммаАкта,
 	СУММА(Акт.СуммаВознаграждения) КАК НачисленКР,
 	ПОДСТРОКА(Акт.Ссылка.Номер, 1, 11) КАК Номер11,
-	Акт.Ссылка.Дата КАК Дата,
+	Акт.Ссылка.Дата,
 	ЕСТЬNULL(Смета1.Сумма, 0) КАК Сумма1,
 	ЕСТЬNULL(Смета12.Сумма, 0) КАК Сумма12,
-	ЕСТЬNULL(Смета5.ЗначениеПараметра, 0) КАК Процент5,
-	Акт.ЗадачаПроекта.ГодЗадачи КАК ГодЗадачи
+	ЕСТЬNULL(Смета5.ЗначениеПараметра, 0) КАК Процент5
 ИЗ
 	Документ.ДокументУТ.КоммерческоеВознаграждение КАК Акт
 		ЛЕВОЕ СОЕДИНЕНИЕ Документ.СметаЗадачиПроекта.Расчет КАК Смета1
@@ -279,9 +268,8 @@
 		<valueType>
 			<v8:Type>xs:boolean</v8:Type>
 		</valueType>
-		<value xsi:type="xs:boolean">false</value>
+		<value xsi:type="xs:boolean">true</value>
 		<useRestriction>true</useRestriction>
-		<expression>СКД_ПолныеПрава()</expression>
 	</parameter>
 	<parameter>
 		<name>РКО</name>
@@ -385,6 +373,11 @@
 						<v8:variant xsi:type="v8:StandardPeriodVariant">LastMonth</v8:variant>
 					</dcscor:value>
 					<dcsset:userSettingID>563e6393-a123-460a-a1f6-ced59b101ace</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ВсеМенеджеры</dcscor:parameter>
+					<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
 				</dcscor:item>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 					<dcscor:parameter>РКО</dcscor:parameter>
