@@ -268,9 +268,8 @@
 		<valueType>
 			<v8:Type>xs:boolean</v8:Type>
 		</valueType>
-		<value xsi:type="xs:boolean">false</value>
+		<value xsi:type="xs:boolean">true</value>
 		<useRestriction>true</useRestriction>
-		<expression>СКД_ПолныеПрава()</expression>
 	</parameter>
 	<parameter>
 		<name>РКО</name>
@@ -374,6 +373,11 @@
 						<v8:variant xsi:type="v8:StandardPeriodVariant">LastMonth</v8:variant>
 					</dcscor:value>
 					<dcsset:userSettingID>563e6393-a123-460a-a1f6-ced59b101ace</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ВсеМенеджеры</dcscor:parameter>
+					<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
 				</dcscor:item>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 					<dcscor:parameter>РКО</dcscor:parameter>
