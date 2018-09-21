@@ -1,38 +1,38 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5">
-	<Catalog uuid="9fe85b9c-48a8-425c-8aa8-5d8868e41ca2">
+	<Catalog uuid="c3bab11d-d3bd-48be-85d0-9c2a47d23899">
 		<InternalInfo>
-			<xr:GeneratedType name="CatalogObject.ИсточникФинансирования" category="Object">
-				<xr:TypeId>feca960f-f602-4c6d-9474-212b70759434</xr:TypeId>
-				<xr:ValueId>1ecab84a-63d1-40ff-8f9f-f6d743ef2a82</xr:ValueId>
+			<xr:GeneratedType name="CatalogObject.Направления" category="Object">
+				<xr:TypeId>0bbc5b3e-9d2a-4299-b776-6a09f6e90ea2</xr:TypeId>
+				<xr:ValueId>08ddfe7f-e81e-4a8c-8750-81e1bebef0e8</xr:ValueId>
 			</xr:GeneratedType>
-			<xr:GeneratedType name="CatalogRef.ИсточникФинансирования" category="Ref">
-				<xr:TypeId>25e4aa30-9af8-4ee0-97a2-7d205387ceac</xr:TypeId>
-				<xr:ValueId>f65c1c30-d62e-4fe2-9367-ad76d0eae0a7</xr:ValueId>
+			<xr:GeneratedType name="CatalogRef.Направления" category="Ref">
+				<xr:TypeId>e5cce72f-ac52-469f-a420-4bd9c99d52e2</xr:TypeId>
+				<xr:ValueId>e8173d3a-395d-4a51-b803-8e0c89b79dd2</xr:ValueId>
 			</xr:GeneratedType>
-			<xr:GeneratedType name="CatalogSelection.ИсточникФинансирования" category="Selection">
-				<xr:TypeId>b776b95b-6b60-4dce-8309-63a22cd660c4</xr:TypeId>
-				<xr:ValueId>c54f46cc-277b-4491-859a-3039cf623291</xr:ValueId>
+			<xr:GeneratedType name="CatalogSelection.Направления" category="Selection">
+				<xr:TypeId>a39dafbf-291d-41de-a3f9-1b3fe55f5cde</xr:TypeId>
+				<xr:ValueId>63af9ffb-76ed-43ab-9261-cbdfe8187bb9</xr:ValueId>
 			</xr:GeneratedType>
-			<xr:GeneratedType name="CatalogList.ИсточникФинансирования" category="List">
-				<xr:TypeId>5e7a6d3b-f884-4ff4-b750-7ddd687d5ecf</xr:TypeId>
-				<xr:ValueId>fd091000-0949-42f8-af4e-249e2ae98131</xr:ValueId>
+			<xr:GeneratedType name="CatalogList.Направления" category="List">
+				<xr:TypeId>97455328-370f-458b-b6d0-f5b687b90a28</xr:TypeId>
+				<xr:ValueId>4f5dbdfc-15f7-4c85-b773-7c68e24c1f81</xr:ValueId>
 			</xr:GeneratedType>
-			<xr:GeneratedType name="CatalogManager.ИсточникФинансирования" category="Manager">
-				<xr:TypeId>9505e1eb-070b-4076-88d4-cb5f40c8d67c</xr:TypeId>
-				<xr:ValueId>53d397f9-de80-4169-b89a-d1ab7db36dd6</xr:ValueId>
+			<xr:GeneratedType name="CatalogManager.Направления" category="Manager">
+				<xr:TypeId>e3c85e33-788f-4436-8322-890d08a42ccc</xr:TypeId>
+				<xr:ValueId>31e6be62-c006-4fd3-b524-a575ba93f42b</xr:ValueId>
 			</xr:GeneratedType>
 		</InternalInfo>
 		<Properties>
-			<Name>ИсточникФинансирования</Name>
+			<Name>Направления</Name>
 			<Synonym>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Источник финансирования</v8:content>
+					<v8:content>Направления</v8:content>
 				</v8:item>
 			</Synonym>
 			<Comment/>
-			<Hierarchical>false</Hierarchical>
+			<Hierarchical>true</Hierarchical>
 			<HierarchyType>HierarchyFoldersAndItems</HierarchyType>
 			<LimitLevelCount>false</LimitLevelCount>
 			<LevelCount>2</LevelCount>
@@ -54,15 +54,15 @@
 			<QuickChoice>false</QuickChoice>
 			<ChoiceMode>BothWays</ChoiceMode>
 			<InputByString>
-				<xr:Field>Catalog.ИсточникФинансирования.StandardAttribute.Description</xr:Field>
-				<xr:Field>Catalog.ИсточникФинансирования.StandardAttribute.Code</xr:Field>
+				<xr:Field>Catalog.Направления.StandardAttribute.Description</xr:Field>
+				<xr:Field>Catalog.Направления.StandardAttribute.Code</xr:Field>
 			</InputByString>
 			<SearchStringModeOnInputByString>Begin</SearchStringModeOnInputByString>
 			<FullTextSearchOnInputByString>DontUse</FullTextSearchOnInputByString>
 			<ChoiceDataGetModeOnInputByString>Directly</ChoiceDataGetModeOnInputByString>
-			<DefaultObjectForm>Catalog.ИсточникФинансирования.Form.ФормаЭлемента</DefaultObjectForm>
+			<DefaultObjectForm/>
 			<DefaultFolderForm/>
-			<DefaultListForm>Catalog.ИсточникФинансирования.Form.ФормаСписка</DefaultListForm>
+			<DefaultListForm/>
 			<DefaultChoiceForm/>
 			<DefaultFolderChoiceForm/>
 			<AuxiliaryObjectForm/>
@@ -85,18 +85,18 @@
 			<DataHistory>DontUse</DataHistory>
 		</Properties>
 		<ChildObjects>
-			<Attribute uuid="0e28b8de-0df4-4d1d-bbea-fc2d3b6bf9a4">
+			<Attribute uuid="e8a51f17-81a6-4d27-8888-2366a34e2ef4">
 				<Properties>
-					<Name>НеУчитыватьДоговора</Name>
+					<Name>Ответственный</Name>
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Не учитывать в договорах</v8:content>
+							<v8:content>Ответственный</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
 					<Type>
-						<v8:Type>xs:boolean</v8:Type>
+						<v8:Type>cfg:CatalogRef.ФизическиеЛица</v8:Type>
 					</Type>
 					<PasswordMode>false</PasswordMode>
 					<Format/>
@@ -125,7 +125,7 @@
 					<DataHistory>Use</DataHistory>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="13037bd0-d3aa-4f0f-b85a-678e12abbb77">
+			<Attribute uuid="635f4809-794f-4788-9e8a-deffe99185fd">
 				<Properties>
 					<Name>СогласованиеЗадач</Name>
 					<Synonym>
@@ -165,7 +165,7 @@
 					<DataHistory>Use</DataHistory>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="7aa46085-ae19-4671-a5e5-c4c14cff6a86">
+			<Attribute uuid="1c9b9ab4-a382-4d65-9805-fdf419e8d3fe">
 				<Properties>
 					<Name>СогласованиеСмет</Name>
 					<Synonym>
@@ -205,8 +205,46 @@
 					<DataHistory>Use</DataHistory>
 				</Properties>
 			</Attribute>
-			<Form>ФормаЭлемента</Form>
-			<Form>ФормаСписка</Form>
+			<Attribute uuid="9e1cafec-f3eb-4100-abc0-e2eca3f0e6ae">
+				<Properties>
+					<Name>Активно</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Активно</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+					<PasswordMode>false</PasswordMode>
+					<Format/>
+					<EditFormat/>
+					<ToolTip/>
+					<MarkNegatives>false</MarkNegatives>
+					<Mask/>
+					<MultiLine>false</MultiLine>
+					<ExtendedEdit>false</ExtendedEdit>
+					<MinValue xsi:nil="true"/>
+					<MaxValue xsi:nil="true"/>
+					<FillFromFillingValue>false</FillFromFillingValue>
+					<FillValue xsi:type="xs:boolean">true</FillValue>
+					<FillChecking>DontCheck</FillChecking>
+					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+					<ChoiceParameterLinks/>
+					<ChoiceParameters/>
+					<QuickChoice>Auto</QuickChoice>
+					<CreateOnInput>Auto</CreateOnInput>
+					<ChoiceForm/>
+					<LinkByType/>
+					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+					<Use>ForItem</Use>
+					<Indexing>DontIndex</Indexing>
+					<FullTextSearch>Use</FullTextSearch>
+					<DataHistory>Use</DataHistory>
+				</Properties>
+			</Attribute>
 		</ChildObjects>
 	</Catalog>
 </MetaDataObject>
