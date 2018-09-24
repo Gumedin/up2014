@@ -65,6 +65,12 @@
 					<ContextMenu name="СтатусДатаКонтекстноеМеню" id="291"/>
 					<ExtendedTooltip name="СтатусДатаРасширеннаяПодсказка" id="292"/>
 				</InputField>
+				<CheckBoxField name="Активная" id="356">
+					<DataPath>Объект.Активная</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="АктивнаяКонтекстноеМеню" id="357"/>
+					<ExtendedTooltip name="АктивнаяРасширеннаяПодсказка" id="358"/>
+				</CheckBoxField>
 			</ChildItems>
 		</UsualGroup>
 		<UsualGroup name="Группа6" id="274">
@@ -184,6 +190,11 @@
 							<DataPath>Объект.ИсточникФинансирования</DataPath>
 							<ContextMenu name="ИсточникФинансированияКонтекстноеМеню" id="168"/>
 							<ExtendedTooltip name="ИсточникФинансированияРасширеннаяПодсказка" id="169"/>
+						</InputField>
+						<InputField name="Направление" id="353">
+							<DataPath>Объект.Направление</DataPath>
+							<ContextMenu name="НаправлениеКонтекстноеМеню" id="354"/>
+							<ExtendedTooltip name="НаправлениеРасширеннаяПодсказка" id="355"/>
 						</InputField>
 					</ChildItems>
 				</UsualGroup>
@@ -532,7 +543,6 @@
 							<EnableStartDrag>true</EnableStartDrag>
 							<EnableDrag>true</EnableDrag>
 							<DataPath>Объект.КонтрольныеТочки</DataPath>
-							<RowPictureDataPath>1/0:e04e1515-871d-4067-be4b-c6d4822e76f7/10000000</RowPictureDataPath>
 							<SearchStringLocation>None</SearchStringLocation>
 							<ViewStatusLocation>None</ViewStatusLocation>
 							<SearchControlLocation>None</SearchControlLocation>
