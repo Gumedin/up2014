@@ -33,8 +33,15 @@
 		</UsualGroup>
 		<InputField name="СтатьяРасходов" id="37">
 			<DataPath>Объект.СтатьяРасходов</DataPath>
+			<Visible>false</Visible>
 			<ContextMenu name="СтатьяРасходовКонтекстноеМеню" id="38"/>
 			<ExtendedTooltip name="СтатьяРасходовРасширеннаяПодсказка" id="39"/>
+		</InputField>
+		<InputField name="Фонд" id="46">
+			<DataPath>Объект.Фонд</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ContextMenu name="ФондКонтекстноеМеню" id="47"/>
+			<ExtendedTooltip name="ФондРасширеннаяПодсказка" id="48"/>
 		</InputField>
 		<Table name="Выплаты" id="13">
 			<Representation>List</Representation>
@@ -85,6 +92,18 @@
 					<EditMode>EnterOnInput</EditMode>
 					<ContextMenu name="ВыплатыПодразделениеКонтекстноеМеню" id="21"/>
 					<ExtendedTooltip name="ВыплатыПодразделениеРасширеннаяПодсказка" id="22"/>
+				</InputField>
+				<InputField name="ВыплатыСотрудник" id="40">
+					<DataPath>Объект.Выплаты.Сотрудник</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ВыплатыСотрудникКонтекстноеМеню" id="41"/>
+					<ExtendedTooltip name="ВыплатыСотрудникРасширеннаяПодсказка" id="42"/>
+				</InputField>
+				<InputField name="ВыплатыСтатьяРасходов" id="43">
+					<DataPath>1/0:2db645aa-b1b2-488a-babd-5082a1d1d25c/0:a42aafbd-69da-469a-87e5-be5632c092ae</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ВыплатыСтатьяРасходовКонтекстноеМеню" id="44"/>
+					<ExtendedTooltip name="ВыплатыСтатьяРасходовРасширеннаяПодсказка" id="45"/>
 				</InputField>
 				<InputField name="ВыплатыСумма" id="23">
 					<DataPath>Объект.Выплаты.Сумма</DataPath>
