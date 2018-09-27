@@ -57,6 +57,11 @@
 				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="22"/>
 			</SearchControlAddition>
 			<ChildItems>
+				<LabelField name="Номер" id="8">
+					<DataPath>Список.Number</DataPath>
+					<ContextMenu name="НомерКонтекстноеМеню" id="9"/>
+					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="10"/>
+				</LabelField>
 				<LabelField name="Дата" id="5">
 					<DataPath>Список.Date</DataPath>
 					<DefaultItem>true</DefaultItem>
@@ -68,10 +73,10 @@
 					<ContextMenu name="ПериодРегистрацииКонтекстноеМеню" id="12"/>
 					<ExtendedTooltip name="ПериодРегистрацииРасширеннаяПодсказка" id="13"/>
 				</LabelField>
-				<LabelField name="Номер" id="8">
-					<DataPath>Список.Number</DataPath>
-					<ContextMenu name="НомерКонтекстноеМеню" id="9"/>
-					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="10"/>
+				<LabelField name="Фонд" id="23">
+					<DataPath>Список.Фонд</DataPath>
+					<ContextMenu name="ФондКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="ФондРасширеннаяПодсказка" id="25"/>
 				</LabelField>
 			</ChildItems>
 		</Table>
