@@ -11,6 +11,17 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ЗаявкаНаВыплату.Attribute.Посредник</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
 		<name>CommonForm.ДополнительноеОписание</name>
 		<right>
 			<name>View</name>
@@ -342,6 +353,17 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ЗаявкаНаВыплату.TabularSection.Задачи</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
 		<name>Report.Задания</name>
 		<right>
 			<name>Use</name>
@@ -645,6 +667,17 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ПланВознагражденияПосредника.Attribute.СуммаДокумента</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
 		<name>Document.Договор</name>
 		<right>
 			<name>Read</name>
@@ -748,6 +781,17 @@
 		<right>
 			<name>InputByString</name>
 			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПланВознагражденияПосредника.TabularSection.Начисления.Attribute.ДатаНачисления</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
 		</right>
 	</object>
 	<object>
@@ -944,6 +988,17 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ЗаявкаНаВыплату.Attribute.КлиентМенеджер</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
 		<name>CommonForm.ПредупрежденияПриЗавершенииРаботы</name>
 		<right>
 			<name>View</name>
@@ -981,13 +1036,6 @@
 	</object>
 	<object>
 		<name>CommonForm.ПараметрыПроксиСервера</name>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>Catalog.ЗадачиПроектов.Command.СписокПлановВознагражденияПосредника</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -1042,6 +1090,39 @@
 		<right>
 			<name>View</name>
 			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЗаявкаНаВыплату.Attribute.Проект</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПланВознагражденияПосредника.TabularSection.Начисления.Attribute.Сумма</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЗаявкаНаВыплату.TabularSection.Задачи.Attribute.Задача</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
 		</right>
 	</object>
 	<object>
@@ -1115,6 +1196,17 @@
 		<right>
 			<name>InputByString</name>
 			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЗаявкаНаВыплату.Attribute.СуммаДокумента</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
 		</right>
 	</object>
 	<object>
@@ -1239,6 +1331,17 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ПланВознагражденияПосредника.Attribute.ЗадачаПроекта</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
 		<name>Subsystem.КлиентМенеджерыПроектов</name>
 		<right>
 			<name>View</name>
@@ -1265,37 +1368,60 @@
 			<name>Read</name>
 			<value>true</value>
 		</right>
-		<right>
-			<name>Insert</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Update</name>
-			<value>true</value>
-		</right>
+	</object>
+	<object>
+		<name>Document.ЗаявкаНаВыплату.StandardAttribute.Posted</name>
 		<right>
 			<name>View</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveInsert</name>
-			<value>true</value>
+			<value>false</value>
 		</right>
 		<right>
 			<name>Edit</name>
-			<value>true</value>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЗаявкаНаВыплату.StandardAttribute.Ref</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
 		</right>
 		<right>
-			<name>InteractiveSetDeletionMark</name>
-			<value>true</value>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЗаявкаНаВыплату.StandardAttribute.DeletionMark</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
 		</right>
 		<right>
-			<name>InteractiveClearDeletionMark</name>
-			<value>true</value>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЗаявкаНаВыплату.StandardAttribute.Date</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
 		</right>
 		<right>
-			<name>InputByString</name>
-			<value>true</value>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЗаявкаНаВыплату.StandardAttribute.Number</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
 		</right>
 	</object>
 	<object>
@@ -1441,6 +1567,17 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ЗаявкаНаВыплату.Attribute.ИсполнительДокумента</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
 		<name>AccumulationRegister.БюджетПоМесяцам</name>
 		<right>
 			<name>Read</name>
@@ -1583,6 +1720,17 @@
 		<right>
 			<name>View</name>
 			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЗаявкаНаВыплату.TabularSection.Задачи.Attribute.КВыплате</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
 		</right>
 	</object>
 	<object>
@@ -2412,13 +2560,6 @@
 		</right>
 	</object>
 	<object>
-		<name>Catalog.Проекты.Command.СписокЗаявкаНаВыплату</name>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
 		<name>AccumulationRegister.ФронтРабот</name>
 		<right>
 			<name>Read</name>
@@ -2443,53 +2584,60 @@
 			<name>Read</name>
 			<value>true</value>
 		</right>
-		<right>
-			<name>Insert</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Update</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Posting</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>UndoPosting</name>
-			<value>true</value>
-		</right>
+	</object>
+	<object>
+		<name>Document.ПланВознагражденияПосредника.StandardAttribute.Posted</name>
 		<right>
 			<name>View</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveInsert</name>
-			<value>true</value>
+			<value>false</value>
 		</right>
 		<right>
 			<name>Edit</name>
-			<value>true</value>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПланВознагражденияПосредника.StandardAttribute.Ref</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
 		</right>
 		<right>
-			<name>InteractivePosting</name>
-			<value>true</value>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПланВознагражденияПосредника.StandardAttribute.DeletionMark</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
 		</right>
 		<right>
-			<name>InteractivePostingRegular</name>
-			<value>true</value>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПланВознагражденияПосредника.StandardAttribute.Date</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
 		</right>
 		<right>
-			<name>InteractiveUndoPosting</name>
-			<value>true</value>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПланВознагражденияПосредника.StandardAttribute.Number</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
 		</right>
 		<right>
-			<name>InteractiveChangeOfPosted</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InputByString</name>
-			<value>true</value>
+			<name>Edit</name>
+			<value>false</value>
 		</right>
 	</object>
 	<object>
@@ -2651,6 +2799,17 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ЗаявкаНаВыплату.Attribute.ДатаОплаты</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
 		<name>Report.АнализЖурналаРегистрации</name>
 		<right>
 			<name>Use</name>
@@ -2659,6 +2818,17 @@
 		<right>
 			<name>View</name>
 			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПланВознагражденияПосредника.TabularSection.Начисления.Attribute.Посредник</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
 		</right>
 	</object>
 	<object>
@@ -2758,6 +2928,17 @@
 		<right>
 			<name>View</name>
 			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЗаявкаНаВыплату.TabularSection.Задачи.Attribute.Расход</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
 		</right>
 	</object>
 	<object>
@@ -2922,6 +3103,17 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ЗаявкаНаВыплату.Attribute.НомерОплаты</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
 		<name>InformationRegister.РуководителиПодразделений</name>
 		<right>
 			<name>Read</name>
@@ -3002,6 +3194,17 @@
 		<right>
 			<name>View</name>
 			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЗаявкаНаВыплату.TabularSection.Задачи.Attribute.Приход</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
 		</right>
 	</object>
 	<object>
@@ -3511,6 +3714,17 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ПланВознагражденияПосредника.Attribute.ИсполнительДокумента</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
 		<name>CommonForm.СинхронизацияДанныхВМоделиСервиса</name>
 		<right>
 			<name>View</name>
@@ -3551,6 +3765,17 @@
 		<right>
 			<name>View</name>
 			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПланВознагражденияПосредника.TabularSection.Начисления</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
 		</right>
 	</object>
 	<object>
