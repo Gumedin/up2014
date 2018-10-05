@@ -1,15 +1,60 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5">
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
 	<Events>
+		<Event name="OnLoadDataFromSettingsAtServer">ПриЗагрузкеДанныхИзНастроекНаСервере</Event>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
-		<LabelField name="ТекущийКлиентМенеджер" id="28">
-			<DataPath>ТекущийКлиентМенеджер</DataPath>
-			<ContextMenu name="ТекущийКлиентМенеджерКонтекстноеМеню" id="29"/>
-			<ExtendedTooltip name="ТекущийКлиентМенеджерРасширеннаяПодсказка" id="30"/>
-		</LabelField>
+		<UsualGroup name="Группа1" id="49">
+			<HorizontalStretch>true</HorizontalStretch>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="50"/>
+			<ChildItems>
+				<LabelField name="ТекущийКлиентМенеджер" id="28">
+					<DataPath>ТекущийКлиентМенеджер</DataPath>
+					<ContextMenu name="ТекущийКлиентМенеджерКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="ТекущийКлиентМенеджерРасширеннаяПодсказка" id="30"/>
+				</LabelField>
+				<UsualGroup name="Группа2" id="51">
+					<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="52"/>
+					<ChildItems>
+						<InputField name="Тип" id="53">
+							<DataPath>ТекущийТип</DataPath>
+							<DropListButton>true</DropListButton>
+							<ChoiceButton>false</ChoiceButton>
+							<ClearButton>false</ClearButton>
+							<ContextMenu name="ТипКонтекстноеМеню" id="54"/>
+							<ExtendedTooltip name="ТипРасширеннаяПодсказка" id="55"/>
+							<Events>
+								<Event name="OnChange">ТекущийТипПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="ДатаС" id="56">
+							<DataPath>ДатаС</DataPath>
+							<ContextMenu name="ДатаСКонтекстноеМеню" id="57"/>
+							<ExtendedTooltip name="ДатаСРасширеннаяПодсказка" id="58"/>
+							<Events>
+								<Event name="OnChange">ТекущийГодПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="ДатаПо" id="59">
+							<DataPath>ДатаПо</DataPath>
+							<ContextMenu name="ДатаПоКонтекстноеМеню" id="60"/>
+							<ExtendedTooltip name="ДатаПоРасширеннаяПодсказка" id="61"/>
+							<Events>
+								<Event name="OnChange">ТекущийГодПриИзменении</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
 		<UsualGroup name="СписокКомпоновщикНастроекПользовательскиеНастройки" id="1">
 			<Title>
 				<v8:item>
@@ -76,18 +121,20 @@
 			</SearchControlAddition>
 			<ChildItems>
 				<LabelField name="Ссылка" id="46">
-					<DataPath>Список.Ref</DataPath>
-					<Visible>false</Visible>
+					<DataPath>Список.Ссылка</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
 					<ContextMenu name="СсылкаКонтекстноеМеню" id="47"/>
 					<ExtendedTooltip name="СсылкаРасширеннаяПодсказка" id="48"/>
 				</LabelField>
 				<LabelField name="Номер" id="25">
-					<DataPath>Список.Number</DataPath>
+					<DataPath>Список.Номер</DataPath>
 					<ContextMenu name="НомерКонтекстноеМеню" id="26"/>
 					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="27"/>
 				</LabelField>
 				<LabelField name="Дата" id="22">
-					<DataPath>Список.Date</DataPath>
+					<DataPath>Список.Дата</DataPath>
 					<DefaultItem>true</DefaultItem>
 					<ContextMenu name="ДатаКонтекстноеМеню" id="23"/>
 					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="24"/>
@@ -127,8 +174,75 @@
 			</Type>
 			<MainAttribute>true</MainAttribute>
 			<Settings xsi:type="DynamicList">
-				<ManualQuery>false</ManualQuery>
+				<ManualQuery>true</ManualQuery>
 				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	ДокументДоговор.Ссылка КАК Ссылка,
+	ДокументДоговор.ПометкаУдаления КАК ПометкаУдаления,
+	ДокументДоговор.Номер КАК Номер,
+	ДокументДоговор.Дата КАК Дата,
+	ДокументДоговор.Проведен КАК Проведен,
+	ДокументДоговор.Проект КАК Проект,
+	ДокументДоговор.Организация КАК Организация,
+	ДокументДоговор.Контрагент КАК Контрагент,
+	ДокументДоговор.СуммаДокумента КАК СуммаДокумента,
+	ДокументДоговор.Комментарий КАК Комментарий,
+	ДокументДоговор.ИсполнительДокумента КАК ИсполнительДокумента,
+	ДокументДоговор.Соглашение КАК Соглашение,
+	ДокументДоговор.ПорядокРасчетов КАК ПорядокРасчетов,
+	ДокументДоговор.Фиктивный КАК Фиктивный,
+	ДокументДоговор.ЗадачиПроекта.(
+		Ссылка КАК Ссылка,
+		НомерСтроки КАК НомерСтроки,
+		ЗадачаПроекта КАК ЗадачаПроекта,
+		Сумма КАК Сумма,
+		СуммаПоСмете КАК СуммаПоСмете,
+		Изменено КАК Изменено
+	) КАК ЗадачиПроекта,
+	ДокументДоговор.ЭтапыГрафикаОплаты.(
+		Ссылка КАК Ссылка,
+		НомерСтроки КАК НомерСтроки,
+		ЗадачаПроекта КАК ЗадачаПроекта,
+		ДатаПлатежа КАК ДатаПлатежа,
+		СуммаПлатежа КАК СуммаПлатежа,
+		ПроцентПлатежа КАК ПроцентПлатежа,
+		Комментарий КАК Комментарий
+	) КАК ЭтапыГрафикаОплаты,
+	ДокументДоговор.ЭтапыГрафикаРеализации.(
+		Ссылка КАК Ссылка,
+		НомерСтроки КАК НомерСтроки,
+		ЗадачаПроекта КАК ЗадачаПроекта,
+		ДатаРеализации КАК ДатаРеализации,
+		СуммаРеализации КАК СуммаРеализации,
+		ПроцентРеализации КАК ПроцентРеализации,
+		Комментарий КАК Комментарий
+	) КАК ЭтапыГрафикаРеализации,
+	ДокументДоговор.ЭтапыГрафикаОтгрузкиПоДоговорам.(
+		Ссылка КАК Ссылка,
+		НомерСтроки КАК НомерСтроки,
+		ДатаОтгрузки КАК ДатаОтгрузки,
+		СуммаОтгрузки КАК СуммаОтгрузки,
+		ПроцентОтгрузки КАК ПроцентОтгрузки,
+		ТипНоменклатуры КАК ТипНоменклатуры
+	) КАК ЭтапыГрафикаОтгрузкиПоДоговорам,
+	ДокументДоговор.ЭтапыГрафикаОплатыПоДоговорам.(
+		Ссылка КАК Ссылка,
+		НомерСтроки КАК НомерСтроки,
+		ДатаПлатежа КАК ДатаПлатежа,
+		СуммаПлатежа КАК СуммаПлатежа,
+		ПроцентПлатежа КАК ПроцентПлатежа,
+		ТипНоменклатуры КАК ТипНоменклатуры
+	) КАК ЭтапыГрафикаОплатыПоДоговорам,
+	ДокументДоговор.Проекты.(
+		Ссылка КАК Ссылка,
+		НомерСтроки КАК НомерСтроки,
+		Проект КАК Проект
+	) КАК Проекты,
+	ДокументДоговор.МоментВремени КАК МоментВремени
+ИЗ
+	Документ.Договор КАК ДокументДоговор
+ГДЕ
+	ДокументДоговор.Дата МЕЖДУ &amp;ДатаС И &amp;ДатаПо</QueryText>
 				<MainTable>Document.Договор</MainTable>
 				<ListSettings>
 					<dcsset:filter>
@@ -158,6 +272,54 @@
 			<Type>
 				<v8:Type>cfg:CatalogRef.ФизическиеЛица</v8:Type>
 			</Type>
+		</Attribute>
+		<Attribute name="ТекущийТип" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущий тип</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ТипОтбораДоговора</v8:Type>
+			</Type>
+			<Save>
+				<Field>ТекущийТип</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ДатаС" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата с</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+			<Save>
+				<Field>ДатаС</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ДатаПо" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата по</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+			<Save>
+				<Field>ДатаПо</Field>
+			</Save>
 		</Attribute>
 	</Attributes>
 </Form>
