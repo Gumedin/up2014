@@ -335,6 +335,13 @@
 													<HorizontalStretch>false</HorizontalStretch>
 													<ContextMenu name="ЗадачиПроектаЗадачаПроектаКонтекстноеМеню" id="21"/>
 													<ExtendedTooltip name="ЗадачиПроектаЗадачаПроектаРасширеннаяПодсказка" id="103"/>
+													<Events>
+														<Event name="OnChange">ЗадачиПроектаЗадачаПроектаПриИзменении</Event>
+														<Event name="StartChoice">ЗадачиПроектаЗадачаПроектаНачалоВыбора</Event>
+														<Event name="Opening">ЗадачиПроектаЗадачаПроектаОткрытие</Event>
+														<Event name="StartListChoice">ЗадачиПроектаЗадачаПроектаНачалоВыбораИзСписка</Event>
+														<Event name="ChoiceProcessing">ЗадачиПроектаЗадачаПроектаОбработкаВыбора</Event>
+													</Events>
 												</InputField>
 												<InputField name="ЗадачиПроектаСуммаПоСмете" id="69">
 													<DataPath>Объект.ЗадачиПроекта.СуммаПоСмете</DataPath>
@@ -728,6 +735,7 @@
 									<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="321"/>
 									<ChildItems>
 										<Table name="ЭтапыГрафикаОтгрузкиПоДоговорам" id="270">
+											<ReadOnly>true</ReadOnly>
 											<Footer>true</Footer>
 											<AutoInsertNewRow>true</AutoInsertNewRow>
 											<EnableStartDrag>true</EnableStartDrag>
@@ -811,6 +819,7 @@
 									<ExtendedTooltip name="Группа9РасширеннаяПодсказка" id="323"/>
 									<ChildItems>
 										<Table name="ЭтапыГрафикаОплатыПоДоговорам" id="295">
+											<ReadOnly>true</ReadOnly>
 											<Footer>true</Footer>
 											<AutoInsertNewRow>true</AutoInsertNewRow>
 											<EnableStartDrag>true</EnableStartDrag>

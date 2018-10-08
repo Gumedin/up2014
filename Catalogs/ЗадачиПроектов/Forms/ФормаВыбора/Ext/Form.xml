@@ -1,8 +1,57 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5">
 	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnLoadDataFromSettingsAtServer">ПриЗагрузкеДанныхИзНастроекНаСервере</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
 	<ChildItems>
+		<UsualGroup name="Группа1" id="28">
+			<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="29"/>
+			<ChildItems>
+				<CheckBoxField name="СУчетомКонтрагента" id="36">
+					<DataPath>СУчетомКонтрагента</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="СУчетомКонтрагентаКонтекстноеМеню" id="37"/>
+					<ExtendedTooltip name="СУчетомКонтрагентаРасширеннаяПодсказка" id="38"/>
+					<Events>
+						<Event name="OnChange">СУчетомКонтрагентаПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<CheckBoxField name="СУчетомПроектов" id="39">
+					<DataPath>СУчетомПроектов</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="СУчетомПроектовКонтекстноеМеню" id="40"/>
+					<ExtendedTooltip name="СУчетомПроектовРасширеннаяПодсказка" id="41"/>
+					<Events>
+						<Event name="OnChange">СУчетомПроектовПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<CheckBoxField name="ТекущийАктивная" id="30">
+					<DataPath>ТекущийАктивная</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ТекущийАктивнаяКонтекстноеМеню" id="31"/>
+					<ExtendedTooltip name="ТекущийАктивнаяРасширеннаяПодсказка" id="32"/>
+					<Events>
+						<Event name="OnChange">ТекущийАктивнаяПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<InputField name="ТекущийГод" id="33">
+					<DataPath>ТекущийГод</DataPath>
+					<SpinButton>true</SpinButton>
+					<ContextMenu name="ТекущийГодКонтекстноеМеню" id="34"/>
+					<ExtendedTooltip name="ТекущийГодРасширеннаяПодсказка" id="35"/>
+					<Events>
+						<Event name="OnChange">ТекущийГодПриИзменении</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
 		<UsualGroup name="СписокКомпоновщикНастроекПользовательскиеНастройки" id="1">
 			<Title>
 				<v8:item>
@@ -70,7 +119,7 @@
 			</SearchControlAddition>
 			<ChildItems>
 				<LabelField name="Ссылка" id="25">
-					<DataPath>Список.Ref</DataPath>
+					<DataPath>Список.Ссылка</DataPath>
 					<UserVisible>
 						<xr:Common>false</xr:Common>
 					</UserVisible>
@@ -78,17 +127,17 @@
 					<ExtendedTooltip name="СсылкаРасширеннаяПодсказка" id="27"/>
 				</LabelField>
 				<LabelField name="Владелец" id="22">
-					<DataPath>Список.Owner</DataPath>
+					<DataPath>Список.Владелец</DataPath>
 					<ContextMenu name="ВладелецКонтекстноеМеню" id="23"/>
 					<ExtendedTooltip name="ВладелецРасширеннаяПодсказка" id="24"/>
 				</LabelField>
 				<LabelField name="Код" id="19">
-					<DataPath>Список.Code</DataPath>
+					<DataPath>Список.Код</DataPath>
 					<ContextMenu name="КодКонтекстноеМеню" id="20"/>
 					<ExtendedTooltip name="КодРасширеннаяПодсказка" id="21"/>
 				</LabelField>
 				<LabelField name="Наименование" id="16">
-					<DataPath>Список.Description</DataPath>
+					<DataPath>Список.Наименование</DataPath>
 					<DefaultItem>true</DefaultItem>
 					<ContextMenu name="НаименованиеКонтекстноеМеню" id="17"/>
 					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="18"/>
@@ -103,8 +152,89 @@
 			</Type>
 			<MainAttribute>true</MainAttribute>
 			<Settings xsi:type="DynamicList">
-				<ManualQuery>false</ManualQuery>
+				<ManualQuery>true</ManualQuery>
 				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	СправочникЗадачиПроектов.Ссылка КАК Ссылка,
+	СправочникЗадачиПроектов.ПометкаУдаления КАК ПометкаУдаления,
+	СправочникЗадачиПроектов.Владелец КАК Владелец,
+	СправочникЗадачиПроектов.Код КАК Код,
+	СправочникЗадачиПроектов.Наименование КАК Наименование,
+	СправочникЗадачиПроектов.Сумма КАК Сумма,
+	СправочникЗадачиПроектов.ПроектМенеджер КАК ПроектМенеджер,
+	СправочникЗадачиПроектов.Подразделение КАК Подразделение,
+	СправочникЗадачиПроектов.ПостановкаЗадачи КАК ПостановкаЗадачи,
+	СправочникЗадачиПроектов.ТолькоИсполнители КАК ТолькоИсполнители,
+	СправочникЗадачиПроектов.ТиповаяЗадача КАК ТиповаяЗадача,
+	СправочникЗадачиПроектов.НачалоРабот КАК НачалоРабот,
+	СправочникЗадачиПроектов.ОкончаниеРабот КАК ОкончаниеРабот,
+	СправочникЗадачиПроектов.ПланироватьОтКонца КАК ПланироватьОтКонца,
+	ВЫБОР
+		КОГДА СправочникЗадачиПроектов.Контрагент ЕСТЬ NULL
+			ТОГДА СправочникЗадачиПроектов.Владелец.Контрагент
+		ИНАЧЕ СправочникЗадачиПроектов.Контрагент
+	КОНЕЦ КАК Контрагент,
+	СправочникЗадачиПроектов.Комментарий КАК Комментарий,
+	СправочникЗадачиПроектов.ОбеспеченоПрошлымиПериодами КАК ОбеспеченоПрошлымиПериодами,
+	СправочникЗадачиПроектов.ГодЗадачи КАК ГодЗадачи,
+	СправочникЗадачиПроектов.ПлановоеЮЛ КАК ПлановоеЮЛ,
+	СправочникЗадачиПроектов.ИсточникФинансирования КАК ИсточникФинансирования,
+	СправочникЗадачиПроектов.Статус КАК Статус,
+	СправочникЗадачиПроектов.СтатусДата КАК СтатусДата,
+	СправочникЗадачиПроектов.Направление КАК Направление,
+	СправочникЗадачиПроектов.Активная КАК Активная,
+	СправочникЗадачиПроектов.Исполнители.(
+		Ссылка КАК Ссылка,
+		НомерСтроки КАК НомерСтроки,
+		ФизическоеЛицо КАК ФизическоеЛицо,
+		Должность КАК Должность,
+		ТарифнаяСтавка КАК ТарифнаяСтавка,
+		Загрузка КАК Загрузка
+	) КАК Исполнители,
+	СправочникЗадачиПроектов.ЭтапыГрафикаОплаты.(
+		Ссылка КАК Ссылка,
+		НомерСтроки КАК НомерСтроки,
+		ДатаПлатежа КАК ДатаПлатежа,
+		СуммаПлатежа КАК СуммаПлатежа,
+		ПроцентПлатежа КАК ПроцентПлатежа,
+		Комментарий КАК Комментарий,
+		Фиксировано КАК Фиксировано,
+		Гарантировано КАК Гарантировано
+	) КАК ЭтапыГрафикаОплаты,
+	СправочникЗадачиПроектов.ЭтапыГрафикаРеализации.(
+		Ссылка КАК Ссылка,
+		НомерСтроки КАК НомерСтроки,
+		ДатаРеализации КАК ДатаРеализации,
+		СуммаРеализации КАК СуммаРеализации,
+		ПроцентРеализации КАК ПроцентРеализации,
+		Комментарий КАК Комментарий,
+		Фиксировано КАК Фиксировано,
+		Гарантировано КАК Гарантировано,
+		ВидПлана КАК ВидПлана,
+		СуммаПлан КАК СуммаПлан,
+		СуммаФакт КАК СуммаФакт,
+		СуммаОплата КАК СуммаОплата,
+		Организация КАК Организация
+	) КАК ЭтапыГрафикаРеализации,
+	СправочникЗадачиПроектов.ЭтапыГрафикаРеализацииПоДоговорам.(
+		Ссылка КАК Ссылка,
+		НомерСтроки КАК НомерСтроки,
+		ДатаРеализации КАК ДатаРеализации,
+		СуммаРеализации КАК СуммаРеализации,
+		ПроцентРеализации КАК ПроцентРеализации,
+		Комментарий КАК Комментарий
+	) КАК ЭтапыГрафикаРеализацииПоДоговорам,
+	СправочникЗадачиПроектов.КонтрольныеТочки.(
+		Ссылка КАК Ссылка,
+		НомерСтроки КАК НомерСтроки,
+		Наименование КАК Наименование,
+		ДатаПлан КАК ДатаПлан,
+		ДатаФакт КАК ДатаФакт
+	) КАК КонтрольныеТочки,
+	СправочникЗадачиПроектов.Предопределенный КАК Предопределенный,
+	СправочникЗадачиПроектов.ИмяПредопределенныхДанных КАК ИмяПредопределенныхДанных
+ИЗ
+	Справочник.ЗадачиПроектов КАК СправочникЗадачиПроектов</QueryText>
 				<MainTable>Catalog.ЗадачиПроектов</MainTable>
 				<ListSettings>
 					<dcsset:filter>
@@ -123,6 +253,92 @@
 					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
 				</ListSettings>
 			</Settings>
+		</Attribute>
+		<Attribute name="ТекущийАктивная" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущий активная</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>ТекущийАктивная</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ТекущийГод" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущий год</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>4</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<Save>
+				<Field>ТекущийГод</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="СУчетомКонтрагента" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>С учетом контрагента</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>СУчетомКонтрагента</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="СУчетомПроектов" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>С учетом проектов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>СУчетомПроектов</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="Проекты" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проекты</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:Type>cfg:CatalogRef.Проекты</v8:Type>
+			</Settings>
+		</Attribute>
+		<Attribute name="Контрагент" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контрагент</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+			</Type>
 		</Attribute>
 	</Attributes>
 </Form>
